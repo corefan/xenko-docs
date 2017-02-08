@@ -524,3 +524,17 @@ h5{
         width: 100%;
     }
 }
+
+/* Class page fixes */
+.xk-bordered-title{
+    border-bottom: 1px solid #ccc;
+}
+.xk-hidden-table{
+    display: none;
+}
+h6, .h6{
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+h6 strong, .h6 strong{
+    font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
+}
