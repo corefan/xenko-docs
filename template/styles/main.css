@@ -538,3 +538,6 @@ h6, .h6{
 h6 strong, .h6 strong{
     font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
 }
+article h4{
+    border: none;
+}

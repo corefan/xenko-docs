@@ -5,7 +5,7 @@
 {{/_disableContribution}}
 <h1 id="{{id}}" data-uid="{{uid}}" class="xk-margin-default">{{>partials/title}}</h1>
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
-<h6><strong>
+<h6>
 {{#isNamespace}}
 Namespace in 
 {{/isNamespace}}
@@ -24,7 +24,7 @@ Enum in
 {{#inDelegate}}
 Delegate in 
 {{/inDelegate}}
-</strong>{{namespace}} | <strong>{{__global.assembly}}</strong>:{{assemblies.0}}.dll</h6>
+{{namespace}} | {{__global.assembly}}:{{assemblies.0}}.dll</h6>
 {{#inheritance.0}}
 <div class="inheritance">
 {{#inheritance}}
@@ -200,23 +200,6 @@ Delegate in
   </tbody>
 </table>
 {{/typeParameters.0}}
-{{#fieldValue}}
-<h5 class="fieldValue">{{__global.fieldValue}}</h5>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
-</table>
-{{/fieldValue}}
 {{#propertyValue}}
 <table class="table table-bordered table-striped table-condensed xk-hidden-table">
   <thead>
