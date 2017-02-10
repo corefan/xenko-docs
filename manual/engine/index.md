@@ -9,5 +9,4 @@
 # See also
 
 - [Introduction to assets](../get-started/assets.md)
-- [Introduction to scripts](../get-started/introduction-to-scripts.md)
-
+- [Scripts](../scripts/index.md)

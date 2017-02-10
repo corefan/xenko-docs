@@ -98,4 +98,4 @@ You can edit the script to bind a different key combination.
 ## See also
 * [Colliders](colliders.md)
 * [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
-* [Tutorial: Script a triggered event](script-a-triggered-event.md)
+* [Tutorial: Script a trigger](script-a-trigger.md)

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-If you need to have different code depending on the platforms and the graphics APIs, various preprocessor variables can be used in scripts.
+If you need different code depending on the platforms and the graphics APIs, you can use various preprocessor variables in scripts.
 
 > [!WARNING]
 > Using [Platform.Type](xref:SiliconStudio.Core.Platform.Type) and 
@@ -23,7 +23,6 @@ If you need to have different code depending on the platforms and the graphics A
 | SILICONSTUDIO_PLATFORM_ANDROID         | Xamarin.Android                |
 | SILICONSTUDIO_PLATFORM_IOS             | Xamarin.iOS                    |
 
-
 ## Graphics APIs
 
 | Variable                                      | Value                 |
@@ -33,7 +32,6 @@ If you need to have different code depending on the platforms and the graphics A
 | SILICONSTUDIO_XENKO_GRAPHICS_API_OPENGLCORE | OpenGL Core (Desktop) |
 | SILICONSTUDIO_XENKO_GRAPHICS_API_OPENGLES   | OpenGL ES             |
 | SILICONSTUDIO_XENKO_GRAPHICS_API_VULKAN     | Vulkan                |
-
 
 ## Example
 
@@ -47,4 +45,12 @@ If you need to have different code depending on the platforms and the graphics A
 #endif
 ```
 
+## See also
 
+* [Create a script](create-a-script.md)
+* [Types of script](types-of-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
+* [Scheduling and priorities](scheduling-and-priorities.md)
+* [Add a script](add-a-script.md)
+* [Create a script](create-a-script.md)
+* [Debugging](debugging.md)

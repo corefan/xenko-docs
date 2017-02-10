@@ -119,4 +119,4 @@ To switch between perspective and orthographic views, click the **view camera gi
 
 ## What's next?
 
-* [Introduction to scripting](introduction-to-scripts.md)
+* [Launch a game](launch-a-game.md)

@@ -5,9 +5,9 @@ uid: ../toc.md
 
 <span class="label label-doc-level">Beginner</span>
 
-This chapter helps you get started with Xenko. 
+This chapter explains everything you need to start using Xenko from scratch. 
 
-![Game Studio](media/getting-started.png)
+![Game Studio](media/get-started.png)
 
 ## In this section
 
@@ -18,5 +18,4 @@ This chapter helps you get started with Xenko.
 * [Project structure](project-structure.md) - learn about project structures
 * [Assets](assets.md) - getting started with assets
 * [Introduction to scenes](introduction-to-scenes.md) - getting started with scenes
-* [Introduction to scripting](introduction-to-scripts.md) - getting started with scripting
 * [Launch your game](launch-a-game.md) - how to launch your game on different platforms

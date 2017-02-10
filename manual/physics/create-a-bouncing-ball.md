@@ -103,9 +103,9 @@ Set the restitution to 1.1 and the ball bounces a little higher each time:
 
 ![Ball bouncing higher](media/physics-tutorials-create-a-bouncing-ball-higher-and-higher.gif)
 
-Now we've created a bouncing ball, we can use it to learn about triggers. For more information, see the [Script a triggered event](script-a-triggered-event.md) tutorial.
+Now we've created a bouncing ball, we can use it to learn about triggers. For more information, see the [Script a trigger](script-a-trigger.md) tutorial.
 
 ## See also
 * [Colliders](colliders.md)
 * [Collider shape](collider-shapes.md)
-* [Tutorial: Script a triggered event](script-a-triggered-event.md)
+* [Tutorial: Script a trigger](script-a-trigger.md)

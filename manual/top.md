@@ -8,6 +8,8 @@ These pages contain information about how to use Xenko, a free open-source C# ga
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Xbox Live](platforms/uwp/xbox-live.md)
+* <span class="label label-doc-highlight">Updated</span> [Project structure](get-started/project-structure.md)
 * <span class="label label-doc-highlight">New</span> [Sprites](sprites/index.md)
 * <span class="label label-doc-highlight">New</span> [Change the graphics platform](platforms/change-the-graphics-platform.md)
 * <span class="label label-doc-highlight">New</span> [Profiling](troubleshooting/profiling.md)

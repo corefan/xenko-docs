@@ -17,7 +17,7 @@ You can import sprite sheets (image files containing sprites) just like any othe
 
 2. Choose a preset for the sprite sheet.
 
-    If you want to use the sprite sheet for UI elements such as menu buttons, select **Sprite sheet - UI sprites**. This lets you set borders for the sprite (see [Set sprite borders](set-sprite-borders.md). Otherwise, select **Sprite sheet - 2D sprites**.
+    If you want to use the sprite sheet for UI elements such as menu buttons, select **Sprite sheet - UI sprites**. This lets you set borders for the sprite (see [Set sprite borders](set-sprite-borders.md)). Otherwise, select **Sprite sheet - 2D sprites**.
 
     >[!Note]
     >You can change this any time. For more information, see [Edit sprites](edit-sprites.md).
