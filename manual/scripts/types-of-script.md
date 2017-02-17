@@ -1,5 +1,8 @@
 # Types of script
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Programmer</span>
+
 There are three main types of script in Xenko: **startup scripts**, **synchronous scripts**, and **asynchronous scripts**. 
 
 When you write your script, inherit from the type of script with the behavior that best fits your needs.
@@ -72,7 +75,9 @@ public class SampleAsyncScript : AsyncScript
 ## See also
 
 * [Create a script](create-a-script.md)
-* [Public properties and fields](public-properties-and-fields.md)
 * [Add a script](add-a-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)

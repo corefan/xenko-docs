@@ -1,14 +1,17 @@
-# Debug a script
+# Debugging
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-If your script isn't producing the result you expect at runtime, you can debug it.
+If your script isn't producing the expected result at runtime, you can debug it in an IDE such as Visual Studio.
+
+>[!Note]
+>[There are lots of ways to debug code. This page suggests one method, using Visual Studio.]
 
 1. Open the script in Visual Studio.
 
     >[!Tip]
-    >[To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](media/launch-your-game-ide-icon.png) (**Open in IDE**).]
+    >To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](media/launch-your-game-ide-icon.png) (**Open in IDE**).
 
 2. Press **F9** to add a break point at the required places.
 
@@ -29,8 +32,11 @@ For more information about debugging in Visual Studio, see the [MSDN documentati
 
 ## See also
 
+* [Debugging in Visual Studio (MSDN documentation)](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx)
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
-* [Public properties and fields](public-properties-and-fields.md)
 * [Add a script](add-a-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
+* [Preprocessor variables](preprocessor-variables.md)

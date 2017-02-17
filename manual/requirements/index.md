@@ -1,5 +1,7 @@
 # Requirements
 
+![Requirements](media/requirements.png)
+
 To develop projects with Xenko, you need:
 
 | Requirement | Specifications |

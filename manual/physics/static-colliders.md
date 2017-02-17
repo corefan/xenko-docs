@@ -8,15 +8,6 @@ Typical static colliders are strong immovable objects like walls, floors, large 
 
 ![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-## Move a static collider at runtime
-If you need to move a static collider at runtime, you can do it with a script:
-
-```
-PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;
-PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
-PhysicsComponent.UpdatePhysicsTransformation();
-```
-
 ## Component properties
 
 You can adjust the static collider properties in the **Property grid**.
@@ -33,6 +24,16 @@ Rolling Friction      | Sets the rolling friction.
 CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
 CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.
 Is Trigger            | Toggles whether the static collider is a [trigger](triggers.md)
+
+## Move a static collider at runtime
+
+If you need to move a static collider at runtime, you can do it with a script:
+
+```
+PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;
+PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
+PhysicsComponent.UpdatePhysicsTransformation();
+```
 
 ## See also
 

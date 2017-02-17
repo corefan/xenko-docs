@@ -86,6 +86,10 @@ You could even create separate folders for different kinds of content creation f
 
 ### Example
 
-Imagine a team with two programmers, two 2D artists, and two 3D artists. The programmers check out the **MyGame** project folder (containing code, assets, and resources). The 2D artists check out the game project **and** the **ContentCreationFiles** folder containing .psd files. The 3D artists check out the game project and an additional, separate folder containing .mb (Maya project) files.
+Imagine a team with two programmers, two 2D artists, and two 3D artists.
 
-Now imagine one of the 2D artists changes several .psd files and commits 2GB of changes to version control. Because only the 2D artists have the folder checked out, only the other 2D artist gets this change. The others don't need it. This is a much more efficient way to share files across projects.
+* The programmers check out the **MyGame** project folder containing code, assets, and resources.
+* The 2D artists check out the game project and the **PhotoshopProjects** folder containing .psd files.
+* The 3D artists check out the game project and the **MayaProjects** folder containing .mb (Maya project) files.
+
+Now imagine one of the 2D artists changes several .psd files and commits 2GB of changes to version control. Because only the 2D artists have MayaProjects folder checked out, only the other 2D artist gets this change. The other team members don't need it. This is a much more efficient way to share files across projects.

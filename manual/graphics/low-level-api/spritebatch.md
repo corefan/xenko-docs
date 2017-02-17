@@ -2,9 +2,12 @@
 
 A sprite batch is a collection of sprites (2D textured planes).
 
-## Creating a sprite batch
+>[!Note]
+>Remember that you need to put all custom code in a [custom scene renderer](../graphics-compositor/graphics-compositor-for-developers/custom-scene-renderer.md) to include it in the composition.
 
-Xenko offers a easy way to deal will batches of sprites through the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class. The user can use this class to regroup all of his sprites, update them and display them efficiently.
+## Create a sprite batch
+
+Xenko offers a easy way to deal will batches of sprites through the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
 
 **Code:** Creating a sprite batch
 
@@ -12,7 +15,7 @@ Xenko offers a easy way to deal will batches of sprites through the @'SiliconStu
 var spriteBatch = new SpriteBatch(GraphicsDevice);
 ```
 
-The user can specify the size of his batch size. It is not the maximum number of sprites the SpriteBatch is able to display, but simply the maximum number of sprites it can store before drawing.
+You can specify the size of your batch size. This isn't the maximum number of sprites the SpriteBatch is able to display, but the maximum number of sprites it can store before drawing.
 
 **Code:** Setting the batch size
 
@@ -20,11 +23,11 @@ The user can specify the size of his batch size. It is not the maximum number of
 var spriteBatch = new SpriteBatch(GraphicsDevice, 2000);
 ```
 
-It is also possible to set various states like the ones discussed in the [pipeline state](pipeline-state.md) documentation page.
+You can also set states like the ones discussed on the [Pipeline state](pipeline-state.md) page.
 
-## Drawing a sprite batch
+## Draw a sprite batch
 
-The @'SiliconStudio.Xenko.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a comprehensive list of all the features, please refer to the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class reference documentation.
+The @'SiliconStudio.Xenko.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a list of features, see the @'SiliconStudio.Xenko.Graphics.SpriteBatch' API documentation.
 
 **Code:** Drawing a sprite batch
 
@@ -47,7 +50,7 @@ There are five modes to draw a sprite batch. They are enumerated in the @'Silico
 - BackToFront: Deferred mode with a sort based on the z-order of the sprites
 - FrontToBack: Deferred mode with a sort based on the z-order of the sprites
 
-To set the mode, the user should specify it in the @'SiliconStudio.Xenko.Graphics.SpriteBatch.Begin' method.
+To set the mode, specify it in the @'SiliconStudio.Xenko.Graphics.SpriteBatch.Begin' method.
 
 **Code:** Deferred drawing of the sprite batch
 
@@ -62,7 +65,7 @@ spriteBatch.Draw(myTexture, new Vector2(10, 20));
 spriteBatch.End();
 ```
 
-It is possible to set several parameters on the sprite, for example:
+You can set several parameters on the sprite. For example:
 
 - position
 - rotation
@@ -71,7 +74,7 @@ It is possible to set several parameters on the sprite, for example:
 - center offset
 - color tint
 
-For a comprehensive list, please refer to the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class reference documentation, especially the @'SiliconStudio.Xenko.Graphics.SpriteBatch.Draw' methods.
+For a full list, see the @'SiliconStudio.Xenko.Graphics.SpriteBatch' API documentation, especially the **Draw** methods.
 
 **Code:** More complex sprite batch drawing
 
@@ -95,4 +98,6 @@ for (int y = 0; y < gridCount; y++)
 spriteBatch.End();
 ```
 
+## See also
 
+* [SpriteFont](spritefont.md)

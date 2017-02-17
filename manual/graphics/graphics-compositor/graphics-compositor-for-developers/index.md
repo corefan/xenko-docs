@@ -19,8 +19,6 @@ The default renderers implementing the @'SiliconStudio.Xenko.Rendering.ISceneRen
 - @'SiliconStudio.Xenko.Rendering.SceneEffectRenderer'to apply an image effect to a render frame
 - @'SiliconStudio.Xenko.Rendering.SceneChildRenderer'to render a child scene to a render frame
 
- 
-
 ![media/graphics-compositor-for-developers-2.png](media/graphics-compositor-for-developers-2.png) 
 
  

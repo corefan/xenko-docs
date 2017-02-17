@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can create and add scripts using Game Studio or Visual Studio.
+You can create scripts using Game Studio or an IDE such as Visual Studio.
 
 ## Create a script in Game Studio
 
@@ -11,18 +11,28 @@ You can create and add scripts using Game Studio or Visual Studio.
 
 	![Select script type window](media/create-a-script-script-asset-selection.png)
 
-2. In the **Script wizard** dialog, specify a class name and namespace for the script and click **OK**.
+	>[!Note]
+	>For information about different types of script, see [Types of script](types-of-script.md).
+
+	The **Script wizard** dialog opens.
 
 	![Script wizard](media/script-wizard.png)
 
-Game Studio adds a script to the project. You can see it in the **asset view**.
+2. Specify a class name and namespace for the script and click **OK**.
+
+3. To use the script, you need to save it. By default, Game Studio prompts you to save the script now.
+
+Game Studio creates a script. You can see it in the **asset view**.
+
+>[!Note]
+> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../get-started/project-structure.md).
+  
+You can also see the new script in Visual Studio.
 
 ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
-  
-You can see the new script in Visual Studio.
 
 > [!Tip]
-> To open your solution in Visual Studio, click the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
+> To open your solution in Visual Studio from Game Studio, click the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
 
 ```
 using System;
@@ -50,28 +60,32 @@ namespace MyGame
 
 ## Create a script in Visual Studio
 
-1. In Game Studio, open your solution in Visual Studio by clicking the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the toolbar.
+1. Open Visual Studio.
 
-	The game solution is composed of several projects. 
+	> [!Tip]
+	> To open your solution in Visual Studio from Game Studio, click the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
+
+	The game solution is composed of several projects:
 	
-	* The project ending in *.Game* is the main project, and should contain all your game logic and scripts. 
+	* The project ending *.Game* is the main project, and should contain all your game logic and scripts. 
+	
 	* Other projects (eg *MyGame.Windows*, *MyGame.Android* etc) contain platform-specific code.
 
-	For more information about project structure, see [Project structure](../get-started/project-structure.md).
+	For more information, see [Project structure](../get-started/project-structure.md).
 
-2. Add a new class file to the `.Game` project. To do this, right-click the project ands elect **Add > New Item**.
+2. Add a new class file to the `.Game` project. To do this, right-click the project and select **Add > New Item**.
 
 	The **Add New Item** dialog opens.
 
 3. Select **Class**, type a name for your script, and click **Add**.
 
-   Visual Studio adds a new class to your game.
+   Visual Studio adds a new class to your project.
 
 4. In the file you created, make sure the script is public and derives from either **AsyncScript** or **SyncScript**.
 
 5. Implement the necessary abstract methods.
 
-	Example:
+	For example:
 
 	```
 		using System;
@@ -89,7 +103,7 @@ namespace MyGame
 				{
 					if (Game.IsRunning)
 					{
-						// Do some stuff every frame
+						// Do something every frame
 					}
 				}
 			}
@@ -104,15 +118,19 @@ namespace MyGame
 
 	Click **Yes**.
 
-   Game Studio adds your class script to your component list.
+You can see the script in the **asset view**.
 
-8. In the solution explorer, select the assembly that contains your script.
-   Game Studio displays the script in the asset view, ready to be used.
+![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
+
+>[!Note]
+> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../get-started/project-structure.md).
 
 ## See also
 
-* [Create a script](create-a-script.md)
 * [Types of script](types-of-script.md)
 * [Add a script](add-a-script.md)
-* [Create a script](create-a-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
+* [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)

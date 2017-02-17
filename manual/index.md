@@ -6,4 +6,4 @@ _navRel: ../toc.html
 _tocTitle: 'Manual'
 ---
 
-[!include[top](top.md)]
+[!include[top](front-page/index.md)]

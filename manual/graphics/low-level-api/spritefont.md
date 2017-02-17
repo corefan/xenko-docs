@@ -1,8 +1,11 @@
 # SpriteFont
 
-the @'SiliconStudio.Xenko.Graphics.SpriteFont' class offers an convenient way to draw text. It works with the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class.
+The @'SiliconStudio.Xenko.Graphics.SpriteFont' class is a convenient way to draw text. It works with the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class.
 
-# Loading a spriteFont
+>[!Note]
+>Remember that you need to put all custom code in a [Custom scene renderer](../graphics-compositor/graphics-compositor-for-developers/custom-scene-renderer.md) to include it in the composition.
+
+# Load a spriteFont
 
 After a font asset is compiled it can be loaded as a @'SiliconStudio.Xenko.Graphics.SpriteFont' instance using the @'SiliconStudio.Core.Serialization.Assets.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc.).
 
@@ -12,10 +15,9 @@ After a font asset is compiled it can be loaded as a @'SiliconStudio.Xenko.Graph
 var myFont = Content.Load<SpriteFont>("MyFont");
 ```
 
+## Write text on screen
 
-## Writing text on screen
-
-Once the font is loaded, the user can display any text on screen with a @'SiliconStudio.Xenko.Graphics.SpriteBatch'. To learn more about the SpriteBatch, read the [related documentation page](spritebatch.md). The @'SiliconStudio.Xenko.Graphics.SpriteBatch.DrawString' method performs the draw.
+Once the font is loaded, you can display any text with a @'SiliconStudio.Xenko.Graphics.SpriteBatch'. The [SiliconStudio.Xenko.Graphics.SpriteBatch.DrawString](xref:SiliconStudio.Xenko.Graphics.SpriteBatch#SiliconStudio_Xenko_Graphics_SpriteBatch_Draw_SiliconStudio_Xenko_Graphics_Texture_SiliconStudio_Core_Mathematics_RectangleF_SiliconStudio_Core_Mathematics_Color4_) method performs the draw. For more information about the SpriteBatch, see the [SpriteBatch](spritebatch.md) page.
 
 **Code:** Write text
 
@@ -33,8 +35,7 @@ spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5, 0.5), Color.Red);
 spriteBatch.End();
 ```
 
-
-The various overloads allow to specify the text's orientation, scale, depth, origin, etc. There are also some @'SiliconStudio.Xenko.Graphics.SpriteEffects' that can be applied to the text:
+The various overloads let you specify the text's orientation, scale, depth, origin, etc. You can also apply some @'SiliconStudio.Xenko.Graphics.SpriteEffects' to the text:
 
 - None
 - FlipHorizontally
@@ -48,4 +49,6 @@ The various overloads allow to specify the text's orientation, scale, depth, ori
 spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5, 0.5), Color.Red, 0, new Vector2(0, 0), new Vector2(1,1), SpriteEffects.FlipVertically, 0);
 ```
 
+## See also
 
+* [SpriteBatch](spritebatch.md)

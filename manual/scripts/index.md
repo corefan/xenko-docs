@@ -1,25 +1,12 @@
-# Scripting
+# Scripts
 
 **Scripts** are units of code that handle game events, respond to user input, and control entities. In short, scripts make games interactive by adding gameplay.
 
+You use scripts by adding them to entities in the scene as components. Xenko loads a script when the entity it is added to is loaded in the scene.
+
 Xenko scripts are written in **C#**. You can edit scripts in Game Studio or another IDE (such as visual Studio). Scripts are debugged in Visual Studio.
 
-![Scripting](media/scripting_intro.png)
-
-```cs
-public class BasicAsyncScript : AsyncScript
-{         
-	public override async Task Execute() 
-	{
-		while(Game.IsRunning)
-		{
-			// Do some stuff every frame
-			
-			await Script.NextFrame();
-		}
-	}
- }
-```
+![Scripts](media/scripting_intro.png)
 
 > [!NOTE]
 > Explaining C# is out of the scope of this documentation.
@@ -44,7 +31,9 @@ You can still use standard C# classes in Xenko, but these aren't called scripts 
 
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
-* [Public properties and fields](public-properties-and-fields.md)
 * [Add a script](add-a-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)
