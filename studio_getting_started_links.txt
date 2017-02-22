@@ -2,5 +2,4 @@
 {Game Studio}{Understand the central tool for game production in Xenko}{page:manual/get-started/game-studio.html}
 {Introduction to assets}{Create and manage images, models, sounds, and other assets.}{page:manual/get-started/assets.html}
 {Set up a scene}{Set up a graphics pipeline, add entities, and move around the scene.}{page:manual/get-started/introduction-to-scenes.html}
-{Introduction to scripts}{Create scripts to make your game interactive.}{page:manual/get-started/introduction-to-scripts.html}
 {Launch a game}{Run your game from Game Studio or Visual Studio.}{page:manual/get-started/launch-a-game.html}
