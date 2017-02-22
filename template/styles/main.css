@@ -462,10 +462,12 @@ h5{
     margin: 0;
     background: transparent;
 }
-.xk-custom-breadcrumb + article.content h1,
-.xk-custom-breadcrumb + article.content h2{
+.xk-custom-breadcrumb + article.content h1{
     margin-top: 36px;
     margin-bottom: 10px;
+}
+.xk-custom-breadcrumb + article.content h2|{
+    margin-top: 16px;
 }
 .xk-custom-breadcrumb + article.content h3,
 .xk-custom-breadcrumb + article.content h4{
@@ -531,6 +533,9 @@ h5{
 }
 .xk-hidden-table{
     display: none;
+}
+.xk-methods-wrapper .xk-hidden-table{
+    display: table;
 }
 h6, .h6{
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;

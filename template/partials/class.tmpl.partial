@@ -7,24 +7,24 @@
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 <h6>
 {{#isNamespace}}
-Namespace in 
+<strong>Namespace</strong> in 
 {{/isNamespace}}
 {{#inClass}}
-Class in 
+<strong>Class</strong> in 
 {{/inClass}}
 {{#inStruct}}
-Struct in 
+<strong>Struct</strong> in 
 {{/inStruct}}
 {{#inInterface}}
-Interface in 
+<strong>Interface</strong> in 
 {{/inInterface}}
 {{#inEnum}}
-Enum in
+<strong>Enum</strong> in
 {{/inEnum}}
 {{#inDelegate}}
-Delegate in 
+<strong>Delegate</strong> in 
 {{/inDelegate}}
-{{namespace}} | {{__global.assembly}}:{{assemblies.0}}.dll</h6>
+{{namespace}} | <strong>{{__global.assembly}}</strong>:{{assemblies.0}}.dll</h6>
 {{#inheritance.0}}
 <div class="inheritance">
 {{#inheritance}}
@@ -103,7 +103,8 @@ Delegate in
 <div class="markdown level0 remarks">{{{remarks}}}</div>
 {{/remarks}}
 {{#children}}
-<h2 id="{{id}}">{{>partials/classSubtitle}}</h2>
+<div class="xk-{{id}}-wrapper">
+<h2 id="{{id}}" class="joraTitle">{{>partials/classSubtitle}}</h2>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -256,4 +257,5 @@ Delegate in
 </table>
 {{/exceptions.0}}
 {{/children}}
+</div>
 {{/children}}
