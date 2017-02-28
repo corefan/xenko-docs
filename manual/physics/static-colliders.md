@@ -3,14 +3,29 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Static colliders** aren't moved by forces such as gravity and collisions, but other physics objects can bump into them.
-Typical static colliders are strong immovable objects like walls, floors, large rocks, and so on.
+**Static colliders** aren't moved by forces such as gravity and collisions, but other physics objects can bump into them. Typical static colliders are strong immovable objects like walls, floors, large rocks, and so on.
 
 ![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-## Component properties
+2. Add a static collider
+   
+1. Select the entity you want to make a static collider.
 
-You can adjust the static collider properties in the **Property grid**.
+2. In the **property grid**, click **Add component** and select **Static Collider**.
+
+    ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
+
+3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property grid**, expand the **Static Collider component** to view its properties.
+
+4. Next to **Collider Shapes**, click the **green plus icon** and select the shape you want.
+
+    ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
+
+## Static collider properties
+
+You can adjust the static collider properties in the **property grid**.
+
+![Static collider properties](media/static-collider-properties.png)
 
 Property              |   Description
 ----------------------|-----------------------
@@ -23,7 +38,7 @@ Friction              | Sets the surface friction.
 Rolling Friction      | Sets the rolling friction.
 CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
 CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.
-Is Trigger            | Toggles whether the static collider is a [trigger](triggers.md)
+Is Trigger            | Toggles whether the static collider is a [trigger](triggers.md).
 
 ## Move a static collider at runtime
 

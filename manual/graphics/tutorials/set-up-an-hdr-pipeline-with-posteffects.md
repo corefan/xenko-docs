@@ -1,31 +1,28 @@
 # Set up an HDR pipeline with post-effects
 
-Assuming that you are already familiar with the  [Scene Graphics Compositor](../graphics-compositor/index.md), we would like to setup a High Dynamic Range rendering pipeline.
+Assuming that you are already familiar with the  [Scene Graphics Compositor](../graphics-compositor/index.md), 
 
-The principle of HDR rendering is to render to a scene to a HDR render target and then apply a Tone Mapping to convert HDR to a LDR render target to display it on the screen.
+This tutorial demonstrates how to set up a high dynamic range (HDR) rendering pipeline. The principle of HDR is to render to a scene to a HDR render target, then apply tone mapping to convert HDR to a LDR render target to display it on the screen.
 
-| LDR Rendering                                                                                                                | HDR Rendering                                                                                                                |
+| LDR                                                                                                                | HDR                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png)  | ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png)  |
 
 
-> **Note**
-> 
+> [!Note]
 > As part of the Graphics Compositor, we will provide a set of default pre-configured rendering paths including a HDR to LDR rendering path as described here.    
 
-## 1: Visualize the pipeline
-
-We want to set up the following pipeline:
+In this tutorial, we'll set up the following pipeline:
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png) 
 
-Without a HDR to LDR rendering path, a scene illuminated with several lights with high intensities would just look white:
+Without an HDR-to-LDR rendering path, a scene illuminated with several high-intensity lights appears white:
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png) 
 
 ## 2: Go to the Graphics Compositor Properties
 
-In the current scene, select the root entity
+In the current scene, select the root entity.
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-4.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-4.png) 
 

@@ -1,22 +1,14 @@
 # Material layers
 
-Material layers gives a powerful way to combine multiple materials to build more complex materials. 
+You can combine multiple materials to build more complex materials. 
 
- 
+![media/material-layers-1.png](media/material-layers-1.png)  
 
-![media/material-layers-1.png](media/material-layers-1.png) 
-
- 
-
- 
-
-The following screenshot shows the blending of a rust material with a gold material.
+This screenshot shows the blending of a rust material with a gold material:
 
 ![media/material-layers-2.png](media/material-layers-2.png) 
 
- 
-
-The following diagram shows the definition of a material blend above:
+This diagram shows the definition of the materials blended in the screenshot above:
 
 ![media/material-layers-3.png](media/material-layers-3.png) 
 
@@ -27,7 +19,7 @@ The following diagram shows the definition of a material blend above:
 |                 |                                                                                                                                          |
 |                 | - A value of 0 means that the previous material in the layer is fully used                                                               |
 |                 | - A value of 1 means that the material referenced by this layer is fully used                                                            |
-|                 | - Values in-between 0 and 1 will generate a blend of a parameters of the previous material with the material defined by this layer       |
+|                 | - Values between 0 and 1 generate a blend of a parameters of the previous material with the material defined by this layer       |
 |                 |                                                                                                                                          |
 |                 |                                                                                                                                          |
 | Layer Overrides |                                                                                                                                          |
@@ -35,7 +27,5 @@ The following diagram shows the definition of a material blend above:
 |                 |                                                                                                                                          |
 |                 |                                                                                                                                          |
 
-
-> **Note**
-> 
-> - Individual attributes of layers are blend if they share the same shading model otherwise it is the result of the shading model that is blend.    
+> [!Note] 
+> Xenko blends individual layer attributes if they have the same shading model; otherwise, Xenko blends the shading model.    

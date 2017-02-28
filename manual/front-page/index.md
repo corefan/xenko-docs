@@ -6,10 +6,12 @@
 These pages contain information about how to use Xenko, an open-source C# game engine.
 
 >[!Note]
->The Xenko manual is under construction and updated regularly with new content. Follow [Xenko on Twitter](https://twitter.com/xenko3d?lang=en) for updates.
+>The Xenko manual is under construction and updated regularly with new content. Follow [Xenko on Twitter](https://twitter.com/xenko3d?lang=en) for documentation updates.
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Animation](../animation/index.md)
+* <span class="label label-doc-highlight">Updated</span> [Physics - Collider shapes](../physics/collider-shapes.md)
 * <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](../physics/script-a-trigger.md)
 * <span class="label label-doc-highlight">Updated</span> [Scripts](../scripts/index.md)
     * <span class="label label-doc-highlight">New</span> [Scripts - Events](../scripts/events.md)

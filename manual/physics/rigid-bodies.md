@@ -3,35 +3,30 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Rigid bodies** move based on physical forces applied to them, such as gravity and collisions.
-Typical rigid bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigid bodies they collide with.
+**Rigid bodies** move based on physical forces applied to them, such as gravity and collisions. Typical rigid bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigid bodies they collide with.
 
-## Kinematic rigid bodies
+![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-Sometimes you want to move rigid bodies in a specific way rather than have other objects move them.
-For example, you might control an elevator with a script, via its `Transform` property, rather than have other objects push and pull it.
-This is a **kinematic** rigid body.
 
-Although kinematic rigid bodies aren't moved by physics, other objects can still collide with them.
-For example, in the case of the elevator, objects placed inside won't fall through the elevator floor.
+## Add a rigid body collider
 
-![Kinematic elevator](media/rigid-bodies-kinematic-elevator.png)
+1. Select the entity you want to be a rigid body collider.
 
-To make a rigid body kinematic, in the **Property grid**, under the **Rigidbody** component properties, select **Is kinematic**.
+2. In the **Property grid**, click **Add component** and select **Rigidbody**.
 
-![Check 'Is kinematic'](media/rigid-bodies-is-kinematic-checkbox.png)
+    ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
-### Scripting kinematic rigid bodies
-You can script the **Is kinematic** property to turn on and off on certain events.
-For example, imagine our kinematic elevator's suspension cables are cut.
-You can script the **Is kinematic** property to change to _false_ when this happens.
-The elevator becomes subject to the usual forces of physics, and falls.
+3. Set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property grid**, expand the **Rigidbody component** to view its properties.
 
-![Non-kinematic elevator](media/rigid-bodies-non-kinematic-elevator.png)
+4. Next to **Collider Shapes**, click the **green plus icon** and select the shape you want.
+
+     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 
 ## Component properties
 
-In the **Property grid**, you can adjust the properties of each component:
+You can adjust the rigid body properties in the **property grid**.
+
+![Rigid body properties](media/rigid-body-properties.png)
 
 Property              | Description
 ----------------------|-----------------------
@@ -45,7 +40,7 @@ Rolling Friction      | Sets the rolling friction.
 CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
 CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.
 Is Trigger            | Toggles whether the rigid body is a [trigger](triggers.md).
-Is Kinematic          | Toggles whether the rigid body is kinematic and therefore moved only by its Transform property.
+Is Kinematic          | Toggles whether the rigid body is [kinematic](kinematic-rigid-bodies.md) and therefore moved only by its Transform property.
 Mass                  | Sets the collider mass. For large differences, use a point value; for example, write *0.1* or *10*, not *1* or *100000*.
 Linear damping        | The amount of damping for directional forces.
 Angular damping       | The amount of damping for rotational forces.
@@ -56,6 +51,7 @@ Collider Shapes       | Adds a [collider shape](collider-shapes.md).
 
 ## See also
 
+* [Kinematic rigid bodies](kinematic-rigid-bodies.md)
 * [Static colliders](static-colliders.md)
 * [Characters](characters.md)
 * [Collider shapes](collider-shapes.md)

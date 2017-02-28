@@ -2,7 +2,7 @@
 
 <div class="doc-incomplete"/>
 
-- [Asset](asset/index.md)
+- [Asset](assets/index.md)
 - [Entity-component model](entity-component-model/index.md)
 - [File system](file-system.md)
 

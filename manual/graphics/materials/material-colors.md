@@ -1,16 +1,16 @@
-# Material Colors
+# Material colors
 
-Material can fetch their values using color (rgb) or scalar (single float) value providers. 
+Materials can fetch values using color (rgb) or scalar (single float) value providers. 
 
-The Material System supports several kinds of color/scalar providers:
+The material system supports several kinds of color/scalar providers:
 
 - **Texture**: The color/scalar is provided by sampling a texture
 - **Constant Value**: The color/scalar is provided by a constant value
 - **Binary Operator**: Combines two color/scalar value providers
-- **Shader**: The color/scalar is provided by a ComputeColor shader (this is not yet accessible from the Game Studio). This provider allows to use procedural values.
+- **Shader**: The color/scalar is provided by a ComputeColor shader. This provider allows to use procedural values.
 - **Vertex Attribute Value** (*coming soon*): The color/scalar is provided by attributes stored in the mesh
 
-You can select the provider by clicking on the blue drop-down of a Diffuse Map/Specular Map/Normal Map...etc.:
+To select the provider, use the drop-down menu of a Diffuse Map/Specular Map/Normal Map:
 
 ![media/material-colors-1.png](media/material-colors-1.png) 
 
@@ -36,10 +36,9 @@ Sample the color/scalar from a given texture.
 | Scale              | A scale applied to (u,v)                                                                                                                                                      |
 | Offset             | An offset applied to (u,v)                                                                                                                                                    |
 
+## Constant value
 
-## Constant Value
-
-The color is provided directly as a constant value over the whole material. In case of a scalar value, a simple slider is provided instead of a color picker.
+The color is provided directly as a constant value over the whole material. In the case of a scalar value, a slider is provided instead of a color picker.
 
 ![media/material-colors-3.png](media/material-colors-3.png) 
 
@@ -47,10 +46,9 @@ The color is provided directly as a constant value over the whole material. In c
 | ------------ | ----------------------- |
 | Color/Scalar | A RGBA or scalar value. |
 
+## Binary operator
 
-## Binary Operator
-
-Perform a binary operation from 2 color/scalar value providers.
+Perform a binary operation from two color/scalar value providers.
 
 `Result = LeftColor  <operator> RightColor`
 
@@ -62,11 +60,9 @@ Perform a binary operation from 2 color/scalar value providers.
 | Left     | The left color/scalar involved in the operation  |
 | Right    | The right color/scalar involved in the operation |
 
-
-## Advanced Providers
+## Advanced providers
 
 You can also use:
 
 - A compute color shader as a color provider. It is currently accessible only from code but it will be possible to use it from the Game Studio in a future release.
 - A vertex attribute color provider (coming soon)
-
