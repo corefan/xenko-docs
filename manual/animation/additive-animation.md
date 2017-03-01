@@ -38,7 +38,7 @@ We can use use the difference clip to blend the source and reference animations.
 
 4. Give the asset a name that makes it easy to identify. For example, if you want to make a reload animation that can be used with other animations, you could name the asset *ReloadAdditive*.
 
-5. In the ***asset view** (bottom pane by default), select the animation asset you created.
+5. In the **asset view** (bottom pane by default), select the animation asset you created.
 
 6. In the **property grid** (on the right by default), add the **Source** animation clip. This is the animation you want to apply to other animations.
 
