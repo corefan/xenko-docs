@@ -164,7 +164,7 @@
 {{#description}}
 <h4 class="returns">{{__global.returns}}</h4>
 <p>{{{description}}}</p>
-<table class="table table-bordered table-striped table-condensed xk-hidden-table">
+<table class="table table-bordered table-striped table-condensed xk-returns-table xk-hidden-table">
   <thead>
     <tr>
       <th>{{__global.type}}</th>
@@ -218,7 +218,7 @@
 </table>
 {{/propertyValue}}
 {{#eventType}}
-<h5 class="eventType">{{__global.eventType}}</h5>
+<h5 class="eventType xk-hidden-table">{{__global.eventType}}</h5>
 <table class="table table-bordered table-striped table-condensed xk-hidden-table">
   <thead>
     <tr>

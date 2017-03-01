@@ -531,6 +531,7 @@ h5{
 .xk-bordered-title{
     border-bottom: 1px solid #ccc;
 }
+.xk-methods-wrapper .xk-hidden-table.xk-returns-table,
 .xk-hidden-table{
     display: none;
 }
@@ -545,4 +546,10 @@ h6 strong, .h6 strong{
 }
 article h4{
     border: none;
+}
+article h1, 
+article h2, 
+article h3, 
+article h4{
+    margin-top: 13px;   
 }
