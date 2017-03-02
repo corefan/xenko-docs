@@ -62,9 +62,7 @@ Sets a default value for the property.
 
 ## Display
 
-![Class DisplayAttribute](xref:SiliconStudio.Core.DisplayAttribute.html)
-
-Changes the property label in the property grid.
+[Class DisplayAttribute](xref:SiliconStudio.Core.DisplayAttribute.html) changes the property label in the property grid.
 
 ```cs
         [Display("My Property")]
@@ -82,7 +80,7 @@ You can also specify an expandable category for the property to be displayed und
 
 ![My-Property-My-Category](media/my-property-my-category.png)
 
-If you want to include the property in a category without giving it a name, use ``        [Display(category: "My Category")]``. For example:
+If you want to include the property in a category without giving it a name, use ``[Display(category: "My Category")]``. For example:
 
 ```cs
         [Display(category: "My Category")]
