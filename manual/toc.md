@@ -19,6 +19,7 @@
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
+## [Game Settings](game-studio/game-settings.md)
 ## [Archetypes](game-studio/archetypes.md)
 ## [Prefabs](game-studio/prefabs.md)
 ### [Create a prefab](game-studio/create-a-prefab.md)
