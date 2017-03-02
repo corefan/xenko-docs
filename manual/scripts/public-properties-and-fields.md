@@ -53,7 +53,7 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 
 ## Attributes
 
-When you declare public properties and fields, you can include attributes to change how users edit them in the Game Studio property grid. 
+When you declare public properties and fields, you can use attributes to change how users edit them in the Game Studio property grid. 
 
 Add attributes above public classes you declare in your scripts. For example:
 
