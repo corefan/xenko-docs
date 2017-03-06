@@ -10,7 +10,7 @@ You can edit most assets using the **property grid**. By default, this is in the
 
 For example, to change the color of a material asset::
 
- 1. In the asset view (bottom tab), select the material. 
+ 1. In the **asset view** (in the bottom by default), select the material. 
  
 	![Select material in the asset view](media/edit-asset-sphere-material-asset-view-tab.png)
 
@@ -89,6 +89,42 @@ To make an asset a root asset (always included in the build):
 * click the **gray dot** in the top-left of the thumbnail, or
 * right-click the asset and select **Include in build as root asset**
 
+## Filter assets
+
+When browsing assets in the **asset view** (in the bottom by default), you can filter by name, tag, type, or a combination of all three.
+
+The tag and name filters are "and" filters. For example, if you filter by *tag:level* and *name:knight*, the asset view only displays assets with the tag "level" **and** the name "kight".
+
+Type filters are "or" filters. For example, if you filter by *type:animation* and *type:texture*, the asset view only displays assets that are animations **or** textures.
+
+### Add a filter
+
+1. In the asset view, type in the filter bar.
+
+    Game Studio displays a list of matching filters (name, type, or tag).
+
+    ![add-filter.png](media/add-filter.png)
+
+2. * To filter by name, press Enter.
+
+    * To filter by a tag or type, select tag or type filters in the drop-down list.
+
+    Game Studio applies the filter and shows matching assets in the asset view. 
+    
+You can add multiple filters. Name filters are green, tag filters are blue, and type filters are orange.
+
+![filter-tags](media/filter-tags.png)
+    
+### Toggle filters on and off
+
+To toggle a filter on and off without removing it, click it. Disabled filters have darker colors.
+
+![filter-tags](media/disabled-filter-tags.png)
+
+### Remove a filter
+
+To remove a filter, click the X icon in the filter tag.
+
 ## What's next?
 
-* [Learn how to use assets](use-assets.md)
+* [Use assets](use-assets.md)

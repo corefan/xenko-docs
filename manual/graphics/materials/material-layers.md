@@ -29,3 +29,9 @@ This diagram shows the definition of the materials blended in the screenshot abo
 
 > [!Note] 
 > Xenko blends individual layer attributes if they have the same shading model; otherwise, Xenko blends the shading model.    
+
+## In this section
+
+- [Material colors](material-colors.md)
+- [Material attributes](material-attributes.md)
+- [Materials for developers](materials-for-developers.md)

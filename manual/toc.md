@@ -15,7 +15,7 @@
 ### [Create a scene](get-started/create-a-scene.md)
 ### [Add entities](get-started/add-entities.md)
 ### [Arrange entities](get-started/arrange-entities.md)
-### [Navigate in the editor](get-started/navigate-in-the-editor.md)
+### [Navigate in the editor](get-started/navigate-in-the-scene-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
@@ -195,5 +195,7 @@
 # [Troubleshooting](troubleshooting/index.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
+
+# [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
 
 # [Xenko Launcher](xenko-launcher/index.md)
