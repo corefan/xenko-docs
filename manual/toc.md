@@ -15,7 +15,7 @@
 ### [Create a scene](get-started/create-a-scene.md)
 ### [Add entities](get-started/add-entities.md)
 ### [Arrange entities](get-started/arrange-entities.md)
-### [Navigate in the editor](get-started/navigate-in-the-scene-editor.md)
+### [Navigate in the scene editor](get-started/navigate-in-the-scene-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
