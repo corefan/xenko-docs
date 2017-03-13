@@ -40,14 +40,12 @@ ul li  img, ol li img {
 
 .sidefilter {
     top: 90px;
-    width: 390px;
-    margin-left: -130px;
+    width: 280px;
 }
 
 .sidetoc {
     top: 156px;
-    width: 390px;
-    margin-left: -130px;
+    width: 100%;
 }
 
 .breadcrumb {
@@ -354,7 +352,9 @@ h5{
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
+.article.grid-right{
+    padding-left: 15px;
+}
 @media only screen and (max-width: 1625px){
     .sidefilter, 
     .sidetoc{        
@@ -362,13 +362,13 @@ h5{
     } 
     .article.grid-right{
         margin-left: 410px;
-    }  
+    }
 }
 @media only screen and (max-width: 1275px){
     .sidefilter, 
     .sidetoc{        
         margin-left: 0;
-        width: 260px;
+        /*width: 260px;*/
     } 
     .article.grid-right{
         margin-left: 280px;
@@ -401,41 +401,41 @@ h5{
     padding-left: 20px;
     padding-right: 20px;
 }
-.documentation_list{
+.xk-documentation-list{
     list-style: none;
     margin: 0;
     padding: 0;
     margin-left: 35px;
 }
-.documentation_list li{
+.xk-documentation-list li{
     margin-left: 0;    
     position: relative;
     margin-bottom: 35px;
     min-height: 140px;    
     border-radius: 5px;
 }
-.documentation_list li>a{
+.xk-documentation-list li>a{
     display: block;
     width: 100%;
     height: 100%;
     padding: 10px 0 10px 20px;
 }
-.documentation_list li>a>h2{
+.xk-documentation-list li>a>h2{
     margin-left: -3px;
 }
-.documentation_list li a p{
+.xk-documentation-list li a p{
     margin-right: 60px;
     padding-right: 50px;
 }
-.documentation_list li a h2,
-.documentation_list li a p{
+.xk-documentation-list li a h2,
+.xk-documentation-list li a p{
     color: #000;
     position: relative;
 }
-.documentation_list li a h2:before{
+.xk-documentation-list li a h2:before{
     display: none;
 }
-.documentation_list li .xi_arrowLink{
+.xk-documentation-list li .xi_arrowLink{
     width: 40px;
     height: 78px;
     float: right;
@@ -447,10 +447,10 @@ h5{
     background: url(http://xenko.com/images/svg/arrow.svg) no-repeat -26px 50%;
     background-size: 132px 200px;
 }
-.documentation_list li:hover .xi_arrowLink{
+.xk-documentation-list li:hover .xi_arrowLink{
     background-position: 100% 50%;
 }
-.documentation_list li:hover{
+.xk-documentation-list li:hover{
     background-color: #E8E8E8;
 }
 .xk-custom-breadcrumb{
@@ -479,7 +479,7 @@ h5{
     margin-top: 10px !important;
 }
 @media screen and (max-width: 768px){
-    .documentation_list li a p:after{
+    .xk-documentation-list li a p:after{
         display: none;
     }
 }
@@ -489,10 +489,10 @@ h5{
         padding-left: 10px;
         padding-right: 10px;
     }
-    .documentation_list li a p{
+    .xk-documentation-list li a p{
         padding-right: 10px;
     }
-    .documentation_list li .xi_arrowLink{
+    .xk-documentation-list li .xi_arrowLink{
         top: 12px;
         right: 10px;
     }
@@ -511,7 +511,7 @@ h5{
     .sidefilter, 
     .sidetoc{        
         margin-left: 0;
-        width: 260px;
+        /*width: 260px;*/
     } 
     .article.grid-right{
         margin-left: 280px;
@@ -525,8 +525,19 @@ h5{
     .sidetoc{
         width: 100%;
     }
+    .toc .level2 > li{
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+    }
+    .toc .level2 > li:after{
+        display: none;
+    }
+    article h1, article h2, article h3, article h4{
+        word-break: break-word;
+        word-wrap: break-word;
+    }
 }
-
 /* Class page fixes */
 .xk-bordered-title{
     border-bottom: 1px solid #ccc;
@@ -552,4 +563,40 @@ article h2,
 article h3, 
 article h4{
     margin-top: 38px;
+}
+@media only screen and (min-width: 767px){
+     /* Create resizable TOC section (issue #138) */
+     /*Hide elements while script doesn't set the sizes to it*/
+    .container.body-content.hide-when-search{
+        display: none;
+    }
+    #sidetoggle{
+        position: fixed;
+        top: 90px;
+        z-index: 999;
+        width: 280px;
+        min-height: 100vh;
+        background-color: #f1f1f1;
+    }
+    .sidefilter + .sidetoc{
+        position: static;
+        /*margin-top: 65px;*/
+    }
+    .ui-resizable-handle.ui-resizable-e{
+        width: 2px;
+        user-select: none;
+        background: #afadad;
+        box-shadow: -1px 0px 1px 0px #CCC;
+        right: -2px;
+    }
+    #sidetoc{
+        height: calc(100vh - 166px);
+        margin-top: 66px;
+        overflow: auto;
+        background-color: #f1f1f1;
+    }
+    .toc .level1 > li{
+        text-align: left;
+    }
+>>>>>>> 698448dab268e5e27fb368e2008ff77b3c31ddfa
 }

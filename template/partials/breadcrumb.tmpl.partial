@@ -4,7 +4,7 @@
 	<div class="container">
 		<ul class="submenu-navbar"> 	 	
 			<li><a href="{{_rel}}manual">Manual</a></li>
-			<li><a href="{{_rel}}api/SiliconStudio.Xenko.Engine.html">API</a></li>
+			<li><a href="{{_rel}}api">API</a></li>
 			<li><a href="{{_rel}}ReleaseNotes">Release notes</a></li> 	
 		</ul>
 	</div>
