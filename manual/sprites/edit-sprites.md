@@ -58,6 +58,8 @@ There are three ways to do this: by using the Magic Wand tool, by setting the ed
 
 The **Magic Wand** selects the texture region around a sprite automatically. This is usually the fastest way to select sprites.
 
+![Magic wand](media/magic-wand.gif)
+
 To select or deselect the Magic Wand, click the icon in the Sprite Editor toolbar, or press the **M** key.
 
 ![Select Magic Wand](media/select-magic-wand.png)

@@ -14,7 +14,7 @@ Materials can use multiple layers of materials to build more complex materials.
 
 In practice, materials generate partial definitions of shaders integrated as part of the shading of models ([lights and shadows](../lights-and-shadows/index.md)).
 
-## See also
+## In this section
 
 - [Material colors](material-colors.md)
 - [Material attributes](material-attributes.md)

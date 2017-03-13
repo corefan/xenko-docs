@@ -1,10 +1,10 @@
 # Drawing vertices
 
-When loading a scene, Xenko automatically handles the draw calls to display the scene throughout the entity system. In this page, manual drawing will be introduced.
+When loading a scene, Xenko automatically handles the draw calls to display the scene throughout the entity system. This page introduces manual drawing.
 
 ## Primitives
 
-The engine provides the following set of built-in primitives:
+Xenko provides the following set of built-in primitives:
 
 - Plane
 - Cube
@@ -14,7 +14,7 @@ The engine provides the following set of built-in primitives:
 - Torus
 - Teapot
 
-They are not automatically created along with the @'SiliconStudio.Xenko.Graphics.GraphicsDevice' so they have to be instantiated by the user. This is possible through the @'SiliconStudio.Xenko.Graphics.GeometricPrimitives.GeometricPrimitive' class.
+They aren't automatically created along with the @'SiliconStudio.Xenko.Graphics.GraphicsDevice', so you have to instantiate them. You can do this through the @'SiliconStudio.Xenko.Graphics.GeometricPrimitives.GeometricPrimitive' class.
 
 **Code:** Creating and using a primitive
 

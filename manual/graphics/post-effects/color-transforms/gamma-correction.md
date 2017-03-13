@@ -1,18 +1,14 @@
 # Gamma correction
 
-All the post-effect calculations are made in a linear-space (also called RGB space). Which means doubling the color value of a pixel will double the light it emits. 
+All the post-effect calculations are made in a linear space (ie RGB space). This means doubling the color value of a pixel doubles the light it emits. This guarantees correct lighting calculations.
 
-This guarantees correct lighting calculations.
+However, real-world computer monitors don't behave this way: for dark color values they tend to emit much less light than they should. For this reason, after our other post-effects have been applied, we apply gamma correction to transform our image from a linear space to a sRGB space (or gamma space). 
 
-However our monitors don't behave this way: for dark color values they tend to emit much less light than they should. 
-
-This is why after all our post-effects have been applied, we must apply [Gamma correction](http://en.wikipedia.org/wiki/Gamma_correction)  as the final step, to transform our image from a linear space to a sRGB space (or gamma space). 
-
-A buffer in the sRGB space will be be displayed correctly on a monitor or a TV screen.
+A buffer in the sRGB space displays correctly on a monitor or a TV screen.
 
 ![media/gamma-correction-1.png](media/gamma-correction-1.png) 
 
-*Non-gamma-corrected images have their dark areas appear darker than they're supposed to.*
+Non-gamma-corrected images have dark areas appear darker than they're supposed to.
 
 ![media/gamma-correction-2.png](media/gamma-correction-2.png) 
 
@@ -22,8 +18,9 @@ A buffer in the sRGB space will be be displayed correctly on a monitor or a TV s
 | -------- | ----------------------------------------------- |
 | Value    | Gamma value. A traditional value is around 2.2. |
 
+## See also
 
- 
-
- 
-
+* [Gamma correction (Wikipedia)](http://en.wikipedia.org/wiki/Gamma_correction)
+* [Film grain](film-grain.md)
+* [ToneMap](tonemap.md)
+* [Vignetting](vignetting.md)

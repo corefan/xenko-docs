@@ -66,3 +66,9 @@ You can also use:
 
 - A compute color shader as a color provider. It is currently accessible only from code but it will be possible to use it from the Game Studio in a future release.
 - A vertex attribute color provider (coming soon)
+
+## See also
+
+- [Material attributes](material-attributes.md)
+- [Material layers](material-layers.md)
+- [Materials for developers](materials-for-developers.md)

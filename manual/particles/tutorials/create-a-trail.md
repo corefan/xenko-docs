@@ -32,7 +32,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Add Animations](media/add-animation.png)
 
-3. Under the **Animations** component, next to **Playing Animations**, click the **plus icon** (**Add a new item to the list**). 
+3. Under the **Animations** component, click the **plus icon** (**Add a new item to the list**). 
 
     ![Add a new item to the list](media/add-new-playing-animation.png)
 

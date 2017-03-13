@@ -16,4 +16,4 @@ When you create a new scene, Game Studio populates it with basic entities such a
 * [Create and open a scene](create-a-scene.md)
 * [Add entities](add-entities.md)
 * [Arrange entites](arrange-entities.md)
-* [Navigate in the scene editor](navigate-in-the-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-editor.md)

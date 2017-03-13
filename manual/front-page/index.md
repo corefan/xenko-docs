@@ -10,6 +10,9 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Xenko for Unity® developers](../xenko-for-unity-developers/index.md)
+* <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../get-started/manage-assets.md)
+* <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../get-started/navigate-in-the-scene-editor.md)
 * <span class="label label-doc-highlight">New</span> [Animation](../animation/index.md)
 * <span class="label label-doc-highlight">Updated</span> [Physics - Collider shapes](../physics/collider-shapes.md)
 * <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](../physics/script-a-trigger.md)

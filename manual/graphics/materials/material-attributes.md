@@ -4,52 +4,47 @@ Material attributes define the core characteristics of the material, such as dif
 
 ![media/material-attributes-1.png](media/material-attributes-1.png) 
 
-There are 2 types of attributes:
+There are two types of attributes:
 
-- Attributes used as input values for a shading model. For example: The Diffuse attribute provides only color used by the diffuse shading model.
-- Attributes that can change the shading model. For example: The Diffuse Shading Model (like Lambert) interprets the diffuse attribute color.
+- attributes used as input values for a shading model (for example, the Diffuse attribute provides only color used by the diffuse shading model)
+- attributes that can change the shading model (for example, the Diffuse Shading Model (like Lambert) interprets the diffuse attribute color)
 
-Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered as part of the first layer.
+Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
-A material needs to have at least one attribute shading model declared in order to display something:
+A material needs to have at least one declared attribute shading model to display something:
 
 - Diffuse Model (with Diffuse color)
 - Specular Model (With Specular color, possibly Diffuse Color and MicroSurface)
 - Emissive
 
-Attributes are organized in 3 categories: Geometry, Shading and Misc.
+Attributes are organized in three categories: geometry, shading, and misc.
 
 ## Geometry attributes
 
-They define the shape of the material:
+Geometry attributes define the shape of the material:
 
-- Tessellation
-- Displacement
-- Surface (macro surface definition like normal maps)
-- MicroSurface (micro surface definition like gloss maps)
+- tessellation
+- displacement
+- surface (macro surface definition like normal maps)
+- microSurface (micro surface definition like gloss maps)
 
 ## Tessellation
 
-Realtime tessellation use a HW feature of the GPU to massively subdivide triangles in order to increase the realism and potential of deformations of the surface geometry.
+Real-time tessellation use a HW feature of the GPU to massively subdivide triangles in order to increase the realism and potential of deformations of the surface geometry.
 
- 
-
-| No Tessellation                                                        | Flat Tessellation                                                      | Point Normal Tessellation                                              |
+| No tessellation                                                        | Flat tessellation                                                      | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | ![media/material-attributes-2.png](media/material-attributes-2.png)  | ![media/material-attributes-3.png](media/material-attributes-3.png)  | ![media/material-attributes-4.png](media/material-attributes-4.png)  |
 
-
-### Flat Tessellation
+### Flat tessellation
 
 Tessellates the mesh uniformly with a flat tessellation.
 
 ![media/material-attributes-5.png](media/material-attributes-5.png) 
 
- 
+The following snapshot shows that the flat tessellation is adding extra triangles to the existing triangles, while the curve isn't taken into account:
 
-The following snapshot shows that the flat tessellation is adding extra triangles to the existing triangles, while the curve is not taken into account:
-
-| No Tessellation                                                        | **→**  | Flat Tessellation                                                      |
+| No tessellation                                                        | **→**  | Flat tessellation                                                      |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
 | ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-7.png](media/material-attributes-7.png)  |
 |                                                                        |        |                                                                        |
@@ -68,17 +63,15 @@ The following snapshot shows that the flat tessellation is adding extra triangle
 | Adjacent Edges Average | Adjust the **triangle size** values from the average of adjacent edges values |
 
 
-### Point Normal Tessellation
+### Point normal tessellation
 
 Tessellates the mesh using the curvature provided by the normals of the mesh.
 
 ![media/material-attributes-8.png](media/material-attributes-8.png) 
 
- 
-
 The following snapshot shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
 
-| No Tessellation                                                        | **→**  | Point Normal Tessellation                                              |
+| No tessellation                                                        | **→**  | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
 | ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-9.png](media/material-attributes-9.png)  |
 |                                                                        |        |                                                                        |
@@ -96,18 +89,15 @@ The following snapshot shows that the point normal tessellation is adding extra 
 | Triangle Size          | The size of a tessellated triangle in screen-space units                                               |
 | Adjacent Edges Average | Adjust the **triangle size** and **normal curvature** values from the average of adjacent edges values |
 
-
 ## Displacement
 
-### Displacement Map
+### Displacement map
 
-Displaces the geometry of the mesh using a displacement map.
+The **displacement map** displaces the geometry of the mesh.
 
 ![media/material-attributes-10.png](media/material-attributes-10.png) 
-
  
-
-Depending on the stage the displacement is applied, the results can be significantly different:
+Depending on the stage the displacement is applied, the results can be very different:
 
 | Displacement with Vertex Shader                                          | Tessellation with Displacement                                           |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -129,21 +119,17 @@ Depending on the stage the displacement is applied, the results can be significa
 
 ## Surface
 
-An attribute that defines the macro surface normals.
-
- 
+The **surface** defines the macro surface normals.
 
 ![media/material-attributes-13.png](media/material-attributes-13.png) 
 
 ### Normal Map
 
-A map that provides per-pixel normal perturbation of the normal of the mesh.
+The **normal map** provides per-pixel normal perturbation of the normal of the mesh.
 
 ![media/material-attributes-14.png](media/material-attributes-14.png) 
 
- 
-
-The [normal mapping](http://en.wikipedia.org/wiki/Normal_mapping)  technique is widely used to enhance the realism of a low poly mesh:
+The [normal mapping](http://en.wikipedia.org/wiki/Normal_mapping) technique is widely used to enhance the realism of a low poly mesh:
 
 | Flat                                                                     | Using a Normal Map                                                       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -156,7 +142,6 @@ The [normal mapping](http://en.wikipedia.org/wiki/Normal_mapping)  technique is 
 | Scale & Bias | When enabled, the value coming from the texture is considered as a positive value ranging from 0.0 to 1.0 and the shader will apply a scale to get the range -1.0 to 1.0. |
 | Normal xy    | When enabled, assume that only the (x,y) are valid and z = 1.0                                                                                                            |
 
-
 ## MicroSurface
 
 An attribute that defines the behavior of the micro surface fine grained normals.
@@ -168,11 +153,9 @@ A map that provides per-pixel information for glossiness.
 - A value of 1.0 means that the surface is highly glossy (the coarse normal is not perturbed)
 - A value of 0.0 means that the surface is very rough (the coarse normal is highly perturbed in several directions)
 
-![media/material-attributes-17.png](media/material-attributes-17.png) 
+![media/material-attributes-17.png](media/material-attributes-17.png)
 
- 
-
-In the screenshots below, using a material with the following attributes, we can see the result of the glossiness factor on the material:
+In the screenshots below, using a material with the following attributes, we see the result of the glossiness factor on the material:
 
 - Diffuse = #848484, Lambert
 - Specular Metalness = 1.0, GGX
@@ -193,12 +176,11 @@ In the screenshots below, using a material with the following attributes, we can
 |                |                                                                                 |
 
 
-## Shading Attributes
+## Shading attributes
 
-The shading attributes define the main color characteristics of the material and how it reacts to the lights.
+The **shading attributes** define the main color characteristics of the material and how it reacts to the lights.
 
-> **Note**
-> 
+> [!Note]
 > At least one shading model - diffuse, specular or emissive model -  must be selected in order to display a material.    
 
 ### Diffuse Color
@@ -214,31 +196,27 @@ Currently, the Diffuse attribute supports only a **Diffuse Map** and the shading
 
 ### Diffuse Model
 
-The default diffuse model supported is the **Lambert** model.
+The default supported diffuse model is the **Lambert** model.
 
-A Lambert diffuse material implies that the light is reflected equally into all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
+A Lambert diffuse material implies that the light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
 
-![media/material-attributes-24.png](media/material-attributes-24.png) 
+![media/material-attributes-24.png](media/material-attributes-24.png)
 
- 
-
-In the screenshot below, we can see a pure diffuse material with Lambert lighting:
+In the screenshot below, we see a pure diffuse material with Lambert lighting:
 
 ![media/material-attributes-25.png](media/material-attributes-25.png) 
 
-> **Note**
-> 
-> A pure Lambertian material does not exist in practice. A material has always a bit of specular reflection. This effect is more visible at grazing angles (a mostly diffuse surface becomes shiny at grazing angle)    
+> [!Note]
+> A pure Lambertian material doesn't exist in practice. A material has always a little specular reflection. This effect is more visible at grazing angles (a mostly diffuse surface becomes shiny at grazing angle).    
 
 | Property      | Description                                                                  |
 | ------------- | ---------------------------------------------------------------------------- |
 | Diffuse Map   | The diffuse map color provider.                                              |
 | Diffuse Model | The shading model for diffuse lighting. Currently, only Lambert is supported |
 
-
 ### Specular Color
 
-The specular color can be defined using two popular workflow:
+The specular color can be defined using two common workflows:
 
 - Metalness workflow: The specular color is calculated by using the diffuse color as a base color.
 - Specular workflow: The specular color is defined separately from the diffuse color.
@@ -256,9 +234,7 @@ With the metalness workflow, the final specular color is calculated by mixing be
 
 ![media/material-attributes-26.png](media/material-attributes-26.png) 
 
- 
-
-In the screenshots below, using a material with the following attributes, we can see the result of the metalness factor on the material:
+ In the screenshots below, using a material with the following attributes, we can see the result of the metalness factor on the material:
 
 - Glossiness = 0.8
 - Diffuse = #848484, Lambert
@@ -269,7 +245,7 @@ In the screenshots below, using a material with the following attributes, we can
 |  ![media/material-attributes-27.png](media/material-attributes-27.png)  | ![media/material-attributes-28.png](media/material-attributes-28.png)  | ![media/material-attributes-29.png](media/material-attributes-29.png)  |
 | - The diffuse color is dominant                                           | - The diffuse color is dominant                                          | - The diffuse color is not visible                                       |
 | - The specular color is not visible                                       | - The specular color is visible (0.02)                                   | - The specular color is visible                                          |
-| - There is no Fresnel:                                                    | - The Fresnel effect is slightly visible:                                | - The Fresnel effect is visible:                                         |
+| - No Fresnel:                                                    | - Fresnel effect is slightly visible:                                | - Fresnel effect is visible:                                         |
 |                                                                           |                                                                          |                                                                          |
 | ![media/material-attributes-30.png](media/material-attributes-30.png)   | ![media/material-attributes-31.png](media/material-attributes-31.png)  | ![media/material-attributes-32.png](media/material-attributes-32.png)  |
 
@@ -286,9 +262,9 @@ Unlike the metalness workflow, It allows to have a different specular color from
 
 ### Specular Model
 
-A pure specular surface is producing an highlight of a light in a mirror direction. In practice, there is a broad range of specular materials, not entirely smooth that can reflect the light not in a single direction.
+A pure specular surface is producing an highlight of a light in a mirror direction. In practice, there is a broad range of specular materials, not entirely smooth, which can reflect the light not in a single direction.
 
-The default specular model used to support these various scenarios is the **microfacet** model also known as [Cook-Torrance](http://www.cs.columbia.edu/~belhumeur/courses/appearance/cook-torrance.pdf) .
+The default specular model used to support these scenarios is the **microfacet** model, also known as [Cook-Torrance (academic paper)](http://www.cs.columbia.edu/~belhumeur/courses/appearance/cook-torrance.pdf).
 
 ![media/material-attributes-33.png](media/material-attributes-33.png) 
 
@@ -331,15 +307,13 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 
 ### Emissive Model
 
-An emissive material is a surface emitting a light.
+An emissive material is a surface that emits a light.
 
 ![media/material-attributes-37.png](media/material-attributes-37.png) 
 
-With a HDR rendering and a bloom post-processing effect, we can observe the influence of an emissive material:
+With HDR and a bloom post-processing effect, we can observe the influence of an emissive material:
 
 ![media/material-attributes-38.png](media/material-attributes-38.png) 
-
- 
 
 | Property     | Description                                                                                                                                            |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -347,18 +321,15 @@ With a HDR rendering and a bloom post-processing effect, we can observe the infl
 | Intensity    | A factor to multiply by the color of the color provider                                                                                                |
 | Use Alpha    | When enabled, the alpha of the emissive map is used as the main alpha color of the material (instead of using by default the alpha of the diffuse map) |
 
+## Misc attributes
 
-## Misc Attributes
-
-## Occlusion
+### Occlusion
 
 The Occlusion Map is the default occlusion attribute. The occlusion map use geometry occlusion information backed into a texture in order to modulate the ambient and direct lighting.
 
 ![media/material-attributes-39.png](media/material-attributes-39.png) 
 
- 
-
-The following screenshots gives an example of usage of occlusion maps and cavity maps:
+These screenshots give an example of usage of occlusion maps and cavity maps:
 
 | Occlusion Map                                                            | Cavity Map                                                               | Final Composition                                                        |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -385,37 +356,21 @@ The following screenshots gives an example of usage of occlusion maps and cavity
 
 ### Transparency
 
-#### Cuttoff
-
-Renders a material when the current alpha color is above a threshold.
-
-![media/material-attributes-43.png](media/material-attributes-43.png) 
-
- 
-
-The following screenshots show the influence of the cutoff Alpha value.
-
-| Alpha = 0.01                                                             | Alpha = 0.5                                                              | Alpha = 1.0                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)  |
-
-
 #### Additive
 
-Additive transparency allows to render a model from a purely additive - taking into account only the specular material part - to a semi-opaque material - taking into account the diffuse and diffuse/emissive alpha.
+The additive transparency takes into account the diffuse and diffuse/emissive alpha.
 
 ![media/material-attributes-47.png](media/material-attributes-47.png) 
 
-The Alpha property has a particular meaning:
-
-- If Alpha <= 0.5, the material is rendered in additive mode without the diffuse component (only specular highlights)
+- If the **Alpha** property is less than 0.5, only the specular highlights are visible. The material itself is completely invisible.
   
-  | Transparency Alpha = 0.25                                                | Alpha = 0.5                                                              |
+  | Alpha = 0.25                                                | Alpha = 0.5                                                              |
   | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
   | ![media/material-attributes-48.png](media/material-attributes-48.png)  | ![media/material-attributes-49.png](media/material-attributes-49.png)  |
   |                                                                          |                                                                          |
   | We only see the specular highlight in additive mode                      | Transparency is fully additive. Specular highlights at maximum           |
-- If Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it will be displayed as transparent
+
+- If the **Alpha** <= 1.0, the material is semi-opaque with the diffuse/emissive component. If the diffuse component has an alpha, it's transparent.
   
   | Alpha = 0.75                                                             | Alpha = 1.0                                                              |
   | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -431,8 +386,22 @@ The Alpha property has a particular meaning:
 |          | - Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it will be displayed as transparent |
 |          |                                                                                                                                                                              |
 |          |                                                                                                                                                                              |
-| Tint     | Apply a color tint to the transparency layer                                                                                                                                 |
+| Tint     | Apply a color tint to the transparency layer   
 
+#### Cuttoff
 
+Renders a material when the current alpha color is above the threshold you specify with the **Alpha** slider.
 
+![media/material-attributes-43.png](media/material-attributes-43.png) 
 
+The following screenshots show the influence of the cutoff Alpha value.
+
+| Alpha = 0.01                                                             | Alpha = 0.5                                                              | Alpha = 1.0                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)  |                                                                                                                              |
+
+## See also
+
+* [Material colors](material-colors.md)
+* [Material layers](material-layers.md)
+* [Materials for developers](materials-for-developers.md)

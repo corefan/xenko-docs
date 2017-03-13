@@ -1,24 +1,24 @@
 # Shader stages
 
-The function for each stage has a predefined name so you should stick with it.
+The function for each stage has a predefined name, so we recommend you stick with it.
 
 - `HSMain` for hull shader
 - `HSConstantMain` for patch constant function
 - `DSMain` for domain shader
-- `VSMain` for vertex shader. It takes no arguments.
+- `VSMain` for vertex shader. It takes no arguments
 - `GSMain` for geometry shader
-- `PSMain` for pixel shader. It takes no arguments.
-- `CSMain` for compute shader. It takes no arguments.
+- `PSMain` for pixel shader. It takes no arguments
+- `CSMain` for compute shader. It takes no arguments
 
 These are all void methods.
 
-The geometry and tessellation shaders need some kind of predefined structures as input and output. However, since our shaders are really generic, it is impossible to know beforehand what the structure will be. As a result, These shaders use `Input` and `Output` structures that will be automatically generated to fit the final shader.
+The geometry and tessellation shaders need some kind of predefined structures as input and output. However, since Xenko shaders are generic, it's impossible to know beforehand what the structure will be. As a result, these shaders use `Input` and `Output` structures that are automatically generated to fit the final shader.
 
 ## Vertex shader
 
 A vertex shader has to set the variable with the semantic `SV_Position`. In `ShaderBase`, it is `ShadingPosition`.
 
-Example of vertex shader:
+Example of a vertex shader:
 
 ```cs
 override stage void VSMain()
@@ -100,8 +100,10 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 }
 ```
 
+`Input` and `Input2` both behave like streams.
 
-`Input` and `Input2` both behave like streams. Don't forget to assign `output` to `streams` at the end of your stage.
+>[!Note]
+>Don't forget to assign `output` to `streams` at the end of your stage.
 
 ## Compute shader
 
@@ -117,3 +119,11 @@ void CSMain()
 
 You can inherit from the `ComputeShaderBase` class and override the `Compute` method.
 
+## See also
+
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
+    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Composition](composition.md)
+    - [Templating](template.md)
+    - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
