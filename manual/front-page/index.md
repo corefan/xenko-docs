@@ -1,5 +1,5 @@
 
-# Xenko manual
+# Xenko 1.10 Beta manual
 
 ![Manual](media/manual.png)
 
@@ -27,4 +27,4 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in GitHub.
 
-To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-1.9/GUIDELINES.md).
+To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-1.10/GUIDELINES.md).

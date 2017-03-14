@@ -2,7 +2,7 @@
 
 Xenko 1.10β improves stability and performance and introduces changes in the asset serialization.
 
-## Performance
+## Tool performance
 
 This release comes packed with several performance improvements, especially in the Game Studio and Asset Compiler.
 
@@ -108,3 +108,13 @@ Release date 2016/3/9
 #### Navigation
 
 * TryFindPath would return a valid path even if the starting and ending point weren't connected
+
+## Version 1.10.1-beta
+
+Release date 2016/3/13
+
+### Bugs fixed
+
+#### Game Studio
+
+* Fix a concurrency problem that could make the Game Studio crash while loading or updating assets in the Scene Editor
