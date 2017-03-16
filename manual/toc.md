@@ -15,10 +15,11 @@
 ### [Create a scene](get-started/create-a-scene.md)
 ### [Add entities](get-started/add-entities.md)
 ### [Arrange entities](get-started/arrange-entities.md)
-### [Navigate in the editor](get-started/navigate-in-the-editor.md)
+### [Navigate in the scene editor](get-started/navigate-in-the-scene-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
+## [Game Settings](game-studio/game-settings.md)
 ## [Archetypes](game-studio/archetypes.md)
 ## [Prefabs](game-studio/prefabs.md)
 ### [Create a prefab](game-studio/create-a-prefab.md)
@@ -60,7 +61,6 @@
 ## [Effects and shaders](graphics/effects-and-shaders/index.md)
 ### [Effect language](graphics/effects-and-shaders/effect-language.md)
 ### [Shading language](graphics/effects-and-shaders/shading-language/index.md)
-#### [Concepts](graphics/effects-and-shaders/shading-language/concepts.md)
 #### [Classes, mixins and inheritance](graphics/effects-and-shaders/shading-language/classes-mixins-and-inheritance.md)
 #### [Composition](graphics/effects-and-shaders/shading-language/composition.md)
 #### [Template](graphics/effects-and-shaders/shading-language/template.md)
@@ -194,5 +194,7 @@
 # [Troubleshooting](troubleshooting/index.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
+
+# [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
 
 # [Xenko Launcher](xenko-launcher/index.md)

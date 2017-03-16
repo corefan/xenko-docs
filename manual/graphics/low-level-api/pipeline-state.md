@@ -96,7 +96,7 @@ var depthStencilStateDescription = new DepthStencilStateDescription(true, false)
 pipelineStateDescription.DepthStencilState = depthStencilStateDescription;
 ```
 
-The stencil reference is not part of the @'SiliconStudio.Xenko.Graphics.PipelineState' and is set using @'SiliconStudio.Xenko.Graphics.CommandList.SetStencilReference'.
+The stencil reference is not part of the @'SiliconStudio.Xenko.Graphics.PipelineState' and is set using @'SiliconStudio.Xenko.Graphics.CommandList.SetStencilReference(System.Int32)'.
 
 **Code:** Setting the stencil reference
 
@@ -146,7 +146,7 @@ blendStateDescription.RenderTargets[0] = blendStateRenderTargetDescription;
 pipelineStateDescription.BlendState = blendStateDescription;
 ```
 
-The blend factor is not part of the @'SiliconStudio.Xenko.Graphics.PipelineState' and is set using @'SiliconStudio.Xenko.Graphics.CommandList.SetBlendFactor'.
+The blend factor is not part of the @'SiliconStudio.Xenko.Graphics.PipelineState' and is set using @'SiliconStudio.Xenko.Graphics.CommandList.SetBlendFactor(SiliconStudio.Core.Mathematics.Color4)'.
 
 **Code:** Setting the blend factor
 

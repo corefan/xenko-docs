@@ -25,13 +25,13 @@ Once the font is loaded, you can display any text with a @'SiliconStudio.Xenko.G
 // create the SpriteBatch
 var spriteBatch = new SpriteBatch(GraphicsDevice);
 
-// do not forget the begin
+// don't forget the begin
 spriteBatch.Begin(GraphicsContext);
  
 // draw the text "Helloworld!" in red from the center of the screen
 spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5, 0.5), Color.Red);
  
-// do not forget the end
+// don't forget the end
 spriteBatch.End();
 ```
 

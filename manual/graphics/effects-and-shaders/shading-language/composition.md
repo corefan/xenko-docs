@@ -1,6 +1,6 @@
 # Composition
 
-In addition to the inheritance system, XKSL introduces the concept of composition. A composition simply is a member whose type is another XKSL class. It is defined the same way as variables.
+In addition to the inheritance system, XKSL introduces the concept of **composition**. A composition is a member whose type is another XKSL class. It's defined the same way as variables.
 
 You can compose with an instance of the desired class or an instance of class that inherits from the desired one.
 
@@ -47,9 +47,9 @@ class BaseClass
 };
 ```
 
-The compositions are compiled in their own context, meaning that the non stage variables are only accessible within the composition. It is also possible to have compositions inside compositions.
+The compositions are compiled in their own context, meaning that the non-stage variables are only accessible within the composition. It's also possible to have compositions inside compositions.
 
-If you want to access the root compilation context, you can use the following format.
+If you want to access the root compilation context, you can use the following format:
 
 **Code:** Accessing root context
 
@@ -67,7 +67,7 @@ class CompositionClassC : CompositionBase
 
 This is error-prone, since `CompositionClassC` expects `BaseClass` to be available in the root context.
 
-You can also create an array of compositions the same way you use an array of values. Since there is no way to know beforehand the number of compositions, you should iterate using a `foreach` statement.
+You can also create an array of compositions the same way you use an array of values. Since there's no way to know beforehand how many compositions there are, you should iterate using a `foreach` statement.
 
 **Code:** Array of compositions
 
@@ -92,7 +92,7 @@ class BaseClassArray
 
 ## Stage behavior
 
-The behavior of the `stage` keyword is quite straightforward: only one instance of the variable or method is produced.
+The behavior of the `stage` keyword is straightforward: only one instance of the variable or method is produced.
 
 **Code:** Stage member behavior
 
@@ -164,9 +164,9 @@ class TestClass
 };
 ```
 
-Keep in mind that even in composition, you can call for base methods, override them etc. Overriding happens in the same order than the compositions.
+Keep in mind that even in composition, you can call for base methods, override them, and so on. Overriding happens in the same order as the compositions.
 
-This behavior is useful when you need a value in multiple composition but you only need to compute it once (for example the normal in view space).
+This behavior is useful when you need a value in multiple composition but you only need to compute it once (eg the normal in view space).
 
 ## Clone behavior
 
@@ -239,7 +239,13 @@ class TestClass
 };
 ```
 
-This behavior is useful when you want to repeat a simple function but with different parameters (like adding color on top of another).
+This behavior is useful when you want to repeat a simple function but with different parameters (eg adding color on top of another).
 
- 
+## See also
 
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
+    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Templating](template.md)
+    - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
+	- [Shader stages](shader-stages.md)

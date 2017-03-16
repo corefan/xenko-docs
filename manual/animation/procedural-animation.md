@@ -17,50 +17,56 @@ You can access multiple components to animate your models at runtime, including:
 
 ```cs
 public class AnimationScript : StartupScript
+{
+    public override void Start()
     {
-        public override void Start()
+        // Create an AnimationClip. Make sure you set its duration properly.
+        var animationClip = new AnimationClip { Duration = TimeSpan.FromSeconds(1) };
+
+        // Add a curves specifying the path to the transformation property.
+        // - You can index components using a special syntax to their key.
+        // - Properties can be qualified with a type name in parenthesis.
+        // - If a type isn't serializable, its fully qualified name must be used.
+
+        animationClip.AddCurve("[TransformComponent.Key].Rotation", CreateRotationCurve());
+
+        // Optional: pack all animation channels into an optimized interleaved format.
+        animationClip.Optimize();
+
+        // Add an AnimationComponent to the current entity and register our custom clip.
+        const string animationName = "MyCustomAnimation";
+        var animationComponent = Entity.GetOrCreate<AnimationComponent>();
+        animationComponent.Animations.Add(animationName, animationClip);
+
+        // Play the animation right away and loop it.
+        var playingAnimation = animationComponent.Play(animationName);
+        playingAnimation.RepeatMode = AnimationRepeatMode.LoopInfinite;
+        playingAnimation.TimeFactor = 0.1f; // slow down
+        playingAnimation.CurrentTime = TimeSpan.FromSeconds(0.6f); // start at different time
+    }
+
+    // Set custom linear rotation curve.
+    private AnimationCurve CreateRotationCurve()
+    {
+        return new AnimationCurve<Quaternion>
         {
-            // Create an AnimationClip. Make sure you set its duration properly.
-            var animationClip = new AnimationClip { Duration = TimeSpan.FromSeconds(1) };
-
-            // Add a curves specifying the path to the transformation property.
-            // - You can index components using a special syntax to their key.
-            // - Properties can be qualified with a type name in parenthesis.
-            // - If a type isn't serializable, its fully qualified name must be used.
-
-            animationClip.AddCurve("[TransformComponent.Key].Rotation", CreateRotationCurve());
-
-            // Optional: pack all animation channels into an optimized interleaved format.
-            animationClip.Optimize();
-
-            // Add an AnimationComponent to the current entity and register our custom clip.
-            const string animationName = "MyCustomAnimation";
-            var animationComponent = Entity.GetOrCreate<AnimationComponent>();
-            animationComponent.Animations.Add(animationName, animationClip);
-
-            // Play the animation right away and loop it.
-            var playingAnimation = animationComponent.Play(animationName);
-            playingAnimation.RepeatMode = AnimationRepeatMode.LoopInfinite;
-            playingAnimation.TimeFactor = 0.1f; // slow down
-            playingAnimation.CurrentTime = TimeSpan.FromSeconds(0.6f); // start at different time
-        }
-
-        // Set custom linear rotation curve.
-        private AnimationCurve CreateRotationCurve()
-        {
-            return new AnimationCurve<Quaternion>
+            InterpolationType = AnimationCurveInterpolationType.Linear,
+            KeyFrames =
             {
-                InterpolationType = AnimationCurveInterpolationType.Linear,
-                KeyFrames =
-                {
-                    CreateKeyFrame(0.00f, Quaternion.RotationX(0)),
-                    CreateKeyFrame(0.25f, Quaternion.RotationX(MathUtil.PiOverTwo)),
-                    CreateKeyFrame(0.50f, Quaternion.RotationX(MathUtil.Pi)),
-                    CreateKeyFrame(0.75f, Quaternion.RotationX(-MathUtil.PiOverTwo)),
-                    CreateKeyFrame(1.00f, Quaternion.RotationX(MathUtil.TwoPi))
-                }
-            };
-        }
+                CreateKeyFrame(0.00f, Quaternion.RotationX(0)),
+                CreateKeyFrame(0.25f, Quaternion.RotationX(MathUtil.PiOverTwo)),
+                CreateKeyFrame(0.50f, Quaternion.RotationX(MathUtil.Pi)),
+                CreateKeyFrame(0.75f, Quaternion.RotationX(-MathUtil.PiOverTwo)),
+                CreateKeyFrame(1.00f, Quaternion.RotationX(MathUtil.TwoPi))
+            }
+        };
+    }
+
+    private static KeyFrameData<T> CreateKeyFrame<T>(float keyTime, T value)
+    {
+        return new KeyFrameData<T>((CompressedTimeSpan)TimeSpan.FromSeconds(keyTime), value);
+    }
+}
 ```
 
 ## See also

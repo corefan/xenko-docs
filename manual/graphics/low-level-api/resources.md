@@ -28,5 +28,3 @@ effectInstance.Apply(context.GraphicsContext);
 ## Manual resource binding
 
 When more optimized code is required, e.g. in many parts of Xenko's [rendering pipeline](../rendering-pipeline/index.md), constant buffers updates and resource binding can be done manually.
-
-// TODO: ResourceLayouts, Descriptors, DescriptorSets

@@ -64,13 +64,14 @@ namespace XenkoEffects
 
 ### Adding mixins
 
-To add a mixin, simply use `mixin <mixin_name>`.
+To add a mixin, use `mixin <mixin_name>`.
 
 ### Using parameters
 
 The syntax is similar to C#. The following rules are added:
 
 - When you use parameter keys, add the using `params <class_name>`. If you don't, keys will be treated as variables.
+
 - You don't need to to tell the program where to check the values behind the keys. Just use the key.
 
 #### Parameters
@@ -134,3 +135,7 @@ mixin compose myComposition = MyPartialShader;
 ```
 
 You can use the `MyPartialShader` mixin like any other mixin in the code.
+
+## See also
+
+* [Shading language](shading-language/index.md)

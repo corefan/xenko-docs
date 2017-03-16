@@ -50,7 +50,6 @@ For more information about scenes, see [Introduction to scenes](../get-started/i
 | Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.                                           |
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).                                                                                    |
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.                                                                                                   |
-
 ### Editor settings
 
 The editor settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game at runtime.

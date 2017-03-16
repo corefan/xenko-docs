@@ -25,3 +25,11 @@ It uses as input the result of the [Bright Filter](bright-filter.md).
 | Sensitivity    | How much the retina is sensitive to the bright light.                                                                                                                                                                                                        |
 
 
+## See also
+
+* [Bright filter](bright-filter.md)
+* [color transforms](color-transforms/index.md)
+* [Depth of field](depth-of-field.md)
+* [Lens flare](lens-flare.md)
+* [Light streaks](light-streaks.md)
+* [Post-effects for developers](post-effects-for-developers.md)

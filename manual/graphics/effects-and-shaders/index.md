@@ -1,10 +1,8 @@
-# Effects and Shaders
-
-## Custom shaders and effects
+# Effects and shaders
 
 Xenko uses a programmable shading pipeline. You can write custom shaders, create @'SiliconStudio.Xenko.Graphics.Effect's from them, and use them for drawing. The @'SiliconStudio.Xenko.Rendering.EffectSystem' class provides an easy way to load an effect.
 
-### Code example
+## Code example
 
 To load an effect:
 
@@ -20,7 +18,7 @@ An effect also often defines a set of parameters. To set these, you need to [bin
 
 Shaders are authored in the [Xenko's shading language](shading-language/index.md), which is an extension of `HLSL`. They provide true composition of modular shaders via [inheritance](shading-language/classes-mixins-and-inheritance.md), shader [mixins](shading-language/composition.md) and [automatic weaving of shader in-out attributes](shading-language/automatic-shader-stage-input-output.md).
 
-# Effects
+## Effects
 
 [Effects](effect-language.md) in Xenko use C#-like syntax to further combine shaders. They provide conditional composition of shaders to generate effect permutations.
 
@@ -31,3 +29,12 @@ As some platforms can't compile shaders at runtime (eg iOS, Android, etc), effec
 Xenko shaders are converted automatically to the target graphics platform - either plain HLSL for Direct3D, `GLSL` for OpenGL, or `SPIR-V` for Vulkan platforms.
 
 For mobile platforms, shaders are optimized by a GLSL optimizer to improve performance.
+
+## In this section
+
+* [Effect language](effect-language.md)
+* [Shading language](shading-language/index.md)
+    - [Class inheritance](shading-language/classes-mixins-and-inheritance.md)
+    - [Composition](shading-language/composition.md)
+    - [Templating](shading-language/template.md)
+    - [Shader stage input/output automatic management](shading-language/automatic-shader-stage-input-output.md)

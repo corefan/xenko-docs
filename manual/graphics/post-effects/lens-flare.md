@@ -1,6 +1,6 @@
-# Lens Flare
+# Lens flare
 
-The lens flare effect simulates the artifacts produced by the internal reflection or scattering of the light within a real-world lens.
+The **lens flare** effect simulates the artifacts produced by the internal reflection or scattering of the light within a real-world lens.
 
 ![media/lens-flare-1.png](media/lens-flare-1.png) 
 
@@ -12,14 +12,17 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 | Property                  | Description                                                                                                                                           |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Amount                    | Amount/Strength of the light streak.                                                                                                                  |
+| Amount                    | Amount/strength of the light streak.                                                                                                                  |
 | Halo Factor               | Strength of the main artifact.                                                                                                                        |
 |                           |                                                                                                                                                       |
 |                           | Among the lens flares artifacts the most noticeable one is often the exact symmetric to the real spot light with respect to the center of the screen. |
 | Color Aberration Strength | Strength of the color aberration artifacts.                                                                                                           |
 
+## See also
 
- 
-
- 
-
+* [Bloom](bloom.md)
+* [Bright filter](bright-filter.md)
+* [Color transforms](color-transforms/index.md)
+* [Depth of field](depth-of-field.md)
+* [Light streaks](light-streaks.md)
+* [Post-effects for developers](post-effects-for-developers.md)

@@ -97,4 +97,4 @@ You can change the snap values for each gizmo in the scene view toolbar. Snap va
 
 ## What's next?
 
-* [Navigate in the scene editor](navigate-in-the-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-editor.md)

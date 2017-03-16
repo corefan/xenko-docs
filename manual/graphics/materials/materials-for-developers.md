@@ -1,6 +1,6 @@
-# Materials For developers
+# Materials for developers
 
-The following diagram shows the Material interfaces and implementation classes:
+This diagram shows the Material interfaces and implementation classes:
 
 ![media/materials-for-developers-1.png](media/materials-for-developers-1.png) 
 
@@ -10,6 +10,8 @@ The following diagram shows the Material interfaces and implementation classes:
 - The @'SiliconStudio.Xenko.Rendering.Materials.MaterialDescriptor' is the editor-time description of the material before being compiled into a Material Shader.
 - The @'SiliconStudio.Xenko.Rendering.Material' class is the runtime material shader generated from the @'SiliconStudio.Xenko.Rendering.Materials.MaterialDescriptor'
 
+## In this section
 
- 
-
+- [Material colors](material-colors.md)
+- [Material attributes](material-attributes.md)
+- [Material layers](material-layers.md)

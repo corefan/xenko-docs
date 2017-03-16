@@ -71,7 +71,7 @@ Now we need to transform the HDR output of the HDR Layer to the renderframe LDR 
 On the Post-Processing Effects
 
 - Disable all non-necessary effects (Depth Of Field, Bright Filter...etc.)
-- In the Color Transforms, press ![media/add.png](media/add.png)  to add a new color transformation and select the **ToneMap** transform
+- In the Color Transforms, press ![media/add.png](media/add.png)  to add a new color transform and select the **ToneMap** transform
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-12.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-12.png) 
 
