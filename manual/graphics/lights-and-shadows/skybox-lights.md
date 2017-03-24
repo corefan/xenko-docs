@@ -64,7 +64,7 @@ When you use a skybox as a light, Xenko uses it both in compressed form ([spheri
 ![media/SkyboxLightProperties.png](media/SkyboxLightProperties.png) 
 
 | Property     | Description   |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | --------------|
 | Type         | Skybox                                                                                                                                                                                         |
 | Intensity    | The light intensity. The value has no units, as it is dependent on the Skybox component values (see the note below). |
 | Culling Mask | Which entity groups are affected by the light. By default, all groups are affected.                                                                                                   |

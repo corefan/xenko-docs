@@ -1,4 +1,4 @@
-# Script a trigger
+# Tutorial: Script a trigger
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>

@@ -10,18 +10,13 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Materials](../graphics/materials/index.md)
+* <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
+* <span class="label label-doc-highlight">Updated</span> [Skybox lights](../graphics/lights-and-shadows/skybox-lights.md)
 * <span class="label label-doc-highlight">New</span> [Xenko for Unity® developers](../xenko-for-unity-developers/index.md)
 * <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../get-started/manage-assets.md)
 * <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../get-started/navigate-in-the-scene-editor.md)
 * <span class="label label-doc-highlight">New</span> [Animation](../animation/index.md)
-* <span class="label label-doc-highlight">Updated</span> [Physics - Collider shapes](../physics/collider-shapes.md)
-* <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](../physics/script-a-trigger.md)
-* <span class="label label-doc-highlight">Updated</span> [Scripts](../scripts/index.md)
-    * <span class="label label-doc-highlight">New</span> [Scripts - Events](../scripts/events.md)
-    * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](../scripts/scheduling-and-priorities.md)
-* <span class="label label-doc-highlight">New</span> [Platforms - Xbox Live](../platforms/uwp/xbox-live.md)
-* <span class="label label-doc-highlight">Updated</span> [Project structure](../get-started/project-structure.md)
-* <span class="label label-doc-highlight">New</span> [Sprites](../sprites/index.md)
 
 ## Improve this documentation
 

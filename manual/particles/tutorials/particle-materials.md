@@ -12,7 +12,6 @@ Please check the [Editing Particles](../create-particles.md) page if you are not
 
 This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
 
-
 ![media/particles-samples-material-0.png](media/particles-samples-material-0.png) 
 
 Start by creating a new Custom Particle Materials Sample from the New project menu. There are three entities in the scene graph named Rad Particle System, Radial Particle System and Two Textures Particle System. Select either one and navigate to its source particle system, expanding the emitter in it and its material.
@@ -25,7 +24,7 @@ The three custom shaders show different degrees of customization. We will go ove
 
 ### Red Particle System
 
-The Red Particle System has a very simple customization. Since the [Material Colors](../../graphics/materials/material-colors.md) already provide an option for using shader as a leaf node input, we can create our custom shader and assign it to that node.
+The Red Particle System has a very simple customization. Since the [Material maps](../../graphics/materials/material-maps.md) already provide an option for using shader as a leaf node input, we can create our custom shader and assign it to that node.
 
 First, create a shader (ComputeColorRed.xksl) with a derived class for ComputeColor:
 

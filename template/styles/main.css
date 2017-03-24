@@ -660,6 +660,10 @@ article h3,
 article h4{
     margin-top: 36px;
 }
+.alert a{
+    color: #ef5f18;
+    text-decoration: underline;
+}
 @media only screen and (min-width: 767px){
      /* Create resizable TOC section (issue #138) */
      /*Hide elements while script doesn't set the sizes to it*/

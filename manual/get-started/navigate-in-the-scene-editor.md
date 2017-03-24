@@ -16,8 +16,7 @@ There are several ways to move the editor camera around the scene editor.
 
 ### Walk
 
-You can "walk" by holding the **left mouse button** and **moving the mouse**. This moves along the X and Z dimensions.
-
+To walk around the scene, hold the **left mouse button** and move the **the mouse**. This moves the editor camera along the X and Z dimensions.
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-walk-in-the-scene.mp4" type="video/mp4">

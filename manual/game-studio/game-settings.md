@@ -20,10 +20,9 @@ You can configure the global settings of your game in the **Game Settings** asse
 
    ![Game settings](media/game-settings.png)
 
-
 ### Default scene
 
-You can have multiple scenes in your project. Xenko loads the default scene at runtime.
+You can have multiple scenes in your project. The **default scene** is the scene Xenko loads at runtime.
 
 To set the default scene:
 

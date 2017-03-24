@@ -1,13 +1,17 @@
 # Material attributes
 
-Material attributes define the core characteristics of the material, such as diffuse color, diffuse shading model, and so on. 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
 
-![media/material-attributes-1.png](media/material-attributes-1.png) 
+**Material attributes** define the core characteristics of the material, such as its diffuse color, diffuse shading model, and so on. 
 
-There are two types of attributes:
+![media/material-attributes-1.png](media/material-attributes-1.png)
+
+There are two types of attribute:
 
 - attributes used as input values for a shading model (for example, the Diffuse attribute provides only color used by the diffuse shading model)
-- attributes that can change the shading model (for example, the Diffuse Shading Model (like Lambert) interprets the diffuse attribute color)
+- attributes that can change the shading model (for example, the Diffuse Shading Model [like Lambert] interprets the diffuse attribute color)
 
 Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
@@ -30,7 +34,7 @@ Geometry attributes define the shape of the material:
 
 ## Tessellation
 
-Real-time tessellation use a HW feature of the GPU to massively subdivide triangles in order to increase the realism and potential of deformations of the surface geometry.
+Real-time tessellation uses a HW feature of the GPU to massively subdivide triangles. This increases the realism and potential of deformations of the surface geometry.
 
 | No tessellation                                                        | Flat tessellation                                                      | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -46,16 +50,7 @@ The following snapshot shows that the flat tessellation is adding extra triangle
 
 | No tessellation                                                        | **→**  | Flat tessellation                                                      |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
-| ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-7.png](media/material-attributes-7.png)  |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        | **→**  |                                                                        |
-
+| ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-7.png](media/material-attributes-7.png)  | 
 
 | Property               | Description                                                                   |
 | ---------------------- | ----------------------------------------------------------------------------- |
@@ -69,20 +64,11 @@ Tessellates the mesh using the curvature provided by the normals of the mesh.
 
 ![media/material-attributes-8.png](media/material-attributes-8.png) 
 
-The following snapshot shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
+The following image shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
 
 | No tessellation                                                        | **→**  | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
-| ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-9.png](media/material-attributes-9.png)  |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        |        |                                                                        |
-|                                                                        | **→**  |                                                                        |
-
+| ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-9.png](media/material-attributes-9.png)  |        
 
 | Property               | Description                                                                                            |
 | ---------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -103,18 +89,12 @@ Depending on the stage the displacement is applied, the results can be very diff
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | ![media/material-attributes-11.png](media/material-attributes-11.png)  | ![media/material-attributes-12.png](media/material-attributes-12.png)  |
 
-
 | Property         | Description                                                                                                                                                               |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Displacement Map | The displacement texture as a [Material Color Provider](material-colors.md).                                                                                              |
+| Displacement Map | The displacement texture as a [Material Color Provider](material-maps.md)                                                                                              |
 | Intensity        | The intensity of displacement                                                                                                                                             |
 | Scale & Bias     | When enabled, the value coming from the texture is considered as a positive value ranging from 0.0 to 1.0 and the shader will apply a scale to get the range -1.0 to 1.0. |
-| Shader Stage     | Specify on which shader stage the displacement map should be applied:                                                                                                     |
-|                  |                                                                                                                                                                           |
-|                  | - Vertex Shader                                                                                                                                                           |
-|                  | - Domain Shader (used with Tessellation)                                                                                                                                  |
-|                  |                                                                                                                                                                           |
-|                  |                                                                                                                                                                           |
+| Shader Stage     | Specify which shader stage the displacement map should be applied to, Vertex Shader or Domain Shader (used with Tessellation)                                                                                                                                                                                          |
 
 
 ## Surface
@@ -123,13 +103,13 @@ The **surface** defines the macro surface normals.
 
 ![media/material-attributes-13.png](media/material-attributes-13.png) 
 
-### Normal Map
+### Normal map
 
 The **normal map** provides per-pixel normal perturbation of the normal of the mesh.
 
 ![media/material-attributes-14.png](media/material-attributes-14.png) 
 
-The [normal mapping](http://en.wikipedia.org/wiki/Normal_mapping) technique is widely used to enhance the realism of a low poly mesh:
+Normal mapping ([Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) is widely used to enhance the realism of a low poly mesh:
 
 | Flat                                                                     | Using a Normal Map                                                       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -165,15 +145,10 @@ In the screenshots below, using a material with the following attributes, we see
 | ![media/material-attributes-18.png](media/material-attributes-18.png)  | ![media/material-attributes-19.png](media/material-attributes-19.png)  | ![media/material-attributes-20.png](media/material-attributes-20.png)  | ![media/material-attributes-21.png](media/material-attributes-21.png)  | ![media/material-attributes-22.png](media/material-attributes-22.png)  |
 
 
-| Property       | Description                                                                     |
-| -------------- | ------------------------------------------------------------------------------- |
-| Glossiness Map | The glossiness map color provider                                               |
-| Invert         | When enabled, considers the map as a roughness map instead of a glossiness map. |
-|                |                                                                                 |
-|                | - A roughness value of 1.0 means a glossiness value of 0.0                      |
-|                | - A roughness value of 0.0 means a glossiness value of 1.0                      |
-|                |                                                                                 |
-|                |                                                                                 |
+| Property       | Description
+| -------------- | -- |
+| Glossiness Map | The glossiness map color provider |
+| Invert         | When enabled, considers the map as a roughness map instead of a glossiness map. A roughness value of 1.0 means a glossiness value of 0.0. A roughness value of 0.0 means a glossiness value of 1.0 |
 
 
 ## Shading attributes
@@ -245,10 +220,8 @@ With the metalness workflow, the final specular color is calculated by mixing be
 |  ![media/material-attributes-27.png](media/material-attributes-27.png)  | ![media/material-attributes-28.png](media/material-attributes-28.png)  | ![media/material-attributes-29.png](media/material-attributes-29.png)  |
 | - The diffuse color is dominant                                           | - The diffuse color is dominant                                          | - The diffuse color is not visible                                       |
 | - The specular color is not visible                                       | - The specular color is visible (0.02)                                   | - The specular color is visible                                          |
-| - No Fresnel:                                                    | - Fresnel effect is slightly visible:                                | - Fresnel effect is visible:                                         |
-|                                                                           |                                                                          |                                                                          |
+| - No Fresnel:                                                    | - Fresnel effect is slightly visible:                                | - Fresnel effect is visible: |
 | ![media/material-attributes-30.png](media/material-attributes-30.png)   | ![media/material-attributes-31.png](media/material-attributes-31.png)  | ![media/material-attributes-32.png](media/material-attributes-32.png)  |
-
 
 #### Specular Map
 
@@ -256,13 +229,12 @@ The specular workflow provides more control on the actual specular color but req
 
 Unlike the metalness workflow, It allows to have a different specular color from the diffuse color even in low reflectance scenarios, allowing some materials with special behavior.
 
-> **Note**
-> 
-> With the layering system, it is still possible to combine into a same material a metalness and specular workflow.    
+> [!Note]
+> With the layering system, it's still possible to combine a metalness and specular workflow into the same material.
 
 ### Specular Model
 
-A pure specular surface is producing an highlight of a light in a mirror direction. In practice, there is a broad range of specular materials, not entirely smooth, which can reflect the light not in a single direction.
+A pure specular surface produces a highlight of a light in a mirror direction. In practice,a broad range of specular materials, not entirely smooth, can reflect the light not in a single direction.
 
 The default specular model used to support these scenarios is the **microfacet** model, also known as [Cook-Torrance (academic paper)](http://www.cs.columbia.edu/~belhumeur/courses/appearance/cook-torrance.pdf).
 
@@ -272,38 +244,11 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 
 ![media/material-attributes-34.png](media/material-attributes-34.png) 
 
-| Property            | Description                                                                                                                                                                |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fresnel             | Defines the amount of the incoming light that is reflected and transmitted. The models supported are:                                                                      |
-|                     |                                                                                                                                                                            |
-|                     | - **Schlick**: An approximation of the Fresnel effect (*default*)                                                                                                          |
-|                     | - **None**: Use the color of the material as-is without taking into account the Fresnel effect.                                                                            |
-|                     |                                                                                                                                                                            |
-|                     |                                                                                                                                                                            |
-| Visibility          | Defines an amount of visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. |
-|                     |                                                                                                                                                                            |
-|                     | In our implementation, we have simplified the formula to use the Visibility term instead :                                                                                 |
-|                     |                                                                                                                                                                            |
-|                     | ![media/material-attributes-35.png](media/material-attributes-35.png)      and ![media/material-attributes-36.png](media/material-attributes-36.png)                   |
-|                     |                                                                                                                                                                            |
-|                     | - **Schlick GGX** (*default*)                                                                                                                                              |
-|                     | - **Implicit**: The microsurface is always visible and doesn't generate any shadowing or masking.                                                                          |
-|                     | - **Cook-Torrance**                                                                                                                                                        |
-|                     | - **Kelemen**                                                                                                                                                              |
-|                     | - **Neumann**                                                                                                                                                              |
-|                     | - **Smith-Beckmann**                                                                                                                                                       |
-|                     | - **Smith-GGX correlated**                                                                                                                                                 |
-|                     | - **Schlick-Beckmann**                                                                                                                                                     |
-|                     |                                                                                                                                                                            |
-|                     |                                                                                                                                                                            |
-| Normal Distribution | Defines how the normal is distributed. The glossiness attribute is used by this part of the function to modify the distribution of the normal.                             |
-|                     |                                                                                                                                                                            |
-|                     | - **GGX** (*default*)                                                                                                                                                      |
-|                     | - Beckmann                                                                                                                                                                 |
-|                     | - **Blinn-Phong**                                                                                                                                                          |
-|                     |                                                                                                                                                                            |
-|                     |                                                                                                                                                                            |
-
+| Property            | Description                                                        
+| ------------------- | ------- |
+| Fresnel             | Defines the amount of the incoming light that is reflected and transmitted. The models supported are: <br>**Schlick**: An approximation of the Fresnel effect (default)</br> <br>**None**: Use the color of the material as-is without taking into account the Fresnel effect</br>                                                                                                                               |
+| Visibility          | Defines the visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. Xenko simplifies the formula to use the visibility term instead : <br>![media/material-attributes-35.png](media/material-attributes-35.png)</br>      <br>and <br>![media/material-attributes-36.png](media/material-attributes-36.png)</br>        <br>**Schlick GGX** (default)</br> <br> **Implicit**: The microsurface is always visible and doesn't generate any shadowing or masking</br> <br>**Cook-Torrance**</br>  <br>**Kelemen**</br> <br>**Neumann**</br> <br>**Smith-Beckmann**</br> <br>**Smith-GGX correlated**</br>  <br>**Schlick-Beckmann**</br> |
+| Normal Distribution | <br>Defines how the normal is distributed. The glossiness attribute is used by this part of the function to modify the distribution of the normal.</br> <br>**GGX** (default) </br> <br>**Beckmann**</br>  <br>**Blinn-Phong**</br> |
 
 ### Emissive Model
 
@@ -329,30 +274,20 @@ The Occlusion Map is the default occlusion attribute. The occlusion map use geom
 
 ![media/material-attributes-39.png](media/material-attributes-39.png) 
 
-These screenshots give an example of usage of occlusion maps and cavity maps:
+These screenshots demonstrate the use of occlusion maps and cavity maps:
 
-| Occlusion Map                                                            | Cavity Map                                                               | Final Composition                                                        |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| Occlusion Map  | Cavity Map    | Final Composition    |
+| ------- | ------ | ------- |
 | ![media/material-attributes-40.png](media/material-attributes-40.png)  | ![media/material-attributes-41.png](media/material-attributes-41.png)  | ![media/material-attributes-42.png](media/material-attributes-42.png)  |
-|                                                                          |                                                                          |                                                                          |
 | Coarse occlusion of the ambient light                                    | Fine grained occlusion of direct light                                   | Result                                                                   |
 
-
-| Property                  | Description                                                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Occlusion Map             | The occlusion map scalar provider that determines how much ambient light is accessible on the material:                                                |
-|                           |                                                                                                                                                        |
-|                           | - A value of 1.0 means that the material is fully lighted by Ambient lighting (Skybox, Ambient lights...etc.)                                          |
-|                           | - A value of 0.0 means that the material is not lighted by the ambient lighting                                                                        |
-|                           |                                                                                                                                                        |
-|                           |                                                                                                                                                        |
-| Direct Lighting Influence | Applies to Occlusion Map and allow to influence direct lighting as well.                                                                               |
-| Cavity Map                | The cavity map scalar provider is multiplied with direct lighting. It allows to define very fine grained cavity where the direct light could not enter |
-|                           |                                                                                                                                                        |
-|                           | The cavity map is usually defined for thin concave cavity.                                                                                             |
-| Diffuse Cavity            | A factor for diffuse lighting influence of the cavity map. A value of 1.0 means that the cavity map fully influence the diffuse lighting.              |
-| Specular Cavity           | A factor for specular lighting influence of the cavity map. A value of 1.0 means that the cavity map fully influence the specular lighting.            |
-
+| Property                  | Description |
+| ------------------------- | ---- |
+| Occlusion Map             | The occlusion map scalar provider that determines how much ambient light is accessible on the material. A value of 1.0 means that the material is fully lighted by ambient lighting. A value of 0.0 means that the material is not lighted by the ambient lighting                                                                                                                                                    |
+| Direct Lighting Influence | Applies to Occlusion Map and influences direct lighting  |
+| Cavity Map                | The cavity map scalar provider is multiplied with direct lighting. It lets you define very fine grained cavity where direct light can't enter. The cavity map is usually defined for thin concave cavity|
+| Diffuse Cavity            | A factor for diffuse lighting influence of the cavity map. A value of 1.0 means the cavity map fully influences the diffuse lighting              |
+| Specular Cavity           | A factor for specular lighting influence of the cavity map. A value of 1.0 means the cavity map fully influences the specular lighting            |
 
 ### Transparency
 
@@ -378,14 +313,9 @@ The additive transparency takes into account the diffuse and diffuse/emissive al
   |                                                                          |                                                                          |
   | Specular highlights, diffuse with alpha and semi-opaque diffuse          | Specular highlights, diffuse with alpha and opaque diffuse               |
 
-| Property | Description                                                                                                                                                                  |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alpha    | The alpha value is interpreted like this:                                                                                                                                    |
-|          |                                                                                                                                                                              |
-|          | - Alpha <= 0.5, the material is rendered in additive mode without the diffuse component (only specular highlights)                                                           |
-|          | - Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it will be displayed as transparent |
-|          |                                                                                                                                                                              |
-|          |                                                                                                                                                                              |
+| Property | Description |
+| -------- | -----------|
+| Alpha    | The alpha value is interpreted like this:<br> Alpha <= 0.5, the material is rendered in additive mode without the diffuse component (only specular highlights)</br> <br>Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it's displayed as transparent</br>|
 | Tint     | Apply a color tint to the transparency layer   
 
 #### Cuttoff
@@ -402,6 +332,6 @@ The following screenshots show the influence of the cutoff Alpha value.
 
 ## See also
 
-* [Material colors](material-colors.md)
+* [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)

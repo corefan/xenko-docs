@@ -81,7 +81,7 @@
 ### [SpriteBatch](graphics/low-level-api/spritebatch.md)
 ### [SpriteFont](graphics/low-level-api/spritefont.md)
 ## [Materials](graphics/materials/index.md)
-### [Colors](graphics/materials/material-colors.md)
+### [Colors](graphics/materials/material-maps.md)
 ### [Attributes](graphics/materials/material-attributes.md)
 ### [Layers](graphics/materials/material-layers.md)
 ### [Materials for developers](graphics/materials/materials-for-developers.md)

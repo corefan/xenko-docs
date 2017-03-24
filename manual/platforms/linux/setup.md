@@ -40,7 +40,7 @@ sudo apt-get install libsdl2-dev
 
 ## Mono
 
-To install Mono, please refer to the [Mono Project](http://www.mono-project.com/docs/get-started/install/linux/#debian-ubuntu-and-derivatives) installation instructions for Debian/Ubuntu. Make sure version 4.4 is installed. You can verify this by typing after installing it:
+To install Mono, please refer to the [Mono Project](http://www.mono-project.com/docs/getting-started/install/linux/) installation instructions for Debian/Ubuntu. Make sure version 4.4 is installed. You can verify this by typing after installing it:
 
 ```
 mono --version

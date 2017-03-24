@@ -1,6 +1,10 @@
 # Material layers
 
-You can combine multiple materials to build more complex materials. 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
+You can combine layers of materials to build more complex materials. 
 
 ![media/material-layers-1.png](media/material-layers-1.png)  
 
@@ -10,28 +14,68 @@ This screenshot shows the blending of a rust material with a gold material:
 
 This diagram shows the definition of the materials blended in the screenshot above:
 
-![media/material-layers-3.png](media/material-layers-3.png) 
+![media/material-layers-3.png](media/material-layers-3.png)
 
-| Property        | Description                                                                                                                              |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Material        | A reference to a material                                                                                                                |
-| Blend Map       | A blend map [scalar provider](material-colors.md) that defines how much the current material is blend to the previous one (upper layer). |
-|                 |                                                                                                                                          |
-|                 | - A value of 0 means that the previous material in the layer is fully used                                                               |
-|                 | - A value of 1 means that the material referenced by this layer is fully used                                                            |
-|                 | - Values between 0 and 1 generate a blend of a parameters of the previous material with the material defined by this layer       |
-|                 |                                                                                                                                          |
-|                 |                                                                                                                                          |
-| Layer Overrides |                                                                                                                                          |
-| - UV Scale      | A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map)                                         |
-|                 |                                                                                                                                          |
-|                 |                                                                                                                                          |
+## Blend maps
 
-> [!Note] 
-> Xenko blends individual layer attributes if they have the same shading model; otherwise, Xenko blends the shading model.    
+**Blend maps** are [material maps](material-maps.md) that determine how Game Studio blends layers. For example, you can use a texture as a blend map:
 
-## In this section
+![Blend map diagram](media/blend-map-diagram.png)
 
-- [Material colors](material-colors.md)
-- [Material attributes](material-attributes.md)
-- [Materials for developers](materials-for-developers.md)
+![Blend map diagram](media/blend-map-diagram2.png)
+
+Note how the blend map texture corresponds to the patterning on the result.
+
+Blend maps work the same way as any other kind of material map. For more information, see [Material maps](material-maps.md).
+
+## Shading models
+
+Xenko blends materials differently depending on whether their shading models (eg diffuse models, specular models, etc) are different.
+
+If you blend materials that have **identical** shading models, Xenko collects the **attributes** of the materials, then applies the shading models to all of them. This saves GPU.
+
+If the materials have **different** shading models, Xenko applies each material's shading models to that material's attributes, then blends the results. This uses more GPU.
+
+## Add a layer
+
+1. Select the material you want to add a layer to.
+
+2. In the **property grid** (on the right by default), next to **Layers**, click the **green plus icon**.
+
+    ![Add a layer](media/add-a-layer.png)
+
+    Game Studio adds a layer to the material.
+
+    ![Empty layer](media/empty-layer.png)
+
+3. Next to the layer, click the hand icon.
+
+    The **asset picker** opens.
+
+    ![Asset picker](media/material-asset-picker.png)
+
+4. Specify a material you want to add as a layer and click **OK**.
+
+    Game Studio adds the material as a layer.
+    
+    ![Added layer](media/added-layer.png)
+
+5. Next to **Blend Map**, click the **blue arrow** and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
+
+    ![Select blend map](media/select-blend-map.png)
+
+Game Studio blends the material layers using the blend map you specified. You can add as many layers as you need.
+
+## Layer properties
+
+| Property        | Description |
+| --------------- | --------------- | 
+| Material        | The material blended in this layer|
+| Blend Map       | The [blend map](material-maps.md) used to blend this layer with the layer above|
+| Layer Overrides |  **UV Scale**: A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map) |
+
+## See also
+
+* [Material maps](material-maps.md)
+* [Material attributes](material-attributes.md)
+* [Materials for developers](materials-for-developers.md)

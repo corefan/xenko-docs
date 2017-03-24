@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Materials** define how the expanded shape should be rendered. It defines color, textures, and other parameters.
+**Materials** define how the expanded shape should be rendered. They defines color, textures, and other parameters.
 
 **Particle materials** are simplified versions of [materials used for meshes](../graphics/materials/index.md). There is only one type of material currently, the Dynamic Emissive material.
 
@@ -18,7 +18,7 @@ This material uses a translucent emissive color RGBA for the pixel shading. In H
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
 | Alpha-Add           | Translucent rendering supports alpha-blending, additive blending or anything in-between. With this parameter you can control how much alpha-blended (0) or additive (1) the particles should be.         |
 | Culling             | There are options for no culling, front face culling and back face culling. Camera-facing particles always have their front face towards the camera.                                         |
-| Emissive            | The emissive RGBA color for the particle. Refer to the [Material Colors](../graphics/materials/material-colors.md) for a full description.       |
+| Emissive            | The emissive RGBA color for the particle. See [Material maps](../graphics/materials/material-maps.md) for a full description.       |
 | UV coords           | For particles which use texture sampling uv coordinates animation can be specified. The two currently existing types are specified below.                                                           |
 ### UV Coords - Flipbook
 
@@ -43,7 +43,7 @@ The flipbook animation has the following properties:
 
 The scrolling animation defines a starting rectangle for the billboard or quad, which moves across the texture to its end position. This creates a scrolling or a scaling effect of the texture across the quad's surface.
 
-The texture coordinates can go below 0 or above 1. How the texture is sampled depends on the addressing mode defined in the [material colors](../graphics/materials/material-colors.md). For more information, see the [MSDN documentation](http://tinyurl.com/TextureAddressingModes).
+The texture coordinates can go below 0 or above 1. How the texture is sampled depends on the addressing mode defined in the [material maps](../graphics/materials/material-maps.md). For more information, see the [MSDN documentation](http://tinyurl.com/TextureAddressingModes).
 
 The scrolling animation has the following properties:
 

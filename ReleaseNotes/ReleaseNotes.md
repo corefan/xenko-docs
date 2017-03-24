@@ -118,3 +118,13 @@ Release date 2016/3/13
 #### Game Studio
 
 * Fix a concurrency problem that could make the Game Studio crash while loading or updating assets in the Scene Editor
+
+## Version 1.10.2-beta
+
+Release date 2016/3/14
+
+### Bugs fixed
+
+#### Game Studio
+
+* Fix additional concurrency problems that could make the Game Studio crash while loading or updating assets in the Scene Editor
