@@ -35,6 +35,7 @@ $(function() {
                 }
             }
         });
+        
         // Take each code wrapper
         $('.codewrapper code').each(function(){
             // Take text from current code wrapper
@@ -79,7 +80,7 @@ $(function() {
     }
 
     // If user on Class page, run function to change links
-    if($('#summary').length > 0){
+    if($('.table-condensed a[class="xref"]').length > 0){
         changeLinks();
     }
 
