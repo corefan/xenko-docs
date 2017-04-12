@@ -572,3 +572,6 @@ h5{
         text-align: left;
     }
 }
+#wrapper #x_wrap {
+    padding-bottom: 0;
+}
