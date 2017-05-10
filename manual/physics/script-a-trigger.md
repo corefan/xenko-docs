@@ -32,7 +32,7 @@ For this tutorial, we'll set the restitution of both the ground and the sphere t
 
 Now we'll add a trigger between the ball and the ground, so the ball passes through it.
 
-1. In the **Scene editor**, click the white plus sign (**Create new entity**) and select **Empty entity**.
+1. In the **Scene editor**, click the white plus button (**Create new entity**) and select **Empty entity**.
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 

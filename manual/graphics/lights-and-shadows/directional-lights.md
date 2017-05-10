@@ -76,7 +76,11 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 
 ## Light shafts
 
-Combined with a **light shaft component**, directional lights cast light shafts. For more information, see [Light shafts](light-shafts.md).
+Used with a **light shaft component** and a **light shaft bounding volume**, directional lights create light shafts. 
+
+![Light shafts](media/lightshaft_640.jpg)
+
+For more information, see [Light shafts](light-shafts.md).
 
 ## See also
 

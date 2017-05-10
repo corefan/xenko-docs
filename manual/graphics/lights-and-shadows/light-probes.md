@@ -24,7 +24,27 @@ For example, in the screenshot below, notice how the red of the wall is reflecte
 
 Light probes affect all objects in the area they cover, including static and dynamic objects. You don't need to enable any extra options on the entities that light probes affect.
 
-## 1. Create a light probe
+## 1. Enable light probes in the graphics compositor
+
+Xenko enables light probes by default in new projects. To make sure light probes are enabled:
+
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+
+    ![Graphics Compositor asset](..\graphics-compositor\media\graphics-compositor-asset.png)
+
+    The graphics compositor editor opens.
+
+    ![Graphics Compositor editor](..\graphics-compositor\media\graphics-compositor-editor.png)
+
+2. Select the **forward renderer** node.
+
+3. In the **property grid** (on the right by default), make sure the the **Light probes** checkbox is selected.
+
+    ![Enable light probes](media/enable-light-probes.png)
+
+For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
+
+## 2. Create a light probe
 
 Right-click the scene or entity tree and select **Light > Light probe**.
 
@@ -41,7 +61,7 @@ Light probes appear as spheres in the scene editor. Before you capture a light b
 >[!Tip]
 >You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold Ctrl, and move it with the mouse.
 
-## 2. Place light probes
+## 3. Place light probes
 
 Light probes must be placed in a way that creates a **3D volume**. This means:
 
@@ -59,7 +79,7 @@ A typical strategy is to place light probes in a grid across your scene covering
 
 ![Light probes in the editor](media/light-probes-in-editor.jpg)
 
-## 3. Capture lighting
+## 4. Capture lighting
 
 1. In the scene editor toolbar, click the **lighting options** button to open the lighting options menu.
 
@@ -75,9 +95,11 @@ A typical strategy is to place light probes in a grid across your scene covering
 
     ![Light probe surface](media/light-probes-illumination-on-surface.png)
 
-## Reset lighting
+## Reset light probes
 
-To reset the captured lighting, in the **lighting options** menu, click **Reset**. This is useful after you change the light sources in your scene.
+To reset the light probes, in the **lighting options** menu, click **Reset**. This is useful after you change the light sources in your scene.
+
+![Reset light probes](media/reset-light-probes.png)
 
 ## Show and hide light probes in the scene editor
 

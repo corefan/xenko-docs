@@ -20,6 +20,8 @@ To create light shafts, use three components together: **lights**, **light shaft
 
 ## 1. Enable light shafts in the graphics compositor
 
+Xenko disables light shafts by default in new projects. To enable them:
+
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](..\graphics-compositor\media\graphics-compositor-asset.png)
@@ -33,6 +35,8 @@ To create light shafts, use three components together: **lights**, **light shaft
 3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **LightShafts**.
 
     ![Select light shafts](media/select-light-shafts.png)
+
+For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
 
 ## 2. Add a light shaft component
 
@@ -49,7 +53,7 @@ To create light shafts, use three components together: **lights**, **light shaft
     ![One cascade](media/light-shafts-one-cascade.png)
 
     > [!Note]
-    > Directional lights must use a single shadow cascade to create light shafts.
+    > Currently, light shafts are only implemented for directional lights with one cascade. You'll be able to use multiple cascades in future versions. For more information about cascades, see the [Directional lights](directional-lights.md) page.
 
 4. Click **Add component** and select **Light shaft**.
 
@@ -117,7 +121,7 @@ As a workaround, you can add a **model** component to use as a guide.
 
 ## Optimize light shafts
 
-Light shafts work best in dark environments. You can adjust the directional light and light shaft component properties to achieve different results - for example, by changing the directional light color, or the light shaft density.
+Light shafts work best in dark environments. You can adjust the directional light and light shaft component properties to achieve different results - for example, by changing the directional light color (in the **light component propertes**) or the light shaft density (in the **light shaft component properties**).
 
 Multiple light shafts viewed through one another can become visually noisy, as in the image below:
 
@@ -135,7 +139,7 @@ Alternatively, use multiple bounding volumes. To do this:
 
 ![Separate bounding volume](media/separate-bounding-volumes.png)
 
-This calculates the light shafts in each bounding volume separately, creating higher-quality light shafts when viewed together.
+This calculates the light shafts in each bounding volume separately, lessening visual noise.
 
 >[!Note]
 >Using multiple bounding volumes uses more processing power.
