@@ -101,9 +101,9 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 Currently, Game Studio doesn't display the bounding volume in the scene editor. This will change in future versions. 
 
-As a workaround, you can add a **model** component to use as a guide.
+As a workaround, you can add a model component to use as a guide.
 
-1. On the entity with the light shaft bounding volume component, click **Add component** and select Model.
+1. On the entity with the light shaft bounding volume component, click **Add component** and select **Model**.
 
     ![Add model to bounding volume](media/add-model-component-to-bounding-volume-entity.png)
 
@@ -121,7 +121,7 @@ As a workaround, you can add a **model** component to use as a guide.
 
 ## Optimize light shafts
 
-Light shafts work best in dark environments. You can adjust the directional light and light shaft component properties to achieve different results - for example, by changing the directional light color (in the **light component propertes**) or the light shaft density (in the **light shaft component properties**).
+Light shafts work best in dark environments. You can adjust the directional light and light shaft component properties to achieve different results - for example, by changing the directional light color (in the **light component properties**) or the light shaft density (in the **light shaft component properties**).
 
 Multiple light shafts viewed through one another can become visually noisy, as in the image below:
 
