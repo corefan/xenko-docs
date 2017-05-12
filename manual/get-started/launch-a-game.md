@@ -46,5 +46,3 @@ This page explains how to launch your game using Game Studio or Visual Studio.
    * To start the game with debugging, click **Start** or press **F5**.
 
       ![Visual Studio Start button](media/visual-studio-start-button.png)
-
-     ![Game running](media/launch-your-game-mygame-running.png)

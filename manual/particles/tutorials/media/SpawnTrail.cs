@@ -94,7 +94,7 @@ namespace MyTrailEffect
                         var worldMatrix = prefabEntity.Transform.LocalMatrix * Entity.Transform.WorldMatrix;
                         worldMatrix.Decompose(out prefabEntity.Transform.Scale, out prefabEntity.Transform.Rotation, out prefabEntity.Transform.Position);
 
-                        SceneSystem.SceneInstance.Scene.Entities.Add(prefabEntity);
+                        SceneSystem.SceneInstance.RootScene.Entities.Add(prefabEntity);
                     }
                 }
 
@@ -115,7 +115,7 @@ namespace MyTrailEffect
                     }
                     else
                     {
-                        SceneSystem.SceneInstance.Scene.Entities.Remove(clonedEntity);
+                        SceneSystem.SceneInstance.RootScene.Entities.Remove(clonedEntity);
                     }
                 }
 

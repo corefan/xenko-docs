@@ -21,8 +21,9 @@
               "sources/engine/SiliconStudio.Xenko.Shaders/SiliconStudio.Xenko.Shaders.csproj",
               "sources/engine/SiliconStudio.Xenko.UI/SiliconStudio.Xenko.UI.csproj",
               "sources/engine/SiliconStudio.Xenko.VirtualReality/SiliconStudio.Xenko.VirtualReality.csproj",
+              "sources/engine/SiliconStudio.Xenko.Navigation/SiliconStudio.Xenko.Navigation.csproj"
             ],
-			"cwd": "../xenko",
+			"cwd": "../xenko"
           }
         ],
       "dest": "api"
@@ -41,7 +42,7 @@
         "noEscape": false,
         "noGlobStar": false,
         "dot": false
-      },
+      }
     ],
     "resource": [
       {

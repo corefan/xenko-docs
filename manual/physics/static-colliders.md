@@ -7,7 +7,7 @@
 
 ![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-2. Add a static collider
+## Add a static collider
    
 1. Select the entity you want to make a static collider.
 
@@ -17,7 +17,7 @@
 
 3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property grid**, expand the **Static Collider component** to view its properties.
 
-4. Next to **Collider Shapes**, click the **green plus icon** and select the shape you want.
+4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select the shape you want.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
@@ -44,7 +44,7 @@ Is Trigger            | Toggles whether the static collider is a [trigger](trigg
 
 If you need to move a static collider at runtime, you can do it with a script:
 
-```
+```cs
 PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;
 PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
 PhysicsComponent.UpdatePhysicsTransformation();

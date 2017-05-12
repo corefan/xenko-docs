@@ -37,3 +37,4 @@ You can still use standard C# classes in Xenko, but these aren't called scripts 
 * [Events](events.md)
 * [Debugging](debugging.md)
 * [Preprocessor variables](preprocessor-variables.md)
+* [Create a model from code](create-a-model-from-code.md)

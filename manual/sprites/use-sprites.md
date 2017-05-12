@@ -26,7 +26,7 @@ To add a sprite to a scene, add a **sprite component** to an entity. Afterwards,
         </video>
     </p>
 
-    Alternatively, click the hand icon to open the asset picker:
+    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
 
     ![Pick asset up](media/pick-asset-up.png)
 

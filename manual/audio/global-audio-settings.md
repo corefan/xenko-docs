@@ -13,7 +13,7 @@ You can control the global audio settings by accessing the [AudioEngine](xref:Si
 | [PauseAudio](xref:SiliconStudio.Xenko.Audio.AudioEngine.PauseAudio) | Pauses all audio. |
 | [ResumeAudio](xref:SiliconStudio.Xenko.Audio.AudioEngine.ResumeAudio) | Resumes all audio. |
 
-You can also control sounds individually using the  [SoundInstance API](xref:SiliconStudio.Xenko.Audio.SoundInstance).
+You can also control sounds individually using the [SoundInstance API](xref:SiliconStudio.Xenko.Audio.SoundInstance).
 
 ## See also
 * [Spatialized audio](spatialized-audio.md)

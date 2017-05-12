@@ -13,7 +13,7 @@ Startup scripts only run when they are added or removed at runtime. They're most
 
 Example:
 
-```
+```cs
 public class StartUpScriptExample : StartupScript
 {
 	public override void Start()
@@ -33,7 +33,7 @@ Synchronous scripts are initialized, then updated every frame, and finally cance
 
 The following script performs updates every frame, no matter what:
 
-```
+```cs
 public class SampleSyncScript : SyncScript
 {        
 	public override void Update()
@@ -53,7 +53,7 @@ Asynchronous scripts are initialized only once, then canceled when removed from 
 
 The following script performs actions that depend on events and triggers:
 
-```
+```cs
 public class SampleAsyncScript : AsyncScript
 {        
 	public override async Task Execute() 

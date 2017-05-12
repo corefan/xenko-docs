@@ -23,9 +23,9 @@ To use the **AnimationStart** script:
 
 1. In the **asset view** (bottom pane by default), click **Add asset**.
 
-2. Choose **Add asset > Scripts > Animation Start**.
+2. Choose **Add asset > Scripts > Animation start**.
 
-    ![Add animation script](media/add-animation-script.png)
+    ![Add animation script](media/animations-additive-animations-animation-start.png)
 
 3. In the **Script wizard**, specify a name for the script, and click **OK**.
 
@@ -41,8 +41,7 @@ To use the **AnimationStart** script:
 
 This sample code assigns a simple animation to a character based on its walking speed:
 
-```
-cs
+```cs
 public class AnimationClipExample : SyncScript
 {
     // Public animation clips

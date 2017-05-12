@@ -22,8 +22,8 @@ For a demonstration of the different constraints, load the **PhysicsSample** sam
 
 ## Create a constraint
 
-> [!Note]
-> Currently, you can only use constraints from scripts. A constraint editor will be added to Game Studio in a future release.
+>[!Note]
+>Currently, you can only use constraints from scripts. A constraint editor will be added to Game Studio in a future release.
 
 To create a constraint, use the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) static method [CreateConstraint](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)):
 
@@ -61,7 +61,9 @@ After you create a constraint, add it to the simulation from a script by calling
 ```cs
 this.GetSimulation().AddConstraint(constraint);
 ```
+
 or:
+
 ```cs
 var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);

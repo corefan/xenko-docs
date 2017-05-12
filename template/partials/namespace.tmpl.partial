@@ -10,6 +10,9 @@
     <table class="table table-bordered table-striped table-condensed">
         {{#children}}  
         <tr>
+            <td class="xk-icon-column">
+               <span class="xk-{{type}}-icon"></span>
+            </td>
             <td>
                 <p><xref href="{{uid}}" altProperty="fullName" displayProperty="name"/></p>
             </td>

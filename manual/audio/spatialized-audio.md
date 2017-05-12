@@ -5,10 +5,9 @@
 <span class="label label-doc-audience">Programmer</span>
 
 **Spatialized audio**, also called **3D audio**, simulates three-dimensional sound.
-This creates more realistic audio than [non-spatialized audio](non-spatialized-audio.md), especially for sounds simulated above, below, and behind the listener. 
+This creates more realistic audio than [non-spatialized audio](non-spatialized-audio.md). 
 
-In real life, our experience of sound is affected by factors including its volume, the surrounding area (such as a cave or small room), and the position and movement of the sound source.
-We can usually tell approximately where a sound is coming from and whether it is moving.
+In real life, our experience of sound is affected by factors including its volume, the surrounding area (such as a cave or small room), and the position and movement of the sound source. We can usually tell approximately where a sound is coming from and whether it'x moving.
 
 ![Spatialized audio](media/audio-index-spatialized-audio.png) 
 
@@ -29,6 +28,7 @@ Spatialized audio is widely used for sound effects in platform, desktop, and VR 
 > Spatialized audio uses more CPU than non-spatialized audio.
 
 ## Enable spatialized audio
+
 When you [import your sound asset](import-audio.md), select _Spatialized Sound_ as the asset type.
 
 You can also set audio to spatialized in the asset's **Property grid**:
@@ -43,6 +43,8 @@ You can also set audio to spatialized in the asset's **Property grid**:
 > Xenko processes spatialized audio as mono (single-channel) audio. It doesn't alter the source file.
 
 ## See also
+
 * [Audio emitters](audio-emitters.md)
 * [Audio listeners](audio-listeners.md)
+* [HRTF](hrtf.md)
 * [Global audio settings](global-audio-settings.md)

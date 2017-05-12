@@ -14,7 +14,7 @@ The Xenko editor is **Game Studio**. This is the equivalent of the Unity® Edito
 
 You can customize the Game Studio layout by dragging tabs, similar to Visual Studio. 
 
-For more information about Game Studio, see the [Game Studio](../get-started/game-studio.md) page.
+For more information about Game Studio, see the [Game Studio](../game-studio/index.md) page.
 
 ## Terminology
 
@@ -37,7 +37,7 @@ Like Unity®, Xenko projects are stored in a directory that contains:
 
 * a **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries
 
-    ![Package folder structure](../get-started/media/folder-structure.png)
+    ![Package folder structure](../files-and-folders/media/folder-structure.png)
 
 * **Assets** contains the asset files which represent elements in your game.
 
@@ -57,7 +57,7 @@ Xenko and Unity® differ in the following ways:
 
 * Xenko doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
 
-For more information about project structure in Xenko, including advice about how to organize and share your files, see the [Project structure](../get-started/project-structure.md) page.
+For more information about project structure in Xenko, including advice about how to organize and share your files, see the [Project structure](../files-and-folders/project-structure.md) page.
 
 ### Open the project directory from Game Studio
 
@@ -100,7 +100,7 @@ To set the default scene:
 
 2. Select the default scene in the asset picker and click **OK**.
 
-For more information about scenes, see [Introduction to scenes](../get-started/introduction-to-scenes.md).
+For more information about scenes, see [Introduction to scenes](../game-studio/scenes.md).
 
 ## Entities vs GameObjects
 
@@ -182,7 +182,7 @@ Like Unity®, Xenko supports file formats including:
 | Videos | .mov, .mp4, .wmv | 
 | Fonts | .ttf, .otf |
 
-For more information about assets, see [Introduction to assets](../get-started/assets.md).
+For more information about assets, see [Introduction to assets](../game-studio/assets.md).
 
 ## Prefabs
 
@@ -588,7 +588,7 @@ public override void Start()
 {
     // Initialization of the script.
     var car = CarPrefab.Instantiate();
-    SceneSystem.SceneInstance.Scene.Entities.AddRange(car);
+    SceneSystem.SceneInstance.RootScene.Entities.AddRange(car);
     car.First().Transform.Position = SpawnPosition;
     car.First().Transform.Rotation = SpawnRotation;
     car.First().Name = "MyNewEntity";

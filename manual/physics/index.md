@@ -10,7 +10,7 @@ Xenko simulates real-world physics such as gravity and collisions. This section 
     * [Static colliders](static-colliders.md): Colliders that don't move
     * [Rigid bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions
     * [Kinematic rigid bodies](kinematic-rigid-bodies.md): Physics objects controlled by scripts
-    * [Characters](characters.md): Colliders controlled by the user's input
+    * [Characters](characters.md): Colliders for characters (such as player characters and NPCs)
     * [Collider shapes](collider-shapes.md): Define the shape of collider components
     * [Triggers](triggers.md): Use triggers to detect passing objects
     * [Constraints](constraints.md): Create appealing and realistic physics

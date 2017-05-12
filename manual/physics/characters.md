@@ -3,19 +3,18 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Characters** respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things). Player characters without the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) pass through objects.
+**Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:SiliconStudio.Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(SiliconStudio.Core.Mathematics.Vector3\)), [Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump), and [Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(SiliconStudio.Core.Mathematics.Vector3\)).
 
-> [!Note]
-> Entities with the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(SiliconStudio.Core.Mathematics.Vector3\)), [Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump), and [Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(SiliconStudio.Core.Mathematics.Vector3\)).
+## Add a character component to an entity
 
-## Add a collider component to an entity
+1. In the **scene editor**, select the entity you want to add the component to.
 
-1. In the **Scene Editor**, select the entity you want to add the component to.
+2. In the **property grid**, click **Add component** and select **Character**.
 
-2. In the **Property grid**, click **Add component** and select **Character**.
+    ![Add character component](media/add-character-component.png)
 
 >[!Note]
-> For colliders to interact with other physics objects, you need to set a [collider shape](collider-shapes.md) in the **Property grid**. The capsule shape is appropriate for most character colliders.
+> For the character collider to interact with other physics objects, you also need to set a  collider shape in the collider component properties. The capsule shape is appropriate for most character colliders. For more information, see [collider shapes](collider-shapes.md).
 
 ## Component properties
 
@@ -31,7 +30,7 @@ Restitution           | Sets the amount of kinetic energy lost or gained after a
 Friction              | Sets the surface friction.
 Rolling Friction      | Sets the rolling friction.
 CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
-CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.              
+CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection. 
 Gravity               | For rigid bodies, sets a custom gravity vector applied if Override Gravity is selected. For characters, specifies how much gravity affects the character.
 Step Height           | The maximum height the character can step onto.
 Fall Speed            | The maximum fall speed.

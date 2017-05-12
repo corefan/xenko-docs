@@ -1,7 +1,7 @@
 
-# Xenko 1.10 Beta manual
+# Xenko 2.0 manual
 
-![Manual](media/manual.png)
+![Manual](../get-started/media/get-started.jpg)
 
 These pages contain information about how to use Xenko, an open-source C# game engine.
 
@@ -10,16 +10,16 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
-* <span class="label label-doc-highlight">Updated</span> [Materials](../graphics/materials/index.md)
-* <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
-* <span class="label label-doc-highlight">Updated</span> [Skybox lights](../graphics/lights-and-shadows/skybox-lights.md)
-* <span class="label label-doc-highlight">New</span> [Xenko for Unity® developers](../xenko-for-unity-developers/index.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../get-started/manage-assets.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../get-started/navigate-in-the-scene-editor.md)
-* <span class="label label-doc-highlight">New</span> [Animation](../animation/index.md)
+* <span class="label label-doc-highlight">New</span> [Light shafts](../graphics/lights-and-shadows/light-shafts.md)
+* <span class="label label-doc-highlight">Updated</span> [Graphics compositor](../graphics/graphics-compositor/index.md)
+* <span class="label label-doc-highlight">New</span> [Camera slots](../graphics/graphics-compositor/camera-slots.md)
+* <span class="label label-doc-highlight">New</span> [Render to a texture](../graphics/graphics-compositor/render-to-a-texture.md)
+* <span class="label label-doc-highlight">New</span> [Preview a scene in VR](../virtual-reality/preview-a-scene-in-vr.md)
+* <span class="label label-doc-highlight">Updated</span> [Navigate in the scene editor](../game-studio/navigate-in-the-scene-editor.md)
+* <span class="label label-doc-highlight">New</span> [Navigation](../game-studio/navigation.md)
 
 ## Improve this documentation
 
-The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in GitHub.
+The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/SiliconStudio/xenko-docs).
 
-To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-1.10/GUIDELINES.md).
+To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-2.0/GUIDELINES.md).

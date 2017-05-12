@@ -1,6 +1,6 @@
 # Template
 
-Class templating is available in XKSL. Unlike many templating system, pdxsl requires strong typed templates. The available types are:
+Class templating is available in XKSL. Unlike many templating systems, pdxsl requires strong typed templates. The available types are:
 
 - value types from HLSL (float, int, float2, float3, float4)
 - 2D textures

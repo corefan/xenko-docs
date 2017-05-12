@@ -55,8 +55,7 @@ pipelineStateDescription.RasterizerState = RasterizerStates.CullFront;
 pipelineStateDescription.RasterizerState = RasterizerStates.CullBack;
 ```
 
-
-You can, however, create your own custom state. Please refer to the @'SiliconStudio.Xenko.Graphics.RasterizerStateDescription' documentation to find the complete list of available options and default values.
+You can, however, create your own custom state. See the @'SiliconStudio.Xenko.Graphics.RasterizerStateDescription' documentation to find the complete list of available options and default values.
 
 **Code:** Custom rasterizer states
 
@@ -65,7 +64,6 @@ var rasterizerStateDescription = new RasterizerStateDescription(CullMode.Front);
 rasterizerStateDescription.ScissorTestEnable = true; // enables the scissor test
 pipelineStateDescription.RasterizerState = rasterizerStateDescription;
 ```
-
 
 # Depth and stencil states
 

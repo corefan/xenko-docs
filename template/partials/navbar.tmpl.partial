@@ -32,7 +32,7 @@
     <div class="x_search">
     	<form role="search" id="search">
     		<input name="search_paths[]" type="hidden" value="/en">
-    		<input id="search-query" class="txt" name="query" type="text" value="">
+    		<input id="search-query" class="txt" name="query" type="text" value="" data-page="{{_path}}">
     		<input class="send" name="submit" type="submit" value="Search">
     	</form>
     </div>

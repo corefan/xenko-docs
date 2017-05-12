@@ -5,7 +5,7 @@
 
 **Events** facilitate communication between scripts. They work one-way, broadcast from **broadcasters** to **receivers**.
 
-Imagine your game has a "Game Over" state that occurs when the player dies. To handle this, you can create a "Game Over" event, which is broadcast to all scripts with receivers listening for the event. When the event is broadcast, the receivers run appropriate scripts to handle the Game Over event (eg reset enemies, replace level objects, start a new timer, etc).
+For example, imagine your game has a "Game Over" state that occurs when the player dies. To handle this, you can create a "Game Over" event, which is broadcast to all scripts with receivers listening for the event. When the event is broadcast, the receivers run appropriate scripts to handle the Game Over event (eg reset enemies, replace level objects, start a new timer, etc).
 
 >[!Note]
 >Events are handled entirely in scripts. You can't configure them in Game Studio.
@@ -16,7 +16,7 @@ Broadcasters in the Xenko API are of type [EventKey](xref:SiliconStudio.Xenko.En
 
 For example, this code creates a "Game Over" event:
 
-```
+```cs
 public static class GlobalEvents
 {
     public static EventKey GameOverEventKey = new EventKey("Global", "Game Over");
@@ -34,7 +34,7 @@ Receivers in the Xenko API are of type [EventReceiver](xref:SiliconStudio.Xenko.
 
 To receive the "Game Over" event described above, use:
 
-```
+```cs
 var gameOverListener = new EventReceiver(GlobalEvents.GameOverEventKey);
 var gameIsOver = gameOverListener.TryReceive();
 

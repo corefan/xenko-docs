@@ -20,11 +20,11 @@ Game Studio adds an empty particle system to the entity.
 
 ## Transform component
 
-All entities must contain a transform component. Some particle elements ignore some elements of the transform component, such as rotation or scaling. For example, the gravity force shouldn't depend on the rotation of the particle system, and always ignores rotation; however, fountain particle systems inherit the location for the purposes of initial particle velocity.
+All entities have a transform component. Some particle elements ignore some elements of the transform component, such as rotation or scaling. For example, the gravity force shouldn't depend on the rotation of the particle system, and always ignores rotation; however, fountain particle systems inherit the location for the purposes of initial particle velocity.
 
 Only uniform scaling is supported. If you have a non-uniform scale on the transform component, only the X axis is used.
 
-If you want two particle systems to share a transform component, create two particle system entities and have make one a child of the other.
+If you want two particle systems to share a transform component, create two particle system entities and make one a child of the other.
 
 ## Particle component properties
 

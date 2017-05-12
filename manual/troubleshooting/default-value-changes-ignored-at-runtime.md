@@ -1,4 +1,4 @@
-## Default value changes ignored at runtime
+# Default value changes ignored at runtime
   
 When you add a script to your project as a component, Game Studio lists its public variables in the Properties grid. These are the values used at runtime. 
 

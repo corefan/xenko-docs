@@ -59,16 +59,13 @@ The **Create a new game** dialog opens.
 
 10. Click **OK**.
 
-Xenko creates the project and opens it in Game Studio. For information, see [Game Studio](game-studio.md).
+Xenko creates the project and opens it in Game Studio. For more information, see [Game Studio](../game-studio/index.md).
 
-## Create a project from a sample
+## Create a project from a sample or template
 
-Xenko provides two types of sample project:
-
- * **Feature showcase samples** demonstrate a specific feature.
- * **Mini-game samples** demonstrate how to use different modules to create a simple game.
+Xenko includes several sample projects demonstrating each part of the engine (2D, 3D, sprites, fonts, UI, audio, input, etc). It also includes template games to help you make your own game. 
     
-To create a project from a sample:
+To create a project from a sample or template:
 
  1. Open the **New Project** dialog.
     
@@ -90,4 +87,4 @@ Xenko creates the project and opens it in Game Studio.
 
 ## What's next?
 
-* [Get familiar with Game Studio](game-studio.md)
+* [Get familiar with Game Studio](../game-studio/index.md)

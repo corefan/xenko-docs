@@ -223,7 +223,7 @@ This release brings many improvements to the particle engine.
 - Improved OpenGL support: texture buffers, more texture formats, debug markers, etc.
 - Unified OpenTK: we now compile our own OpenTK for Windows, iOS and Android. This means our OpenGL renderer code is now unified and should have fewer bugs
 - Camera is not affected anymore by scaling
-- Implemented the required changes to allow rendering to Oculus Rift devices. Also, we have already begun including the native interfaces in the API for the Oculus Rift SDK. Check this [link](../manual/virtual-reality/oculus/index.md) for more info.
+- Implemented the required changes to allow rendering to Oculus Rift devices. Also, we have already begun including the native interfaces in the API for the Oculus Rift SDK. See the [VR documentation](../manual/virtual-reality/index.md) for more information.
 
 #### Input
 

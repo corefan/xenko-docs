@@ -1,5 +1,5 @@
 <style>
-	.sideaffix, style+h1{
+	.sideaffix, style+h1, #xk-current-version{
 		display: none;
 	}
 </style>
