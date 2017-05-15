@@ -51,22 +51,22 @@ if ($API)
            $descriptionString = @();
            $currentFile = $descriptionFiles[$i]
            $currentFileContent = (Get-Content "$namespaceSrcLocation/$currentFile")
+
            $searchDescriptionStart = ( $currentFileContent | Select-String -Pattern $searchTagStart)
            $searchDescriptionEnd = ( $currentFileContent | Select-String -Pattern $searchTagEnd)
            $startStringNumber = $currentFileContent.IndexOf($searchDescriptionStart);
            $endStringNumber = $currentFileContent.IndexOf($searchDescriptionEnd);
            if($startStringNumber -eq $endStringNumber){
-              $descriptionString = $currentFileContent[$startStringNumber]
-           } else {           
+              $descriptionString = $currentFileContent[$startStringNumber] -replace '"', '\"'
+           } else {
                for($j = $startStringNumber; $j -le $endStringNumber; $j++){
-                    $descriptionString += $currentFileContent[$j]
+                    $descriptionString += $currentFileContent[$j] -replace '"', '\"'
                }
            }
            $global:descriptionStringArray += ($descriptionString -replace "[\n///]", '' -replace "$searchTagStart", "").Trim() | where {$_ -ne ""}
            $namespaceString = $currentFileContent | Select-String -Pattern 'namespace ';
-           $namespaceStringNumber = $currentFileContent.IndexOf($namespaceString);
-           $global:descriptionFileNameArray += ($currentFileContent[$namespaceStringNumber] -replace "namespace", '').Trim()
-       } 
+           $global:descriptionFileNameArray +=  (($namespaceString -split '\s')[1]).Trim()
+       }
     }
 
     function copyDescription($searchTag)
@@ -175,10 +175,9 @@ else
 Write-Host "Generating documentation..."
 
 # Output to both build.log and console
-# deps\docfx\docfx.exe build
+deps\docfx\docfx.exe build
 
 # Copy extra items
-Copy-Item robots.txt _site/
 Copy-Item ReleaseNotes/ReleaseNotes.md _site/ReleaseNotes/
 Copy-Item studio_getting_started_links.txt _site/
 Stop-Transcript
