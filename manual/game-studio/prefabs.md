@@ -21,7 +21,7 @@ You can also override specific prefab properties in each prefab instance.
 
 ## See also
 
-* [Create prefabs](create-a-prefab.md)
+* [Create a prefab](create-a-prefab.md)
 * [Use prefabs](use-prefabs.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
