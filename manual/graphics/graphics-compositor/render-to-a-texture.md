@@ -67,7 +67,7 @@ There are various ways you can use the render target texture.
 
     ![Select texture](media/select-texture.png)
 
-2. Click the **hand** icon (**pick asset up**) to open the asset picker.
+2. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) to open the asset picker.
 
 3. In the asset picker, select the **Render texture** asset and click **OK**.
 
@@ -85,7 +85,7 @@ There are various ways you can use the render target texture.
 
     ![Select sprite source](media/sprite-source-texture.png)
 
-4. Click the **hand** icon (**pick asset up**) to open the asset picker.
+4. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) to open the asset picker.
 
 5. In the asset picker, select the **Render texture** asset and click **OK**.
 

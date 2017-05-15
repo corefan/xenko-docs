@@ -50,7 +50,6 @@
 ### [Create a custom asset](engine/assets/create-a-custom-asset.md)
 ## [Entity component model](engine/entity-component-model/index.md)
 ### [Manage entities](engine/entity-component-model/managing-entities.md)
-### [Common entity components](engine/entity-component-model/common-entity-components.md)
 ## [File system](engine/file-system.md)
 
 # [Files and folders](files-and-folders/index.md)
