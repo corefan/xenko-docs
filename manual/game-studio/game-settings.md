@@ -26,7 +26,7 @@ You can have multiple scenes in your project. The **default scene** is the scene
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click the **Asset picker** button.
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
     
     ![Set default scene](media/game-settings-default-scene.png)
 
@@ -42,7 +42,7 @@ You can have multiple graphics compositors in your project, but you can only use
 
 To set the graphics compositor:
 
-1. In the **GameSettings** properties, next to **Graphics compositor**, click the **Asset picker** button.
+1. In the **GameSettings** properties, next to **Graphics compositor**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
     
     ![Set default scene](media/game-settings-graphics-compositor.png)
 

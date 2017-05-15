@@ -49,7 +49,7 @@ Let's add five instances of the lamppost prefab to our scene.
 
 ![Five lampposts](media/lamppost-prefab-instances.png)
 
-Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Properties Grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The property grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
 
 ![Overridden property](media/override-prefab-property.png)
 

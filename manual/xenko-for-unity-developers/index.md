@@ -92,7 +92,7 @@ You can have multiple scenes in your project. Xenko loads the default scene at r
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click the **Asset picker** button.
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
     
     ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
 
