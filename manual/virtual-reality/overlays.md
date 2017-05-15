@@ -1,6 +1,6 @@
-# Overlays
+# UI overlays
 
-In VR games, it's often useful to display elements such as user interfaces as **overlays** in the player view. To do this, render the UI to a texture.
+In VR games, it's often useful to display elements such as user interfaces as **overlays** that appear to float in the player view instead of a traditional UI. To do this, render the UI to a texture.
 
 ## Set up a VR overlay in the graphics compositor
 
