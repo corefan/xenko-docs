@@ -15,4 +15,5 @@ Lights in Xenko are provided by [light components](xref:SiliconStudio.Xenko.Engi
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
 * [Light probes](light-probes.md)
+* [Light shafts](light-shafts.md)
 * [Shadows](shadows.md)

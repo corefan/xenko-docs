@@ -8,7 +8,7 @@
 
 ![media/SpotLightOverview.png](media/SpotLightOverview.png) 
 
-Game Studio represents the spot light with the following icon:
+The scene editor shows the position of the spot light with the following icon:
 
 ![media/SpotLight.png](media/SpotLight.png) 
 

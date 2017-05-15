@@ -8,7 +8,7 @@
 
 ![media/PointLightOverview.png](media/PointLightOverview.png) 
 
-In Game Studio, point lights have the following icon:
+The scene editor shows the position of point lights with the following icon:
 
 ![media/PointLight.png](media/PointLight.png) 
 

@@ -2,7 +2,7 @@
 
 ## Create shaders in C&#35;
 
-You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. Shaders come in three variations:
+You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. Shaders come in three types:
 
 - @'SiliconStudio.Xenko.Shaders.ShaderClassSource' correspond to a unique class
 - @'SiliconStudio.Xenko.Shaders.ShaderMixinSource' mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', set preprocessor values, define compositions
@@ -89,7 +89,10 @@ The parameters behave like any variable. You can read and write their value, com
 
 ### Custom parameters
 
-You can create your own set of parameters using a structure definition syntax. Even if they're defined in the XKFX file, don't forget the `using` statement when you want to use them.
+You can create your own set of parameters using a structure definition syntax. 
+
+>[!Note]
+>Even if they're defined in the XKFX file, don't forget the `using` statement when you want to use them.
 
 #### Custom parameters
 

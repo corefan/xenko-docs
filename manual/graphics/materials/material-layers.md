@@ -40,7 +40,7 @@ If the materials have **different** shading models, Xenko applies each material'
 
 1. Select the material you want to add a layer to.
 
-2. In the **property grid** (on the right by default), next to **Layers**, click the **green plus icon**.
+2. In the **property grid** (on the right by default), next to **Layers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
 
     ![Add a layer](media/add-a-layer.png)
 
@@ -48,7 +48,7 @@ If the materials have **different** shading models, Xenko applies each material'
 
     ![Empty layer](media/empty-layer.png)
 
-3. Next to the layer, click the hand icon.
+3. Next to the layer, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     The **asset picker** opens.
 
@@ -60,7 +60,7 @@ If the materials have **different** shading models, Xenko applies each material'
     
     ![Added layer](media/added-layer.png)
 
-5. Next to **Blend Map**, click the **blue arrow** and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
+5. Next to **Blend Map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
 
     ![Select blend map](media/select-blend-map.png)
 
@@ -68,11 +68,11 @@ Game Studio blends the material layers using the blend map you specified. You ca
 
 ## Layer properties
 
-| Property        | Description |
-| --------------- | --------------- | 
-| Material        | The material blended in this layer|
-| Blend Map       | The [blend map](material-maps.md) used to blend this layer with the layer above|
-| Layer Overrides |  **UV Scale**: A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map) |
+| Property        | Description 
+| --------------- | --------------- 
+| Material        | The material blended in this layer
+| Blend Map       | The [blend map](material-maps.md) used to blend this layer with the layer above
+| Layer Overrides |  **UV Scale**: A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map)
 
 ## See also
 

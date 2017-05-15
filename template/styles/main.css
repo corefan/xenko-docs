@@ -766,6 +766,7 @@ h5{
 .xk-icon-column{
     width: 45px;
     position: relative;
+    min-width: 40px;
 }
 .xk-icon-column .xk-struct-icon,
 .xk-icon-column .xk-interface-icon,

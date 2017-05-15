@@ -9,7 +9,7 @@ After you [import an animation](import-animations.md), you can preview it in the
 
     ![Select asset](media/select-asset.png)
 
-2. In the **property grid** (on the right by default), under **Preview model**, click the hand icon (**Pick an asset up**).
+2. In the **property grid** (on the right by default), under **Preview model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Pick an asset up](media/pick-an-asset-up.png)
 

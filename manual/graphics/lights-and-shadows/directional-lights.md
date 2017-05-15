@@ -4,11 +4,11 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-**Directional lights** come uniformly from one direction. This is often used for simulating large, distant light sources such as the sun. By default, new scenes you create in Xenko contain a single directional light.
+**Directional lights** come uniformly from one direction. They're often used for simulating large, distant light sources such as the sun, and cast shadows. By default, new scenes you create in Xenko contain a directional light.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
-Game Studio shows directional lights with the following icon:
+The scene editor shows the position of directional lights with the following icon:
 
 ![media/DirectionalLight.png](media/DirectionalLight.png) 
 
@@ -74,6 +74,14 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal
 | Debug               | Displays the shadow map cascades in the scene editor
 
+## Light shafts
+
+Used with a **light shaft component** and a **light shaft bounding volume**, directional lights create light shafts. 
+
+![Light shafts](media/lightshaft_640.jpg)
+
+For more information, see [Light shafts](light-shafts.md).
+
 ## See also
 
 * [Add a light](add-a-light.md)
@@ -82,4 +90,5 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
 * [Light probes](light-probes.md)
+* [Light shafts](light-shafts.md)
 * [Shadows](shadows.md)

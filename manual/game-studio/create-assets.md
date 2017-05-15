@@ -33,11 +33,11 @@ You can drag compatible resource files directly into Game Studio to create asset
 > [!NOTE]
 > * You can't use this method to create assets that don't use resource files (eg prefabs, materials, or scenes).
 
-| Asset type                    | Compatible resource file formats                                           |
-|-------------------------------|--------------------------------------------------------------|
-| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
-| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
-| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
+| Asset type                    | Compatible resource file formats    
+|-------------------------------|----------------------------------
+| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx 
+| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff 
+| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc 
 
 To create an asset by dragging and dropping a resource file:
 

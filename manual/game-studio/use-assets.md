@@ -10,7 +10,9 @@ There are three ways to use assets:
 
 ## Reference assets in components
 
-Many kinds of component reference assets. For example, model components use model assets. Components that require assets have **asset picker** docks.
+Many kinds of component use assets. For example, model components use model assets. 
+
+Components that use assets have **asset picker** docks in the **property grid**.
 
 ![Asset Picker](media/use-assets-asset-picker-dock.png)
 
@@ -18,14 +20,16 @@ To add an asset to an entity component, drag the asset to the **asset picker** i
 
 ![Drag and drop an asset](media/use-assets-drag-and-drop.png)
 
-Alternatively, click the **hand icon** ![](media/use-assets-hand-icon.png) to open the **asset picker** and select the asset from the list.
+Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) to open the **asset picker** and select the asset.
 
 ![Asset picker](media/use-assets-asset-picker.png)
 
 > [!NOTE]
-> The asset picker only displays assets of types expected by the property. For example, if the property is an audio listener, the asset picker only displays audio assets.
+> The asset picker only displays assets of types expected by the component. For example, if the component is an audio listener, the asset picker only displays audio assets.
 
-After you add an asset, the asset picker dock displays its name and a thumbnail image.
+After you add an asset to a component, the asset picker dock displays its name and a thumbnail image.
+
+![Asset displayed](media/asset-displayed.png)
 
 ## Reference assets in other assets
 
@@ -35,7 +39,7 @@ You can add asset references to assets the same way you add them to entity compo
 
 ## Clear a reference
 
-To clear a reference to an asset, use the ![eraser](media/use-assets-eraser.png) icon in the asset picker dock.
+To clear a reference to an asset, in the asset picker dock, click ![eraser](media/use-assets-eraser.png) (**Clear reference**).
 
 ## Examine references
 

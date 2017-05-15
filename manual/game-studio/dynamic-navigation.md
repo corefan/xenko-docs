@@ -40,7 +40,7 @@ You can enable and disable dynamic navigation in the global [game settings](game
 | Property                  | Description                                                    
 |---------------------------|--------------
 | Enabled                   | Enable dynamic navigation on navigation components that have no assigned navigation mesh
-| Included collision groups | Set which collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
+| Included collision groups | The collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
 | Build settings            | Advanced settings for dynamically-generated navigation meshes
 
 ## Enable and disable dynamic navigation from a script

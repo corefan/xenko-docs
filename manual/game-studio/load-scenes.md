@@ -1,21 +1,27 @@
 # Load and unload scenes at runtime
 
-The following code loads the scene `myChildScene` and adds it as a child scene to `myParentScene`.
+The following code loads three scenes and adds them as children:
 
 ```cs
-var myChildScene = Content.Load<Scene>(url); (edited)
-  
-myParentScene.Children.Add(myChildScene);
+var myChildScene0 = Content.Load<Scene>(url0);
+var myChildScene1 = Content.Load<Scene>(url1);
+var myChildScene2 = Content.Load<Scene>(url2);
+
+myParentScene.Children.Add(myChildScene0);
+myParentScene.Children.Add(myChildScene1);
+myChildScene1.Add(myChildScene2);
 ```
 
-## Scene streaming script
+For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
+
+## Scene streamer script
 
 Xenko also includes a scene streaming script that uses a [trigger](../physics/triggers.md) to load scenes. 
 
 >[!Note]
 >The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
 
-### Add a scene streaming script
+### Add a scene streamer script
 
 To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streamer**.
 

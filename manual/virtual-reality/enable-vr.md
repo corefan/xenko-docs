@@ -19,7 +19,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
     ![VR settings](media/vr-settings.png)
 
-4. Next to **Required APIs**, click the green plus icon (**Add a new item to the list**).
+4. Next to **Required APIs**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) (**Add a new item to the list**).
 
     Game Studio adds a new API to the list.
 

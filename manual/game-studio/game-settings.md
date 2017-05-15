@@ -26,7 +26,7 @@ You can have multiple scenes in your project. The **default scene** is the scene
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click the **Asset picker** button.
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
     
     ![Set default scene](media/game-settings-default-scene.png)
 
@@ -35,6 +35,22 @@ To set the default scene:
 2. Select the default scene in the asset picker and click **OK**.
 
 For more information about scenes, see [Manage scenes](../game-studio/manage-scenes.md).
+
+## Graphics compositor
+
+You can have multiple graphics compositors in your project, but you can only use one at a time.
+
+To set the graphics compositor:
+
+1. In the **GameSettings** properties, next to **Graphics compositor**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+    
+    ![Set default scene](media/game-settings-graphics-compositor.png)
+
+    The **asset picker** opens.
+
+2. Select the graphics compositor in the asset picker and click **OK**.
+
+For more information, see [Graphics compositor](../graphics/graphics-compositor/index.md).
 
 ## Splash screen
 
@@ -62,6 +78,9 @@ For more information, see [Splash screen](/splash-screen.md).
 | Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.
+
+> [!Tip]
+> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
 
 ## Editor settings
 
@@ -135,7 +154,7 @@ For more details, see [Navigation](navigation.md).
 
 You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
 
-1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click the **green plus icon**.
+1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
 
     ![Select graphics platform](../platforms/media/add-override.png)
 

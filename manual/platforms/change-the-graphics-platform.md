@@ -27,7 +27,7 @@ The **graphics platform** controls the graphics hardware in the device you run y
 
 You can override the graphics platform Xenko uses for specific platforms. For example, you can have Linux use Vulkan while other platforms use the default.
 
-1. With the **GameSettings** asset selected, in the property grid, under **Overrides**, click the **green plus icon**.
+1. With the **GameSettings** asset selected, in the property grid, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
 
     ![Select graphics platform](media/add-override.png)
 

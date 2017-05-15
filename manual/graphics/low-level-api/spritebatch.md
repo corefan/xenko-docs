@@ -3,7 +3,7 @@
 A sprite batch is a collection of sprites (2D textured planes).
 
 >[!Note]
->Remember that you need to put all custom code in a [custom scene renderer](../graphics-compositor/custom-scene-renderer.md) to include it in the composition.
+>Remember that you need to put all custom code in a [custom scene renderer](../graphics-compositor/custom-scene-renderers.md) to include it in the composition.
 
 ## Create a sprite batch
 

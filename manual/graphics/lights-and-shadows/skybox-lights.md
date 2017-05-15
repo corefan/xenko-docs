@@ -46,7 +46,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
 4. Select the entity you want to be the skybox light.
 
-5. In the **Properties grid** (on the right by default), click **Add component** and select [Light](xref:SiliconStudio.Xenko.Engine.LightComponent).
+5. In the **Property grid** (on the right by default), click **Add component** and select [Light](xref:SiliconStudio.Xenko.Engine.LightComponent).
 
     ![Background component properties](media/skybox-add-light-component.png)
 
@@ -54,7 +54,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
     ![Light component property](media/light-component-property.png)
 
-7. Click the hand icon to open the **Asset picker**.
+7. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
 
 	![No skybox asset selected](media/no-skybox-asset-selected.png)
 

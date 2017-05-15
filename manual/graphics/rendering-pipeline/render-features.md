@@ -52,6 +52,12 @@ A typical example of views, stages created during **Collect** phase, and Xenko u
 
 ![media/render-features-draw-example.png](media/render-features-draw-example.png)
 
+### Pipeline processors
+
+Pipeline processors are classes called when creating the [pipeline state](../low-level-api/pipeline-state.md). This lets you do things such as enable alpha blending or wireframe rendering on a specific render stage.
+
+Xenko includes several predefined pipeline processors. You can also create your own.
+
 ## See also
 
 * [Render features index](index.md)

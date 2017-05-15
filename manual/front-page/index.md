@@ -10,16 +10,13 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Light shafts](../graphics/lights-and-shadows/light-shafts.md)
+* <span class="label label-doc-highlight">Updated</span> [Graphics compositor](../graphics/graphics-compositor/index.md)
+* <span class="label label-doc-highlight">New</span> [Camera slots](../graphics/graphics-compositor/camera-slots.md)
+* <span class="label label-doc-highlight">New</span> [Render to a texture](../graphics/graphics-compositor/render-to-a-texture.md)
 * <span class="label label-doc-highlight">New</span> [Preview a scene in VR](../virtual-reality/preview-a-scene-in-vr.md)
 * <span class="label label-doc-highlight">Updated</span> [Navigate in the scene editor](../game-studio/navigate-in-the-scene-editor.md)
 * <span class="label label-doc-highlight">New</span> [Navigation](../game-studio/navigation.md)
-* <span class="label label-doc-highlight">New</span> [Create a model from code](../scripts/create-a-model-from-code.md)
-* <span class="label label-doc-highlight">New</span> [Troubleshooting - Lights don't cast shadows](../troubleshooting/lights-dont-cast-shadows.md)
-* <span class="label label-doc-highlight">New</span> [HRTF](../audio/hrtf.md)
-* <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
-* <span class="label label-doc-highlight">New</span> [Lights and shadows](../graphics/lights-and-shadows/light-probes.md)
-* <span class="label label-doc-highlight">Updated</span> [Lights and shadows](../graphics/lights-and-shadows/index.md)
-* <span class="label label-doc-highlight">New</span> [Distribute a game](../files-and-folders/distribute-a-game.md)
 
 ## Improve this documentation
 

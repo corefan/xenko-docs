@@ -27,6 +27,24 @@ You can now use a scene's `Offset` to move its entities both at design time and 
 
 The `ChildSceneComponent` has been removed. We encourage all entities to be managed by a single **entity manager** and rendered by a single **graphics compositor**.
 
+## Virtual Reality
+
+Enabling VR is now as simple as a single click!
+
+Xenko's clustered forward rendering, with its multisample anti-aliasing, makes it ideal for VR. Xenko uses a single API for every device, with native support for Oculus and HTV Vive (more devices coming very soon).
+
+Xenko comes with a VR game sample that shows you how to implement VR gameplay, including environment interaction and teleportation:
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/vr_template_640.jpg">
+   <source src="media/ReleaseNotes-2.0/vr_template_640.mp4" type="video/mp4">
+</video>
+
+Save valuable time by visualizing and testing VR directly from the scene editor:
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/vr_editor_640.jpg">
+   <source src="media/ReleaseNotes-2.0/vr_editor_640.mp4" type="video/mp4">
+</video>
+
 ## Global illumination with light probes
 
 Light probes capture the lighting at the position you place them. They simulate indirect light, the effect of light bouncing off surfaces and illuminating other surfaces.
@@ -112,7 +130,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 
 # Changelog
 
-## Version 2.0.0
+## Version 2.0.0.2
 
 Release date 2017/04/25
 
@@ -122,7 +140,7 @@ Release date 2017/04/25
 
 * Added VR game template
 * Game Studio and actual runtime game now share the same build cache. This should speed up build times.
-* Build dependencies are managed by a new system that greatly simplify copying and deployment. This should later benefit plugins and user projects when exposed to the user.
+* Build dependencies are managed by a new system that greatly simplify copying and deployment. This should later benefit plugins and user projects when exposed to the user
 
 #### Game Studio
 
@@ -146,7 +164,7 @@ Release date 2017/04/25
 * Scripts can now be closed without saving and opened again later
 * Script undo history now persists after closing a script
 * Added ability to capture a DDS cubemap from current editor camera position.
-* When viewing vertex streams, normals are now in 0..1 range instead of -1..1. Also, it is now possible to view normals in both world and tangent space.
+* When viewing vertex streams, normals are now in 0..1 range instead of -1..1. Also, it is now possible to view normals in both world and tangent space
 
 #### Assets
 
@@ -174,8 +192,6 @@ Release date 2017/04/25
 * D3D11: Shaders that are compatible shares the same bytecode, avoiding extra state changes.
 * OpenGL: Implemented UpdateSubresource for 3D textures
 
-#### Materials
-
 #### Particles
 
 * Additive rotation no longer has a default value of 1 radian; it's now 0
@@ -199,8 +215,6 @@ Release date 2017/04/25
 * Vive support (HMD and controllers)
 
 ### Issues fixed
-
-#### General
 
 #### Game Studio
 
@@ -228,7 +242,7 @@ Release date 2017/04/25
 * Setting a translation snap of 0 now works as expected
 * Light gizmos correctly update when changing the light type
 * Typing the URL to a reference in an asset picked now works as expected
-* Keys were often stuck (especially annoying when moving around), this is fixed.
+* Keys were often stuck (especially annoying when moving around), this is fixed
 
 #### Assets
 
@@ -262,6 +276,26 @@ Release date 2017/04/25
 #### Physics
 
 * Removing and re-adding entities no longer causes crashes in certain situations
+
+## Version 2.0.1.1
+
+Release date 2017/4/28
+
+### Issues fixed
+
+#### Game Studio
+
+* Fixed a potential crash when enabling VR in the editor and opening multiple scenes/prefabs
+* Prevents to drag and drop an entity that depends on a prefab into it (or an ancestor prefab) that would have created a cyclic reference and crashed the editor
+* Fixed an issue with automatic assembly reload
+
+#### Engine
+
+* Fixed a crash when computing light probes
+
+#### Build
+
+* Fixed a possible issue when compiling a game that targets iOS and the right Xamarin version cannot be found
  
 # Known Issues
 

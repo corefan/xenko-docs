@@ -28,14 +28,14 @@ To develop for mobile platforms, you also need:
 | iOS      | Mac computer, Xamarin* 
 
 > [!Note]
-> * If you use Visual Studio, you already have Xamarin. If you need to, you can get it from the [Xamarin site](https://store.xamarin.com/).
+> * Xamarin is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
 
-For information about supported platforms, see [Platforms](../platforms/index.md).
+For information about platforms Xenko supports, see [Platforms](../platforms/index.md).
 
 ## Run games made with Xenko
 
 To run games made with Xenko, you need:
 
 - .NET 4.6.1
-- DirectX11 (included with Windows 10 and later)
+- DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan
 - Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
