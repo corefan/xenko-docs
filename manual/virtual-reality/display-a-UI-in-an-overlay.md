@@ -4,7 +4,7 @@ This page explains how to render a UI to a texture, then display it as an overla
 
 These instructions assume you already have a UI that you want to display in the overlay. For information about creating UIs, see the [UI](../ui/index.md) section.
 
-> ![Note]
+> [!Note]
 > You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay, not other hardware.
 
 ## 1. Create a render target texture
@@ -127,6 +127,8 @@ This page describes the simplest way to do this from scratch, using two cameras 
     Game Studio adds the render texture to the renderer.
 
 12. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Forward renderer**.
+
+    ![Select forward renderer](media/overlay-select-forward-renderer.png)
 
 Your game is now ready to render the UI to an overlay in your VR device.
 
