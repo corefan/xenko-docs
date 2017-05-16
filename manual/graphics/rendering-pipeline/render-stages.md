@@ -6,11 +6,8 @@ It also offer way to control advanced properties such as sorting and filtering o
 
 Objects can subscribe to multiple render stages. For example, a mesh typically subscribes to both `Main` (a.k.a. Opaque) and `ShadowCaster` stage, or `Transparent` stage.
 
-> **Note**
->
-> A Render Stage doesn't define any rendering order.
->
-> Rendering order is controlled by Graphics Compositor Renderers.
+> [!Note]
+> A render stage doesn't define any rendering order. The rendering order is controlled by the [graphics compositor](graphics-compositor.md).
 
 ## Effect Slot
 
