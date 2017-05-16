@@ -103,7 +103,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 6. Next to **Children**, Click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **RenderTextureSceneRenderer**.
 
-    ![Select RenderTextureSceneRenderer](select-RenderTextureSceneRenderer.png)
+    ![Select RenderTextureSceneRenderer](media/select-RenderTextureSceneRenderer.png)
 
 8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **SingleStageRenderer**. 
 
