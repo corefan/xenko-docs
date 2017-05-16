@@ -1,0 +1,142 @@
+# Display a UI in an overlay
+
+This page explains how to render a UI to a texture, then display that as an overlay (sometimes described as a "Minority Report-style" interface).
+
+These instructions assume you already have a UI created that you want to display in the overlay. For information about creating UIs, see the [UI](../ui/index.md) section.
+
+> ![Note]
+> You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay, not other hardware.
+
+## 1. Create a render target texture
+
+The render target texture will contain the UI.
+
+In the **asset view**, click **Add asset** and select **Texture** > **Render target**.
+
+![Add render target](../graphics/graphics-compositor/media/add-render-target.png)
+
+Game Studio adds a **render target** texture to your project assets.
+
+![Render texture](../graphics/graphics-compositor/media/render-target-texture-in-asset-view.png) 
+
+## 2. Add a VR overlay
+
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+
+    ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
+
+    The graphics compositor opens. For more information about the graphics compositor, see the [Graphics compositor](../graphics/graphics-compositor/index.md) page.
+
+2. In the Graphics Compositor, select the **forward renderer** node.
+
+    ![Select forward renderer](media/select-forward-renderer.png)
+
+3. In the **property grid** (on the right by default), expand **VR Settings**.
+
+    ![VR settings](media/vr-settings.png)
+
+4. Next to **Overlays**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+
+    Game Studio adds a new overlay to the list.
+
+    ![Add VR item](media/add-overlay.png)
+
+5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+
+    The **asset picker** opens.
+
+    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+
+6. Select the **render texture** you created and click **OK**.
+
+## 3. Set up the UI render feature
+
+1. In the graphics compositor, on the left, under **Render Features**, select the **UIRenderFeature**.
+
+    ![Select UI render feature](media/select-UI-render-feature.png)
+
+2. In the property grid, make sure **SimpleGroupToRenderStageSelector** is selected.
+
+    ![Select SimpleGroupToRenderStageSelector.png](media/select-SimpleGroupToRenderStageSelector.png)
+
+3. Under **Render Stage**, make sure **UIRenderStage** is selected.
+
+    ![Select UIRenderStage.png](media/select-UIRenderStage.png)
+
+    This makes sure the UI is rendered in the UI render stage, which we'll use in the next step.
+
+## 4. Set up the renderers
+
+To display an overlay, you need at least two renderers:
+
+* one to render your main camera
+* one to render the UI to the overlay
+
+This page describes the simplest way to do this from scratch, using two cameras and two renderers. Depending on your pipeline, you might need to create a different setup.
+
+> [!Warning]
+> These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
+
+1. In the graphics compositor, select the **Entry points** node.
+
+    ![Entry points node](../graphics/graphics-compositor/media/entry-points-node.png)
+
+2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **None** to delete your existing renderers.
+
+    ![Cleared game renderers](../graphics/graphics-compositor/media/game-renderers-cleared.png)
+
+> [!Note]
+> Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer which we use to render the UI in these instructions. This will change in a future version.
+
+3. Next to **Game rendererer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **Camera Renderer**.
+
+    ![Select camera renderer.png](media/select-camera-renderer.png)
+
+> [!Note]
+> Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. This will change in a future version. In these instructions, we'll add a game renderer with a camera, then make the two renderers children of that renderer.
+
+4. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select your main game camera.
+
+    ![Select main camera](media/select-main-camera.png)
+
+5. Next to **Child**, click ![Blue arrow button]
+(~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **SceneRendererCollection**.
+
+    ![Select scene renderer collection](media/select-scene-renderer-collection.png)
+
+6. Expand **Child**.
+
+7. Click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **RenderTextureSceneRenderer**.
+
+8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **SingleStageRenderer**. 
+
+    ![Select single stage renderer](media/select-single-stage-renderer.png)
+
+9. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **UIRenderStage**. This is the renderer that renders the UI.
+
+    ![Select UI render stage](media/select-UI-render-stage.png)
+
+10. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+
+    The **asset picker** opens.
+
+11. Select the **render texture** and click **OK**.
+
+    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+
+    Game Studio adds the render texture to the renderer.
+
+12. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Forward renderer**.
+
+Your game is now ready to render the UI to an overlay in your VR device.
+
+## Sample
+
+For an example of a UI overlay implemented in a VR game, see the VR template included with Xenko.
+
+## See also
+
+* [Overlays](overlays.md)
+* [UI](../ui/index.md)
+* [Render to a texture](../graphics/graphics-compositor/render-to-a-texture.md)
+* [Graphics compositor](../graphics/graphics-compositor/index.md)

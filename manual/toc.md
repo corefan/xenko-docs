@@ -218,6 +218,8 @@
 # [Virtual reality](virtual-reality/index.md)
 ## [Enable VR](virtual-reality/enable-vr.md)
 ## [Preview a scene in VR](virtual-reality/preview-a-scene-in-vr.md)
+## [Overlays](virtual-reality/overlays.md)
+### [Display a UI in an overlay](virtual-reality/display-a-UI-in-an-overlay.md)
 ## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Xenko for Unity® developers](xenko-for-unity-developers/index.md)

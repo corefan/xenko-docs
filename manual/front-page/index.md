@@ -10,6 +10,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span>  [Overlays](../virtual-reality/overlays.md)
+* <span class="label label-doc-highlight">New</span>  [Display a UI in an overlay](../virtual-reality/display-a-UI-in-an-overlay.md)
 * <span class="label label-doc-highlight">New</span> [Light shafts](../graphics/lights-and-shadows/light-shafts.md)
 * <span class="label label-doc-highlight">Updated</span> [Graphics compositor](../graphics/graphics-compositor/index.md)
 * <span class="label label-doc-highlight">New</span> [Camera slots](../graphics/graphics-compositor/camera-slots.md)
