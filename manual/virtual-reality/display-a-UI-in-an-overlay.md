@@ -1,8 +1,8 @@
 # Display a UI in an overlay
 
-This page explains how to render a UI to a texture, then display that as an overlay (sometimes described as a "Minority Report-style" interface).
+This page explains how to render a UI to a texture, then display it as an overlay. This is sometimes described as a "Minority Report-style" interface.
 
-These instructions assume you already have a UI created that you want to display in the overlay. For information about creating UIs, see the [UI](../ui/index.md) section.
+These instructions assume you already have a UI that you want to display in the overlay. For information about creating UIs, see the [UI](../ui/index.md) section.
 
 > ![Note]
 > You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay, not other hardware.
