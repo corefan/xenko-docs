@@ -139,7 +139,9 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select forward renderer](media/select-forward-renderer2.png)
 
-5. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
+5. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+
+    The **asset picker** opens.
 
 6. Select the **render texture** and click **OK**.
 

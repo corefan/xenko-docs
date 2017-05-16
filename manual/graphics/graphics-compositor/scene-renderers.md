@@ -8,6 +8,9 @@ You select scene renderers in the **entry points** node properties.
 
 For more information about selecting renderers, see the [Graphics compositor](index.md) page.
 
+>[!Note]
+>Currently, **all** renders must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer (eg to render a UI). This will change in future versions.
+
 ## Clear
 
 Clears a frame, with a solid color.
