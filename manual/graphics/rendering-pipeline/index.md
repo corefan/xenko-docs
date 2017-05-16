@@ -31,4 +31,4 @@ For more information, see [Render stages](render-stages.md).
 ## In this section
 
 * [Render features](render-features.md)
-* [Render stages](render-features.md)
+* [Render stages](render-stages.md)

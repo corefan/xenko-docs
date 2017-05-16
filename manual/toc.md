@@ -135,6 +135,7 @@
 ### [Light streaks](graphics/post-effects/light-streaks.md)
 ## [Rendering pipeline](graphics/rendering-pipeline/index.md)
 ### [Render features](graphics/rendering-pipeline/render-features.md)
+### [Render stages](graphics/rendering-pipeline/render-stages.md)
 ## [Sprite fonts](graphics/sprite-fonts.md)
 ## [Skyboxes](graphics/skyboxes.md)
 
