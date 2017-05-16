@@ -9,15 +9,15 @@ These instructions assume you already have a UI that you want to display in the 
 
 ## 1. Create a render target texture
 
-The render target texture will contain the UI.
-
 In the **asset view**, click **Add asset** and select **Texture** > **Render target**.
 
 ![Add render target](../graphics/graphics-compositor/media/add-render-target.png)
 
 Game Studio adds a **render target** texture to your project assets.
 
-![Render texture](../graphics/graphics-compositor/media/render-target-texture-in-asset-view.png) 
+![Render texture](../graphics/graphics-compositor/media/render-target-texture-in-asset-view.png)
+
+In the following steps, we'll render the UI to this texture, then display it in the overlay.
 
 ## 2. Add a VR overlay
 
@@ -85,28 +85,25 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Cleared game renderers](../graphics/graphics-compositor/media/game-renderers-cleared.png)
 
-> [!Note]
-> Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer which we use to render the UI in these instructions. This will change in a future version.
-
 3. Next to **Game rendererer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **Camera Renderer**.
 
     ![Select camera renderer.png](media/select-camera-renderer.png)
 
-> [!Note]
-> Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. This will change in a future version. In these instructions, we'll add a game renderer with a camera, then make the two renderers children of that renderer.
+    Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. This will change in a future version. 
+    
+    For this reason, in these instructions, we'll add a game renderer with a camera, then make the two renderers children of that renderer. This makes sure both renderers have a parent with a camera.
 
 4. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select your main game camera.
 
     ![Select main camera](media/select-main-camera.png)
 
-5. Next to **Child**, click ![Blue arrow button]
-(~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **SceneRendererCollection**.
+5. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **SceneRendererCollection**.
 
     ![Select scene renderer collection](media/select-scene-renderer-collection.png)
 
-6. Expand **Child**.
+6. Next to **Children**, Click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **RenderTextureSceneRenderer**.
 
-7. Click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **RenderTextureSceneRenderer**.
+    ![Select RenderTextureSceneRenderer](select-RenderTextureSceneRenderer.png)
 
 8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **SingleStageRenderer**. 
 
