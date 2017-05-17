@@ -56,7 +56,7 @@ For pointers, gestures, and keyboards, you can query all the events that happene
 ### Use virtual buttons
 You can use **virtual buttons** to associate input to actions rather than physical keys, then let the user define their own keys. For more information, see [virtual buttons](virtual-buttons.md).
 
-## Pages in this section
+## In this section
 
 * [Gamepads](gamepads.md)
 * [Gestures](gestures.md)
