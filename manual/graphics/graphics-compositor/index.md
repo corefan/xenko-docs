@@ -82,7 +82,7 @@ Each entry point can use a separate rendering pipeline. For example, the game an
 
     ![Select renderer](media/connect-entry-point.png)
 
-For information about the different renderers, see [Scene renders](scene-renderers.md).
+For information about the different renderers, see [Scene renderers](scene-renderers.md).
 
 ### Forward renderer
 

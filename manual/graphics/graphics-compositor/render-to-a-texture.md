@@ -123,9 +123,9 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 ### 1. Render the texture
 
-1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Render camera**.
+1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Camera renderer**.
 
-    ![Select render camera](media/select-render-camera.png)
+    ![Select camera renderer](media/select-render-camera.png)
 
 2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select the camera you want to render to a texture.
 
@@ -153,11 +153,11 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 ### 2. Render the main camera
 
-1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Render camera**.
+1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Camera renderer**.
 
-    ![Select render camera](media/select-render-camera2.png)
+    ![Select camera renderer](media/select-render-camera2.png)
 
-2. Under **Children**, expand the second **Render camera** in the list.
+2. Under **Children**, expand the second **camera renderer** in the list.
 
     ![Expand list](media/expand-list.png)
 
