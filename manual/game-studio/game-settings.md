@@ -77,7 +77,7 @@ For more information, see [Splash screen](/splash-screen.md).
 | Default graphics profile    | The graphics feature level required by the project.
 | Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
-| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.
+| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform. For more information, see [Change the graphics platform](../platforms/change-the-graphics-platform.md).
 
 > [!Tip]
 > To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
