@@ -7,26 +7,28 @@ Objects can subscribe to multiple render stages. For example, a mesh typically s
 > [!Note]
 > Render stages don't define the rendering order. The rendering order is controlled by the [graphics compositor](../graphics-compositor/index.md).
 
-## Effect slot
+## Effect slots
 
-Some stages are usually exclusive: an object is either in the `Opaque` stage or the `Transparent` stage, not both. For this reason, each render stage has an @'SiliconStudio.Xenko.Rendering.RenderStage.EffectSlotName'. If several render stages share the same effect slot, they share the same effect instance.
+**Effect slots** determine which [effect/shader](../effects-and-shaders/index.md) a render stage uses. You choose the effect slot with @'SiliconStudio.Xenko.Rendering.RenderStage.EffectSlotName'.
+
+If multiple render stages exclusively render different objects, the stages can share the same effect slot. For example, as the opaque stage only renders opaque objects and the transparent stage only renders transparent objects, both stages can use the main effect slot.
+
+If they render any of the same objects, they can't share effect slots. This is why, for example, we typically render opaque meshes with the main effect slot, then render opaque meshes again with the shadow caster effect slot to create shadows.
 
 A typical setup of render stages:
 
 | Render stage     | Effect slot  
 | ---------------- | ------------ 
-| Opaque          | Main         
+| Opaque           | Main         
 | Transparent      | Main         
 | UI               | Main         
-| ShadowCaster     | ShadowCaster 
+| Shadow caster    | Shadow caster 
 
 ## Sort objects in a render stage
 
-@'SiliconStudio.Xenko.Rendering.RenderStage.SortMode' defines how Xenko sorts objects in that render stage.
+@'SiliconStudio.Xenko.Rendering.RenderStage.SortMode' defines how Xenko sorts objects in that render stage. Xenko comes with several @'SiliconStudio.Xenko.Rendering.SortMode' implementations, such as:
 
-Xenko comes with several @'SiliconStudio.Xenko.Rendering.SortMode' implementations, such as:
-
-- @'SiliconStudio.Xenko.Rendering.FrontToBackSortMode', which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque and shadow casters)
+- @'SiliconStudio.Xenko.Rendering.FrontToBackSortMode', which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque objects and shadows)
 - @'SiliconStudio.Xenko.Rendering.BackToFrontSortMode', which renders objects strictly from back to front (useful for transparent objects)
 - @'SiliconStudio.Xenko.Rendering.StateChangeSortMode', which tries to reduce state changes
 
