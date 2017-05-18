@@ -145,7 +145,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
 1. In the **Asset view**, click **Add asset** and select **Scripts** > **Async Script**.
 
-    ![Add a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
+    ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
 2. In the **Script wizard** dialog, name your script *Trigger* and click **OK**.
 

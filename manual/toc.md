@@ -190,7 +190,7 @@
 # [Scripts](scripts/index.md)
 ## [Types of script](scripts/types-of-script.md)
 ## [Create a script](scripts/create-a-script.md)
-## [Add a script](scripts/add-a-script.md)
+## [Use a script](scripts/use-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
 ## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
 ## [Events](scripts/events.md)
