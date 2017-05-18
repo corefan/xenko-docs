@@ -101,9 +101,9 @@ To display the camera options, click the **camera icon** in the top-right of the
 
 ### Perspective and orthographic view
 
-**Perspective view** is a "real-world" perspective of the objects in your scene. In this view, lines of identical lengths appear different due to foreshortening, as in reality.
+**Perspective view** is a "real-world" perspective of the objects in your scene. In this view, objects close to the camera appear larger, and lines of identical lengths appear different due to foreshortening, as in reality.
 
-In **orthographic view**, lines of identical length appear the same length. Parallel lines never touch, and there's no vanishing point. It's easy to tell if objects are lined up exactly.
+In **orthographic view**, objects are always the same size, no matter how far their distance from the camera. Parallel lines never touch, and there's no vanishing point. It's easy to tell if objects are lined up exactly in orthographic view.
 
 ![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
 
