@@ -213,7 +213,7 @@
 # [UI](ui/index.md)
 ## [Controls](ui/controls/index.md)
 ### [UIElement class diagram](ui/controls/uielement-class-diagram.md)
-## [Layout system](ui/layout-system.md)
+## [Layout](ui/layout.md)
 ## [Editor](ui/editor/index.md)
 
 # [Virtual reality](virtual-reality/index.md)

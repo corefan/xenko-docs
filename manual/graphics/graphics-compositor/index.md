@@ -3,8 +3,7 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
->[!Note]
->This section is under construction.
+<div class="doc-incomplete"/>
 
 >[!Note]
 >This page requires a basic understanding of graphics pipelines.
