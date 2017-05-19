@@ -96,7 +96,7 @@ Corner   | Faces the three adjacent faces at a 45° angle
 ## Camera options
 
 > [!Note]
-> This page explains how to use cameras to view the scene editor. For information about how to use cameras in your game, see [Graphics - Cameras](../graphics/cameras.md).
+> This page explains how to use the scene editor camera. For information about how to use cameras in your game, see [Graphics - Cameras](../graphics/cameras.md).
 
 To display the scene editor camera options, click the **camera icon** in the top-right of the scene editor.
 
@@ -124,9 +124,11 @@ You can change the camera field of view. This changes the camera frustum, and ha
 
 #### Near and far planes
 
-The **near plane** is the point at which Game Studio begins rendering the scene. The default setting is 0.1.
+The near and far planes determine where the camera's view begins and ends.
 
-The **far plane**, also known as the draw distance, is the opposite: the point beyond which Game Studio stops rendering the scene. The default setting is 1000.
+* The **near plane** is the closest point the camera can see. The default setting is 0.1. Objects before this point aren't drawn.
+
+* The **far plane**, also known as the draw distance, is the furthest point the camera can see. Objects beyond this point aren't drawn. The default setting is 1000.
 
 Game Studio renders the area between the near and far planes.
 
