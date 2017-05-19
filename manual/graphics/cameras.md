@@ -13,6 +13,12 @@ In the scene editor, right-click and select **Camera**, then choose the kind of 
 
 ![Add camera](media/add-camera.png)
 
+Game Studio creates an entity with a camera component attached.
+
+Alternatively, select the entity you want to be a camera, and in the **property grid**, click **Add component** and select **Camera**.
+
+![Add a camera component](media/add-camera-component.png)
+
 ## Camera properties
 
 ![Camera properties](media/camera-properties.png)
