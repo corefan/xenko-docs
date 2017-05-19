@@ -74,7 +74,7 @@ Game Studio no longer shows the property:
 
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
-* [Add a script](add-a-script.md)
+* [Use a script](use-a-script.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
 * [Events](events.md)
 * [Debugging](debugging.md)

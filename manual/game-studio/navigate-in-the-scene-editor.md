@@ -95,15 +95,18 @@ Corner   | Faces the three adjacent faces at a 45° angle
 
 ## Camera options
 
-To display the camera options, click the **camera icon** in the top-right of the scene editor.
+> [!Note]
+> This page explains how to use cameras to view the scene editor. For information about how to use cameras in your game, see [Graphics - Cameras](../graphics/cameras.md).
+
+To display the scene editor camera options, click the **camera icon** in the top-right of the scene editor.
 
 ![Switch to orthographic](../get-started/media/switch-to-orthographic.png)
 
-### Perspective and orthographic view
+### Perspective and orthographic views
 
-**Perspective view** is a "real-world" perspective of the objects in your scene. In this view, lines of identical lengths appear different due to foreshortening, as in reality.
+**Perspective view** is a "real-world" perspective of the objects in your scene. In this view, objects close to the camera appear larger, and lines of identical lengths appear different due to foreshortening, as in reality.
 
-In **orthographic view**, lines of identical length appear the same length. Parallel lines never touch, and there's no vanishing point. It's easy to tell if objects are lined up exactly.
+In **orthographic view**, objects are always the same size, no matter how far their distance from the camera. Parallel lines never touch, and there's no vanishing point. It's easy to tell if objects are lined up exactly in orthographic view.
 
 ![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
 

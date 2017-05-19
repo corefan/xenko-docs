@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can render to textures in your scene instead of directly to the screen. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
+You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 
 For API details, see [Textures and render targets](../low-level-api/textures-and-render-targets.md).
 
