@@ -1,6 +1,6 @@
 /_site
 /externals
 /obj
-/api/*.yml
-/api/.manifest
+en/api/*.yml
+en/api/.manifest
 build.log

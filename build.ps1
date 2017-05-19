@@ -18,12 +18,12 @@ if ($API)
 
     Write-Host "Generating types of items..."
 
-    # Get all text from api/toc.yml
-    $textYaml = (Get-Content api\toc.yml);
+    # Get all text from en/api/toc.yml
+    $textYaml = (Get-Content en\api\toc.yml);
     # Set start variable for toc files source
-    $folder = "api\"
+    $folder = "en\api\"
     $format = ".yml"
-    # Start copy strings from api/toc.yml to temporary file
+    # Start copy strings from en/api/toc.yml to temporary file
     $isfile2 = Test-Path temporaryTypeToc.yml
     if($isfile2 -eq 'True'){
         Remove-Item temporaryTypeToc.yml
@@ -58,20 +58,20 @@ if ($API)
         $lineCounter++ 
     }
     
-    '' | Set-Content api\toc.yml
-    (Get-Content temporaryTypeToc.yml) | Set-Content api\toc.yml
+    '' | Set-Content en\api\toc.yml
+    (Get-Content temporaryTypeToc.yml) | Set-Content en\api\toc.yml
     Remove-Item temporaryTypeToc.yml
     
     # Remove SiliconStudio namespace prefix from TOC
-    (Get-Content api\toc.yml).replace('  name: SiliconStudio.', '  name: ') | Set-Content api\toc.yml
+    (Get-Content en\api\toc.yml).replace('  name: SiliconStudio.', '  name: ') | Set-Content en\api\toc.yml
 }
 else
 {
-    If(Test-Path api/.manifest)
+    If(Test-Path en/api/.manifest)
     {
         Write-Host "Erasing API documentation..."
-        Remove-Item api/*yml -recurse
-        Remove-Item api/.manifest 
+        Remove-Item en/api/*yml -recurse
+        Remove-Item en/api/.manifest 
     }
 }
 
@@ -81,6 +81,5 @@ Write-Host "Generating documentation..."
 deps\docfx\docfx.exe build en\docfx.json | Tee-Object -FilePath build.log -Append
 
 # Copy extra items
-Copy-Item robots.txt _site/
-Copy-Item ReleaseNotes/ReleaseNotes.md _site/ReleaseNotes/
+Copy-Item en/ReleaseNotes/ReleaseNotes.md _site/en/ReleaseNotes/
 Copy-Item studio_getting_started_links.txt _site/
