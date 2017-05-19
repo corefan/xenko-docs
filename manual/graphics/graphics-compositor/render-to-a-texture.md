@@ -107,7 +107,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 > [!Warning]
 > These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
 
-1. In the graphics compositor, select the **Entry points** node.
+1. In the graphics compositor editor, select the **Entry points** node.
 
     ![Entry points node](media/entry-points-node.png)
 

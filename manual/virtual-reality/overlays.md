@@ -9,15 +9,15 @@ This page explains how to add an overlay. To display a UI in an overlay, you nee
 
 ## Add an overlay
 
-1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
-    The Graphics Compositor editor opens.
+    The graphics compositor editor opens.
 
-    For more information about the Graphics Compositor, see the [Graphics compositor](../graphics/graphics-compositor/index.md) page.
+    For more information about the graphics compositor, see the [Graphics compositor](../graphics/graphics-compositor/index.md) page.
 
-2. In the Graphics Compositor, select the **forward renderer** node.
+2. In the graphics compositor editor, select the **forward renderer** node.
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
