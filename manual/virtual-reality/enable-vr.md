@@ -30,10 +30,10 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     ![Add API](media/select-vr-api.png)
 
     | API    | Description 
-    |--------|  --------
+    |--------| --------
     | Oculus | Supports Oculus Rift devices (best support for Oculus Rift) 
     | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
-    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
+    | Dummy  | Displays the game on the screen with two cameras (one per eye), instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
 
 6. Repeat steps 4 and 5 to add as many APIs as you need.
 
