@@ -21,13 +21,13 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
 ## 2. Add a VR overlay
 
-1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
-    The graphics compositor opens. For more information about the graphics compositor, see the [Graphics compositor](../graphics/graphics-compositor/index.md) page.
+    The graphics compositor editor opens. For more information about the graphics compositor, see the [Graphics compositor](../graphics/graphics-compositor/index.md) page.
 
-2. In the Graphics Compositor, select the **forward renderer** node.
+2. In the graphics compositor editor, select the **forward renderer** node.
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
@@ -51,7 +51,7 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
 ## 3. Set up the UI render feature
 
-1. In the graphics compositor, on the left, under **Render Features**, select the **UIRenderFeature**.
+1. In the graphics compositor editor, on the left, under **Render Features**, select the **UIRenderFeature**.
 
     ![Select UI render feature](media/select-UI-render-feature.png)
 
@@ -77,7 +77,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 > [!Warning]
 > These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
 
-1. In the graphics compositor, select the **Entry points** node.
+1. In the graphics compositor editor, select the **Entry points** node.
 
     ![Entry points node](../graphics/graphics-compositor/media/entry-points-node.png)
 
