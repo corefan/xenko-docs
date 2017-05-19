@@ -51,6 +51,7 @@ var camera = new CameraComponent();
 
 ## See also
 
+* [Cameras](../cameras.md)
 * [Graphics compositor](index.md)
 * [Game Studio - Game settings](../../game-studio/game-settings.md)
 * [Game Studio - Manage scenes](../../game-studio/manage-scenes.md)
