@@ -22,7 +22,4 @@ Many components are available out of the box, including:
 - @'SiliconStudio.Xenko.UI.Controls.ScrollBar'
 - @'SiliconStudio.Xenko.UI.Controls.ModalElement'
 
-And of course, you can create your own!
-
-A class diagram is available [here](uielement-class-diagram.md).
-
+And of course, you can create your own.

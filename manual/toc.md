@@ -211,10 +211,9 @@
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 
 # [UI](ui/index.md)
-## [Controls](ui/controls/index.md)
-### [UIElement class diagram](ui/controls/uielement-class-diagram.md)
+## [Controls](ui/controls.md)
 ## [Layout](ui/layout.md)
-## [Editor](ui/editor/index.md)
+## [Editor](ui/editor.md)
 
 # [Virtual reality](virtual-reality/index.md)
 ## [Enable VR](virtual-reality/enable-vr.md)

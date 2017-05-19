@@ -1,4 +1,4 @@
-# Editing UI Assets
+# UI editor
 
 <div class="doc-incomplete"/>
 
@@ -198,7 +198,7 @@ of the element (`Height`, `Width` and `Depth`), its alignment (`HorizontalAlignm
 
 This category contains the `Name` property. 
 
-## Creating a page
+## Create a page
 
 From the asset view toolbar, click on the **Add asset** button. In the drop-down menu, select the **UI**
 category and click on **UI Page**. To open the newly created asset, either double-click on it, select it
