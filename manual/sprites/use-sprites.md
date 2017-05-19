@@ -26,7 +26,7 @@ To add a sprite to a scene, add a **sprite component** to an entity. Afterwards,
         </video>
     </p>
 
-    Alternatively, click the hand icon to open the asset picker:
+    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
 
     ![Pick asset up](media/pick-asset-up.png)
 
@@ -40,7 +40,7 @@ Game Studio adds the sprite to the entity.
 
 You can use scripts to render sprites at runtime. To do this, attach the script to an entity with a sprite component.
 
-For information about how to add scripts to entities, see [Add a script](../scripts/add-a-script.md).
+For information about how to add scripts to entities, see [Use a script](../scripts/use-a-script.md).
 
 ### Code sample
 

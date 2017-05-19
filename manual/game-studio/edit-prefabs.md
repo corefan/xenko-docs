@@ -31,7 +31,7 @@ The Prefab Editor works similarly to the Scene Editor. For example, you can:
 * create parent-child relations between entities
 * add and modify entity components (scripts, materials, models, animations, etc)
 
-For more information about managing entities, see [Populate a scene](../get-started/add-entities.md).
+For more information about managing entities, see [Populate a scene](../game-studio/add-entities.md).
 
 ![Prefab editor](media/prefab-editor.png)
 
@@ -48,7 +48,7 @@ This video demonstrates what happens when we make changes to the prefab. The Sce
 ## See also
 
 * [Prefab index](prefabs.md)
-* [Create prefabs](create-a-prefab.md)
+* [Create a prefab](create-a-prefab.md)
 * [Use prefabs](use-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)

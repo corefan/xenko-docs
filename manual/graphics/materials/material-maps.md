@@ -4,18 +4,20 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Material maps** calculate how to render materials. They can fetch two kinds of values: color (RGB) values or scalar (single float) values. You can use them for several purposes, including blend maps (for combining [material layers](material-layers.md)), gloss maps, and diffuse maps.
- 
+**Material maps** calculate how materials are rendered. They can use two kinds of values: color (RGB) values or scalar (single float) values. 
+
+You can use material maps for several purposes, including blend maps (for combining [material layers](material-layers.md)), gloss maps, and diffuse maps.
+
 Material maps can fetch values using one of several providers:
 
 * **Vertex stream**: a value taken from mesh attributes
-* **Binary operator**: a combination of two other color/scalar value providers
+* **Binary operator**: a combination of any other two providers
 * **Float4 / Float**: a constant value
 * **Color**: a hex color value
 * **Shader**: a value provided by a ComputeColor shader. This lets you use procedural values
 * **Texture**: a value sampled from a texture
 
-To select the provider the map uses, use the drop-down menu:
+To choose the provider, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select it from the drop-down menu:
 
 ![media/material-colors-1.png](media/material-colors-1.png) 
 
@@ -23,7 +25,7 @@ To select the provider the map uses, use the drop-down menu:
 
 This provider takes a value from an attribute of the mesh of the model you apply the material to.
 
-It has two modes: **Color Vertex Stream** and **Custom Vertex Stream**. To switch between them, with **Vertex Stream** selected as the provider, click the dropdown menu.
+It has two modes: **Color Vertex Stream** and **Custom Vertex Stream**. To switch between them, with **Vertex Stream** selected as the provider, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and choose the mode you want to use.
 
 ![Vertex stream mode](media/vertex-stream-mode.png)
 
@@ -49,7 +51,7 @@ Takes a value from the mesh channel you specify.
 
 Perform a binary operation from two color/scalar value providers. You can nest as many material maps inside binary operators as you need (including further binary operators).
 
-To choose how the operation works, select from the dropdown menu. The operations are similar to options when blending layers in Photoshop.
+To choose how the operation works, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select from the drop-down menu. The operations are similar to options when blending layers in Photoshop.
 
 ![Operation mode](media/operation-mode.png)
 
@@ -59,7 +61,7 @@ To choose how the operation works, select from the dropdown menu. The operations
 
 | Property | Description                                      
 | -------- | -----------
-| Operator | A binary operator (eg add, multiply, etc)      
+| Operator | A binary operator (eg add, multiply, etc)     
 | Left     | The left color/scalar used in the operation  
 | Right    | The right color/scalar used in the operation 
 
@@ -77,13 +79,15 @@ In the case of scalar values, you control the value with a slider (*Float*).
 
 ## Color
 
-**Color** is only available for material maps that use RGB values.
+A value provided from a color hex value. Only available for material maps that use RGB values.
 
 ![media/material-colors-3.png](media/material-colors-3.png)
 
 ## Shader
 
 A value provided by a ComputeColor shader. This lets you use procedural values.
+
+For an example of a ComputeColor shader, see [Particle materials](../../particles/tutorials/particle-materials.md).
 
 ## Texture
 

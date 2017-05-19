@@ -8,6 +8,17 @@ $(function() {
     });
   };
   
+  // Function to start searching when user clicked in the search icon
+  $('#search').on('submit', function(e){
+    // Remove default events from form
+    if (e.preventDefault) { 
+       e.preventDefault();
+    } else {
+       e.returnValue = false; 
+    }
+    // Activation keys are pressed, which causes the search function
+    $('#search-query').trigger('input');
+  })
   // Captions are not automatically shown anymore by default; uncomment to reenable them
   //showCaptionFromAlt("article img");
 
@@ -229,4 +240,30 @@ $(function() {
           }, 100);
       }
     }
+    function redirectToCurrentDocVersion(){
+      // Set current doc version at start of page
+      if($('#xk-current-version').length > 0){
+        var urlVersion = window.location.pathname.split('/')[1];
+        if($('#xk-current-version option[value="' + urlVersion + '"]').length <= 0){
+          $("#xk-current-version").val('latest');
+        } else {
+          $("#xk-current-version").val(urlVersion);
+        }
+      }
+      $('#xk-current-version').on('change', function(){
+        var hostVersion = window.location.host;
+        var pathVersion = window.location.pathname;
+        var sectionVersion;
+        if(/manual/.test(pathVersion)){
+          sectionVersion = 'manual'
+        } else if(/api/.test(pathVersion)){
+          sectionVersion = 'api'
+        } else if (/ReleaseNotes/.test(pathVersion)){
+          sectionVersion = 'ReleaseNotes'
+        }
+        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + sectionVersion
+        $(window).attr('location', newAddress);
+      })
+    }
+    redirectToCurrentDocVersion();
 });

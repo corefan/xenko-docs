@@ -81,14 +81,14 @@ For more information about the Visual Studio profiler, see the [MSDN documentati
 
 As CPU and GPU process different types of data, it's usually easy to identify which part is causing a bottleneck.
 
-Most GPU problems arise when the application uses expensive rendering techniques, such as post-effects, lighting, shadows, and tessellation. To identify the problem, disable rendering features. 
+Most GPU problems arise when the application uses expensive rendering techniques, such as post effects, lighting, shadows, and tessellation. To identify the problem, disable rendering features. 
 
 If instead there seems to be a CPU bottleneck, reduce the complexity of the scene.
 
 For graphics:
 
 * Decrease the resolution of your game.
-* Reduce the quality of your post-effects.
+* Reduce the quality of your post effects.
 * Reduce the number of lights and size of shadow maps.
 * Reduce shadow map sizes.
 * Use culling techniques to reduce the number of objects and vertices rendered.

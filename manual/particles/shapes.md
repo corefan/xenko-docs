@@ -4,23 +4,27 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Because particles are essentially only points in space, they have no defined shape. Xenko can draw shapes between the points of the kind of specify.
+Because particles are essentially only points in space, they have no defined shape. Instead, Xenko draws shapes **between** the points. 
+
+The major difference between particle shapes is whether they always face the camera, or if they can rotate freely in 3D space.
 
 Currently, emitters can only emit one type of shape at a time.
 
-## Billboard
+## Billboards
 
-Each particle is expanded to a 1m x 1m camera-facing quad. Xenko scales the billboard to the particle Size value. Billboards support angular rotation only.
+**Billboards** always face the camera. They appear **fixed in 3D space**, so they don't change with the camera position.
+
+Because they always face the camera, billboards support angular rotation only. This means they only rotate clockwise or counter-clockwise.
 
 ## Hexagon
 
-Every particle is expanded to a camera-facing hexagon with 0.5m sides. Xenko scales the hexagon accordingly to the particle Size value. Hexagons support angular rotation only.
+**Hexagons** are identical to billboards, but are hexagonal in shape. Like billboards, they always face the camera and support angular rotation only.
 
-## Quad
+## Quads
 
-Every particle is expanded to a 1m x 1m upward-facing quad. Xenko scales the quad to the particle Size value. Quads support 3D orientation and rotation.
+Quads are identical to billboards, but don't rotate to face the camera, and so support 3D orientation and rotation.
 
-This image shows a billboard (left), a quad (center), and a hexagon (right):
+Xenko draws billboard particles to the **Size** value in the particle effect properties. If you don't specify a size, Xenko expands the quads to 1m x 1m. 
 
 ![media/particles-reference-shapebuilders-1.png](media/particles-reference-shapebuilders-1.png) 
 
@@ -28,17 +32,9 @@ This image shows a billboard (left), a quad (center), and a hexagon (right):
 
 This sprite is billboard-aligned and stretched in the direction of the particle. You can set an initial direction for the particles with an initializer, or add an updater which writes particle speed as direction.
 
-## Ribbon
+## Ribbons and trails
 
-Ribbons draw particles together as connected strips which always face the camera.
-
-For more information, see [Ribbons and trails](ribbons-and-trails.md).
-
-## Trail
-
-Trails are identical to ribbons except that they don't always face the camera; they're fixed in 3D space.
-
-For more information, see [Ribbons and trails](ribbons-and-trails.md).
+See [Ribbons and trails](ribbons-and-trails.md).
 
 ## See also
 

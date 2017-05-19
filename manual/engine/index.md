@@ -8,5 +8,5 @@
 
 # See also
 
-- [Introduction to assets](../get-started/assets.md)
+- [Introduction to assets](../game-studio/assets.md)
 - [Scripts](../scripts/index.md)

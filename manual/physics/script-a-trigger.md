@@ -5,6 +5,9 @@
 
 In this tutorial, we'll create a [trigger](../physics/triggers.md) that doubles the size of a ball when the ball passes through it.
 
+>[!Note]
+>The screenshots and videos in this tutorial were made using an earlier version of Xenko, so some parts of the UI, and the default skybox and sphere, might look different from your version.
+
 ## 1. Create a bouncing ball
 
 Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial. This creates a simple scene in which a ball falls from mid-air, hits the ground, and bounces.
@@ -29,7 +32,7 @@ For this tutorial, we'll set the restitution of both the ground and the sphere t
 
 Now we'll add a trigger between the ball and the ground, so the ball passes through it.
 
-1. In the **Scene editor**, click the white plus sign (**Create new entity**) and select **Empty entity**.
+1. In the **Scene editor**, click the white plus button (**Create new entity**) and select **Empty entity**.
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 
@@ -49,7 +52,7 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
     This makes the collider a trigger. This means objects can pass through it, but are still detected in the code.
 
-6. We need to give the trigger a shape. Next to **Collider Shapes**, click the **green plus icon** and select **Box**.
+6. We need to give the trigger a shape. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Box**.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
@@ -85,7 +88,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     Game Studio adds a model component to the entity.
 
-5. Under **Model**, click the hand icon (**Pick asset up**) to open the **Asset picker**.
+5. Under **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
@@ -93,7 +96,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7. In the **Property grid**, under **Model > Materials**, click the hand icon (**Pick asset up**) to open the **Asset picker**.
+7. In the **Property grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
@@ -142,7 +145,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
 1. In the **Asset view**, click **Add asset** and select **Scripts** > **Async Script**.
 
-    ![Add a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
+    ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
 2. In the **Script wizard** dialog, name your script *Trigger* and click **OK**.
 

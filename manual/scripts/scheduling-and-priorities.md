@@ -18,7 +18,7 @@ If scripts have the same priority, the order in which Xenko runs them isn't dete
 
 Priorities aren't set in the scripts themselves. Instead, they're set in the script component properties on the entity the script is attached to.
 
-1. Attach the script to an entity. For information about how to do this, see [Add a script](add-a-script.md).
+1. Attach the script to an entity. For information about how to do this, see [Use a script](use-a-script.md).
 
 2. With the entity selected, in the **property grid**, under the **script component properties**, set the **Priority** you want the script to have.
 
@@ -28,7 +28,7 @@ Priorities aren't set in the scripts themselves. Instead, they're set in the scr
 
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
-* [Add a script](add-a-script.md)
+* [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Events](events.md)
 * [Debugging](debugging.md)

@@ -16,7 +16,7 @@ For an example of raycasting, see the **Physics Sample** project included with X
 
 This code sends a raycast from the mouse's screen position:
 
-```
+```cs
 public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera, Simulation simulation)
 {
     Matrix invViewProj = Matrix.Invert(camera.ViewProjectionMatrix);

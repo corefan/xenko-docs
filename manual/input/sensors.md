@@ -26,7 +26,8 @@ var accelerometer = Input.Accelerometer;
 ## Check if a sensor is available
 
 Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported). For example:
-```
+
+```cs
 var hasCompass = Input.Compass.IsSupported;
 ```
 
@@ -58,7 +59,7 @@ Use [Input.Orientation](xref:SiliconStudio.Xenko.Input.InputManager.Orientation)
 
 For example:
 
-```
+```cs
   var orientation = Input.Orientation.Quaternion;
 ```
 
@@ -98,7 +99,8 @@ var acceleration = Input.Accelerometer.Acceleration;
 The **user acceleration sensor** is similar to the accelerometer, but measures the acceleration applied **only** by a user (without gravitational acceleration). 
 
 To get the user acceleration, use [UserAcceleration.Acceleration](xref:SiliconStudio.Xenko.Input.UserAccelerationSensor.Acceleration). For example:
-```                       
+
+```cs                       
 var userAcceleration = Input.UserAcceleration.Acceleration;
 ```
 
@@ -107,7 +109,7 @@ The gravity sensor gives a 3D vector indicating the direction and magnitude of g
 
 To get the gravity vector, use [GravitySensor](xref:SiliconStudio.Xenko.Input.GravitySensor). For example:
 
-```
+```cs
  var gravityVector = Input.Gravity.Vector;
 ```
 
@@ -119,7 +121,7 @@ The **compass** indicates measures the angle between the top of the device and t
 
 To get this angle, use [CompassSensor.Heading](xref:SiliconStudio.Xenko.Input.CompassSensor.Heading). For example:
 
-```
+```cs
 var heading = Input.Compass.Heading;
 ```
 
@@ -131,7 +133,7 @@ The gyroscope measures the **rotation speed** of the device (**radians per secon
 
 To get the rotation speed, use [GyroscopeSensor.RotationRate](xref:SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate). For example:
 
-```
+```cs
   var rotationRate = Input.Gyroscope.RotationRate; 
   var rotationSpeedX =  rotationRate.X;
   var rotationSpeedY =  rotationRate.Y;
@@ -140,7 +142,7 @@ To get the rotation speed, use [GyroscopeSensor.RotationRate](xref:SiliconStudio
 
 ## Example code
 
-```
+```cs
 public class SensorScript : AsyncScript
 {
 	public override async Task Execute()

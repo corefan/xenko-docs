@@ -2,14 +2,6 @@
 
 This section explains how to use Game Studio and the Xenko API for graphics and rendering.
 
-* [Lighting and shadows](lights-and-shadows/index.md)
-* [Graphics Compositor](graphics-compositor/index.md)
-* [Materials](materials/index.md)
-* [Post-effects](post-effects/index.md)
-* [Rendering pipeline](rendering-pipeline/index.md)
-* [Low-level API](low-level-api/index.md)
-* [Effects and shaders](effects-and-shaders/index.md)
-
 ## Shaders
 
 Shaders are authored in the [Xenko's shading language](effects-and-shaders/shading-language/index.md), an extension of `HLSL`. They provide true composition of modular shaders through the use of [inheritance](effects-and-shaders/shading-language/classes-mixins-and-inheritance.md), shader [mixins](effects-and-shaders/shading-language/composition.md), and [automatic weaving of shader in-out attributes](effects-and-shaders/shading-language/automatic-shader-stage-input-output.md).
@@ -24,4 +16,17 @@ Xenko shaders are converted automatically to the target graphics platform, eithe
 
 ## Advanced graphics
 
-The Graphics module provides a set of methods to display the game. Although Xenko is available on multiple platforms, the whole system behaves like DirectX 11 from the user perspective. You need a basic knowledge of the rendering pipeline to use it.
+The graphics module provides a set of methods to display the game. Although Xenko is available on multiple platforms, the whole system behaves like DirectX 11 from the user perspective. You need a basic knowledge of the rendering pipeline to use it.
+
+## In this section
+
+* [Cameras](cameras.md)
+* [Skyboxes](skyboxes.md)
+* [Sprite fonts](sprite-fonts.md)
+* [Lighting and shadows](lights-and-shadows/index.md)
+* [Graphics compositor](graphics-compositor/index.md)
+* [Materials](materials/index.md)
+* [Post effects](post-effects/index.md)
+* [Rendering pipeline](rendering-pipeline/index.md)
+* [Low-level API](low-level-api/index.md)
+* [Effects and shaders](effects-and-shaders/index.md)

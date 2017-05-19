@@ -3,19 +3,38 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-To use physics in your project, add a **collider** component to an entity. Colliders are entities that can bump into one another.
+To use physics in your project, add a **collider** component to an entity. 
 
-There are three types of collider:
+Colliders define the shapes and rules of physics objects. There are three types:
 
-* [static colliders](static-colliders.md) don't move
-* [rigid bodies](rigid-bodies.md) are moved around by forces such as collision and gravity
-* [characters](characters.md) are controlled by user input
+* [static colliders](static-colliders.md) don't move (eg walls, floors, heavy objects, etc)
+* [rigid bodies](rigid-bodies.md) are moved around by forces such as collision and gravity (eg balls, barrels, etc)
+* [characters](characters.md) are controlled by user input (ie player characters)
 
 You can also: 
 
 * set the [shape of collider components](collider-shapes.md)
-* make [trigger](triggers.md) colliders, and use them to script events when objects pass through them
+* make [triggers](triggers.md), and detect when objects pass through them
 * constrict collider movement with [constraints](constraints.md)
+
+## How colliders interact
+
+Colliders interact according to the table below.
+
+|   | Kinematic objects   | Kinematic triggers   | Rigid body colliders   | Rigid body triggers   | Static colliders        | Static triggers   
+|---|-------------|---------------------|-------------|---------------------|----------|------------------
+| Kinematic objects        | Collisions           | Collisions  | Collisions and dynamic| Collisions   | Collisions    | Collisions     
+| Kinematic triggers | Collisions           | Collisions   |Collisions           | Collisions     | Collisions     | Collisions   
+| Rigid body colliders          | Collisions and dynamic     | Collisions     | Collisions and dynamic     | Collisions     | Collisions and dynamic| Collisions
+| Rigid body triggers | Collisions         | Collisions  | Collisions | Collisions     | Collisions     | Collisions
+| Static colliders| Collisions| Collisions| Collisions and dynamic | Collisions   | Nothing   | Nothing
+|Static triggers     | Collisions     | Collisions     | Collisions     | Collisions    | Nothing    | Nothing
+
+* "Collisions" refers to collision information and events only. This means the collision is detected in the code, but the objects don't bump into each other (no dynamic response).
+
+* "Dynamic" means both collision information and events, plus dynamic response (ie the colliders bump into each other instead of passing through).
+
+For example, rigid body colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers; collisions are detected in the code, but objects simply pass through.
 
 ## Show colliders in the scene editor
 
@@ -41,16 +60,28 @@ You can make colliders visible at runtime, which is useful for debugging problem
 this.GetSimulation().ColliderShapesRendering = true;
 ``
 
-To show or hide collider shapes at runtime with a keyboard shortcut, use the **DebugPhysicsShapes** script.
-
-1. In the **Asset view**, click **Add asset**.
-2. Select **Scripts** > **Debug Physics Shapes**.
-3. Add the **Debug Physics Shapes** script as a component to an entity in the scene.
-
-The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime. You can edit the script to bind a different key combination.
-
 > [!Note]
 > Collider shapes for infinite planes are always invisible.
+
+### Keyboard shortcut
+
+To show or hide collider shapes at runtime with a keyboard shortcut, use the **Debug physics shapes** script.
+
+1. In the **Asset view**, click **Add asset**.
+
+2. Select **Scripts** > **Debug physics shapes**.
+
+    ![Add debug physics shape script](media/add-debug-physics-shapes-script.png)
+
+3. In the Game Studio toolbar, click **Reload assemblies and update scripts**.
+
+    ![Reload assemblies](../platforms/media/reload-assemblies.png)
+
+4. Add the **Debug physics shapes** script as a component to an entity in the scene. It doesn't matter which entity.
+
+    ![Add debug physics shapes script component](media/add-debug-physics-shapes-component.png)
+
+The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime. You can edit the script to bind a different key combination.
 
 ## See also
 

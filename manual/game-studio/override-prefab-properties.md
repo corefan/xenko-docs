@@ -29,12 +29,6 @@ In the **Property grid**, you can see which properties of the prefab instance di
 
     ![Identical properties are gray](media/use-prefabs-identical-properties-appear-gray.png)
 
-### Display only overridden properties
-
-To display only overridden properties, in the **Property grid**, next to the **Search** field, click ![Display only overridden properties icon](media/display-only-overriden-properties-icon.png) (**Display only overriden properties**):
-
-![Display only overridden properties](media/use-prefabs-display-only-overriden-properties.png)
-
 ### Reset a property to the prefab value
 
 To reset an overridden property to the value in the parent prefab, right-click the property and click **Reset to base value**.
@@ -55,7 +49,7 @@ Let's add five instances of the lamppost prefab to our scene.
 
 ![Five lampposts](media/lamppost-prefab-instances.png)
 
-Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Properties Grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The property grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
 
 ![Overridden property](media/override-prefab-property.png)
 
@@ -72,7 +66,7 @@ Four of the lampposts now have a green light. The fifth is still red, as overrid
 ## See also
 
 * [Prefab index](prefabs.md)
-* [Create prefabs](create-a-prefab.md)
+* [Create a prefab](create-a-prefab.md)
 * [Use prefabs](use-prefabs.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)

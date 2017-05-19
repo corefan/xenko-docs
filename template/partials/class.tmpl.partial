@@ -108,13 +108,16 @@
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
-      <th>{{__global.name}}</th>
+      <th colspan="2">{{__global.name}}</th>
       <th>{{__global.description}}</th>
     </tr>
   </thead>
   <tbody>
 {{#children}}
     <tr>
+      <td class="xk-icon-column">
+        <span class="xk-{{type}}-icon"></span>
+      </td>
       <td><a href="#{{id}}">{{name.0.value}}</a></td>
       <td>{{{summary}}}</td>
     </tr>
@@ -223,12 +226,15 @@
 <table class="table table-bordered table-striped table-condensed xk-hidden-table">
   <thead>
     <tr>
-      <th>{{__global.type}}</th>
+      <th colspan="2">{{__global.type}}</th>
       <th>{{__global.description}}</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td class="xk-icon-column">
+        <span class="xk-events-icon"></span>
+      </td>
       <td>{{{type.specName.0.value}}}</td>
       <td>{{{description}}}</td>
     </tr>

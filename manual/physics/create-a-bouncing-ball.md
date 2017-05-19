@@ -5,6 +5,9 @@
 
 In this tutorial, we'll use the [static collider and rigid body components](colliders.md) to create a ball bouncing on a floor.
 
+>[!Note]
+>The screenshots and videos in this tutorial were made using an earlier version of Xenko, so some parts of the UI, and the default skybox and sphere, might look different from your version.
+
 ## 1. Create a new project
 
 Start a **New Game** project.
@@ -23,7 +26,7 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property grid**, expand the **Static Collider component** to view its properties.
 
-4. Next to **Collider Shapes**, click the **green plus icon** and select **Infinite Plane**.
+4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Infinite Plane**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
@@ -41,7 +44,7 @@ Next, we'll add a [rigid body](rigid-bodies.md) component to the sphere. A rigid
 
 3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property grid**, expand the **Rigidbody component** to view its properties.
 
-4. Next to **Collider Shapes**, click the **green plus icon** and select **Sphere**.
+4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Sphere**.
 
      ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 

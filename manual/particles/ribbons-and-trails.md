@@ -18,11 +18,7 @@ In the diagram below, a strip is created by connecting the particles and renderi
 
 ## Ribbons vs trails
 
-Both ribbons and trails generate a flat surface which follows an axis connecting adjacent particles in a line. This line defines one of the axes of the surface. The difference between ribbons and trails is in the second axis used to build the shape.
-
-In the case of ribbons, the second axis is positioned in camera space, facing the ribbon towards the camera at all times. This gives the illusion of volume to the ribbon, but the shape isn't stable in 3D, as it changes when the camera moves.
-
-Trails read an extra attribute, **Direction**, from the particle data and use it as a second axis for the surface. This **fixes the surface in 3D space**, so trails don't change with the camera position. 
+Both ribbons and trails generate a flat surface which follows an axis connecting adjacent particles in a line. This line defines one of the axes of the surface. The difference is that ribbons always face the camera, and trails don't.
 
 The gif below shows the different behavior of ribbons (red) and trails (yellow) when viewed from different camera angles. Note how the ribbon doesn't change as the camera moves; it's fixed in space.
 
@@ -50,7 +46,7 @@ To sort the particles, under **Particle System > Source > Emitters**, change the
 
 If your particles have the same **lifespan** property, and are emitted no more than once per frame (usually the case at 30 particles per second or fewer), you can sort them by age. 
 
-However, if you spawn several particles per second or your particles vary in lifespan, sorting by age doesn't provide a consistent order, as the sorting parameter changes between frames. In this case, you should sort the particles by order. To do this, you need to add a **spawn order initializer**. To do this, in the entity properties, under **Particle System > Source > Emitters**, next to **Initializers**, click the **green plus icon** and select **Spawn Order**.
+However, if you spawn several particles per second or your particles vary in lifespan, sorting by age doesn't provide a consistent order, as the sorting parameter changes between frames. In this case, you should sort the particles by order. To do this, you need to add a **spawn order initializer**. To do this, in the entity properties, under **Particle System > Source > Emitters**, next to **Initializers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Spawn Order**.
 
 ![Add spawn-order initializer](tutorials/media/add-spawn-order-initializer.png)
 

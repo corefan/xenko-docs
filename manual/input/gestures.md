@@ -223,7 +223,7 @@ foreach( var gestureEvent in Input.GestureEvents)
     // Access tap-event-specific field.
     log.Info("Tap position: {0}.", tapEvent.TapPosition);
 }
-``` 
+```
 
 ### Identify the gesture state
 Use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) field to get gesture event state.

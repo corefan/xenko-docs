@@ -4,14 +4,16 @@
 
 The **graphics platform** controls the graphics hardware in the device you run your project on. Different devices support different graphics platforms; for example, iOS supports the OpenGL ES graphics platform. You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
 
+You set the graphics platform in the [game settings](../game-studio/game-settings.md) asset.
+
 > [!Note]
 > Make sure you have the latest drivers for the graphics platforms you want to use.
 
-1. In the **asset view**, select the **GameSettings** asset.
+1. In the **asset view**, select the **Game Settings** asset.
 
     ![Game settings asset](media/games-settings-asset.png)
 
-2. In the property grid, under **Rendering Settings > Preferred Graphics Platform**, select the graphics platform you want to use.
+2. In the property grid, under **Rendering Settings > Target graphics platform**, select the graphics platform you want to use.
 
     ![Select graphics platform](media/change-graphics-platform.png)
 
@@ -27,7 +29,7 @@ The **graphics platform** controls the graphics hardware in the device you run y
 
 You can override the graphics platform Xenko uses for specific platforms. For example, you can have Linux use Vulkan while other platforms use the default.
 
-1. With the **GameSettings** asset selected, in the property grid, under **Overrides**, click the **green plus icon**.
+1. With the **GameSettings** asset selected, in the property grid, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
 
     ![Select graphics platform](media/add-override.png)
 
@@ -56,3 +58,8 @@ Xenko overrides the graphics platform for the platforms you selected.
     For example, this project is using Vulkan:
 
     ![Select graphics platform](media/check-platform-at-runtime.png)
+
+## See also
+
+* [Platforms index](index.md)
+* [Game settings](../game-studio/game-settings.md)

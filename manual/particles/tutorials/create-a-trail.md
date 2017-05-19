@@ -32,11 +32,11 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Add Animations](media/add-animation.png)
 
-3. Under the **Animations** component, click the **plus icon** (**Add a new item to the list**). 
+3. Under the **Animations** component, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**). 
 
     ![Add a new item to the list](media/add-new-playing-animation.png)
 
-4. Next to **Clip**, click the hand icon **(Pick an asset up)** to open the Asset Picker. 
+4. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select an animation asset](media/select-animation-asset.png)
 
@@ -82,7 +82,7 @@ First we'll build a basic trail, just to see how it looks.
 
     ![Expand Source properties](media/expand-source-properties.png)
 
-3. Next to **Emitters**, click the **green plus icon**. This adds a new particle emitter.
+3. Next to **Emitters**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**). This adds a new particle emitter.
 
 4. Under the emitter properties, set the **Shape** to **Trail**.
 
@@ -92,13 +92,13 @@ First we'll build a basic trail, just to see how it looks.
 
     ![Set Axis to Center](media/set-axis-to-center.png)
 
-6. Next to **Spawners**, click the **green plus icon** and select **Per frame**.
+6. Next to **Spawners**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Per frame**.
 
     ![Add per-frame spawner](media/add-per-frame-spawner.png)
 
     This adds a per-frame spawner to the emitter, which spawns X number of particles per frame (as opposed to, say, per second).
 
-7. Next to **Initializers**, click the green plus icon and select **Velocity**.
+7. Next to **Initializers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Velocity**.
 
     ![Add velocity initializer](media/add-velocity-initializer.png)
 
@@ -112,7 +112,7 @@ First we'll build a basic trail, just to see how it looks.
 
     This restricts the particles to the Y axis, like an infinitely thin sheet of paper.
 
-9. Next to **Initializers**, click the **green plus icon** and select **Direction**.
+9. Next to **Initializers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Direction**.
 
     ![Add direction initializer](media/add-direction-initializer.png)
 
@@ -134,7 +134,7 @@ We have a trail, but it doesn't look too good yet. It's too long, it's a single 
 
 Because the particles are rendered as billboards, the segments of the trail interconnect strangely. To create a proper trail effect, we need to sort the particles into an order by adding a **spawn order initializer**.
 
-1. In the SwordModel properties, under **Particle System > Source > Emitters**, next to **Initializers**, click the **green plus icon** and select **Spawn Order**.
+1. In the SwordModel properties, under **Particle System > Source > Emitters**, next to **Initializers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Spawn Order**.
 
     >[!Note]
     >Make sure you don't select **Spawn Order (Parent)** or **Spawn Order (Group)**.
@@ -177,11 +177,11 @@ To fix the color, we'll give the particles a "swoosh" texture:
 
 1. Save the texture image above (**swoosh.png**) to disk.
 
-2. Import it into the project. To do this, in the **Asset view**, in the **Textures** folder, click **Add asset > Textures > Texture** and select **swoosh.png**.
+2. Import it into the project. To do this, in the **Asset view**, click **Add asset > Textures > Color** and select **swoosh.png**.
 
     ![Add a texture](media/add-texture.png)
 
-3. In the **SwordModel** properties, expand **Emitters > Material**. Click the hand icon (**Pick an asset up**) to open the Asset Picker. Browse to the **Textures** folder and select **swoosh.png**.
+3. In the **SwordModel** properties, expand **Emitters > Material**. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**). Browse to the **Textures** folder and select **swoosh.png**.
 
     ![Add material texture](media/add-material.png)
 
@@ -275,7 +275,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
     ![Add script component](media/add-script-component.png)
 
-9. Under the **SpawnTrail** component properties, next to **Source**, click the hand icon (**Pick an asset up**) to open the **Entity Picker**.
+9. Under the **SpawnTrail** component properties, next to **Source**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select a source](media/select-asset-for-script.png)
 

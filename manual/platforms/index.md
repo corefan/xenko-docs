@@ -15,7 +15,7 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 * iOS 8.0 and later
 
 > [!TIP]
-> To check which graphics platform your project is using, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:SiliconStudio.Core.Platform.Type) variable.
+> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:SiliconStudio.Core.Platform.Type) variable.
 
 ## Supported graphics platforms
 
@@ -25,7 +25,7 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 * Vulkan
 
 > [!TIP]
-> To check which graphics platform your project is using, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+> You set the graphics platform in the **Game settings** asset under **Rendering settings > Target graphics platform**. For more information, see [Game settings](../game-studio/game-settings.md).
 
 ## Preprocessor variables
 
