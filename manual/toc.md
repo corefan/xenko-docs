@@ -211,7 +211,6 @@
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 
 # [UI](ui/index.md)
-## [Controls](ui/controls.md)
 ## [Layout](ui/layout.md)
 ## [Editor](ui/editor.md)
 
