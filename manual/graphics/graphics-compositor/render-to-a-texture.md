@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can render to textures in your scene instead of directly to the screen. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
+You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 
 For API details, see [Textures and render targets](../low-level-api/textures-and-render-targets.md).
 
@@ -67,7 +67,7 @@ There are various ways you can use the render target texture.
 
     ![Select texture](media/select-texture.png)
 
-2. Click the **hand** icon (**pick asset up**) to open the asset picker.
+2. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) to open the asset picker.
 
 3. In the asset picker, select the **Render texture** asset and click **OK**.
 
@@ -85,7 +85,7 @@ There are various ways you can use the render target texture.
 
     ![Select sprite source](media/sprite-source-texture.png)
 
-4. Click the **hand** icon (**pick asset up**) to open the asset picker.
+4. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) to open the asset picker.
 
 5. In the asset picker, select the **Render texture** asset and click **OK**.
 
@@ -107,7 +107,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 > [!Warning]
 > These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
 
-1. In the graphics compositor, select the **Entry points** node.
+1. In the graphics compositor editor, select the **Entry points** node.
 
     ![Entry points node](media/entry-points-node.png)
 
@@ -123,9 +123,9 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 ### 1. Render the texture
 
-1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Render camera**.
+1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Camera renderer**.
 
-    ![Select render camera](media/select-render-camera.png)
+    ![Select camera renderer](media/select-render-camera.png)
 
 2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select the camera you want to render to a texture.
 
@@ -139,7 +139,9 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select forward renderer](media/select-forward-renderer2.png)
 
-5. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
+5. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+
+    The **asset picker** opens.
 
 6. Select the **render texture** and click **OK**.
 
@@ -151,11 +153,11 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 ### 2. Render the main camera
 
-1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Render camera**.
+1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Camera renderer**.
 
-    ![Select render camera](media/select-render-camera2.png)
+    ![Select camera renderer](media/select-render-camera2.png)
 
-2. Under **Children**, expand the second **Render camera** in the list.
+2. Under **Children**, expand the second **camera renderer** in the list.
 
     ![Expand list](media/expand-list.png)
 
@@ -179,7 +181,8 @@ For an example of rendering to a camera in a project, see the **Animation** samp
 
 ## See also
 
-* [Low-level API - textures and render targets](../low-level-api/textures-and-render-targets.md)
+* [Cameras](../cameras.md)
+* [Low-level API – Textures and render targets](../low-level-api/textures-and-render-targets.md)
 * [Graphics compositor](index.md)
 * [Scene renderers](scene-renderers.md)
 * [Camera slots](media/graphics-compositor-camera-slots.png)

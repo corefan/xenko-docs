@@ -33,7 +33,7 @@ You can create models in scripts at runtime. You can do this in several differen
     >To find the model's asset URL, in the **asset view**, move the mouse over the model.
     >![(Get asset URL](media/get-asset-url.png)
 
-3. Add the script as a **script component** to any entity in the scene. It doesn't matter which entity you use. For instructions, see [Add a script](add-a-script.md).
+3. Add the script as a **script component** to any entity in the scene. It doesn't matter which entity you use. For instructions, see [Use a script](use-a-script.md).
 
     ![Add script component to entity](media/create-model-from-code-add-script-component.png)
 
@@ -49,7 +49,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
     ![Add new script](media/create-model-from-code-add-new-script.gif)
 
-2. Add the script as a **script component** to any entity in the scene. It doesn't matter which entity you use. For instructions, see [Add a script](add-a-script.md).
+2. Add the script as a **script component** to any entity in the scene. It doesn't matter which entity you use. For instructions, see [Use a script](use-a-script.md).
 
     ![Add script component to entity](media/create-model-from-code-add-script-component.png)
 
@@ -128,5 +128,5 @@ For example:
 ## See also
 
 * [Create a script](create-a-script.md)
-* [Add a script](add-a-script.md)
+* [Use a script](use-a-script.md)
 * [Use prefabs](../game-studio/use-prefabs.md)

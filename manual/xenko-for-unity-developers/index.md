@@ -92,7 +92,7 @@ You can have multiple scenes in your project. Xenko loads the default scene at r
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click the **Asset picker** button.
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
     
     ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
 
@@ -550,7 +550,7 @@ Unlike Unity®, after you create a script, you have to reload the assemblies man
 
 In Unity®, script components are grouped under **Components > Scripts**. In Xenko, scripts are not grouped. Instead, Game Studio lists them alphabetically with other components.
 
-For more information about adding scripts in Xenko, see [Add a script](../scripts/add-a-script.md).
+For more information about adding scripts in Xenko, see [Use a script](../scripts/use-a-script.md).
 
 ## Scripting gameplay
 

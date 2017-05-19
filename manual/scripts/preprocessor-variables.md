@@ -51,7 +51,7 @@ If you're developing for multiple platforms, you often need to write custom code
 * [Platforms](../platforms/index.md)
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
-* [Add a script](add-a-script.md)
+* [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
 * [Events](events.md)

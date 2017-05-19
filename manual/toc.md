@@ -50,7 +50,6 @@
 ### [Create a custom asset](engine/assets/create-a-custom-asset.md)
 ## [Entity component model](engine/entity-component-model/index.md)
 ### [Manage entities](engine/entity-component-model/managing-entities.md)
-### [Common entity components](engine/entity-component-model/common-entity-components.md)
 ## [File system](engine/file-system.md)
 
 # [Files and folders](files-and-folders/index.md)
@@ -88,7 +87,10 @@
 ## [World units](game-studio/world-units.md)
 
 # [Graphics](graphics/index.md)
-## [Graphics Compositor](graphics/graphics-compositor/index.md)
+## [Cameras](graphics/cameras.md)
+## [Skyboxes](graphics/skyboxes.md)
+## [Sprite fonts](graphics/sprite-fonts.md)
+## [Graphics compositor](graphics/graphics-compositor/index.md)
 ### [Camera slots](graphics/graphics-compositor/camera-slots.md)
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers.md)
 #### [Custom scene renderers](graphics/graphics-compositor/custom-scene-renderers.md)
@@ -136,8 +138,7 @@
 ### [Light streaks](graphics/post-effects/light-streaks.md)
 ## [Rendering pipeline](graphics/rendering-pipeline/index.md)
 ### [Render features](graphics/rendering-pipeline/render-features.md)
-## [Sprite fonts](graphics/sprite-fonts.md)
-## [Skyboxes](graphics/skyboxes.md)
+### [Render stages](graphics/rendering-pipeline/render-stages.md)
 
 # [Input](input/index.md)
 ## [Gamepads](input/gamepads.md)
@@ -190,7 +191,7 @@
 # [Scripts](scripts/index.md)
 ## [Types of script](scripts/types-of-script.md)
 ## [Create a script](scripts/create-a-script.md)
-## [Add a script](scripts/add-a-script.md)
+## [Use a script](scripts/use-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
 ## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
 ## [Events](scripts/events.md)
@@ -218,6 +219,8 @@
 # [Virtual reality](virtual-reality/index.md)
 ## [Enable VR](virtual-reality/enable-vr.md)
 ## [Preview a scene in VR](virtual-reality/preview-a-scene-in-vr.md)
+## [Overlays](virtual-reality/overlays.md)
+### [Display a UI in an overlay](virtual-reality/display-a-UI-in-an-overlay.md)
 ## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Xenko for Unity® developers](xenko-for-unity-developers/index.md)

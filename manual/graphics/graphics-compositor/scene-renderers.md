@@ -8,6 +8,9 @@ You select scene renderers in the **entry points** node properties.
 
 For more information about selecting renderers, see the [Graphics compositor](index.md) page.
 
+>[!Note]
+>Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer (eg to render a UI). This will change in future versions.
+
 ## Clear
 
 Clears a frame, with a solid color.
@@ -23,11 +26,11 @@ Clears a frame, with a solid color.
 | Depth value   | The depth value used to clear the depth texture of the render frame
 | Stencil value | The stencil value used to clear the stencil texture of the render frame
 
-## Render camera
+## Camera renderer
 
 Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
 
-![Render camera properties](media/render-camera-1.png)
+![Camera renderer properties](media/render-camera-1.png)
 
 ### Properties
 
@@ -38,7 +41,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to r
 
 ## Scene renderer collection
 
-The **scene renderer collection** executes multiple renderers (eg render camera, render texture, etc) in sequence. In simple terms, this lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
+The **scene renderer collection** executes multiple renderers (eg camera renderer, render texture, etc) in sequence. In simple terms, this lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
 
 >[!Note]
 >Xenko executes the renderers in list order.
@@ -77,7 +80,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' 
 
 ## Render texture
 
-Renders to a render texture, which you can display in your scene (eg to create security camera footage on a screen). For more information, see [Render to a texture](render-to-a-texture.md).
+Renders to a render texture, which you can display in your scene (eg to display security camera footage on a screen). For more information, see [Render to a texture](render-to-a-texture.md).
 
 ![Render texture properties](media/render-texture-scene-renderer-properties.png)
 
