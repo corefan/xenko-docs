@@ -23,7 +23,7 @@
               "sources/engine/SiliconStudio.Xenko.VirtualReality/SiliconStudio.Xenko.VirtualReality.csproj",
               "sources/engine/SiliconStudio.Xenko.Navigation/SiliconStudio.Xenko.Navigation.csproj"
             ],
-			"cwd": "../xenko"
+			"cwd": "../../xenko",
           }
         ],
       "dest": "api"
@@ -61,7 +61,7 @@
       "_appTitle": "Xenko",
       "_enableSearch": true
     },
-    "dest": "_site",
+    "dest": "../_site/en",
     "template": [
       "default", "template"
     ],

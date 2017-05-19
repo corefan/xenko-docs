@@ -14,7 +14,7 @@ if ($API)
     Write-Host "Generating API documentation..."
     
     # Build metadata from C# source
-    deps\docfx\docfx.exe metadata | Tee-Object -FilePath build.log -Append
+    deps\docfx\docfx.exe metadata en/docfx.json | Tee-Object -FilePath build.log -Append
 
     Write-Host "Generating types of items..."
 
@@ -78,7 +78,7 @@ else
 Write-Host "Generating documentation..."
 
 # Output to both build.log and console
-deps\docfx\docfx.exe build | Tee-Object -FilePath build.log -Append
+deps\docfx\docfx.exe build en\docfx.json | Tee-Object -FilePath build.log -Append
 
 # Copy extra items
 Copy-Item robots.txt _site/
