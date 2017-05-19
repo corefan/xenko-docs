@@ -38,7 +38,7 @@ Xenko enables light probes by default in new projects. To make sure light probes
 
 2. Select the **forward renderer** node.
 
-3. In the **property grid** (on the right by default), make sure the the **Light probes** checkbox is selected.
+3. In the **property grid** (on the right by default), make sure the **Light probes** checkbox is selected.
 
     ![Enable light probes](media/enable-light-probes.png)
 
@@ -54,7 +54,7 @@ Alternatively, create an empty entity and add a **Light probe component** in the
 
 ![Add light probe component](media/add-light-probe-component.png)
 
-Light probes appear as spheres in the scene editor. Before you capture a light bounce for the the first time, they have a completely black surface.
+Light probes appear as spheres in the scene editor. Before you capture a light bounce for the first time, they have a completely black surface.
 
 ![Light](media/light-probes-black.jpg)
 
