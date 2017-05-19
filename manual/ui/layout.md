@@ -1,6 +1,7 @@
 # Layout
 
 <span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Programmer</span>
 
 The Xenko **layout** system is similar to the Windows Presentation Foundation (WPF) layout system. For more information about the WPF layout system, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx).
 
@@ -12,21 +13,21 @@ Processing this data recursively, the layout system computes a position and size
 
 ## Measure and arrange
 
-Xenko performs the layout process recursively in two passes: **measure** and **arrange**.
+Xenko performs the layout process recursively in two passes: [Measure](SiliconStudio.Xenko.UI.UIElement.Measure\(SiliconStudio.Core.Mathematics.Vector3\)) and [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange\(SiliconStudio.Core.Mathematics.Vector3,System.Boolean\)).
 
 ### Measure
 
-The **measure** pass starts with a call to @'SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)'. After this, each element recursively computes its @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' according to properties you set, such as:
+In the [Measure](SiliconStudio.Xenko.UI.UIElement.Measure\(SiliconStudio.Core.Mathematics.Vector3\)) pass, each element recursively computes its @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' according to properties you set, such as:
 
 * @'SiliconStudio.Xenko.UI.UIElement.Width' 
 * @'SiliconStudio.Xenko.UI.UIElement.Height'
 * @'SiliconStudio.Xenko.UI.UIElement.Margin'
 
-Some @'SiliconStudio.Xenko.UI.Panels.Panel' elements call @'SiliconStudio.Xenko.UI.UIElement.Measure' recursively to determine the @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' of their children, and act accordingly.
+Some @'SiliconStudio.Xenko.UI.Panels.Panel' elements call [Measure](SiliconStudio.Xenko.UI.UIElement.Measure\(SiliconStudio.Core.Mathematics.Vector3\)) recursively to determine the @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' of their children, and act accordingly.
 
 ### Arrange
 
-The **arrange** pass starts with a call to @'SiliconStudio.Xenko.UI.UIElement.Arrange', then arranges the elements, taking into account: 
+The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange\(SiliconStudio.Core.Mathematics.Vector3,System.Boolean\)) pass arranges the elements, taking into account:
 
 * @'SiliconStudio.Xenko.UI.UIElement.Margin'
 * @'SiliconStudio.Xenko.UI.UIElement.Width'
@@ -34,7 +35,7 @@ The **arrange** pass starts with a call to @'SiliconStudio.Xenko.UI.UIElement.Ar
 * @'SiliconStudio.Xenko.UI.UIElement.HorizontalAlignment'
 * @'SiliconStudio.Xenko.UI.UIElement.VerticalAlignment' 
 * @'SiliconStudio.Xenko.UI.Panels.Panel' 
-* specific @'SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3, System.Boolean)' rules
+* specific [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange\(SiliconStudio.Core.Mathematics.Vector3,System.Boolean\)) rules
 
 ## See also
 
