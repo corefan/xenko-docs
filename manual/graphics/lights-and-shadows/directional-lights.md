@@ -33,7 +33,7 @@ Like [point lights](point-lights.md) and [spot lights](spot-lights.md), directio
 
 Directional lights use an additional technique, **cascaded shadow mapping**. This consists of rendering the depth of occluding objects from the point of view of the light to a texture, then rendering the scene taking the occluder information into account.
 
-This method slices the the depth range from the camera's point of view into different sections or "cascades" of different resolutions. The nearer each cascade is to the camera, the higher resolution it has, and the higher-resolution its shadows are.
+This method slices the depth range from the camera's point of view into different sections or "cascades" of different resolutions. The nearer each cascade is to the camera, the higher resolution it has, and the higher-resolution its shadows are.
 
 ![media/ShadowMappingCascades.png](media/ShadowMappingCascades.png) 
 

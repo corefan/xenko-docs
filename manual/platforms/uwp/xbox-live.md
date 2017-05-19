@@ -73,7 +73,7 @@ This page explains how to configure your project to work with Xbox Live.
 
     Again, you can use the manifest file from any Xbox Live SDK sample (eg the Achievements sample) for test purposes. If you associate your game with a store app, use the generated manifest file. For details, see the Xbox Live documentation.
 
-5. Make sure the the capability *InternetClientServer* is enabled.
+5. Make sure the capability *InternetClientServer* is enabled.
 
 ## 4. Add user account scripts to your game
 

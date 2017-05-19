@@ -16,7 +16,7 @@ public sealed class MyCustomRenderer : SceneRendererBase
     {
         // Access to the graphics device
         var graphicsDevice = context.GraphicsDevice;
-        // Clears the the currrent render target
+        // Clears the currrent render target
         graphicsDevice.Clear(output.RenderTargets[0], Color.CornflowerBlue);
         // [...] 
     }
@@ -33,7 +33,7 @@ var sceneDelegateRenderer = new SceneDelegateRenderer(
     {
         // Access to the graphics device
         var graphicsDevice = context.GraphicsDevice;
-        // Clears the the currrent render target
+        // Clears the currrent render target
         graphicsDevice.Clear(output.RenderTargets[0], Color.CornflowerBlue);
         // [...] 
    });
