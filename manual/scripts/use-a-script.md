@@ -1,4 +1,4 @@
-# Add a script
+# Use a script
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
@@ -29,7 +29,7 @@ There are two ways to add scripts to entities in Game Studio:
 
 ### Add the script in the property grid
 
-1. In the scene editor, select the entity you want to add the script to.
+1. In the **scene editor**, select the entity you want to add the script to.
 
     ![Select an entity](media/select-entity.png)
 

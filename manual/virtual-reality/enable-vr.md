@@ -5,13 +5,13 @@
 
 This page explains how to add support for the Oculus Rift and Vive devices to your game. Future versions of Xenko will support other devices.
 
-1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
-    The Graphics Compositor editor opens.
+    The graphics compositor editor opens.
 
-2. In the Graphics Compositor, select the **forward renderer** node.
+2. In the graphics compositor editor, select the **forward renderer** node.
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
@@ -30,10 +30,10 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     ![Add API](media/select-vr-api.png)
 
     | API    | Description 
-    |--------|  --------
+    |--------| --------
     | Oculus | Supports Oculus Rift devices (best support for Oculus Rift) 
     | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
-    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
+    | Dummy  | Displays the game on the screen with two cameras (one per eye), instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
 
 6. Repeat steps 4 and 5 to add as many APIs as you need.
 
@@ -71,6 +71,37 @@ Your game is now ready to use VR.
 As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (multisample anti-aliasing) in the forward renderer properties (above the VR settings).
 
 ![MSAA](media/MSAA.png)
+
+## Disable screen synchronization
+
+For best performance, VR games need to run at 90FPS. This means you have to turn off synchronization with your monitor. 
+
+For now, this is done in a script. We recommend you use `IsDrawDesynchronized` in `IsFixedTimeStep`.
+
+```cs
+using System;
+using SiliconStudio.Xenko.Engine;
+
+namespace VRSandbox
+{
+    class VRSandboxApp
+    {
+        static void Main(string[] args)
+        {
+            using (var game = new Game())
+            {
+                //VR needs to run at 90 fps, vsync must be disabled, draw must be not synchronized
+                //You might want to set physics time step to 90 fps as well if you use character controller with unregular movements, but please avoid that! use Kinematic rigidbodies when possible.
+                game.IsFixedTimeStep = true;
+                game.IsDrawDesynchronized = true;
+                game.GraphicsDeviceManager.SynchronizeWithVerticalRetrace = false;
+                game.TargetElapsedTime = TimeSpan.FromSeconds(1 / 90.0f);
+                game.Run();
+            }
+        }
+    }
+}
+```
 
 ## See also
 

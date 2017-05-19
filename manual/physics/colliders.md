@@ -60,16 +60,28 @@ You can make colliders visible at runtime, which is useful for debugging problem
 this.GetSimulation().ColliderShapesRendering = true;
 ``
 
-To show or hide collider shapes at runtime with a keyboard shortcut, use the **DebugPhysicsShapes** script.
-
-1. In the **Asset view**, click **Add asset**.
-2. Select **Scripts** > **Debug Physics Shapes**.
-3. Add the **Debug Physics Shapes** script as a component to an entity in the scene.
-
-The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime. You can edit the script to bind a different key combination.
-
 > [!Note]
 > Collider shapes for infinite planes are always invisible.
+
+### Keyboard shortcut
+
+To show or hide collider shapes at runtime with a keyboard shortcut, use the **Debug physics shapes** script.
+
+1. In the **Asset view**, click **Add asset**.
+
+2. Select **Scripts** > **Debug physics shapes**.
+
+    ![Add debug physics shape script](media/add-debug-physics-shapes-script.png)
+
+3. In the Game Studio toolbar, click **Reload assemblies and update scripts**.
+
+    ![Reload assemblies](../platforms/media/reload-assemblies.png)
+
+4. Add the **Debug physics shapes** script as a component to an entity in the scene. It doesn't matter which entity.
+
+    ![Add debug physics shapes script component](media/add-debug-physics-shapes-component.png)
+
+The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime. You can edit the script to bind a different key combination.
 
 ## See also
 

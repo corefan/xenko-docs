@@ -1,9 +1,5 @@
 # Rendering pipeline
 
-Xenko's rendering pipeline is ...
-
-[DIAGRAM OF HOW THIS STUFF WORKS]
-
 ## Render features
 
 Rendering logic is divided into @'SiliconStudio.Xenko.Rendering.RenderFeature's. Each render feature processes one type of @'SiliconStudio.Xenko.Rendering.RenderObject' (eg meshes, sprites, particles, etc).
@@ -31,4 +27,4 @@ For more information, see [Render stages](render-stages.md).
 ## In this section
 
 * [Render features](render-features.md)
-* [Render stages](render-features.md)
+* [Render stages](render-stages.md)

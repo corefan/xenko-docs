@@ -70,11 +70,9 @@ To add a mixin, use `mixin <mixin_name>`.
 
 The syntax is similar to C#. The following rules are added:
 
-- When you use parameter keys, add the using `params <class_name>`. If you don't, keys will be treated as variables.
+- When you use parameter keys, add them using `params <class_name>`. If you don't, keys are treated as variables.
 
 - You don't need to to tell the program where to check the values behind the keys. Just use the key.
-
-#### Parameters
 
 ```cs
 using params MaterialParameters;
@@ -94,8 +92,6 @@ You can create your own set of parameters using a structure definition syntax.
 >[!Note]
 >Even if they're defined in the XKFX file, don't forget the `using` statement when you want to use them.
 
-#### Custom parameters
-
 ```cs
 params MyParameters
 {
@@ -106,8 +102,6 @@ params MyParameters
 ### Compositions
 
 To add a composition, assign the composition variable to your mixin with the syntax below.
-
-#### Compositions
 
 ```cs
 // albedoSpecular is the name of the composition variable in the mixin
@@ -121,8 +115,6 @@ mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
 ### Partial shaders
 
 You can also break the code into sub-mixins to reuse elsewhere with the syntax below.
-
-#### Partial shader
 
 ```cs
 partial shader MyPartialShader

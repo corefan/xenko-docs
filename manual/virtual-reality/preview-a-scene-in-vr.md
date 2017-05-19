@@ -10,7 +10,7 @@ To preview your scene in your VR device, connect the editor to a [VR-enabled](en
 
 To do this:
 
-1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -35,13 +35,13 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 >[!Note]
 >If your editor and game nodes already use separate renderers (as in the VR sample project), you don't need to follow these instructions.
 
-1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
     The graphics compositor editor opens.
 
-    ![Graphics Compositor editor](media/graphics-compositor-no-editor-node.png)
+    ![Graphics compositor editor](media/graphics-compositor-no-editor-node.png)
 
 2. Create a new forward renderer node. To do this, right-click the game compositor editor and select **Create > Forward renderer**.
 
