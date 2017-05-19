@@ -95,7 +95,7 @@ For more information about how to create and use scripts, see [Scripts](../scrip
 
 ## Camera slots
 
-**Camera slots** link the graphics compositor to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../game-studio/manage-scenes.md) or [graphics compositor](index.md) without having to assign new cameras each time.
+**Camera slots** link the [graphics compositor](index.md) to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../game-studio/manage-scenes.md) or graphics compositor without having to assign new cameras each time.
 
 For more information, see [Camera slots](graphics-compositor/camera-slots.md).
 
