@@ -104,7 +104,7 @@
 {{/remarks}}
 {{#children}}
 <div class="xk-{{id}}-wrapper">
-<h2 id="{{id}}" class="joraTitle">{{>partials/classSubtitle}}</h2>
+<h2 id="{{id}}">{{>partials/classSubtitle}}</h2>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -137,6 +137,9 @@
 {{#syntax}}
 <div class="codewrapper">
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
+</div>
+<div class="xk-{{type}}">
+  <i>Type: </i>{{{specName.0.value}}}
 </div>
 {{#remarks}}
 <div class="markdown level1 remarks">{{{remarks}}}</div>
@@ -215,7 +218,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>{{{type.specName.0.value}}}</td>
+      <td class="working-jora-5">{{{type.specName.0.value}}}</td>
       <td>{{{description}}}</td>
     </tr>
   </tbody>
