@@ -3,12 +3,14 @@
 <div class="doc-incomplete"/>
 
 ## Assets and runtime counterparts
-There are two type of assets for the UI: UIPageAsset and UILibraryAsset with their runtime counterparts
-being respectively UIPage and UILibrary.
 
-### UI Page
+There are two type of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
+
+### UI page
+
 A UI page is a tree of UI elements. It contains the root UI elements and all its children.
-The UI page can be assigned to the Page property of a UI component.
+
+You can assign a UI page to the `Page` property of a UI component.
 
 ```csharp
 // This property can be assigned from a UI page asset in the GameStudio
@@ -42,10 +44,9 @@ public void InitializeUI()
 }
 ```
 
-### UI Library
-A UI library is similar to a prefab. It has several root elements that can be exported and reused in UI 
-pages or other UI libraries. At runtime UI library roots can be instantiated and inserted into an existing UI
-tree.
+### UI libraries
+
+UI libraries are similar to [prefabs](../game-studio/prefabs.md). They have several root elements that you can export and reuse in UI pages or other UI libraries. At runtime, you can reinstantiate UI library roots and insert them into an existing UI tree.
 
 ```csharp
 // This property can be assigned from a UI library asset in the GameStudio
@@ -71,51 +72,55 @@ public Button CreateButton()
 }
 ```
 
-## Using the editor
+## Use the editor
 
 ![UI editor overview](media/ui-editor-overview.png)
 
-The editor is composed of four parts:
-* A list of available UI libraries
-* The visual tree of UI elements
-* A rendered view of the UI
-* The property grid to edit the UI elements properties
+The editor is composed of:
 
-### UI Asset properties
+* a list of available UI libraries
+* the visual tree of UI elements
+* a rendered view of the UI
+* the property grid to edit the UI element properties
+
+### UI asset properties
 
 ![UI asset properties](media/ui-asset-properties.png)
 
-The resolution used at design time can be changed in the properties of the UI asset (for both UI page and UI
-library). This is equivalent of the Resolution property of the UI component.
+You can change the resolution used at design time in the UI asset properties (for both UI pages and UI libraries). This is the equivalent of the UI component `Resolution` property.
 
-To edit the value click on the **UI properties** button in the UI editor or select the UI asset in the asset
-view.
+To edit the value, click the **UI properties** button in the UI editor, or select the UI asset in the asset view.
 
-### UI Libraries
+### UI libraries
 
-All the libraries that exists in the current project will appear in the list. Note that there is always at least
-the standard library of all existing UI elements.
+All the libraries that exists in the current project appear in the list. 
 
-### Visual Tree
+Note: there is always at least the standard library of all existing UI elements.
 
-The visual tree represents the hierarchy of UI elements in the asset. For a UI page only one root element exists,
-while a UI library can have several root elements.
+### Visual tree
+
+The **visual tree** represents the hierarchy of UI elements in the asset.
+
+UI pages have only one root element. UI libraries can have multiple root elements.
 
 ![UI asset properties](media/ui-editor-visual-tree.png)
 
-When an element has child elements, the count of children will be indicated between parentheses on the right.
-Clicking on the arrow on the left will expand or collapse the element depending on the current state.
+When an element has child elements, the number of children is indicated between parentheses on the right.
 
-The two buttons in the above toolbar allow to expand or collapse the whole visual tree.
+To expand and collapse the element, click the arrow.
 
-Elements can be moved inside the visual tree with drag and drop. Note that some elements allow to have several
-children (e.g. Panel such as Grid), while some can only have one child (e.g. Button).
+To expand or collapse the entire tree, use the two buttons in the above toolbar.
 
-#### Context Menu
+You can drag and drop elements inside the visual tree to re-order them. 
+
+Some elements can have several children (eg Panel such as Grid). Others can only have one child (eg Buttons).
+
+#### Context menu
 
 ![Visual tree context menu](media/ui-editor-context-menu.png)
 
 When right-clicking on an element in the visual tree, a context menu will appear and offer several options.
+
 Depending on the type of the selected element and also on the type of its parent, some options will or will not be
 available.
 
@@ -138,41 +143,45 @@ available.
   * *Create library from selection*: create a new library asset containing a copy of all selected elements (single
     or multi selection)
 
-### UI View
+### UI view
 
-The UI view provides a WYSIWYG experience. The rendering of this view is equivalent of the rendering in the final
-game, assuming the design resolution is the same as the UI component that will use the edited asset (see 
+The UI view shows a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see 
 [UI Asset properties](#ui-asset-properties)).
 
-Note that the camera used for this view is orthographic and that the UI is set to always face the camera.
+The camera used for this view is orthographic (see [Cameras](../graphics/cameras.md). The UI always faces the camera.
 
-Zooming and panning is available by using the mouse wheel and clicking on the mouse middle button respectively.
-Holding SHIFT during these operations will make it stronger to zoom or faster to pan.
+#### UI view controls
+
+| Action            | Control                              
+|-------------------|--------------------------------------
+| Pan               | Hold middle mouse button + move mouse
+| Zoom              | Mouse wheel                          
+| Speed up pan/zoom | Hold shift while panning or zooming  
 
 ![UI editor view options](media/ui-editor-view-options.png)
 
 The view toolbar offer options such as zooming in and out, resetting the view. Also changing the color of the
 tools in the view (such as color of selection, sizing rectangle, etc.).
 
-#### Selecting an element
+#### Select an element
 
 ![UI editor selecting an element](media/ui-editor-selecting.gif)
 
 UI element can be selected in the UI View by left-clicking.
 
-#### Moving an element
+#### Move an element
 
 ![UI editor moving an element](media/ui-editor-moving.gif)
 
 To move an element, first select it then press the mouse left button, and while holding move the selected element.
 
-#### Resizing an element
+#### Resize an element
 
 ![UI editor resizing an element](media/ui-editor-resizing.gif)
 
 When selected, an element can be resized thanks to the eight small squares surrounding it.
 
-### Property Grid
+### Property grid
 
 Once selected, the element properties are shown in the property grid. These properties are grouped by category.
 
