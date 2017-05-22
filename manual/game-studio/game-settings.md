@@ -56,6 +56,9 @@ For more information, see [Graphics compositor](../graphics/graphics-compositor/
 
 The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.
 
+> [!Note]
+> The splash screen is only displayed when the game is built in release mode.
+
 ![Settings](media/splash-screen.png)
 
 | Property | Description
