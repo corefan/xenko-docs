@@ -111,4 +111,4 @@ To create a node, right-click the graphics compositor editor and select the type
 
 * [Scene renderers](scene-renderers.md)
 * [Custom scene renders](custom-scene-renderers.md)
-* [Camera slots](camera-slots.md)
+* [Camera slots](../camera-slots.md)
