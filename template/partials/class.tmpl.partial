@@ -139,38 +139,26 @@
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
 </div>
 <div class="xk-{{type}}">
-  <i>Type: </i>{{{specName.0.value}}}
+{{#fieldValue}}
+<div class="xk-fieldValue">
+  <i>Type: </i>{{{type.specName.0.value}}}
+</div>
+{{/fieldValue}}
+{{#propertyValue}}
+<div class="xk-propertyValue">
+  <i>Type: </i>{{{type.specName.0.value}}}
+</div>
+{{/propertyValue}}
+{{#parameters.0}}
+<h4>Returns</h4>
+<div class="xk-parameters"><i>Type: </i>{{{type.specName.0.value}}}</div>
+{{/parameters.0}}
 </div>
 {{#remarks}}
 <div class="markdown level1 remarks">{{{remarks}}}</div>
 {{/remarks}}
-{{#parameters.0}}
-<h4 class="parameters">{{__global.parameters}}</h4>
-<table class="table table-bordered table-striped table-condensed xk-hidden-table">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-{{/parameters.0}}
-{{#parameters}}
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td><em>{{{id}}}</em></td>
-      <td>{{{description}}}</td>
-    </tr>
-{{/parameters}}
-{{#parameters.0}}
-  </tbody>
-</table>
-{{/parameters.0}}
 {{#return}}
 {{#description}}
-<h4 class="returns">{{__global.returns}}</h4>
-<p>{{{description}}}</p>
 <table class="table table-bordered table-striped table-condensed xk-returns-table xk-hidden-table">
   <thead>
     <tr>
@@ -218,7 +206,7 @@
   </thead>
   <tbody>
     <tr>
-      <td class="working-jora-5">{{{type.specName.0.value}}}</td>
+      <td class="working-property">{{{type.specName.0.value}}}</td>
       <td>{{{description}}}</td>
     </tr>
   </tbody>

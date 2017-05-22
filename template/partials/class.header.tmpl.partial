@@ -24,7 +24,7 @@
 {{namespace}} | <strong>{{__global.assembly}}</strong>:{{assemblies.0}}.dll</h6>
 {{#inheritance.0}}
 <div class="inheritance">
-  <h5>{{__global.inheritance}}</h5>
+  <h5 class='test1'>{{__global.inheritance}}</h5>
 {{#inheritance}}
     <div class="level{{index}}">{{{specName.0.value}}}</div>
 {{/inheritance}}

@@ -654,7 +654,7 @@ h6, .h6{
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 h6 strong, .h6 strong{
-    font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 article h4{
     border: none;
@@ -1108,4 +1108,17 @@ article h4{
 }
 #wrapper #x_wrap {
     padding-bottom: 0;
+}
+.xk-constructor h4{
+    display: none;
+}
+.table-bordered{
+    margin-bottom: 50px;
+}
+.xk-property h4,
+.xk-property .xk-parameters{
+    display: none;
+}
+.xk-method{
+    margin-bottom: 10px;
 }
