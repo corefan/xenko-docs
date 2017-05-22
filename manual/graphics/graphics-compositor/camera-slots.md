@@ -13,12 +13,24 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
 ## Create a camera slot
 
-In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
-![Camera slots](media/graphics-compositor-camera-slots.png)
+    ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
-> [!Tip]
-> To name a camera slot, double-click it in the list and type a new name.
+    The graphics compositor editor opens.
+
+    ![Graphics Compositor editor](media/graphics-compositor-editor.png)
+
+2. In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+
+    ![Camera slots](media/graphics-compositor-camera-slots.png)
+
+    Game Studio adds a new camera slot to the list:
+
+    ![Camera slot added](media/camera-slot-added.png)
+
+    > [!Tip]
+    > To name a camera slot, double-click it in the list and type a new name.
 
 ## Bind a camera to a camera slot
 
