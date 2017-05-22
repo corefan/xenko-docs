@@ -28,7 +28,7 @@ Clears a frame, with a solid color.
 
 ## Camera renderer
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
 
 ![Camera renderer properties](media/render-camera-1.png)
 
@@ -36,7 +36,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to r
 
 | Property      | Description                                                             
 | ------------- | ----------
-| Camera        | Specify a [camera slot](camera-slots.md) to render from
+| Camera        | Specify a [camera slot](../camera-slots.md) to render from
 | Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
 
 ## Scene renderer collection
@@ -92,4 +92,4 @@ Renders to a render texture, which you can display in your scene (eg to display 
 ## See also
 
 * [Graphics compositor](index.md)
-* [Camera slots](camera-slots.md)
+* [Camera slots](../camera-slots.md)
