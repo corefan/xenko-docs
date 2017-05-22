@@ -14,7 +14,7 @@ if ($API)
     Write-Host "Generating API documentation..."
     
     # Build metadata from C# source
-   deps\docfx\docfx.exe metadata
+    deps\docfx\docfx.exe metadata
 
     Write-Host "Start Namespace build"
     function getNamespaceFilesLocation
@@ -31,7 +31,6 @@ if ($API)
 
     function getAllDescriptionFiles($searchTag)
     {
-        $global:descriptionFiles = @();
         $searchTagInner = "<" + $searchTag + ">" 
         for($i = 0; $i -lt $namespaceFiles.length; $i++){
             $currentFile = $namespaceFiles[$i]
@@ -45,8 +44,6 @@ if ($API)
     {
        $searchTagStart = "<" + $searchTag + ">"
        $searchTagEnd = "</" + $searchTag + ">"
-       $global:descriptionStringArray = @();
-       $global:descriptionFileNameArray = @();
        for($i = 0; $i -lt $descriptionFiles.length; $i++){
            $descriptionString = @();
            $currentFile = $descriptionFiles[$i]
@@ -89,10 +86,7 @@ if ($API)
                     }
                     $file | Out-file $folder$currentFile$format
                 }
-            } else {
-                continue
-            }
-            
+            }       
         }
     }
 
@@ -101,17 +95,23 @@ if ($API)
     function setDescription($searchTag)
     {
         Write-Host "Set description for: $searchTag"
+        $global:descriptionFiles = @();
+		$global:descriptionStringArray = @();
+		$global:descriptionFileNameArray = @();
         getAllDescriptionFiles($searchTag)
         getDescription($searchTag)
         copyDescription($searchTag)
     }
+	$global:descriptionFiles = @(); # free memory
+	$global:descriptionStringArray = @(); # free memory
+	$global:descriptionFileNameArray = @(); # free memory
 
     $tagArray = 'remarks', 'summary';
-    $k = 0;
-    while($k -lt $tagArray.Length){
+	for($k = 0; $k -lt $tagArray.length; $k++){
        setDescription($tagArray[$k]) 
-       $k++
     }
+	
+	
 
     Write-Host "Generating types of items..."
 
@@ -120,17 +120,13 @@ if ($API)
     # Set start variable for toc files source
     $folder = "api\"
     $format = ".yml"
-    # Start copy strings from api/toc.yml to temporary file
-    $isfile2 = Test-Path temporaryTypeToc.yml
-    if($isfile2 -eq 'True'){
-        Remove-Item temporaryTypeToc.yml
-    }
 
     function setTypesToTOCItems($i){
+		# Copy the uid string
+		$global:temporaryTypeToc += $textYaml[$i] + "`n"
+		
         # if string is uid of item 
         if($textYaml[$i].Contains('- uid:')){
-            # Copy the uid string
-            $textYaml[$i] | Out-file temporaryTypeToc.yml -append
             # Open file of this class and find type of the uid
             $lineEdited = $textYaml[$i].replace('- uid:', '').replace(' ', '').replace('`', '-')
             $content = (Get-Content "$folder$lineEdited$format");
@@ -138,26 +134,23 @@ if ($API)
                 if($content[$k].Contains('type:')){
                     if($textYaml[$i][0] -eq ' '){
                         $typeLine = $content[$k]
-                        "  $typeLine" | Out-file temporaryTypeToc.yml -append
+                        $global:temporaryTypeToc += "  $typeLine" + "`n"
                     } else {
-                        $content[$k] | Out-file temporaryTypeToc.yml -append
+                        $global:temporaryTypeToc += $typeLine + "`n"
                     }
                    break
                 }
             }
-        } else {
-            $textYaml[$i] | Out-file temporaryTypeToc.yml -append
-        }
+		}
     }
-    $lineCounter = 0;
-    While ($lineCounter -lt $textYaml.length){
+	
+	$global:temporaryTypeToc = "";
+	for($lineCounter = 0; $lineCounter -lt $textYaml.length; $lineCounter++){
         setTypesToTOCItems($lineCounter);
-        $lineCounter++ 
     }
 
-    '' | Set-Content api\toc.yml
-    (Get-Content temporaryTypeToc.yml) | Set-Content api\toc.yml
-    Remove-Item temporaryTypeToc.yml
+	($global:temporaryTypeToc) | Out-file api\toc.yml
+	$global:temporaryTypeToc = ""; # free memory
 
     # Remove SiliconStudio namespace prefix from TOC
     (Get-Content api\toc.yml).replace('  name: SiliconStudio.', '  name: ') | Set-Content api\toc.yml
