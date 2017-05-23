@@ -150,7 +150,157 @@ if ($API)
     }
 
 	($global:temporaryTypeToc) | Out-file api\toc.yml
-	$global:temporaryTypeToc = ""; # free memory
+	$global:temporaryTypeToc = ""; # free memory   
+
+    function RegroupStructure($start){
+        # Remember input string
+        $inputStringNumber = $start;
+        $lineIdeal = $textYaml[$arrayString[$start]];
+
+       if($lineIdeal -eq '- uid: SiliconStudio' -OR $lineIdeal -eq '- uid: SiliconStudio.Xenko'){
+            # Copy section
+            $startPoint =  $arrayString[$start];
+            $endPoint =  $arrayString[$start+1];
+            for($k = $startPoint; $k -lt $endPoint; $k++){
+                $textYaml[$k] | Out-file temporaryApiToc.yml -append
+            }
+           $breakpointDiff = $start + 1
+           $breakpointDiff | Out-host
+       } else {
+            # Define the position of the "items"
+            for($n = $arrayString[$start]; $n -lt $textYaml.length; $n++){
+                $line = $textYaml[$n]
+                if($line.length -gt 0){
+                    if($line.Contains('items')){
+                        $itemsStart = $n;
+                        break
+                    }
+                }
+            }
+
+            # Find the equality breakpoint
+            for($i = $start + 1; $i -lt $arrayString.length; $i++){
+                $lineIdeal = $textYaml[$arrayString[$start]];
+                $lineCurrent = $textYaml[$arrayString[$i]];
+                Write-Host 'Checking on equality: ' 
+                Write-Host "$lineCurrent -> $lineIdeal"
+                if($lineCurrent.Contains($lineIdeal)){
+                    Write-Host "$lineIdeal - processed successfully" 
+                    $breakpointEqualPoint =  $arrayString[$i]
+                    $needPad = "True"
+                    break
+                } else {
+                    $breakpointEqualPoint =  $itemsStart+1
+                    $needPad = "False"
+                    continue
+                }
+            }
+
+            $innerClasses = @();
+            # Find the difference brakpoint
+            for($i = $start; $i -lt $arrayString.length; $i++){
+                $lineIdealName = $textYaml[$arrayString[$start] + 1].Replace('name:', '').Replace(' ', '') + '.';
+                $lineCurrent = $textYaml[$arrayString[$i]];
+                Write-Host 'Checking on difference: ' 
+                Write-Host "$lineCurrent -> $lineIdeal"
+                if($lineCurrent.Contains($lineIdeal)){
+                    if($lineCurrent -ne $lineIdeal){
+                        $innerClasses += $lineCurrent
+                    }
+                    continue
+                } else {
+                    Write-Host "$lineIdeal - processed successfully" 
+                    $breakpointDiff = $i;
+                    break
+                }
+            }
+
+            # Set breakpoints variable
+            $startPoint =  $arrayString[$start];
+            $itemsStartPoint =  $itemsStart
+            $itemsEndPoint =  $arrayString[$start + 1]
+            $breakpointDiffPoint =  $arrayString[$breakpointDiff]
+
+            # If we start from 0
+            if($inputStringNumber -eq 0){
+                for($k = $inputStringNumber; $k -lt $startPoint; $k++){
+                    $textYaml[$k] | Out-file temporaryApiToc.yml -append
+                }
+            }
+
+            # Copy from start to items
+            for($k = $startPoint; $k -lt $itemsStartPoint; $k++){
+                $textYaml[$k] | Out-file temporaryApiToc.yml -append
+            }
+
+            # Copy items string
+            $textYaml[$itemsStartPoint] | Out-file temporaryApiToc.yml -append
+
+            # Copy from equality to difference
+            for($k = $breakpointEqualPoint; $k -lt $breakpointDiffPoint; $k++){
+                $currentLine = $textYaml[$k];
+                if($needPad -eq "True"){
+                    if($currentLine.Contains('name:')){
+                        $currentLine.PadLeft($currentLine.length + 2, " ").Replace($lineIdealName, '') | Out-file temporaryApiToc.yml -append
+                    } else {
+                        $currentLine.PadLeft($currentLine.length + 2, " ") | Out-file temporaryApiToc.yml -append
+                    }
+                } else {
+                    $currentLine | Out-file temporaryApiToc.yml -append
+                }
+            }
+
+            # Copy the rest of items
+            for($k = $itemsStartPoint + 1; $k -lt $itemsEndPoint; $k++){
+                $textYaml[$k] | Out-file temporaryApiToc.yml -append
+            }
+
+            $folder = "api\";
+            $format = ".yml";
+            $activeFile = $lineIdeal.Replace('- uid: ', '');
+            "namespaces: Namespaces" | Out-file $folder$activeFile$format -append -Encoding ASCII
+            "innerClasses:" | Out-file $folder$activeFile$format -append -Encoding ASCII
+            for($i = 0; $i -lt $innerClasses.length; $i++){
+                $addingClass = $innerClasses[$i]
+                $addingClass.PadLeft($addingClass.length + 2, " ") | Out-file $folder$activeFile$format -append -Encoding ASCII
+                $addingClass.PadLeft($addingClass.length + 2, " ").Replace('- uid', '  name').Replace($lineIdealName, '') | Out-file $folder$activeFile$format -append -Encoding ASCII
+            }
+
+            Remove-variable $inputStringNumber
+            Remove-variable $lineIdeal
+            Remove-variable $startPoint
+            Remove-variable $endPoint
+            Remove-variable $breakpointDiff
+            Remove-variable $lineCurrent
+            Remove-variable $breakpointEqualPoint
+            Remove-variable $needPad
+            Remove-variable $innerClasses
+            Remove-variable $startPoint
+            Remove-variable $itemsStartPoint
+            Remove-variable $itemsEndPoint
+            Remove-variable $breakpointDiffPoint
+            Remove-variable $currentLine
+            Remove-variable $folder
+            Remove-variable $format
+            Remove-variable $activeFile
+        }
+        
+        if($breakpointDiff -lt $arrayString.length - 1){
+            RegroupStructure($breakpointDiff)
+        } else {
+            # Copy from items string to end file
+            for($k = $arrayString[$arrayString.length - 1]; $k -lt $textYaml.length; $k++){
+                $textYaml[$k] | Out-file temporaryApiToc.yml -append
+            }
+            "### YamlMime regrouped" | Out-file temporaryApiToc.yml -append
+            Write-Host "Regrouping the sub-namespaces complete"
+        }
+    }
+
+    RegroupStructure(0)
+    '' | Set-Content api\toc.yml
+    (Get-Content temporaryApiToc.yml) | Set-Content api\toc.yml
+    Remove-Item temporaryApiToc.yml
 
     # Remove SiliconStudio namespace prefix from TOC
     (Get-Content api\toc.yml).replace('  name: SiliconStudio.', '  name: ') | Set-Content api\toc.yml
