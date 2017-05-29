@@ -236,7 +236,7 @@ article table {
 /* Tip, Note and Warning
    TODO: Perform some HTML or CSS transform to directly map boostrap instead?
 */
-.TIP, .NOTE, .WARNING, .doc-incomplete {
+.TIP, .NOTE, .WARNING, .doc-incomplete, .doc-no-translated {
     border: 1px solid #fff;
     border-radius: 4px;
     padding: 10px 10px 10px 36px;
@@ -250,7 +250,7 @@ article table {
     border-color: #91c89c;
 }
 
-.NOTE {
+.NOTE, .doc-no-translated {
     background-color: #e5ebf6;
     border-color: #7d9fc1;
 }
@@ -262,7 +262,8 @@ article table {
 
 .TIP > :first-child,
 .NOTE > :first-child,
-.WARNING > :first-child {
+.WARNING > :first-child,
+.doc-no-translated > :first-child {
     font-size: 0;
     margin: 0;
     padding: 0;
@@ -271,7 +272,8 @@ article table {
 .TIP > :first-child::before,
 .NOTE > :first-child::before,
 .WARNING > :first-child::before,
-.doc-incomplete::before {
+.doc-incomplete::before,
+.doc-no-translated::before {
     position: absolute;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
@@ -285,7 +287,8 @@ article table {
     content: "\e089";
 }
 
-.NOTE > :first-child::before {
+.NOTE > :first-child::before,
+.doc-no-translated::before {
     color: #4a6785;
     content: "\e086";
 }
@@ -299,11 +302,18 @@ article table {
     color: #cf4336;
     content: "\e136";
 }
-
+.doc-no-translated:before{
+    margin-top: 0;
+}
+.doc-no-translated,
+.doc-no-translated:after{
+    color: #4a6785
+}
 .TIP > :last-child,
 .NOTE > :last-child,
 .WARNING > :last-child,
-.doc-incomplete > :last-child {
+.doc-incomplete > :last-child,
+.doc-no-translated > :last-child {
     margin-bottom: 0;
 }
 
@@ -329,7 +339,9 @@ article table {
 .doc-incomplete::after {
     content: "This documentation is under construction";
 }
-
+.doc-no-translated::after {
+    content: "Sorry, there's no translation for this page yet. Tha page displayed in English instead.";
+}
 .label-doc-highlight {
     background-color: #5cb85c;
 }

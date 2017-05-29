@@ -390,7 +390,7 @@ $(function() {
     }
     redirectToCurrentDocVersion();
 
-    // Language check function
+// Language check function
 
     var siteLang = [];
     $('#x_head_langList li *[data-language]').each(function(){
@@ -401,6 +401,14 @@ $(function() {
     var changedItem = $('*[data-language="' + currentLang + '"]');
     var savedText = changedItem.text();
     changedItem.replaceWith($('<span>' + savedText + '</span>'));
+
+    for(var i = 0; i < siteLang.length; i++){
+      if(siteLang[i] != currentLang){
+        var changedItemInner = $('*[data-language="' + siteLang[i] + '"]')
+        var savedTextInner = changedItemInner.text();
+        changedItemInner.replaceWith($('<a data-language="'+siteLang[i]+'">' + savedTextInner + '</a>'));
+      }
+    }
 
     $('#x_head_langList li a').on('click', function(){
       var oldLang;
@@ -413,7 +421,4 @@ $(function() {
       window.location.href = window.location.href.replace(oldLang, lang);
     });
 });
-
-
 });
-
