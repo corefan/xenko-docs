@@ -80,7 +80,7 @@
 {{/syntax.return}}
 {{#syntax.typeParameters.0}}
 <h5 class="typeParameters">{{__global.typeParameters}}</h5>
-<table class="table table-bordered table-striped table-condensed xk-hidden-table">
+<table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
       <th>{{__global.name}}</th>
@@ -142,39 +142,70 @@
 {{#fieldValue}}
 <div class="xk-fieldValue">
   <i>Type: </i>{{{type.specName.0.value}}}
+  <p>{{{description}}}</p>
 </div>
 {{/fieldValue}}
 {{#propertyValue}}
 <div class="xk-propertyValue">
   <i>Type: </i>{{{type.specName.0.value}}}
+  <p>{{{description}}}</p>
 </div>
 {{/propertyValue}}
-{{#parameters.0}}
-<h4>Returns</h4>
-<div class="xk-parameters"><i>Type: </i>{{{type.specName.0.value}}}</div>
-{{/parameters.0}}
 </div>
 {{#remarks}}
 <div class="markdown level1 remarks">{{{remarks}}}</div>
 {{/remarks}}
-{{#return}}
-{{#description}}
-<table class="table table-bordered table-striped table-condensed xk-returns-table xk-hidden-table">
+{{#parameters.0}}
+<h5 class="parameters">{{__global.parameters}}</h5>
+<table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
       <th>{{__global.type}}</th>
+      <th>{{__global.name}}</th>
       <th>{{__global.description}}</th>
     </tr>
   </thead>
   <tbody>
+{{/parameters.0}}
+{{#parameters}}
     <tr>
       <td>{{{type.specName.0.value}}}</td>
+      <td><em>{{{id}}}</em></td>
       <td>{{{description}}}</td>
     </tr>
+{{/parameters}}
+{{#parameters.0}}
   </tbody>
 </table>
-{{/description}}
-{{/return}}
+{{/parameters.0}}
+{{#syntax.return}}
+<h5 class="returns">{{__global.returns}}</h5>
+<div class="xk-retruns">
+  <i>Type: </i>{{{type.specName.0.value}}}
+  <p>{{{description}}}</p>
+</div>
+{{/syntax.return}}
+{{#syntax.typeParameters.0}}
+<h5 class="typeParameters">{{__global.typeParameters}}</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>{{__global.name}}</th>
+      <th>{{__global.description}}</th>
+    </tr>
+  </thead>
+  <tbody>
+{{/syntax.typeParameters.0}}
+{{#syntax.typeParameters}}
+    <tr>
+      <td><em>{{{id}}}</em></td>
+      <td>{{{description}}}</td>
+    </tr>
+{{/syntax.typeParameters}}
+{{#syntax.typeParameters.0}}
+  </tbody>
+</table>
+{{/syntax.typeParameters.0}}
 {{#typeParameters.0}}
 <h5 class="typeParameters">{{__global.typeParameters}}</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -196,22 +227,6 @@
   </tbody>
 </table>
 {{/typeParameters.0}}
-{{#propertyValue}}
-<table class="table table-bordered table-striped table-condensed xk-hidden-table">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="working-property">{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
-</table>
-{{/propertyValue}}
 {{#eventType}}
 <h5 class="eventType xk-hidden-table">{{__global.eventType}}</h5>
 <table class="table table-bordered table-striped table-condensed xk-hidden-table">
