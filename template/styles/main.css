@@ -340,7 +340,7 @@ article table {
     content: "This documentation is under construction";
 }
 .doc-no-translated::after {
-    content: "Sorry, there's no translation for this page yet. Tha page displayed in English instead.";
+    content: "Sorry, there's no translation for this page yet. The page is displayed in English instead.";
 }
 .label-doc-highlight {
     background-color: #5cb85c;
