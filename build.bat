@@ -1,1 +1,2 @@
-@PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& './build.ps1' -API %*"
+./en-build.bat
+./jp-build.bat
