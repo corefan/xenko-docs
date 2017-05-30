@@ -49,7 +49,7 @@
       <div id="x_head_subButton"><span>OPEN / CLOSE</span></div>
       <div id="x_head_langList"><ul>
           <li><a data-language="en">English</span></li>
-          <li><a data-language="jp">日本語</a></li>
+          <!-- <li><a data-language="jp">日本語</a></li> -->
       </ul></div>
     </div>
   </div>
