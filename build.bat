@@ -1,2 +1,2 @@
 ./en-build.bat
-./jp-build.bat
+::./jp-build.bat
