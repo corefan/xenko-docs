@@ -63,7 +63,7 @@
     },
     "dest": "../_site/en",
     "template": [
-      "default", "../template"
+      "default", "template"
     ],
     "serve": false
   }

@@ -3,4 +3,5 @@
 /obj
 en/api/*.yml
 en/api/.manifest
+jp_tmp/*
 build.log
