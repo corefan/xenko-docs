@@ -2,16 +2,21 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-The **splash screen** is the image (usually containing a logo) displayed when your game starts. It fades in over the color you specify, then fades out. 
+The **splash screen** is the image (usually containing a logo) displayed when your game starts. It fades in over the color you specify, then fades out.
+
+> [!Note]
+> The splash screen is only displayed when the game is built in release mode.
 
 The default splash screen is the Xenko logo.
 
 ![Default splash screen](media/XenkoDefaultSplashScreen.png)
 
+
+
 You can only specify one splash screen in Game Settings. If you want to add more, you need to implement them manually.
 
->[!Warning]
->Under the terms of the [Xenko end user license agreement](http://xenko.com/legal/eula), Xenko Personal (free) users must display the "Powered by Xenko" logo in the splash screen. If you're using Xenko with a free license, you can edit the splash screen image — for example, by adding a logo above or below the Xenko logo — but you must adhere to the [Xenko logo regulations (PDF)](https://xenko.com/legal/xenko-logo-regulations.pdf).
+> [!Warning]
+> Under the terms of the [Xenko end user license agreement](http://xenko.com/legal/eula), Xenko Personal (free) users must display the "Powered by Xenko" logo in the splash screen. If you're using Xenko with a free license, you can edit the splash screen image — for example, by adding a logo above or below the Xenko logo — but you must adhere to the [Xenko logo regulations (PDF)](https://xenko.com/legal/xenko-logo-regulations.pdf).
 
 ## Edit the splash screen
 

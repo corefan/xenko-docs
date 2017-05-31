@@ -56,6 +56,9 @@ For more information, see [Graphics compositor](../graphics/graphics-compositor/
 
 The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.
 
+> [!Note]
+> The splash screen is only displayed when the game is built in release mode.
+
 ![Settings](media/splash-screen.png)
 
 | Property | Description
@@ -111,7 +114,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 | Property        | Description         
 |-----------------|----------------
 | Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here aren't enabled yet, and will work in future versions. 
-| Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.
+| Max sub steps   | The maximum number of simulations the physics engine can run in a frame to compensate for slowdown.
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
 
 ## Audio settings

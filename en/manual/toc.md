@@ -88,10 +88,10 @@
 
 # [Graphics](graphics/index.md)
 ## [Cameras](graphics/cameras.md)
+### [Camera slots](graphics/camera-slots.md)
 ## [Skyboxes](graphics/skyboxes.md)
 ## [Sprite fonts](graphics/sprite-fonts.md)
 ## [Graphics compositor](graphics/graphics-compositor/index.md)
-### [Camera slots](graphics/graphics-compositor/camera-slots.md)
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers.md)
 #### [Custom scene renderers](graphics/graphics-compositor/custom-scene-renderers.md)
 ### [Render to a texture](graphics/graphics-compositor/render-to-a-texture.md)
