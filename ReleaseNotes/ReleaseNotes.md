@@ -296,6 +296,32 @@ Release date 2017/4/28
 #### Build
 
 * Fixed a possible issue when compiling a game that targets iOS and the right Xamarin version cannot be found
+
+## Version 2.0.1.2
+
+Release date 2017/6/6
+
+### Improvements
+
+#### Game Studio
+
+* Visual Studio version picker now shows the installation nickname to easily differentiate when multiple instances are installed side by side
+
+#### Graphics
+
+* VR: Added a CopyMirror option to control if VR rendering is copied back to current render target
+* Shaders: StructuredBuffer were being declared before their struct type; ordering should now be correct
+
+### Bugs fixed
+
+#### Game Studio
+
+* Color Picker was behaving strangely due to some RGB to HSV conversion issues
+* Global store.config was preventing Game Studio to find Xenko installation [#576](https://github.com/SiliconStudio/xenko/issues/576)
+
+#### Others
+
+* Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
  
 # Known Issues
 
