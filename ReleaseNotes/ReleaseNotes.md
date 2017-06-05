@@ -324,6 +324,11 @@ Release date 2017/6/6
 * Runtime crash when adding twice the same VR device API in the required API list.
 * OpenVR: camera was rotating around world center instead of camera center when a rotation was applied on entity.
 
+#### Graphics
+
+* Fixed point lights not casting shadows from objects that have tessellation enabled
+* Fixed a bug where some lights would not render [#586](https://github.com/SiliconStudio/xenko/issues/586)
+
 #### Others
 
 * Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
