@@ -9,7 +9,7 @@
 * organize assets by folder, attach tags and get notifications from modified assets on the disk
 * build a game executable and run it directly
 
-For game developers, Game Studio is also integrated with your Visual Studio projects, so you can seamlessly sync and switch back and forth.
+Game Studio is also integrated with your Visual Studio projects, so you can seamlessly sync and switch between them.
 
 ## Interface
 
@@ -25,9 +25,7 @@ The **asset view** (D) displays the project assets. You can create new assets us
 
 The **asset preview** tab (E) displays a preview of the selected asset. The preview changes based on the type of the asset you have selected. For example, you can play animations and sounds. This is a quick way to check changes to an asset when editing it in the property grid. By default, the asset preview is in the bottom right.
 
-You can show and hide different parts of the Game Studio in the View menu.
-
-You can also resize and move parts of the UI.
+You can show and hide different parts of the Game Studio in the View menu. You can also resize and move parts of the UI.
 
 ## In this section
 
