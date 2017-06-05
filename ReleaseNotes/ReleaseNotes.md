@@ -306,6 +306,7 @@ Release date 2017/6/6
 #### Game Studio
 
 * Visual Studio version picker now shows the installation nickname to easily differentiate when multiple instances are installed side by side
+* Add the concept of _active scene_ in the scene editor. Dropping an asset to the scene view will an entity add to the currently active scene instead of the root scene
 
 #### Graphics
 
@@ -318,11 +319,14 @@ Release date 2017/6/6
 
 * Color Picker was behaving strangely due to some RGB to HSV conversion issues
 * Global store.config was preventing Game Studio to find Xenko installation [#576](https://github.com/SiliconStudio/xenko/issues/576)
+* Fix a crash that occurs when replacing a sprite in the property grid of a spritesheet
+* Fix some string comparison that were using the current locale of the system, causing issues with some language such as Turkish
+* Prevent modal windows from being minimized
 
 #### VR
 
-* Runtime crash when adding twice the same VR device API in the required API list.
-* OpenVR: camera was rotating around world center instead of camera center when a rotation was applied on entity.
+* Fix runtime crash when adding twice the same VR device API in the required API list
+* OpenVR: camera was rotating around world center instead of camera center when a rotation was applied on entity
 
 #### Graphics
 
@@ -332,6 +336,7 @@ Release date 2017/6/6
 #### Others
 
 * Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
+* Add `*.lock.json` pattern to generated `.gitignore` file (when creating a project)
  
 # Known Issues
 
