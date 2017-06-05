@@ -1,50 +1,50 @@
 # Classes, mixins and inheritance
 
-Xenko Shading Language (XKSL) is an extension of HLSL which makes it closer to C# syntax and concepts. The language is object-oriented:
+Xenko Shading Language (XKSL) is an extension of HLSL, which makes it closer to C# syntax and concepts. The language is object-oriented:
 
 - classes are the foundation of the code
 - classes contain methods and members
 - classes can be inherited, methods can be overridden
 - member types can be classes
 
-XKSL uses a original way to handle multiple inheritance. Inheritance is performed through mixins, so the order of inheritance is crucial:
+XKSL uses an original way to handle multiple inheritance. Inheritance is performed through mixins, so the order of inheritance is crucial:
 
 - the order of inheritance defines the actual implementation of a method (the last override)
 - if a mixin appears several times in the inheritance, only the first occurrence is taken into account (as well as its members and methods)
-- it is possible to call the previous implementation of a method using `base.<method name>(<arguments>)`
+- to can call the previous implementation of a method, use `base.<method name>(<arguments>)`
 
 ## Keywords
 
-XKSL uses the same set of keywords as HLSL but adds some new ones:
+XKSL uses the keywords as HLSL, and adds new ones:
 
-- `stage`: method and member keyword. This keyword ensures that the method or member is only defined once and is the same in the compositions.
+- `stage`: method and member keyword. This keyword makes sure the method or member is only defined once and is the same in the compositions.
 - `stream`: member keyword. The member is accessible at every stage of the shader. For more information, see [Automatic shader stage input/out](automatic-shader-stage-input-output.md).
 - `streams`: sort of global structure storing variables needed across several stages of the shader. For more information, see [Automatic shader stage input/out](automatic-shader-stage-input-output.md).
 - `override`: method keyword. If this keyword is missing, the compilation returns an error.
-- `abstract`: is used in front of a method declaration (without a body).
+- `abstract`: used in front of a method declaration (without a body).
 - `clone`: method keyword. When a method appears several times in the inheritance tree of class, this keyword forces the creation of multiple instances of the method at each level of the inheritance instead of one. For more information, see [Composition](composition.md).
 - `Input`: for geometry and tessellation shaders. For more information, see [Shader stages](shader-stages.md).
 - `Output`: for geometry and tessellation shaders. For more information, see [Shader stages](shader-stages.md).
-- `Input2`: for tessellation shader. For more information, see [Shader stages](shader-stages.md).
-- `Constants`: for tessellation shader. For more information, see [Shader stages](shader-stages.md).
+- `Input2`: for tessellation shaders. For more information, see [Shader stages](shader-stages.md).
+- `Constants`: for tessellation shaders. For more information, see [Shader stages](shader-stages.md).
 
 ## Abstract methods
 
-Abstract methods are available in XKSL. They should be prefixed with the `abstract` keyword. You can inherit from a class with abstract methods without having to implement them; the compiler will simply produce a harmless warning. However, it should be implemented in your final shader to prevent a compilation error.
+Abstract methods are available in XKSL. They should be prefixed with the `abstract` keyword. You can inherit from a class with abstract methods without having to implement them; the compiler will simply produce a harmless warning. However, you should implement it in your final shader to prevent a compilation error.
 
 ## Annotations
 
-Like HLSL, annotations are available in XKSL. Here are some the most useful ones:
+Like HLSL, annotations are available in XKSL. Some of the most useful ones are:
 
-- `[Color]` for float4 variables. The ParameterKey will have the type `Color4` instead of `Vector4`. It also specifies to GameStudio that this variable should be treated as a color, giving you the most convenient interface to edit it.
+- `[Color]` for float4 variables. The ParameterKey will have the type `Color4` instead of `Vector4`. It also specifies to Game Studio that this variable should be treated as a color, so you can edit it in Game Studio.
 - `[Link(...)]` specifies which ParameterKey to use to set this value. However, an independent default key is still created.
 - `[Map(...)]` specifies which ParameterKey to use to set this value. No new ParameterKey is created.
 - `[RenameLink]` prevents the creation of a ParameterKey. It should be used with `[Link()]`.
 
-**Code:** Annotations
+### Example code: annotations
 
 ```cs
-class BaseClass
+shader BaseShader
 {
 	[Color] float4 myColor;
  
@@ -56,17 +56,15 @@ class BaseClass
 };
 ```
 
-## Inheritance example
-
-**Code:** Example of inheritance
+## Example code: inheritance
 
 ```cs
-class BaseInterface
+shader BaseInterface
 {
 	abstract float Compute();
 };
  
-class BaseClass : BaseInterface
+shader BaseShader : BaseInterface
 {
 	float Compute()
 	{
@@ -74,7 +72,7 @@ class BaseClass : BaseInterface
 	}
 };
  
-class ClassA : BaseClass
+shader ShaderA : BaseShader
 {
 	override void Compute()
 	{
@@ -82,7 +80,7 @@ class ClassA : BaseClass
 	}
 };
  
-class ClassB : BaseClass
+shader ShaderB : BaseShader
 {
 	override void Compute()
 	{
@@ -92,32 +90,32 @@ class ClassB : BaseClass
 };
 ```
 
-Now let's look at what happens when we change the inheritance order between `ClassA` and `ClassB`.
+### Example code: the importance of inheritance order
 
-**Code:** Importance of inheritance order
+Notice what happens when we change the inheritance order between `ShaderA` and `ShaderB`.
 
 ```cs
-class MixAB : ClassA, ClassB
+shader MixAB : ShaderA, ShaderB
 {
 };
  
-class MixBA : ClassB, ClassA
+shader MixBA : ShaderB, ShaderA
 {
 };
  
 // Resulting code (representation)
 
-class MixAB : BaseInterface, BaseClass, ClassA, ClassB
+shader MixAB : BaseInterface, BaseShader, ShaderA, ShaderB
 {
 	float Compute()
 	{
-		// code from BaseClass
+		// code from BaseShader
 		float v0 = 1.0f;
  
-		// code from ClassA
+		// code from ShaderA
 		float v1 = 2.0f;
  
-		// code from ClassB
+		// code from ShaderB
 		float prevValue = v1;
 		float v2 = 5.0f + prevValue;
  
@@ -125,18 +123,18 @@ class MixAB : BaseInterface, BaseClass, ClassA, ClassB
 	}
 };
 
-class MixBA : BaseInterface, BaseClass, ClassB, ClassA
+shader MixBA : BaseInterface, BaseShader, ShaderA, ShaderB
 {
 	float Compute()
 	{
-		// code from BaseClass
+		// code from BaseShader
 		float v0 = 1.0f;
 
-		// code from ClassB
+		// code from ShaderB
 		float prevValue = v0;
 		float v1 = 5.0f + prevValue;
 		
-		// code from ClassA
+		// code from ShaderA
 		float v2 = 2.0f;
 
 		return v2; // = 2.0f
@@ -146,12 +144,14 @@ class MixBA : BaseInterface, BaseClass, ClassB, ClassA
 
 ## Static calls
 
-You can also use a variable or call a method from a class without having to inherit from it. Just use `<class_name>.<variable or method_name>` in your code. It behaves the same way than a static call. However, be aware that if you statically call a method that uses class variables, the shader won't compile. This is a convenient way to only use a part of a shader, but this isn't an optimization. The shader compiler already automatically removes any unnecessary variables.
+You can also use a variable or call a method from a shader without having to inherit from it. To do this, use `<class_name>.<variable or method_name>`. It behaves the same way as a static call. 
 
-**Code:** Static calls
+Note that if you statically call a method that uses class variables, the shader won't compile. This is a convenient way to only use a part of a shader, but this isn't an optimization. The shader compiler already automatically removes any unnecessary variables.
+
+### Code example: static calls
 
 ```cs
-class StaticClass
+shader StaticClass
 {
 	float StaticValue;
 	float StaticMethod(float a)
@@ -167,7 +167,7 @@ class StaticClass
 };
  
 // this class is fine
-class CorrectStaticCallClass
+shader CorrectStaticCallClass
 {
 	float Compute()
 	{
@@ -176,7 +176,7 @@ class CorrectStaticCallClass
 };
  
 // this class won't compile since the call is not static
-class IncorrectStaticCallClass 
+shader IncorrectStaticCallClass 
 {
 	float Compute()
 	{
@@ -185,7 +185,7 @@ class IncorrectStaticCallClass
 };
  
 // one way to fix this
-class IncorrectStaticCallClassFixed : StaticClass
+shader IncorrectStaticCallClassFixed : StaticClass
 {
 	float Compute()
 	{
@@ -199,6 +199,6 @@ class IncorrectStaticCallClassFixed : StaticClass
 * [Effect language](../effect-language.md)
 * [Shading language index](index.md)
     - [Composition](composition.md)
-    - [Templating](template.md)
+    - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
 	- [Shader stages](shader-stages.md)
