@@ -319,6 +319,11 @@ Release date 2017/6/6
 * Color Picker was behaving strangely due to some RGB to HSV conversion issues
 * Global store.config was preventing Game Studio to find Xenko installation [#576](https://github.com/SiliconStudio/xenko/issues/576)
 
+#### VR
+
+* Runtime crash when adding twice the same VR device API in the required API list.
+* OpenVR: camera was rotating around world center instead of camera center when a rotation was applied on entity.
+
 #### Others
 
 * Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
