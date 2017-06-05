@@ -122,7 +122,7 @@ Once you've declared a stream, you can access it at any stage of your shader. Th
 **Code:** Stream definition and use:
 
 ```cs
-class BaseShader
+shader BaseShader
 {
 	stream float3 myVar;
  
@@ -136,12 +136,12 @@ class BaseShader
 **Code:** Stream specification
 
 ```cs
-class StreamShader
+shader StreamShader
 {
 	stream float3 myVar;
 };
 
-class ShaderA : BaseShader, StreamShader
+shader ShaderA : BaseShader, StreamShader
 {
 	float3 Test()
 	{
@@ -157,7 +157,7 @@ Let's look at the same HLSL shader as the first example but in XKSL.
 **Code:** Same shader in XKSL
 
 ```cs
-class MyShader : ShaderBase
+shader MyShader : ShaderBase
 {
 	stream float4 pos : POSITION;
 	stream float4 col : COLOR;
@@ -179,7 +179,7 @@ Now let's add the normal computation.
 **Code:** Modified shader in XKSL
 
 ```cs
-class MyShader : ShaderBase
+shader MyShader : ShaderBase
 {
 	stream float4 pos : POSITION;
 	stream float4 col : COLOR;
@@ -207,5 +207,5 @@ In XKSL, adding a new attribute is as simple as adding it to the pool of streams
 * [Shading language index](index.md)
     - [Class inheritance](classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
-    - [Templating](template.md)
+    - [Templates](templates.md)
 	- [Shader stages](shader-stages.md)
