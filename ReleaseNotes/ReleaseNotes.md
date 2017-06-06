@@ -322,6 +322,10 @@ Release date 2017/6/6
 * Fix a crash that occurs when replacing a sprite in the property grid of a spritesheet
 * Fix some string comparison that were using the current locale of the system, causing issues with some language such as Turkish
 * Prevent modal windows from being minimized
+* Restore some missing sliders in the property grid (that were replaced by a plain text box), review ranges and step values for most of them
+* Fix a potential crash at serialization when a script had a null reference to another `Entity` or `EntityComponent` (and some other similar scenarios)
+* Partial fix of the property grid template for entity component references
+* Fix an issue with the property grid template used to edit `char` properties  
 
 #### VR
 
