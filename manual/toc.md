@@ -100,7 +100,7 @@
 ### [Shading language](graphics/effects-and-shaders/shading-language/index.md)
 #### [Classes, mixins and inheritance](graphics/effects-and-shaders/shading-language/classes-mixins-and-inheritance.md)
 #### [Composition](graphics/effects-and-shaders/shading-language/composition.md)
-#### [Template](graphics/effects-and-shaders/shading-language/template.md)
+#### [Templates](graphics/effects-and-shaders/shading-language/templates.md)
 #### [Automatic shader stage input/output](graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)
 #### [Shader stages](graphics/effects-and-shaders/shading-language/shader-stages.md)
 ## [Lights and shadows](graphics/lights-and-shadows/index.md)
