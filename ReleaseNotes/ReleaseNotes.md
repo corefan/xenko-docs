@@ -297,7 +297,7 @@ Release date 2017/4/28
 
 * Fixed a possible issue when compiling a game that targets iOS and the right Xamarin version cannot be found
 
-## Version 2.0.1.2
+## Version 2.0.2.1
 
 Release date 2017/6/6
 
