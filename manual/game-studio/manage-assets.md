@@ -71,14 +71,14 @@ Assets are contained in the **Assets** folder of your project package. You can s
  
 ## Include assets in the build
 
-By default, Game Studio doesn't include every asset when you build the game. This is because you might not need every asset at runtime (eg if the asset is incomplete).
+By default, Xenko doesn't include every asset when you build the game. This is because you might not need every asset at runtime — for example, if the asset is incomplete.
 
-Game Studio only includes assets which:
+Xenko only includes assets which:
 
 * you've specifically marked for inclusion (**root assets**), or 
 * are **referenced** by a root asset
 
-Game Studio indicates whether an asset is included in the top-left of the asset thumbnail.
+Game Studio indicates whether an asset is included with a colored icon in the top-left of the asset thumbnail.
 
 Color | Status
 ------|--------
@@ -91,6 +91,8 @@ If you plan to load an asset at runtime using scripts, make it a root asset. To 
 * click the **gray dot** in the top-left of the thumbnail, or
 
 * right-click the asset and select **Include in build as root asset**
+
+    ![Include in build as root asset](media/right-click-include-in-build-as-root-asset.png)
 
 ## Asset view options
 

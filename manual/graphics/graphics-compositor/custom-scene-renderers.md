@@ -1,4 +1,4 @@
-# Custom scene renderer
+# Custom scene renderers
 
 To create a custom renderer, directly implement the @'SiliconStudio.Xenko.Rendering.Compositing.ISceneRenderer' or use a delegate through the @'SiliconStudio.Xenko.Rendering.Compositing.DelegateSceneRenderer'.
 
@@ -38,3 +38,8 @@ var sceneDelegateRenderer = new SceneDelegateRenderer(
         // [...] 
    });
 ```
+
+## See also
+
+* [Scene renderers](scene-renderers.md)
+* [Debug renderers](debug-renderers.md)
