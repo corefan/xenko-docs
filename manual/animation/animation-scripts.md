@@ -42,14 +42,6 @@ To use the **AnimationStart** script:
 This sample code assigns a simple animation to a character based on its walking speed:
 
 ```cs
-public class AnimationClipExample : SyncScript
-{
-    // Public animation clips
-    public AnimationClip idleClip;
-    public AnimationClip walkClip;
-    public AnimationClip runClip;
-
-    //public variable to determine if model is running or walking
 using SiliconStudio.Xenko.Engine;
 
 namespace AdditiveAnimation
@@ -65,7 +57,7 @@ namespace AdditiveAnimation
 
         public override void Start()
         {
-            //let`s cache some variables we will need later
+            // Cache some variables we'll need later
             animationComponent = Entity.Get<AnimationComponent>();
             animationComponent.Play("Idle");
         }
