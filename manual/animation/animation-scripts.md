@@ -9,11 +9,19 @@ You can add an [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationCom
 
 The more useful properties include:
 
-| Property | Description| 
+| Property | Description
 | ----- | ---- |
-| [Animations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_Animations) | Gets the animation clips associated with this [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent). |
-| [BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md). |	
-| [PlayingAnimations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation. |
+| [Animations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_Animations) | Gets the animation clips associated with this [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent)
+| [BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md)
+| [PlayingAnimations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation
+
+
+>[!Note]
+>Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent).
+
+>![Animations added to component](media/animations-added-to-component.png)
+
+>For more information, see [Set up animations](set-up-animations.md).
 
 ## Use the pre-built **AnimationStart** script
 
@@ -37,9 +45,9 @@ To use the **AnimationStart** script:
 
 4. Edit the script as necessary and save it.
 
-## Write your own script or modify an existing one
+## Example animation script
 
-This sample code assigns a simple animation to a character based on its walking speed:
+This sample script assigns a simple animation to a character based on its walking speed.
 
 ```cs
 using SiliconStudio.Xenko.Engine;
