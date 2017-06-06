@@ -16,7 +16,7 @@ To create light shafts, use three components together: **lights**, **light shaft
 
 ## 1. Enable light shafts in the graphics compositor
 
-Xenko disables light shafts by default in new projects. To enable them:
+By default, Xenko disables light shafts in new projects. To enable them:
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -32,7 +32,11 @@ Xenko disables light shafts by default in new projects. To enable them:
 
     ![Select light shafts](media/select-light-shafts.png)
 
-For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
+4. Make sure the **light shafts** checkbox is selected.
+
+    ![Enable light shafts](media/enable-light-shafts.png)
+
+    For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
 
 ## 2. Add a light shaft component
 
@@ -95,9 +99,22 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 | Property                  | Description                                               
 |---------------------------|----------
-| Density                   | The higher the density factor, the brighter the light shafts
-| Sample count              | Higher sample counts produce better light shafts but use more GPU 
+| Density                   | Higher values produce brighter light shafts
+| Sample count              | Higher values produce better light shafts but use more GPU 
 | Process bounding volumes separately  | Preserves light shaft quality when seen through separate bounding boxes, but uses more GPU
+
+### Light shaft graphics compositor properties
+
+To access these properties, in the **graphics compositor editor**, select the **forward renderer** node and expand **Light Shafts**.
+
+These properties apply globally to all the light shafts in the scene.
+
+![Light shaft graphics compositor properties](media/light-shaft-graphics-compositor-properties.png)
+
+| Property                                | Description                                                    
+|-----------------------------------------|--------------
+| Bounding volume buffer downsample level | Lower values produce more precise volume buffer areas, but use more GPU
+| Light buffer downsample level           | Lower values produce sharper light shafts, but use more GPU
 
 ## Optimize light shafts
 
