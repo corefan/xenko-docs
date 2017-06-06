@@ -88,10 +88,10 @@ namespace MyGame
 }
 ```
 
-For information about how to use this script, see [Colliders](../physics/colliders.md).
+For information about how to use this script, see [Colliders](../../physics/colliders.md).
 
 ## See also
 
 * [Scene renderers](scene-renderers.md)
     * [Custom scene renders](custom-scene-renderers.md)
-* [Physics - Colliders](../physics/colliders.md)
+* [Physics - Colliders](../../physics/colliders.md)
