@@ -93,3 +93,5 @@ Renders to a render texture, which you can display in your scene (eg to display 
 
 * [Graphics compositor](index.md)
 * [Camera slots](../camera-slots.md)
+* [Custom scene renders](custom-scene-renderers.md)
+* [Debug renderers](debug-renderers.md)
