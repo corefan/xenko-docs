@@ -71,14 +71,14 @@ Assets are contained in the **Assets** folder of your project package. You can s
  
 ## Include assets in the build
 
-By default, Game Studio doesn't include every asset when you build the game. This is because you might not need every asset at runtime — for example, if the asset is incomplete.
+By default, Xenko doesn't include every asset when you build the game. This is because you might not need every asset at runtime — for example, if the asset is incomplete.
 
-Game Studio only includes assets which:
+Xenko only includes assets which:
 
 * you've specifically marked for inclusion (**root assets**), or 
 * are **referenced** by a root asset
 
-Game Studio indicates whether an asset is included in the top-left of the asset thumbnail.
+Game Studio indicates whether an asset is included with a colored icon in the top-left of the asset thumbnail.
 
 Color | Status
 ------|--------
@@ -122,9 +122,9 @@ Type filters are "or" filters. For example, if you filter by *type:animation* an
 
     ![add-filter.png](media/add-filter.png)
 
-2. * To filter by name, press Enter.
+2.  To filter by name, press **Enter**.
 
-    * To filter by a tag or type, select tag or type filters in the drop-down list.
+    To filter by a tag or type, select **tag** or **type** filters in the drop-down list.
 
     Game Studio applies the filter and shows matching assets in the asset view. 
     

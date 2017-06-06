@@ -296,6 +296,51 @@ Release date 2017/4/28
 #### Build
 
 * Fixed a possible issue when compiling a game that targets iOS and the right Xamarin version cannot be found
+
+## Version 2.0.2.1
+
+Release date 2017/6/6
+
+### Improvements
+
+#### Game Studio
+
+* Visual Studio version picker now shows the installation nickname to easily differentiate when multiple instances are installed side by side
+* Add the concept of _active scene_ in the scene editor. Dropping an asset to the scene view will an entity add to the currently active scene instead of the root scene
+
+#### Graphics
+
+* VR: Added a CopyMirror option to control if VR rendering is copied back to current render target
+* Shaders: StructuredBuffer were being declared before their struct type; ordering should now be correct
+
+### Bugs fixed
+
+#### Game Studio
+
+* Color Picker was behaving strangely due to some RGB to HSV conversion issues
+* Global store.config was preventing Game Studio to find Xenko installation [#576](https://github.com/SiliconStudio/xenko/issues/576)
+* Fix a crash that occurs when replacing a sprite in the property grid of a spritesheet
+* Fix some string comparison that were using the current locale of the system, causing issues with some language such as Turkish
+* Prevent modal windows from being minimized
+* Restore some missing sliders in the property grid (that were replaced by a plain text box), review ranges and step values for most of them
+* Fix a potential crash at serialization when a script had a null reference to another `Entity` or `EntityComponent` (and some other similar scenarios)
+* Partial fix of the property grid template for entity component references
+* Fix an issue with the property grid template used to edit `char` properties  
+
+#### VR
+
+* Fix runtime crash when adding twice the same VR device API in the required API list
+* OpenVR: camera was rotating around world center instead of camera center when a rotation was applied on entity
+
+#### Graphics
+
+* Fixed point lights not casting shadows from objects that have tessellation enabled
+* Fixed a bug where some lights would not render [#586](https://github.com/SiliconStudio/xenko/issues/586)
+
+#### Others
+
+* Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
+* Add `*.lock.json` pattern to generated `.gitignore` file (when creating a project)
  
 # Known Issues
 
