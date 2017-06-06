@@ -122,9 +122,9 @@ Type filters are "or" filters. For example, if you filter by *type:animation* an
 
     ![add-filter.png](media/add-filter.png)
 
-2. * To filter by name, press Enter.
+2.  To filter by name, press **Enter**.
 
-    * To filter by a tag or type, select tag or type filters in the drop-down list.
+    To filter by a tag or type, select **tag** or **type** filters in the drop-down list.
 
     Game Studio applies the filter and shows matching assets in the asset view. 
     
