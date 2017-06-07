@@ -1,4 +1,4 @@
-# Lasers and lightning
+# Tutorial: Lasers and lightning
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Artist</span>
@@ -88,4 +88,14 @@ The particles sample already contains an example of how to create lasers this wa
 
 ## Sample project
 
-You can check the **Lasers and Lightning Sample** if you need a quick look at a project which already implements most techniques described below.
+To see some of the techniques described on this page implemented in a project, create a new **Sample: Particles** project and open the **Lasers** scene.
+
+![Particles sample project](media/select-particles-sample-project.png)
+
+## See also
+
+* [Tutorial: Create a trail](create-a-trail.md)
+* [Tutorial: Custom particles](custom-particles.md)
+* [Tutorial: Inheritance](inheritance.md)
+* [Particles](../index.md)
+* [Create particles](../create-particles.md)

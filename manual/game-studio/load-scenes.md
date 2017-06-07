@@ -12,6 +12,15 @@ myParentScene.Children.Add(myChildScene1);
 myChildScene1.Add(myChildScene2);
 ```
 
+>[!Note]
+>Make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **asset view**).
+
+>![Scenes included in root](media/scenes-included-in-root.png)
+
+>To include a scene in the build, in the **asset view**, right-click the scene asset and select **Include in build as root asset**.
+
+>For more information about including assets in the build, see [Manage assets](manage-assets.md).
+
 For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
 
 ## Scene streamer script

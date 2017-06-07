@@ -4,10 +4,10 @@ In addition to the inheritance system, XKSL introduces the concept of **composit
 
 You can compose with an instance of the desired class or an instance of class that inherits from the desired one.
 
-**Code:** Composition
+## Example code
 
 ```cs
-class CompositionBase
+shader CompositionBase
 {
 	float4 Compute()
 	{
@@ -15,7 +15,7 @@ class CompositionBase
 	}
 };
  
-class CompositionClassA : CompositionBase
+shader CompositionShaderA : CompositionBase
 {
 	float4 myColor;
  
@@ -25,7 +25,7 @@ class CompositionClassA : CompositionBase
 	}
 };
  
-class CompositionClassB : CompositionBase
+shader CompositionShaderB : CompositionBase
 {
 	float4 myColor;
 
@@ -35,7 +35,7 @@ class CompositionClassB : CompositionBase
 	}
 };
  
-class BaseClass
+shader BaseShader
 {
 	CompositionBase Comp0;
 	CompositionBase Comp1;
@@ -49,14 +49,14 @@ class BaseClass
 
 The compositions are compiled in their own context, meaning that the non-stage variables are only accessible within the composition. It's also possible to have compositions inside compositions.
 
+## Example code: access root context
+
 If you want to access the root compilation context, you can use the following format:
 
-**Code:** Accessing root context
-
 ```cs
-class CompositionClassC : CompositionBase
+shader CompositionShaderC : CompositionBase
 {
-	BaseClass rootShader = stage;
+	BaseShader rootShader = stage;
  
 	float4 GetColor()
 	{
@@ -65,14 +65,14 @@ class CompositionClassC : CompositionBase
 };
 ```
 
-This is error-prone, since `CompositionClassC` expects `BaseClass` to be available in the root context.
+This is error-prone, since `CompositionShaderC` expects `BaseShader` to be available in the root context.
+
+## Example code: array of compositions
 
 You can also create an array of compositions the same way you use an array of values. Since there's no way to know beforehand how many compositions there are, you should iterate using a `foreach` statement.
 
-**Code:** Array of compositions
-
 ```cs
-class BaseClassArray
+shader BaseShaderArray
 {
 	CompositionBase Comps[];
 	
@@ -90,27 +90,25 @@ class BaseClassArray
 };
 ```
 
-## Stage behavior
+## Example code: stage behavior
 
 The behavior of the `stage` keyword is straightforward: only one instance of the variable or method is produced.
 
-**Code:** Stage member behavior
-
 ```cs
-class BaseClass
+shader BaseShader
 {
 	stage float BaseStageValue;
 	float NonStageValue;
 };
  
-class TestClass : BaseClass
+shader TestShader : BaseShader
 {
-	BaseClass comp0;
-	BaseClass comp1;
+	BaseShader comp0;
+	BaseShader comp1;
 };
  
-// resulting class (representation)
-class TestClass
+// resulting shader (representation)
+shader TestShader
 {
 	float BaseStageValue;
 	float NonStageValue;
@@ -119,10 +117,10 @@ class TestClass
 };
 ```
 
-**Code:** Stage member behavior
+### Example code: stage member behavior
 
 ```cs
-class BaseClass
+shader BaseShader
 {
 	stage float BaseStageMethod()
 	{
@@ -135,14 +133,14 @@ class BaseClass
 	}
 };
  
-class TestClass : BaseClass
+shader TestShader : BaseShader
 {
-	BaseClass comp0;
-	BaseClass comp1;
+	BaseShader comp0;
+	BaseShader comp1;
 };
  
-// resulting class (representation)
-class TestClass
+// resulting shader (representation)
+shader TestClass
 {
 	float BaseStageMethod()
 	{
@@ -172,10 +170,8 @@ This behavior is useful when you need a value in multiple composition but you on
 
 The `clone` keyword has a less trivial behavior. It prevents the `stage` keyword to produce a unique method.
 
-**Code:** Clone example
-
 ```cs
-class BaseClass
+shader BaseShader
 {
 	stage float BaseStageMethod()
 	{
@@ -188,7 +184,7 @@ class BaseClass
 	}
 };
  
-class CompClass : BaseClass
+shader CompShader : BaseShader
 {
 	override clone float BaseStageMethod()
 	{
@@ -201,14 +197,14 @@ class CompClass : BaseClass
 	}
 };
  
-class TestClass : BaseClass
+shader TestShader : BaseShader
 {
-	CompClass comp0;
-	CompClass comp1;
+	CompShader comp0;
+	CompShadercomp1;
 };
  
-// resulting class (representation)
-class TestClass
+// resulting shader (representation)
+shader TestShader
 {
 	// cloned method
 	float base_BaseStageMethod()
@@ -246,6 +242,6 @@ This behavior is useful when you want to repeat a simple function but with diffe
 * [Effect language](../effect-language.md)
 * [Shading language index](index.md)
     - [Class inheritance](classes-mixins-and-inheritance.md)
-    - [Templating](template.md)
+    - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
 	- [Shader stages](shader-stages.md)

@@ -1,4 +1,4 @@
-# Custom particles walkthrough
+# Tutorial: Custom particles
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Artist</span>
@@ -6,32 +6,33 @@
 
 This walkthrough shows how you can create custom extensions for the particle system, providing functionality not available in the core engine.
 
-The sample is focused primarily on the particle simulation. For rendering, check the [Custom Particle Material](particle-materials.md) sample walkthrough.
+If you're not familiar with editing particles, see [Create particles](../create-particles.md).
 
-Please check the [Editing Particles](../create-particles.md) page if you are not familiar with how to edit the particles.
+Start by creating a new **Sample: Particles** project.
 
-This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
+![Particles sample project](media/select-particles-sample-project.png)
 
-![media/particles-samples-custom-0.png](media/particles-samples-custom-0.png) 
+This project contains different scenes that demonstrate different ways to use particles. Open the **CustomParticles** scene.
 
-Start by creating a new Custom Particles Sample from the New project menu. There are three entities in the scene graph named ConeEmitter15, ConeEmitter30 and ConeEmitter45. Select either one and navigate to its source particle system, expanding the emitter in it.
+There are three particle entities in the scene: **ConeEmitter15**, **ConeEmitter30**, and **ConeEmitter45**. 
+
+Select one of the particle entities. In the property grid, navigate to its source particle system and expand the emitter.
 
 ![media/particles-samples-custom-1.png](media/particles-samples-custom-1.png) 
 
-There are four custom elements in this emitter which we will cover in depth.
+There are four custom elements in this emitter:
 
-The custom spawner is a [Spawner](../spawners.md) which is similar to the Spawn per second spawner, but also emits a burst of particles every time it loops.
+* The custom [spawner](../spawners.md) is similar to the spawn-per-second spawner, but also emits a burst of particles every time it loops.
 
-The custom initializer is an [Initializer](../initializers.md) which initially positions the particles in a cone shape and sets their velocity accordingly.
+* The custom [initializer](../initializers.md) initially positions the particles in a cone shape and sets their velocity accordingly.
 
-The custom updater is an [Updater](../updaters.md) which operates on a newly created particle field which we have named "RactangleXY", allowing the shape builder to use non-uniform sizes in addition to the uniform scale when building the billboards.
+* The custom [updater](../updaters.md) operates on a new particle field named **RactangleXY**, allowing the shape builder to use non-uniform sizes when building the billboards.
 
-The custom shape is a [Shape Builder](../shapes.md) similar to the billboard with two additions. It can create non-uniform rectangles, rather than the standard squares, and it can align (fix) the rectangle's Y axis to the world's Y axis rather than the camera space.
+* The custom [shape builder](../shapes.md) is similar to the billboard with two additions. It can create non-uniform rectangles, rather than the standard squares, and it can align (fix) the rectangle's Y axis to the world's Y axis rather than the camera space.
 
 ## Spawner
 
-We are going to create a spawner which emits particles per second *and* in bursts every few seconds. We can do this by adding two different spawners, but for this sample only we are going to combine them.
-
+We'll create a spawner which emits particles per second **and** in bursts every few seconds. We could do this by adding two different spawners, but for this sample we'll combine them.
 
   ```cs
     [DataContract("CustomParticleSpawner")] // Used for serialization, a good practice is to have the data contract have the same name as the class
@@ -39,7 +40,7 @@ We are going to create a spawner which emits particles per second *and* in burst
     public sealed class CustomParticleSpawner : ParticleSpawner
     {
         [DataMemberIgnore]
-        private float carryOver;    // Private members do not appear on the Property Grid
+        private float carryOver;    // Private members do not appear on the property grid
 
         [DataMember(100)]                // When data is serialized, this attribute decides its priority
         [Display("Number of particles")] // This is the name which will be displayed on the Property Grid
@@ -85,16 +86,16 @@ We are going to create a spawner which emits particles per second *and* in burst
     }
 ```
 
-This class mimics the @'SiliconStudio.Xenko.Particles.Spawners.ParticleSpawner' with the addition of a BurstCount and a burstTimer to control how often and how many particles will be spawned in bursts.
+This class mimics the @'SiliconStudio.Xenko.Particles.Spawners.ParticleSpawner', with the addition of a `BurstCount` and a `burstTimer` to control how often and how many particles are spawned in bursts.
 
-The SpawnNew method is called every frame to allow the spawner to calculate how many new particles should be emitted in the emitter based on the elapsed time.
+The `SpawnNew` method is called every frame to allow the spawner to calculate how many new particles should be emitted in the emitter based on the elapsed time.
 
-For exercise try implementing the following changes:
-- Rather than 1 second bursts, create a property and have the user control the timings.
-- Remove the spawn per second fields and make it a pure burst spawner.
+As an exercise, try implementing the following changes:
 
+- Rather than one-second bursts, create a property and have the user control the timing.
+- Remove the spawn-per-second fields and make it a pure burst spawner.
 
-Out spawner only emits particles, but doesn't set any fields. This is done by the initializer.
+Our spawner only emits particles, but doesn't set any fields. This is done by the initializer.
 
 ## Initializer
 
@@ -128,12 +129,12 @@ We want to place the particles in a cone and shoot them outwards when they spawn
     }
 ```
 
-Our initializer simply defines an angle for the cone and strength for the velocity. Any kind of scaling and rotation of the cone will come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. Check the @'SiliconStudio.Xenko.Particles.Initializers.ParticleInitializer' for reference.
+Our initializer simply defines an angle for the cone and strength for the velocity. Any scaling and rotation of the cone come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. For more information, see the @'SiliconStudio.Xenko.Particles.Initializers.ParticleInitializer'.
 
-The constructor for the initializer is very important, as it sets the list of required fields we are going to use. The initializer sets the particle's position and velocity, so we add those, and will need to generate some randomness, so we also add the random seed which we are going to use. All particles have *Life* and *RandomSeed* fields when they spawn.
+The constructor for the initializer is important, as it sets the list of required fields we'll use. The initializer sets the particle's position and velocity, so we add those, and needs to generate some randomness, so we also add the random seed which we are going to use. All particles have `Life` and `RandomSeed` fields when they spawn.
 
   ```cs
-// This method gets called for all new particles once the initializers is added to an emitter. Rather than updating all of them, we are given a starting and end indices and must only use particles in the defined range.
+// This method is called for all new particles once the initializer is added to an emitter. Rather than updating all of them, we are given a starting and end indices and must only use particles in the defined range.
 public unsafe override void Initialize(ParticlePool pool, int startIdx, int endIdx, int maxCapacity)
 {
     // Make sure the fields exist and avoid illegal memory access
@@ -177,9 +178,9 @@ public unsafe override void Initialize(ParticlePool pool, int startIdx, int endI
 
 ## Updater
 
-We want out updater to change a particle's width and height every frame based on a simple sine function over the particle's life.
+We want our updater to change a particle's width and height every frame based on a simple sine function over the particle's life.
 
-Because there is no such field yet, we start by creating a new particle field. Let's name it "RactangleXY":
+Because there's no such field yet, start by creating a new particle field. Let's name it `RactangleXY`:
 
   ```cs
     public static class CustomParticleFields
@@ -188,9 +189,9 @@ Because there is no such field yet, we start by creating a new particle field. L
     }
 ```
 
-The field has a type of @'SiliconStudio.Core.Mathematics.Vector2' since we only need two values for the width and the height. All fields are not added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, like the custom updater below.
+The field has type @'SiliconStudio.Core.Mathematics.Vector2', since we only need two values for the width and the height. No fields are added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, such as the custom updater below.
 
-Refer to the @'SiliconStudio.Xenko.Particles.Modules.ParticleUpdater' for api reference.
+For API reference, see @'SiliconStudio.Xenko.Particles.Modules.ParticleUpdater'.
 
   ```cs
     [DataContract("CustomParticleUpdater")] // Used for serialization so that our custom object can be saved. A good practice is to have the data contract have the same name as the class name.
@@ -225,8 +226,7 @@ Refer to the @'SiliconStudio.Xenko.Particles.Modules.ParticleUpdater' for api re
     }  
 ```
 
-Let's have a look at the Update method. The sample code is longer, but here we have trimmed it a little for the sake of simplicity.
-
+Let's take a look at the `Update` method. The sample code is longer, but here we've trimmed it for the sake of simplicity.
 
   ```cs
 public override void Update(float dt, ParticlePool pool)
@@ -237,7 +237,6 @@ public override void Update(float dt, ParticlePool pool)
 
     var lifeField = pool.GetField(ParticleFields.Life);
     var rectangleField = pool.GetField(CustomParticleFields.RectangleXY);
-
 
     // X and Y sides depend on sin(time) and cos(time)
     foreach (var particle in pool)
@@ -251,15 +250,13 @@ public override void Update(float dt, ParticlePool pool)
 }
 ```
 
-That's it. The updater will animate all particles' RectangleXY fields with a simple sine and cosine functions over their life.
+The updater will animate all particles' RectangleXY fields with a simple sine and cosine functions over their life.
 
-In the next step we will show how to display the created values.
+In the next step we'll demonstrate how to display the created values.
 
+## Shape builder
 
-
-## Shape Builder
-
-The shape builder is the class which takes all particle fields and creates the actual shape we are going to render. It's rather long, so we'll explain it in parts.
+The `shape builder` is the class which takes all particle fields and creates the actual shape we are going to render. It's a little long, so let's break it down.
 
   ```cs
 	public override int QuadsPerParticle { get; protected set; } = 1;
@@ -267,19 +264,17 @@ The shape builder is the class which takes all particle fields and creates the a
 
 The engine draws quads using 1 quad = 4 vertices = 6 indices, but we can only specify the number of quads we need. For a rectangle we need only one.
 
-*Note! The number of quads is important because the vertex buffer is allocated and mapped prior to writing out the vertex data. If we allocate smaller buffer it might result in illegal memory access and corruption.*
-
+>[!Note]
+> The number of quads is important because the vertex buffer is allocated and mapped prior to writing out the vertex data. If we allocate smaller buffer it might result in illegal memory access and corruption.
 
   ```cs
 public unsafe override int BuildVertexBuffer(ParticleVertexBuilder vtxBuilder, Vector3 inverseViewX, Vector3 inverseViewY,
     ref Vector3 spaceTranslation, ref Quaternion spaceRotation, float spaceScale, ParticleSorter sorter)
 ```
 
-This method gets called when it needs our shape builder to iterate over all particles and build the shape. The @'SiliconStudio.Xenko.Particles.VertexLayouts.ParticleVertexBuilder' is the wrapper around our vertex stream and what we are going to use to write out the vertex data for the particles.
+This method is called when it needs our shape builder to iterate over all particles and build the shape. The @'SiliconStudio.Xenko.Particles.VertexLayouts.ParticleVertexBuilder' is the wrapper around our vertex stream. We'll use it to write out the vertex data for the particles.
 
-inverseViewX and inverseViewY are unit vectors in camera space passed down to the shape builder if we need to generate camera-facing shapes.
-
-
+`inverseViewX` and `inverseViewY` are unit vectors in camera space passed down to the shape builder if we need to generate camera-facing shapes.
 
   ```cs
     foreach (var particle in sorter)
@@ -327,15 +322,23 @@ inverseViewX and inverseViewY are unit vectors in camera space passed down to th
     }
 ```
 
-Our particles' width and height depend both on the uniform size field Size and the field which we created earlier in this chapter, RectangleXY. From there we need to set the positions and texture coordinates for the 4 corner vertices of our quad. The number of vertices we have to set is per particle 4 times the number of quads we requested.
+Our particles' width and height depend both on the uniform size field `Size` and the field we created earlier in this walkthrough, `RectangleXY`. From there, we need to set the positions and texture coordinates for the four corner vertices of our quad. The number of vertices we have to set is per particle four times the number of quads we requested.
 
 You can add more complicated shapes or attributes here if your game requires them.
 
 ## Conclusion
 
-With these 4 custom modules you can add a lot of functionality to the particle engine and have behaviors tailored to your game and needs. Because all of them are serialized and loaded in the game studio, once you create them, you can use them directly from the game studio, together with the core modules!
+With these 4 custom modules you can add a lot of functionality to the particle engine and tailor behavior to your needs. Because they're all serialized and loaded in Game Studio, once you create them, you can use them directly from Game Studio, together with the core modules.
 
-If you want to experiment with the modules, try adding a new .cs file to the CustomParticles.Game project. You can duplicate one of the existing classes, but don't forget to change the class name and the data contract to avoid collisions.
+If you want to experiment with the modules, try adding a new `.cs` file to the `CustomParticles.Game` project. You can duplicate one of the existing classes, but don't forget to change the class name and the data contract to avoid collisions.
 
-You can then reload the scripts in the game studio. If they don't load immediately try relaunching your project. If there are no compilation errors in your code you should be able too see the newly added modules in the spawners, initializers, updaters or shape builders lists.
+You can then reload the scripts in Game Studio. If they don't load, relaunch your project. If there are no compilation errors in your code you should see the new modules in the spawners, initializers, updaters and shape builders lists.
 
+## See also
+
+* [Tutorial: Create a trail](create-a-trail.md)
+* [Tutorial: Particle materials](particle-materials.md)
+* [Tutorial: Inheritance](inheritance.md)
+* [Tutorial: Lasers and lightning](lasers-and-lightning.md)
+* [Particles](../index.md)
+* [Create particles](../create-particles.md)

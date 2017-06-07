@@ -32,7 +32,7 @@ namespace XenkoEffects
 		bool EnableSpecular = true;
 	};
 	
-	shader BasicEffect
+	effect BasicEffect
 	{
 		using params MaterialParameters;
 		using params MyParameters;
@@ -62,11 +62,11 @@ namespace XenkoEffects
 }
 ```
 
-### Adding mixins
+### Add a mixin
 
 To add a mixin, use `mixin <mixin_name>`.
 
-### Using parameters
+### Use parameters
 
 The syntax is similar to C#. The following rules are added:
 
@@ -112,12 +112,12 @@ or
 mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
 ```
 
-### Partial shaders
+### Partial effects
 
 You can also break the code into sub-mixins to reuse elsewhere with the syntax below.
 
 ```cs
-partial shader MyPartialShader
+partial effect MyPartialEffect
 {
 	mixin ComputeColorMultiply;
 	mixin compose color1 = ComputeColorStream;
@@ -125,11 +125,11 @@ partial shader MyPartialShader
 }
  
 // to use it
-mixin MyPartialShader;
-mixin compose myComposition = MyPartialShader;
+mixin MyPartialEffect;
+mixin compose myComposition = MyPartialEffect;
 ```
 
-You can use the `MyPartialShader` mixin like any other mixin in the code.
+You can use the `MyPartialEffect` mixin like any other mixin in the code.
 
 ## See also
 
