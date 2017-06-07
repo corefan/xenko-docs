@@ -248,7 +248,7 @@ Lastly, we need a material which sets all the keys and uses the newly created ef
 
 #### Custom particle material 
 
-We are going to copy @`SiliconStudio.Xenko.Particles.Materials.ParticleMaterialComputeColor` into ParticleCustomMaterial.cs in our project and customize it to use two shaders for color binary trees.
+We are going to copy @'SiliconStudio.Xenko.Particles.Materials.ParticleMaterialComputeColor' into ParticleCustomMaterial.cs in our project and customize it to use two shaders for color binary trees.
 
   ```cs
         [DataMemberIgnore]
@@ -268,7 +268,7 @@ The base class automatically tries to load the effect specified with EffectName.
         private AttributeDescription texCoord1 = new AttributeDescription("TEXCOORD1");
 ```
 
-In addition to the already existing @`SiliconStudio.Xenko.Rendering.Materials.IComputeColor` we are going to use @`SiliconStudio.Xenko.Rendering.Materials.IComputeScalar` for intensity, which returns a float, rather than a float4. We will also add another  @`SiliconStudio.Xenko.Particles.Materials.UVBuilder` for a second texture coordinates animation.
+In addition to the already existing @'SiliconStudio.Xenko.Rendering.Materials.IComputeColor', we'll use @'SiliconStudio.Xenko.Rendering.Materials.IComputeScalar' for intensity, which returns a float, rather than a float4. We will also add another  @'SiliconStudio.Xenko.Particles.Materials.UVBuilder' for a second texture coordinates animation.
 
 
   ```cs
@@ -282,4 +282,3 @@ In addition to the already existing @`SiliconStudio.Xenko.Rendering.Materials.IC
 We load the two shaders - one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the ComputeColor and ComputeScalar properties which the user can edit with the Property Grid. The generated code is similar to the shader code we wrote in the way that it calls Compute() and it returns the final result of our color or scalar compute tree.
 
 After we generate the shader code, we set it to the respective key we need. Check how ParticleCustomShaderKeys.BaseColor is defined in ParticleCustomShaderKeys.cs. In the effect file we check if this key is set, and if yes, we pass it to the stream defined in our shader code.
-
