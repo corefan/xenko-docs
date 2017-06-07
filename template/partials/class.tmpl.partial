@@ -39,7 +39,7 @@
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
 </div>
 {{#syntax.parameters.0}}
-<h5 class="parameters">{{__global.parameters}}</h5>
+<h4 class="parameters">{{__global.parameters}}</h4>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -62,7 +62,7 @@
 </table>
 {{/syntax.parameters.0}}
 {{#syntax.return}}
-<h5 class="returns">{{__global.returns}}</h5>
+<h4 class="returns">{{__global.returns}}</h4>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -79,7 +79,7 @@
 </table>
 {{/syntax.return}}
 {{#syntax.typeParameters.0}}
-<h5 class="typeParameters">{{__global.typeParameters}}</h5>
+<h4 class="typeParameters">{{__global.typeParameters}}</h4>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
