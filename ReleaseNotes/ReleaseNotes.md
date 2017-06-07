@@ -337,6 +337,10 @@ Release date 2017/6/6
 * Fixed point lights not casting shadows from objects that have tessellation enabled
 * Fixed a bug where some lights would not render [#586](https://github.com/SiliconStudio/xenko/issues/586)
 
+#### Android
+
+* Fix a memory allocation that could make a game crash at startup on certain devices.
+
 #### Others
 
 * Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
