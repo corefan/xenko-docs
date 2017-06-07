@@ -6,7 +6,7 @@ Rendering logic is divided into @'SiliconStudio.Xenko.Rendering.RenderFeature's.
 
 Xenko executes features in phases: **collect**, **extract**, **prepare** and **draw**. This means each step of the pipeline can be isolated, parallelized and optimized separately. 
 
-For information, see [Render features](render-features.md).
+For more information, see [Render features](render-features.md).
 
 ## Render views
 
