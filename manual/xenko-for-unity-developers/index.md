@@ -250,8 +250,8 @@ public override void Update()
     {
         //Do something.
     }
-    float Horiz = Input.GetGamePad(0).RightThumb.X;
-    float Vert = Input.GetGamePad(0).RightThumb.Y;
+    float Horiz = Input.GetGamePadByIndex(0).RightThumb.X;
+    float Vert = Input.GetGamePadByIndex(0).RightThumb.Y;
     //Do something else.
 }
 ```
