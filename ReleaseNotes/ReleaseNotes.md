@@ -139,7 +139,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 
 ## Changelog
 
-### Version 2.0.0.2 - released 25 April 2017
+### Version 2.0.0.2 — 25 April 2017
 
 #### Improvements
 
@@ -284,7 +284,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 
 * Removing and re-adding entities no longer causes crashes in certain situations
 
-### Version 2.0.1.1 - 28 April 2017
+### Version 2.0.1.1 — 28 April 2017
 
 #### Bug fixes
 
@@ -302,7 +302,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 
 * Fixed a possible issue when compiling a game that targets iOS and the right Xamarin version cannot be found
 
-### Version 2.0.2.1 - 8 June 2017
+### Version 2.0.2.1 — 8 June 2017
 
 #### Improvements
 
