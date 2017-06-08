@@ -12,7 +12,7 @@ Game Studio displays child scenes together with their parent. Individual scenes 
 
 When running your game, the **default scene** set in your **game settings** is loaded as the **root scene** and can be used to store persistent entities. More scenes can be dynamically loaded and unloaded from scripts and added as **child scenes**.
 
-```
+```cs
 var childScene = Content.Load<Scene>("myChildScene");
 SceneSystem.SceneInstance.RootScene.Children.Add(childScene);
 ```
@@ -27,7 +27,7 @@ You can now use a scene's `Offset` to move its entities both at design time and 
 
 The `ChildSceneComponent` has been removed. We encourage all entities to be managed by a single **entity manager** and rendered by a single **graphics compositor**.
 
-## Virtual Reality
+## Virtual reality
 
 Enabling VR is now as simple as a single click!
 
@@ -132,7 +132,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 
 ## Version 2.0.0.2
 
-Release date 2017/04/25
+Released 2017/04/25
 
 ### Enhancements
 
@@ -214,7 +214,7 @@ Release date 2017/04/25
 * Oculus Rift support (HMD and controllers)
 * Vive support (HMD and controllers)
 
-### Issues fixed
+### Bugs fixed
 
 #### Game Studio
 
@@ -279,9 +279,9 @@ Release date 2017/04/25
 
 ## Version 2.0.1.1
 
-Release date 2017/4/28
+Released 2017/4/28
 
-### Issues fixed
+### Bugs fixed
 
 #### Game Studio
 
@@ -299,7 +299,7 @@ Release date 2017/4/28
 
 ## Version 2.0.2.1
 
-Release date 2017/6/6
+Released 2017/6/8
 
 ### Improvements
 
@@ -346,7 +346,7 @@ Release date 2017/6/6
 * Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
 * Add `*.lock.json` pattern to generated `.gitignore` file (when creating a project)
  
-# Known Issues
+# Known issues
 
 * On Linux, when switching the underlying Graphics Platform, rendering doesn't occur or fail. To fix the problem, delete the cache, local, and roaming folders on the Linux host and restart the game.
 * Performance issues on mobile (being worked on)
