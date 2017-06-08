@@ -31,7 +31,7 @@ You can enable gesture recognition to detect gestures such as long presses and t
 
 [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) reports pointer events. It contains the current **pointer status** and time information. It is thrown every time the **pointer** is modified.
 
-You can access the list of **pointer events** since the last update using [PointerEvents](xref:SiliconStudio.Xenko.Input.InputManager.PointerEvents). Xenko lists pointer events in chronological order. The list is cleared at every update, so you don't need to clear it manually.
+You can access the list of **pointer events** since the last update using [InputManager.PointerEvents](xref:SiliconStudio.Xenko.Input.InputManager.PointerEvents). Xenko lists pointer events in chronological order. The list is cleared at every update, so you don't need to clear it manually.
 
 ### Get pointer information
 
@@ -68,14 +68,14 @@ You can get the pointer position in normalized or absolute coordinates.
 
 #### Absolute coordinates
 
-@'SiliconStudio.Xenko.Input.PointerEvent.AbsolutePosition' returns the pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).
+[PointerEvent.AbsolutePosition](xref:SiliconStudio.Xenko.Input.PointerEvent.AbsolutePosition) returns the pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).
 
 >[!Tip]
->To get the actual size of the screen, use @'SiliconStudio.Xenko.Input.InputManager.Pointer.SurfaceSize'.
+>To get the actual size of the screen, use [InputManager.Pointer.SurfaceSize](xref:SiliconStudio.Xenko.Input.InputManager.Pointer.SurfaceSize).
 
 ### Get pointer events
 
-Use the @'SiliconStudio.Xenko.Input.PointerEvent.EventType' to check the pointer events.
+Use the [PointerEvent.EventType](xref:SiliconStudio.Xenko.Input.PointerEvent.EventType) to check the pointer events.
 
 There are five types of pointer event:
 
@@ -89,20 +89,20 @@ There are five types of pointer event:
 
 ### Get delta values
 
-@'SiliconStudio.Xenko.Input.PointerEvent.DeltaTime' gets the time elapsed from the previous @'SiliconStudio.Xenko.Input.PointerEvent'.
+[PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) gets the time elapsed from the previous @'SiliconStudio.Xenko.Input.PointerEvent'.
 
 You can get the delta position in normalized or absolute coordinates.
 
 ### Normalized delta values
 
-'@SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition' gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **normalized** X,Y coordinates.
+[PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **normalized** X,Y coordinates.
 
 > [!Note] 
 > Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **pointer state** is **down**).
 
 ### Absolute delta values
 
-'@SiliconStudio.Xenko.Input.PointerEvent.AbsoluteDeltaPosition' gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **absolute** (X,Y) coordinates.
+[PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.AbsoluteDeltaPosition) gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **absolute** (X,Y) coordinates.
 
 ## Example code
 

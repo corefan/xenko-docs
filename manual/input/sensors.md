@@ -5,7 +5,7 @@
 
 You can use various **sensors**, such as gyroscopes and accelerometers, as input devices in your project. Sensors are often used in mobile games.
 
-Use the [input manager](xref:SiliconStudio.Xenko.Input.InputManager) to access sensors and:
+Use @'SiliconStudio.Xenko.Input.InputManager' to access sensors and:
 
 * check if a sensor is supported by Xenko
 * disable a sensor

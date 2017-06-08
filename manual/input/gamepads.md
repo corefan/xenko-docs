@@ -24,13 +24,13 @@ The Xbox Elite controller buttons have the following names in Xenko:
 
 Before handling gamepad input:
 
-* To check if any gamepads are connected, use [Input.HasGamePad](xref:SiliconStudio.Xenko.Input.InputManager.HasGamePad).
+* To check if any gamepads are connected, use [InputManager.HasGamePad](xref:SiliconStudio.Xenko.Input.InputManager.HasGamePad).
 
-* To check how many gamepads are connected, use [Input.GamePadCount](xref:SiliconStudio.Xenko.Input.InputManager.GamePadCount).
+* To check how many gamepads are connected, use [InputManager.GamePadCount](xref:SiliconStudio.Xenko.Input.InputManager.GamePadCount).
 
-* To check if the current device has been disconnected, use the @'SiliconStudio.Xenko.Input.InputManager.DeviceRemoved' event.
+* To check if the current device has been disconnected, use the [InputManager.DeviceRemoved](xref:SiliconStudio.Xenko.Input.InputManager.DeviceRemoved) event.
 
-* To check if a device has been connected, use the @'SiliconStudio.Xenko.Input.InputManager.DeviceAdded' event.
+* To check if a device has been connected, use the [InputManager.DeviceAdded](xref:SiliconStudio.Xenko.Input.InputManager.DeviceAdded) event.
 
 ### Digital buttons
 
@@ -49,7 +49,7 @@ You can also get the state of digital buttons using [GamePadState.Buttons](xref:
 > [!Note] 
 > The [GamePadState.Buttons](xref:SiliconStudio.Xenko.Input.GamePadState.Buttons) field is a bitmask that uses binary system. Depending on the bitmask value, you can determine which buttons are *up* or *down*.
 
-To get the gamepad state, use @'SiliconStudio.Xenko.Input.IGamePadDevice.State'.
+To get the gamepad state, use [IGamePadDevice.State](xref:SiliconStudio.Xenko.Input.IGamePadDevice.State).
 
 ### Analog buttons
 
@@ -57,7 +57,7 @@ To query values of analog buttons, first get the current state of gamepad using
 [GetGamePadByIndex(index)](xref:SiliconStudio.Xenko.Input.InputManager.GetGamePadByIndex\(System.Int32\)), where _index (Integer)_ is the index of the gamepad you want to check.
 
 > [!WARNING]
-> The value returned by @'SiliconStudio.Xenko.Input.IGamePadDevice.State' is the state of the gamepad at the **current** update. You can't reuse this value for the next updates. You have to query it again in every update.
+> The value returned by [IGamePadDevice.State](xref:SiliconStudio.Xenko.Input.IGamePadDevice.State) is the state of the gamepad at the **current** update. You can't reuse this value for the next updates. You have to query it again in every update.
 
 To get trigger and thumbstick positions, use these 
 [GamePadState](xref:SiliconStudio.Xenko.Input.GamePadState) fields:

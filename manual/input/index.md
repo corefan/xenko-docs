@@ -19,16 +19,9 @@ Xenko handles input entirely via scripts. There are low-level and high-level API
 
 Handle input with the [InputManager](xref:SiliconStudio.Xenko.Input.InputManager) class. You can access this class from a script with its properties and methods.
 
-To check whether a particular input device is available, use the corresponding [Input](xref:SiliconStudio.Xenko.Input.InputManager) property. For example, to check if a mouse is connected, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse).
+To check whether a particular input device is available, use the corresponding @'SiliconStudio.Xenko.Input.InputManager' property. For example, to check if a mouse is connected, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse).
 
-
-[InputManager.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse)
-
-@'SiliconStudio.Xenko.Input.InputManager.HasMouse'
-
-
-
-After you check device availability, there are four ways to handle input in Xenko.
+After you check the device availability, there are four ways to handle input in Xenko.
 
 ### Query state
 

@@ -35,10 +35,10 @@ Instead, use the **key events** collections available in the [Input](xref:Silico
 
 | Public List | Description l
 | ----------- | --- 
-| @'SiliconStudio.Xenko.Input.InputManager.DownKeys' | Gets a list of the keys that were down in the last update.
-| @'SiliconStudio.Xenko.Input.InputManager.PressedKeys' | Gets a list of the keys pressed in the last update.
-| @'SiliconStudio.Xenko.Input.InputManager.ReleasedKeys' | Gets a list of the keys released in the last update.
-| @'SiliconStudio.Xenko.Input.InputManager.KeyEvents' | Gets a list of the key events in the last update (keys pressed or released).
+| [InputManager.DownKeys](xref:SiliconStudio.Xenko.Input.InputManager.DownKeys) | Gets a list of the keys that were down in the last update.
+| [InputManager.PressedKeys](xref:SiliconStudio.Xenko.Input.InputManager.PressedKeys) | Gets a list of the keys pressed in the last update.
+| [InputManager.ReleasedKeys](xref:SiliconStudio.Xenko.Input.InputManager.ReleasedKeys) | Gets a list of the keys released in the last update.
+| [InputManager.KeyEvents](xref:SiliconStudio.Xenko.Input.InputManager.KeyEvents) | Gets a list of the key events in the last update (keys pressed or released).
 
 Every @'SiliconStudio.Xenko.Input.KeyEvent' has two properties: @'SiliconStudio.Xenko.Input.KeyEvent.Key' (the affected key) and [IsDown](xref:SiliconStudio.Xenko.Input.KeyEvent.IsDown) (the new state of the key).
 
