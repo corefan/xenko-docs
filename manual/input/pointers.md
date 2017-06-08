@@ -35,17 +35,14 @@ You can access the list of **pointer events** since the last update using [Point
 
 ### Get pointer information
 
-
-
 You can use the following properties to get information about the pointer that triggered the event:
 
 |Property|Description
 |--------|-----------
 |[PointerEvent.PointerId](xref:SiliconStudio.Xenko.Input.PointerEvent.PointerId) | Indicates the ID of the pointer which triggered the event.
 
-
 > [!Warning]
-> The ID of a pointer is valid only during a single _Down->Move->Up_ sequence of pointer events.
+> The ID of a pointer is valid only during a single _Pressed->Moved->Released_ sequence of pointer events.
 > A finger can have different IDs each time it touches the screen (even if this happens very quickly).
 
 > [!Warning]
@@ -78,29 +75,34 @@ You can get the pointer position in normalized or absolute coordinates.
 
 ### Get pointer events
 
-Use the [PointerEvent.State](xref:SiliconStudio.Xenko.Input.PointerEvent.State) to check the pointer events. This returns a value inside [PointerState](xref:SiliconStudio.Xenko.Input.PointerState).
+Use the @'SiliconStudio.Xenko.Input.PointerEvent.EventType' to check the pointer events.
 
-Xenko recognizes five types of event:
+There are five types of pointer event:
 
-* _Down_: The finger touched the screen.
-* _Move_: The finger moved along the screen.
-* _Up_: The finger left the screen.
-* _Out_: The finger left the touch region.
-* _Cancel_: The pointer sequence was canceled. This can happen when the application is interrupted; for example, a phone app might be interrupted by an incoming phone call.
+* **Pressed**: The finger touched the screen.
+* **Moved**: The finger moved along the screen.
+* **Released**: The finger left the screen.
+* **Canceled**: The pointer sequence was canceled. This can happen when the application is interrupted; for example, a phone app might be interrupted by an incoming phone call.
 
 > [!Note] 
-> A sequence of pointer events for one pointer always starts with a _Down_ event. This might be followed by one or more _Move_ events, and always ends with an _Up_, _Out_, or _Cancel_ event.
+> A sequence of pointer events for one pointer always starts with a **Pressed** event. This might be followed by one or more **Moved** events, and always ends with a **Released** or **Canceled** event.
 
 ### Get delta values
 
-Use [PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) to get the time elapsed from the previous [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) for a particular pointer ID.
+@'SiliconStudio.Xenko.Input.PointerEvent.DeltaTime' gets the time elapsed from the previous @'SiliconStudio.Xenko.Input.PointerEvent'.
 
-Use [PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) to get the change in position since the previous [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) for a particular pointer ID.
+You can get the delta position in normalized or absolute coordinates.
+
+### Normalized delta values
+
+'@SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition' gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **normalized** X,Y coordinates.
 
 > [!Note] 
 > Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **pointer state** is **down**).
 
+### Absolute delta values
 
+'@SiliconStudio.Xenko.Input.PointerEvent.AbsoluteDeltaPosition' gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **absolute** (X,Y) coordinates.
 
 ## Example code
 

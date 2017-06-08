@@ -21,6 +21,13 @@ Handle input with the [InputManager](xref:SiliconStudio.Xenko.Input.InputManager
 
 To check whether a particular input device is available, use the corresponding [Input](xref:SiliconStudio.Xenko.Input.InputManager) property. For example, to check if a mouse is connected, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse).
 
+
+[InputManager.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse)
+
+@'SiliconStudio.Xenko.Input.InputManager.HasMouse'
+
+
+
 After you check device availability, there are four ways to handle input in Xenko.
 
 ### Query state

@@ -6,11 +6,12 @@
 **Gamepads**, such as the Xbox Elite Wireless Controller and the PS4 DualShock, are popular input devices for consoles and desktop.
 
 > [!Note] 
-> Xenko is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings. Gamepad-specific features like the PS4 DualShock touchpad aren't supported yet.
+> Xenko is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings. Gamepad-specific features like the PS4 DualShock touchpad aren't supported.
 
 ## Digital and analog buttons
 
 * **Digital** buttons have two states: **up** and **down**. The D-pad, Start, Back, Thumbstick (press), A, B, X and Y buttons are digital buttons.
+
 * **Analog** buttons return a value depending on how hard the user presses. The triggers are analog buttons, and return a value between 0 and 1. The thumbsticks are also analog, and return values between -1 and 1 on the X and Y axes. 
 
 The Xbox Elite controller buttons have the following names in Xenko:

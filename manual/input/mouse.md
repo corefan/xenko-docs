@@ -30,7 +30,7 @@ You can get the mouse position in normalized or absolute coordinates.
 
 ### Normalized coordinates
 
-@'SiliconStudio.Xenko.Input.InputManager.MousePosition' returns the mouse pointer position in **normalized** X and Y coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution and you don't have to write separate code for different resolutions.
+@'SiliconStudio.Xenko.Input.InputManager.MousePosition' returns the mouse pointer position in **normalized** X, Y coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution and you don't have to write separate code for different resolutions.
 
 * (0,0): the pointer is in the top-left corner of the screen
 * (1,1): the pointer is in the bottom-right corner of the screen
