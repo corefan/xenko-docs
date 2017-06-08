@@ -130,16 +130,14 @@ To reduce this effect, in the **light shaft component properties**, reduce the *
 
 Alternatively, add additional bounding volumes and process them separately. To do this:
 
-1. Create additional bounding volume(s) and position them to cover the area where you want to create light shafts. Make sure the bounding volumes don't overlap, as this causes light shafts to become extra-bright.
+1. Create additional bounding volume(s) and position them to cover the areas where you want to create light shafts. Make sure the bounding volumes don't overlap, as this makes light shafts extra-bright.
 
 2. In the **light shaft component properties**, make sure **Process bounding volumes separately** is selected.
 
 ![Separate bounding volume](media/separate-bounding-volumes.png)
 
-This processes the light shafts in each bounding volume separately, lessening visual noise.
-
 > [!Note]
-> Using multiple bounding volumes uses more GPU.
+> Processing bounding volumes separately uses more GPU.
 
 ## See also
 
