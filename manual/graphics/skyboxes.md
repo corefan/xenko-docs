@@ -17,7 +17,7 @@ To create a skybox, Xenko encloses the scene in a cube and maps a **cubemap** (a
 
 ![Merged skybox](media/skybox-assembled.png)
 
-Currently, Game Studio can't convert image files to `.dds` files. Use another application to create a cubemap from separate image files, such as:
+Currently, Game Studio can't convert image files to cuebemaps (`.dds` files). Use another application to create a cubemap from separate image files, such as:
 
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
