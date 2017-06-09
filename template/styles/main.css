@@ -184,13 +184,16 @@ th, td img{
 .toc .level3 {
     font-weight: normal;
     margin-left: 15px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .toc .level1, .toc .level2, .toc .level3, .toc .level4, .toc .level5 {
     margin-top: 0px;
 }
-
+.nav.level2 li .expand-stub+a,
+.nav.level2 li .expand-stub{
+    margin-top: 5px;
+}
 .toc .level4 {
     font-weight: normal;
     margin-left: 15px;
