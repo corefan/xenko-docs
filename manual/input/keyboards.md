@@ -40,7 +40,7 @@ Instead, use the **key events** collections available in the [Input](xref:Silico
 | [InputManager.ReleasedKeys](xref:SiliconStudio.Xenko.Input.InputManager.ReleasedKeys) | Gets a list of the keys released in the last update.
 | [InputManager.KeyEvents](xref:SiliconStudio.Xenko.Input.InputManager.KeyEvents) | Gets a list of the key events in the last update (keys pressed or released).
 
-Every @'SiliconStudio.Xenko.Input.KeyEvent' has two properties: @'SiliconStudio.Xenko.Input.KeyEvent.Key' (the affected key) and [IsDown](xref:SiliconStudio.Xenko.Input.KeyEvent.IsDown) (the new state of the key).
+Every @'SiliconStudio.Xenko.Input.KeyEvent' has two properties: @'SiliconStudio.Xenko.Input.KeyEvent.Key' (the affected key) and @'SiliconStudio.Xenko.Input.ButtonEvent.IsDown' (the new state of the key).
 
 ## Example code
 

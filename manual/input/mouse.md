@@ -39,8 +39,11 @@ You can get the mouse position in normalized or absolute coordinates.
 
 [InputManager.AbsoluteMousePosition](xref:SiliconStudio.Xenko.Input.InputManager.AbsoluteMousePosition) returns the mouse pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).
 
->[!Tip]
->To get the actual size of the screen, use [InputManager.Pointer.SurfaceSize](xref:SiliconStudio.Xenko.Input.InputManager.Pointer.SurfaceSize).
+> [!Tip]
+> To get the actual size of the screen, access [IPointerDevice.SurfaceSize](xref:SiliconStudio.Xenko.Input.IPointerDevice.SurfaceSize). For example:
+> ```cs
+> var surfaceSize = Input.Mouse.SurfaceSize;
+> ```
 
 ## Query mouse button state changes
 

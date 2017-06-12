@@ -38,9 +38,9 @@ To query the states and state changes of digital gamepad buttons, on the `GamePa
 
 | Method | Functionality
 |--------|--------------
-| [IsButtonDown(button)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonDown\(SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the button is in the _down_ state.
-| [IsButtonPressed(button)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonPressed\(SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the user has _pressed_ the button since the previous update. 
-| [IsButtonReleased(button)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonReleased\(SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the user has _released_ the button since the previous update.
+| [IsButtonDown(IGamePadDevice, GamePadButton)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonDown\(SiliconStudio.Xenko.Input.IGamePadDevice,SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the button is in the _down_ state.
+| [IsButtonPressed(IGamePadDevice, GamePadButton)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonPressed\(SiliconStudio.Xenko.Input.IGamePadDevice,SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the user has _pressed_ the button since the previous update. 
+| [IsButtonReleased(IGamePadDevice, GamePadButton)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonReleased\(SiliconStudio.Xenko.Input.IGamePadDevice,SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the user has _released_ the button since the previous update.
 
 **Button (GamePadButton)** is the gamepad button you want to check.
 
@@ -64,10 +64,10 @@ To get trigger and thumbstick positions, use these
 
 | Field | Description 
 |-------|------------
-| [LeftThumb](xref:SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | Left thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
-| [RightThumb](xref:SiliconStudio.Xenko.Input.GamePadState.RightThumb) | Right thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
-| [LeftTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axes. |
-| [RightTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
+| [GamePadState.LeftThumb](xref:SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | Left thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
+| [GamePadState.RightThumb](xref:SiliconStudio.Xenko.Input.GamePadState.RightThumb) | Right thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
+| [GamePadState.LeftTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axes. |
+| [GamePadState.RightTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
 
 Thumbsticks move along the X and Y axes. Their positions read as follows:
 
@@ -80,7 +80,7 @@ Triggers move along the X axis. Their positions read as follows:
 
 ### Vibration
 
-To set the gamepad vibration level, use [SetVibration](xref:SiliconStudio.Xenko.Input.IGamePadDevice.SetVibration\(System.Int32,System.Single,System.Single\)).
+To set the gamepad vibration level, use [IGamePadDevice.SetVibration](xref:SiliconStudio.Xenko.Input.IGamePadDevice.SetVibration\(System.Single,System.Single,System.Single,System.Single\)).
 
 > [!Note] 
 > Xenko currently only supports vibration for Xbox gamepads.
