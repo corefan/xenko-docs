@@ -14,7 +14,10 @@ The root scene contains all the scenes and entities in your game. It should cont
 
 Scenes are kept in different folders. This means that different people can work on them without overwriting each other's work.
 
-## Parent and child scenes
+> [!Note]
+> When scenes load at runtime, their **child scenes aren't automatically loaded too**. You have to load child scenes in code. For more information, see [Load scenes](load-scenes.md).
+
+## Set parent and child scenes
 
 The relationship between parent and child scenes is set on the child, not the parent. In other words, child scenes know about their parent scenes, but parent scenes don't know about their child scenes.
 
@@ -69,7 +72,7 @@ Locked items have a **gold locked padlock** icon in the entity tree.
 
 ## Load and unload scenes in the scene editor
 
-You can load and unload scenes (with all their child scenes and entities) in the scene editor. Unloading scenes is useful if, for example, you want to remove clutter from your editing view, or improve editor performance.
+You can load and unload scenes (with all their child scenes and entities) in the scene editor. Unloading scenes in the editor is useful if, for example, you want to remove clutter from your editing view, or improve editor performance.
 
 The screenshots below show a root scene with child scenes loaded and unloaded. The root scene contains entities that all the scenes use, including the [skybox](../graphics/skyboxes.md), [scripts](../scripts/index.md), asteroids, and player character. The child scenes are sections of level.
 

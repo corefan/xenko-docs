@@ -51,10 +51,12 @@ private void InstantiateBulletPrefab()
 }
 ```
 
->[!Note]
->At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include the new changes.
+> [!Note]
+> At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include the new changes.
+> For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at certain point at runtime. The script won't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs will have the new color, but existing prefabs won't.
 
->For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at certain point at runtime. The script doesn't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs have the new color, but existing prefabs don't.
+> [!Note]
+> If your prefab contains a script, you need to add the prefab instances to the scene for the script to work. Just instantiating the prefab isn't enough.
 
 ## See also
 
