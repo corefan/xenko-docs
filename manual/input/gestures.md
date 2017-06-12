@@ -95,7 +95,7 @@ The user touches the screen and quickly removes their finger.
 
 **Event class**: @'SiliconStudio.Xenko.Input.GestureEventTap'
 
-The number of fingers on the screen can't vary during the gesture. To set the number of fingers required for a tap, modify @'SiliconStudio.Xenko.Input.GestureConfigTap.RequiredNumberOfFingers'.
+The number of fingers on the screen can't vary during the gesture. To set the number of fingers required for a tap, modify @'SiliconStudio.Xenko.Input.GestureConfig.RequiredNumberOfFingers'.
 
 > [!TIP] 
 > To distinguish single taps from multi-taps, the system uses latency in tap events. To disable this, set the [GestureConfigTap.MaximumTimeBetweenTaps](xref:SiliconStudio.Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps) field to **0**.
@@ -155,9 +155,9 @@ To restrict the direction of the drag to **vertical** or **horizontal**, use [Ge
 
 The user touches the screen with two fingers and moves them independently.
 
-**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigComposite'.
+**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigComposite'
 
-**Event class**: @'SiliconStudio.Xenko.Input.GestureEventComposite'.
+**Event class**: @'SiliconStudio.Xenko.Input.GestureEventComposite'
 
 The composite gesture requires exactly two fingers on the screen. It's triggered when the system detects one of the three basic actions:
 * _Translation_: the user translates two fingers together in the same direction.
