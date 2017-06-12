@@ -224,34 +224,24 @@ Xenko supports a variety of inputs. The code samples below demonstrate the diffe
 
 For more information about Input in Xenko, see [Input](../input/index.md).
 
-### Unity®
-
+## Unity
 ```cs
 void Update()
 {
-    if (Input.GetButtonDown("Crouch"))
+    // true for one frame in which the space bar was pressed
+    if(Input.GetKeyDown(KeyCode.Space))
     {
-        //Do something.
+        // Do something.
     }
+
+    // true while this joystick button is down
+    if (Input.GetButton("joystick button 0"))
+    {
+        // Do something.
+    }
+
     float Horiz = Input.GetAxis("Horizontal");
     float Vert = Input.GetAxis("Vertical");
-    //Do something else.
-}
-```
-
-### Xenko
-
-```cs
-public override void Update()
-{
-    //Input events.
-
-    if (Input.IsPadButtonDown(0, GamePadButton.B)
-    {
-        //Do something.
-    }
-    float Horiz = Input.GetGamePadByIndex(0).RightThumb.X;
-    float Vert = Input.GetGamePadByIndex(0).RightThumb.Y;
     //Do something else.
 }
 ```

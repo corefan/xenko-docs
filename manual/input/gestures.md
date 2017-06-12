@@ -58,7 +58,7 @@ A gesture always has one of four states:
 
 * Changed
 
-* Ended 
+* Ended
 
 * Occurred
 
