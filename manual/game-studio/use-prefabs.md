@@ -29,9 +29,14 @@ To do this, in the **Scene Editor**, right-click a child entity or entities and 
 
 ![Break link between child and prefab](media/use-prefabs-break-link-to-prefab.gif)
 
-## Example code
+## Instantiate and add prefabs at runtime
 
-To use prefabs at runtime, you need to intantiate them. For example, if you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate it with the following code:
+To use prefabs at runtime, you need to instantiate them and then add them to the scene in code.
+
+> [!Note]
+> Just calling `Instantiate()` isn't enough to add a prefab instance to the scene. You also need to use `Add()`. For example, if your prefab contains a model, the model is invisible until you add the prefab instance. Likewise, if your prefab contains a script, the script won't work until you add the prefab instance.
+
+For example, if you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate and add it with the following code:
 
 ```cs
 private void InstantiateBulletPrefab()
@@ -54,9 +59,6 @@ private void InstantiateBulletPrefab()
 > [!Note]
 > At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include the new changes.
 > For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at certain point at runtime. The script won't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs will have the new color, but existing prefabs won't.
-
-> [!Note]
-> If your prefab contains a script, you need to add the prefab instances to the scene for the script to work. Just instantiating the prefab isn't enough.
 
 ## See also
 
