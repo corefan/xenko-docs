@@ -1,6 +1,7 @@
-# Asset Bundles
+# Asset bundles
 
-<div class="doc-incomplete"/>
+>[!Warning]
+>This section is out of date and will be updated soon. For now, it should only be used for for reference.
 
 A bundle of assets allows to package assets into a single archive that can be downloaded into the game at a specific time.
 
@@ -15,10 +16,9 @@ Basic rules:
 - Once a bundle is deployed into the game, all assets from this bundle and all its dependencies are accessible
 - Bundle resolution is done through an asynchronous callback that allows you to download bundle, and will be called once per dependency (similar to AssemblyResolve event).
 
-# Creating a Bundle
+# Create a bundle
 
-> **Note**
-> 
+> [!Note]
 > Creating currently requires some manual steps (i.e. editing `xkpkg` by hand). In the future, we intend to move this feature in GameStudio.    
 
 Open the `xkprj` file of the game executable and add the following configuration:
@@ -56,7 +56,7 @@ Bundles:
 ```
 
 
-> **Note**
+> [!Note]
 > 
 > Asset dependencies are automatically placed in the most appropriate bundle.
 > 
@@ -74,7 +74,7 @@ Bundles:
 > 
 >      
 
-# Loading Bundle at runtime
+# Load a bundle at runtime
 
 Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{SiliconStudio.Core.Storage.ObjectDatabase.LoadBundle})`:
 

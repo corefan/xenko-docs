@@ -1,6 +1,7 @@
-# Asset Manager
+# Asset manager
 
-<div class="doc-incomplete"/>
+>[!Warning]
+>This section is out of date and will be updated soon. For now, it should only be used for for reference.
 
 # Assets
 
