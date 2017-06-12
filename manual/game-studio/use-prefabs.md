@@ -36,7 +36,7 @@ To use prefabs at runtime, you need to instantiate them and then add them to the
 > [!Note]
 > Just calling `Instantiate()` isn't enough to add a prefab instance to the scene. You also need to use `Add()`. For example, if your prefab contains a model, the model is invisible until you add the prefab instance. Likewise, if your prefab contains a script, the script won't work until you add the prefab instance.
 
-For example, if you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate and add it with the following code:
+If you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate and add it with the following code:
 
 ```cs
 private void InstantiateBulletPrefab()

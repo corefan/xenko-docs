@@ -34,7 +34,6 @@ var scene = Content.Load<Scene>("scenes/scene1");
 var entity = Content.Load<Entity>("entity1");
 ```
 
-
 Note that loading an asset that has already been loaded only increment the reference counter and do not reload the asset.
 
 ## Unloading

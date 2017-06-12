@@ -46,8 +46,6 @@
 ## [Assets](engine/assets/index.md)
 ### [Asset bundles](engine/assets/asset-bundles.md)
 ### [Asset control](engine/assets/asset-control.md)
-### [Serialization](engine/assets/serialization.md)
-### [Create a custom asset](engine/assets/create-a-custom-asset.md)
 ## [Entity component model](engine/entity-component-model/index.md)
 ### [Manage entities](engine/entity-component-model/managing-entities.md)
 ## [File system](engine/file-system.md)
