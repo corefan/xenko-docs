@@ -16,9 +16,11 @@ In most cases, you want the debug renderer to share an entry point with one or m
 
 ![Debug renderer property grid](media/debug-renderer-property-setup.png)
 
-## Script example
+## Use a debug renderer
 
-The **Debug physics shapes** script included in Xenko uses the debug renderer to display collider shapes at runtime.
+To use the debug renderer, reference it in your script and add debug render stages.
+
+For example, the **Debug physics shapes** script included in Xenko uses the debug renderer to display collider shapes at runtime.
 
 ```cs
 using System.Linq;
