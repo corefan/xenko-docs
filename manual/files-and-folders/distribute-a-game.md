@@ -39,11 +39,15 @@ When you're ready to publish your game, create a release build from Visual Studi
 
 ## 2. Delete unnecessary files
 
-In the release folder in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*), delete:
+In the release folder in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*), you can delete the following unnecessary files:
 
-* any `.pdb` files
+* `.pdb` files (debug information)
 
-* any folders other than the `x64`, `x86`, or `data` folders
+* `.xml` files (API documentation)
+
+* files that contain `vshost` in their filenames (eg `MyGame.vshost.exe` and `MyGame5.vshost.exe.manifest`) 
+
+* folders other than the `x64`, `x86`, or `data` folders
 
 * other unnecessary files, such as custom configuration files (ie files not created with Xenko)
 
