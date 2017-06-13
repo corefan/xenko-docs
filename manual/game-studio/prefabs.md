@@ -15,9 +15,9 @@ The better approach is to make the a tree prefab. Then we can place as many tree
 
 The most common use for prefabs is to create a small piece of your scene - like a car, NPC, or item of furniture - and duplicate it as many times as you need. When you need to modify it - for example, if you want to change its model - you can change it in one place and apply the change everywhere at once.
 
-You can make any entity or combination of entities of a prefab; they can be as simple or as complex as you need. Prefabs can even contain other prefabs (known as **nested prefabs**).
+You can make any entity or combination of entities of a prefab; they can be as simple or as complex as you need. Prefabs can even contain other prefabs (known as [nested prefabs](nested-prefabs.md)).
 
-You can also override specific prefab properties in each prefab instance.
+You can [override specific properties](override-prefab-properties.md) in each prefab instance.
 
 ## See also
 
