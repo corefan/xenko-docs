@@ -1,6 +1,6 @@
 # Display a UI in an overlay
 
-This page explains how to render a UI to a texture, then display it as an overlay. This is sometimes described as a "Minority Report-style" interface.
+This page explains how to render a UI to a texture, then display it as an overlay.
 
 These instructions assume you already have a UI that you want to display in the overlay. For information about creating UIs, see the [UI](../ui/index.md) section.
 
@@ -129,9 +129,11 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 Your game is now ready to render the UI to an overlay in your VR device.
 
-## Sample
+## VR template
 
 For an example of a UI overlay implemented in a VR game, see the VR template included with Xenko.
+
+![VR template](media/template-virtual-reality.png)
 
 ## See also
 

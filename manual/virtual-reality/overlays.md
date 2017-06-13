@@ -1,11 +1,11 @@
 # Overlays
 
-In VR games, you can display textures (including render textures) as overlays that appear to float in front of the player. This is especially useful for UIs (sometimes described as a "Minority Report-style" interface).
+In VR games, you can display textures (including render textures) as overlays that appear to float in front of the player. This is especially useful for UIs.
 
 > [!Note]
 > You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay.
 
-This page explains how to add an overlay. To display a UI in an overlay, you need to render the UI to a render texture, and display the render texture in the overlay. For instructions, see [Display a UI in an overlay](display-a-UI-in-an-overlay.md).
+This page explains how to add an overlay. To display a **UI** in an overlay, you need to render the UI to a render texture, and display the render texture in the overlay. For instructions, see [Display a UI in an overlay](display-a-UI-in-an-overlay.md).
 
 ## Add an overlay
 
@@ -60,9 +60,11 @@ You can add as many overlays as you need. To add another overlay, click **Add to
 | Surface size   | The size of the overlay, in world units (meters)                           
 | Follows head   | If enabled, the overlay follows the user's head, so it's always in front of their view 
 
-## Sample
+## VR template
 
 For an example of a UI overlay implemented in a VR game, see the VR template included with Xenko.
+
+![VR template](media/template-virtual-reality.png)
 
 ## See also
 
