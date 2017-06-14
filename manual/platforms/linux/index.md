@@ -6,7 +6,7 @@ Make sure to first follow the [requirements and setup instructions](setup.md)
 
 ## Create a Linux game
 
-Create a new game in GameStudio and make sure to select Linux as one of the target platform.
+Create a new game in Game Studio and make sure to select Linux as one of the target platform.
 
 ![New Game](media/platform_choice.png)
 
