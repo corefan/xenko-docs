@@ -1,24 +1,24 @@
 # Shader stages
 
-The function for each stage has a predefined name, so we recommend you stick with it.
+The function for each stage has a predefined name, so we recommend you don't change it.
 
 - `HSMain` for hull shader
 - `HSConstantMain` for patch constant function
 - `DSMain` for domain shader
-- `VSMain` for vertex shader. It takes no arguments
+- `VSMain` for vertex shader (takes no arguments)
 - `GSMain` for geometry shader
-- `PSMain` for pixel shader. It takes no arguments
-- `CSMain` for compute shader. It takes no arguments
+- `PSMain` for pixel shader (takes no arguments)
+- `CSMain` for compute shader (takes no arguments)
 
 These are all void methods.
 
-The geometry and tessellation shaders need some kind of predefined structures as input and output. However, since Xenko shaders are generic, it's impossible to know beforehand what the structure will be. As a result, these shaders use `Input` and `Output` structures that are automatically generated to fit the final shader.
+The geometry and tessellation shaders need some kind of predefined structure as input and output. However, since Xenko shaders are generic, it's impossible to know beforehand what the structure will be. As a result, these shaders use `Input` and `Output` structures that are automatically generated to fit the final shader.
 
 ## Vertex shader
 
-A vertex shader has to set the variable with the semantic `SV_Position`. In `ShaderBase`, it is `ShadingPosition`.
+A vertex shader has to set the variable with the semantic `SV_Position`. In `ShaderBase`, it's `ShadingPosition`.
 
-Example of a vertex shader:
+For example:
 
 ```cs
 override stage void VSMain()
@@ -33,7 +33,7 @@ override stage void VSMain()
 
 A pixel shader has to set the variable with the semantic `SV_Target`. In `ShaderBase`, it is `ColorTarget`.
 
-Example of a pixel shader:
+For example:
 
 ```cs
 override stage void PSMain()
@@ -46,7 +46,7 @@ override stage void PSMain()
 
 ## Geometry shader
 
-Example of geometry shader:
+An example of geometry shader:
 
 ```cs
 [maxvertexcount(1)]
@@ -69,7 +69,7 @@ void GSMain(triangle Input input[3], inout PointStream<Output> pointStream)
 
 ## Tessellation shader
 
-Example of a tessellation shader:
+An example of a tessellation shader:
 
 ```cs
 [domain("tri")]
@@ -107,7 +107,7 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 
 ## Compute shader
 
-Example of a compute shader:
+An example of a compute shader:
 
 ```cs
 [numthreads(2, 3, 5)]
@@ -117,13 +117,13 @@ void CSMain()
 }
 ```
 
-You can inherit from the `ComputeShaderBase` class and override the `Compute` method.
+You can inherit from `ComputeShaderBase` and override the `Compute` method.
 
 ## See also
 
 * [Effect language](../effect-language.md)
 * [Shading language index](index.md)
-    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Shader classes, mixins, and inheritance](shader-classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
-    - [Templating](template.md)
+    - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)

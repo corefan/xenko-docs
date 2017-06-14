@@ -95,7 +95,7 @@ The forward renderer is also where you set VR options. For more information, see
 
 ### Debug renderer
 
-The debug renderer is used by scripts to print debug information.
+The debug renderer is used by scripts to print debug information. For more information, see [Debug renderers](debug-renderers.md).
 
 ### Post-processing effects
 
@@ -107,8 +107,12 @@ To create a node, right-click the graphics compositor editor and select the type
 
 ![Create node](../../virtual-reality/media/create-node.png)
 
-## See also
+## In this section
 
 * [Scene renderers](scene-renderers.md)
-* [Custom scene renders](custom-scene-renderers.md)
+    * [Custom scene renders](custom-scene-renderers.md)
+* [Debug renderers](debug-renderers.md)
+
+## See also
+
 * [Camera slots](../camera-slots.md)

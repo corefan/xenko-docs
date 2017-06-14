@@ -49,15 +49,15 @@ This an example of a shadow map generated from a directional light, using four c
 
 To see shadow cascades in the scene editor, in the property grid, under the **Shadow** properties, enable the **Debug** option.
 
-| Cascades debug off                                                   | Cascades debug on                                                    |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)  |
+| Cascades debug off    | Cascades debug on     
+| ---------------------- | ----------
+| ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)
 
 The different colors indicate the cascade for each distance range (Green: 0, Blue: 1, Purple: 2, Red: 3).
 
 ### Directional light shadow properties
 
-| Property            | Description                                                        
+| Property            | Description             
 | ------------------- | ------------
 | Filter              | Filtering produces **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering). Other techniques will be implemented in future versions
 | Size                | The size of the shadow map texture. For the directional light, this value is **x1** by default, as a directional light has more visual impact than lights with shorter ranges
@@ -73,14 +73,6 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 | Depth Bias          | The amount of depth to add to the sampling depth to avoid the phenomenon of shadow acne
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal
 | Debug               | Displays the shadow map cascades in the scene editor
-
-## Light shafts
-
-Used with a **light shaft component** and a **light shaft bounding volume**, directional lights create light shafts. 
-
-![Light shafts](media/lightshaft_640.jpg)
-
-For more information, see [Light shafts](light-shafts.md).
 
 ## See also
 

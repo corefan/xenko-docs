@@ -1,6 +1,7 @@
-# Asset Manager
+# Asset manager
 
-<div class="doc-incomplete"/>
+>[!Warning]
+>This section is out of date and will be updated soon. For now, it should only be used for for reference.
 
 # Assets
 
@@ -33,7 +34,6 @@ var scene = Content.Load<Scene>("scenes/scene1");
 // Load an Entity asset
 var entity = Content.Load<Entity>("entity1");
 ```
-
 
 Note that loading an asset that has already been loaded only increment the reference counter and do not reload the asset.
 

@@ -16,7 +16,7 @@ An effect also often defines a set of parameters. To set these, you need to [bin
 
 ## Shaders
 
-Shaders are authored in the [Xenko's shading language](shading-language/index.md), which is an extension of `HLSL`. They provide true composition of modular shaders via [inheritance](shading-language/classes-mixins-and-inheritance.md), shader [mixins](shading-language/composition.md) and [automatic weaving of shader in-out attributes](shading-language/automatic-shader-stage-input-output.md).
+Shaders are authored in the [Xenko's shading language](shading-language/index.md), which is an extension of `HLSL`. They provide true composition of modular shaders via [inheritance](shading-language/shader-classes-mixins-and-inheritance.md), shader [mixins](shading-language/composition.md) and [automatic weaving of shader in-out attributes](shading-language/automatic-shader-stage-input-output.md).
 
 ## Effects
 
@@ -34,7 +34,7 @@ For mobile platforms, shaders are optimized by a GLSL optimizer to improve perfo
 
 * [Effect language](effect-language.md)
 * [Shading language](shading-language/index.md)
-    - [Class inheritance](shading-language/classes-mixins-and-inheritance.md)
+    - [Shader classes, mixins and inheritance](shading-language/shader-classes-mixins-and-inheritance.md)
     - [Composition](shading-language/composition.md)
-    - [Templating](shading-language/template.md)
+    - [Templates](shading-language/templates.md)
     - [Shader stage input/output automatic management](shading-language/automatic-shader-stage-input-output.md)

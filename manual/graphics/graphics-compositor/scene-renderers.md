@@ -1,6 +1,6 @@
 # Scene renderers
 
-**Scene renderers** let you customize the **collect** and **Draw** phases of the rendering. For more information about these stages, see [Render features](../rendering-pipeline/render-features.md). 
+**Scene renderers** let you customize the **collect** and **draw** phases of the rendering. For more information about these stages, see [Render features](../rendering-pipeline/render-features.md). 
 
 You select scene renderers in the **entry points** node properties.
 
@@ -93,3 +93,5 @@ Renders to a render texture, which you can display in your scene (eg to display 
 
 * [Graphics compositor](index.md)
 * [Camera slots](../camera-slots.md)
+* [Custom scene renders](custom-scene-renderers.md)
+* [Debug renderers](debug-renderers.md)

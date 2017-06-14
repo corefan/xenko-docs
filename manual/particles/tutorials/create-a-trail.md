@@ -1,5 +1,5 @@
+# Tutorial: Create a trail
 
-# Create a trail
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
@@ -382,7 +382,9 @@ Here's a more elaborate trail that combines multiple particle effects:
 If you'd like to see how it works, [download the project file](media/MyTrailEffect.zip) and take a look.
 
 ## See also
+
+* [Tutorial: Custom particles](custom-particles.md)
+* [Tutorial: Inheritance](inheritance.md)
+* [Tutorial: Lasers and lightning](lasers-and-lightning.md)
 * [Particles](../index.md)
-* [Tutorial: lasers](lasers-and-lightning.md)
-* [Ribbons and trails](../ribbons-and-trails.md)
-* [Prefabs](../../game-studio/prefabs.md)
+* [Create particles](../create-particles.md)

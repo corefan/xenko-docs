@@ -22,7 +22,7 @@ $(function() {
   // Captions are not automatically shown anymore by default; uncomment to reenable them
   //showCaptionFromAlt("article img");
 
-  // Control the sizes of sidebar and content part (saved, dynamic changed, etc.)
+    // Control the sizes of sidebar and content part (saved, dynamic changed, etc.)
     function apiDocSizeControl(){
         "use srtict"
         function resizableTOC(){      
@@ -194,4 +194,3 @@ $(function() {
     }
     redirectToCurrentDocVersion();
 });
-
