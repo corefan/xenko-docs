@@ -1,14 +1,29 @@
 # UI editor
 
-The **UI editor** 
+With the **UI editor**, you can create and edit UIs for your game.
 
-## UI assets and runtime counterparts
+![UI editor overview](media/ui-editor-overview.png)
+
+The UI editor comprises:
+
+* a list of UI libraries (**A**)
+* a tree of UI elements (**B**)
+* a preview of the UI as it appears in the game (**C**)
+* a property grid to edit the UI element properties (**D**)
 
 There are two type of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
-### UI page
+## UI pages
 
-A UI page is a tree of UI elements. It contains the root UI elements and all its children.
+A **UI page** is a tree of UI elements. It contains the root UI elements and all its children.
+
+### Create a UI page
+
+From the asset view toolbar, click on the **Add asset** button. In the drop-down menu, select the **UI**
+category and click on **UI Page**. To open the newly created asset, either double-click on it, select it
+and press CTRL+Enter, or click on the **Open this asset in editor** button from the property grid.
+
+### Assign a UI page 
 
 You can assign a UI page to the `Page` property of a UI component.
 
@@ -24,11 +39,11 @@ protected override void LoadScene()
 public void InitializeUI()
 {
     var rootElement = MyPage.RootElement;
-    // to look for a specific element in the UI page, extensions methods can be used
+    // to look for a specific element in the UI page, extension methods can be used
     var button = rootElement.FindVisualChildOfType<Button>("buttonOk");
 
-    // if there is no element named "buttonOk" in the UI tree or the type does not match,
-    // the previous method will return null
+    // if there's no element named "buttonOk" in the UI tree or the type doesn't match,
+    // the previous method returns null
     if (button != null)
     {
         // attach a delegate to the Click event
@@ -44,9 +59,21 @@ public void InitializeUI()
 }
 ```
 
-### UI libraries
+## UI libraries
 
-UI libraries are similar to [prefabs](../game-studio/prefabs.md). They have several root elements that you can export and reuse in UI pages or other UI libraries. At runtime, you can reinstantiate UI library roots and insert them into an existing UI tree.
+**UI libraries** are similar to [prefabs](../game-studio/prefabs.md). They have several root elements that you can export and reuse in UI pages or other UI libraries. At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
+
+### Create a UI library
+
+In the **asset view**, click **Add asset > UI > UI library**.
+
+![Add UI library](media/add-ui-library.png)
+
+Game Studio adds the UI library to the asset view.
+
+![Added UI library](media/added-ui-library.png)
+
+### Assign a UI library
 
 ```cs
 // This property can be assigned from a UI library asset in Game Studio
@@ -72,17 +99,6 @@ public Button CreateButton()
 }
 ```
 
-## Use the editor
-
-![UI editor overview](media/ui-editor-overview.png)
-
-The editor is composed of:
-
-* a list of available UI libraries
-* the visual tree of UI elements
-* a rendered view of the UI
-* the property grid to edit the UI element properties
-
 ### UI asset properties
 
 ![UI asset properties](media/ui-asset-properties.png)
@@ -93,9 +109,10 @@ To edit the value, click the **UI properties** button in the UI editor, or selec
 
 ### UI libraries
 
-All the libraries that exists in the current project appear in the list. 
+All the libraries in the current project are in the list of UI libraries.
 
-Note: there is always at least the standard library of all existing UI elements.
+> [!Note]
+> The standard library of UI elements is always in the list.
 
 ### Visual tree
 
@@ -143,13 +160,21 @@ available.
   * *Create library from selection*: create a new library asset containing a copy of all selected elements (single
     or multi selection)
 
-### UI view
+### UI preview
 
-The UI view shows a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see [UI Asset properties](#ui-asset-properties)).
+The **UI preview** displays a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see [UI Asset properties](#ui-asset-properties)).
 
 The UI view camera is orthographic (see [Cameras](../graphics/cameras.md). The UI always faces the camera.
 
-#### UI view controls
+You can edit elements directly in the UI preview. You can select, move, and resize elements as you do in image editing applications.
+
+![UI editor selecting an element](media/ui-editor-selecting.gif)
+
+![UI editor moving an element](media/ui-editor-moving.gif)
+
+![UI editor resizing an element](media/ui-editor-resizing.gif)
+
+#### Controls
 
 | Action            | Control                              
 |-------------------|--------------------------------------
@@ -157,20 +182,22 @@ The UI view camera is orthographic (see [Cameras](../graphics/cameras.md). The U
 | Zoom              | Mouse wheel                          
 | Speed up pan/zoom | Hold shift while panning or zooming  
 
+#### Zoom
+
+To zoom in and out of the UI preview, or reset the zoom level, use the zoom icons: ![Zoom icons](media/zoom-icons.png)
+
+#### UI selection tool options
+
+You can change the color and size of the UI selection tools. To do this, in the UI editor toolbar, click ![Eye icon](media/eye-icon.png)
+
 ![UI editor view options](media/ui-editor-view-options.png)
 
-The view toolbar offer options such as zooming in and out, resetting the view. Also changing the color of the
-tools in the view (such as color of selection, sizing rectangle, etc.).
+* The **Selection** value changes the width of the selection highlight.
 
-#### Manipulate elements
+* The **Sizing** value changes the size of the boxes...
 
-You can select, move, and resize elements as you do in image editing applications.
-
-![UI editor selecting an element](media/ui-editor-selecting.gif)
-
-![UI editor moving an element](media/ui-editor-moving.gif)
-
-![UI editor resizing an element](media/ui-editor-resizing.gif)
+> [!Note]s
+> These options have no effect on how the UI is displayed at runtime.
 
 ### Element properties
 
@@ -180,8 +207,7 @@ You can view and edit element properties in the property grid (on the right by d
 
 #### Appearance
 
-This category contains the properties controlling the appearance of the UI element. Common properties include
-`BackgroundColor`, `Opacity`, `Visibility`, `ClipToBounds`...
+Common properties include `BackgroundColor`, `Opacity`, `Visibility` and `ClipToBounds`.
 
 ![Appearance properties](media/appearance-properties.png)
 
@@ -189,35 +215,17 @@ This category contains the properties controlling the appearance of the UI eleme
 
 ![Behavior properties](media/behavior-properties.png)
 
-This category contains the properties controlling the behavior of the element. Common properties include whether the
-element will respond to touch events (`CanBeHitByUser`).
+Common properties include whether the element responds to touch events (`CanBeHitByUser`).
 
 #### Layout
 
 ![Layout properties](media/layout-properties.png)
 
-This category contains the properties controlling how the element is layed out. Common properties include the size
-of the element (`Height`, `Width` and `Depth`), its alignment (`HorizontalAlignment`, `VerticalAlignment`,
-`DepthAlignement`), `Margin`...
+Common properties include the size of the element (`Height`, `Width` and `Depth`), its alignment (`HorizontalAlignment`, `VerticalAlignment`,
+`DepthAlignement`) and its `Margin`.
 
 #### Misc
 
-This category contains the `Name` property.
-
 ![Misc properties](media/misc-properties.png)
 
-## Create a page
-
-From the asset view toolbar, click on the **Add asset** button. In the drop-down menu, select the **UI**
-category and click on **UI Page**. To open the newly created asset, either double-click on it, select it
-and press CTRL+Enter, or click on the **Open this asset in editor** button from the property grid.
-
-## Create a library
-
-In the **asset view**, click **Add asset > UI > UI library**.
-
-![Add UI library](media/add-ui-library.png)
-
-Game Studio adds the UI library to the asset view.
-
-![Added UI library](media/added-ui-library.png)
+This category contains only the `Name` property.

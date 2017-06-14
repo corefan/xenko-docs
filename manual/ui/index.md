@@ -40,4 +40,3 @@ Drawing of multiple elements will be batched using a 3D Sprite batch renderer to
 For an example of an implemented UI, see the **game menu UI** sample included with Xenko.
 
 ![media/ui-1.png](media/ui-1.png)
-
