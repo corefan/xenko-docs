@@ -1,11 +1,11 @@
-# Classes, mixins and inheritance
+# Shader classes, mixins and inheritance
 
 Xenko Shading Language (XKSL) is an extension of HLSL, which makes it closer to C# syntax and concepts. The language is object-oriented:
 
-- classes are the foundation of the code
-- classes contain methods and members
-- classes can be inherited, methods can be overridden
-- member types can be classes
+- shader classes are the foundation of the code
+- shader classes contain methods and members
+- shader classes can be inherited, methods can be overridden
+- member types can be shader classes
 
 XKSL uses an original way to handle multiple inheritance. Inheritance is performed through mixins, so the order of inheritance is crucial:
 
@@ -22,7 +22,7 @@ XKSL uses the keywords as HLSL, and adds new ones:
 - `streams`: sort of global structure storing variables needed across several stages of the shader. For more information, see [Automatic shader stage input/out](automatic-shader-stage-input-output.md).
 - `override`: method keyword. If this keyword is missing, the compilation returns an error.
 - `abstract`: used in front of a method declaration (without a body).
-- `clone`: method keyword. When a method appears several times in the inheritance tree of class, this keyword forces the creation of multiple instances of the method at each level of the inheritance instead of one. For more information, see [Composition](composition.md).
+- `clone`: method keyword. When a method appears several times in the inheritance tree of a shader class, this keyword forces the creation of multiple instances of the method at each level of the inheritance instead of one. For more information, see [Composition](composition.md).
 - `Input`: for geometry and tessellation shaders. For more information, see [Shader stages](shader-stages.md).
 - `Output`: for geometry and tessellation shaders. For more information, see [Shader stages](shader-stages.md).
 - `Input2`: for tessellation shaders. For more information, see [Shader stages](shader-stages.md).
@@ -30,7 +30,7 @@ XKSL uses the keywords as HLSL, and adds new ones:
 
 ## Abstract methods
 
-Abstract methods are available in XKSL. They should be prefixed with the `abstract` keyword. You can inherit from a class with abstract methods without having to implement them; the compiler will simply produce a harmless warning. However, you should implement it in your final shader to prevent a compilation error.
+Abstract methods are available in XKSL. They should be prefixed with the `abstract` keyword. You can inherit from a shader class with abstract methods without having to implement them; the compiler will simply produce a harmless warning. However, you should implement it in your final shader to prevent a compilation error.
 
 ## Annotations
 
@@ -144,9 +144,9 @@ shader MixBA : BaseInterface, BaseShader, ShaderA, ShaderB
 
 ## Static calls
 
-You can also use a variable or call a method from a shader without having to inherit from it. To do this, use `<class_name>.<variable or method_name>`. It behaves the same way as a static call. 
+You can also use a variable or call a method from a shader without having to inherit from it. To do this, use `<shader_name>.<variable or method_name>`. It behaves the same way as a static call. 
 
-Note that if you statically call a method that uses class variables, the shader won't compile. This is a convenient way to only use a part of a shader, but this isn't an optimization. The shader compiler already automatically removes any unnecessary variables.
+Note that if you statically call a method that uses shader class variables, the shader won't compile. This is a convenient way to only use a part of a shader, but this isn't an optimization. The shader compiler already automatically removes any unnecessary variables.
 
 ### Code example: static calls
 
@@ -166,7 +166,7 @@ shader StaticClass
 	}
 };
  
-// this class is fine
+// this shader class is fine
 shader CorrectStaticCallClass
 {
 	float Compute()
@@ -175,7 +175,7 @@ shader CorrectStaticCallClass
 	}
 };
  
-// this class won't compile since the call is not static
+// this shader class won't compile since the call is not static
 shader IncorrectStaticCallClass 
 {
 	float Compute()

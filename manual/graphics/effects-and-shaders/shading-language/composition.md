@@ -1,8 +1,8 @@
 # Composition
 
-In addition to the inheritance system, XKSL introduces the concept of **composition**. A composition is a member whose type is another XKSL class. It's defined the same way as variables.
+In addition to the inheritance system, XKSL introduces the concept of **composition**. A composition is a member whose type is another shader class. It's defined the same way as variables.
 
-You can compose with an instance of the desired class or an instance of class that inherits from the desired one.
+You can compose with an instance of the desired shader class or an instance of a shader class that inherits from the desired one.
 
 ## Example code
 
@@ -241,7 +241,7 @@ This behavior is useful when you want to repeat a simple function but with diffe
 
 * [Effect language](../effect-language.md)
 * [Shading language index](index.md)
-    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Shader classes, mixins, and inheritance](shader-classes-mixins-and-inheritance.md)
     - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
 	- [Shader stages](shader-stages.md)

@@ -123,7 +123,7 @@ You can inherit from `ComputeShaderBase` and override the `Compute` method.
 
 * [Effect language](../effect-language.md)
 * [Shading language index](index.md)
-    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Shader classes, mixins, and inheritance](shader-classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
     - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)

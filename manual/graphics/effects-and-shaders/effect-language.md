@@ -4,7 +4,7 @@
 
 You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. Shaders come in three types:
 
-- @'SiliconStudio.Xenko.Shaders.ShaderClassSource' correspond to a unique class
+- @'SiliconStudio.Xenko.Shaders.ShaderClassSource' correspond to a unique shader class
 - @'SiliconStudio.Xenko.Shaders.ShaderMixinSource' mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', set preprocessor values, define compositions
 - @'SiliconStudio.Xenko.Shaders.ShaderArraySource' are used for arrays of compositions
 
@@ -14,7 +14,7 @@ This method produces shaders at runtime. However, many platforms don't support H
 
 Many shaders are variations or combinations of pre-existing shaders. For example, some meshes cast shadows, others receive them, and others need skinning. To reuse code, it's a good idea to select which parts to use through conditions (eg "Skinning required"). This is often solved by "uber shaders": monolithic shaders configured by a set of preprocessor parameters.
 
-Xenko offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by XKSL classes can be mixed together by a shader mixer. This process can use more complex logic, described in Xenko Effect (*.XKFX) files.
+Xenko offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by shader classes can be mixed together by a shader mixer. This process can use more complex logic, described in Xenko Effect (*.XKFX) files.
 
 ### General syntax
 
@@ -70,7 +70,7 @@ To add a mixin, use `mixin <mixin_name>`.
 
 The syntax is similar to C#. The following rules are added:
 
-- When you use parameter keys, add them using `params <class_name>`. If you don't, keys are treated as variables.
+- When you use parameter keys, add them using `params <shader_name>`. If you don't, keys are treated as variables.
 
 - You don't need to to tell the program where to check the values behind the keys. Just use the key.
 
