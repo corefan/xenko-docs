@@ -16,7 +16,7 @@ Alternatively, if you want Game Studio to update the values in the component pro
 
 2. Above the variable you want to update, add ``[DefaultValue()]``. For example, if the variable is `SpeedFactor`, use:
 
-```
+```cs
 [DefaultValue(6.0f)]
 public float SpeedFactor { get; set; } = 6.0f;
 ```
