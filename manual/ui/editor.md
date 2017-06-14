@@ -1,8 +1,8 @@
 # UI editor
 
-<div class="doc-incomplete"/>
+The **UI editor** 
 
-## Assets and runtime counterparts
+## UI assets and runtime counterparts
 
 There are two type of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
@@ -12,8 +12,8 @@ A UI page is a tree of UI elements. It contains the root UI elements and all its
 
 You can assign a UI page to the `Page` property of a UI component.
 
-```csharp
-// This property can be assigned from a UI page asset in the GameStudio
+```cs
+// This property can be assigned from a UI page asset in Game Studio
 public UIPage MyPage { get; set; }
 
 protected override void LoadScene()
@@ -48,8 +48,8 @@ public void InitializeUI()
 
 UI libraries are similar to [prefabs](../game-studio/prefabs.md). They have several root elements that you can export and reuse in UI pages or other UI libraries. At runtime, you can reinstantiate UI library roots and insert them into an existing UI tree.
 
-```csharp
-// This property can be assigned from a UI library asset in the GameStudio
+```cs
+// This property can be assigned from a UI library asset in Game Studio
 public UILibrary MyLibrary { get; set; }
 
 public Button CreateButton()
@@ -145,10 +145,9 @@ available.
 
 ### UI view
 
-The UI view shows a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see 
-[UI Asset properties](#ui-asset-properties)).
+The UI view shows a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see [UI Asset properties](#ui-asset-properties)).
 
-The camera used for this view is orthographic (see [Cameras](../graphics/cameras.md). The UI always faces the camera.
+The UI view camera is orthographic (see [Cameras](../graphics/cameras.md). The UI always faces the camera.
 
 #### UI view controls
 
@@ -163,49 +162,49 @@ The camera used for this view is orthographic (see [Cameras](../graphics/cameras
 The view toolbar offer options such as zooming in and out, resetting the view. Also changing the color of the
 tools in the view (such as color of selection, sizing rectangle, etc.).
 
-#### Select an element
+#### Manipulate elements
+
+You can select, move, and resize elements as you do in image editing applications.
 
 ![UI editor selecting an element](media/ui-editor-selecting.gif)
 
-UI element can be selected in the UI View by left-clicking.
-
-#### Move an element
-
 ![UI editor moving an element](media/ui-editor-moving.gif)
-
-To move an element, first select it then press the mouse left button, and while holding move the selected element.
-
-#### Resize an element
 
 ![UI editor resizing an element](media/ui-editor-resizing.gif)
 
-When selected, an element can be resized thanks to the eight small squares surrounding it.
+### Element properties
 
-### Property grid
+You can view and edit element properties in the property grid (on the right by default). Properties are sorted by **Appearance**, **Behavior**, **Layout** and **Misc**.
 
-Once selected, the element properties are shown in the property grid. These properties are grouped by category.
+![Property grid!](media/element-property-grid.png)
 
-#### Property categories
-
-##### Appearance
+#### Appearance
 
 This category contains the properties controlling the appearance of the UI element. Common properties include
 `BackgroundColor`, `Opacity`, `Visibility`, `ClipToBounds`...
 
-##### Behavior
+![Appearance properties](media/appearance-properties.png)
+
+#### Behavior
+
+![Behavior properties](media/behavior-properties.png)
 
 This category contains the properties controlling the behavior of the element. Common properties include whether the
 element will respond to touch events (`CanBeHitByUser`).
 
-##### Layout
+#### Layout
+
+![Layout properties](media/layout-properties.png)
 
 This category contains the properties controlling how the element is layed out. Common properties include the size
 of the element (`Height`, `Width` and `Depth`), its alignment (`HorizontalAlignment`, `VerticalAlignment`,
 `DepthAlignement`), `Margin`...
 
-##### Misc
+#### Misc
 
-This category contains the `Name` property. 
+This category contains the `Name` property.
+
+![Misc properties](media/misc-properties.png)
 
 ## Create a page
 
@@ -213,8 +212,12 @@ From the asset view toolbar, click on the **Add asset** button. In the drop-down
 category and click on **UI Page**. To open the newly created asset, either double-click on it, select it
 and press CTRL+Enter, or click on the **Open this asset in editor** button from the property grid.
 
-## Creating a library
+## Create a library
 
-From the asset view toolbar, click on the **Add asset** button. In the drop-down menu, select the **UI**
-category and click on **UI Library**. To open the newly created asset, either double-click on it, select it
-and press CTRL+Enter, or click on the **Open this asset in editor** button from the property grid.
+In the **asset view**, click **Add asset > UI > UI library**.
+
+![Add UI library](media/add-ui-library.png)
+
+Game Studio adds the UI library to the asset view.
+
+![Added UI library](media/added-ui-library.png)
