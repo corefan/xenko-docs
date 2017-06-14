@@ -95,7 +95,7 @@ Use [PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.Del
 
 This script tracks the pointer movement and prints its positions:
 
-```
+```cs
 public override async Task Execute()
 {
 	var pointerPositions = new Dictionary<int, Vector2>(); 

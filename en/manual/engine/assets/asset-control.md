@@ -1,6 +1,7 @@
-# Asset Control
+# Asset control
 
-<div class="doc-incomplete"/>
+>[!Warning]
+>This section is out of date and will be updated soon. For now, it should only be used for for reference.
 
 Until now, all assets of a game package, and its dependencies, were compiled as part of your game.
 
@@ -32,14 +33,13 @@ Assets that will be compiled and packaged in your project are:
 
 
 
-# Details about "Mark as Root"
+# "Mark as root"
 
-One important thing to understand is that "Mark as Root" is not part of the asset, it is stored in the "current" package (the one that is in bold in the Solution explorer).
+One important thing to understand is that "Mark as root" is not part of the asset, it is stored in the "current" package (the one that is in bold in the Solution explorer).
 
 It means that if "MyGame" is current package, if you check "Mark as Root" on Silver Material (part of SharedPackage), this information will be stored in MyGame.xkpkg as part of the reference to SharedPackage.
 
 As a result, you can use a shared package from multiple games even if you have different explicit roots.
-
  
 # Additional information
 

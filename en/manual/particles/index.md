@@ -22,3 +22,9 @@
 * [Inheritance](tutorials/inheritance.md) - Create particles that inherit attributes from other particles
 * [Particle materials](tutorials/particle-materials.md)
 * [Custom particles](tutorials/custom-particles.md)
+
+## Sample project
+
+To see some examples of particles implemented in a project, create a new **Sample: Particles** project and check out the different scenes.
+
+![Particles sample project](media/select-particles-sample-project.png)

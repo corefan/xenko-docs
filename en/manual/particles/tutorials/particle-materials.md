@@ -1,32 +1,32 @@
-# Particle materials walkthrough
+# Tutorial: Particle materials
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This walkthrough shows how you can create custom shaders and materials for a particle system, providing functionality not available in the core engine.
+This tutorial demonstrates how to create custom shaders and materials for a particle system, providing functionality not available in the core engine. It focuses on shaders and rendering. For simulation, see the [custom particles tutorial](custom-particles.md).
 
-The sample is focused primarily on shaders and rendering. For simulation, please check the [Custom Particles](custom-particles.md) sample walkthrough.
+If you're not familiar with editing particles, see [Create particles](../create-particles.md).
 
-Please check the [Editing Particles](../create-particles.md) page if you are not familiar with how to edit the particles.
+Start by creating a new **Sample: Particles** project.
 
-This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
+![Particles sample project](media/select-particles-sample-project.png)
 
-![media/particles-samples-material-0.png](media/particles-samples-material-0.png) 
+This project contains four scenes, each demonstrating a different way to use particles: **AnimatedParticles**, **ChildParticles**, **CustomMaterials**, and **CustomParticles**. 
 
-Start by creating a new Custom Particle Materials Sample from the New project menu. There are three entities in the scene graph named Rad Particle System, Radial Particle System and Two Textures Particle System. Select either one and navigate to its source particle system, expanding the emitter in it and its material.
+Open the **CustomMaterials** scene.
 
-## Overview
+There are three particle entities in the scene: **Rad Particle System**, **Radial Particle System**, and **Two Textures Particle System**. 
 
 ![media/particles-samples-material-1.png](media/particles-samples-material-1.png) 
 
-The three custom shaders show different degrees of customization. We will go over them in order of increasing difficulty.
+Select one of the particle entities and navigate to its source particle system, expanding the emitter in it and its material.
 
-### Red Particle System
+## Red particle system
 
-The Red Particle System has a very simple customization. Since the [Material maps](../../graphics/materials/material-maps.md) already provide an option for using shader as a leaf node input, we can create our custom shader and assign it to that node.
+The **red particle system** has a very simple customization. Since the [material maps](../../graphics/materials/material-maps.md) already provide an option to use shaders as a leaf node input, we can create a custom shader and assign it to that node.
 
-First, create a shader (ComputeColorRed.xksl) with a derived class for ComputeColor:
+First, create a shader (`ComputeColorRed.xksl`) with a derived class for `ComputeColor`:
 
   ```cs
 class ComputeColorRed : ComputeColor
@@ -38,17 +38,19 @@ class ComputeColorRed : ComputeColor
 };
 ```
 
-The only thing this shader does is return the red color for pixel shading every time Compute is called. We will later try something more difficult, but for now let's keep it this way.
+The only thing this shader does is return the red color for pixel shading every time `Compute` is called. We'll try something more difficult later, but for now let's keep it simple.
 
-Save the file and reload the scripts in the game studio. You should see the new shader added in your asset view. If it's not loaded automatically try relaunching the game studio.
+Save the file and reload the scripts in Game Studio. You should see the new shader in **asset view**.
 
 ![media/particles-samples-material-2.png](media/particles-samples-material-2.png) 
 
-Once the shader is loaded you can access it through the Dynamic Emissive material for the particles. Choose a type of Shader and from the drop list select the shader you just added to the scene.
+If the shader isn't there, reload the project.
+
+Once the shader is loaded, you can access it in the **property grid** under the **dynamic emissive material** for the particles. Choose a type of shader and, from the drop-down menu, select the shader you just added to the scene.
 
 ![media/particles-samples-material-3.png](media/particles-samples-material-3.png) 
 
-Particles will appear red. With the game studio running edit and save the ComputeColorRed.xksl to make the color yellow.
+The particles are red. With Game Studio running, edit and save `ComputeColorRed.xksl` to make them yellow.
 
   ```cs
 class ComputeColorRed : ComputeColor
@@ -60,14 +62,13 @@ class ComputeColorRed : ComputeColor
 };
 ```
 
-Because the engine supports dynamic shader compilation, the particles will immediately turn yellow.
+Because Xenko supports dynamic shader compilation, the particles immediately turn yellow.
 
+### Radial particle system
 
-### Radial Particle System
+For the next shader we'll use texture coordinates expose arbitrary values to the editor.
 
-For the next shader we will show how to use texture coordinates and how to expose arbitrary values to the editor.
-
-Check the ComputeColorRadial.xksl
+Check `ComputeColorRadial.xksl`.
 
   ```cs
 class ComputeColorRadial<float4 ColorCenter, float4 ColorEdge> : ComputeColor, Texturing
@@ -89,27 +90,25 @@ class ComputeColorRadial<float4 ColorCenter, float4 ColorEdge> : ComputeColor, T
 };
 ```
 
+This is similar to `ComputeColorRed` and can be compiled and loaded the same way. 
 
-It is similar to the ComputeColorRed and can be compiled and loaded the same way. There are several key differences.
+There are several key differences. The shader now inherits from the `Texturing` shader base class as well. This allows it to use texture coordinates in from the streams. On the material side in Game Studio, we can force the texture coordinates to be streamed in case we don't use texture animation.
 
-The shader now inherits from the Texturing shader base class as well. This allows it to use texture coordinates in from the streams. On our material side in the game studio we can force the texture coordinates to be streamed in case we don't use texture animation.
-
-The input values float4 ColorCenter and float4 ColorEdge in our shader are permutations and when we load the shader they will appear in the property grid under the Generics dictionary.
+The input values `float4 ColorCenter` and `float4 ColorEdge` in our shader are permutations. When we load the shader the property grid displays them under the **Generics** dictionary.
 
 ![media/particles-samples-material-4.png](media/particles-samples-material-4.png) 
 
-The values we set here will be used by the ComputeColorRadial shader for the particles. The rest of the shader simply calculates a gradient color based on the distance of the shaded pixel from the center of the billboard.
+The values we set here will be used by the `ComputeColorRadial` shader for the particles. The rest of the shader simply calculates a gradient color based on the distance of the shaded pixel from the center of the billboard.
 
+## Two-texture particle system
 
-### Two Textures Particle System
+This demonstrates how to create custom materials and effects for the particles. The `DynamicColor` material supports one RGBA channel. For our sample, we'll separate the RGB and A channels, allowing them to use different texture coordinate animations and different textures and binary trees to compute the color.
 
-The last sample show how to create custom materials and effects for the particles. The DynamicColor material supports one RGBA channel. For our sample, we are going to separate RGB and A channels, allowing them to use different texture coordinate animations and different textures and binary trees for computing the color.
-
-#### Parameter Keys
+### Parameter keys
 
 Parameter keys are used to map data and pass it to the shader. Some of them are generated, and we can define our own too.
 
-If we define more streams in our shader (ParticleCustomShader), they will be exported to an automatically generated class. Try adding the following to ParticleCustomShader.xksl:
+If we define more streams in our shader (`ParticleCustomShader`), they're exported to an automatically generated class. Try adding the following to `ParticleCustomShader.xksl`:
 
   ```cs
     // -------------------------------------
@@ -130,7 +129,9 @@ namespace SiliconStudio.Xenko.Rendering
 }
 ```
 
-We don't really need this stream for now so we can delete it. We will define some extra keys in ParticleCustomMaterialKeys.cs to use in our material and effects.
+We don't need this stream for now, so we can delete it. 
+
+We'll define some extra keys in `ParticleCustomMaterialKeys.cs` to use in our material and effects.
 
   ```cs
 namespace SiliconStudio.Xenko.Rendering
@@ -157,22 +158,22 @@ namespace SiliconStudio.Xenko.Rendering
 }
 ```
 
-As we saw above, the generated class has the same name and the namespace is SiliconStudio.Xenko.Rendering, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
+As we saw above, the generated class has the same name and the namespace is `SiliconStudio.Xenko.Rendering`, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
 
-The rest of the code is self-explanatory. We will need the map and value keys for shader generation later, and we will set our generated code to the BaseColor and BaseIntensity keys respectively so the shader can use it.
+The rest of the code is self-explanatory. We'll need the map and value keys for shader generation later, and we'll set our generated code to the `BaseColor` and `BaseIntensity` keys respectively so the shader can use it.
 
 #### Custom Shader
 
-Let's have a look at the ParticleCustomShader.xksl:
+Let's look at `ParticleCustomShader.xksl`:
 
   ```cs
 
 class ParticleCustomShader : ParticleBase
 {
-    // This shader is settable by the user, and it's a binary tree made up from smaller shaders
+    // This shader can be set by the user, and it's a binary tree made up from smaller shaders
     compose ComputeColor  baseColor;
 
-    // This shader is settable by the user, and it's a binary tree made up from smaller shaders
+    // This shader can be set by the user, and it's a binary tree made up from smaller shaders
     compose ComputeColor  baseIntensity;
 
     // Shading of the sprite - we override the base class's Shading(), which only returns ColorScale
@@ -196,13 +197,13 @@ class ParticleCustomShader : ParticleBase
 };
 ```
 
-It defines two composed shaders, baseColor and abseIntensity, where we will plug our generated shaders for RGB and A respectively. It inherits ParticleBase which already defines VSMain, PSMain and texturing, and uses very simple Shading() method.
+It defines two composed shaders, `baseColor` and `abseIntensity`, where we'll plug our generated shaders for RGB and A respectively. It inherits `ParticleBase` which already defines `VSMain`, `PSMain` and texturing, and uses very simple `Shading()` method.
 
-By overriding the Shading() method we can define our custom behavior. Because the composed shaders we use are derived from ComputeColor we can easily evaluate them using Compute() which will give us the root of the compute tree for color and intensity.
+By overriding the `Shading()` method we can define our custom behavior. Because the composed shaders we use are derived from `ComputeColor`, we can easily evaluate them using `Compute()`, which gives us the root of the compute tree for color and intensity.
 
-#### Custom Effect
+#### Custom effect
 
-Our effect describes how to mix and compose the shaders. It's in ParticleCustomEffect.xkfx:
+Our effect describes how to mix and compose the shaders. It's in `ParticleCustomEffect.xkfx`:
 
   ```cs
 namespace SiliconStudio.Xenko.Rendering
@@ -238,24 +239,24 @@ namespace SiliconStudio.Xenko.Rendering
 }
 ```
 
-The ParticleBaseKeys and the ParticleBaseEffect and required by the base shader which we inherit.
+`ParticleBaseKeys` and `ParticleBaseEffect` are required by the base shader which we inherit.
 
-ParticleCustomShaderKeys provides the keys we defined earlier, where we will plug our shaders.
+`ParticleCustomShaderKeys` provides the keys we defined earlier, where we'll plug our shaders.
 
-Finally, for both shaders we only need to check if there is user-defined code for it and plug it. The baseColor and baseIntensity parameters are from the shader we created earlier.
+Finally, for both shaders we only need to check if there is user-defined code for it and plug it. The `baseColor` and `baseIntensity` parameters are from the shader we created earlier.
 
-Lastly, we need a material which sets all the keys and uses the newly created effect.
+Last, we need a material which sets all the keys and uses the newly created effect.
 
 #### Custom particle material 
 
-We are going to copy @`SiliconStudio.Xenko.Particles.Materials.ParticleMaterialComputeColor` into ParticleCustomMaterial.cs in our project and customize it to use two shaders for color binary trees.
+We'll copy @'SiliconStudio.Xenko.Particles.Materials.ParticleMaterialComputeColor' into `ParticleCustomMaterial.cs` in our project and customize it to use two shaders for color binary trees.
 
   ```cs
         [DataMemberIgnore]
         protected override string EffectName { get; set; } = "ParticleCustomEffect";
 ```
 
-The base class automatically tries to load the effect specified with EffectName. We give it the name of the effect we crated earlier.
+The base class automatically tries to load the effect specified with `EffectName`. We give it the name of the effect we crated earlier.
 
   ```cs
         [DataMember(300)]
@@ -268,8 +269,7 @@ The base class automatically tries to load the effect specified with EffectName.
         private AttributeDescription texCoord1 = new AttributeDescription("TEXCOORD1");
 ```
 
-In addition to the already existing @`SiliconStudio.Xenko.Rendering.Materials.IComputeColor` we are going to use @`SiliconStudio.Xenko.Rendering.Materials.IComputeScalar` for intensity, which returns a float, rather than a float4. We will also add another  @`SiliconStudio.Xenko.Particles.Materials.UVBuilder` for a second texture coordinates animation.
-
+In addition to the already existing @'SiliconStudio.Xenko.Rendering.Materials.IComputeColor', we'll use @'SiliconStudio.Xenko.Rendering.Materials.IComputeScalar' for intensity, which returns a float, rather than a float4. We will also add another  @'SiliconStudio.Xenko.Particles.Materials.UVBuilder' for a second texture coordinates animation.
 
   ```cs
     var shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));
@@ -279,7 +279,15 @@ In addition to the already existing @`SiliconStudio.Xenko.Rendering.Materials.IC
     shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
 ```
 
-We load the two shaders - one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the ComputeColor and ComputeScalar properties which the user can edit with the Property Grid. The generated code is similar to the shader code we wrote in the way that it calls Compute() and it returns the final result of our color or scalar compute tree.
+We load the two shaders - one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the `ComputeColor` and `ComputeScalar` properties, which you can edit in the property grid. The generated code is similar to the shader code we wrote in the way that it calls `Compute()` and it returns the final result of our color or scalar compute tree.
 
-After we generate the shader code, we set it to the respective key we need. Check how ParticleCustomShaderKeys.BaseColor is defined in ParticleCustomShaderKeys.cs. In the effect file we check if this key is set, and if yes, we pass it to the stream defined in our shader code.
+After we generate the shader code, we set it to the respective key we need. Check how `ParticleCustomShaderKeys.BaseColor` is defined in `ParticleCustomShaderKeys.cs`. In the effect file we check if this key is set, and if yes, we pass it to the stream defined in our shader code.
 
+## See also
+
+* [Tutorial: Create a trail](create-a-trail.md)
+* [Tutorial: Custom particles](custom-particles.md)
+* [Tutorial: Inheritance](inheritance.md)
+* [Tutorial: Lasers and lightning](lasers-and-lightning.md)
+* [Particles](../index.md)
+* [Create particles](../create-particles.md)

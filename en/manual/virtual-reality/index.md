@@ -4,6 +4,12 @@ Xenko supports the Oculus Rift and Vive virtual reality (VR) devices. Other devi
 
 ![Virtual reality](media/virtual-reality.png)
 
+## VR template
+
+Xenko includes a VR template you can use to check out VR implementation.
+
+![VR template](media/template-virtual-reality.png)
+
 ## In this section
 
 * [Enable VR](enable-vr.md)

@@ -87,7 +87,7 @@ A value provided from a color hex value. Only available for material maps that u
 
 A value provided by a ComputeColor shader. This lets you use procedural values.
 
-For an example of a ComputeColor shader, see [Particle materials](../../particles/tutorials/particle-materials.md).
+For an example of a ComputeColor shader, see the [Particle materials tutorial](../../particles/tutorials/particle-materials.md).
 
 ## Texture
 

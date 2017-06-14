@@ -14,6 +14,20 @@
   {{{remarks}}}
   {{/remarks}}
 </div>
+<div class="xk-namespaces-list">
+{{#namespaces}}
+<h2 id="{{namespaces}}">{{namespaces}}</h2>
+{{/namespaces}}
+<table class="table table-bordered table-striped table-condensed">
+  {{#innerClasses}}
+    <tr>
+      <td>
+        <p><<a href="{{uid}}.html">{{name}}</a> </p>
+      </td>
+      </tr>
+  {{/innerClasses}}
+</table>
+</div>
 {{#children}}
   <h2 id="{{id}}">{{>partials/namespaceSubtitle}}</h2>
   <div class="table-responsive xk-documentation-table">

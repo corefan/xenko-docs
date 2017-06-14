@@ -39,13 +39,17 @@ When you're ready to publish your game, create a release build from Visual Studi
 
 ## 2. Delete unnecessary files
 
-After you create a build, you can delete files that are unnecessary to play the game. This makes the game smaller and easier to distribute.
+In the release folder in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*), you can delete the following unnecessary files:
 
-* In the main folder, delete all the files except the *.dll* files and the *.exe* file.
+* `.pdb` files (debug information)
 
-* Delete all the folders except for *x64*, *x86*, and *Data*.
+* `.xml` files (API documentation)
 
-If you have other unnecessary files, such as custom configuration files (ie files not created with Xenko), we recommend you delete these too.
+* files that contain `vshost` in their filenames (eg `MyGame.vshost.exe` and `MyGame5.vshost.exe.manifest`) 
+
+* folders other than the `x64`, `x86`, or `data` folders
+
+* other unnecessary files, such as custom configuration files (ie files not created with Xenko)
 
 ## 3. Distribute your game
 
@@ -54,7 +58,9 @@ After you create a release build, how you distribute it is up to you.
 To run games made with Xenko on Windows, users need:
 
 * .NET 4.6.1
+
 * DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan
+
 * Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
 
 ## See also

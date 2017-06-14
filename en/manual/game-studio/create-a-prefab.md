@@ -22,6 +22,8 @@ You can also create a prefab from an existing entity or entities.
 
 Game Studio creates a prefab asset from the entity or entities you selected. You can access the new prefab from the **Asset view**. 
 
+![Prefab in asset view](media/prefab-asset.png)
+
 >[!Note]
 >After you create a prefab from a selection, the original selection itself **becomes a prefab**.
 

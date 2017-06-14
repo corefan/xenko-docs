@@ -80,7 +80,7 @@ Now we need to create a script to play and configure the sound asset.
 
 For example:
 
-```
+```cs
 mySound1Controller.IsLooping = true;
 mySound1Controller.Pitch = 2.0f;
 mySound1Controller.Volume = 0.5f;
