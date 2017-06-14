@@ -30,7 +30,7 @@ We don't recommend you save content creation files in your project folder. This 
 
 Following these suggestions, an example folder structure might look like this:
 
-```
+```cs
 - MyGame
     - Assets
         - texture.xktex
@@ -46,7 +46,7 @@ Following these suggestions, an example folder structure might look like this:
 
 You could even create separate folders for different kinds of content creation file:
 
-  ```
+  ```cs
 - MyGame
     - Assets
         - texture.xktex
