@@ -86,7 +86,7 @@ To set the gamepad vibration level, use
 
 ## Example code
 
-```
+```cs
 public class TestScript : SyncScript
 {
 	public override void Update()

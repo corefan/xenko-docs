@@ -81,7 +81,7 @@ You can lock the mouse position and hide the cursor with the following propertie
 
 ## Example code
 
-```
+```cs
 public class MouseInputScript : SyncScript
 {
 	public override void Update()

@@ -45,7 +45,7 @@ Every [KeyEvent](xref:SiliconStudio.Xenko.Input.KeyEvent) has two properties: [K
 
 ## Example code
 
-```
+```cs
 public class KeyboardEventsScript : SyncScript
 {
 	//Declared public member variables and properties show in Game Studio.
