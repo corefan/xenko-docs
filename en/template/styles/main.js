@@ -225,4 +225,3 @@ $(function() {
       window.location.href = window.location.href.replace(oldLang, lang);
     });
 });
-});
