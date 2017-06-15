@@ -36,3 +36,4 @@ The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange\(SiliconStudio.Core.
 ## See also
 
 * [MSDN WPF layout documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx)
+* [UI editor](editor.md)
