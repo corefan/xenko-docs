@@ -152,7 +152,7 @@ if ($API)
     $global:temporaryTypeToc = ""; # free memory   
 
     Write-Host "Start regrouping..."
-    $ismetadatafile = Test-Path api/toc.yml
+    $ismetadatafile = Test-Path en/api/toc.yml
     if($ismetadatafile -ne 'True'){
         Write-Host "Metadata are does not exist or was error when metadata was build. Please check the log file and try again. Press any button to finish..."
         $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
@@ -162,8 +162,8 @@ if ($API)
     if($isfile -eq 'True'){
         Remove-Item temporaryApiToc.yml
     }
-    # Get all text from api/toc.yml
-    $textYaml = (Get-Content api\toc.yml);
+    # Get all text from en/api/toc.yml
+    $textYaml = (Get-Content en\api\toc.yml);
     if($textYaml[$textYaml.length - 1] -eq '### YamlMime regrouped'){
         Write-Host "Metadata are regrouped already or was error when metadata was built. Please check the log file and try again. Press any button to finish..."
         $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
@@ -284,7 +284,7 @@ if ($API)
                 $textYaml[$k] | Out-file temporaryApiToc.yml -append
             }
 
-            $folder = "api\";
+            $folder = "en\api\";
             $format = ".yml";
             $activeFile = $lineIdeal.Replace('- uid: ', '');
             (Get-Content $folder$activeFile$format -encoding ASCII)  | Set-Content $folder$activeFile$format -encoding ASCII
@@ -321,8 +321,8 @@ if ($API)
 }
 
     RegroupStructure(0)
-    '' | Set-Content api\toc.yml
-    (Get-Content temporaryApiToc.yml) | Set-Content api\toc.yml
+    '' | Set-Content en\api\toc.yml
+    (Get-Content temporaryApiToc.yml) | Set-Content en\api\toc.yml
     Remove-Item temporaryApiToc.yml
 
     # Remove SiliconStudio namespace prefix from TOC
