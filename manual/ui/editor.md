@@ -6,19 +6,56 @@ With the **UI editor**, you can create and edit UIs for your game.
 
 The UI editor comprises:
 
-* a list of UI libraries (**A**)
+* the list of UI libraries (**A**)
 
-* a visual tree of UI elements (**B**)
+* a visual tree of elements in your UI (**B**)
 
 * a preview of the UI as it appears in the game (**C**)
 
-* a property grid to edit the UI element properties (**D**)
+* a property grid to edit the properties of the elements in your UI (**D**)
 
 There are two type of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
+## Open the UI editor
+
+In the **asset view**, double-click a **UI page** or **UI library** to open it in the UI editor.
+
+![Open UI editor](media/open-UI-editor.png)
+
 ## UI libraries
 
-**UI libraries** are similar to [prefabs](../game-studio/prefabs.md). They have several root elements that you can export and reuse in UI pages or other UI libraries. At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
+A **UI library** contains **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your UI pages. 
+
+![UI library](media/UI-library.png)
+
+UI libraries are similar to [prefabs](../game-studio/prefabs.md) in the scene editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages.
+
+At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
+
+All libraries include the **standard library**. All UI elements derive from the standard UI library.
+
+
+
+
+
+
+
+All the libraries in the current project are in the list of UI libraries.
+
+> [!Note]
+> The standard library of UI elements is always in the list.
+
+
+
+you need to name elements for them to be available in other ui
+
+you can nest libraries
+
+
+
+
+
+
 
 ### Create a UI library
 
@@ -56,19 +93,17 @@ public Button CreateButton()
 }
 ```
 
+UI pages have only one root element. UI libraries can have multiple root elements.?????????????
+
 ## Visual tree
 
-The **visual tree** represents the hierarchy of elements in the UI page.
-
-UI pages have only one root element. UI libraries can have multiple root elements.
+The **visual tree** shows the elements in the UI page and their hierarchy. This is similar to the **entity tree** in the scene editor.
 
 ![UI asset properties](media/ui-editor-visual-tree.png)
 
+To add an element to the page, drag it from the **UI library** to the UI page or the **visual tree**.
+
 When an element has child elements, the number of children is indicated between parentheses on the right.
-
-To expand and collapse the element, click the arrow.
-
-To expand or collapse the entire tree, use the two buttons in the above toolbar.
 
 You can drag and drop elements inside the visual tree to re-order them. 
 
@@ -111,7 +146,7 @@ available.
 
 The **UI preview** displays a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see [UI Asset properties](#ui-asset-properties)).
 
-The UI view camera is orthographic (see [Cameras](../graphics/cameras.md). The UI always faces the camera.
+The UI view camera is orthographic (see [Cameras](../graphics/cameras.md). By default, the UI always faces the camera.
 
 You can select, move, and resize elements in the preview as you do in image editing applications.
 
@@ -179,53 +214,7 @@ This category contains only the `Name` property.
 
 ## UI pages
 
-A **UI page** is a collection of UI elements. A UI page is equivalent to a scene, and UI elements to entities in a scene. Elements can have parents and children, just like entities. Like scenes, each UI scene opens in its own tab.
-
-### Create a UI page
-
-In the **asset view**, click **Add asset > UI > UI page**.
-
-![Add UI page](media/add-ui-page.png)
-
-Game Studio adds the UI page to the asset view.
-
-![Added UI page](media/added-ui-page.png)
-
-### Assign a UI page
-
-You can assign a UI page to the `Page` property of a UI component.
-
-```cs
-// This property can be assigned from a UI page asset in Game Studio
-public UIPage MyPage { get; set; }
-
-protected override void LoadScene()
-{
-    InitializeUI();
-}
-
-public void InitializeUI()
-{
-    var rootElement = MyPage.RootElement;
-    // to look for a specific element in the UI page, extension methods can be used
-    var button = rootElement.FindVisualChildOfType<Button>("buttonOk");
-
-    // if there's no element named "buttonOk" in the UI tree or the type doesn't match,
-    // the previous method returns null
-    if (button != null)
-    {
-        // attach a delegate to the Click event
-        button.Click += delegate
-        {
-            // do something here...
-        };
-    }
-
-    // assign the page to the UI component
-    var uiComponent = Entity.Get<UIComponent>();
-    uiComponent.Page = MyPage;
-}
-```
+A **UI page** is a collection of UI elements. A UI page is equivalent to a scene, and UI elements to entities in a scene. Elements can have parents and children, just like entities. Each UI scene opens in its own tab.
 
 ### UI asset properties
 
@@ -239,9 +228,5 @@ To edit the value, click the **UI properties** button in the UI editor.
 
 Alternatively, select the UI asset in the **asset view**.
 
-### UI libraries
 
-All the libraries in the current project are in the list of UI libraries.
 
-> [!Note]
-> The standard library of UI elements is always in the list.
