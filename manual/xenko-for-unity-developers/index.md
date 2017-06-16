@@ -179,7 +179,6 @@ Like Unity®, Xenko supports file formats including:
 | Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
 | Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc     |
-| Videos | .mov, .mp4, .wmv | 
 | Fonts | .ttf, .otf |
 
 For more information about assets, see [Assets](../game-studio/assets.md).
