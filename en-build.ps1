@@ -345,5 +345,4 @@ deps\docfx\docfx.exe build en\docfx.json
 
 # Copy extra items
 Copy-Item en/ReleaseNotes/ReleaseNotes.md _site/en/ReleaseNotes/
-Copy-Item studio_getting_started_links.txt _site/
 Stop-Transcript
