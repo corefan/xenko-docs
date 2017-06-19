@@ -1,10 +1,6 @@
-# Add a UI
+## Add a UI page to a scene
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Designer</span>
-
-After you create a UI page, add it to the scene as a component.
+After you create a UI page, add it to the scene as a component on an entity.
 
 1. In the **scene editor**, create an empty entity. To do this, right-click the scene and select **Empty entity**.
 
@@ -24,56 +20,18 @@ After you create a UI page, add it to the scene as a component.
 
     ![Select UI page](media/select-UI-page.png)
 
-4. Select the UI page you want to add and click **OK**. 
+4. Select the UI page you want to add and click **OK**.
 
     For information about how to create and edit UI pages, see the [Editor](editor.md) page.
 
 > [!Tip]
-> To stop the UI obscuring the rest of the scene in the editor, in the property grid, disable the UI component.
+> To stop the UI obscuring the rest of the scene in the editor, disable the **UI component** in the property grid.
 
 > ![Disable UI component](media/disable-UI-component.png)
 
-> Remember to enable the component again before you run the game.
+> Remember to enable the component again before you run the game. If you don't, Xenko doesn't display the UI.
 
-## UI component properties
-
-note - if you disable billboard mode, text is broken
-
-we recommend you always use full screen as other stuff is broken
-
-fixed size is broken
-
-## UI scripts
-
-To make UIs interactive, you need to add a script. Without scripts, UIs are simply non-interactive images. For more information, see [UI scripts](ui-scripts.md).
-
-## UI pages
-
-A **UI page** is a collection of UI elements. A UI page is equivalent to a scene, and UI elements to entities in a scene. Elements can have parents and children, just like entities. 
-
-Like scenes, each UI page opens in its own UI editor tab.
-
-### Create a UI page
-
-In the **asset view**, click **Add asset > UI > UI page**.
-
-![Add UI page](media/add-ui-page.png)
-
-Game Studio adds the UI page to the asset view.
-
-![Added UI page](media/added-ui-page.png)
-
-#### Create a UI page from a UI element
-
-1. Select the element or elements.
-
-2. Right-click and select **Create page from selection**.
-
-![Create page from selection](media/create-page-from-selection.png)
-
-Game Studio creates a page with a copy of the element(s) you selected.
-
-### Assign a UI page
+### Assign a UI page to a UI page component in code
 
 You can assign a UI page to the `Page` property of a UI component.
 
@@ -108,3 +66,24 @@ public void InitializeUI()
     uiComponent.Page = MyPage;
 }
 ```
+
+## UI component properties
+
+| Property           | Description
+|--------------------|----------------
+| Page               | The UI page displayed by the component
+| Full screen        | **Note:** We recommend you use this as other stuff is broken
+| Resolution         | The UI resolution in pixels
+| Size               | 
+| Resolution stretch | 
+| Billboard          | if you disable billboard mode, text is broken
+| Snap text          | 
+| Fixed size         | Broken
+| Render group       | 
+
+## UI scripts
+
+To make UIs interactive, you need to add a script. Without scripts, UIs are simply non-interactive images. For more information, see [UI scripts](ui-scripts.md).
+
+## See also 
+

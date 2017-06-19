@@ -212,7 +212,9 @@
 # [UI](ui/index.md)
 ## [Layout](ui/layout.md)
 ## [Editor](ui/editor.md)
-## [Add a UI](ui/add-a-ui.md)
+## [Add a UI to a scene](ui/add-a-ui.md)
+## [UI libraries](ui/ui-libraries.md)
+## [UI libraries](ui/ui-pages.md)
 
 # [Virtual reality](virtual-reality/index.md)
 ## [Enable VR](virtual-reality/enable-vr.md)

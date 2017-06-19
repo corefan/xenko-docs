@@ -21,7 +21,6 @@ All the libraries in the current project are in the list of UI libraries.
 
 you can nest libraries
 
-
 ### Create a UI library
 
 In the **asset view**, click **Add asset > UI > UI library**.

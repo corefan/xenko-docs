@@ -1,10 +1,10 @@
-# UI editor
+# Create a UI
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-With the **UI editor**, you can create and edit UIs for your game.
+You can create and edit UIs with the **UI editor**.
 
 ![UI editor overview](media/ui-editor-overview.png)
 
@@ -22,27 +22,11 @@ There are two type of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtim
 
 ## Open the UI editor
 
-In the **asset view**, double-click a **UI page** or **UI library**.
+In the **asset view**, double-click a **UI page** or **[UI library](ui-libraries.md)**.
 
 ![Open UI editor](media/open-UI-editor.png)
 
 The asset opens in the UI editor.
-
-## UI pages
-
-A **UI page** is a collection of UI elements that form a piece of UI in your game.
-
-In terms of organization, a UI page is equivalent to a scene, and UI elements are equivalent to to entities in a scene. Elements can have parents and children, just like entities. Each UI scene opens in its own tab.
-
-### UI page properties
-
-To view and edit the UI page properties, select the UI page in the **asset view**. Alternatively, with the UI page open in the UI editor, click the **UI properties** button.
-
-![UI page properties](media/ui-asset-properties.png)
-
-UI pages only have one property: `Resolution`. This is the resolution used at design time.
-
-![Properties](media/UI-properties-button.png)
 
 ## UI libraries
 
@@ -72,7 +56,7 @@ To add an element, drag it from the **UI library** to the UI page or the **visua
 
 ![Add UI element](media/add-ui-element.gif)
 
-  * *Change layout type*: the selected panel type will be change to another panel type (e.g. from a Grid to a UniformGrid)
+  * *Change layout type*: the selected panel type changes to another panel type (eg from a Grid to a UniformGrid)
 
 ## UI preview
 
@@ -137,13 +121,13 @@ Commonly used properties include the size of the element (`Height`, `Width` and 
 
 ### Misc
 
-![Misc properties](media/misc-properties.png)
-
 This category contains only the `Name` property.
+
+![Misc properties](media/misc-properties.png)
 
 ## See also
 
-* [Add a UI](add-a-ui.md)
+* [Add a UI to a scene](add-a-ui-to-a-scene.md)
 * [UI libraries](ui-libraries.md)
 * [UI scripts](ui-scripts.md)
 * [Layout system](layout-system.md)
