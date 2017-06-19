@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you create a [UI page](ui-page.md), add it to the scene as a component on an entity.
+After you create a [UI page](ui-pages.md), add it to the scene as a component on an entity.
 
 1. In the **scene editor**, create an empty entity. To do this, right-click the scene and select **Empty entity**.
 

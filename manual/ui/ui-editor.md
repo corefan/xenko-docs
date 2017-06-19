@@ -4,13 +4,13 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-You can edit [UI pages](ui-pages.md) and UI libraries(ui-libraries.md) with the **UI editor**.
+You can edit [UI pages](ui-pages.md) and [UI libraries](ui-libraries.md) with the **UI editor**.
 
 ![UI editor overview](media/ui-editor-overview.png)
 
 The UI editor comprises:
 
-* the list of [UI libraries](ui-libraries.png) (**A**), which contain the elements (such as buttons and grids) you can add to your UI
+* the list of [UI libraries](ui-libraries.md) (**A**), which contain the elements (such as buttons and grids) you can add to your UI
 
 * a visual tree of the elements in the UI page (**B**)
 
