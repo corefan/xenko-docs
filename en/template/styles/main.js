@@ -177,16 +177,19 @@ $(function() {
         } else {
           $("#xk-current-version").val(urlVersion);
         }
-        var urlLanguage = urlSplits[2];		
-        if($("#xk-current-version").val() < 2.0){
-		  urlLanguage = '';
-        } else {
-          urlLanguage += '/';
-        }
       }
       $('#xk-current-version').on('change', function(){
         var hostVersion = window.location.host;
         var pathVersion = window.location.pathname;
+        var urlLanguage = window.location.pathname.split('/')[2];		
+		var targetVersion = $("#xk-current-version" ).val();
+		
+        if(targetVersion == "latest" || targetVersion >= '2'){
+          urlLanguage += '/';
+        } else {
+		  urlLanguage = '';
+        }
+		
         var sectionVersion;
         if(/manual/.test(pathVersion)){
           sectionVersion = 'manual'
@@ -195,7 +198,7 @@ $(function() {
         } else if (/ReleaseNotes/.test(pathVersion)){
           sectionVersion = 'ReleaseNotes'
         }
-        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + urlLanguage + sectionVersion
+        var newAddress = '//' + hostVersion + '/' + targetVersion + '/' + urlLanguage + sectionVersion
         $(window).attr('location', newAddress);
       })
     }
