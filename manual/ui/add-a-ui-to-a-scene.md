@@ -1,6 +1,6 @@
-## Add a UI page to a scene
+# Add a UI to a scene
 
-After you create a UI page, add it to the scene as a component on an entity.
+After you create a [UI page](ui-page.md), add it to the scene as a component on an entity.
 
 1. In the **scene editor**, create an empty entity. To do this, right-click the scene and select **Empty entity**.
 
@@ -22,7 +22,7 @@ After you create a UI page, add it to the scene as a component on an entity.
 
 4. Select the UI page you want to add and click **OK**.
 
-    For information about how to create and edit UI pages, see the [Editor](editor.md) page.
+    For information about how to create and edit UI pages, see the [UI editor](ui-editor.md) page.
 
 > [!Tip]
 > To stop the UI obscuring the rest of the scene in the editor, disable the **UI component** in the property grid.

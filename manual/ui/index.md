@@ -2,11 +2,9 @@
 
 <div class="doc-incomplete"/>
 
-Xenko contains a complete UI system to build visually impressive in-game UI interfaces.
+Xenko's UI system uses a simplified version of Windows Presentation Foundation (WPF), with many of the same components and containers. For more information about WPF, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx). It supports 2D and 3D independently of resolution.
 
-It is built upon a simplified design of Windows Presentation Foundation (WPF) so that people can get quickly up to speed
-
-Xenko features a UI system that lets you build impressive user interfaces. It uses a simplified version of Windows Presentation Foundation (WPF), with many of the same components and containers. For more information about WPF, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx). It supports 2D and 3D independently of resolution.
+Xenko uses two types of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
 ## Controls
 
@@ -37,6 +35,10 @@ Drawing of multiple elements will be batched using a 3D Sprite batch renderer to
 
 ## Sample project
 
-For an example of an implemented UI, see the **game menu UI** sample included with Xenko.
+For an example of a UI implemented in Xenko, see the **game menu UI** sample included with Xenko.
 
 ![media/ui-1.png](media/ui-1.png)
+
+## In this section
+
+* 

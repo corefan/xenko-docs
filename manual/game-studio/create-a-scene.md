@@ -48,7 +48,7 @@ The **main window** (D) shows a simplified representation of your scene, with yo
 
 ## See also
 
-* [Navigate in the scene editor](navigate-in-the-scene-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-ui-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)

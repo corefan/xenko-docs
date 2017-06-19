@@ -15,7 +15,7 @@
 ### [Create a scene](game-studio/create-a-scene.md)
 ### [Add entities](game-studio/add-entities.md)
 ### [Manage entities](game-studio/manage-entities.md)
-### [Navigate in the scene editor](game-studio/navigate-in-the-scene-editor.md)
+### [Navigate in the scene editor](game-studio/navigate-in-the-scene-ui-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Animation](animation/index.md)
@@ -58,7 +58,7 @@
 # [Game Studio](game-studio/index.md)
 ## [Scenes](game-studio/scenes.md)
 ### [Create and open a scene](game-studio/create-a-scene.md)
-### [Navigate in the scene editor](game-studio/navigate-in-the-scene-editor.md)
+### [Navigate in the scene editor](game-studio/navigate-in-the-scene-ui-editor.md)
 ### [Manage scenes](game-studio/manage-scenes.md)
 ### [Load scenes](game-studio/load-scenes.md)
 ### [Add entities](game-studio/add-entities.md)
@@ -210,11 +210,11 @@
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 
 # [UI](ui/index.md)
-## [Layout](ui/layout.md)
-## [Editor](ui/editor.md)
-## [Add a UI to a scene](ui/add-a-ui.md)
+## [UI editor](ui/add-a-ui-to-a-scene.md)
+## [Add a UI to a scene](ui/add-a-ui-to-a-scene.md)
 ## [UI libraries](ui/ui-libraries.md)
-## [UI libraries](ui/ui-pages.md)
+## [UI pages](ui/ui-pages.md)
+## [Layout system](ui/layout-system.md)
 
 # [Virtual reality](virtual-reality/index.md)
 ## [Enable VR](virtual-reality/enable-vr.md)

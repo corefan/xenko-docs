@@ -3,9 +3,11 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-The Xenko UI **layout system** is similar to the Windows Presentation Foundation (WPF) layout system. For more information about the WPF layout system, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx).
+The Xenko UI **layout system** is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx).
 
-Every @'SiliconStudio.Xenko.UI.UIElement' in the Xenko UI system has a surrounding rectangle used in layouts. Layouts are computed according to the requirements of the @'SiliconStudio.Xenko.UI.UIElement', available screen space, constraints, margin, padding, and the special behavior of @'SiliconStudio.Xenko.UI.Panels.Panel' elements (which arrange children in specific ways). Processing this data recursively, the layout system computes a position and size for every @'SiliconStudio.Xenko.UI.UIElement' in the UI system.
+Every @'SiliconStudio.Xenko.UI.UIElement' in the Xenko UI system has a surrounding rectangle used in layouts. Xenko computes layouts according to the @'SiliconStudio.Xenko.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'SiliconStudio.Xenko.UI.Panels.Panel' elements (which arrange children in specific ways). 
+
+Processing this data recursively, the layout system computes a position and size for every @'SiliconStudio.Xenko.UI.UIElement' in the UI system.
 
 ## Measure and arrange
 
@@ -13,7 +15,7 @@ Xenko performs the layout process recursively in two passes: [Measure](xref:Sili
 
 ### Measure
 
-In the [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure\(SiliconStudio.Core.Mathematics.Vector3\)) pass, each element recursively computes its @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' according to properties you set, such as:
+In the [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure\(SiliconStudio.Core.Mathematics.Vector3\)) pass, each element recursively computes its @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' according to the properties you set, such as:
 
 * @'SiliconStudio.Xenko.UI.UIElement.Width' 
 * @'SiliconStudio.Xenko.UI.UIElement.Height'
@@ -36,4 +38,4 @@ The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange\(SiliconStudio.Core.
 ## See also
 
 * [MSDN WPF layout documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx)
-* [UI editor](editor.md)
+* [UI editor](ui-editor.md)

@@ -1,10 +1,10 @@
-# Create a UI
+# UI editor
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-You can create and edit UIs with the **UI editor**.
+You can edit [UI pages](ui-pages.md) and UI libraries(ui-libraries.md) with the **UI editor**.
 
 ![UI editor overview](media/ui-editor-overview.png)
 
@@ -14,11 +14,9 @@ The UI editor comprises:
 
 * a visual tree of the elements in the UI page (**B**)
 
-* a preview of the UI as it appears in the game (**C**)
+* a preview of the UI page as it appears in the game (**C**)
 
 * a property grid (**D**) to edit the properties of your UI elements
-
-There are two type of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
 ## Open the UI editor
 
@@ -49,14 +47,6 @@ You can drag and drop elements inside the visual tree to re-order them.
 To move an element to a new group, right-click the element and select **Group into**. For example, to create a new grid and move an element into it, right-click the element and select **Group into > Grid**.
 
 ![Group into grid](media/group-into-grid.png)
-
-## Add a UI element
-
-To add an element, drag it from the **UI library** to the UI page or the **visual tree**.
-
-![Add UI element](media/add-ui-element.gif)
-
-  * *Change layout type*: the selected panel type changes to another panel type (eg from a Grid to a UniformGrid)
 
 ## UI preview
 
@@ -94,6 +84,12 @@ To change the color and size of the selection tools, in the **UI editor toolbar*
 * The **Selection** value changes the width of the selection highlight.
 
 * The **Sizing** value changes the size of the boxes...
+
+## Add a UI element to a UI page
+
+To add an element (such as a grid or button), drag it from the **UI library** to the UI page or the **visual tree**.
+
+![Add UI element](media/add-ui-element.gif)
 
 ## Properties
 

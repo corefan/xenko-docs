@@ -12,7 +12,7 @@ Scenes are a type of [asset](/assets.md). As they are complex assets, they have 
 ## In this section
 
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the scene editor](navigate-in-the-scene-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-ui-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)

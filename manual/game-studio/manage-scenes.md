@@ -97,7 +97,7 @@ Replace `myScene` with the name of the scene, and `x,y,z` with the XYZ coordinat
 ## See also
 
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the scene editor](navigate-in-the-scene-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-ui-editor.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)
 * [Manage entities](manage-entities.md)

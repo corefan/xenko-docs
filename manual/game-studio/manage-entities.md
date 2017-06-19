@@ -98,7 +98,7 @@ You can change the snap values for each gizmo in the scene view toolbar. Snap va
 ## See also
 
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the scene editor](navigate-in-the-scene-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-ui-editor.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)
 * [Manage entities](manage-entities.md)
