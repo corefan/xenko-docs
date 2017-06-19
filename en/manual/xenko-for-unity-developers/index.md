@@ -100,7 +100,7 @@ To set the default scene:
 
 2. Select the default scene in the asset picker and click **OK**.
 
-For more information about scenes, see [Introduction to scenes](../game-studio/scenes.md).
+For more information about scenes, see [Scenes](../game-studio/scenes.md).
 
 ## Entities vs GameObjects
 
@@ -179,10 +179,9 @@ Like Unity®, Xenko supports file formats including:
 | Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
 | Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc     |
-| Videos | .mov, .mp4, .wmv | 
 | Fonts | .ttf, .otf |
 
-For more information about assets, see [Introduction to assets](../game-studio/assets.md).
+For more information about assets, see [Assets](../game-studio/assets.md).
 
 ## Prefabs
 
