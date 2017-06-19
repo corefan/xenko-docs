@@ -178,10 +178,10 @@ $(function() {
           $("#xk-current-version").val(urlVersion);
         }
         var urlLanguage = urlSplits[2];		
-        if($("#xk-current-version").val() < 2.0){
-		  urlLanguage = '';
-        } else {
+        if($("#xk-current-version").val() == 'latest' | $("#xk-current-version").val() > '1'){
           urlLanguage += '/';
+        } else {
+		  urlLanguage = '';
         }
       }
       $('#xk-current-version').on('change', function(){
