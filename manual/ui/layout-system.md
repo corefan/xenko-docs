@@ -38,4 +38,8 @@ The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange\(SiliconStudio.Core.
 ## See also
 
 * [MSDN WPF layout documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx)
+* [UI pages](ui-pages.md)
+* [UI libraries](ui-libraries.md)
 * [UI editor](ui-editor.md)
+* [Add a UI to a scene](add-a-ui-to-a-scene.md)
+* [UI scripts](ui-scripts.md)

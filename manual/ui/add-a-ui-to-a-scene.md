@@ -1,5 +1,9 @@
 # Add a UI to a scene
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Designer</span>
+
 After you create a [UI page](ui-page.md), add it to the scene as a component on an entity.
 
 1. In the **scene editor**, create an empty entity. To do this, right-click the scene and select **Empty entity**.
@@ -87,3 +91,8 @@ To make UIs interactive, you need to add a script. Without scripts, UIs are simp
 
 ## See also 
 
+* [UI pages](ui-pages.md)
+* [UI libraries](ui-libraries.md)
+* [UI editor](ui-editor.md)
+* [UI scripts](ui-scripts.md)
+* [Layout system](layout-system.md)
