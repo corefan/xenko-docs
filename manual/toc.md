@@ -210,7 +210,7 @@
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 
 # [UI](ui/index.md)
-## [UI editor](ui/add-a-ui-to-a-scene.md)
+## [UI editor](ui/ui-editor.md)
 ## [Add a UI to a scene](ui/add-a-ui-to-a-scene.md)
 ## [UI libraries](ui/ui-libraries.md)
 ## [UI pages](ui/ui-pages.md)
