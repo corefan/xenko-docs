@@ -1,6 +1,8 @@
 # UI
 
-Xenko's UI system uses a simplified version of Windows Presentation Foundation (WPF), with many of the same components and containers. For more information about WPF, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx). It supports 2D and 3D independently of resolution.
+Xenko features a UI editor and layout system you can use to build sophisticated user interfaces. It supports 2D and 3D independently of resolution.
+
+![UI editor](media/ui-editor.png)
 
 Xenko uses two types of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
@@ -35,7 +37,7 @@ Drawing of multiple elements will be batched using a 3D Sprite batch renderer to
 
 For an example of a UI implemented in Xenko, see the **game menu UI** sample included with Xenko.
 
-![media/ui-1.png](media/ui-1.png)
+![Sample UI project](media/ui-sample-project.png)
 
 ## In this section
 

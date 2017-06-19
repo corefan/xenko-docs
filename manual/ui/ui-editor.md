@@ -79,11 +79,13 @@ To change the color and size of the selection tools, in the **UI editor toolbar*
 
 ![UI editor view options](media/ui-editor-view-options.png)
 
-* The **Guideline** 
+* The **Guideline** value changes the width of the lines that indicate the distance to the margins (in pixels) 
+
+* The **Highlight** value changes the width of the highlight that appears when you move your mouse over an element
 
 * The **Selection** value changes the width of the selection highlight.
 
-* The **Sizing** value changes the size of the boxes...
+* The **Sizing** value changes the size of the boxes at the edges of selections used to resize elements
 
 ## Add a UI element to a UI page
 
