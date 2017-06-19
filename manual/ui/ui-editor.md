@@ -83,7 +83,7 @@ To change the color and size of the selection tools, in the **UI editor toolbar*
 
 * The **Highlight** value changes the width of the highlight that appears when you move your mouse over an element
 
-* The **Selection** value changes the width of the selection highlight.
+* The **Selection** value changes the width of the selection highlight
 
 * The **Sizing** value changes the size of the boxes at the edges of selections used to resize elements
 
