@@ -170,11 +170,18 @@ $(function() {
     function redirectToCurrentDocVersion(){
       // Set current doc version at start of page
       if($('#xk-current-version').length > 0){
-        var urlVersion = window.location.pathname.split('/')[1];
+		var urlSplits = window.location.pathname.split('/');
+        var urlVersion = urlSplits[1];
         if($('#xk-current-version option[value="' + urlVersion + '"]').length <= 0){
           $("#xk-current-version").val('latest');
         } else {
           $("#xk-current-version").val(urlVersion);
+        }
+        var urlLanguage = urlSplits[2];		
+        if($("#xk-current-version").val() < 2.0){
+		  urlLanguage = '';
+        } else {
+          urlLanguage += '/';
         }
       }
       $('#xk-current-version').on('change', function(){
@@ -188,7 +195,7 @@ $(function() {
         } else if (/ReleaseNotes/.test(pathVersion)){
           sectionVersion = 'ReleaseNotes'
         }
-        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + sectionVersion
+        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + urlLanguage + sectionVersion
         $(window).attr('location', newAddress);
       })
     }
