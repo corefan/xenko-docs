@@ -15,7 +15,7 @@
 ### [Create a scene](game-studio/create-a-scene.md)
 ### [Add entities](game-studio/add-entities.md)
 ### [Manage entities](game-studio/manage-entities.md)
-### [Navigate in the scene editor](game-studio/navigate-in-the-scene-ui-editor.md)
+### [Navigate in the scene editor](game-studio/navigate-in-the-scene-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Animation](animation/index.md)
@@ -58,7 +58,7 @@
 # [Game Studio](game-studio/index.md)
 ## [Scenes](game-studio/scenes.md)
 ### [Create and open a scene](game-studio/create-a-scene.md)
-### [Navigate in the scene editor](game-studio/navigate-in-the-scene-ui-editor.md)
+### [Navigate in the scene editor](game-studio/navigate-in-the-scene-editor.md)
 ### [Manage scenes](game-studio/manage-scenes.md)
 ### [Load scenes](game-studio/load-scenes.md)
 ### [Add entities](game-studio/add-entities.md)

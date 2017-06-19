@@ -77,7 +77,7 @@ At runtime, when the trigger you created in step 1 is triggered, Xenko loads the
 * [Colliders](../physics/colliders.md)
 * [Triggers](../physics/triggers.md)
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the scene editor](navigate-in-the-scene-ui-editor.md)
+* [Navigate in the scene editor](navigate-in-the-scene-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Add entities](add-entities.md)
 * [Manage entities](manage-entities.md)
