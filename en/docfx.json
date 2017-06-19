@@ -47,7 +47,7 @@
     "resource": [
       {
         "files": [
-          "web.config", "download/**", "manual/**/media/**", "media/**", "ReleaseNotes/media/**"
+          "web.config", "download/**", "manual/**/media/**", "media/**", "ReleaseNotes/media/**", "studio_getting_started_links.txt"
         ],
         "case": false,
         "noNegate": false,
