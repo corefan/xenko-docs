@@ -170,16 +170,27 @@ $(function() {
     function redirectToCurrentDocVersion(){
       // Set current doc version at start of page
       if($('#xk-current-version').length > 0){
-        var urlVersion = window.location.pathname.split('/')[1];
+        var urlSplits = window.location.pathname.split('/');
+        var urlVersion = urlSplits[1];
         if($('#xk-current-version option[value="' + urlVersion + '"]').length <= 0){
           $("#xk-current-version").val('latest');
         } else {
           $("#xk-current-version").val(urlVersion);
         }
+
       }
       $('#xk-current-version').on('change', function(){
         var hostVersion = window.location.host;
         var pathVersion = window.location.pathname;
+        var urlLanguage = window.location.pathname.split('/')[2];
+        var targetVersion = $("#xk-current-version" ).val();
+
+        if(targetVersion == "latest" || targetVersion >= '2'){
+          urlLanguage += '/';
+        } else {
+          urlLanguage = '';
+        }
+
         var sectionVersion;
         if(/manual/.test(pathVersion)){
           sectionVersion = 'manual'
@@ -188,9 +199,40 @@ $(function() {
         } else if (/ReleaseNotes/.test(pathVersion)){
           sectionVersion = 'ReleaseNotes'
         }
-        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + sectionVersion
+        var newAddress = '//' + hostVersion + '/' + targetVersion + '/' + urlLanguage + sectionVersion
         $(window).attr('location', newAddress);
       })
     }
     redirectToCurrentDocVersion();
+
+// Language check function
+
+    var siteLang = [];
+    $('#x_head_langList li *[data-language]').each(function(){
+      siteLang.push($(this).data('language'))
+    });
+
+    var currentLang = window.location.pathname.split("/")[1];
+    var changedItem = $('*[data-language="' + currentLang + '"]');
+    var savedText = changedItem.text();
+    changedItem.replaceWith($('<span>' + savedText + '</span>'));
+
+    for(var i = 0; i < siteLang.length; i++){
+      if(siteLang[i] != currentLang){
+        var changedItemInner = $('*[data-language="' + siteLang[i] + '"]')
+        var savedTextInner = changedItemInner.text();
+        changedItemInner.replaceWith($('<a data-language="'+siteLang[i]+'">' + savedTextInner + '</a>'));
+      }
+    }
+
+    $('#x_head_langList li a').on('click', function(){
+      var oldLang;
+      for (var i = 0; i < siteLang.length; i++) {
+        if(window.location.pathname.split("/")[1] == siteLang[i]){
+          oldLang = siteLang[i];
+        }
+    }
+    var lang = $(this).data('language');
+      window.location.href = window.location.href.replace(oldLang, lang);
+    });
 });

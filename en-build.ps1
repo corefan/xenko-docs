@@ -14,14 +14,14 @@ if ($API)
     Write-Host "Generating API documentation..."
     
     # Build metadata from C# source
-    deps\docfx\docfx.exe metadata
+    deps\docfx\docfx.exe metadata en/docfx.json
 
     Write-Host "Start Namespace build"
     function getNamespaceFilesLocation
     {
         # Check the source code location
-        $projectLocationConfig = ((Get-Content docfx.json) | Select-String -Pattern '"cwd":').ToString().Trim() -split ":";
-        $global:namespaceSrcLocation = $projectLocationConfig[1] -replace '[",\s]', '';
+        $projectLocationConfig = (((Get-Content en/docfx.json) | Select-String -Pattern '"cwd":').ToString().Trim() -split ":")[1];
+        $global:namespaceSrcLocation = "en/$projectLocationConfig" -replace '[",\s]', '';
     }
 
     function getAllNamespaceFiles
@@ -68,7 +68,7 @@ if ($API)
 
     function copyDescription($searchTag)
     {
-        $folder = 'api/';
+        $folder = 'en/api/';
         $format = '.yml';
         for($i = 0; $i -lt $global:descriptionFileNameArray.Length; $i++){
             $currentFile = $global:descriptionFileNameArray[$i];
@@ -115,10 +115,10 @@ if ($API)
 
     Write-Host "Generating types of items..."
 
-    # Get all text from api/toc.yml
-    $textYaml = (Get-Content api\toc.yml);
+    # Get all text from en/api/toc.yml
+    $textYaml = (Get-Content en\api\toc.yml);
     # Set start variable for toc files source
-    $folder = "api\"
+    $folder = "en\api\"
     $format = ".yml"
 
     function setTypesToTOCItems($i){
@@ -148,11 +148,11 @@ if ($API)
     for($lineCounter = 0; $lineCounter -lt $textYaml.length; $lineCounter++){
         setTypesToTOCItems($lineCounter);
     }
-    ($global:temporaryTypeToc) | Out-file api\toc.yml
+    ($global:temporaryTypeToc) | Out-file en\api\toc.yml
     $global:temporaryTypeToc = ""; # free memory   
 
     Write-Host "Start regrouping..."
-    $ismetadatafile = Test-Path api/toc.yml
+    $ismetadatafile = Test-Path en/api/toc.yml
     if($ismetadatafile -ne 'True'){
         Write-Host "Metadata are does not exist or was error when metadata was build. Please check the log file and try again. Press any button to finish..."
         $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
@@ -162,8 +162,8 @@ if ($API)
     if($isfile -eq 'True'){
         Remove-Item temporaryApiToc.yml
     }
-    # Get all text from api/toc.yml
-    $textYaml = (Get-Content api\toc.yml);
+    # Get all text from en/api/toc.yml
+    $textYaml = (Get-Content en\api\toc.yml);
     if($textYaml[$textYaml.length - 1] -eq '### YamlMime regrouped'){
         Write-Host "Metadata are regrouped already or was error when metadata was built. Please check the log file and try again. Press any button to finish..."
         $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
@@ -284,7 +284,7 @@ if ($API)
                 $textYaml[$k] | Out-file temporaryApiToc.yml -append
             }
 
-            $folder = "api\";
+            $folder = "en\api\";
             $format = ".yml";
             $activeFile = $lineIdeal.Replace('- uid: ', '');
             (Get-Content $folder$activeFile$format -encoding ASCII)  | Set-Content $folder$activeFile$format -encoding ASCII
@@ -321,29 +321,28 @@ if ($API)
 }
 
     RegroupStructure(0)
-    '' | Set-Content api\toc.yml
-    (Get-Content temporaryApiToc.yml) | Set-Content api\toc.yml
+    '' | Set-Content en\api\toc.yml
+    (Get-Content temporaryApiToc.yml) | Set-Content en\api\toc.yml
     Remove-Item temporaryApiToc.yml
 
     # Remove SiliconStudio namespace prefix from TOC
-    (Get-Content api\toc.yml).replace('  name: SiliconStudio.', '  name: ') | Set-Content api\toc.yml
+    (Get-Content en\api\toc.yml).replace('  name: SiliconStudio.', '  name: ') | Set-Content en\api\toc.yml
 }
 else
 {
-    If(Test-Path api/.manifest)
+    If(Test-Path en/api/.manifest)
     {
         Write-Host "Erasing API documentation..."
-        Remove-Item api/*yml -recurse
-        Remove-Item api/.manifest 
+        Remove-Item en/api/*yml -recurse
+        Remove-Item en/api/.manifest 
     }
 }
 
 Write-Host "Generating documentation..."
 
 # Output to both build.log and console
-deps\docfx\docfx.exe build
+deps\docfx\docfx.exe build en\docfx.json
 
 # Copy extra items
-Copy-Item ReleaseNotes/ReleaseNotes.md _site/ReleaseNotes/
-Copy-Item studio_getting_started_links.txt _site/
+Copy-Item en/ReleaseNotes/ReleaseNotes.md _site/en/ReleaseNotes/
 Stop-Transcript

@@ -181,7 +181,8 @@
 
 # [Platforms](platforms/index.md)
 ## [Linux](platforms/linux/index.md)
-### [Setup and requirements](platforms/linux/setup.md)
+### [Setup and requirements](platforms/linux/setup-and-requirements.md)
+### [Create a Linux game](platforms/linux/create-a-linux-game.md)
 ## [UWP](platforms/uwp/index.md)
 ### [Xbox Live](platforms/uwp/xbox-live.md)
 ## [Add or remove a platform](platforms/add-or-remove-a-platform.md)

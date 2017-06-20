@@ -23,7 +23,7 @@
               "sources/engine/SiliconStudio.Xenko.VirtualReality/SiliconStudio.Xenko.VirtualReality.csproj",
               "sources/engine/SiliconStudio.Xenko.Navigation/SiliconStudio.Xenko.Navigation.csproj"
             ],
-			"cwd": "../xenko"
+			"cwd": "../../xenko",
           }
         ],
       "dest": "api"
@@ -47,7 +47,7 @@
     "resource": [
       {
         "files": [
-          "web.config", "download/**", "manual/**/media/**", "media/**", "ReleaseNotes/media/**"
+          "web.config", "download/**", "manual/**/media/**", "media/**", "ReleaseNotes/media/**", "studio_getting_started_links.txt"
         ],
         "case": false,
         "noNegate": false,
@@ -61,7 +61,7 @@
       "_appTitle": "Xenko",
       "_enableSearch": true
     },
-    "dest": "_site",
+    "dest": "../_site/en",
     "template": [
       "default", "template"
     ],
