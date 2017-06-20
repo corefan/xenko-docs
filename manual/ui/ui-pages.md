@@ -44,7 +44,7 @@ The asset opens in the [UI editor](ui-editor.md).
 
 ## Add a UI element to a UI page
 
-To add an element (such as a grid or button), drag it from the **UI library** to the UI page or the **visual tree**.
+To add an element (such as a grid or button), drag it from the **UI library** on the left to the UI page, or to the **visual tree** below.
 
 ![Add UI element](media/add-ui-element.gif)
 

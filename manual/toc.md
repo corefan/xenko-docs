@@ -210,11 +210,11 @@
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 
 # [UI](ui/index.md)
-## [UI pages](ui/ui-pages.md)
-## [UI libraries](ui/ui-libraries.md)
-## [UI editor](ui/ui-editor.md)
+## [Pages](ui/ui-pages.md)
+## [Libraries](ui/ui-libraries.md)
+## [Editor](ui/ui-editor.md)
 ## [Add a UI to a scene](ui/add-a-ui-to-a-scene.md)
-## [UI scripts](ui/ui-scripts.md)
+## [Scripts](ui/ui-scripts.md)
 ## [Layout system](ui/layout-system.md)
 
 # [Virtual reality](virtual-reality/index.md)

@@ -4,22 +4,13 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-**UI libraries** contain **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your [UI pages](UI-pages.md).
+**UI libraries** contain **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your [UI pages](UI-pages.md). All Xenko projects include the **standard library** of UI elements, but you can create your own libraries of custom elements too.
 
 ![UI library](media/UI-library.png)
 
-UI libraries are similar to [prefabs](../game-studio/prefabs.md) in the scene editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages.
+UI libraries are similar to [prefabs](../game-studio/prefabs.md) in the scene editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages. You can also nest libraries inside other libraries, just like [nested prefabs](../game-studio/nested-prefabs.md).
 
 At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
-
-UI libraries always include the **standard library**. All UI elements derive from this library.
-
-All the libraries in the current project are in the list of UI libraries.
-
-> [!Note]
-> The standard library of UI elements is always in the list.
-
-you can nest libraries
 
 ### Create a UI library
 
