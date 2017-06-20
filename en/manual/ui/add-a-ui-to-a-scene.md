@@ -78,12 +78,12 @@ public void InitializeUI()
 | Page               | The UI page displayed by the component
 | Full screen        | **Note:** We recommend you use this as other stuff is broken
 | Resolution         | The UI resolution in pixels
-| Size               | 
-| Resolution stretch | 
-| Billboard          | if you disable billboard mode, text is broken
-| Snap text          | 
-| Fixed size         | Broken
-| Render group       | 
+| Size               | Gets or sets the actual size of the UI component in world units
+| Resolution stretch | How the virtual resolution value should be used (`FixedWithFixedHeight`, `FixedWithAdaptableHeight`, or `FixedHeightAdaptableWidth`)
+| Billboard          | If selected, the UI always faces the camera. **Note:** Disabling billboard mode causes UI text errors in the current version of Xenko
+| Snap text          | If selected, the UI text is snapped to the closest pixel
+| Fixed size         | Gets or sets the value indicating whether the UI should always be a fixed size on screen (eg a component with a height of 1 will use 0.1 of the screen). **Note:** This feature doesn't work in the current version of Xenko
+| Render group       | The render group the UI uses
 
 ## UI scripts
 
