@@ -4,9 +4,6 @@
 <span class="label label-doc-audience">Programmer</span>
 
 >[!Note]
->This section is under construction.
-
->[!Note]
 >This page requires a basic understanding of graphics pipelines.
 
 The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
