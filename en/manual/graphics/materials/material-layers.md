@@ -60,7 +60,7 @@ If the materials have **different** shading models, Xenko applies each material'
     
     ![Added layer](media/added-layer.png)
 
-5. Next to **Blend Map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
+5. Next to **Blend Map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
 
     ![Select blend map](media/select-blend-map.png)
 
