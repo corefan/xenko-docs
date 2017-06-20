@@ -11,7 +11,7 @@ Processing this data recursively, the layout system computes a position and size
 
 ## Measure and arrange
 
-Xenko performs the layout process recursively in two passes [Measure](xrefSiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) and [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)).
+Xenko performs the layout process recursively in two passes: [Measure](xrefSiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) and [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)).
 
 ### Measure
 
