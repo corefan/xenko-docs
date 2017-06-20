@@ -58,7 +58,7 @@ public Button CreateButton()
 }
 ```
 
-UI pages have only one root element. UI libraries can have multiple root elements.?????????????
+UI pages have only one root element. UI libraries can have multiple root elements.
 
 ## See also
 
