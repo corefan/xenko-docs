@@ -12,7 +12,7 @@ UI libraries are similar to [prefabs](../game-studio/prefabs.md) in the scene ed
 
 At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
 
-### Create a UI library
+## Create a UI library
 
 In the **asset view**, click **Add asset > UI > UI library**.
 
@@ -22,7 +22,7 @@ Game Studio adds the UI library to the asset view.
 
 ![Added UI library](media/added-ui-library.png)
 
-#### Create a UI library from a UI element
+### Create a UI library from a UI element
 
 1. Select the element or elements.
 
@@ -32,7 +32,7 @@ Game Studio adds the UI library to the asset view.
 
 Game Studio creates a library with a copy of the element(s) you selected.
 
-### Assign a UI library in code
+## Assign a UI library in code
 
 ```cs
 // This property can be assigned from a UI library asset in Game Studio
