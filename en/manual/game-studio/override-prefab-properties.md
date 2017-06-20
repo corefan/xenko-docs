@@ -57,11 +57,13 @@ We can see this in the scene view.
 
 ![Pink spotlight](media/pink-lamppost-prefab.png)
 
-Now let's see what happens when we go back to the Prefab Editor and change the color of the spot light in the prefab to green. No,
+Now let's see what happens when we go back to the Prefab Editor and change the color of the spot light in the prefab to green.
 
-![Changed colors](media/lamppost-prefab-instances-with-override.png)
+![Change color to green](media/change-prefab-color-to-green.png)
 
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
+
+![Changed colors](media/lamppost-prefab-instances-with-override.png)
 
 ## See also
 
