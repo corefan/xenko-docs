@@ -40,7 +40,7 @@ The translation gizmo moves (**translates**) entities in the scene along the axi
 
 ### Rotation gizmo
 
-To select the rotation gizmo, click the ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) icon in the scene editor toolbar or press **R**.
+To select the rotation gizmo, click the ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) icon in the scene editor toolbar or press **E**.
 
 The rotation gizmo rotates entities in the scene along the axis you select.
 

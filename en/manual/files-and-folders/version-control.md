@@ -72,7 +72,7 @@ Imagine a team with two programmers, two 2D artists, and two 3D artists.
 * The 2D artists check out the game project and the *PhotoshopProjects* folder containing .psd files.
 * The 3D artists check out the game project and the *MayaProjects* folder containing .mb (Maya project) files.
 
-Now imagine one of the 2D artists changes several .psd files and commits 2GB of changes to version control. Because only the 2D artists have the *MayaProjects* folder checked out, only the other 2D artist gets this change. The other team members don't need it. This is a much more efficient way to share files across projects.
+Now imagine one of the 2D artists changes several .psd files and commits 2GB of changes to version control. Because only the 2D artists have the *PhotoshopProjects* folder checked out, only the other 2D artist gets this change. The other team members don't need it. This is a much more efficient way to share files across projects.
 
 ## See also
 
