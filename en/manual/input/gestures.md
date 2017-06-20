@@ -52,6 +52,7 @@ In the @'SiliconStudio.Xenko.Input.GestureConfig' classes, you can configure par
 > Each gesture has its own configuration class with specific configuration parameters (see below).
 
 ## Gesture states
+
 A gesture always has one of four states:
 
 * Began
@@ -67,6 +68,7 @@ A gesture always has one of four states:
 To query the current state of a gesture, use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) field of the triggered gesture event.
 
 ## Types of gesture
+
 Xenko supports two main types of gesture:
 
 * **Discrete** gestures (tap, flick, long press) trigger a single event.
