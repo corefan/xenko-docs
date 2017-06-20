@@ -9,7 +9,7 @@ If you modify a property in a prefab instance, the instance no longer inherits c
 
 In the following video, the **Lamp** prefab contains several box entities that belong to the **Boxes** parent. When we delete the boxes from the instance, only that instance is affected. The prefab (shown on the right) is unchanged.
 
-If we add another box to the Boxes parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the Boxes parent from that instance.
+If we add another box to the **Boxes** parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the **Boxes** parent from that instance.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/delete-boxes-from-prefab-instance.jpg">
@@ -23,7 +23,7 @@ In the **Property grid**, you can see which properties of the prefab instance di
 
 * **Overridden** and **unique** properties are **white and bold**:
 
-    ![Overriden properties are white](media/use-prefabs-overriden-properties-appear-white.png) 
+    ![Overridden properties are white](media/use-prefabs-overriden-properties-appear-white.png)
 
 * **Identical** properties are **gray**:
 
