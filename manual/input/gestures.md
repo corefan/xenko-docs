@@ -52,6 +52,7 @@ In the @'SiliconStudio.Xenko.Input.GestureConfig' classes, you can configure par
 > Each gesture has its own configuration class with specific configuration parameters (see below).
 
 ## Gesture states
+
 A gesture always has one of four states:
 
 * Began
@@ -67,6 +68,7 @@ A gesture always has one of four states:
 To query the current state of a gesture, use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) field of the triggered gesture event.
 
 ## Types of gesture
+
 Xenko supports two main types of gesture:
 
 * **Discrete** gestures (tap, flick, long press) trigger a single event.
@@ -114,7 +116,7 @@ The number of fingers on the screen can't during the gesture.
 
 To set a minimum length for the flick gesture, use [GestureConfigFlick.MinimumFlickLength](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength).
 
-To restrict the direction of the drag to **vertical** or **horizontal**, use 
+To restrict the direction of the flick to **vertical** or **horizontal**, use 
 [GestureConfigFlick.FlickShape](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.FlickShape).
 
 #### <a name="Long-press"> Long press</a>
