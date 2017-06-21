@@ -46,7 +46,7 @@ Tessellates the mesh uniformly with a flat tessellation.
 
 ![media/material-attributes-5.png](media/material-attributes-5.png) 
 
-The following snapshot shows that the flat tessellation is adding extra triangles to the existing triangles, while the curve isn't taken into account:
+In the images below, notice how the **flat tessellation** adds extra triangles, but doesn't take the curve into account:
 
 | No tessellation  | Flat tessellation  
 | ---------------- | ----------------- 
