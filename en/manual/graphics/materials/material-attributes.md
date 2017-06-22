@@ -15,12 +15,6 @@ There are two types of attribute:
 
 Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
-A material must have at least one declared attribute shading model to display something:
-
-- diffuse model (with diffuse color)
-- specular model (With specular color, possibly diffuse color and MicroSurface)
-- emissive
-
 ## In this section
 
 * [Geometry attributes](geometry-attributes.md)

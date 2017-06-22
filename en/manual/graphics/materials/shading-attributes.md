@@ -83,7 +83,7 @@ The specular map provides more control over the actual specular color, but requi
 Unlike the metalness workflow, this lets you have a different specular color from the diffuse color even in low-reflection scenarios, allowing for materials with special behavior.
 
 > [!Note]
-> You can combine metalness and specular workflows in the same material by adding separate [layers](layers.md).
+> You can combine metalness and specular workflows in the same material by adding separate [layers](material-layers.md).
 
 ## Specular model
 
