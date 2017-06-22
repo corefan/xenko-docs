@@ -17,6 +17,7 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Install Xenko](get-started/install-xenko.md)
 * <span class="label label-doc-highlight">Updated</span> [Material attributes](graphics/materials/material-attributes.md)
 * <span class="label label-doc-highlight">Updated</span> [Input](input/index.md)
 * <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/override-prefab-properties.md)
