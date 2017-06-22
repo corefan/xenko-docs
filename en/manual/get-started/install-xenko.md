@@ -17,7 +17,7 @@
     > [!Note]
     > Alternatively, you can [download the .NET Framework from the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53345) and restart the Xenko installer.
 	
-4. The Xenko Setup Wizard opens.
+4. The **Xenko Setup Wizard** opens.
 
      ![Xenko Setup Wizard](media/install-xenko-setup-wizard.png)
  
