@@ -2,53 +2,91 @@
 
 <span class="label label-doc-level">Beginner</span>
 
- 1. Download the Xenko installer free from the [Xenko website](http://xenko.com/download/).
-
-    Requirements can be found on the download page.
+1. Download the Xenko installer (**XenkoSetup.exe**) free from the [Xenko website](http://xenko.com/download/).
  
- 2. Double-click the **XenkoSetup.exe** file.
+2. Double-click the **XenkoSetup.exe** file.
  
     The **Xenko Setup Wizard** opens.
 
-    ![Xenko Setup Wizard](media/install-xenko-setup-wizard.png)
+3. Xenko requires .NET Framework 4.6.2. If you don't have this, Xenko prompts you to install it.
+
+    ![Prerequisites installer](media/prerequisites-installer.png)
+
+    Click **Next** and follow the prompts.
+
+    > [!Note]
+    > Alternatively, you can [download the .NET Framework from the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53345) and restart the Xenko installer.
 	
- 3. Click **Next**.
+4. The Xenko Setup Wizard opens.
+
+     ![Xenko Setup Wizard](media/install-xenko-setup-wizard.png)
+ 
+     Click **Next**.
  
     The **Xenko License Agreement** window opens.
 
     ![Xenko license agreement window](media/install-xenko-license-agreement.png)
+
+    Click **Accept**.
 	
- 4. Click **Accept**.
- 
-    The **Xenko installation type** window opens.
+5. The **Xenko installation type** window opens.
 
     ![Xenko installation type window](media/install-xenko-installation-type.png)
 	
- 5. Select an installation type and click **Next**. 
+    Select an installation type and click **Next**. 
 
-    The **Select installation folder** window opens.
+6.  The **Select installation folder** window opens.
 
     ![Select installation folder window](media/install-xenko-select-installation-folder.png)
-	
- 6. Select a folder to install Xenko to and click **Next**.
 
-    The **Create application shortcuts** window opens.
+    Select a folder to install Xenko to and click **Next**.
+	
+7. The **Create application shortcuts** window opens.
     
     ![Create application shortcuts window](media/install-xenko-create-application-shortcuts.png)
+
+    Choose which shortcuts you want Xenko to create, and click **Next**.
 	
- 7. Choose which shortcuts you want Xenko to create, and click **Next**.
- 
-    The **Ready to Install** window opens.
+8. The **Ready to Install** window opens.
     
     ![Ready to install window](media/install-xenko-ready-to-install.png)
 
- 8. Click **Install**.
- 
-    Installation begins. You can see the status of installation in the installation window.
+    Click **Install**.
+
+9.  Installation begins. You can see the status of installation in the installation window.
  
     ![Installation status](media/install-xenko-installation-status.png)
 
-After the installer finishes, Xenko Launcher opens. Xenko creates shortcuts in locations you selected.
+    After the installer closes, Xenko creates shortcuts in locations you selected and the **Xenko Launcher** opens. 
+
+    ![Xenko launcher](media/xenko-launcher-interface.png)
+
+    The Xenko Launcher prompts you to install the latest version of Xenko.
+
+    ![No version installed](media/xenko-launcher-install-last-version.png)
+
+    Click **Yes**.
+
+11. The Xenko Launcher asks if you want to install the Visual Studio integration. This lets you edit shaders directly from Visual Studio and provides syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.
+
+    ![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
+
+12. Xenko requires **Visual C++ Redistributable** and **Visual Studio Build Tools** (also known as MSBuild). If you don't have these, Xenko prompts you to install them.
+
+    ![Prerequisites installer](media/prerequsites-installer2.png)
+
+    Click **Yes** and follow the prompts.
+
+    > [!Note]
+    > If you don't install the prerequisites, Xenko won't run. In this case, you can install the prerequisites separately:
+    
+    > * [Download Visual C++ Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+
+    > * [Download Visual Studio Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
+
+    > Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
+
+    Xenko is now installed and ready to use.
 
 ## What's next?
 
