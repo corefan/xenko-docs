@@ -53,13 +53,13 @@
 
     Click **Install**.
 
-9.  Installation begins. You can see the status of installation in the installation window.
+9.  Installation begins.
  
     ![Installation status](media/install-xenko-installation-status.png)
 
     After the installer closes, Xenko creates shortcuts in locations you selected and the **Xenko Launcher** opens. 
 
-    ![Xenko launcher](media/xenko-launcher-interface.png)
+    ![Xenko Launcher](media/xenko-launcher.png)
 
     The Xenko Launcher prompts you to install the latest version of Xenko.
 
@@ -67,17 +67,24 @@
 
     Click **Yes**.
 
-11. The Xenko Launcher asks if you want to install the Visual Studio integration. This lets you edit shaders directly from Visual Studio and provides syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.
+10. The Xenko Launcher asks if you want to install the Visual Studio integration. This lets you edit shaders directly from Visual Studio and provides syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.
 
     ![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
 
-12. Xenko requires **Visual C++ Redistributable** and **Visual Studio Build Tools** (also known as MSBuild). If you don't have these, Xenko prompts you to install them.
+11. Windows confirms that Xenko can make changes to your computer.
 
     ![Prerequisites installer](media/prerequsites-installer2.png)
 
-    Click **Yes** and follow the prompts.
+    Click **Yes**.
+    
+12. Xenko checks if the prerequisites **Visual C++ Redistributable** and **Visual Studio Build Tools** are installed. If they're not installed, follow the prompts to install them.
 
-    > [!Note]
+    ![Installing VS build tools](media/installing-vs-build-tools.png)
+
+    >[!Note]
+    > Windows uses the Visual Studio installer to install the prerequisites, but it doesn't install Visual Studio.
+
+    >[!Note]
     > If you don't install the prerequisites, Xenko won't run. In this case, you can install the prerequisites separately:
     
     > * [Download Visual C++ Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
