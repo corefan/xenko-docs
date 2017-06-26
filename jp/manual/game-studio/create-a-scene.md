@@ -11,7 +11,7 @@
 
 ## シーンを作成する
 
-1. [Asset view] (既定では下部のペイン) で [Add asset] をクリックして、[Scenes] を選択します。
+1.［Asset view］ (既定では下部のペイン) で［Add asset］をクリックして、［Scenes］を選択します。
 
     ![Add a scene](media/add-scene.png)
 
@@ -25,12 +25,12 @@
 
 ## シーン エディターでシーンを開く
 
-[Asset view] で次のいずれかを行います。
+［Asset view］で次のいずれかを行います。
 
 ![Select a scene in the asset view](media/open-scene-from-asset-view.png)
 
 * シーン アセットをダブルクリックします
-* アセットを右クリックして、[Edit asset] を選択します
+* アセットを右クリックして、［Edit asset］を選択します
 * アセットを選択して、**Ctrl + Enter** キーを押します
 
 > [!TIP]

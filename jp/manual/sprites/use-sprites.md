@@ -10,15 +10,15 @@
 1. **シーン エディター**で、スプライトを追加するエンティティを選択します。
 
     >[!TIP]
-    >エンティティを作成するには、シーンまたはエンティティ ツリーを右クリックして、[Empty entity] を選択します。
+    >エンティティを作成するには、シーンまたはエンティティ ツリーを右クリックして、［Empty entity］を選択します。
 
-2. [Property grid] で [Add component] をクリックして、[Sprite] を選択します。
+2.［Property grid］で［Add component］をクリックして、［Sprite］を選択します。
 
     ![Sprite sheet](media/SpriteEntity.png)
 
     スプライト コンポーネントがエンティティに追加されます。
 
-3. [Asset view] からスプライト コンポーネントの [Source] フィールドに、スプライト シートをドラッグします。
+3.［Asset view］からスプライト コンポーネントの［Source］フィールドに、スプライト シートをドラッグします。
 
     <p>
         <video autoplay loop class="responsive-video" poster="media\drag-sprite-sheet-to-asset-picker.png">

@@ -33,20 +33,20 @@ Visual Studio 統合機能を使用すると、Visual Studio から直接シェ�
 
 * 特定のバージョンのリリース ノートを見るには、バージョン名の隣にある**ノート アイコン**をクリックします。
 
-* 特定のバージョンをインストールするには、バージョン名の隣の [Download and install] アイコンを
+* 特定のバージョンをインストールするには、バージョン名の隣の［Download and install］アイコンを
 クリックします。
 
 ## Game Studio を開始する
 
 Xenko のインストールが済んだら、Game Studio を開始してプロジェクトをビルドします。
 
-1. [Switch/update version] で、使用する Xenko のバージョンを選択します。
+1.［Switch/update version］で、使用する Xenko のバージョンを選択します。
 
-   [Start] ボタンでバージョン番号が更新されます。
+  ［Start］ボタンでバージョン番号が更新されます。
 
    ![Start button](media/xenko-launcher-start-button.png)
 
-2. [Start] をクリックして Game Studio を起動します。
+2.［Start］をクリックして Game Studio を起動します。
 
 ## 次に学習すること
 

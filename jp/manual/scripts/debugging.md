@@ -11,11 +11,11 @@
 1. Visual Studio でスクリプトを開きます。
 
     >[!TIP]
-    >Game Studio からプロジェクトを Visual Studio で開くには、Game Studio のツールバーで ![Open in IDE](media/launch-your-game-ide-icon.png) ([Open in IDE]) をクリックします。
+    >Game Studio からプロジェクトを Visual Studio で開くには、Game Studio のツールバーで ![Open in IDE](media/launch-your-game-ide-icon.png) (［Open in IDE］) をクリックします。
 
 2. **F9** キーを押して、必要な箇所にブレーク ポイントを追加します。
 
-3. Visual Studio で、**F5** キーを押すか、ツールバーの [開始] をクリックして、デバッグ モードでゲームを実行します。
+3. Visual Studio で、**F5** キーを押すか、ツールバーの［開始］をクリックして、デバッグ モードでゲームを実行します。
 
    ![Visual Studio Start button](media/visual-studio-start-button.png)
 

@@ -15,13 +15,13 @@
     >[!NOTE]
     >エンティティをアニメーション化するには、エンティティにモデル コンポーネントが含まれる必要があります。
 
-2. [Property grid] で、[Add component] をクリックし、[Animations] を選択します。
+2.［Property grid］で、［Add component］をクリックし、［Animations］を選択します。
 
     ![Select an entity](media/select-animation-component.png)
 
     アニメーション コンポーネントがエンティティに追加されます。
 
-3. アニメーション コンポーネントのプロパティで、[Animations] の隣にある緑色のプラス ボタンをクリックして、新しいアニメーションをライブラリに追加します。
+3. アニメーション コンポーネントのプロパティで、［Animations］の隣にある緑色のプラス ボタンをクリックして、新しいアニメーションをライブラリに追加します。
 
 4. アニメーションの名前を入力して、Enter キーを押します。
 
@@ -30,13 +30,13 @@
     >[!TIP]
     >後でスクリプトを使用してアニメーションを再生するときは、アニメーション アセットの名前では**なく**、この名前を使用します。識別しやすくするため、アニメーションにはアニメーション アセットと同じ名前を付けることをお勧めします。
 
-5. 手の形のアイコン ([Pick an asset up]) をクリックします。
+5. 手の形のアイコン (［Pick an asset up］) をクリックします。
 
     ![Pick asset up](media/pick-asset-up.png)
 
     **アセット ピッカー**が開きます。
 
-6. 追加するアニメーション アセットを参照し、[Ok] をクリックします。
+6. 追加するアニメーション アセットを参照し、［Ok］をクリックします。
 
     ![Asset picker](media/asset-picker.png)
 
@@ -44,7 +44,7 @@
 
     ![Animation asset added](media/animation-asset-added.png)
 
-必要なだけいくつでもアニメーションをアニメーション コンポーネントに追加できます。[Property grid] にはアニメーションがアルファベット順に一覧表示されます。
+必要なだけいくつでもアニメーションをアニメーション コンポーネントに追加できます。［Property grid］にはアニメーションがアルファベット順に一覧表示されます。
 
 ![Animations list](media/animations-list.png)
 
@@ -64,7 +64,7 @@
     }
 ```
 
-このスクリプトは、エンティティのアニメーション コンポーネントで [Walk] という名前のアニメーションを探します。
+このスクリプトは、エンティティのアニメーション コンポーネントで［Walk］という名前のアニメーションを探します。
 
 アニメーション スクリプトの作成の詳細については、「[アニメーションのスクリプト](animation-scripts.md)」を参照してください。
 
@@ -74,11 +74,11 @@
 
     ![Select an entity](media/select-entity.png)
 
-2. [Property grid] で [Add component] をクリックして、追加するアニメーション スクリプトを選択します。
+2.［Property grid］で［Add component］をクリックして、追加するアニメーション スクリプトを選択します。
 
     ![Select an entity](media/add-animation-script-component.png)
 
-コンポーネントとしてスクリプトが追加されます。[Property grid] のスクリプト コンポーネントのプロパティで、[スクリプトで定義したパブリック変数](../scripts/public-properties-and-fields.md)を調整できます。
+コンポーネントとしてスクリプトが追加されます。［Property grid］のスクリプト コンポーネントのプロパティで、[スクリプトで定義したパブリック変数](../scripts/public-properties-and-fields.md)を調整できます。
 
 ![Select an entity](media/animations-setup3.png)
 

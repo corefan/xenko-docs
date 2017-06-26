@@ -12,13 +12,13 @@
     >[!TIP]
     >このチュートリアルでは、新しいプロジェクトを作成してプロセスをテストした後、その知識を既存のプロジェクトに応用することをお勧めします。
 
-2. UWP からプロジェクトを実行できることを確認します。そのためには、Visual Studio で、[ソリューション プラットフォーム] ドロップダウン リストから目的のプラットフォーム (UWP-64、UWP-32、または UWP-ARM) を選択して、プロジェクトを実行します。
+2. UWP からプロジェクトを実行できることを確認します。そのためには、Visual Studio で、［ソリューション プラットフォーム］ドロップダウン リストから目的のプラットフォーム (UWP-64、UWP-32、または UWP-ARM) を選択して、プロジェクトを実行します。
 
 3. Xbox Live SDK をダウンロードします。
 
     このページを書くときは、XboxLiveSDK-1612-20170114-002 を使用しました。サンプルは、Xbox Live SDK の Achievements サンプルに基づいていますが、厳密ではありません。
 
-4. Xbox Live の環境を変更します。[SDK] フォルダーの [Tools] で以下を実行します。
+4. Xbox Live の環境を変更します。［SDK］フォルダーの［Tools］で以下を実行します。
 
     ```
     SwitchSandbox.cmd XDKS.1
@@ -39,9 +39,9 @@
 
 1. Visual Studio で、ゲームのソリューションを開きます。
 
-2. [パッケージ マネージャー コンソール] を開きます ([ツール] > [NuGet パッケージ マネージャー] > [パッケージ マネージャー コンソール])。
+2.［パッケージ マネージャー コンソール］を開きます (［ツール］>［NuGet パッケージ マネージャー］>［パッケージ マネージャー コンソール］)。
 
-3. [既定のプロジェクト] フィールドで、UWP プロジェクト ([MyGame.UWP] など) を選択します。
+3.［既定のプロジェクト］フィールドで、UWP プロジェクト (［MyGame.UWP］など) を選択します。
 
 	![MyGame.UWP](media/xboxlive01.png)
 
@@ -53,38 +53,38 @@
 
     NuGet パッケージがプロジェクトに追加されます。
 
-5. パッケージが [参照] の一覧に表示されることを確認します。
+5. パッケージが［参照］の一覧に表示されることを確認します。
 
 	![Package in list](media/xboxlive02.png)
 
 ## 3. UWP プロジェクトを構成する
 
-1. [MyGame.UWP.TemporaryKey.pfx] を削除します。
+1.［MyGame.UWP.TemporaryKey.pfx］を削除します。
 
-2. [xboxservices.config] をプロジェクトに追加します。
+2.［xboxservices.config］をプロジェクトに追加します。
 
     このファイルは、テスト用に Xbox Live SDK サンプル (Achievements サンプルなど) から入手できます。ゲームを公開するときは、**タイトル ID** と**サービス構成 ID** を実際のプロジェクトのものに変更します。詳細については、Xbox Live のドキュメントを参照してください。
 
-3. [xboxservices.config] のプロパティで、[ビルド アクション] の [コンテンツ] を選択し、[出力ディレクトリにコピー] の [常時] を選択します。
+3.［xboxservices.config］のプロパティで、［ビルド アクション］の［コンテンツ］を選択し、［出力ディレクトリにコピー］の［常時］を選択します。
 
 	![Properties](media/xboxlive03.png)
 
-4. [Package.appxmanifest] をプロジェクトの詳細に合わせて編集します。
+4.［Package.appxmanifest］をプロジェクトの詳細に合わせて編集します。
 
     マニフェスト ファイルは、テスト用に Xbox Live SDK サンプル (Achievements サンプルなど) から使用できます。ゲームをストア アプリと関連付ける場合は、生成されたマニフェスト ファイルを使用します。詳細については、Xbox Live のドキュメントを参照してください。
 
-5. [InternetClientServer] の機能が有効になっていることを確認します。
+5.［InternetClientServer］の機能が有効になっていることを確認します。
 
 ## 4. ユーザー アカウント スクリプトをゲームに追加する
 
-Xbox Live SDK を公開することなく、ゲーム プロジェクトで Xbox Live の機能を有効にする必要があります。既に [MyGame.UWP] が [MyGame.Game] を参照しているので、ここで参照することはできません。代わりに、インターフェイスを作成し、UWP プロジェクト側から実装することができます。
+Xbox Live SDK を公開することなく、ゲーム プロジェクトで Xbox Live の機能を有効にする必要があります。既に［MyGame.UWP］が［MyGame.Game］を参照しているので、ここで参照することはできません。代わりに、インターフェイスを作成し、UWP プロジェクト側から実装することができます。
 
 >[!NOTE]
 >これを行うには複数の方法があります。ここでは 1 つの方法について説明します。
 
 1. 2 つのインターフェイス `IAccountManager` と `IConnectedAccount` をゲームに追加します。
 
-2. UWP プロジェクト ([MyGame.UWP] など) で、インターフェイス `public class XboxAccount : IConnectedAccount` および `public class XboxLiveAccountManager : IAccountManager` を実装します。
+2. UWP プロジェクト (［MyGame.UWP］など) で、インターフェイス `public class XboxAccount : IConnectedAccount` および `public class XboxLiveAccountManager : IAccountManager` を実装します。
 
 3. 後でゲーム スクリプトからアクセスできるように、アカウント ファクトリをゲームに追加します。`MyGameMainPage.xaml.cs` に次の行を追加します。
 

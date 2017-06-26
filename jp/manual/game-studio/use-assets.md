@@ -14,11 +14,11 @@
 
 ![Asset Picker](media/use-assets-asset-picker-dock.png)
 
-アセットをエンティティ コンポーネントに追加するには、[Property grid] のコンポーネント プロパティの**アセット ピッカー**にアセットをドラッグします。テキスト フィールドまたは空のサムネイルにアセットをドロップできます。
+アセットをエンティティ コンポーネントに追加するには、［Property grid］のコンポーネント プロパティの**アセット ピッカー**にアセットをドラッグします。テキスト フィールドまたは空のサムネイルにアセットをドロップできます。
 
 ![Drag and drop an asset](media/use-assets-drag-and-drop.png)
 
-または、**手のアイコン** ![](media/use-assets-hand-icon.png) をクリックして [Asset picker] を開き、一覧からアセットを選択します。
+または、**手のアイコン** ![](media/use-assets-hand-icon.png) をクリックして［Asset picker］を開き、一覧からアセットを選択します。
 
 ![Asset picker](media/use-assets-asset-picker.png)
 
@@ -39,15 +39,15 @@
 
 ## 参照を調べる
 
-Game Studio の右下隅にある [References] で、選択されているアセットでの参照を調べることができます。
+Game Studio の右下隅にある［References］で、選択されているアセットでの参照を調べることができます。
 
-* [Referencees] タブには、選択されているアセットによって参照されているアセットが表示されます。
-* [Referencers] タブには、選択されているアセットを参照しているアセットが表示されます。
+*［Referencees］タブには、選択されているアセットによって参照されているアセットが表示されます。
+*［Referencers］タブには、選択されているアセットを参照しているアセットが表示されます。
 
 ![References tab](media/use-assets-references-tab.png)
 
 > [!TIP]
-> [References] タブが表示されない場合は、[View] > [References] に表示されていることを確認します。
+>［References］タブが表示されない場合は、［View］>［References］に表示されていることを確認します。
 
 ## コードからアセットをロードする
 

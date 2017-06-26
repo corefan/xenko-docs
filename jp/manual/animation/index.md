@@ -40,7 +40,7 @@ Xenko でのアニメーションの動き方の例を見るには、**Animation
 
 ![Animations](media/animations-index1.png)
 
-テンプレート [First-person shooter]、[Third-person platformer]、[Top-down RPG] にも、いくつかの高度なアニメーション技法が含まれます。
+テンプレート［First-person shooter］、［Third-person platformer］、［Top-down RPG］にも、いくつかの高度なアニメーション技法が含まれます。
 
 ## このセクションの内容
 

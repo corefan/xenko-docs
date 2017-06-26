@@ -12,7 +12,7 @@ Xenko がまだインストールされていない場合は、Xenko Launcher �
 
 ![No version installed](../get-started/media/xenko-launcher-install-last-version.png)
 
-[Switch/update version] セクション (**B**) で、他のバージョンの Xenko をインストールできます。そのためには、リストのバージョンの横にある [install] アイコンをクリックします。
+［Switch/update version］セクション (**B**) で、他のバージョンの Xenko をインストールできます。そのためには、リストのバージョンの横にある［install］アイコンをクリックします。
 
 ## Xenko の Visual Studio 拡張機能をインストールする
 
@@ -22,17 +22,17 @@ Xenko がまだインストールされていない場合は、Xenko Launcher �
 
 Visual Studio 拡張機能を使用すると、Visual Studio から直接シェーダーを編集でき、構文の強調表示、検証でのライブ コード分析、エラー チェック、ナビゲーション (定義へのジャンプ) などが提供されます。拡張機能のインストールは必須ではありませんが、お勧めします。
 
-必要に応じて Visual Studio 拡張機能をインストールまたは再インストールするには、Xenko Launcher の [Reinstall] ボタンをクリックします。
+必要に応じて Visual Studio 拡張機能をインストールまたは再インストールするには、Xenko Launcher の［Reinstall］ボタンをクリックします。
 
 ![Visual Studio extension](media/xenko-launcher-visual-studio-plugin.png)
 
 ## Xenko のバージョンを切り替える
 
-実行する Xenko のバージョンを選択するには、[Switch/update version] の一覧で選択します。
+実行する Xenko のバージョンを選択するには、［Switch/update version］の一覧で選択します。
 
 ## さまざまなバージョンの Xenko を管理する
 
-[Switch/update version] セクションで、複数のバージョンの Xenko をインストールおよびアンインストールできます。
+［Switch/update version］セクションで、複数のバージョンの Xenko をインストールおよびアンインストールできます。
 
 ![Manage versions of Xenko](../get-started/media/xenko-launcher-various-versions.png)
 
@@ -44,7 +44,7 @@ Visual Studio 拡張機能を使用すると、Visual Studio から直接シェ�
 
 * 特定のバージョンのリリース ノートを見るには、バージョン名の隣にある**ノート アイコン**をクリックします (**A**)。
 
-* 特定のバージョンをインストールするには、バージョン名の隣の [Download and install] アイコンを
+* 特定のバージョンをインストールするには、バージョン名の隣の［Download and install］アイコンを
 クリックします (**D**)。
 
 >[!NOTE]
@@ -52,19 +52,19 @@ Visual Studio 拡張機能を使用すると、Visual Studio から直接シェ�
 
 ## Game Studio を開始する
 
-1. [Switch/update version] で、使用する Xenko のバージョンを選択します。
+1.［Switch/update version］で、使用する Xenko のバージョンを選択します。
 
-   [Start] ボタンでバージョン番号が更新されます。
+  ［Start］ボタンでバージョン番号が更新されます。
 
    ![Start button](media/xenko-launcher-start-button.png)
 
-2. [Start] をクリックして Game Studio を起動します。
+2.［Start］をクリックして Game Studio を起動します。
 
 ## 最近使用したプロジェクト
 
 ![Projects section](media/xenko-launcher-projects-section.png)
 
-[Projects] セクションには、最近使用したプロジェクトが表示されます。プロジェクトを開くには、クリックします。
+［Projects］セクションには、最近使用したプロジェクトが表示されます。プロジェクトを開くには、クリックします。
 
 ### 新しいバージョンの Xenko でプロジェクトを開く
 

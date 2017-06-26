@@ -10,13 +10,13 @@
 
 1. 運動学的剛体にするエンティティを選択します。
 
-2. [Property grid] で、[Rigidbody] コンポーネントのプロパティの [Is Kinematic] を選択します。
+2.［Property grid］で、［Rigidbody］コンポーネントのプロパティの［Is Kinematic］を選択します。
 
     ![Check 'Is kinematic'](media/rigid-bodies-is-kinematic-checkbox.png)
 
 ## 運動学的剛体のスクリプト化
 
-[Is Kinematic] プロパティをスクリプトにして、特定のイベントでオンまたはオフにすることができます。たとえば、運動学的エレベーターを吊り下げているケーブルが切れた場合を想像してください。それが発生したときに、スクリプトで [Is Kinematic] プロパティを [false] に変更することができます。そうすると、エレベーターは通常の物理特性の力を受けるようになって落下します。
+［Is Kinematic］プロパティをスクリプトにして、特定のイベントでオンまたはオフにすることができます。たとえば、運動学的エレベーターを吊り下げているケーブルが切れた場合を想像してください。それが発生したときに、スクリプトで［Is Kinematic］プロパティを［false］に変更することができます。そうすると、エレベーターは通常の物理特性の力を受けるようになって落下します。
 
 ![Non-kinematic elevator](media/rigid-bodies-non-kinematic-elevator.png)
 

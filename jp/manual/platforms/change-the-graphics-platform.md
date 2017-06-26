@@ -7,15 +7,15 @@
 > [!NOTE]
 > 使用するグラフィックス プラットフォーム用の最新のドライバーがあることを確認してください。
 
-1. [Asset view] で [GameSettings] アセットを選択します。
+1.［Asset view］で［GameSettings］アセットを選択します。
 
     ![Game settings asset](media/games-settings-asset.png)
 
-2. [Property grid] の [Rendering Settings] > [Preferred Graphics Platform] で、使用するグラフィックス プラットフォームを選択します。
+2.［Property grid］の［Rendering Settings］>［Preferred Graphics Platform］で、使用するグラフィックス プラットフォームを選択します。
 
     ![Select graphics platform](media/change-graphics-platform.png)
 
-    [Default] を選択すると、ビルド時にプラットフォーム (Windows、Android など) に適したグラフィックス プラットフォームが使用されます。
+   ［Default］を選択すると、ビルド時にプラットフォーム (Windows、Android など) に適したグラフィックス プラットフォームが使用されます。
 
 | プラットフォーム      | 既定のグラフィックス プラットフォーム |
 |---------------|---------------------------|
@@ -27,21 +27,21 @@
 
 特定のプラットフォームに対して使用されるグラフィックス プラットフォームをオーバーライドできます。たとえば、Linux では Vulkan を使用し、他のプラットフォームでは既定のグラフィックス プラットフォームを使用するといったことができます。
 
-1. **GameSettings** アセットを選択し、[Property grid] の [Overrides] で**緑色のプラス アイコン**をクリックします。
+1. **GameSettings** アセットを選択し、［Property grid］の［Overrides］で**緑色のプラス アイコン**をクリックします。
 
     ![Select graphics platform](media/add-override.png)
 
     オーバーライドが追加されます。
 
-2. 新しいオーバーライドの [Platforms] で、そのオーバーライドを適用するプラットフォームを選択します。
+2. 新しいオーバーライドの［Platforms］で、そのオーバーライドを適用するプラットフォームを選択します。
 
     ![Select graphics platform override](media/select-override-platform.png)
 
-3. [Configuration] ドロップダウン メニューで、[Rendering Settings] を選択します。
+3.［Configuration］ドロップダウン メニューで、［Rendering Settings］を選択します。
 
     ![Select graphics platform override](media/select-override-configuration.png)
 
-4. [Rendering Settings] の [Preferred Graphics Platform] ドロップダウン メニューで、使用するグラフィックス プラットフォームを選択します。
+4.［Rendering Settings］の［Preferred Graphics Platform］ドロップダウン メニューで、使用するグラフィックス プラットフォームを選択します。
 
     ![Select graphics platform override](media/select-override-graphics-platform.png)
 

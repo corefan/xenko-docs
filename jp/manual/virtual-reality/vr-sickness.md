@@ -12,21 +12,21 @@
 
 VR デバイス以外の入力によるカメラの移動を無効にするには:
 
-1. [Asset view] (既定では下部のペイン) で、[Graphics Compositor] をダブルクリックします。
+1.［Asset view］ (既定では下部のペイン) で、［Graphics Compositor］をダブルクリックします。
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
     Graphics Compositor エディターが開きます。
 
-2. Graphics Compositor で、[ForwardRenderer] を開きます。
+2. Graphics Compositor で、［ForwardRenderer］を開きます。
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3. [Property grid] (既定では右側) で、[VR Settings] を展開します。
+3.［Property grid］ (既定では右側) で、［VR Settings］を展開します。
 
     ![VR settings](media/vr-settings.png)
 
-4. [Ignore Camera Rotation] を選択します。
+4.［Ignore Camera Rotation］を選択します。
 
     ![Ignore camera rotation](media/ignore-camera-rotation.png)
 

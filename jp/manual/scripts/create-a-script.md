@@ -7,32 +7,32 @@ Game Studio または Visual Studio などの IDE を使用して、スクリプ
 
 ## Game Studio でスクリプトを作成する
 
-1. [Asset view] で、[Add asset] > [Scripts] の順にクリックし、スクリプトの種類を選択します。
+1.［Asset view］で、［Add asset］>［Scripts］の順にクリックし、スクリプトの種類を選択します。
 
 	![Select script type window](media/create-a-script-script-asset-selection.png)
 
 	>[!NOTE]
 	>スクリプトの種類については、「[スクリプトの種類](types-of-script.md)」を参照してください。
 
-	[Script wizard] ダイアログが開きます。
+	［Script wizard］ダイアログが開きます。
 
 	![Script wizard](media/script-wizard.png)
 
-2. スクリプトのクラス名と名前空間を指定して、[Ok] をクリックします。
+2. スクリプトのクラス名と名前空間を指定して、［Ok］をクリックします。
 
 3. スクリプトを使用するには、スクリプトを保存する必要があります。既定では、スクリプトの保存を求めるメッセージが表示されます。
 
-スクリプトが作成されます。[Asset view] で、作成されたスクリプトを確認できます。
+スクリプトが作成されます。［Asset view］で、作成されたスクリプトを確認できます。
 
 >[!NOTE]
-> スクリプトはアセットの一種ですが、[Assets] フォルダーには保存されません。代わりに、関連するアセンブリ フォルダーに保存されます。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
+> スクリプトはアセットの一種ですが、［Assets］フォルダーには保存されません。代わりに、関連するアセンブリ フォルダーに保存されます。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
 
 Visual Studio で新しいスクリプトを確認することもできます。
 
 ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
 
 > [!TIP]
-> Game Studio から Visual Studio でソリューションを開くには、Game Studio ツールバーの ![Open in IDE](media/create-a-script-ide-icon.png) ([Open in IDE]) アイコンをクリックします。
+> Game Studio から Visual Studio でソリューションを開くには、Game Studio ツールバーの ![Open in IDE](media/create-a-script-ide-icon.png) (［Open in IDE］) アイコンをクリックします。
 
 ```
 using System;
@@ -63,21 +63,21 @@ namespace MyGame
 1. Visual Studio を開きます。
 
 	> [!TIP]
-	> Game Studio から Visual Studio でソリューションを開くには、Game Studio ツールバーの ![Open in IDE](media/create-a-script-ide-icon.png) ([Open in IDE]) アイコンをクリックします。
+	> Game Studio から Visual Studio でソリューションを開くには、Game Studio ツールバーの ![Open in IDE](media/create-a-script-ide-icon.png) (［Open in IDE］) アイコンをクリックします。
 
 	ゲーム ソリューションは複数のプロジェクトで構成されます。
 
-	* 最後が [.Game] のプロジェクトはメイン プロジェクトで、ゲームのロジックとスクリプトがすべて含まれています。
+	* 最後が［.Game］のプロジェクトはメイン プロジェクトで、ゲームのロジックとスクリプトがすべて含まれています。
 
-	* 他のプロジェクト ([MyGame.Windows]、[MyGame.Android] など) には、プラットフォーム固有のコードが含まれます。
+	* 他のプロジェクト (［MyGame.Windows］、［MyGame.Android］など) には、プラットフォーム固有のコードが含まれます。
 
 	詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
 
-2. `.Game` プロジェクトに新しいクラス ファイルを追加します。そのためには、プロジェクトを右クリックし、[追加]> [新しいアイテム] を選択します。
+2. `.Game` プロジェクトに新しいクラス ファイルを追加します。そのためには、プロジェクトを右クリックし、［追加］>［新しいアイテム］を選択します。
 
-	[新しい項目の追加] ダイアログが開きます。
+	［新しい項目の追加］ダイアログが開きます。
 
-3. [クラス] を選択し、スクリプトの名前を入力して、[追加] をクリックします。
+3.［クラス］を選択し、スクリプトの名前を入力して、［追加］をクリックします。
 
    新しいクラスがプロジェクトに追加されます。
 
@@ -116,14 +116,14 @@ namespace MyGame
 
 	![Confirmation message](media/create-a-script-confirmation-message.png)
 
-	[Yes] をクリックします。
+	［Yes］をクリックします。
 
-[Asset view] にスクリプトが表示されます。
+［Asset view］にスクリプトが表示されます。
 
 ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
 
 >[!NOTE]
-> スクリプトはアセットの一種ですが、[Assets] フォルダーには保存されません。代わりに、関連するアセンブリ フォルダーに保存されます。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
+> スクリプトはアセットの一種ですが、［Assets］フォルダーには保存されません。代わりに、関連するアセンブリ フォルダーに保存されます。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
 
 ## 関連項目
 

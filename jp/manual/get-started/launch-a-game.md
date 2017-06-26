@@ -14,13 +14,13 @@
       ![Platform selection](media/launch-your-game-game-studio-profiles.png)
 
       > [!NOTE]
-      > プロジェクトを作成するときに [Create a new game] ダイアログで選択したプラットフォームだけを選択できます。プロジェクトに新しいプラットフォームを追加する方法については、「[プラットフォームを追加または削除する](../platforms/add-or-remove-a-platform.md)」を参照してください。
+      > プロジェクトを作成するときに［Create a new game］ダイアログで選択したプラットフォームだけを選択できます。プロジェクトに新しいプラットフォームを追加する方法については、「[プラットフォームを追加または削除する](../platforms/add-or-remove-a-platform.md)」を参照してください。
 
   2. ゲームを実行するには、ツールバーの ![Play icon](media/launch-your-game-play-icon.png) をクリックするか、または **F5** キーを押します。
 
       ![Game Studio play button](media/game-studio-toolbar-build-button.png)
 
-  [Output] ウィンドウに、ビルドの進行状況が表示されます。
+ ［Output］ウィンドウに、ビルドの進行状況が表示されます。
 
   ![Output window](media/output-window.png)
 
@@ -28,7 +28,7 @@
 
 ## Visual Studio からゲームを起動する
 
-1. Game Studio のツールバーで ![Open in IDE](media/launch-your-game-ide-icon.png) ([Open in IDE]) をクリックして、Visual Studio を起動します。
+1. Game Studio のツールバーで ![Open in IDE](media/launch-your-game-ide-icon.png) (［Open in IDE］) をクリックして、Visual Studio を起動します。
 
 2. Visual Studio のツールバーで、スタートアップ プロジェクトとして適切なプロジェクトを設定します。
 
@@ -37,13 +37,13 @@
    スタートアップ プロジェクトの構成が自動的に更新されます。
 
    > [!TIP]
-   > 右側の [ソリューション エクスプローラー] で、プロジェクトを確認できます。プロジェクトのファイル名の拡張子が、プラットフォームを示します (例：[.Android]、[.iOS] など)。
+   > 右側の［ソリューション エクスプローラー］で、プロジェクトを確認できます。プロジェクトのファイル名の拡張子が、プラットフォームを示します (例：［.Android］、［.iOS］など)。
 
 3. 構成とプラットフォームが適切に対応していることを確認します。
 
 4. * デバッグなしでゲームを開始するには、**Ctrl + F5** キーを押します。
 
-   * デバッグありでゲームを開始するには、[スタート] をクリックするか、**F5** キーを押します。
+   * デバッグありでゲームを開始するには、［スタート］をクリックするか、**F5** キーを押します。
 
       ![Visual Studio Start button](media/visual-studio-start-button.png)
 

@@ -2,11 +2,11 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-[Asset view] で [Add asset] をクリックし、[Prefabs]  > [Prefab] をクリックします。
+［Asset view］で［Add asset］をクリックし、［Prefabs］ >［Prefab］をクリックします。
 
 ![Create a prefab from the Asset View](media/create-prefab-from-asset-view.png)
 
-既定の名前 [Prefab] で、空のプレハブ アセットが作成されます。アセットをダブルクリックして [Prefab Editor] を開き、エンティティを追加します。
+既定の名前［Prefab］で、空のプレハブ アセットが作成されます。アセットをダブルクリックして［Prefab Editor］を開き、エンティティを追加します。
 
 ## エンティティからプレハブを作成する
 
@@ -16,11 +16,11 @@
 >[!TIP]
 > 複数の項目を選択するには、Ctrl キーを押しながらクリックします。
 
-2. 選択したエンティティを右クリックして、[Create prefab from selection] を選択します。
+2. 選択したエンティティを右クリックして、［Create prefab from selection］を選択します。
 
 ![Create a prefab from selection](media/create-prefab-from-selection.gif)
 
-選択したエンティティからプレハブ アセットが作成されます。[Asset view] から新しいプレハブにアクセスできます。
+選択したエンティティからプレハブ アセットが作成されます。［Asset view］から新しいプレハブにアクセスできます。
 
 >[!NOTE]
 >選択したエンティティからプレハブを作成すると、最初に選択したエンティティ自体が**プレハブになります**。

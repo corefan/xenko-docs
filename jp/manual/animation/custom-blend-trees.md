@@ -7,7 +7,7 @@
 
 アニメーション コンポーネントは、更新されるときに、アニメーション自体を更新するのではなく、スクリプトで `void BuildBlendTree(FastList<AnimationOperation> animationList)` を呼び出します。これにより、アニメーション クリップ、速度、ブレンドの任意の組み合わせを選択できますが、重労働をすべてスクリプト側で行う必要があるため、困難さも増します。
 
-Xenko に含まれるテンプレート [First-person shooter]、[Third-person platformer]、[Top-down RPG] は、カスタム ブレンド ツリーを使用する方法の例です。
+Xenko に含まれるテンプレート［First-person shooter］、［Third-person platformer］、［Top-down RPG］は、カスタム ブレンド ツリーを使用する方法の例です。
 
 ## コード サンプル
 

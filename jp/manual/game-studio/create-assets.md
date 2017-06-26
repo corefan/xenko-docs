@@ -4,12 +4,12 @@
 
 アセットを作成するには 2 つの方法があります。
 
- * [Add asset] ボタンを使用します ([Asset view])
- * **リソース ファイル** (画像ファイルやオーディオ ファイルなど) を [Asset view] タブにドラッグ アンド ドロップします
+ *［Add asset］ボタンを使用します (［Asset view］)
+ * **リソース ファイル** (画像ファイルやオーディオ ファイルなど) を［Asset view］タブにドラッグ アンド ドロップします
 
-## [Add Asset] ボタンを使用する
+##［Add Asset］ボタンを使用する
 
- 1. [Asset view] で ![](media/create-and-add-assets-add-new-asset-button.png) をクリックします。
+ 1.［Asset view］で ![](media/create-and-add-assets-add-new-asset-button.png) をクリックします。
 
  2. 作成するアセットの種類を選択します。
 
@@ -19,7 +19,7 @@
 
  3. アセットに適したテンプレートを選択します。
 
-    アセットが [Asset view] に追加されます。
+    アセットが［Asset view］に追加されます。
 
 	![Asset added to asset view' tab](../get-started/media/asset-creation-asset-view-tab-procedural-model.png)
 
@@ -41,9 +41,9 @@
 
 リソース ファイルをドラッグ アンド ドロップしてアセットを作成するには:
 
-1. (オプション) 使用するリソース ファイルがプロジェクトの [Resources] フォルダーにまだない場合は、ファイルをフォルダーに移動します。必須の操作ではありませんが、リソース ファイルを整理し、プロジェクトを共有しやすくするため、移動することをお勧めします。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
+1. (オプション) 使用するリソース ファイルがプロジェクトの［Resources］フォルダーにまだない場合は、ファイルをフォルダーに移動します。必須の操作ではありませんが、リソース ファイルを整理し、プロジェクトを共有しやすくするため、移動することをお勧めします。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
 
-2. エクスプローラーから [Asset view] にリソース ファイルをドラッグします。
+2. エクスプローラーから［Asset view］にリソース ファイルをドラッグします。
 
 	![Drap and drop a resource file to the asset view](media/create-assets-drop-resource.png)
 
@@ -51,7 +51,7 @@
 
 	![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
-	アセットが [Asset view] に追加されます。
+	アセットが［Asset view］に追加されます。
 
 	![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 

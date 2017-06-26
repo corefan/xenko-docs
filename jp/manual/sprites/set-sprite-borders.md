@@ -13,20 +13,20 @@
 
 ### スプライトの境界を設定する
 
-1. スプライト エディターで、[Sheet type] を [UI] に設定します。
+1. スプライト エディターで、［Sheet type］を［UI］に設定します。
 
     ![Choose UI](media/select-type-UI.png)
 
     >[!NOTE]
     >この設定は実行時のスプライトのレンダリング方法には影響を与えませんが、スプライトの境界など、設定できるプロパティが少し異なります。
 
-2. [Sprites] の一覧から、スプライトの境界を追加するスプライトを選択します。
+2.［Sprites］の一覧から、スプライトの境界を追加するスプライトを選択します。
 
 3. スプライトのテクスチャ領域が正しいことを確認します。詳細な方法については、「[スプライトを編集する](edit-sprites.md)」を参照してください。
 
     ![Select texture region](media/select-starbox.png)
 
-4. スプライト エディターのツールバーで、[Sprite border resize] ツールを選択します。
+4. スプライト エディターのツールバーで、［Sprite border resize］ツールを選択します。
 
     ![Border resize tool](media/border-resize-tool-icon.png)
 
@@ -46,7 +46,7 @@
 
 ## スプライトの境界をロックする
 
-既定では、テクスチャ領域のサイズを変更するとスプライトの境界は移動します。移動しないようにするには、ツールバーの [Lock the sprite borders] をクリックします。
+既定では、テクスチャ領域のサイズを変更するとスプライトの境界は移動します。移動しないようにするには、ツールバーの［Lock the sprite borders］をクリックします。
 
 ![Lock icon](media/lock-icon.png)
 

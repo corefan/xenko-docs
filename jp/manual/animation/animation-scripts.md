@@ -21,19 +21,19 @@ Xenko にはあらかじめ作成されている **AnimationStart** スクリプ
 
 **AnimationStart** スクリプトを使用するには:
 
-1. [Asset view] (既定では下部のペイン) で、[Add asset] をクリックします。
+1.［Asset view］ (既定では下部のペイン) で、［Add asset］をクリックします。
 
-2. [Add asset] > [Scripts] > [Animation Start] を選択します。
+2.［Add asset］>［Scripts］>［Animation Start］を選択します。
 
     ![Add animation script](media/add-animation-script.png)
 
-3. [Script wizard] で、スクリプトの名前を指定して、[OK] をクリックします。
+3.［Script wizard］で、スクリプトの名前を指定して、［OK］をクリックします。
 
     ![Script wizard](media/name-animation-script.png)
 
-    3a. スクリプトを保存するかどうかを確認するメッセージが表示されたら、[Yes] をクリックします。
+    3a. スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
 
-    3b. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、[Yes] をクリックします。
+    3b. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
 
 4. 必要に応じてスクリプトを編集し、保存します。
 
@@ -98,7 +98,7 @@ namespace AdditiveAnimation
 
 ## アニメーション ブレンド ツリーをオーバーライドする
 
-アニメーション ブレンド ツリーをオーバーライドして、すべてのアニメーション ブレンディングをスクリプトで行うこともできます。テンプレート [First-person shooter]、[Third-person platformer]、[Top-down RPG] は、これを行う方法の例であり、いくつかの高度な技法を使用しています。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください。
+アニメーション ブレンド ツリーをオーバーライドして、すべてのアニメーション ブレンディングをスクリプトで行うこともできます。テンプレート［First-person shooter］、［Third-person platformer］、［Top-down RPG］は、これを行う方法の例であり、いくつかの高度な技法を使用しています。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください。
 
 ## 関連項目
 

@@ -5,7 +5,7 @@
 
 他の種類のアセットと同じように、スプライト シート (スプライトを含む画像ファイル) をインポートできます。
 
-1. エクスプローラーから Game Studio の [Asset view] にスプライト シート ファイルをドラッグします。
+1. エクスプローラーから Game Studio の［Asset view］にスプライト シート ファイルをドラッグします。
 
     <p>
     <video autoplay loop class="responsive-video" poster="media/drag-and-drop-sprite-sheet.jpg">
@@ -13,11 +13,11 @@
     </video>
     </p>
 
-    または、[Asset view] で [Add asset] をクリックします。
+    または、［Asset view］で［Add asset］をクリックします。
 
 2. スプライト シートのプリセットを選択します。
 
-    スプライト シートをメニュー ボタンなどの UI 要素に使用する場合は、[Sprite sheet - UI sprites] を選択します。これを選択すると、スプライトの境界を設定できます (「[スプライトの境界を設定する](set-sprite-borders.md)」を参照)。それ以外の場合は、[Sprite sheet - 2D sprites] を選択します。
+    スプライト シートをメニュー ボタンなどの UI 要素に使用する場合は、［Sprite sheet - UI sprites］を選択します。これを選択すると、スプライトの境界を設定できます (「[スプライトの境界を設定する](set-sprite-borders.md)」を参照)。それ以外の場合は、［Sprite sheet - 2D sprites］を選択します。
 
     >[!NOTE]
     >この設定はいつでも変更できます。詳細については、「[スプライトを編集する](edit-sprites.md)」を参照してください。

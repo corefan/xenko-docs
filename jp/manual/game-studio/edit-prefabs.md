@@ -6,9 +6,9 @@
 
 ## プレハブ エディターを開く ##
 
-[Asset view] からプレハブ エディターを開くには:
+［Asset view］からプレハブ エディターを開くには:
 
-* 編集するプレハブを右クリックして、[Edit asset] を選択します。
+* 編集するプレハブを右クリックして、［Edit asset］を選択します。
 
     ![Right-click prefab](media/edit-prefab-with-edit-asset-button.png)
 
@@ -16,7 +16,7 @@
 
     ![Double-click prefab](media/open-prefab-editor.gif)
 
-**シーン エディター**からプレハブ エディターを開くには、プレハブ インスタンスの任意の子を右クリックして、[Open prefab in editor] を選択します。
+**シーン エディター**からプレハブ エディターを開くには、プレハブ インスタンスの任意の子を右クリックして、［Open prefab in editor］を選択します。
 
 ![Open prefab in editor](media/use-prefabs-prefab-open-prefab-from-prefab-instance.png)
 

@@ -17,47 +17,47 @@
 
 空のプロジェクトを作成するには:
 
-1. **Xenko Launcher** で [Start] をクリックして Game Studio を開始します。
+1. **Xenko Launcher** で［Start］をクリックして Game Studio を開始します。
 
-    [New/open project] ダイアログが開きます。
+   ［New/open project］ダイアログが開きます。
 
     ![New Project dialog](media/create-project-new-open-project-window.png)
 
-    Game Studio で [File] > [New] から新しいプロジェクトを開くこともできます。
+    Game Studio で［File］>［New］から新しいプロジェクトを開くこともできます。
 
-2. [New Game] を選択します。
+2.［New Game］を選択します。
 
-3. [Name] および [Location] フィールドで、プロジェクトの名前と保存するフォルダーを指定します。
+3.［Name］および［Location］フィールドで、プロジェクトの名前と保存するフォルダーを指定します。
 
-4. [Select] をクリックします。
+4.［Select］をクリックします。
 
-[Create a new game] ダイアログが開きます。
+［Create a new game］ダイアログが開きます。
 
 ![Create a new game dialog](media/create-project-create-new-game.png)
 
-5. [Namespace] フィールドで、使用する名前空間を指定します。使用する名前空間がわからない場合は、既定のままにします。
+5.［Namespace］フィールドで、使用する名前空間を指定します。使用する名前空間がわからない場合は、既定のままにします。
 
-6. [Platforms] で、ゲームがサポートするプラットフォームを選択します。  
+6.［Platforms］で、ゲームがサポートするプラットフォームを選択します。  
 
     > [!NOTE]
     > iOS および Android をサポートするには、<a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> をインストールする必要があります (Visual Studio がある場合は無料です)。
 
     選択したいずれかのプラットフォームの前提条件の中に開発システムに存在しないものがある場合は、警告が表示されます。
 
-7. [Asset Packs] では、プロジェクトに含める追加アセットを選択できます。たとえば、アニメーションやマテリアルなどのアセットです。アセット パックは、Xenko の使い方を学習するときには役に立ちますが、必須のものではありません。
+7.［Asset Packs］では、プロジェクトに含める追加アセットを選択できます。たとえば、アニメーションやマテリアルなどのアセットです。アセット パックは、Xenko の使い方を学習するときには役に立ちますが、必須のものではありません。
 
-8. [Rendering] で、必要なオプションを選択します。  
+8.［Rendering］で、必要なオプションを選択します。  
 
-    [Graphics API]: プロジェクトで使用できるグラフィックス機能は、選択する API によって異なります。高度なグラフィックス機能を使用する場合は、最新バージョンのグラフィックス API を選択してください。
+   ［Graphics API］: プロジェクトで使用できるグラフィックス機能は、選択する API によって異なります。高度なグラフィックス機能を使用する場合は、最新バージョンのグラフィックス API を選択してください。
 
     >[!WARNING]
     >グラフィックス カードによっては、最新の API がサポートされていない場合があります。一部のモバイル デバイスでは、DirectX 9.3/OpenGL ES 2.0 および DirectX 10.0/OpenGL ES 3.0 だけを使用できます。
 
-    [High or Low dynamic range (HDR/LDR)]: これは、プロジェクトでの色の計算方法を定義します。LDR モードでは、色の範囲は 0 ～ 1 になります。HDR モードでは、任意の浮動小数点値を色に使用できます。HDR はより高度で現実に近いレンダリングを提供しますが、より高い処理能力と、DirectX 10.0/OpenGL ES 3.0 以降のプロファイルが必要になります。
+   ［High or Low dynamic range (HDR/LDR)］: これは、プロジェクトでの色の計算方法を定義します。LDR モードでは、色の範囲は 0 ～ 1 になります。HDR モードでは、任意の浮動小数点値を色に使用できます。HDR はより高度で現実に近いレンダリングを提供しますが、より高い処理能力と、DirectX 10.0/OpenGL ES 3.0 以降のプロファイルが必要になります。
 
-9. [Orientation] で、プロジェクトの向きを選択します。PC ゲームの場合は、横方向を使用します。縦方向は通常、モバイル ゲームに対してのみ使用する必要があります。
+9.［Orientation］で、プロジェクトの向きを選択します。PC ゲームの場合は、横方向を使用します。縦方向は通常、モバイル ゲームに対してのみ使用する必要があります。
 
-10. [OK] をクリックします。
+10.［OK］をクリックします。
 
 プロジェクトが作成されて、Game Studio で開かれます。詳細については、「[Game Studio](../game-studio/index.md)」を参照してください。
 
@@ -70,21 +70,21 @@ Xenko では 2 種類のサンプル プロジェクトが提供されていま�
 
 サンプルからプロジェクトを作成するには：
 
- 1. [New Project] ダイアログを開きます。
+ 1.［New Project］ダイアログを開きます。
 
- 2.	左側で、[New project] > [Samples] に移動します。
+ 2.	左側で、［New project］>［Samples］に移動します。
 
  2. **プロジェクト作成の基にするサンプルを選択**します。
 
    ![New Project window - samples](media/create-project-new-open-project-samples.png)
 
- 3. [Select] をクリックします。
+ 3.［Select］をクリックします。
 
-    [Select Platforms] ウィンドウが開きます。
+   ［Select Platforms］ウィンドウが開きます。
 
     ![Select Platforms window](media/create-project-select-platform.png)
 
- 4. ゲームでサポートするプラットフォームを選択し、[OK] をクリックします。
+ 4. ゲームでサポートするプラットフォームを選択し、［OK］をクリックします。
 
 プロジェクトが作成されて、Game Studio で開かれます。
 

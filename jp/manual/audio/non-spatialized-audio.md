@@ -15,11 +15,11 @@
 
 2. サウンド アセットが**ルート アセット**であることを確認します。ルート アセットとは、実行時に使用できるようにビルドに組み込まれるアセットです。
 
-    [Asset view] で、アセットを右クリックして [Include in build as root asset] を選択します。
+   ［Asset view］で、アセットを右クリックして［Include in build as root asset］を選択します。
 
     ![Include in build as root asset](media/audio-include-in-build-as-root-asset.png)
 
-    メニュー オプションの表示が [Do not include in build as root asset] になっている場合は、オプションは既に選択されているので、変更する必要はありません。
+    メニュー オプションの表示が［Do not include in build as root asset］になっている場合は、オプションは既に選択されているので、変更する必要はありません。
 
 ## 2. オーディオを再生するスクリプトを作成する
 
@@ -105,11 +105,11 @@ public class MySoundScript : SyncScript
 ```
 ## スクリプトをエンティティに追加する
 
-1. [Scene view] で、スクリプトを追加するエンティティを選択します。
+1.［Scene view］で、スクリプトを追加するエンティティを選択します。
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. [Property grid] で、[Add component] をクリックして、スクリプトを選択します。
+2.［Property grid］で、［Add component］をクリックして、スクリプトを選択します。
 
     ![Click Add component](media/audio-emitters-add-script-component.png)
 
@@ -117,11 +117,11 @@ public class MySoundScript : SyncScript
 
 3. **パブリック変数**をスクリプトに追加した場合、パブリック変数をサウンド アセットに関連付ける必要があります。
 
-    [Asset view] から各変数にアセットをドラッグ アンド ドロップします。
+   ［Asset view］から各変数にアセットをドラッグ アンド ドロップします。
 
     ![Drag and drop a sound asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 
-    または、手のアイコン ([Pick an asset up]) をクリックします。
+    または、手のアイコン (［Pick an asset up］) をクリックします。
 
     ![Pick up an asset](media/audio-play-script-component-pick-an-asset.png)
 

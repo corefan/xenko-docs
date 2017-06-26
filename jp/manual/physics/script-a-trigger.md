@@ -15,13 +15,13 @@
 
 1. **球体**エンティティを選択します。
 
-2. [Property grid] の [Rigidbody] で、[Restitution] を *0.9* に設定します。
+2.［Property grid］の［Rigidbody］で、［Restitution］を *0.9* に設定します。
 
     ![Set restitution for a sphere](media/physics-tutorials-rigidbody-restitution.png)
 
 3. **地面**エンティティを選択します。
 
-4. [Property grid] の [Static Collider] で、[Restitution] を *0.9* に設定します。
+4.［Property grid］の［Static Collider］で、［Restitution］を *0.9* に設定します。
 
     ![Set restitution for the ground](media/physics-tutorials-static-collider-restitution.png)
 
@@ -29,7 +29,7 @@
 
 次に、ボールと地面の間にトリガーを追加し、ボールがそこを通過するようにします。
 
-1. **シーン エディター**で、白いプラス記号 ([Create new entity]) をクリックして、[Empty entity] を選択します。
+1. **シーン エディター**で、白いプラス記号 (［Create new entity］) をクリックして、［Empty entity］を選択します。
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 
@@ -37,19 +37,19 @@
 
 2. このエンティティをトリガーにするので、わかりやすいように名前を *Trigger* に変更します。
 
-3. このトリガーは動く必要がないので、静的コライダーにします。[Property grid] で [Add component] をクリックして、[Static Collider] を選択します。
+3. このトリガーは動く必要がないので、静的コライダーにします。［Property grid］で［Add component］をクリックして、［Static Collider］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
-4. [Property grid] で [Static Collider] コンポーネントを展開してプロパティを表示します。
+4.［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
 
-5. [Is Trigger] チェックボックスをオンにします。
+5.［Is Trigger］チェックボックスをオンにします。
 
     ![Check 'Is trigger'](media/physics-tutorials-create-a-trigger-is-trigger-checkbox.png)
 
     これにより、コライダーがトリガーになります。つまり、オブジェクトはそれを通り抜けることができますが、その場合でもコードはオブジェクトを検出します。
 
-6. トリガーに形状を与える必要があります。[Collider Shapes] の隣にある**緑色のプラス アイコン**をクリックして、[Box] を選択します。
+6. トリガーに形状を与える必要があります。［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、［Box］を選択します。
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
@@ -57,7 +57,7 @@
 
     ![Added trigger](media/physics-tutorials-added-trigger-area.png)
 
-7. トリガーの領域を大きくします。[Property grid] の [Transform] コンポーネントのプロパティで、[Scale] を *X:2, Y:2, Z:2 に設定します。*
+7. トリガーの領域を大きくします。［Property grid］の［Transform］コンポーネントのプロパティで、［Scale］を *X:2, Y:2, Z:2 に設定します。*
 
     ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
 
@@ -69,47 +69,47 @@
 
 現状では、トリガーは実行時には目に見えません。トリガーの動作がよくわかるように、トリガーを透明なボックスにします。このようにしてもトリガーの動作に影響はありません。実行時にトリガーの場所がはっきりわかるようになるだけです。
 
-1. 新しい手続き型モデル アセットを作成します。そのためには、[Asset view] で [Add asset] をクリックし、[Models] > [Cube] を選択します。
+1. 新しい手続き型モデル アセットを作成します。そのためには、［Asset view］で［Add asset］をクリックし、［Models］>［Cube］を選択します。
 
     ![Add a model asset](media/physics-tutorials-create-a-trigger-add-a-model.png)
 
-2. 新しい空のマテリアル アセットを作成します。そのためには、[Asset view] で [Add asset] をクリックし、[Materials] > [Material] を選択します。
+2. 新しい空のマテリアル アセットを作成します。そのためには、［Asset view］で［Add asset］をクリックし、［Materials］>［Material］を選択します。
 
     ![Add a material asset](media/physics-tutorials-create-a-trigger-add-a-material-asset.png)
 
-3. マテリアルの名前を変更して見分けやすくします。右クリックして [Rename] を選択し、新しい名前 (たとえば *Transparent*) を入力します。
+3. マテリアルの名前を変更して見分けやすくします。右クリックして［Rename］を選択し、新しい名前 (たとえば *Transparent*) を入力します。
 
-4. **トリガー** エンティティを選択します。[Property grid] で [Add component] をクリックして、[Model] を選択します。
+4. **トリガー** エンティティを選択します。［Property grid］で［Add component］をクリックして、［Model］を選択します。
 
     ![Add a model component](media/physics-tutorials-create-a-trigger-add-a-model-component.png)
 
     モデル コンポーネントがエンティティに追加されます。
 
-5. [Model] で手のアイコン ([Pick an asset up]) をクリックし、**アセット ピッカー**を開きます。
+5.［Model］で手のアイコン (［Pick an asset up］) をクリックし、**アセット ピッカー**を開きます。
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
-6. ステップ 1 で作成した [Cube] モデルを選択し、[OK] をクリックします。
+6. ステップ 1 で作成した［Cube］モデルを選択し、［OK］をクリックします。
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7. [Property grid] の [Model] > [Materials] で、手のアイコン ([Pick an asset up]) をクリックして**アセット ピッカー**を開きます。
+7.［Property grid］の［Model］>［Materials］で、手のアイコン (［Pick an asset up］) をクリックして**アセット ピッカー**を開きます。
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
-8. ステップ 2 で作成した **Transparent** マテリアルを選択し、[OK] をクリックします。
+8. ステップ 2 で作成した **Transparent** マテリアルを選択し、［OK］をクリックします。
 
     ![Select material in Asset Picker](media/physics-tutorials-select-transparent-material.png)
 
-9. [Asset view] で、**Transparent** マテリアル アセットを選択します。
+9.［Asset view］で、**Transparent** マテリアル アセットを選択します。
 
     ![Select material in Asset View](media/physics-tutorials-select-material-asset.png)
 
-10. [Property grid] の [Misc] > [Transparency] で、[Blend] を選択します。
+10.［Property grid］の［Misc］>［Transparency］で、［Blend］を選択します。
 
     ![Select Blend](media/physics-tutorials-set-blend.png)
 
-11. 既定では、[Alpha] は 1 に設定されています。これではマテリアルは完全に不透明になります。不透明度を 50% にするため、[Alpha] を 0.5 に設定します。
+11. 既定では、［Alpha］は 1 に設定されています。これではマテリアルは完全に不透明になります。不透明度を 50% にするため、［Alpha］を 0.5 に設定します。
 
     ![Select Blend](media/physics-tutorials-set-blend-alpha.png)
 
@@ -119,7 +119,7 @@
 
 落下するボールが通過するように、地面と球体の間にトリガーを配置する必要があります。
 
-[Property grid] の [Transform] で、[Position] を *X:0, Y:3, Z:0 に設定します。*
+［Property grid］の［Transform］で、［Position］を *X:0, Y:3, Z:0 に設定します。*
 
 トリガー エンティティが地面と球体の間に配置されました。
 
@@ -140,15 +140,15 @@
 >[!NOTE]
 >スクリプトの詳細については、「[スクリプト](../scripts/index.md)」を参照してください。
 
-1. [Asset view] で [Add asset] をクリックし、[Scripts]  > [Async Script] の順に選択します。
+1.［Asset view］で［Add asset］をクリックし、［Scripts］ >［Async Script］の順に選択します。
 
     ![Add a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
-2. [Script wizard] ダイアログで、スクリプトの名前を「*Trigger*」に設定して、[OK] をクリックします。
+2.［Script wizard］ダイアログで、スクリプトの名前を「*Trigger*」に設定して、［OK］をクリックします。
 
-    2a. スクリプトを保存するかどうかを確認するメッセージが表示されたら、[Yes] をクリックします。
+    2a. スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
 
-    2b. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、[Yes] をクリックします。
+    2b. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
 
 3. スクリプトを開き、内容を以下のコードに置き換えて、ファイルを保存します。
 
@@ -205,7 +205,7 @@
 
 1. **Game Studio** で **Trigger** エンティティを選択します。
 
-2. [Property grid] で [Add component] をクリックして、**Trigger** スクリプトを選択します。
+2.［Property grid］で［Add component］をクリックして、**Trigger** スクリプトを選択します。
 
     ![Add script component to entity](media/physics-tutorials-create-a-trigger-add-script-component-to-entity.png)
 

@@ -17,21 +17,21 @@
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. [Property grid] で [Add component] をクリックして、[Audio Emitter] を選択します。
+2.［Property grid］で［Add component］をクリックして、［Audio Emitter］を選択します。
 
     ![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
 
     次に、サウンドをエミッターに追加する必要があります。
 
-3. [Audio Emitter] で、緑のプラス記号アイコンをクリックして、サウンドの名前を指定します。
+3.［Audio Emitter］で、緑のプラス記号アイコンをクリックして、サウンドの名前を指定します。
 
     ![Add New Sound Entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
-4. [Asset view] から、前のステップで追加したサウンドに、サウンド アセットをドラッグ アンド ドロップします。
+4.［Asset view］から、前のステップで追加したサウンドに、サウンド アセットをドラッグ アンド ドロップします。
 
     ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    または、手のアイコンをクリックして、[Asset picker] を開きます。
+    または、手のアイコンをクリックして、［Asset picker］を開きます。
 
     ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 
@@ -80,7 +80,7 @@ mySound2Controller.Play();
 
 ## 3. オーディオ エミッター エンティティにスクリプトを追加する
 
-Game Studio では、スクリプトは [Add component] の下にコンポーネントとして一覧表示されます。オーディオ エミッター エンティティにスクリプトを追加します。
+Game Studio では、スクリプトは［Add component］の下にコンポーネントとして一覧表示されます。オーディオ エミッター エンティティにスクリプトを追加します。
 
 ## 関連項目
 * [空間オーディオ](spatialized-audio.md)

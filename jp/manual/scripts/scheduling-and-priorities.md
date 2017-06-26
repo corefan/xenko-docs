@@ -20,7 +20,7 @@ Xenko では、スクリプトは同時には実行されず、一度に 1 つ�
 
 1. スクリプトをエンティティにアタッチします。詳細な方法については、「[スクリプトを追加する](add-a-script.md)」を参照してください。
 
-2. エンティティを選択し、[Property grid] の**スクリプト コンポーネントのプロパティ**で、[Priority] に必要な値を設定します。
+2. エンティティを選択し、［Property grid］の**スクリプト コンポーネントのプロパティ**で、［Priority］に必要な値を設定します。
 
     ![Set script priority](media/set-script-priority.png)
 

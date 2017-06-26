@@ -22,7 +22,7 @@ GameStudio で新しいゲームを作成し、ターゲット プラットフ�
 
 ![Filled Credential Dialog](media/filled_credential_dialog.png)
 
-このとき、[Test settings] ボタンをクリックして資格情報をテストする必要があります。エラーがある場合は、次のように表示されます。
+このとき、［Test settings］ボタンをクリックして資格情報をテストする必要があります。エラーがある場合は、次のように表示されます。
 
 ![Invalid Settings](media/unreachable_host.png)
 
@@ -30,17 +30,17 @@ GameStudio で新しいゲームを作成し、ターゲット プラットフ�
 
 ![Success](media/successful_login.png)
 
-終了したら、[OK] ボタンをクリックして続行します。Linux ホストの指定した場所のサブディレクトリに、すべてのファイルがコピーされます。サブディレクトリの名前は、ゲームの名前です。
+終了したら、［OK］ボタンをクリックして続行します。Linux ホストの指定した場所のサブディレクトリに、すべてのファイルがコピーされます。サブディレクトリの名前は、ゲームの名前です。
 
-問題がある場合は、[Output] ペインで詳細を確認します。
+問題がある場合は、［Output］ペインで詳細を確認します。
 
 ## 設定
 
-最初に入力したすべての資格情報は、[Settings] ダイアログに保存されます。
+最初に入力したすべての資格情報は、［Settings］ダイアログに保存されます。
 
 ![Settings Dialog](media/remote_settings.png)
 
-パスワードは、現在のユーザーに対して Micrsoft *System.Security.Cryptograph.ProtectedData.Protect* メソッドを使用して暗号化されて保存され、[Settings] には Base64 で保存されたものが表示されます。当分の間、[Settings] ダイアログでパスワードを変更することはできません。
+パスワードは、現在のユーザーに対して Micrsoft *System.Security.Cryptograph.ProtectedData.Protect* メソッドを使用して暗号化されて保存され、［Settings］には Base64 で保存されたものが表示されます。当分の間、［Settings］ダイアログでパスワードを変更することはできません。
 
 資格情報に加えて、ゲームの実行を制御する設定が他に 2 つあります。
 * [Use CoreCLR]: .NET Core を使用して強制的に実行します。
@@ -59,7 +59,7 @@ GameStudio で新しいゲームを作成し、ターゲット プラットフ�
 
 ### Visual Studio
 
-プロジェクトを Visual Studio にロードした後、Linux プロジェクトを選択します。[ソリューション構成] ドロップダウン メニューで、有効な Linux の構成から 1 つを選択します。
+プロジェクトを Visual Studio にロードした後、Linux プロジェクトを選択します。［ソリューション構成］ドロップダウン メニューで、有効な Linux の構成から 1 つを選択します。
 
 ![Configuration selection](media/vs_configuration_selection.png)
 

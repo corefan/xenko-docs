@@ -9,7 +9,7 @@
 
 1. **エンティティ ツリー**の上にある ![Plus](media/add-entities-to-a-scene-plus-icon.png) アイコンをクリックします。
 
-    [Create] メニューが開きます。
+   ［Create］メニューが開きます。
 
    ![Scene editor Create menu](media/add-entities-to-a-scene-context-menu.png)
 
@@ -17,7 +17,7 @@
 
     ![Right-click entity tree or scene](media/create-entity-in-scene.png)
 
-2. [Empty entity] を選択するか、またはエンティティ テンプレートを選択します。
+2.［Empty entity］を選択するか、またはエンティティ テンプレートを選択します。
 
    エンティティがシーンに追加されて、エンティティ ツリーに表示されます。
 
@@ -25,7 +25,7 @@
 
 ## アセットからエンティティを作成する
 
-[Asset view] からシーンにアセットをドラッグ アンド ドロップして、エンティティを追加できます。
+［Asset view］からシーンにアセットをドラッグ アンド ドロップして、エンティティを追加できます。
 
 <video controls autoplay loop height="360" width="480">
    <source src="media/add-entities-to-scene-drag-and-place-entity.mp4" type="video/mp4">
@@ -44,7 +44,7 @@
 
 1. エンティティを選択します。
 
-2. [Property grid] で、[Add component] をクリックして、必要なコンポーネントを追加します。
+2.［Property grid］で、［Add component］をクリックして、必要なコンポーネントを追加します。
 
    ![Add a component in the property grid](media/add-entities-to-a-scene-add-model-component.png)
 
@@ -67,7 +67,7 @@
 	   <source src="../get-started/media/populate-scene-duplicate-entity.mp4" type="video/mp4">
 	</video>
 
-または、エンティティを右クリックして、[Duplicate selected entities] を選択します。
+または、エンティティを右クリックして、［Duplicate selected entities］を選択します。
 
    ![Duplicate selected entities](../get-started/media/duplicate-selected-entities.png)
 

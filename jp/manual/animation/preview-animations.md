@@ -3,13 +3,13 @@
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-[アニメーションをインポート](import-animations.md)した後、[Asset preview] でアニメーションをプレビューできます。
+[アニメーションをインポート](import-animations.md)した後、［Asset preview］でアニメーションをプレビューできます。
 
-1. [Asset view] (既定では下部) で、アニメーション アセットを選択します。
+1.［Asset view］ (既定では下部) で、アニメーション アセットを選択します。
 
     ![Select asset](media/select-asset.png)
 
-2. [Property grid] (既定では右側) の [Preview Model] で、手の形のアイコン ([Pick an asset up]) をクリックします。
+2.［Property grid］ (既定では右側) の［Preview Model］で、手の形のアイコン (［Pick an asset up］) をクリックします。
 
     ![Pick an asset up](media/pick-an-asset-up.png)
 
@@ -22,7 +22,7 @@
     >[!NOTE]
     >モデルとアニメーションが同じスケルトンを共有していることを確認してください。
 
-4. [Asset view] で、プレビューするアニメーションをクリックします。既定では、[Asset preview] タブは [Asset view] の右側に表示されます。
+4.［Asset view］で、プレビューするアニメーションをクリックします。既定では、［Asset preview］タブは［Asset view］の右側に表示されます。
 
     ![Asset preview tab](media/animations-import-animations-asset-preview-tab.png)
 
@@ -33,7 +33,7 @@
     </p>
 
     >[!NOTE]
-    >アセット プレビューが表示されない場合は、下部で [Asset preview] タブを選択してあることを確認してください。
+    >アセット プレビューが表示されない場合は、下部で［Asset preview］タブを選択してあることを確認してください。
 
 ## 関連項目
 

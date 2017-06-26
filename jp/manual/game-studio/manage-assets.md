@@ -4,17 +4,17 @@
 
 このページでは、アセットを編集および管理する方法について説明します。
 
-## [Property grid] でアセットを編集する
+##［Property grid］でアセットを編集する
 
-ほとんどのアセットは [Property grid] を使用して編集できます。既定では、[Property grid] は Game Studio の右上にあります。
+ほとんどのアセットは［Property grid］を使用して編集できます。既定では、［Property grid］は Game Studio の右上にあります。
 
 たとえば、マテリアル アセットの色を変更するには次のようにします。
 
- 1. [Asset view] (既定では下部) で、マテリアルを選択します。
+ 1.［Asset view］ (既定では下部) で、マテリアルを選択します。
 
 	![Select material in the asset view](../get-started/media/edit-asset-sphere-material-asset-view-tab.png)
 
- 2. [Property grid] の [Shading] > [Diffuse] で、[Diffuse Map] の横にある**色付きのボックス**をクリックします。このボックスには、アセットの色が表示されています (この例では黄色)。
+ 2.［Property grid］の［Shading］>［Diffuse］で、［Diffuse Map］の横にある**色付きのボックス**をクリックします。このボックスには、アセットの色が表示されています (この例では黄色)。
 
 	カラー ピッカーが開きます。
 
@@ -24,9 +24,9 @@
 
 	![Asset is now red](../get-started/media/edit-asset-color-change-selected-asset.png)
 
-[Asset preview] (既定では右下) に、アセットの変化がリアルタイムで表示されます。
+［Asset preview］ (既定では右下) に、アセットの変化がリアルタイムで表示されます。
 
-[Asset view] では、変更が保存されていないアセットはアスタリスク (*) で示されます。
+［Asset view］では、変更が保存されていないアセットはアスタリスク (*) で示されます。
 
 ![Unsaved changes](../get-started/media/asset-unsaved-changes.png)
 
@@ -48,7 +48,7 @@ Game Studio には、次のアセットの種類に対する専用のエディ�
 これらの種類のアセットの専用エディターを開くには、次のいずれかの方法を使用します。
 
 * アセットをダブルクリックします
-* アセットを右クリックして、[Edit asset] を選択します
+* アセットを右クリックして、［Edit asset］を選択します
 * アセットを選択して、**Ctrl + Enter キーを押します**
 
 ## アセットを整理する
@@ -57,10 +57,10 @@ Game Studio には、次のアセットの種類に対する専用のエディ�
 
 ![Organized project](media/manage-assets-organized-project.png)
 
-アセットは、プロジェクト パッケージの [Assets] フォルダーに格納されています。プロジェクトは [Solution explorer] (既定では左下) で確認できます。
+アセットは、プロジェクト パッケージの［Assets］フォルダーに格納されています。プロジェクトは［Solution explorer］ (既定では左下) で確認できます。
 
-* サブフォルダーを作成するには、親フォルダーを右クリックして [Create subfolder] を選択します。
-* アセットを移動するには、[Asset view] でアセットを選択し、それをフォルダーにドラッグ アンド ドロップします。
+* サブフォルダーを作成するには、親フォルダーを右クリックして［Create subfolder］を選択します。
+* アセットを移動するには、［Asset view］でアセットを選択し、それをフォルダーにドラッグ アンド ドロップします。
 
 > [!NOTE]
 > アセットを移動すると、そのアセットの内部にある他のアセットへの参照がすべて更新されます。
@@ -90,11 +90,11 @@ Game Studio には、次のアセットの種類に対する専用のエディ�
 
 アセットをルート アセットにするには (常にビルドに含まれます)、次のいずれかのようにします。
 * サムネイルの左上にある**グレーのドット**をクリックします
-* アセットを右クリックして [Include in build as root asset] を選択します。
+* アセットを右クリックして［Include in build as root asset］を選択します。
 
-## [Asset view] のオプション
+##［Asset view］のオプション
 
-[Asset view] のオプションを変更するには、[Asset view] のツール バーにある目のアイコンをクリックします。
+［Asset view］のオプションを変更するには、［Asset view］のツール バーにある目のアイコンをクリックします。
 
 ![Asset view options](../get-started/media/asset-view-options.png)
 
@@ -106,15 +106,15 @@ Game Studio には、次のアセットの種類に対する専用のエディ�
 
 ## アセットをフィルターする
 
-[Asset view] (既定では下部) でアセットを表示するときに、名前、タグ、種類、またはこれら 3 つの組み合わせで、アセットをフィルターできます。
+［Asset view］ (既定では下部) でアセットを表示するときに、名前、タグ、種類、またはこれら 3 つの組み合わせで、アセットをフィルターできます。
 
-タグと名前のフィルターは、"and" フィルターです。たとえば、[tag:level] と [name:knight] でフィルターすると、[Asset view] にはタグが "level" **かつ**名前が "knight" のアセットだけが表示されます。
+タグと名前のフィルターは、"and" フィルターです。たとえば、［tag:level］と［name:knight］でフィルターすると、［Asset view］にはタグが "level" **かつ**名前が "knight" のアセットだけが表示されます。
 
-種類フィルターは、"or" フィルターです。たとえば、[type:animation] と [type:texture] でフィルターすると、[Asset view] にはアニメーション**または**テクスチャのアセットだけが表示されます。
+種類フィルターは、"or" フィルターです。たとえば、［type:animation］と［type:texture］でフィルターすると、［Asset view］にはアニメーション**または**テクスチャのアセットだけが表示されます。
 
 ### フィルターを追加する
 
-1. [Asset view] で、フィルター バーに入力します。
+1.［Asset view］で、フィルター バーに入力します。
 
     一致するフィルター (名前、種類、タグ) のリストが表示されます。
 
@@ -124,7 +124,7 @@ Game Studio には、次のアセットの種類に対する専用のエディ�
 
     * タグまたは種類でフィルターするには、ドロップダウン リストでタグまたは種類のフィルターを選択します。
 
-    フィルターが適用されて、一致するアセットが [Asset view] に表示されます。
+    フィルターが適用されて、一致するアセットが［Asset view］に表示されます。
 
 複数のフィルターを追加できます。名前フィルターは緑、タグ フィルターは青、種類フィルターはオレンジです。
 

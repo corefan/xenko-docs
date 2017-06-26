@@ -11,19 +11,19 @@
 
 1. 静的コライダーにするエンティティを選択します。
 
-2. [Property grid] で [Add component] をクリックして、[Static Collider] を選択します。
+2.［Property grid］で［Add component］をクリックして、［Static Collider］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
-3. エンティティの形状と一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、[Property grid] で [Static Collider] コンポーネントを展開してプロパティを表示します。
+3. エンティティの形状と一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
 
-4. [Collider Shapes] の隣にある**緑色のプラス アイコン**をクリックして、適当な形状を選択します。
+4.［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、適当な形状を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
 ## 静的コライダーのプロパティ
 
-静的コライダーのプロパティは [Property grid] で調整できます。
+静的コライダーのプロパティは［Property grid］で調整できます。
 
 ![Static collider properties](media/static-collider-properties.png)
 

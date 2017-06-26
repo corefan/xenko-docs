@@ -29,31 +29,31 @@ Archetype
 
 ## アーキタイプからアセットを派生する
 
-[Asset view] で、新しいアセットの派生元にするアセットを右クリックし、[Create derived asset] を選択します。
+［Asset view］で、新しいアセットの派生元にするアセットを右クリックし、［Create derived asset］を選択します。
 
 ![Create derived asset](media/archetypes-create-derived-asset.png)
 
 新しい**派生アセット**がプロジェクトに追加されます。このアセットは、プロパティを**アーキタイプ**アセットから派生しています。
 
-派生アセットのプロパティでは、アーキタイプ アセットが [Archetype] に表示されます。
+派生アセットのプロパティでは、アーキタイプ アセットが［Archetype］に表示されます。
 
 ![Derived asset in Property Grid](media/archetypes-archetype-in-property-grid.png)
 
-[Property Grid] でアーキタイプ アセットを右クリックし、[Select the referenced asset] を選択して、アーキタイプ アセットをすばやく選択できます。
+［Property Grid］でアーキタイプ アセットを右クリックし、［Select the referenced asset］を選択して、アーキタイプ アセットをすばやく選択できます。
 
 ![Select referenced asset](media/archetypes-select-the-referenced-asset.png)
 
 ### オーバーライドされたプロパティ
 
-[Property Grid] では、派生アセットのプロパティのうち、アーキタイプと異なるものがわかるように表示されます。**オーバーライド**された**固有**のプロパティは**白**で、**継承**されている (同じ) プロパティは**グレー**で表示されます。
+［Property Grid］では、派生アセットのプロパティのうち、アーキタイプと異なるものがわかるように表示されます。**オーバーライド**された**固有**のプロパティは**白**で、**継承**されている (同じ) プロパティは**グレー**で表示されます。
 
-次のスクリーンショットでは、[Diffuse Map] プロパティはオーバーライドされています。それ以外のプロパティは継承されています。
+次のスクリーンショットでは、［Diffuse Map］プロパティはオーバーライドされています。それ以外のプロパティは継承されています。
 
 ![Overridden properties are white](media/archetypes-overriden-properties-appear-white.png)
 
 ### プロパティをアーキタイプの値にリセットする
 
-派生アセットのオーバーライドされた固有のプロパティを、アーキタイプの値にリセットできます。そのためには、オーバーライドされたプロパティを右クリックして、[Reset to base value] を選択します。
+派生アセットのオーバーライドされた固有のプロパティを、アーキタイプの値にリセットできます。そのためには、オーバーライドされたプロパティを右クリックして、［Reset to base value］を選択します。
 
 ![Reset to base value](media/archetypes-reset-property-to-base-value.png)
 
@@ -61,7 +61,7 @@ Archetype
 
 アーキタイプと派生アセットの間のリンクは削除できます。つまり、派生アセットはアーキタイプに対する変更を継承しなくなり、完全に独立したアセットになります。
 
-そのためには、[Asset view] で派生アセットを右クリックし、[Clear archetype] を選択します。
+そのためには、［Asset view］で派生アセットを右クリックし、［Clear archetype］を選択します。
 
 ![Clear archetype](media/archetypes-clear-archetypes.png)
 

@@ -22,9 +22,9 @@
 
 * シーン エディターの**エンティティ ツリー** (既定では左) で、シーンをそれの親にするシーンにドラッグします。
 
-* [Asset view] (既定では下部) のシーンを、**エンティティ ツリー**内にある親にするシーンにドラッグします。
+*［Asset view］ (既定では下部) のシーンを、**エンティティ ツリー**内にある親にするシーンにドラッグします。
 
-* シーンの [Property grid] (既定では右) の [Parent] で、そのシーンの親にするシーンを指定します。
+* シーンの［Property grid］ (既定では右) の［Parent］で、そのシーンの親にするシーンを指定します。
 
     ![Properties parent scene](media/properties-parent-scene.png)
 
@@ -32,21 +32,21 @@
 
 **既定のシーン**は、Xenko が実行時にロードするシーンです。既定のシーンは、[ゲーム設定](game-settings.md)アセットで設定できます。
 
-1. [Solution explorer] (既定では左下のペイン) で、[Assets] フォルダーを選択します。
+1.［Solution explorer］ (既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2. [Asset view] (既定では下部のペイン) で、[GameSettings] アセットを選択します。
+2.［Asset view］ (既定では下部のペイン) で、［GameSettings］アセットを選択します。
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3. [Property grid] (既定では右側のペイン) で、[Default Scene] の隣の [Asset picker] ボタンをクリックします。
+3.［Property grid］ (既定では右側のペイン) で、［Default Scene］の隣の［Asset picker］ボタンをクリックします。
 
     ![Set default scene](media/game-settings-default-scene.png)
 
     **アセット ピッカー**が開きます。
 
-2. アセット ピッカーで既定のシーンを選択し、[OK] をクリックします。
+2. アセット ピッカーで既定のシーンを選択し、［OK］をクリックします。
 
 このシーンが実行時にロードされます。
 

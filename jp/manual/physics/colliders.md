@@ -21,11 +21,11 @@
 
 既定では、コライダーはシーン エディターには表示されません。表示するには次のようにします。
 
-1. Game Studio ツールバーの右上にある [Display gizmo options] アイコンを表示します。
+1. Game Studio ツールバーの右上にある［Display gizmo options］アイコンを表示します。
 
    ![Display gizmo options](media/display-gizmo-options.png)
 
-2. [Physics] を選択します。
+2.［Physics］を選択します。
 
     ![Display physics option](media/display-physics-option.png)
 
@@ -43,9 +43,9 @@ this.GetSimulation().ColliderShapesRendering = true;
 
 キーボード ショートカットで実行時にコライダーの形状の表示/非表示を切り替えるには、**DebugPhysicsShapes** スクリプトを使用します。
 
-1. [Asset view] で [Add asset] をクリックします。
-2. [Scripts] > [Debug Physics Shapes] の順に選択します。
-3. [Debug Physics Shapes] スクリプトをコンポーネントとしてシーン内のエンティティに追加します。
+1.［Asset view］で［Add asset］をクリックします。
+2.［Scripts］>［Debug Physics Shapes］の順に選択します。
+3.［Debug Physics Shapes］スクリプトをコンポーネントとしてシーン内のエンティティに追加します。
 
 スクリプトがコライダーの形状の可視性を**左 Shift + 左 Ctrl + P** にバインドするので、実行時にオン/オフを切り替えられるようになります。スクリプトを編集して、別のキーの組み合わせにバインドできます。
 

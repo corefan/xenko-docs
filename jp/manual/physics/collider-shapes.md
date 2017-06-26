@@ -3,7 +3,7 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-[コライダー](colliders.md)が相互作用を行うには、[Property grid] でその形状を設定する必要があります。幾何学的形状を指定するか、コライダー形状アセットを使用することができます。
+[コライダー](colliders.md)が相互作用を行うには、［Property grid］でその形状を設定する必要があります。幾何学的形状を指定するか、コライダー形状アセットを使用することができます。
 
 ![Select a collider shape](media/select-collider-shape.png)
 
@@ -96,13 +96,13 @@
 
 ## コライダー形状アセットを作成する
 
-1. [Asset view] (既定では下部) で、[Add asset] をクリックします。
+1.［Asset view］ (既定では下部) で、［Add asset］をクリックします。
 
-2. [Physics] を選択し、作成する形状を選択します。
+2.［Physics］を選択し、作成する形状を選択します。
 
     ![Create collider shape asset](media/create-collider-shape-asset.png)
 
-新しいコライダー形状アセットが [CollisionMeshes] フォルダーに作成されます。
+新しいコライダー形状アセットが［CollisionMeshes］フォルダーに作成されます。
 
 ![Collider shape asset in asset view](media/collider-shape-in-asset-view.png)
 
@@ -110,29 +110,29 @@
 
 これは、モデルと一致するコライダーの形状をすばやく作成するのに便利です。
 
-1. [Asset view] (既定では下部) で、[Add asset] をクリックします。
+1.［Asset view］ (既定では下部) で、［Add asset］をクリックします。
 
-2. [Physics] > [Convex hull] の順に選択します。
+2.［Physics］>［Convex hull］の順に選択します。
 
     **アセット ピッカー**が開きます。
 
     ![Select model](media/select-model.png)
 
-3. 作成するコライダー形状アセットの基にするモデル アセットを選択して、[OK] をクリックします。
+3. 作成するコライダー形状アセットの基にするモデル アセットを選択して、［OK］をクリックします。
 
 モデルからコライダー形状アセットが作成されます。
 
 ## コライダー形状アセットを使用する
 
-1. [Static Collider] または [Rigid Body] プロパティで、[Collider Shapes] の [Asset] を選択します。
+1.［Static Collider］または［Rigid Body］プロパティで、［Collider Shapes］の［Asset］を選択します。
 
     ![Select collider shape asset](media/select-asset-collider-shape.png)
 
-2. [Shape] で、使用するコライダー形状アセットを指定します。
+2.［Shape］で、使用するコライダー形状アセットを指定します。
 
     ![Select collider shape asset](media/select-collider-shape-asset.png)
 
-    そのためには、[Asset view] から [Property grid] の [Shape] にアセットをドラッグします。または、手のアイコン ([Pick an asset up]) をクリックして**アセット ピッカー**を開き、アセットを参照します。
+    そのためには、［Asset view］から［Property grid］の［Shape］にアセットをドラッグします。または、手のアイコン (［Pick an asset up］) をクリックして**アセット ピッカー**を開き、アセットを参照します。
 
 ## 関連項目
 

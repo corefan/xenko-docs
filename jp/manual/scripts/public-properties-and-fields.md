@@ -53,7 +53,7 @@ public class SampleSyncScript : StartupScript
 
 ## 属性
 
-パブリック プロパティおよびフィールドを宣言するときは、ユーザーが Game Studio の [Property grid] でそれを編集する方法を、属性を使用して変更できます。
+パブリック プロパティおよびフィールドを宣言するときは、ユーザーが Game Studio の［Property grid］でそれを編集する方法を、属性を使用して変更できます。
 
 スクリプトで宣言するパブリック クラスの上に、属性を追加します。次に例を示します。
 
@@ -71,7 +71,7 @@ public class SampleSyncScript : StartupScript
 
 ### DataMemberRange
 
-[DataMemberRange](xref:SiliconStudio.Core.Annotations.DataMemberRangeAttribute) は、[Property grid] で設定できる値の範囲を指定します。
+[DataMemberRange](xref:SiliconStudio.Core.Annotations.DataMemberRangeAttribute) は、［Property grid］で設定できる値の範囲を指定します。
 
 ```cs
         [DataMember]
@@ -86,17 +86,17 @@ public class SampleSyncScript : StartupScript
 
 ### DataMemberIgnore
 
-[DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) は、[Property grid] の値を非表示にします。
+[DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) は、［Property grid］の値を非表示にします。
 
 ```cs
 	// このパブリック プロパティは Game Studio では使用できない
-	[DataMemberIgnore]
+	［DataMemberIgnore］
 	public float DelayTimeOut { get; set; }
 ```
 
-Game Studio には [Property grid] のプロパティが表示されなくなります。
+Game Studio には［Property grid］のプロパティが表示されなくなります。
 
-![パブリック プロパティは ```[DataMemberIgnore]``` で非表示になっている](media/scripts-in-xenko-public-property-with-datamemberignore.png)
+!［パブリック プロパティは ```[DataMemberIgnore］``` で非表示になっている](media/scripts-in-xenko-public-property-with-datamemberignore.png)
 
 ### DefaultValue
 
@@ -112,7 +112,7 @@ Game Studio には [Property grid] のプロパティが表示されなくなり
 
 ### Display
 
-[Class DisplayAttribute](xref:SiliconStudio.Core.DisplayAttribute) は、[Property grid] のプロパティ ラベルを変更します。
+[Class DisplayAttribute](xref:SiliconStudio.Core.DisplayAttribute) は、［Property grid］のプロパティ ラベルを変更します。
 
 ```cs
         [Display("My Property")]
@@ -130,7 +130,7 @@ Game Studio には [Property grid] のプロパティが表示されなくなり
 
 ![My-Property-My-Category](media/my-property-my-category.png)
 
-名前を指定しないでカテゴリにプロパティを含めたい場合は、``[Display(category: "My Category")]`` を使用します。次に例を示します。
+名前を指定しないでカテゴリにプロパティを含めたい場合は、``［Display(category: "My Category")］`` を使用します。次に例を示します。
 
 ```cs
         [Display(category: "My Category")]
@@ -139,7 +139,7 @@ Game Studio には [Property grid] のプロパティが表示されなくなり
 
 ### CategoryOrder
 
-既定では、[Property grid] にはスクリプトと同じ順序でプロパティが表示されます。[CategoryOrder](xref:SiliconStudio.Core.Annotations.CategoryOrderAttribute) を使用して順序を変更できます。
+既定では、［Property grid］にはスクリプトと同じ順序でプロパティが表示されます。[CategoryOrder](xref:SiliconStudio.Core.Annotations.CategoryOrderAttribute) を使用して順序を変更できます。
 
 小さい値のカテゴリが先に表示されます。負の値も使用できます。
 
@@ -167,9 +167,9 @@ Game Studio には [Property grid] のプロパティが表示されなくなり
 
 | プロパティ        | 説明                                                                                     |
 |-----------------|-------------------------------------------------------------------------------------------------|
-| CanReorderItems | `true` の場合は、ドラッグ アンド ドロップして [Property grid] 内の項目の順序を変更できます。 |
+| CanReorderItems | `true` の場合は、ドラッグ アンド ドロップして［Property grid］内の項目の順序を変更できます。 |
 | NotNullItems    | `true` の場合は、リストの項目を null にできません。                                                     |
-| ReadOnly        | `true` の場合は、[Property grid] のリストの項目を追加または削除できません。                |
+| ReadOnly        | `true` の場合は、［Property grid］のリストの項目を追加または削除できません。                |
 
 ## 関連項目
 

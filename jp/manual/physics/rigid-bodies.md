@@ -12,19 +12,19 @@
 
 1. 剛体コライダーにするエンティティを選択します。
 
-2. [Property grid] で [Add component] をクリックして、[Rigidbody] を選択します。
+2.［Property grid］で［Add component］をクリックして、［Rigidbody］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
-3. エンティティと一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、[Property grid] で [Rigidbody] コンポーネントを展開してプロパティを表示します。
+3. エンティティと一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Rigidbody］コンポーネントを展開してプロパティを表示します。
 
-4. [Collider Shapes] の隣にある**緑色のプラス アイコン**をクリックして、適当な形状を選択します。
+4.［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、適当な形状を選択します。
 
      ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 
 ## コンポーネントのプロパティ
 
-剛体のプロパティは [Property grid] で調整できます。
+剛体のプロパティは［Property grid］で調整できます。
 
 ![Rigid body properties](media/rigid-body-properties.png)
 
@@ -44,8 +44,8 @@ Is Kinematic          | 剛体が[運動学的](kinematic-rigid-bodies.md)であ
 Mass                  | コライダーの質量を設定します。大きな違いを表すには、小数点値を使用します。たとえば、*1* や *100000* ではなく、*0.1* や *10* と記述します。
 Linear Damping        | 指向性の力の減衰の量です。
 Angular Damping        | 回転力の減衰の量です。
-Gravity               | [Override Gravity] が選択されている場合に適用されるカスタム重力ベクトルを設定します。
-Override Gravity      | [Gravity] で指定されているベクトルで重力をオーバーライドします。
+Gravity               |［Override Gravity］が選択されている場合に適用されるカスタム重力ベクトルを設定します。
+Override Gravity      |［Gravity］で指定されているベクトルで重力をオーバーライドします。
 Node Name             | コライダー エンティティにボーン構造が含まれる場合、ノード名はその特定のボーンにリンクされるボーン ノードの名前を参照できます。
 Collider Shapes       | [コライダーの形状](collider-shapes.md)を追加します。
 
