@@ -1,6 +1,10 @@
 # Xenko doesn't run
 
-If you're having trouble running Xenko, make sure you've installed all the prerequisites.
+If you're having trouble running Xenko, make sure you've installed all the prerequisites:
+
+* .NET Framework 4.6.2
+* Visual C++ Redistributable 2017
+* Build Tools for Visual Studio
 
 Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
 
