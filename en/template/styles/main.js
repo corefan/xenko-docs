@@ -226,14 +226,8 @@ $(function() {
     }
 
     $('#x_head_langList li a').on('click', function(){
-      var oldLang;
-      var patt = /(en)|(jp)/;
-      for (var i = 0; i < siteLang.length; i++) {
-        if(window.location.pathname.match(patt)[0]== siteLang[i]){
-          oldLang = siteLang[i];
-        }
-      }
-      var lang = $(this).data('language');
-      window.location.href = window.location.href.replace(oldLang, lang);
+      var patt = /\/(en|jp)\//;
+      var lang = "/"+$(this).data('language')+"/";
+      window.location.href = window.location.href.replace(patt, lang);
     });
 });
