@@ -209,6 +209,7 @@
 ## [Use sprites](sprites/use-sprites.md)
 
 # [Troubleshooting](troubleshooting/index.md)
+## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
