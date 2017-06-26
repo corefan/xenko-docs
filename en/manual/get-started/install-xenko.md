@@ -2,7 +2,7 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-1. Download the Xenko installer (**XenkoSetup.exe**) free from the [Xenko website](http://xenko.com/download/).
+1. Download the Xenko installer (**XenkoSetup.exe**) from the [Xenko website](http://xenko.com/download/).
  
 2. Double-click the **XenkoSetup.exe** file.
  
