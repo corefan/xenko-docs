@@ -106,7 +106,7 @@ Xenko がサポートするジェスチャには大きく分けて次の 2 つ�
 
 フリック ジェスチャの最小の長さを設定するには、[GestureConfigFlick.MinimumFlickLength](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength) を使用します。
 
-ドラッグの方向を**上下**または**左右**に制限するには、
+フリックの方向を**上下**または**左右**に制限するには、
 [GestureConfigFlick.FlickShape](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.FlickShape) を使用します。
 
 #### <a name="Long-press">長押し</a>

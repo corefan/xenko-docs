@@ -59,9 +59,11 @@
 
 次に、プレハブ エディターに戻ってプレハブのスポット ライトの色を緑に変更するとどうなるか見てみましょう。
 
-![Changed colors](media/lamppost-prefab-instances-with-override.png)
+![Changed colors to green](media/change-prefab-color-to-green.png)
 
 街灯柱のうち 4 つは緑のライトになります。オーバーライドされたプロパティはプレハブを変更しても変わらないので、5 番目は赤のままです。
+ 
+![Changed colors](media/lamppost-prefab-instances-with-override.png)
 
 ## 関連項目
 

@@ -40,7 +40,7 @@
 
 ### 回転ギズモ
 
-回転ギズモを選択するには、シーン エディターのツールバーで ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) アイコンをクリックするか、**R** キーを押します。
+回転ギズモを選択するには、シーン エディターのツールバーで ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) アイコンをクリックするか、**E** キーを押します。
 
 回転ギズモは、シーン内のエンティティを、選択された軸を中心にして回転します。
 
