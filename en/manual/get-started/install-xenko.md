@@ -90,7 +90,7 @@ Xenko is now installed and ready to use.
 
 >[!Note]
 
-> If you don't install the prerequisites, Xenko won't run. In this case, you can download and install the prerequisites (**Visual C++ Redistributable** and **Build Tools for Visual Studio**) separately from [Visual Studio Downloads](https://www.visualstudio.com/downloads/) under **Other Tools and Frameworks**.
+> If you don't install the prerequisites, Xenko won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Xenko doesn't run](../troubleshooting/xenko-doesnt-run.md).
 
 > Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
 
