@@ -37,7 +37,6 @@ Culling Mask          | Defines which entity groups are affected by this light. 
 * [Point lights](point-lights.md)
 * [Ambient lights](ambient-lights.md)
 * [Directional lights](directional-lights.md)
-* [Light shafts](light-shafts.md)
 * [Skybox lights](skybox-lights.md)
 * [Light probes](light-probes.md)
 * [Shadows](shadows.md)
