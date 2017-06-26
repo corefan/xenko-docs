@@ -77,19 +77,22 @@
 
     Click **Yes**.
     
-12. Xenko checks if the prerequisites **Visual C++ Redistributable** and **Build Tools for Visual Studio** are installed. If they're not installed, follow the prompts to install them.
+12. The Xenko Launcher checks if the prerequisite **Visual C++ Redistributable** is installed. If it's not installed, follow the prompts to install it.
+
+13. The Xenko Launcher checks if the prerequisite **Build Tools for Visual Studio** is installed. If you have Visual Studio, then this is already installed. If it's not installed, follow the prompts to install it.
 
     ![Installing VS build tools](media/installing-vs-build-tools.png)
 
     >[!Note]
-    > Windows uses the Visual Studio installer to install the prerequisites, but it doesn't install Visual Studio.
+    > Windows uses the Visual Studio installer to install **Build Tools for Visual Studio**, but it doesn't install Visual Studio.
 
-    >[!Note]
-    > If you don't install the prerequisites, Xenko won't run. In this case, you can download and install the prerequisites (**Visual C++ Redistributable** and **Build Tools for Visual Studio**) separately from [Visual Studio Downloads](https://www.visualstudio.com/downloads/) under **Other Tools and Frameworks**.
-    
-    > Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
+Xenko is now installed and ready to use.
 
-    Xenko is now installed and ready to use.
+>[!Note]
+
+> If you don't install the prerequisites, Xenko won't run. In this case, you can download and install the prerequisites (**Visual C++ Redistributable** and **Build Tools for Visual Studio**) separately from [Visual Studio Downloads](https://www.visualstudio.com/downloads/) under **Other Tools and Frameworks**.
+
+> Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
 
 ## What's next?
 
