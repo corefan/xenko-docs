@@ -87,9 +87,9 @@
     >[!Note]
     > If you don't install the prerequisites, Xenko won't run. In this case, you can install the prerequisites separately:
     
-    > * [Download Visual C++ Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    > * [Download Visual C++ 2017 Redistributable](https://go.microsoft.com/fwlink/?LinkId=746572)
 
-    > * [Download Visual Studio Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
+    > * [Download Visual Studio Build Tools](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15)
 
     > Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
 
