@@ -840,11 +840,25 @@ article h4{
         /*margin-top: 65px;*/
     }
     .ui-resizable-handle.ui-resizable-e{
-        width: 2px;
+        width: 4px;
         user-select: none;
         background: #afadad;
         box-shadow: -1px 0px 1px 0px #CCC;
         right: -2px;
+    }
+    .ui-resizable-handle.ui-resizable-e:after{
+        content: "::::::::";
+        display: inline-block;
+        font-size: 7px;
+        color: #1d1b1b;
+        position: absolute;
+        top: 50%;
+        transform: rotate(90deg);
+        left: -7px;
+        line-height: 0.2;
+        font-weight: 700;
+        letter-spacing: 0px;
+        margin-top: -9px;
     }
     #sidetoc{
         height: calc(100vh - 166px);
