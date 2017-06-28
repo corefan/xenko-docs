@@ -2,7 +2,7 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-1. Download the Xenko installer (**XenkoSetup.exe**) free from the [Xenko website](http://xenko.com/download/).
+1. Download the Xenko installer (**XenkoSetup.exe**) from the [Xenko website](http://xenko.com/download/).
  
 2. Double-click the **XenkoSetup.exe** file.
  
@@ -77,23 +77,22 @@
 
     Click **Yes**.
     
-12. Xenko checks if the prerequisites **Visual C++ Redistributable** and **Visual Studio Build Tools** are installed. If they're not installed, follow the prompts to install them.
+12. The Xenko Launcher checks if the prerequisite **Visual C++ Redistributable** is installed. If it's not installed, follow the prompts to install it.
+
+13. The Xenko Launcher checks if the prerequisite **Build Tools for Visual Studio** is installed. If you have Visual Studio, then this is already installed. If it's not installed, follow the prompts to install it.
 
     ![Installing VS build tools](media/installing-vs-build-tools.png)
 
     >[!Note]
-    > Windows uses the Visual Studio installer to install the prerequisites, but it doesn't install Visual Studio.
+    > Windows uses the Visual Studio installer to install **Build Tools for Visual Studio**, but it doesn't install Visual Studio.
 
-    >[!Note]
-    > If you don't install the prerequisites, Xenko won't run. In this case, you can install the prerequisites separately:
-    
-    > * [Download Visual C++ Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+Xenko is now installed and ready to use.
 
-    > * [Download Visual Studio Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
+>[!Note]
 
-    > Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
+> If you don't install the prerequisites, Xenko won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Xenko doesn't run](../troubleshooting/xenko-doesnt-run.md).
 
-    Xenko is now installed and ready to use.
+> Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
 
 ## What's next?
 
