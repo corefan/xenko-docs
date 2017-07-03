@@ -1,8 +1,8 @@
 # Full call stack not available
 
-By default, when an exception is thrown, Visual Studio only shows the call stack from the Xenko runtime .DLL files, not user code.
+Depending on your Visual Studio settings, when an exception is thrown in Xenko, Visual Studio might only show the call stack from the Xenko runtime .DLL files or .NET framework assemblies, not user code.
 
-To see more exceptions, add additional conditions to the Visual Studio **Exception Settings**.
+To break as soon as an exception is thrown, add additional conditions to the Visual Studio **Exception Settings**.
 
 1. In the Visual Studio toolbar, under the **Debug** menu, select **Windows > Exception Settings**. 
 
@@ -14,3 +14,5 @@ To see more exceptions, add additional conditions to the Visual Studio **Excepti
 
 >[!Tip]
 >To restore the default list of exceptions, right-click and select **Restore Defaults**.
+
+For more information about managing exceptions in Visual Studio, see [Manage exceptions with the debugger in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/managing-exceptions-with-the-debugger) in the Microsoft Visual Studio documentation.
