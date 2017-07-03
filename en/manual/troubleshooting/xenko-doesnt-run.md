@@ -16,6 +16,9 @@ To check if this is installed, see **Control Panel > Programs > Programs and Fea
 
 If it's not installed, you can download it from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53345).
 
+> [!Note]
+> If you install Visual Studio, make sure you also install the .Net Framework support. Just the Visual Studio base installation isn't enough.]
+
 ## Visual C++ Redistributable 2015 or 2017
 
 To check if this is installed, see **Control Panel > Programs > Programs and Features** and look for **2015 Redistributable** or **2017 Redistributable**.
@@ -28,10 +31,9 @@ If it's not installed, you can download the 2017 Redistributable from [Visual St
 
 If you don't have Visual Studio installed, you need to install **Build Tools for Visual Studio**. You can download this from [Visual Studio Downloads](https://www.visualstudio.com/downloads/) (under **Other Tools and Frameworks**).
 
-![Installing VS build tools](../get-started/media/installing-vs-build-tools.png)
-
->[!Note]
-> Windows uses the Visual Studio installer to install the Visual C++ Redistributable and Build Tools for Visual Studio prerequisites, but it doesn't install Visual Studio.
+> [!Note]
+> Windows uses the Visual Studio installer to install the Visual C++ Redistributable and Build Tools for Visual Studio prerequisites. If you don't need Visual Studio, don't worry – it doesn't install it.
+>![Installing VS build tools](../get-started/media/installing-vs-build-tools.png)
 
 ## See also
 
