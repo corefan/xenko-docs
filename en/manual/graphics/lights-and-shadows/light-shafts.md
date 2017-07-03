@@ -133,7 +133,7 @@ To reduce this effect, in the **light shaft component properties**, reduce the *
 
 Alternatively, use multiple bounding volumes. To do this:
 
-1. Create additional bounding volume(s) and position them to cover the area where you want to create light shafts. Make sure the bounding volumes don't overlap (light shafts in overlapping areas are extra-bright).
+1. Create additional bounding volumes and position them to cover the area where you want to create light shafts. Make sure the bounding volumes don't overlap (light shafts in overlapping areas are extra-bright).
 
 2. In the **light shaft component properties**, make sure **separate bounding volumes** is enabled.
 
