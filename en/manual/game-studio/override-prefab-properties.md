@@ -9,7 +9,7 @@ If you modify a property in a prefab instance, the instance no longer inherits c
 
 In the following video, the **Lamp** prefab contains several box entities that belong to the **Boxes** parent. When we delete the boxes from the instance, only that instance is affected. The prefab (shown on the right) is unchanged.
 
-If we add another box to the Boxes parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the Boxes parent from that instance.
+If we add another box to the **Boxes** parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the **Boxes** parent from that instance.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/delete-boxes-from-prefab-instance.jpg">
@@ -21,9 +21,9 @@ If we add another box to the Boxes parent in the prefab, it doesn't appear in th
 
 In the **Property grid**, you can see which properties of the prefab instance differ from the base values in the prefab.
 
-* **Overridden** and **unique** properties are **white**:
+* **Overridden** and **unique** properties are **white and bold**:
 
-    ![Overriden properties are white](media/use-prefabs-overriden-properties-appear-white.png) 
+    ![Overridden properties are white](media/use-prefabs-overriden-properties-appear-white.png)
 
 * **Identical** properties are **gray**:
 
@@ -49,7 +49,7 @@ Let's add five instances of the lamppost prefab to our scene.
 
 ![Five lampposts](media/lamppost-prefab-instances.png)
 
-Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The property grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The property grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
 
 ![Overridden property](media/override-prefab-property.png)
 
@@ -59,9 +59,11 @@ We can see this in the scene view.
 
 Now let's see what happens when we go back to the Prefab Editor and change the color of the spot light in the prefab to green.
 
-![Changed colors](media/lamppost-prefab-instances-with-override.png)
+![Change color to green](media/change-prefab-color-to-green.png)
 
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
+
+![Changed colors](media/lamppost-prefab-instances-with-override.png)
 
 ## See also
 

@@ -44,8 +44,8 @@ Is Kinematic          | Toggles whether the rigid body is [kinematic](kinematic-
 Mass                  | Sets the collider mass. For large differences, use a point value; for example, write *0.1* or *10*, not *1* or *100000*.
 Linear damping        | The amount of damping for directional forces.
 Angular damping       | The amount of damping for rotational forces.
+Override Gravity      | Overrides gravity with the vector specified in Gravity.
 Gravity               | Sets a custom gravity vector applied if Override Gravity is selected.
-Override Gravity      | Overrides gravity with the vector specified in Override Gravity.
 Node Name             | If the collider entity contains a bone structure, the node name can refer to a bones node name to be linked to that specific bone.
 Collider Shapes       | Adds a [collider shape](collider-shapes.md).
 

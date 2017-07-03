@@ -122,6 +122,9 @@
 ## [Materials](graphics/materials/index.md)
 ### [Maps](graphics/materials/material-maps.md)
 ### [Attributes](graphics/materials/material-attributes.md)
+#### [Geometry attributes](graphics/materials/geometry-attributes.md)
+#### [Shading attributes](graphics/materials/shading-attributes.md)
+#### [Misc attributes](graphics/materials/misc-attributes.md)
 ### [Layers](graphics/materials/material-layers.md)
 ### [Materials for developers](graphics/materials/materials-for-developers.md)
 ## [Post effects](graphics/post-effects/index.md)
@@ -206,9 +209,11 @@
 ## [Use sprites](sprites/use-sprites.md)
 
 # [Troubleshooting](troubleshooting/index.md)
+## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
+## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
 
 # [UI](ui/index.md)
 ## [Pages](ui/ui-pages.md)

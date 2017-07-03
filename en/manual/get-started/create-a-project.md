@@ -21,7 +21,7 @@ To create an empty project:
 
     The **New/open project** dialog opens.
     
-    [New Project dialog](media/create-project-new-open-project-window.png)
+    ![New Project dialog](media/create-project-new-open-project-window.png)
 
     You can also open a new project in Game Studio from **File > New**. 
     

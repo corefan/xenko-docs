@@ -43,7 +43,7 @@ You can override the graphics platform Xenko uses for specific platforms. For ex
 
     ![Select graphics platform override](media/select-override-configuration.png)
 
-4. Under **Rendering Settings**, in the **Default Graphics Platform** drop-down menu, select the graphics platform you want to use.
+4. Under **Rendering Settings**, in the **Preferred Graphics Platform** drop-down menu, select the graphics platform you want to use.
 
     ![Select graphics platform override](media/select-override-graphics-platform.png)
 

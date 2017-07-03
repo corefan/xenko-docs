@@ -106,7 +106,7 @@ The number of fingers on the screen can't during the gesture.
 
 To set a minimum length for the flick gesture, use [GestureConfigFlick.MinimumFlickLength](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength).
 
-To restrict the direction of the drag to **vertical** or **horizontal**, use 
+To restrict the direction of the flick to **vertical** or **horizontal**, use 
 [GestureConfigFlick.FlickShape](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.FlickShape).
 
 #### <a name="Long-press"> Long press</a>
