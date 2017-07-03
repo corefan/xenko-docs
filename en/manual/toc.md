@@ -209,15 +209,19 @@
 ## [Use sprites](sprites/use-sprites.md)
 
 # [Troubleshooting](troubleshooting/index.md)
+## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
+## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
 
 # [UI](ui/index.md)
-## [Controls](ui/controls/index.md)
-### [UIElement class diagram](ui/controls/uielement-class-diagram.md)
+## [Pages](ui/ui-pages.md)
+## [Libraries](ui/ui-libraries.md)
+## [Editor](ui/ui-editor.md)
+## [Add a UI to a scene](ui/add-a-ui-to-a-scene.md)
+## [Scripts](ui/ui-scripts.md)
 ## [Layout system](ui/layout-system.md)
-## [Editor](ui/editor/index.md)
 
 # [Virtual reality](virtual-reality/index.md)
 ## [Enable VR](virtual-reality/enable-vr.md)
