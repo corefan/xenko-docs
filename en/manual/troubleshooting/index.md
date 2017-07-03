@@ -8,3 +8,4 @@ These pages describe how to fix problems with Xenko.
 * [Profiling](profiling.md)
 * [Default value changes ignored at runtime](default-value-changes-ignored-at-runtime.md)
 * [Lights don't cast shadows](lights-dont-cast-shadows.md)
+* [Full call stack not available](full-call-stack-not-available.md)
