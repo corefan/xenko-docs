@@ -8,8 +8,8 @@ Xenko simulates real-world physics such as gravity and collisions. This section 
 
 * [Colliders](colliders.md): Create physics by adding collider components to entities
     * [Static colliders](static-colliders.md): Colliders that don't move
-    * [Rigid bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions
-    * [Kinematic rigid bodies](kinematic-rigid-bodies.md): Physics objects controlled by scripts
+    * [Rigidbodies](rigid-bodies.md): Moving objects, affected by gravity and collisions
+    * [Kinematic rigidbodies](kinematic-rigid-bodies.md): Physics objects controlled by scripts
     * [Characters](characters.md): Colliders for characters (such as player characters and NPCs)
     * [Collider shapes](collider-shapes.md): Define the shape of collider components
     * [Triggers](triggers.md): Use triggers to detect passing objects
@@ -19,7 +19,7 @@ Xenko simulates real-world physics such as gravity and collisions. This section 
 
 ### Tutorials
 
-* [Create a bouncing ball](create-a-bouncing-ball.md): Use the static collider and rigid body components to create a ball bouncing on a floor
+* [Create a bouncing ball](create-a-bouncing-ball.md): Use the static collider and rigidbody components to create a ball bouncing on a floor
 * [Script a trigger](script-a-trigger.md): Create a trigger that doubles the size of a ball when the ball passes through it
 
 ## Further reference

@@ -8,7 +8,7 @@ To use physics in your project, add a **collider** component to an entity.
 Colliders define the shapes and rules of physics objects. There are three types:
 
 * [static colliders](static-colliders.md) don't move (eg walls, floors, heavy objects, etc)
-* [rigid bodies](rigid-bodies.md) are moved around by forces such as collision and gravity (eg balls, barrels, etc)
+* [rigidbodies](rigid-bodies.md) are moved around by forces such as collision and gravity (eg balls, barrels, etc)
 * [characters](characters.md) are controlled by user input (ie player characters)
 
 You can also: 
@@ -21,12 +21,12 @@ You can also:
 
 Colliders interact according to the table below.
 
-|   | Kinematic objects   | Kinematic triggers   | Rigid body colliders   | Rigid body triggers   | Static colliders        | Static triggers   
+|   | Kinematic objects   | Kinematic triggers   | Rigidbody colliders   | Rigidbody triggers   | Static colliders        | Static triggers   
 |---|-------------|---------------------|-------------|---------------------|----------|------------------
 | Kinematic objects        | Collisions           | Collisions  | Collisions and dynamic| Collisions   | Collisions    | Collisions     
 | Kinematic triggers | Collisions           | Collisions   |Collisions           | Collisions     | Collisions     | Collisions   
-| Rigid body colliders          | Collisions and dynamic     | Collisions     | Collisions and dynamic     | Collisions     | Collisions and dynamic| Collisions
-| Rigid body triggers | Collisions         | Collisions  | Collisions | Collisions     | Collisions     | Collisions
+| Rigidbody colliders          | Collisions and dynamic     | Collisions     | Collisions and dynamic     | Collisions     | Collisions and dynamic| Collisions
+| Rigidbody triggers | Collisions         | Collisions  | Collisions | Collisions     | Collisions     | Collisions
 | Static colliders| Collisions| Collisions| Collisions and dynamic | Collisions   | Nothing   | Nothing
 |Static triggers     | Collisions     | Collisions     | Collisions     | Collisions    | Nothing    | Nothing
 
@@ -34,7 +34,7 @@ Colliders interact according to the table below.
 
 * "Dynamic" means both collision information and events, plus dynamic response (ie the colliders bump into each other instead of passing through).
 
-For example, rigid body colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers; collisions are detected in the code, but objects simply pass through.
+For example, rigidbody colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers; collisions are detected in the code, but objects simply pass through.
 
 ## Show colliders in the scene editor
 
@@ -87,7 +87,7 @@ The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**
 
 * [Collider shapes](collider-shapes.md)
 * [Static colliders](static-colliders.md)
-* [Rigid bodies](rigid-bodies.md)
-* [Kinematic rigid bodies](kinematic-rigid-bodies.md)
+* [Rigidbodies](rigid-bodies.md)
+* [Kinematic rigidbodies](kinematic-rigid-bodies.md)
 * [Simulation](simulation.md)
 * [Physics tutorials](tutorials.md)

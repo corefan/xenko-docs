@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-In this tutorial, we'll use the [static collider and rigid body components](colliders.md) to create a ball bouncing on a floor.
+In this tutorial, we'll use the [static collider and rigidbody components](colliders.md) to create a ball bouncing on a floor.
 
 >[!Note]
 >The screenshots and videos in this tutorial were made using an earlier version of Xenko, so some parts of the UI, and the default skybox and sphere, might look different from your version.
@@ -32,9 +32,9 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
     This adds a static collider to the ground, so the ball has something to bounce off.
 
-## 3. Add a rigid body collider
+## 3. Add a rigidbody collider
 
-Next, we'll add a [rigid body](rigid-bodies.md) component to the sphere. A rigid body is a physics object that moves — perfect for our bouncing ball.
+Next, we'll add a [rigidbody](rigid-bodies.md) component to the sphere. A rigidbody is a physics object that moves — perfect for our bouncing ball.
 
 1. In the **Scene Editor**, select the **Sphere** entity.
 
@@ -82,7 +82,7 @@ Let's see what the scene looks like so far. To run the project, press **F5**.
 
 ![Falling ball](media/physics-tutorials-create-a-bouncing-ball-falling-ball.gif)
 
-The Sphere (rigid body) responds to gravity and falls. The Ground (static collider) breaks its fall. But there's no bounce effect yet.
+The Sphere (rigidbody) responds to gravity and falls. The Ground (static collider) breaks its fall. But there's no bounce effect yet.
 
 To create a bounce effect, we need to change the **restitution** of the Sphere and the Ground. This simulates the [coefficient of restitution (Wikipedia)](https://en.wikipedia.org/wiki/Coefficient_of_restitution) of real-world collisions. 
 
