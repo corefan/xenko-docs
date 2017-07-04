@@ -73,6 +73,10 @@ Zoom                    | Mouse wheel <br>Alt + Right mouse button + move mouse<
 Pan                    | Middle mouse button + move mouse
 Focus                  | F (with entity selected)
 
+> [!TIP] 
+> You can change the scene navigator controls in **Edit > Settings** under **Scene Editor > Key bindings**.
+> ![Key bindings](media/settings-key-bindings.png)
+
 ## Change camera editor perspective
 
 You can change the camera editor perspective using the **view camera gizmo** in the top-right of the scene editor.

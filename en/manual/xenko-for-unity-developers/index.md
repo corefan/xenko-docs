@@ -133,7 +133,7 @@ Even empty entities have a Transform component, because every entity in the scen
 
 In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab. 
 
-Xenko is very similar. You select an asset in the **asset view** and edit its properties in the **property grid**.
+Xenko is similar. You select an asset in the **asset view** and edit its properties in the **property grid**.
 
 ![Asset and properties](media/asset-and-properties.png)
 
@@ -259,13 +259,13 @@ public override void Update()
 
 Just like Unity®, Xenko has three types of collider:
 
-* Static colliders
-* Rigid bodies
-* Characters
+* static colliders
+* rigidbodies
+* characters
 
 They're controlled from scripts in slightly different ways.
 
-### Kinematic rigid bodies
+### Kinematic rigidbodies
 
 #### Unity®
 
@@ -320,7 +320,7 @@ public class KinematicX : SyncScript
 }
 ```
 
-For more information about rigid bodies in Xenko, see [Rigid bodies](../physics/rigid-bodies.md).
+For more information about rigidbodies in Xenko, see [Rigidbodies](../physics/rigid-bodies.md).
 
 ### Triggers
 

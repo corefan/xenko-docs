@@ -126,7 +126,7 @@ Game Studio creates a collider shape asset from the model.
 
 ## Use a collider shape asset
 
-1. Under the **static collider** or **rigid body** properties, under **Collider Shapes**, select **Asset**. 
+1. Under the **static collider** or **rigidbody** properties, under **Collider Shapes**, select **Asset**. 
 
     ![Select collider shape asset](media/select-asset-collider-shape.png)
 
