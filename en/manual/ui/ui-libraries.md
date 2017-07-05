@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-**UI libraries** contain **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your [UI pages](UI-pages.md). All Xenko projects include the **standard library** of UI elements, but you can create your own libraries of custom elements too.
+**UI libraries** contain **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your [UI pages](UI-pages.md). All Xenko projects include a set of basic elements called the **standard library**. You can also create your own custom libraries.
 
 ![UI library](media/UI-library.png)
 
