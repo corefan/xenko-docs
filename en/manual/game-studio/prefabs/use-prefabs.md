@@ -62,7 +62,7 @@ private void InstantiateBulletPrefab()
 
 ## See also
 
-* [Prefab index](prefabs.md)
+* [Prefab index](index.md)
 * [Create a prefab](create-a-prefab.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)

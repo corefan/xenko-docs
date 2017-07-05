@@ -8,7 +8,7 @@
 
 ![UI library](media/UI-library.png)
 
-UI libraries are similar to [prefabs](../game-studio/prefabs.md) in the scene editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages. You can also nest libraries inside other libraries, just like [nested prefabs](../game-studio/nested-prefabs.md).
+UI libraries are similar to [prefabs](../game-studio/prefabs/index.md) in the scene editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages. You can also nest libraries inside other libraries, just like [nested prefabs](../game-studio/prefabs/nested-prefabs.md).
 
 At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
 

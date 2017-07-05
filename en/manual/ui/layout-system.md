@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-The Xenko UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](httpsmsdn.microsoft.comen-uslibraryms745058(v=vs.110).aspx). Much of the WPF documentation also applies to the Xenko layout system.
+The Xenko UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout). Much of the WPF documentation also applies to the Xenko layout system.
 
 Every @'SiliconStudio.Xenko.UI.UIElement' in the Xenko UI system has a surrounding rectangle used in layouts. Xenko computes layouts according to the @'SiliconStudio.Xenko.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'SiliconStudio.Xenko.UI.Panels.Panel' elements (which arrange children in specific ways). 
 
@@ -34,7 +34,7 @@ The [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Ma
 
 ## See also
 
- * [MSDN WPF layout documentation](httpsmsdn.microsoft.comen-uslibraryms745058(v=vs.110).aspx)
+ * [MSDN WPF layout documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout)
  * [UI pages](ui-pages.md)
  * [UI libraries](ui-libraries.md)
  * [UI editor](ui-editor.md)

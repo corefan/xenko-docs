@@ -25,7 +25,7 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 * <span class="label label-doc-highlight">Updated</span> [Material attributes](graphics/materials/material-attributes.md)
 
-* <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/override-prefab-properties.md)
+* <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/prefabs/override-prefab-properties.md)
 
 * <span class="label label-doc-highlight">New</span> [Cameras](graphics/cameras.md)
 

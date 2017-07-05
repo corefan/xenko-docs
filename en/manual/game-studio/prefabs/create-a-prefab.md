@@ -33,8 +33,8 @@ You can create new prefabs from modified prefabs. For example, you can instantia
 
 ## See also
 
-* [Prefab index](prefabs.md)
-* [Use prefabs](use-prefabs.md)
+* [Prefab index](index.md)
+* [Use prefabs](index.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)

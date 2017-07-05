@@ -26,4 +26,4 @@ You can [override specific properties](override-prefab-properties.md) in each pr
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
-* [Archetypes](archetypes.md)
+* [Archetypes](../archetypes.md)
