@@ -315,9 +315,9 @@ Thanks to our script, the particle effect appears at the start of the sword swin
 </video>
 </p>
 
-## 10. Curve the trail
+You might notice our trail effect looks a little jagged, creating a "spiderweb" effect. Let's make it more curved.
 
-You might notice our trail effect looks a little jagged, creating a "spiderweb" effect. Let's smooth it out.
+## 10. Curve the trail
 
 1. In the **SwordTrail** prefab, on the **SwordTrail** entity, under **Particle System > Source > Emitters > Shape**, set **Smoothing** to **Best** and **Segments** to **5**. 
 
