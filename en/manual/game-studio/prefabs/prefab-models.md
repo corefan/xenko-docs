@@ -1,6 +1,6 @@
 # Prefab models
 
-**Prefab models** render prefabs as single models. This is useful for optimization, as Xenko only renders a single model instead of the separate prefab elements.
+**Prefab models** render prefabs as single models. This is useful for optimization, as Xenko only renders the model instead of the separate prefab elements. When you make changes to the prefab, Game Studio updates the prefab model automatically.
 
 ## Create a prefab model
 
@@ -17,8 +17,6 @@
     Game Studio adds the prefab model to the asset view.
 
     ![Prefab model added](media/prefab-model-added.png)
-
-When you make changes to the prefab itself, Game Studio updates the prefab model automatically.
 
 ## See also
 
