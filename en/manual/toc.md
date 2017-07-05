@@ -208,13 +208,6 @@
 ### [Set sprite borders](sprites/set-sprite-borders.md)
 ## [Use sprites](sprites/use-sprites.md)
 
-# [Troubleshooting](troubleshooting/index.md)
-## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
-## [Profiling](troubleshooting/profiling.md)
-## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
-## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
-## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
-
 # [UI](ui/index.md)
 ## [Pages](ui/ui-pages.md)
 ## [Libraries](ui/ui-libraries.md)
@@ -229,5 +222,12 @@
 ## [Overlays](virtual-reality/overlays.md)
 ### [Display a UI in an overlay](virtual-reality/display-a-UI-in-an-overlay.md)
 ## [VR sickness](virtual-reality/vr-sickness.md)
+
+# [Troubleshooting](troubleshooting/index.md)
+## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
+## [Profiling](troubleshooting/profiling.md)
+## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
+## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
+## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
 
 # [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
