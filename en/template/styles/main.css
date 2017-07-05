@@ -118,6 +118,14 @@ th, td img{
   .article {
     margin-top: 30px !important;
   }
+  .sidenav #sidetoggle.xk-page-Manual #sidetoc,
+  .sidenav #sidetoggle.xk-page-ReleaseNotes #sidetoc{
+      height: auto;
+      margin-bottom: -50px;
+  }
+  .toc .level1 > li{
+      text-align: left;
+  }
 }
 
 /* Already defined on navbar, but since we have conflict with current Xenko navbar we redefine them on breadcrumb */
@@ -401,6 +409,7 @@ h5{
     .sidefilter, 
     .sidetoc{                
         width: 100%;
+        padding-bottom: 20px;
     } 
 }
 /* Redesign Documentation main page (05.12.2016) */
