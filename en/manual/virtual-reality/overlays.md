@@ -69,5 +69,5 @@ For an example of a UI overlay implemented in a VR game, see the VR template inc
 ## See also
 
 * [Display a UI in an overlay](display-a-UI-in-an-overlay.md)
-* [Render to a texture](../graphics/graphics-compositor/render-to-a-texture.md)
+* [Render targets](../graphics/graphics-compositor/render-targets.md)
 * [Graphics compositor](../graphics/graphics-compositor/index.md)

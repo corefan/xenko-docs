@@ -1,10 +1,10 @@
-# Render to a texture
+# Render textures
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
+With **render textures**, you can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 
 For API details, see [Textures and render targets](../low-level-api/textures-and-render-targets.md).
 
@@ -177,7 +177,7 @@ Your game is now ready to render the camera to the texture in the scene.
 
 ## Sample
 
-For an example of rendering to a camera in a project, see the **Animation** sample included with Xenko.
+For an example of rendering to a texture in a project, see the **Animation** sample included with Xenko.
 
 ## See also
 
