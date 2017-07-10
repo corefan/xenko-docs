@@ -4,24 +4,17 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Textures** are images 
+**Textures** are images mainly used in [materials](materials.md). Textures can add:
 
-* 
-used in [materials](materials.md). Xenko maps them to the surfaces the material covers.
+* color information (eg to add a brick pattern to a wall, a wood pattern to a table, etc)
+* lighting information (when used as [normal maps](normal-maps.md))
+* other information (eg when used as specular maps, metalness maps, and roughness maps)
 
-Xenko uses textures in several ways, including:
-
-* in a material used in a model in your game (for example as a brick pattern on a wall)
-* image for other calculations (for example, to create normal maps)
-* Use the image directly outside materials, such as drawing to the UI
-* 
+Textures can also be used outside materials; for example, you can draw them directly to the UI, or use them in [sprites](../../sprites/index.md).
 
 ## Supported file types
 
-Textures are created outside Game Studio in image editing programs such as Photoshop, then imported into Game Studio as assets.
-
-
-The following file types can be used as textures:
+You can use the following file types as textures:
 
 * `.dds` 
 * `.jpg` 
@@ -40,23 +33,20 @@ The following file types can be used as textures:
 
 ## Add a texture
 
-In the **asset view**, click **Add asset**. Select **Texture**, then select a template for the texture:
+In the **asset view**, click **Add asset**. Select **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
 
-   * color
-   * grayscale
-   * normal map
-   * render target
+![Add texture](media/add-texture.png)
 
 > [!Note]
-> Render targets are a different kind of texture, and don't use images. For more information, see [Render targets](../graphics-compositor/render-targets.md).
+> Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render targets](../graphics-compositor/render-targets.md).
 
 Alternatively, drag the texture file from Explorer to the asset view:
 
 ![Drap and drop a resource file to the asset view](../../get-started/media/create-assets-drop-resource.png)
 
-Then select a texture template:
+Then select a texture template (**color**, **grayscale** or **normal map**):
    
-![List of asset templates](../../get-started/media/create-assets-drag-drop-select-asset-template.png)
+![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
 Game Studio adds the texture to the asset view:
 
@@ -73,11 +63,15 @@ Game Studio adds the texture to the asset view:
 | Is size in percentage    | If selected, the width and height values are set to percentages. If cleared, they're set to percentages
 | Width            | The width of the texture as it's displayed in-game
 | Height           | The height of the texture as it's displayed in-game
-| Type             | The texture type. Use **Color** for textures you want to display as images, **Greyscale** for ???, **Normal map** for normal maps.
+| Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** for specular maps, metalness maps, and roughness maps. Color textures and mormal maps have additional properties (see below)
 | Generate mipmaps | If selected, Xenko generates mipmaps for the texture
 | Compress         | If selected, Xenko compresses the final texture to a format based appropriate to the target platform. The final texture must be a multiple of 4
 
 ### Color texture properties
+
+These properties are available if you set the texture **type** to **color**.
+
+![Color texture properties](media/color-texture-properties.png)
 
 | Property | Description
 |----------|---------
@@ -89,19 +83,25 @@ Game Studio adds the texture to the asset view:
 
 ### Normal map properties
 
+This property is available if you set the texture **type** to **normal map**.
+
+![Normal map textures](media/normal-map-texture-properties.png)
+
 | Property | Description
 |----------|---------
 | Invert Y | If selected, positive Y-component (green) face up in tangent space. This option depends on the tools you use to create normal maps
 
-## Use textures
+For more information about normal maps, see the [Normal maps](normal-maps.md) page.
 
-## Color textures
+## Use textures
 
 ## Grayscale textures
 
-## Normal map textures
-
+Grayscale textures are used to provide values - for example in specular maps, metalness maps, and roughness maps.
 
 ## See also
 
+* [Normal maps](normal-maps.md)
+* [Materials](../materials/index.md)
+* [Sprites](../sprites/index.md)
 * [Render targets](../graphics-compositor/render-targets.md)

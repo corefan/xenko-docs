@@ -10,8 +10,8 @@
 
 There are two types of attribute:
 
-- attributes used as input values for a shading model (for example, the Diffuse attribute provides only color used by the diffuse shading model)
-- attributes that can change the shading model (for example, the Diffuse Shading Model [like Lambert] interprets the diffuse attribute color)
+- attributes used as input values for a shading model (for example, the **Diffuse** attribute provides only color used by the diffuse shading model)
+- attributes that can change the shading model (for example, the Diffuse Shading Model, like Lambert, interprets the diffuse attribute color)
 
 Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
