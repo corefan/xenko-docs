@@ -1,37 +1,65 @@
 # Normal maps
 
-**Normal maps** are textures that add the appearance of surface detail to materials.
+**Normal maps** are textures that add the appearance of surface detail, such as cracks and bumps, without changing the actual geometry of a model. This saves lots of processing power.
 
-These appear 
+| No normal map | With a normal map
+| --------------| ----------- 
+| ![media/material-attributes-15.png](../materials/media/material-attributes-15.png)  | ![media/material-attributes-16.png](../materials/media/material-attributes-16.png)  
 
 ![Normal map example](media/normal_map_example.png)
 
-(Image courtesy of Paolo Cignoni, shared under [Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)](https://creativecommons.org/licenses/by-sa/1.0/))
+*(Image courtesy of Paolo Cignoni, shared under [Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)](https://creativecommons.org/licenses/by-sa/1.0/)*
 
 The left image shows a complex mesh of several million polygons. The right image shows a drastically simplified version of the same mesh, but with a normal map applied. The normal map contains information about how the mesh should reflect light, creating the illusion of much more complex geometry.
 
-When used in combination with lighting they produce believable image which appears fully 3D even on a flat surface.
+![media/material-attributes-13.png](../materials/media/material-attributes-13.png) 
 
-Normal maps usually represent small changes of the normal vector (the vector which points out of the surface). Xenko uses the most common convention: the X and Y components follow the tangent and the bitangent of the surface, and the Z component follows the normal vector of the surface. This means that a value of `(0, 0, 1)` coincides with the normal vector and represents no change, while a value of `(-1, 0, 0)` is tilts to the "left" (ie negative X value in the tangent (local) space).
+Normal maps usually represent small changes of the normal vector (the vector which points away from the surface). Xenko uses the most common convention: the X and Y components follow the tangent and the bitangent of the surface, and the Z component follows the normal vector of the surface. This means that a value of `(0, 0, 1)` coincides with the normal vector and represents no change, while a value of `(-1, 0, 0)` tilts to the "left" (ie negative X value in the tangent (local) space).
 
-## Add a normal map
+## Use a normal map texture
 
+1. In the **asset view**, select the texture you want to use as a normal map.
 
+    ![Select normal map texture](media/select-normal-map-texture.png)
 
-## Properties
+2. In the **property grid**, make sure the **type** is set to **normal map**.
 
-In addition to the [common texture properties](index.md), normal maps have two extra properties.
+    ![Normal map](media/normal-map-expanded-properties.png)
 
-To use a texture as a normal map, make sure the  should be set to Normal Map. This makes sure the texture is assumed to be in linear color space and is converted to a format suited for normals.
+    This means Xenko assumes the texture is in linear color space and converts it to a format suited for normal maps.
 
-Format
+3. In the **asset view**, select the material you want to use the normal map.
 
-* Compressed - Xenko will compress your texture in the most appropriate format for each platform. This will enforce some settings on the material side (see below). The compressed image will be unsigned, even if your input format is signed.
+    ![Select material](media/select-material.png)
 
-* As is - Xenko imports the texture with the format you supply, as long as the target platform supports it.
+4. In the **property grid**, under the material **Geometry** properties, expand **Surface**.
+
+    ![Use normal maps](media/use-normal-map.png)
+
+5. Next to **Normal map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and make sure **Texture** is selected.
+
+6. Next to **Normal map**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+
+    ![Select asset](media/select-asset-texture.png)
+
+7. Select the normal map texture and click **OK**.
+
+For more information about materials, see [Materials](../materials/index.md).
+
+## Texture properties
+
+Normal map textures have two properties in addition to the [common texture properties](index.md).
+
+![Normal map textures](media/normal-map-texture-properties.png)
+
+| Property | Description
+|----------|---------
+| Invert Y | If selected, positive Y components (green pixels) face up in tangent space. This option depends on the tools you use to create normal maps
+
+For information about normal map properties in materials, see [Materials - Geometry attributes](../materials/geometry-attributes.md).
 
 ## See also
 
-* 
-
-* ([Normal mapping (Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping))
+* [Textures](index.md)
+* [Materials](../materials/index.md)
+* [Normal mapping on Wikipedia](http://en.wikipedia.org/wiki/Normal_mapping)

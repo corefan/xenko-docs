@@ -2,9 +2,9 @@
 
 **Materials** define the appearance of 3D model surfaces and how they react to light. Without materials, models are simply shapes, blank canvases.
 
-Materials can affect both the geometry of a model (vertex shading) and its pixels (pixel shading).
+Materials can affect both the geometry of a model (vertex shading) and its colors (pixel shading).
 
-![media/materials-reference-1.png](media/materials-reference-1.png) 
+
 
 You can use multiple layers of materials to build more complex materials.
 

@@ -4,9 +4,9 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Material maps** calculate how materials are rendered. They can use two kinds of values: color (RGB) values or scalar (single float) values. 
+**Material maps** calculate how materials are rendered. They can use two kinds of values: color (RGB) values or scalar (single float) values.
 
-You can use material maps for several purposes, including blend maps (for combining [material layers](material-layers.md)), gloss maps, and diffuse maps.
+You can use material maps for several purposes, including gloss maps, diffuse maps, or  blend maps (for combining [material layers](material-layers.md))
 
 Material maps can fetch values using one of several providers:
 
@@ -15,7 +15,7 @@ Material maps can fetch values using one of several providers:
 * **Float4 / Float**: a constant value
 * **Color**: a hex color value
 * **Shader**: a value provided by a ComputeColor shader. This lets you use procedural values
-* **Texture**: a value sampled from a texture
+* **Texture**: a value sampled from a [texture](../textures/index.md)
 
 To choose the provider, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select it from the drop-down menu:
 
@@ -79,7 +79,7 @@ In the case of scalar values, you control the value with a slider (*Float*).
 
 ## Color
 
-A value provided from a color hex value. Only available for material maps that use RGB values.
+A value provided from a color hex value. This is only available for material maps that use RGB values.
 
 ![media/material-colors-3.png](media/material-colors-3.png)
 
@@ -91,9 +91,9 @@ For an example of a ComputeColor shader, see the [Particle materials tutorial](.
 
 ## Texture
 
-Sample the color/scalar from a texture. 
+Sample the color/scalar from a [texture](../textures/index.md).
 
-The images below demonstrate how the texture changes the way Xenko blends materials.
+For example, the images below demonstrate how the texture changes the way Xenko blends materials.
 
 ![Blend map diagram](media/blend-map-diagram.png)
 
@@ -107,7 +107,7 @@ The images below demonstrate how the texture changes the way Xenko blends materi
 | Channel            | The channel (R, G, B, A) used to extract the scalar value. Only valid for scalar textures
 | Texcoord Index     | The texture coordinates (u,v) to use from the mesh with this texture
 | Filtering          | The sampling method (eg Linear, Point, Anisotropic, etc) 
-| Address Mode U / V | <br>Defines how (u,v) coordinates are addressed</br> <br> **Wrap**: Tiles (u,v) at integer junctions. For example, if u ranges from 0.0 to 3.0, the texture repeats three times on the U axis</br> <br>**Mirror**: Flips (u,v) at integer junctions. For example, if u ranges from 0.0 to 1.0, the texture is displayed as expected; but from 1.0 to 2.0, the texture is mirrored </br> <br> **Clamp**: Clamps (u,v) to the range (0.0, 1.0)</br>                                                                                 
+| Address Mode U / V | <br>Defines how (u,v) coordinates are addressed</br> <br> **Wrap**: Tiles (u,v) at integer junctions. For example, if u ranges from 0.0 to 3.0, the texture repeats three times on the U axis</br> <br>**Mirror**: Flips (u,v) at integer junctions. For example, if u ranges from 0.0 to 1.0, the texture is displayed as expected; but from 1.0 to 2.0, the texture is mirrored </br> <br> **Clamp**: Clamps (u,v) to the range (0.0, 1.0)</br>
 | Scale | A scale applied to (u,v) 
 | Offset  | An offset applied to (u,v)
 

@@ -4,11 +4,11 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Textures** are images mainly used in [materials](materials.md). Textures can add:
+**Textures** are images mainly used in [materials](../materials/index.md). Xenko maps textures to the surfaces the material covers.
 
-* color information (eg to add a brick pattern to a wall, a wood pattern to a table, etc)
-* lighting information (when used as [normal maps](normal-maps.md))
-* other information (eg when used as specular maps, metalness maps, and roughness maps)
+Textures can add color information to a material — for example, to add a brick pattern to a wall or a wood pattern to a table. The values of the pixels in a texture (**texels**) can also be used for other calculations, such as in specular maps, metalness maps, or [normal maps](normal-maps.md). 
+
+Materials typically contain multiple textures; for example, a material might contain a color texture, a normal map texture, and a roughness texture.
 
 Textures can also be used outside materials; for example, you can draw them directly to the UI, or use them in [sprites](../../sprites/index.md).
 
@@ -16,14 +16,14 @@ Textures can also be used outside materials; for example, you can draw them dire
 
 You can use the following file types as textures:
 
-* `.dds` 
-* `.jpg` 
+* `.dds`
+* `.jpg`
 * `.jpeg`
 * `.png`
-* `.gif` 
-* `.bmp` 
-* `.tga` 
-* `.psd` 
+* `.gif`
+* `.bmp`
+* `.tga`
+* `.psd`
 * `.tif`
 * `.tiff`
 
@@ -33,7 +33,7 @@ You can use the following file types as textures:
 
 ## Add a texture
 
-In the **asset view**, click **Add asset**. Select **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
+In the **asset view**, click **Add asset** > **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
 
 ![Add texture](media/add-texture.png)
 
@@ -54,6 +54,8 @@ Game Studio adds the texture to the asset view:
 
 ## Texture properties
 
+The following properties are common to all textures.
+
 ![Texture properties](media/texture-properties.png)
 
 | Property         | Description
@@ -63,13 +65,13 @@ Game Studio adds the texture to the asset view:
 | Is size in percentage    | If selected, the width and height values are set to percentages. If cleared, they're set to percentages
 | Width            | The width of the texture as it's displayed in-game
 | Height           | The height of the texture as it's displayed in-game
-| Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** for specular maps, metalness maps, and roughness maps. Color textures and mormal maps have additional properties (see below)
+| Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and mormal maps have additional properties (see below)
 | Generate mipmaps | If selected, Xenko generates mipmaps for the texture
 | Compress         | If selected, Xenko compresses the final texture to a format based appropriate to the target platform. The final texture must be a multiple of 4
 
 ### Color texture properties
 
-These properties are available if you set the texture **type** to **color**.
+The following properties apply if you set the texture **type** to **color**.
 
 ![Color texture properties](media/color-texture-properties.png)
 
@@ -83,7 +85,7 @@ These properties are available if you set the texture **type** to **color**.
 
 ### Normal map properties
 
-This property is available if you set the texture **type** to **normal map**.
+The following property applies if you set the texture **type** to **normal map**.
 
 ![Normal map textures](media/normal-map-texture-properties.png)
 
@@ -93,15 +95,21 @@ This property is available if you set the texture **type** to **normal map**.
 
 For more information about normal maps, see the [Normal maps](normal-maps.md) page.
 
-## Use textures
-
 ## Grayscale textures
 
-Grayscale textures are used to provide values - for example in specular maps, metalness maps, and roughness maps.
+You can use grayscale textures to provide values in [material maps](../materials/material-maps.md). For example, you can use a texture as a **blend map** to blend two material layers:
+
+![Blend map diagram](../materials/media/blend-map-diagram.png)
+
+![Blend map diagram](../materials/media/blend-map-diagram2.png)
+
+Note how the blend map texture corresponds to the patterning on the result. 
+
+For more information, see [Material maps](../materials/material-maps.md).
 
 ## See also
 
 * [Normal maps](normal-maps.md)
 * [Materials](../materials/index.md)
-* [Sprites](../sprites/index.md)
+* [Sprites](../../sprites/index.md)
 * [Render targets](../graphics-compositor/render-targets.md)
