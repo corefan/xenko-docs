@@ -139,5 +139,5 @@ For an example of a UI overlay implemented in a VR game, see the VR template inc
 
 * [Overlays](overlays.md)
 * [UI](../ui/index.md)
-* [Render to a texture](../graphics/graphics-compositor/render-to-a-texture.md)
+* [Render targets](../graphics/graphics-compositor/render-targets.md)
 * [Graphics compositor](../graphics/graphics-compositor/index.md)

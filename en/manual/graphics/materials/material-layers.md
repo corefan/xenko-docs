@@ -4,11 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can combine layers of materials to build more complex materials. 
-
-![media/material-layers-1.png](media/material-layers-1.png)  
-
-This screenshot shows the blending of a rust material with a gold material:
+You can combine layers of materials to build more complex materials. For example, this screenshot shows the blending of a rust material (left) with a gold material (right):
 
 ![media/material-layers-2.png](media/material-layers-2.png) 
 

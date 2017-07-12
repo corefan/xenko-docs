@@ -235,4 +235,10 @@ $(function() {
     var lang = $(this).data('language');
       window.location.href = window.location.href.replace(oldLang, lang);
     });
+
+    $('body').on('click', function(event){
+      if($(event.target).hasClass('page-link')){
+        $('html, body').scrollTop(0)
+      }
+    });
 });
