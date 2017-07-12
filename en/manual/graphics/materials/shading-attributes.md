@@ -29,9 +29,11 @@ Currently, the diffuse attribute supports only a **diffuse map**.
 
 ### Diffuse model
 
-The **diffuse model** determines how the diffuse material reacts to light. 
+The **diffuse model** determines how the diffuse material reacts to light. You can use the **Lambert** or **cel-shading**.
 
-Currently, the only supported diffuse model is the **Lambert** model. Under this model, light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
+#### Lambert model
+
+Under the Lambert model, light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
 
 ![media/material-attributes-24.png](media/material-attributes-24.png)
 
@@ -40,12 +42,14 @@ Currently, the only supported diffuse model is the **Lambert** model. Under this
 
 | Property      | Description  
 | ------------- | ----------- 
-| Diffuse Map   | The diffuse map color provider                                          
-| Diffuse Model | The shading model for diffuse lighting
+| Diffuse map   | The diffuse map color provider                                          
+| Diffuse model | The shading model for diffuse lighting
 
 ## Specular
 
 A **specular** is a point of light reflected in a material.
+
+![Specular highlight](media/specular-highlight.png)
 
 The specular color can be defined using a metalness map (which uses the diffuse color as a base color), or a specular map (the specular color is defined separately from the diffuse color).
 

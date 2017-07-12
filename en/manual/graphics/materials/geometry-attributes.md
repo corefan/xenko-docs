@@ -75,11 +75,7 @@ Depending on the stage at which the displacement is applied, the results can be 
 
 ![media/material-attributes-14.png](media/material-attributes-14.png) 
 
-Under the **Surface** properties, you can define the a **normal map** to define **macro** surface normals. The **normal map** provides per-pixel normal perturbation of the normal of the mesh.
-
-![media/material-attributes-13.png](media/material-attributes-13.png) 
-
-Normal mapping ([Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) creates the appearance of bumps and indents in the mesh:
+Under the **Surface** properties, you can define a [Normal maps](../textures/normal-maps.md) to define **macro** surface normals. The **normal map** provides per-pixel normal perturbation of the normal of the mesh. Normal maps create the appearance of bumps and indents in the mesh:
 
 | Flat | Using a normal map   
 | -----| ----------- 
@@ -88,12 +84,14 @@ Normal mapping ([Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) c
 | Property     | Description 
 | ------------ | ---------------
 | Normal Map   | The normal map color provider
-| Scale & Bias | When enabled, the value coming from the texture is considered as a positive value ranging from 0.0 to 1.0 and the shader will apply a scale to get the range -1.0 to 1.0. 
-| Normal xy    | When enabled, assume that only the (x,y) are valid and z = 1.0
+| Scale and offset | If enabled, values from the texture are considered positive values ranging from 0.0 to 1.0. The shader applies a scale to get the range -1.0 to 1.0 
+| Reconstruct Z    | If enabled, this reconstructs the Z component from the X and Y components, assuming that X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 and that Z is always positive, so no normal vector can point to the back side of the surface. This is necessary when storing normals in a 2-channel texture, throwing away the Z component. Xenko might select such a format when you choose to Compress a normal map, so this option needs to be enabled.
+
+For more information about normal maps, see the [normal maps](../textures/normal-maps.md) page.
 
 ## Micro surface
 
-Under the **Micro surface** setting, you can provide a **glosiness map** to provide per-pixel information for glossiness.
+Under the **Micro surface** setting, you can provide a **glossiness map** to provide per-pixel information for glossiness.
 
 ![media/material-attributes-17.png](media/material-attributes-17.png)
 

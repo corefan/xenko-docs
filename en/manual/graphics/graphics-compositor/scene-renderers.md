@@ -80,7 +80,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' 
 
 ## Render texture
 
-Renders to a render texture, which you can display in your scene (eg to display security camera footage on a screen). For more information, see [Render to a texture](render-to-a-texture.md).
+Renders to a render texture, which you can display in your scene (eg to display security camera footage on a screen). For more information, see [Render targets](render-targets.md).
 
 ![Render texture properties](media/render-texture-scene-renderer-properties.png)
 
