@@ -1,7 +1,7 @@
 
 # [Requirements](requirements/index.md)
 
-# [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
+# [Xenko for UnityÂ® developers](xenko-for-unity-developers/index.md)
 
 # [Xenko Launcher](xenko-launcher/index.md)
 
