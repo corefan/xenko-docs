@@ -17,6 +17,10 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Textures](graphics/textures/index.md)
+
+* <span class="label label-doc-highlight">New</span> [Normal maps](graphics/textures/normal-maps.md)
+
 * <span class="label label-doc-highlight">New</span> [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
 
 * <span class="label label-doc-highlight">New</span> [Troubleshooting - Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
@@ -28,10 +32,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/override-prefab-properties.md)
 
 * <span class="label label-doc-highlight">New</span> [Cameras](graphics/cameras.md)
-
-* <span class="label label-doc-highlight">New</span> [Overlays](virtual-reality/overlays.md)
-
-* <span class="label label-doc-highlight">New</span> [Display a UI in an overlay](virtual-reality/display-a-UI-in-an-overlay.md)
 
 ## Improve this documentation
 
