@@ -6,7 +6,7 @@
 
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
-![Local reflections](media/local-reflections.PNG)
+![Local reflections](media/local-reflections.png)
 
 Local reflections dramatically increase the realism of a scene. Objects appear to be part of the world rather than having been Photoshopped in. 
 
