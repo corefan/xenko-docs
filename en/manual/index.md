@@ -29,7 +29,7 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 * <span class="label label-doc-highlight">Updated</span> [Material attributes](graphics/materials/material-attributes.md)
 
-* <span class="label label-doc-highlight">New</span> [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
+* <span class="label label-doc-highlight">New</span> [Troubleshooting - Full call stack not available](troubleshooting/full-call-stack-not-available.md)
 
 * <span class="label label-doc-highlight">New</span> [Troubleshooting - Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 
