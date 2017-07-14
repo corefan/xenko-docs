@@ -6,7 +6,7 @@
 
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
-![Local reflections](media/local-reflections.png)
+![Local reflections](media/local-reflections.PNG)
 
 Local reflections dramatically increase the realism of a scene. Objects appear to be part of the world rather than having been Photoshopped in. 
 
@@ -33,11 +33,11 @@ To use local reflections, enable them in the **graphics compositor**.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
-    ![Graphics Compositor asset](..\graphics-compositor\media\graphics-compositor-asset.png)
+    ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
     The graphics compositor editor opens.
 
-    ![Graphics Compositor editor](..\graphics-compositor\media\graphics-compositor-editor.png)
+    ![Graphics Compositor editor](../graphics-compositor/media/graphics-compositor-editor.png)
 
 2. Select the **post-processing effects** node.
 
