@@ -90,7 +90,7 @@ The maximum number of raycast steps allowed per pixel. Higher values produce bet
 
 The raycast resolution. There are two options: **full** and **half**. Full gives better quality, but half improves performance. The default value is half.
 
-#### Start bias
+#### Ray start bias
 
 The offset of the raycast origin. Lower values produce more correct reflection placement, but produce more artefacts. We recommend values of `0.03` or lower. The default value is `0.01`.
 
@@ -103,13 +103,13 @@ The offset of the raycast origin. Lower values produce more correct reflection p
 
 ![Resolve properties](media/resolve-properties.png)
 
-#### Edge fade factor
+#### Resolution 
 
-The point at which the far edges of the reflection begin to fade. This has no effect on performance. The default value is `0.1`. 
+Calculates reflection color using raycast results. There are two options: **full** and **half**. Full gives the best results, but half improves performance. The default value is **full**.
 
-| Edge fade factor: `0` | Edge fade factor: `0.5`
-|---------------------|---------
-|  ![Edge fade factor: 0](media/zero-edgefade.png) |   ![Edge fade factor: 0.5](media/half-edgefade.png) 
+#### Samples 
+
+The number of rays used to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`.
 
 #### Reduce highlights
 
@@ -119,13 +119,13 @@ Reduces the brightness of particularly bright areas of reflections. This has no 
 |---------------------|---------
 |  ![Edge fade factor: 0.5](media/reduce-highlights-on.png) | ![Edge fade factor: 0](media/reduce-highlights-off.png) 
 
-#### Samples 
+#### Edge fade factor
 
-The number of rays used to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`.
+The point at which the far edges of the reflection begin to fade. This has no effect on performance. The default value is `0.1`. 
 
-#### Resolution 
-
-Calculates reflection color using raycast results. There are two options: **full** and **half**. Full gives the best results, but half improves performance. The default value is **full**.
+| Edge fade factor: `0` | Edge fade factor: `0.5`
+|---------------------|---------
+|  ![Edge fade factor: 0](media/zero-edgefade.png) |   ![Edge fade factor: 0.5](media/half-edgefade.png) 
 
 #### Use color buffer mips 
 
