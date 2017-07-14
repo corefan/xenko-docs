@@ -121,7 +121,7 @@ Reduces the brightness of particularly bright areas of reflections. This has no 
 
 #### Samples 
 
-The number of rays xenko uses to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`.
+The number of rays used to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`.
 
 #### Resolution 
 
