@@ -62,7 +62,7 @@ After you enable local reflections, the scene is reflected in materials with the
 
 The reflection spread. Higher values provide finer, more mirror-like reflections. This setting has no effect on performance. The default value is `0.82`.
 
-| BRDF: 0.6 | BRDF: 0.8 | BRDF: 1.0  
+| BRDF: `0.6` | BRDF: `0.8` | BRDF: `1.0`  
 |---------------------|---------|---------
 | ![BRDF: 0.6](media/brdf-06.png) | ![BRDF: 0.8](media/brdf-08.png) | ![BRDF: 1.0](media/brdf-10.png)
 
@@ -94,7 +94,7 @@ The raycast resolution. There are two options: **full** and **half**. Full gives
 
 The offset of the raycast origin. Lower values produce more correct reflection placement, but produce more artefacts. We recommend values of `0.03` or lower. The default value is `0.01`.
 
-| Start bias: 0.01 | Start bias: 0.1
+| Start bias: `0.01` | Start bias: `0.1`
 |---------------------|---------
 |  ![Start bias: 0.03](media/low-ray-start-bias.png) |   ![Start bias: 0.1](media/high-ray-start-bias.png)
 | Larger gap between reflection and box (more correct) | Narrower gap between reflection and box (less correct)
@@ -107,7 +107,7 @@ The offset of the raycast origin. Lower values produce more correct reflection p
 
 The point at which the far edges of the reflection begin to fade. This has no effect on performance. The default value is `0.1`. 
 
-| Edge fade factor: 0 | Edge fade factor: 0.5
+| Edge fade factor: `0` | Edge fade factor: `0.5`
 |---------------------|---------
 |  ![Edge fade factor: 0](media/zero-edgefade.png) |   ![Edge fade factor: 0.5](media/half-edgefade.png) 
 
@@ -115,7 +115,7 @@ The point at which the far edges of the reflection begin to fade. This has no ef
 
 Reduces the brightness of particularly bright areas of reflections. This has no effect on performance.
 
-| Reduce highlights off | Reduce highlights on
+| Reduce highlights: off | Reduce highlights: on
 |---------------------|---------
 |  ![Edge fade factor: 0](media/reduce-highlights-off.png) |   ![Edge fade factor: 0.5](media/reduce-highlights-on.png) 
 

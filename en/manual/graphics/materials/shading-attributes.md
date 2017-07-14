@@ -61,23 +61,23 @@ By taking into into account the fact that almost all materials always have some 
 
 The final specular color is calculated by mixing a fixed low-reflection color and the diffuse color.
 
-- With the metalness color at `0.0`, the effective specular color is equal to 0.02, while the diffuse color is unchanged. This means that the material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
+- With the metalness color at `0.0`, the effective specular color is equal to `0.02`, while the diffuse color is unchanged. This means that the material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
 
-- With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to 0. The material is then considered a pure metal.
+- With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to `0`. The material is then considered a pure metal.
 
     ![media/material-attributes-26.png](media/material-attributes-26.png) 
 
  The screenshots below show the result of the metalness factor on a material with the following attributes:
 
-- Glossiness = 0.8
-- Diffuse = #848484, Lambert
+- Glossiness = `0.8`
+- Diffuse = `#848484`, Lambert
 - Specular GGX
 
-| Pure diffuse (no metalness)  | Metalness = 0.0    | Metalness = 1.0 
+| Pure diffuse (no metalness)  | Metalness = `0.0`    | Metalness = `1.0` 
 | ---------------------------- | ------------------ | ---------------
 |  ![media/material-attributes-27.png](media/material-attributes-27.png)  | ![media/material-attributes-28.png](media/material-attributes-28.png)  | ![media/material-attributes-29.png](media/material-attributes-29.png)  |
 | - The diffuse color is dominant | - The diffuse color is dominant   | - The diffuse color isn't visible
-| - The specular color isn't visible   | - The specular color is visible (0.02) | - The specular color is visible 
+| - The specular color isn't visible   | - The specular color is visible (`0.02`) | - The specular color is visible 
 | - No Fresnel:<br>![media/material-attributes-30.png](media/material-attributes-30.png) </br>  | - Fresnel effect is slightly visible: <br>![media/material-attributes-31.png](media/material-attributes-31.png) </br> | - Fresnel effect is visible: <br>![media/material-attributes-32.png](media/material-attributes-32.png) </br>
 
 ### Specular map
