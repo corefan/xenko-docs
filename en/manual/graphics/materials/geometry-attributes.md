@@ -114,7 +114,7 @@ The screenshots below show different levels of glossiness on a material:
 | Glossiness map | The glossiness map color provider
 | Invert         | Inverts the glossiness value (eg a value of `1.0` produces zero glossiness instead of maximum). This effectively turns the glossiness value into a **roughness** value, as used in other game engines
 
-If you have local reflections enabled, the scene is reflected in materials with a glossiness map value higher than the threshold you specify in the local reflections properties. For more information, see [Local reflections](../post-effects/local-reflections.md]).
+If you have local reflections enabled, the scene is reflected in materials with a glossiness map value higher than the threshold you specify in the local reflections properties. For more information, see [Local reflections](../post-effects/local-reflections.md).
 
 ## See also
 
