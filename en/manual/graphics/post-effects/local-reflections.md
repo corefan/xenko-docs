@@ -115,9 +115,9 @@ The point at which the far edges of the reflection begin to fade. This has no ef
 
 Reduces the brightness of particularly bright areas of reflections. This has no effect on performance.
 
-| Reduce highlights: off | Reduce highlights: on
+| Reduce highlights: on | Reduce highlights: off
 |---------------------|---------
-|  ![Edge fade factor: 0](media/reduce-highlights-off.png) |   ![Edge fade factor: 0.5](media/reduce-highlights-on.png) 
+|  ![Edge fade factor: 0.5](media/reduce-highlights-on.png) | ![Edge fade factor: 0](media/reduce-highlights-off.png) 
 
 #### Samples 
 
@@ -138,6 +138,10 @@ Downscales the input color buffer and uses blurred mipmaps when resolving the re
 #### Temporal effect
 
 Enables the temporal pass. This reduces noise, but produces an animated "jittering" effect that is sometimes noticeable. The temporal effect is enabled by default.
+
+| Temporal effect: on | Temporal effect: off
+|---------------------|---------
+| ![Temporal effect enabled](media/temporal-effect-enabled.png)| ![Temporal effect disabled](media/temporal-effect-disabled.png)
 
 >[!Note]
 >If the temporal effect is disabled, the other temporal properties have no effect.
