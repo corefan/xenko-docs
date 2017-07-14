@@ -4,19 +4,28 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-The **local reflections** effect reflects the scene in glossy [materials](../materials/index.md).
+When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
 ![Local reflections](media/local-reflections.png)
 
-With local reflections, objects appear to be part of the world rather than having been placed arbitrarily. The effect gives objects a feeling of weight, and makes scenes feel more grounded.
+Local reflections dramatically increase the realism of a scene. Objects appear to be part of the world rather than having been Photoshopped in. 
 
-Local reflections are most obvious when they project bright spots onto other surfaces. The effect is especially striking in night scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
+Reflections are most obvious when they project bright spots onto other surfaces. The effect is especially striking in night scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
 
 ![Night reflections](media/night-reflections.png)
 
-Local reflections are a **screenspace effect**, which means they only reflect images that are already on the screen; they don't reflect objects that are off-screen or obscured by other objects. Put simply, if the player can't see an object at that moment, then the object isn't reflected.
+Local reflections are a **screenspace effect**, which means they only reflect images that are already on the screen; they don't reflect objects that are off-screen or obscured by other objects. Put simply, if the camera can't see an object at that moment, then the object isn't reflected.
 
 This means local reflections work well in enclosed areas such as corridors and rooms, but less well in open spaces. They work best on bumpy surfaces, which hide imperfections in the reflection. They work less well on very glossy, mirror-like surfaces, because you naturally expect these surfaces to reflect the whole world.
+
+## Algorithm
+
+Xenko processes local reflections in four passes:
+
+1. The **raycast** pass performs screenspace ray tracing over the depth buffer to find intersections.
+2. The **resolve** pass resolves the rays and calculates the reflection color.
+3. The **temporal** pass uses the history buffer to blur constantly between the current and previous frames. This reduces noise in the reflection, but produces an animated "jittering" effect that is sometimes noticeable. You can adjust or disable this step to create the effect you want.
+4. The **combine** pass mixes the results of the effect with the rendered image.
 
 ## Enable local reflections
 
@@ -34,22 +43,14 @@ To use local reflections, enable them in the **graphics compositor**.
 
     > [!Tip]
     > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
+    
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **property grid** (on the right by default), enable the post effects you want to use and set their properties. For details about each post effect and its properties, see the pages below.
-
-4. In the **property grid**, enable **Local reflections**.
+3. In the **property grid** (on the right by default), enable **Local reflections**.
 
     ![Enable local reflections](media/enable-local-reflections.png)
 
-## Reflection passes
-
-Xenko processes local reflections in four passes:
-
-1. The **raycast** pass ... 
-2. The **resolve** pass resolves the rays and calculates the reflection color.
-3. The **temporal** pass is optional. It uses the history buffer to blur constantly between the current and previous frames. This reduces jittering, but produces an animated effect that is sometimes noticeable.
-4. The **combine** pass combines the results of the previous steps to create the final reflection.
+After you enable local reflections, the scene is reflected in materials with the sufficient **glossiness threshold** (see below).
 
 ## Properties
 
@@ -59,11 +60,15 @@ Xenko processes local reflections in four passes:
 
 #### BRDF bias
 
-The reflection spread. Higher values provide finer, more mirror-like reflections. Lower values produce more noise. The default value is `0.82`.
+The reflection spread. Higher values provide finer, more mirror-like reflections. This setting has no effect on performance. The default value is `0.82`.
+
+| BRDF: 0.6 | BRDF: 0.8 | BRDF: 1.0  
+|---------------------|---------|---------
+| ![BRDF: 0.6](media/brdf-06.png) | ![BRDF: 0.8](media/brdf-08.png) | ![BRDF: 1.0](media/brdf-10.png)
 
 #### Depth resolution
 
-Downscales the debuffer to optimize raycast performance based. Full gives better quality, but half, improves performance on most hardware. The default is half.
+Downscales the depth buffer to optimize raycast performance. Full gives better quality, but half improves performance. The default is half.
 
 #### Glossiness threshold
 
@@ -76,17 +81,20 @@ For more information about glossiness, see [Materials - geometry attributes](../
 
 #### Max steps 
 
-The maximum number of raycast steps allowed per pixel. Higher values affect performance; the default value is `60`.
+The maximum number of raycast steps allowed per pixel. Higher values produce better results, but worse performance. The default value is `60`. 
+
+>[!Note]
+>This is the most important property for controlling performance.
 
 #### Resolution
 
-The raycast resolution. There are two options: **full** and **half**. Full gives better quality, but half improves performance on most hardware. The default value is half.
+The raycast resolution. There are two options: **full** and **half**. Full gives better quality, but half improves performance. The default value is half.
 
 #### Start bias
 
-The offset of the raycast origin. Lower values produce more correct reflection placement, but also produce more artefacts. We recommend values of `0.03` or lower. `0.01` is the default.
+The offset of the raycast origin. Lower values produce more correct reflection placement, but produce more artefacts. We recommend values of `0.03` or lower. The default value is `0.01`.
 
-| Start bias: 0.03 | Start bias: 0.1
+| Start bias: 0.01 | Start bias: 0.1
 |---------------------|---------
 |  ![Start bias: 0.03](media/low-ray-start-bias.png) |   ![Start bias: 0.1](media/high-ray-start-bias.png)
 | Larger gap between reflection and box (more correct) | Narrower gap between reflection and box (less correct)
@@ -97,7 +105,7 @@ The offset of the raycast origin. Lower values produce more correct reflection p
 
 #### Edge fade factor
 
-The point at which the far edges of the reflection begin to fade. The default value is `0.1`.
+The point at which the far edges of the reflection begin to fade. This has no effect on performance. The default value is `0.1`. 
 
 | Edge fade factor: 0 | Edge fade factor: 0.5
 |---------------------|---------
@@ -105,7 +113,7 @@ The point at which the far edges of the reflection begin to fade. The default va
 
 #### Reduce highlights
 
-Reduces the brightness of particularly bright areas of reflection. This has no effect on performance.
+Reduces the brightness of particularly bright areas of reflections. This has no effect on performance.
 
 | Reduce highlights off | Reduce highlights on
 |---------------------|---------
@@ -113,15 +121,15 @@ Reduces the brightness of particularly bright areas of reflection. This has no e
 
 #### Samples 
 
-The number of rays xenko uses to resolve the reflection color. Higher values produce less noise, but slower performance. The default value is `4`.
+The number of rays xenko uses to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`.
 
 #### Resolution 
 
-Calculates reflection color using raycast results. There are two options: **full** and **half**. Full gives the best results, but half is faster. The default value is full.
+Calculates reflection color using raycast results. There are two options: **full** and **half**. Full gives the best results, but half improves performance. The default value is **full**.
 
 #### Use color buffer mips 
 
-Downscales the input color buffer and uses blurred mipmaps when resolving the reflection color. This improves performance and produces more realistic results by blurring distant parts of reflections in rough (low-gloss) materials.
+Downscales the input color buffer and uses blurred mipmaps when resolving the reflection color. This produces more realistic results by blurring distant parts of reflections in rough (low-gloss) materials. It also improves performance on most platforms. However, it uses more memory, so you might want to disable it on (for example) mobile platforms.
 
 ### Temporal properties
 
@@ -129,22 +137,26 @@ Downscales the input color buffer and uses blurred mipmaps when resolving the re
 
 #### Temporal effect
 
-Enables the temporal pass. This is enabled by default.
+Enables the temporal pass. This reduces noise, but produces an animated "jittering" effect that is sometimes noticeable. The temporal effect is enabled by default.
 
->![Note]
->If the temporal stage is disabled, the other temporal properties have no effect.
+>[!Note]
+>If the temporal effect is disabled, the other temporal properties have no effect.
 
 #### Response
 
-How quickly the reflection appears in the material. Lower values produce reflections faster, but with more noise. The default value is `0.9`. 
+How quickly reflections blend between the reflection in the current frame and the history buffer. Lower values produce reflections faster, but with more jittering.   Note the visible jittering in the reflection below (using a response value of `0.1`):
 
-#### Scale 
+![Jittering](media/response-jiterring.gif) 
 
-low values, more noise, less "movement" lag .
+If the camera in your game doesn't move much, we recommend values closer to `1`. The default value is `0.9`.
 
-The default value is `4`.
+#### Scale
+
+The intensity of the temporal effect. Lower values produce reflections faster, but more noise. The default value is `4`.
 
 ## See also
 
 * [Materials](../materials/index.md)
 * [Materials - geometry attributes](../materials/geometry-attributes.md)
+* [Post effects](index.md)
+* [Graphics compositor](../graphics-compositor/index.md)
