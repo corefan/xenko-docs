@@ -120,6 +120,7 @@
 ### [Depth of field](graphics/post-effects/depth-of-field.md)
 ### [Lens flare](graphics/post-effects/lens-flare.md)
 ### [Light streaks](graphics/post-effects/light-streaks.md)
+### [Local reflections](graphics/post-effects/local-reflections.md)
 ## [Graphics compositor](graphics/graphics-compositor/index.md)
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers.md)
 #### [Custom scene renderers](graphics/graphics-compositor/custom-scene-renderers.md)

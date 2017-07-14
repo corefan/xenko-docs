@@ -112,7 +112,7 @@ The screenshots below show different levels of glossiness on a material:
 | Property       | Description
 | -------------- | -- |
 | Glossiness map | The glossiness map color provider
-| Invert         | Inverts the glossiness value (eg a value of 1.0 produces zero glossiness instead of maximum). This effectively turns the glossiness attribute into a **roughness** attribute found in other game engines
+| Invert         | Inverts the glossiness value (eg a value of 1.0 produces zero glossiness instead of maximum). This effectively turns the glossiness value into a **roughness** value, as used in other game engines
 
 ## See also
 
