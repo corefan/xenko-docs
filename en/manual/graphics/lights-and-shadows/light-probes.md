@@ -62,11 +62,11 @@ Light probes appear as spheres in the scene editor. Before you capture a light b
 
 Light probes must be placed in a way that creates a **3D volume**. This means:
 
-* you need at least four light probes in the scene - enough to create the four points of a tetrahedron, as below:
+* You need **at least four** light probes in the scene - enough to create the four points of a tetrahedron, as below:
 
     ![Tetrahedron](media/light-probes-tetrahedron.png)
 
-* you can't place light probes on a single (ie 2D) plane. For example, the probes in this screenshot won't work, as they are on a flat plane and create no volume:
+* At least one light probe must be on a different plane to the others. For example, the probes in the screenshot below don't work, as they are on a flat plane and create no volume.
 
     ![Flat probes](media/bad-light-probe-arrangement.png)
 
