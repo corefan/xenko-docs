@@ -8,23 +8,26 @@ When **local reflections** are enabled, the scene is reflected in glossy [materi
 
 ![Local reflections](media/local-reflections.png)
 
-Local reflections dramatically increase the realism of a scene. Objects appear to be part of the world rather than having been Photoshopped in. 
-
-Reflections are most obvious when they project bright spots onto other surfaces. The effect is especially striking in dark scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
+Local reflections dramatically increase the realism of scenes. They're most obvious when they project bright spots onto other surfaces. The effect is especially striking in dark scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
 
 ![Night reflections](media/night-reflections.png)
 
-Local reflections are a **screenspace effect**, which means they only reflect images that are already on the screen; they don't reflect objects that are off-screen or obscured by other objects. Put simply, if the camera can't see an object at that moment, then the object isn't reflected.
+## Where to use local reflections
 
-This means local reflections work well in enclosed areas such as corridors and rooms, but less well in open spaces. They work best on bumpy surfaces, which hide imperfections in the reflection. They work less well on very glossy, mirror-like surfaces, because you naturally expect these surfaces to reflect the whole world.
+Local reflections are a **screenspace effect**, which means they only reflect objects that are already on the screen; they don't reflect objects that are offscreen or obscured by other objects. Put simply, if the camera can't see an object at that moment, then that object isn't reflected.
+
+This means local reflections work well in enclosed areas such as corridors and rooms, but less well in open spaces, where you'd expect more of the world to be reflected. They also work best on bumpy surfaces, which hide imperfections in reflections, and less well on very glossy, mirror-like surfaces. Missing reflections are more noticeable in mirrors than table surfaces, for example.
 
 ## Algorithm
 
 Xenko processes local reflections in four passes:
 
 1. The **raycast** pass performs screenspace ray tracing over the depth buffer to find intersections.
+
 2. The **resolve** pass resolves the rays and calculates the reflection color.
+
 3. The **temporal** pass uses the history buffer to blur constantly between the current and previous frames. This reduces noise in the reflection, but produces an animated "jittering" effect that is sometimes noticeable. You can adjust or disable this step to create the effect you want.
+
 4. The **combine** pass mixes the results of the effect with the rendered image.
 
 ## Enable local reflections
@@ -53,6 +56,8 @@ To use local reflections, enable them in the **graphics compositor**.
 After you enable local reflections, the scene is reflected in materials with the sufficient **glossiness threshold** (see below).
 
 ## Properties
+
+The local reflections properties affect all reflections in the scene.
 
 ### Raycast properties
 
@@ -156,7 +161,7 @@ If the camera in your game doesn't move much, we recommend values closer to `1`.
 
 #### Scale
 
-The intensity of the temporal effect. Lower values produce reflections faster, but more noise. The default value is `4`.
+The intensity of the temporal effect. Lower values produce reflections faster, but with more noise. The default value is `4`.
 
 ## See also
 
