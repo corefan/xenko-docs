@@ -58,9 +58,6 @@ Light probes appear as spheres in the scene editor. Before you capture a light b
 
 ![Light](media/light-probes-black.jpg)
 
->[!Tip]
->You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold Ctrl, and move it with the mouse.
-
 ## 3. Place light probes
 
 Light probes must be placed in a way that creates a **3D volume**. This means:
@@ -78,6 +75,9 @@ A typical strategy is to place light probes in a grid across your scene covering
 ![Grid layout](media/light-probes-grid-layout.jpg)
 
 ![Light probes in the editor](media/light-probes-in-editor.jpg)
+
+>[!Tip]
+>You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold Ctrl, and move it with the mouse.
 
 ## 4. Capture lighting
 
