@@ -230,8 +230,9 @@
 ## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Troubleshooting](troubleshooting/index.md)
-## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Profiling](troubleshooting/profiling.md)
+## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 ## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
+## [Error: "A SceneCameraRenderer in use has no camera set"](troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md)
