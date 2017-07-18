@@ -17,6 +17,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+ * <span class="label label-doc-highlight">New</span> [Error: "A SceneCameraRenderer in use has no camera set"](troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md)
+
 * <span class="label label-doc-highlight">New</span> [Textures](graphics/textures/index.md)
 
 * <span class="label label-doc-highlight">New</span> [Normal maps](graphics/textures/normal-maps.md)
@@ -30,8 +32,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">Updated</span> [Material attributes](graphics/materials/material-attributes.md)
 
 * <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/override-prefab-properties.md)
-
-* <span class="label label-doc-highlight">New</span> [Cameras](graphics/cameras.md)
 
 ## Improve this documentation
 
