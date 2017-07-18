@@ -235,4 +235,4 @@
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 ## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
-## [Error: "A SceneCameraRenderer in use has no camera set"](troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md)
+## [Error: "A SceneCameraRenderer in use has no camera assigned to its [Slot]. Make sure a camera is enabled and assigned to the [Slot]"](troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md)
