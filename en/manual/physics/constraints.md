@@ -46,7 +46,7 @@ CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyC
 
 This method links [RigidBodyA](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyA) to  [RigidBodyB](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyB).
 
-> Note:
+> [!Note]
 > * In the case of [ConstraintTypes.Point2Point](xref:SiliconStudio.Xenko.Physics.ConstraintTypes), the frame represents a pivot in A or B. Only the translation vector is considered. [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
 > * In the case of [ConstraintTypes.Hinge](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) the frame represents pivot in A/B and Axis in A/B. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world in this case.
 > * In the case of [ConstraintTypes.ConeTwist](xref:SiliconStudio.Xenko.Physics.ConstraintTypes), [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
