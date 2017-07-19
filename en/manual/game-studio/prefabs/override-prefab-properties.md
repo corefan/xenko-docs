@@ -1,4 +1,5 @@
 # Override prefab properties
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
@@ -67,8 +68,9 @@ Four of the lampposts now have a green light. The fifth is still red, as overrid
 
 ## See also
 
-* [Prefab index](prefabs.md)
+* [Prefab index](index.md)
 * [Create a prefab](create-a-prefab.md)
-* [Use prefabs](use-prefabs.md)
+* [Use prefabs](index.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
+* [Prefab models](prefab-models.md)

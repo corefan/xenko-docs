@@ -199,7 +199,7 @@ shader MyShader : ShaderBase
 
 In XKSL, adding a new attribute is as simple as adding it to the pool of streams and use it where you want!
 
-![media/xksl_add_normal.png](media/xksl_add_normal.png) 
+![media/xksl_add_normal.png](media/xksl_add_normal.png)
 
 ## See also
 

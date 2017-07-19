@@ -1,5 +1,6 @@
 # Prefabs
-<span class="label label-doc-level">Intermediate</span>
+
+<span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
@@ -26,4 +27,5 @@ You can [override specific properties](override-prefab-properties.md) in each pr
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
-* [Archetypes](archetypes.md)
+* [Prefab models](prefab-models.md)
+* [Archetypes](../archetypes.md)

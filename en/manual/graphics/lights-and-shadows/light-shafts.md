@@ -32,7 +32,7 @@ Xenko disables light shafts by default in new projects. To enable them:
 
     ![Select forward renderer](../../virtual-reality/media/select-forward-renderer.png)
 
-3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **LightShafts**.
+3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **LightShafts**.
 
     ![Select light shafts](media/select-light-shafts.png)
 

@@ -68,4 +68,4 @@ To do this, in the **Asset View**, right-click the derived asset and select **Cl
 ## See also
 
 * [Assets](../game-studio/assets.md)
-* [Prefabs](prefabs.md)
+* [Prefabs](prefabs/index.md)
