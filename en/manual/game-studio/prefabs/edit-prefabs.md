@@ -1,5 +1,6 @@
 # Edit prefabs
-<span class="label label-doc-level">Intermediate</span>
+
+<span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
 You can edit prefabs in the **Prefab Editor**.
@@ -52,3 +53,4 @@ This video demonstrates what happens when we make changes to the prefab. The Sce
 * [Use prefabs](index.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
+* [Prefab models](prefab-models.md)

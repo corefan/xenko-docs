@@ -1,4 +1,5 @@
 # Create a prefab
+
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
@@ -38,3 +39,4 @@ You can create new prefabs from modified prefabs. For example, you can instantia
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
+* [Prefab models](prefab-models.md)

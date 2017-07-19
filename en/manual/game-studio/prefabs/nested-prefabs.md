@@ -1,5 +1,6 @@
-# Nested prefabs  
-<span class="label label-doc-level">Intermediate</span>
+# Nested prefabs
+
+<span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
 You can add prefabs to other prefabs. These are called **nested prefabs**.
@@ -25,3 +26,4 @@ In the center pane, we already have a prefab named **Lamp**. In the right pane, 
 * [Use prefabs](index.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
+* [Prefab models](prefab-models.md)

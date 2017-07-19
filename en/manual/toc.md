@@ -74,6 +74,7 @@
 ### [Edit prefabs](game-studio/prefabs/edit-prefabs.md)
 ### [Nested prefabs](game-studio/prefabs/nested-prefabs.md)
 ### [Override prefab properties](game-studio/prefabs/override-prefab-properties.md)
+### [Prefab models](game-studio/prefabs/prefab-models.md)
 ## [Game settings](game-studio/game-settings.md)
 ### [Splash screen](game-studio/splash-screen.md)
 ## [Navigation](game-studio/navigation.md)
