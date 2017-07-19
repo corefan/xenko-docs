@@ -1,15 +1,7 @@
-# UI
-
-<div class="doc-incomplete"/>
-<div class="doc-outofdate"/>
-
-Xenko contains a complete UI system to build visually impressive in-game UI interfaces.
-
-It is built upon a simplified design of [Windows Presentation Foundation (WPF)](http://msdn.microsoft.com/en-us/library/ms754130%28v=vs.110%29.aspx)  so that people can get quickly up to speed.
-
-Many of the usual components and containers are all here, and on top of that it supports both 2D and 3D in a resolution-independent way.
-
 # Controls
+
+<div class="doc-outofdate"/>
+<div class="doc-incomplete"/>
 
 Many components are available out of the box, including:
 
@@ -32,17 +24,5 @@ Many components are available out of the box, including:
 
 And of course, you can create your own!
 
-A class diagram is available [here](controls/uielement-class-diagram.md).
-
-# Examples
-
-You can find a complete example by creating a new project in [Game Studio](../game-studio/index.md) and selecting the **GameMenu** template.
-
-![media/ui-1.png](media/ui-1.png) 
-
-![media/ui-2.png](media/ui-2.png) 
-
-# Performance
-
-Drawing of multiple elements will be batched using a 3D Sprite batch renderer to reduce number of draw call. Objective is to keep CPU available for more important stuff.
+A class diagram is available [here](uielement-class-diagram.md).
 
