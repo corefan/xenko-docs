@@ -6,11 +6,11 @@
 
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
-![Local reflections](media/local-reflections.png)
+![Local reflections](media/local-reflections.jpg)
 
 Local reflections dramatically increase the realism of scenes. They're most obvious when they project bright spots onto other surfaces. The effect is especially striking in dark scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
 
-![Night reflections](media/night-reflections.png)
+![Night reflections](media/night-reflections.jpg)
 
 ## Where to use local reflections
 
@@ -69,7 +69,7 @@ The reflection spread. Higher values provide finer, more mirror-like reflections
 
 | BRDF: `0.6` | BRDF: `0.8` | BRDF: `1.0`  
 |---------------------|---------|---------
-| ![BRDF: 0.6](media/brdf-06.png) | ![BRDF: 0.8](media/brdf-08.png) | ![BRDF: 1.0](media/brdf-10.png)
+| ![BRDF: 0.6](media/brdf-06.jpg) | ![BRDF: 0.8](media/brdf-08.jpg) | ![BRDF: 1.0](media/brdf-10.jpg)
 
 #### Depth resolution
 
@@ -101,7 +101,7 @@ The offset of the raycast origin. Lower values produce more correct reflection p
 
 | Start bias: `0.01` | Start bias: `0.1`
 |---------------------|---------
-|  ![Start bias: 0.03](media/low-ray-start-bias.png) |   ![Start bias: 0.1](media/high-ray-start-bias.png)
+|  ![Start bias: 0.03](media/low-ray-start-bias.jpg) |   ![Start bias: 0.1](media/high-ray-start-bias.jpg)
 | Larger gap between reflection and box (more correct) | Narrower gap between reflection and box (less correct)
 
 ### Resolve properties
@@ -122,7 +122,7 @@ Reduces the brightness of particularly bright areas of reflections. This has no 
 
 | Reduce highlights: on | Reduce highlights: off
 |---------------------|---------
-|  ![Edge fade factor: 0.5](media/reduce-highlights-on.png) | ![Edge fade factor: 0](media/reduce-highlights-off.png) 
+|  ![Edge fade factor: 0.5](media/reduce-highlights-on.jpg) | ![Edge fade factor: 0](media/reduce-highlights-off.jpg) 
 
 #### Edge fade factor
 
@@ -130,7 +130,7 @@ The point at which the far edges of the reflection begin to fade. This has no ef
 
 | Edge fade factor: `0` | Edge fade factor: `0.5`
 |---------------------|---------
-|  ![Edge fade factor: 0](media/zero-edgefade.png) |   ![Edge fade factor: 0.5](media/half-edgefade.png) 
+|  ![Edge fade factor: 0](media/zero-edgefade.jpg) |   ![Edge fade factor: 0.5](media/half-edgefade.jpg) 
 
 #### Use color buffer mips 
 
@@ -146,7 +146,7 @@ Enables the temporal pass. This reduces noise, but produces an animated "jitteri
 
 | Temporal effect: on | Temporal effect: off
 |---------------------|---------
-| ![Temporal effect enabled](media/temporal-effect-enabled.png)| ![Temporal effect disabled](media/temporal-effect-disabled.png)
+| ![Temporal effect enabled](media/temporal-effect-enabled.jpg)| ![Temporal effect disabled](media/temporal-effect-disabled.jpg)
 
 >[!Note]
 >If the temporal effect is disabled, the other temporal properties have no effect.

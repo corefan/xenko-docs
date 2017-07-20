@@ -24,7 +24,7 @@ If you don't want to create a parent entity with the prefab, hold **Alt** when y
 
 | Relative positions maintained  | Relative positions ignored |
 |----------|----------|
-| ![Boxes duplicated](media/boxes-duplicated.png) | ![Boxes duplicated](media/boxes-random.png)
+| ![Boxes duplicated](media/boxes-duplicated.jpg) | ![Boxes duplicated](media/boxes-random.jpg)
 
 In this case, a parent entity is unnecessary. Instead, you can create several instances of the prefab, then re-arrange their individual crate entities to create the effect you need.
 
