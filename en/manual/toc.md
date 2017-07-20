@@ -100,6 +100,7 @@
 ### [Materials for developers](graphics/materials/materials-for-developers.md)
 ## [Textures](graphics/textures/index.md)
 ### [Normal maps](graphics/textures/normal-maps.md)
+### [Texture compression](graphics/textures/compression.md)
 ## [Lights and shadows](graphics/lights-and-shadows/index.md)
 ### [Add a light](graphics/lights-and-shadows/add-a-light.md)
 ### [Point lights](graphics/lights-and-shadows/point-lights.md)

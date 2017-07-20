@@ -17,6 +17,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Texture compression](graphics/textures/compression.md)
+
 * <span class="label label-doc-highlight">New</span> [Prefab models](game-studio/prefabs/prefab-models.md)
 
 * <span class="label label-doc-highlight">New</span> [Error: "A SceneCameraRenderer in use has no camera set"](troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md)
