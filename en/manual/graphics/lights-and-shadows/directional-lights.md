@@ -59,7 +59,7 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 
 | Property            | Description                                                        
 | ------------------- | ------------
-| Filter              | Filtering produces **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering). Other techniques will be implemented in future versions
+| Filter              | Filtering produces **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering)
 | Size                | The size of the shadow map texture. For the directional light, this value is **x1** by default, as a directional light has more visual impact than lights with shorter ranges
 | Cascade Count       | The number of cascades used for slicing the range of depth covered by the light. Values are 1, 2 or 4 cascades; a typical scene uses 4 cascades
 | Stabilization mode  | <br>The technique used to reduce shadow map flickering. Flickering is a result of the potential aliasing introduced by the shadow map when a texel from the perspective of the light covers more space than a texel from the camera's perspective.</br> <br> **Projection snapping** tries to snap the projection matrix of the light to a texel dependent on the resolution of the shadow map texture</br> <br>**View snapping** tries to snap the target of the view matrix of the light (center of the camera view cascade frustum)</br> <br>Both projection and view snapping force the shadow matrix to cover a larger region, increasing the aliasing of the shadow map texture. Note that when using depth range camera is set to automatic, the stabilization mode is ignored</br>

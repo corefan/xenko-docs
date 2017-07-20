@@ -57,7 +57,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 Your game is now ready to use VR.
 
 >[!Note]
->After you change APIs, you need to reload the project (**File > Reload project**) for the change to take effect at runtime. This is a known issue and will be fixed in a future release.
+>After you change APIs, you need to reload the project (**File > Reload project**) for the change to take effect at runtime.
 
 ## VR properties
 

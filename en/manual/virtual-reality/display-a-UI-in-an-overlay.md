@@ -89,7 +89,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select camera renderer.png](media/select-camera-renderer.png)
 
-    Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. This will change in a future version. 
+    Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. 
     
     For this reason, in these instructions, we'll add a game renderer with a camera, then make the two renderers children of that renderer. This makes sure both renderers have a parent with a camera.
 

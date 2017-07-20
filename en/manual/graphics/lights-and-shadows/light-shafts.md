@@ -99,7 +99,7 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 ### 4. Optional: Use a model as a bounding volume guide
 
-Currently, Game Studio doesn't display the bounding volume in the scene editor. This will change in future versions. 
+Currently, Game Studio doesn't display the bounding volume in the scene editor.
 
 As a workaround, you can add a model component to use as a guide.
 

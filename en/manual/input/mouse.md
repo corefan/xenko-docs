@@ -24,7 +24,7 @@ For more information about these options, see the [Input index](index.md).
 Before handling mouse input, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse) to check if a mouse is connected.
 
 > [!Note] 
-> Xenko doesn't support mice connected at runtime. This feature will be added in a future release.
+> Xenko doesn't support mice connected at runtime.
 
 ## Query the mouse position
 

@@ -43,7 +43,7 @@ You can change which graphics compositor your game uses at runtime in a script.
 ## Open the graphics compositor editor
 
 >[!Note]
->The graphics compositor editor is an experimental feature. It will be improved in future versions.
+>The graphics compositor editor is an experimental feature.
 
 In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 

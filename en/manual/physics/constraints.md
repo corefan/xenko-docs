@@ -22,8 +22,8 @@ For a demonstration of the different constraints, load the **PhysicsSample** sam
 
 ## Create a constraint
 
->[!Note]
->Currently, you can only use constraints from scripts. A constraint editor will be added to Game Studio in a future release.
+> [!Note]
+> Currently, you can only use constraints from scripts.
 
 To create a constraint, use the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) static method [CreateConstraint](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)):
 

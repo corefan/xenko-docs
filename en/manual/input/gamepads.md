@@ -6,7 +6,7 @@
 **Gamepads**, such as the Xbox Elite Wireless Controller and the PS4 DualShock, are popular input devices for consoles and desktop.
 
 > [!Note] 
-> Xenko is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings. Gamepad-specific features like the PS4 DualShock touchpad will be supported in future releases.
+> Xenko is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings.
 
 ## Digital and analog buttons
 
@@ -29,7 +29,7 @@ Before handling gamepad input:
 * To check if the current gamepad has been disconnected, use [GamePadState.IsConnected](xref:SiliconStudio.Xenko.Input.GamePadState.IsConnected).
 
 > [!Note] 
-> Xenko doesn't support gamepads connected at runtime. This feature will be added in a future release.
+> Xenko doesn't support gamepads connected at runtime.
 
 ### Digital buttons
 
@@ -82,7 +82,7 @@ To set the gamepad vibration level, use
 [SetGamePadVibration](xref:SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration\(System.Int32,System.Single,System.Single\)).
 
 > [!Note] 
-> Xenko only supports vibration for Xbox gamepads. Vibration support for other gamepads will be added in a future release.
+> Currently, Xenko only supports vibration for Xbox gamepads.
 
 ## Example code
 
