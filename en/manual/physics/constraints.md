@@ -22,8 +22,8 @@ For a demonstration of the different constraints, load the **PhysicsSample** sam
 
 ## Create a constraint
 
->[!Note]
->Currently, you can only use constraints from scripts. A constraint editor will be added to Game Studio in a future release.
+> [!Note]
+> Currently, you can only use constraints from scripts.
 
 To create a constraint, use the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) static method [CreateConstraint](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)):
 
@@ -46,7 +46,7 @@ CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyC
 
 This method links [RigidBodyA](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyA) to  [RigidBodyB](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyB).
 
-> Note:
+> [!Note]
 > * In the case of [ConstraintTypes.Point2Point](xref:SiliconStudio.Xenko.Physics.ConstraintTypes), the frame represents a pivot in A or B. Only the translation vector is considered. [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
 > * In the case of [ConstraintTypes.Hinge](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) the frame represents pivot in A/B and Axis in A/B. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world in this case.
 > * In the case of [ConstraintTypes.ConeTwist](xref:SiliconStudio.Xenko.Physics.ConstraintTypes), [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) is ignored.

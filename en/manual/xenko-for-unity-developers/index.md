@@ -198,7 +198,7 @@ For example, imagine you create a *Vehicle* prefab with acceleration, braking, s
 
 To do this in Unity®, you have to create separate prefabs for each vehicle type and modify their acceleration parameters one by one.
 
-For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs.md).
+For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs/index.md).
 
 ## Archetypes
 

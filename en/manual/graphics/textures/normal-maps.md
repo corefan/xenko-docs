@@ -1,5 +1,9 @@
 # Normal maps
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Normal maps** are textures that add the appearance of surface detail, such as cracks and bumps, without changing the actual geometry of a model. This saves lots of processing power.
 
 | No normal map | With a normal map

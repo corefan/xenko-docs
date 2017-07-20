@@ -13,7 +13,7 @@ You can change how Xenko initializes the [simulation](xref:SiliconStudio.Xenko.P
 * `ContinuousCollisionDetection` initializes the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) with continuous collision detection (CCD). CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
 
 > [!Note] 
-> The ``SoftBodySupport``, ``MultiThreaded``, and ``UseHardwareWhenPossible`` flags are currently disabled. They'll be added in a future release.
+> The ``SoftBodySupport``, ``MultiThreaded``, and ``UseHardwareWhenPossible`` flags are currently disabled.
 
 At runtime, you can change some [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) parameters:
 
