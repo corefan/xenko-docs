@@ -20,7 +20,13 @@ By default, Game Studio creates an empty parent entity with the prefab's entitie
 
 This is useful because you can manage the prefab entities as a group and maintain their relative positions. For example, imagine you have a car prefab assembled from several entities (a body, seats, four wheels, etc). You want its component entities to stay grouped together as you move the car around the scene. You can do this by moving the prefab parent entity.
 
-If you don't want to create a parent entity with the prefab, hold **Alt** when you drop the prefab into the scene. This is useful if you don't care about the relative positions of the prefab's entities and don't need to move them together as a group. For example, imagine you have a prefab composed of several crate entities arranged in a random fashion. It's not important that the crates maintain their relative position after you place them; in fact, several identical stacks of "randomly" arranged crates looks odd. In this case, a parent entity is unnecessary. Instead, you can create several instances of the prefab, then re-arrange their individual crate entities however you like.
+If you don't want to create a parent entity with the prefab, hold **Alt** when you drop the prefab into the scene. This is useful if you don't care about the relative positions of the prefab's entities and don't need to move them together as a group. For example, imagine you have a prefab composed of several crate entities arranged in a random fashion. It's not important that the crates maintain their relative position after you place them; in fact, several identical stacks of "randomly" arranged crates looks artificial. 
+
+| Relative positions maintained  | Relative positions ignored |
+|----------|----------|
+| ![Boxes duplicated](media/boxes-duplicated.png) | ![Boxes duplicated](media/boxes-random.png)
+
+In this case, a parent entity is unnecessary. Instead, you can create several instances of the prefab, then re-arrange their individual crate entities to create the effect you need.
 
 ## Break link to prefab
 

@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Prefab models** convert prefabs to single models. This is useful for optimization, as Xenko only renders the model instead of the separate entities in the prefab. When you make changes to the prefab, Game Studio updates the prefab model automatically.
+**Prefab models** convert prefabs to single drawcalls. This is useful for optimization, as Xenko only renders the final model instead of the separate entities in the prefab. When you make changes to the prefab, Game Studio regenerates the prefab model.
 
-Currently, prefab models don't inherit elements such as lights, colliders, or other components - they're only models, and have to be used just like other models. For example, if you have a prefab comprising two models and a light component, the prefab model creates a single model from the two models and ignores the light component. If you need to add components to a prefab model, add them to the prefab model itself.
+Prefab models don't inherit elements such as lights, colliders, or other components - they're only models, and have to be used just like other models. For example, if you have a prefab comprising two models with physics components, the prefab model creates a single model from the two models and ignores the physics components. If you need to add components to a prefab model, add them to the prefab model itself.
 
 ## Create a prefab model
 
