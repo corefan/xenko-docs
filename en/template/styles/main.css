@@ -851,7 +851,7 @@ article h4{
     .ui-resizable-handle.ui-resizable-e{
         width: 4px;
         user-select: none;
-        background: #afadad;
+        background: #d0d0d0;
         box-shadow: -1px 0px 1px 0px #CCC;
         right: -2px;
     }
