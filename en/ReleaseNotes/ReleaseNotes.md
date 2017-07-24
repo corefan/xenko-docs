@@ -349,6 +349,6 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 * Connection Router was not running properly if the Game Studio of that Xenko version didn't run first
 * Add `*.lock.json` pattern to generated `.gitignore` file (when creating a project)
 
-### Version 2.0.2.2 — 21 July 2017
+### Version 2.0.3.1 — 24 July 2017
 
 * Extend closure time of the promotion to 11:30am, January 1st, 2018 (UTC+09:00).
