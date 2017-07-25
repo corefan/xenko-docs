@@ -69,6 +69,7 @@ The following properties are common to all textures.
 | Generate mipmaps | Generate mipmaps for the texture
 | Compress         | Compress the final texture to a format based on the target platform and usage. The final texture must be a multiple of 4. For more information, see [Texture compression](compression.md).
 | Stream         | Stream the texture dynamically at runtime. This improves performance and loading times. Not recommended for important textures you always want to be loaded, such as splash screens. For more information, see [Streaming](streaming.md).
+
 ### Color texture properties
 
 The following properties apply if you set the texture **type** to **color**.
