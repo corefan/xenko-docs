@@ -19,7 +19,7 @@
         {{/_disableBreadcrumb}}
       </header>
       {{#_enableSearch}}
-      <div role="main" class="container body-content">
+      <div class="container body-content">
         {{>partials/searchResults}}
       </div>
       {{/_enableSearch}}
@@ -30,15 +30,22 @@
       {{/_disableToc}}
       {{#_disableToc}}
         <div class="article row grid">
-      {{/_disableToc}}
+        {{/_disableToc}}
           {{#_disableAffix}}
           <div class="col-md-12">
           {{/_disableAffix}}
           {{^_disableAffix}}
           <div class="col-md-10">
           {{/_disableAffix}}
-            <article class="content wrap jora" id="_content">
-              {{>partials/rest}}
+            <div class="container hide-when-search xk-custom-breadcrumb" id="breadcrumb">
+              <ul class="breadcrumb">
+                 <li>
+                   <a href="/{{_tocTitle}}">{{_tocTitle}}</a>
+                 </li>
+              </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="{{uid}}">
+                {{!body}}
             </article>
           </div>
           {{^_disableAffix}}

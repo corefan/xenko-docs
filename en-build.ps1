@@ -14,6 +14,7 @@ if ($API)
     Write-Host "Generating API documentation..."
     
     # Build metadata from C# source
+    deps\docfx\docfx.exe docfx -v
     deps\docfx\docfx.exe metadata en/docfx.json
 
     Write-Host "Start Namespace build"
