@@ -62,7 +62,7 @@ The following properties are common to all textures.
 |------------------|---------
 | Width            | The width of the texture as it's displayed in-game
 | Height           | The height of the texture as it's displayed in-game
-| Is size in percentage    | If selected, the width and height values are set to percentages. If cleared, they're set to percentages
+| Is size in percentage    | Use percentages for width and height instead of actual pixel size
 | Width            | The width of the texture as it's displayed in-game
 | Height           | The height of the texture as it's displayed in-game
 | Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and mormal maps have additional properties (see below)
