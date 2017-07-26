@@ -43,13 +43,13 @@ The **default scene** is the scene Xenko loads at runtime. You can set this in t
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3. In the **property grid** (the right-hand pane by default), next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+3. In the **property grid** (the right-hand pane by default), next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
     
     ![Set default scene](media/game-settings-default-scene.png)
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-2. Select the default scene in the asset picker and click **OK**.
+2. Select the default scene and click **OK**.
 
 Xenko loads this scene at runtime.
 

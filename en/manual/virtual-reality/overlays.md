@@ -31,9 +31,9 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     ![Add VR item](media/add-overlay.png)
 
-5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
     ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
 

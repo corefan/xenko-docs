@@ -30,15 +30,15 @@ After you [import animation assets](import-animations.md), you need add them to 
     >[!Tip]
     >When you play animations using scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
     
-5. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+5. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     ![Pick asset up](media/pick-asset-up.png)
 
-    The **Asset picker** opens.
+    The **Select an asset** window opens.
 
 6. Browse to the animation asset you want to add and click **OK**.
 
-    ![Asset picker](media/asset-picker.png)
+    ![Select an asset](media/asset-picker.png)
 
     Game Studio adds the animation asset to the entity.
 
