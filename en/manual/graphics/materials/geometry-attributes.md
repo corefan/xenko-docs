@@ -118,8 +118,11 @@ If you have local reflections enabled, the scene is reflected in materials with 
 
 ## See also
 
-* [Shading attributes](shading-attributes.md)
-* [Misc attributes](misc-attributes.md)
 * [Material maps](material-maps.md)
+* [Material attributes](material-attributes.md)
+    * [Shading attributes](shading-attributes.md)
+    * [Misc attributes](misc-attributes.md)
+    * [Clear-coat shading](clear-coat-shading.md)
+* [Clear-coating shading](clear-coat-shading.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)

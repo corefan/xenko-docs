@@ -20,6 +20,7 @@ Attributes contribute to a layer of a material. If a material is directly used a
 * [Geometry attributes](geometry-attributes.md)
 * [Shading attributes](shading-attributes.md)
 * [Misc attributes](misc-attributes.md)
+* [Clear coat shading](clear-coat-shading)
 
 ## See also
 
