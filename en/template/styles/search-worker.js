@@ -45,7 +45,8 @@
     hits.forEach(function(hit) {
       var item = searchData[hit.ref];
       if((item.href).toLowerCase().indexOf(chapter) >= 0){
-        results.push({'href': item.href, 'title': item.title, 'keywords': item.keywords});
+        var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+        results.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
       };
     });
     postMessage({e: 'query-ready', q: q, d: results});
