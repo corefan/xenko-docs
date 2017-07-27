@@ -79,7 +79,7 @@ The metal flakes in the metal flake normal map included in the Xenko assets pack
 >[!Note]
 >The **Use random texture coordinates** option is costly, so we don't recommend you use it for mobile platforms.
 
-Alternatively, use a normal map with a higher density of metal flakes.
+Alternatively, use a normal map with a higher density of smaller metal flakes.
 
 ## See also
 
