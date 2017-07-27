@@ -50,7 +50,11 @@ Alternatively, to set clear-coat properties yourself:
 | Orange peel normal map  | The [normal map](normal-maps.md) used by the clear coat layer. In real life, orange peel is an imperfection in paint whereby the paint texture appears bumpy, like the skin of an orange. This causes light to reflect in different angles around the imperfections. A metal flake normal map is included in the Xenko assets package (**XenkoClearCoatOrangePeelNM**).
 | Layer transition distance  | The distance (in meters) at which the base paint layer transitions to the metal flake layer
 
-Properties that use binary operators should use **normalized values** (ie between `0.0` and `1.0`). Values over `1.0` might produce artifacts, as in the image below (note the grid pattern):
+Properties that use binary operators should use **normalized values** (ie between `0.0` and `1.0`). For example, in the screenshot below, the **left** operator uses a value of `0.5`.
+
+![Binary operator](media/clear-coat-binary-operator.png)
+
+Values over `1.0` might produce artifacts, as in the image below (note the grid pattern):
 
 ![Artifact](media/clear-coat-artifact1.jpg)
 
