@@ -687,7 +687,19 @@ To see the output, in the Game Studio toolbar, under **View**, enable **Output**
 
 Game Studio displays in the **Output** tab (at the bottom of Game Studio by default).
 
-![Output tab](media/output-tab.png)
+![Output tab](media/output-tab.png) 
+
+
+### Print debug messages
+
+To print to the Visual Studio output, use:
+
+```cs
+System.Diagnostics.Debug.WriteLine("hello");
+```
+
+>[!Note]
+>To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
 
 ---
 
