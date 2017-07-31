@@ -49,7 +49,7 @@ In the **asset view** (in the bottom pane by default), double-click the **Graphi
 
 ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
-The graphics compositor editor opens.
+The **graphics compositor editor** opens.
 
 ![Graphics Compositor editor](media/graphics-compositor-editor.png)
 

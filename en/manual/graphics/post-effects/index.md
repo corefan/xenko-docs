@@ -12,7 +12,7 @@ Typically, you set up a post effect by specifying:
 - one or several output buffers
 - parameters to customize the behavior of the post effect during its rendering pass
 
-Xenko provides several predefined post effects. You can also extend the system to create your own.
+Xenko provides several predefined post effects. You can also [extend the system to create your own](custom-post-effects.md).
 
 ## Add or edit a post effect
 
@@ -26,9 +26,9 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
     ![Graphics Compositor editor](..\graphics-compositor\media\graphics-compositor-editor.png)
 
-2. Select the **post-processing effects** node.
+2. Select the **Post-processing effects** node.
 
-    If there's no post-process effects node, right-click and select **Create > post-processing effects**.
+    If there's no post-processing effects node, right-click and select **Create > post-processing effects**.
 
     Game Studio adds a post effect node to the graphics compositor.
 
@@ -48,6 +48,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
+* [Custom post effects](custom-post-effects.md)
 
 ## See also
 

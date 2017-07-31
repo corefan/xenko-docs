@@ -17,6 +17,10 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Custom post effects](graphics/post-effects/custom-post-effects.md)
+
+* <span class="label label-doc-highlight">New</span> [Custom shaders](graphics/effects-and-shaders/custom-shaders.md)
+
 * <span class="label label-doc-highlight">New</span> [Texture compression](graphics/textures/compression.md)
 
 * <span class="label label-doc-highlight">New</span> [Prefab models](game-studio/prefabs/prefab-models.md)
@@ -30,12 +34,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">New</span> [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
 
 * <span class="label label-doc-highlight">New</span> [Troubleshooting - Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Install Xenko](get-started/install-xenko.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Material attributes](graphics/materials/material-attributes.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/prefabs/override-prefab-properties.md)
 
 ## Improve this documentation
 

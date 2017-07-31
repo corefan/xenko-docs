@@ -1,10 +1,10 @@
 # Effects and shaders
 
-Xenko uses a programmable shading pipeline. You can write custom shaders, create @'SiliconStudio.Xenko.Graphics.Effect's from them, and use them for drawing. The @'SiliconStudio.Xenko.Rendering.EffectSystem' class provides an easy way to load an effect.
+Xenko uses a programmable shading pipeline. You can write [custom shaders](custom-shaders.md), create @'SiliconStudio.Xenko.Graphics.Effect's from them, and use them for drawing. The @'SiliconStudio.Xenko.Rendering.EffectSystem' class provides an easy way to load an effect.
 
-## Code example
+## Load an effect
 
-To load an effect:
+Use:
 
 ```cs
 var myEffect = EffectSystem.LoadEffect("MyEffect").WaitForResult();
@@ -22,7 +22,7 @@ Shaders are authored in the [Xenko's shading language](shading-language/index.md
 
 [Effects](effect-language.md) in Xenko use C#-like syntax to further combine shaders. They provide conditional composition of shaders to generate effect permutations.
 
-As some platforms can't compile shaders at runtime (eg iOS, Android, etc), effect permutation files (.xkeffectlog) are used to enumerate all permutations ahead of time.
+As some platforms can't compile shaders at runtime (eg iOS, Android, etc), effect permutation files (`.xkeffectlog`) are used to enumerate all permutations ahead of time.
 
 ## Target everything
 
@@ -38,3 +38,4 @@ For mobile platforms, shaders are optimized by a GLSL optimizer to improve perfo
     - [Composition](shading-language/composition.md)
     - [Templates](shading-language/templates.md)
     - [Shader stage input/output automatic management](shading-language/automatic-shader-stage-input-output.md)
+* [Custom shaders](custom-shaders.md)
