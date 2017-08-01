@@ -19,6 +19,8 @@ As games typically contain lots of textures, it's usually better to **stream** t
 
 When streaming is enabled on a texture, Xenko only loads it when it's rendered in the scene.
 
+There's no loading priority for textures. For example, Xenko doesn't load textures based on distance. Instead, Xenko loads them all in sequence.
+
 If mipmaps are enabled in the [texture properties](index.md), when the texture is needed at runtime, Xenko loads the lowest-quality version of the texture, then upscales it based on the distance from the camera. The gif below shows this process happening in slow motion; in most situations on most hardware, streaming happens much more quickly.
 
 ![Texture loading](media/loading-texture.gif)
@@ -26,8 +28,6 @@ If mipmaps are enabled in the [texture properties](index.md), when the texture i
 When the texture is no longer needed, Xenko downscales it, then unloads it.
 
 If mipmaps are disabled, Xenko only loads the texture at its original quality. This means the texture is invisible until it loads in full, which can cause noticeable pop-in effects.
-
-There's no loading priority for textures. For example, Xenko doesn't load texture based on distance. Instead, Xenko loads them all in sequence.
 
 ## When not to use streaming
 
