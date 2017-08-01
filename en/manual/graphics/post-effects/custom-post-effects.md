@@ -67,7 +67,7 @@ Creating a post effect shader is the same process as creating a [custom shader](
 
     ![New item](../effects-and-shaders/media/new-item.png)
 
-2. Select **Class**, type a name (eg *MyPostFxScript.cs*), and click **Add**,
+2. Select **Class**, type a name (eg *MyPostFxScript.cs*), and click **Add**.
 
     ![Add script](media/add-script.png)
 
