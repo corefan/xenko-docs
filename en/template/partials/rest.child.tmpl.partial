@@ -4,9 +4,11 @@
 {{#docurl}}
 <span class="small pull-right mobile-hide">
   <span class="divider">|</span>
-  <a href="{{docurl}}">Improve this Doc</a>
 </span>{{/docurl}}
 {{#sourceurl}}
+<span class="small pull-right mobile-hide">
+  <a href="{{sourceurl}}">View Source</a>
+</span>{{/sourceurl}}
 {{/_disableContribution}}
  <h3 id="{{htmlId}}" data-uid="{{uid}}" class="text-capitalize">{{operationId}}</h3>
 {{#summary}}
