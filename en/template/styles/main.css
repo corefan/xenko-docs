@@ -389,7 +389,7 @@ h5{
         margin-left: 0;
     } 
     .article.grid-right{
-        margin-left: 410px;
+        margin-left: 280px;
     }
 }
 @media only screen and (max-width: 1275px){
@@ -400,7 +400,10 @@ h5{
     } 
     .article.grid-right{
         margin-left: 280px;
-    }  
+    }
+    .sideaffix{
+        right: 0;
+    }
 }
 @media only screen and (max-width: 768px){
     .article.grid-right{
@@ -555,8 +558,8 @@ h5{
         margin-left: 0;
     } 
     .article.grid-right{
-        margin-left: 410px;
-    }  
+        margin-left: 280px;
+    }
 }
 @media only screen and (max-width: 1275px){
     .sidefilter, 
@@ -1235,4 +1238,7 @@ h4.returns {
     color: #f19118;
     background-color: #eeeeee !important;
     border-color: #ddd;
+}
+.container.body-content{
+    overflow: hidden;
 }
