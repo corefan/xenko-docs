@@ -41,13 +41,30 @@
     var q = oEvent.data.q;
     var chapter = oEvent.data.chapter;
     var hits = lunrIndex.search(q);
-    var results = [];
+    var results = {};
+    var resultsAll = [];
+    var resultsManual = [];
+    var resultsApi = [];
+    var resultsReleasenotes = [];
     hits.forEach(function(hit) {
       var item = searchData[hit.ref];
-      if((item.href).toLowerCase().indexOf(chapter) >= 0){
-        results.push({'href': item.href, 'title': item.title, 'keywords': item.keywords});
+      if((item.href).toLowerCase().indexOf('manual') >= 0){
+        resultsManual.push({'href': item.href, 'title': item.title, 'keywords': item.keywords});
       };
+      if((item.href).toLowerCase().indexOf('api') >= 0){
+        resultsApi.push({'href': item.href, 'title': item.title, 'keywords': item.keywords});
+      };
+      if((item.href).toLowerCase().indexOf('releasenotes') >= 0){
+        resultsReleasenotes.push({'href': item.href, 'title': item.title, 'keywords': item.keywords});
+      };
+      resultsAll = resultsManual.concat(resultsApi, resultsReleasenotes)
     });
+    results = {
+      'all'          : resultsAll,
+      'manual'       : resultsManual,
+      'api'          : resultsApi,
+      'releasenotes' : resultsReleasenotes
+    }
     postMessage({e: 'query-ready', q: q, d: results});
   }
 })();

@@ -6,6 +6,7 @@ $(function () {
   var filtered = 'filtered';
   var show = 'show';
   var hide = 'hide';
+  var searchResultsObj = {};
 
   // Styling for tables in conceptual documents using Bootstrap.
   // See http://getbootstrap.com/css/#tables
@@ -189,8 +190,22 @@ $(function () {
         worker.onmessage = function (oEvent) {
           switch (oEvent.data.e) {
             case 'query-ready':
-              var hits = oEvent.data.d;
+              var hits = oEvent.data.d[searchChapter];
+              $('#xk-all').text(oEvent.data.d.all.length)
+              $('#xk-manual').text(oEvent.data.d.manual.length)
+              if(oEvent.data.d.manual.length > 0){
+                $('#xk-manual').parent().addClass('xk-searching-link')
+              }
+              $('#xk-api').text(oEvent.data.d.api.length)
+              if(oEvent.data.d.api.length > 0){
+                $('#xk-api').parent().addClass('xk-searching-link')
+              }
+              $('#xk-releasenotes').text(oEvent.data.d.releasenotes.length)
+              if(oEvent.data.d.releasenotes.length > 0){
+                $('#xk-releasenotes').parent().addClass('xk-searching-link')
+              }
               handleSearchResults(hits);
+              searchResultsObj = oEvent.data.d
               break;
             case 'index-ready':
               indexReady.resolve();
@@ -286,10 +301,12 @@ $(function () {
 
     function handleSearchResults(hits) {
       $('#floatingBarsG').hide();
+      $('#xk-search-summary').show();
       var numPerPage = 10;
       $('#pagination').empty();
       $('#pagination').removeData("twbs-pagination");
       if (hits.length === 0) {
+        $('#xk-search-summary').hide();
         $('#search-results>.sr-items').html('<p>No results found</p>');
       } else {
         $('#pagination').twbsPagination({
@@ -323,6 +340,10 @@ $(function () {
         });
       }
     }
+    $(document).on('click', '.xk-searching-link', function(){
+      var newHits = searchResultsObj[$(this).find('span').attr('id').replace('xk-', '')]
+      handleSearchResults(newHits);
+    })
   })();
 
   // Update href in navbar
