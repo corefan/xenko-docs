@@ -75,35 +75,35 @@ Creating a post effect shader is the same process as creating a [custom shader](
 
     For example, this script specifies the shader the post effect uses (`MyPostFx`) and the `MyColor` parameter to the `MyPostFx` shader (in `UpdateParameters`):
 
-        ```cs
-        using SiliconStudio.Core;
-        using SiliconStudio.Core.Mathematics;
-        using SiliconStudio.Xenko.Rendering;
-        using SiliconStudio.Xenko.Rendering.Images;
+    ```cs
+    using SiliconStudio.Core;
+    using SiliconStudio.Core.Mathematics;
+    using SiliconStudio.Xenko.Rendering;
+    using SiliconStudio.Xenko.Rendering.Images;
 
-        namespace MyGame9
+    namespace MyGame9
+    {
+        [DataContract("MyPostFxScript")]
+        public class MyPostFxScript : ColorTransform
         {
-            [DataContract("MyPostFxScript")]
-            public class MyPostFxScript : ColorTransform
+            /// <inheritdoc />
+            public MyPostFxScript() 
+                : base("MyPostFx")
             {
-                /// <inheritdoc />
-                public MyPostFxScript() 
-                    : base("MyPostFx")
-                {
-                }
+            }
 
-                public Color4 MyColor { get; set; }
+            public Color4 MyColor { get; set; }
 
-                public override void UpdateParameters(ColorTransformContext context)
-                {
-                    Parameters.Set(MyPostFxKeys.MyColor, MyColor);
+            public override void UpdateParameters(ColorTransformContext context)
+            {
+                Parameters.Set(MyPostFxKeys.MyColor, MyColor);
 
-                    // Copy parameters to parent
-                    base.UpdateParameters(context);
-                }
+                // Copy parameters to parent
+                base.UpdateParameters(context);
             }
         }
-        ```
+    }
+    ```
     >[!Note]
     >Make sure the post effect script name in the file (eg `MyPostFxScript` in the script above) is the same as the filename (eg *MyPostFxScript.cs*).
 
