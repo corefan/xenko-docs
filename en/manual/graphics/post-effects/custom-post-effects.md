@@ -46,18 +46,18 @@ Creating a post effect shader is the same process as creating a [custom shader](
 
     For example, this post effect shader is a [color transform](index.md) that multiplies the image color by the `MyColor` parameter:
 
-        ```cs
-        shader MyPostFx : ColorTransformShader
-        {
-            [Color]
-            float4 MyColor;
+    ```cs
+    shader MyPostFx : ColorTransformShader
+    {
+        [Color]
+        float4 MyColor;
 
-            override float4 Compute(float4 color)
-            {
-                return color * MyColor;
-            }
-        };
-        ```
+        override float4 Compute(float4 color)
+        {
+            return color * MyColor;
+        }
+    };
+    ```
     >[!Note]
     >Make sure the shader name in the file (eg `MyPostFx` in the code above) is the same as the filename (eg *MyPostFx.xksl*).
 
