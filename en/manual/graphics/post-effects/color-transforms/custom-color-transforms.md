@@ -67,7 +67,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
     Open the the file and write the class.
 
-    For example, the code below creates the class `MyColorTransform`, which uses the `MyColorTransformShader` shader and supplies a value for the color `MyColor` (defined in the shader).
+    For example, the code below creates the class `MyColorTransform`, which uses the shader and supplies a value for the color `MyColor` (defined in the shader).
 
     ```cs
     using SiliconStudio.Core;
@@ -138,7 +138,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![Enable and disable custom post effect](media/enable-disable-custom-post-effect.png)
 
-* To edit the properties you specified, expand the item.
+* To edit the public properties you specified in the class, expand the item.
 
     ![Expand item](media/view-custom-post-fx-properties.png)
 
