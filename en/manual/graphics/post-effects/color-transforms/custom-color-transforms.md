@@ -144,7 +144,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
     When you adjust the properties, Game Studio updates the effect automatically.
 
->![Warning]
+>[!Warning]
 >Unfortunately, this part of Game Studio has a memory leak problem. Every time you change a value in the graphics compositor, it uses 60MB of memory. To prevent Game Studio using too much memory, we recommend you restart it after you change a property a few times. This is a known issue.
 
 ## See also

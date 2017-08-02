@@ -100,7 +100,9 @@ You can use custom shaders in any [material attribute](../materials/material-att
 
 ### Static parameters
 
-Static parameters don't change at runtime, but can change from material to material (ie different shader instantiations can have different static parameters). When the shaders are compiled, Xenko substitutes static parameters with the value you set in the property grid.
+Static parameters don't change at runtime. However, different materials can use different instances of the ahder with different parameters.
+
+When the shaders are compiled, Xenko substitutes static parameters with the value you set in the property grid.
 
 For example, the code below defines and uses the static parameter `Frequency`:
 
@@ -134,7 +136,7 @@ shader ComputeColorWave: ComputeColor, Texturing
 };
 ```
 
-To modify the value at runtime, access and set it in the material parameter collection. For example, to change the `Frequency`:
+To modify the value at runtime, access and set it in the material parameter collection. For example, to change the `Frequency`, use:
 
 ```cs
 myMaterial.Passes[myPassIndex].Parameters.Set(ComputeColorWaveKeys.Frequency, MyFrequency);
@@ -162,8 +164,6 @@ shader ComputeColorWave : ComputeColor, Texturing
 Then you can set the value in the material properties:
 
 ![Select shader](media/use-computecolorwave-shader.png)
-
-
 
 ## Custom shader sample
 
