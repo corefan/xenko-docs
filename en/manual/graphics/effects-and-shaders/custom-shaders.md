@@ -13,7 +13,7 @@ As shaders are text files, you can add comments, edit them, enable and disable l
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../get-started/media/launch-your-game-ide-icon.png) (**Open in IDE**) to open your project in Visual Studio.
 
-3. In the Visual Studio **Solution Explorer**, right-click the project (eg *MyGame.Game*) and select **New item**.
+3. In the Visual Studio **Solution Explorer**, right-click the project (eg *MyGame.Game*) and select **Add > New item**.
 
     ![New item](media/new-item.png)
 
@@ -21,17 +21,15 @@ As shaders are text files, you can add comments, edit them, enable and disable l
 
     ![Select class](media/select-class.png)
 
-5. In the **Name** field, specify a name and change the extension to **.xksl** (eg *MyShader.xksl*).
+5. In the **Name** field, specify a name with the extension **.xksl** (eg *MyShader.xksl*), and click **Add**.
 
     ![Select class](media/rename-file.png)
-
-6. Click **Add**.
 
     The Xenko Visual Studio extension automatically generates a `.cs` file from the `.xksl` file. The Solution Explorer lists it as a child of the `.xskl` file.
 
     ![My shader](media/my-shader.png)
 
-7. Open the the `.xksl` file, remove the existing lines, and write your shader.
+6. Open the the `.xksl` file, remove the existing lines, and write your shader.
 
     Shaders are written in Xenko Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
 
@@ -53,9 +51,9 @@ As shaders are text files, you can add comments, edit them, enable and disable l
     >[!Note]
     >Make sure the shader name in the file (eg `MyShader` above) is the same as the filename.
 
-6. Save all the files in the solution (**File > Save All**).
+7. Save all the files in the solution (**File > Save All**).
 
-7. In Game Studio, reload the assemblies.
+8. In Game Studio, reload the assemblies.
 
     ![Reload assemblies](../../particles/tutorials/media/reload-assemblies.png)
 
@@ -64,7 +62,7 @@ As shaders are text files, you can add comments, edit them, enable and disable l
     ![Shader in asset view](media/shader-in-asset-view.png)
 
     >[!Note]
-    >In some situations, Game Studio might only detect the shader as a script, as in the screenshot below:
+    >In some situations, Game Studio incorrectly identifies the shader as a script, as in the screenshot below:
     >![Shader as script](media/shader-as-script-in-asset-view.png) 
     
     >If this happens, restart Game Studio (**File > Reload project**).
@@ -94,6 +92,6 @@ You can use custom shaders in any [material attribute](../materials/material-att
 ## See also
 
 * [Shading language](index.md)
-* [Custom post effects](../post-effects/custom-post-effects.md)
+* [Custom color transforms](../post-effects/color-transforms/custom-color-transforms.md)
 * [Material attributes](../materials/material-attributes.md)
 * [Xenko Visual Studio extension](../../get-started/visual-studio-extension.md)

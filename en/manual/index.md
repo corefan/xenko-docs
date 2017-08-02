@@ -17,7 +17,7 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
-* <span class="label label-doc-highlight">New</span> [Custom post effects](graphics/post-effects/custom-post-effects.md)
+* <span class="label label-doc-highlight">New</span> [Custom color transforms](graphics/post-effects/color-transforms/custom-color-transforms.md)
 
 * <span class="label label-doc-highlight">New</span> [Custom shaders](graphics/effects-and-shaders/custom-shaders.md)
 

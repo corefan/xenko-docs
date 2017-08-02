@@ -12,7 +12,7 @@ Typically, you set up a post effect by specifying:
 - one or several output buffers
 - parameters to customize the behavior of the post effect during its rendering pass
 
-Xenko provides several predefined post effects. You can also [extend the system to create your own](custom-post-effects.md).
+Xenko provides several predefined post effects. You can also [extend the system to create your own color transform effects](color-transforms/custom-color-transforms.md).
 
 ## Add or edit a post effect
 
@@ -45,10 +45,10 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
     * [Gamma correction](color-transforms/gamma-correction.md)
     * [ToneMap](color-transforms/tonemap.md)
     * [Vignetting](color-transforms/vignetting.md)
+    * [Custom color transforms](color-transforms/custom-color-transforms.md)
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
-* [Custom post effects](custom-post-effects.md)
 
 ## See also
 
