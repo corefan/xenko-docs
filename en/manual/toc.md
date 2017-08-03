@@ -7,6 +7,7 @@
 
 # [Get started](get-started/index.md)
 ## [Install Xenko](get-started/install-xenko.md)
+## [Visual Studio extension](get-started/visual-studio-extension.md)
 ## [Launch Xenko](get-started/launch-xenko.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Game Studio](game-studio/index.md)
@@ -121,6 +122,7 @@
 #### [Gamma correction](graphics/post-effects/color-transforms/gamma-correction.md)
 #### [ToneMap](graphics/post-effects/color-transforms/tonemap.md)
 #### [Vignetting](graphics/post-effects/color-transforms/vignetting.md)
+#### [Custom color transforms](graphics/post-effects/color-transforms/custom-color-transforms.md)
 ### [Depth of field](graphics/post-effects/depth-of-field.md)
 ### [Lens flare](graphics/post-effects/lens-flare.md)
 ### [Light streaks](graphics/post-effects/light-streaks.md)
@@ -138,6 +140,7 @@
 #### [Templates](graphics/effects-and-shaders/shading-language/templates.md)
 #### [Automatic shader stage input/output](graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)
 #### [Shader stages](graphics/effects-and-shaders/shading-language/shader-stages.md)
+### [Custom shaders](graphics/effects-and-shaders/custom-shaders.md)
 ## [Low-level API](graphics/low-level-api/index.md)
 ### [Textures and render targets](graphics/low-level-api/textures-and-render-targets.md)
 ### [Pipeline state](graphics/low-level-api/pipeline-state.md)

@@ -80,3 +80,4 @@ The **clear coat** attributes simulate automative paint using physically-based r
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
+* [Custom shaders](../effects-and-shaders/custom-shaders.md)

@@ -126,3 +126,4 @@ If you have local reflections enabled, the scene is reflected in materials with 
 * [Clear-coating shading](clear-coat-shading.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
+* [Custom shaders](../effects-and-shaders/custom-shaders.md)
