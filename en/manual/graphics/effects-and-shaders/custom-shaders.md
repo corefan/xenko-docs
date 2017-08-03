@@ -116,7 +116,7 @@ shader ComputeColorWave<float Frequency> : ComputeColor, Texturing
 };
 ```
 
-![Static parameter](media/static-parameter.png)
+![Template argument](media/template-argument.png)
 
 ### Parameters
 
