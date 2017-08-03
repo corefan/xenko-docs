@@ -4,6 +4,9 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
+>[!Note]
+>Currently, local reflections aren't compatible with mobile platforms and cause crashes.
+
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
 ![Local reflections](media/local-reflections.jpg)
@@ -16,7 +19,7 @@ Local reflections dramatically increase the realism of scenes. They're most obvi
 
 Local reflections are a **screenspace effect**, which means they only reflect objects that are already on the screen; they don't reflect objects that are offscreen or obscured by other objects. Put simply, if the camera can't see an object at that moment, then that object isn't reflected.
 
-This means local reflections work well in enclosed areas such as corridors and rooms, but less well in open spaces, where you'd expect more of the world to be reflected. They also work best on bumpy surfaces, which hide imperfections in reflections, and less well on very glossy, mirror-like surfaces. Missing reflections are more noticeable in mirrors than table surfaces, for example.
+This means local reflections work well in enclosed areas such as corridors and rooms, but less well in open spaces, where you'd expect more of the world to be reflected. They also work best on bumpy surfaces, which hide imperfections in reflections, and less well on very glossy, mirror-like surfaces. Missing reflections are noticeable in mirrors, for example.
 
 ## Algorithm
 
@@ -32,7 +35,7 @@ Xenko processes local reflections in four passes:
 
 ## Enable local reflections
 
-To use local reflections, enable them in the **graphics compositor**.
+To use local reflections, enable the effect in the **graphics compositor**.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -53,7 +56,8 @@ To use local reflections, enable them in the **graphics compositor**.
 
     ![Enable local reflections](media/enable-local-reflections.png)
 
-After you enable local reflections, the scene is reflected in materials with the sufficient **glossiness threshold** (see below).
+After you enable local reflections, the scene is reflected in glossy materials. 
+You can use the **glossiness threshold** (see below) to set how glossy materials should be to reflect the scene. 
 
 ## Properties
 
@@ -153,7 +157,7 @@ Enables the temporal pass. This reduces noise, but produces an animated "jitteri
 
 #### Response
 
-How quickly reflections blend between the reflection in the current frame and the history buffer. Lower values produce reflections faster, but with more jittering.   Note the visible jittering in the reflection below (using a response value of `0.1`):
+How quickly reflections blend between the reflection in the current frame and the history buffer. Lower values produce reflections faster, but with more jittering.   Note the jittering in the reflection below:
 
 ![Jittering](media/response-jiterring.gif) 
 
