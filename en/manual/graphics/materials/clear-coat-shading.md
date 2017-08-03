@@ -12,7 +12,7 @@ Real vehicles typically have three layers of paint applied to the body, as in th
 
 ![Diagram](media/paint-layers.png)
 
-To keep the shading simple, Xenko only simulates the **base coat** and **clear coat**  layers. Xenko blends the two layers depending on how far the camera is from the material.
+To keep the shading simple, Xenko only simulates the **base coat** (including optional metal flakes) and **clear coat** layers. Xenko blends the layers depending on how far the camera is from the material. This helps fight visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
 
 Clear-coat shading has several advantages over creating the effect manually with [material layers](material-layers.md):
 
@@ -41,6 +41,10 @@ Alternatively, to set clear-coat properties yourself:
 
 ## Properties
 
+You can access the clear-coat shader properties under **Misc > Clear coat**. They're split into three parts: the **base paint** and optional **metal flake** properties simulate the base coat, and the **clear coat** properties simulate the clear coat. 
+
+The metal flake properties simulate a metallic paint effect. To disable the effect, remove the metal flake normal map.
+
 ![Add clear coat](media/clear-coat-properties.png)
 
 | Property | Description 
@@ -50,11 +54,11 @@ Alternatively, to set clear-coat properties yourself:
 | Metal flakes diffuse map  |  The [diffuse map](shading-attributes.md) used by the metal flake layer (the layer above the base paint). For a coherent result, use a value close to the base paint value.
 | Metal flakes glossiness map | The [glossiness map](geometry-attributes.md) used by the metal flake layer. For a coherent result, use the **metal flake normal map** as a mask. 
 | Metal flakes metalness map | The [metalness map](shading-attributes.md) used by the metal flake layer. For best results, use high values.
-| Metal flake normal map  | The [normal map](../textures/normal-maps.md) used by the metal flake layer. This shapes the flake geometry. A metal flake normal map is included in the Xenko assets package (**XenkoClearCoatMetalFlakesNM**). If the texture has a high UV scale,  enable **Use random texture coordinates** below to reduce tiling effects.
+| Metal flake normal map  | The [normal map](../textures/normal-maps.md) used by the metal flake layer. This shapes the flake geometry. A metal flake normal map  (**XenkoClearCoatMetalFlakesNM**) is included in the Xenko assets package. If the texture has a high UV scale, enable **Use random texture coordinates** below to reduce tiling effects. To disable the metal flakes effect, remove the normal map.
 | Coat glossiness map  | The [glossiness map](geometry-attributes.md) used by the clear coat layer. Change this value to simulate different kinds of paint (eg matte).
 | Clear coat metalness map  | The [metalness map](shading-attributes.md) used by the clear coat layer
-| Orange peel normal map  | The [normal map](../textures/normal-maps.md) used by the clear coat layer to create an "orange peel" effect. This reflects light in different angles, simulating paint imperfections whereby the texture appears bumpy, like the skin of an orange. A metal flake normal map is included in the Xenko assets package (**XenkoClearCoatOrangePeelNM**).
-| Layer transition distance  | The distance (in meters) at which the base paint layer transitions to the metal flake layer
+| Orange peel normal map  | The [normal map](../textures/normal-maps.md) used by the clear coat layer to create an "orange peel" effect. This reflects light in different angles, simulating paint imperfections whereby the texture appears bumpy, like the skin of an orange. An orange peel normal map (**XenkoClearCoatOrangePeelNM**) is included in the Xenko assets package.
+| Layer transition distance  | The distance (in meters) at which the base paint layer transitions to the metal flake layer. This helps fight visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
 
 ## Reduce tiling and artifacts
 
