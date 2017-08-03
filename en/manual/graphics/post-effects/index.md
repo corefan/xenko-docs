@@ -28,9 +28,9 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
 2. Select the **Post-processing effects** node.
 
-    If there's no post-processing effects node, right-click and select **Create > post-processing effects**.
-
-    Game Studio adds a post effect node to the graphics compositor.
+    > [!Tip]
+    > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
+    > ![Connect nodes](media/connect-nodes.png)
 
 3. In the **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
 
