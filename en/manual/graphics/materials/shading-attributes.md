@@ -55,15 +55,15 @@ The specular color can be defined using a metalness map (which uses the diffuse 
 
 ### Metalness map
 
-The metalness map is easy to use as it simplifies parametrization between the diffuse and specular color.
+The **metalness map** simplifies parametrization between the diffuse and specular color.
 
 By taking into into account the fact that almost all materials always have some "metalness"/reflectance in them, using the metalness map provides realistic materials with minimal parametrization.
 
 The final specular color is calculated by mixing a fixed low-reflection color and the diffuse color.
 
-- With the metalness color at `0.0`, the effective specular color is equal to `0.02`, while the diffuse color is unchanged. This means that the material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
+- With the metalness color at `0.0`, the effective specular color is equal to `0.02`, while the diffuse color is unchanged. The material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
 
-- With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to `0`. The material is then considered a pure metal.
+- With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to `0`. The material is considered a pure metal.
 
     ![media/material-attributes-26.png](media/material-attributes-26.png) 
 
@@ -118,7 +118,7 @@ With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can 
 | Property     | Description                                                               
 | ------------ | -------------- 
 | Emissive map | The emissive map color provider      
-| Intensity    | A factor to multiply by the color of the color provider   
+| Intensity    | The factor to multiply by the color of the color provider   
 | Use alpha    | Use the alpha of the emissive map as the main alpha color of the material (instead of using the alpha of the diffuse map by default)
 
 ## See also

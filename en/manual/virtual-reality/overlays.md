@@ -58,7 +58,7 @@ You can add as many overlays as you need. To add another overlay, click **Add to
 | Local position | The position of the overlay relative to the user                           
 | Local rotation | The rotation of the overlay relative to the user                           
 | Surface size   | The size of the overlay, in world units (meters)                           
-| Follows head   | If enabled, the overlay follows the user's head, so it's always in front of their view 
+| Follows head   | Follow the user's head, so the overlay is always in their view 
 
 ## VR template
 

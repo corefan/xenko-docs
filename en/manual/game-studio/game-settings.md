@@ -74,10 +74,10 @@ For more information, see [Splash screen](/splash-screen.md).
 
 | Property                    | Description  
 |-----------------------------|----------------
-| Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. 
-| Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. 
-| Adapt back buffer to screen | If enabled, this option adapts the ratio of the back buffer to fit the screen ratio.
-| Default graphics profile    | The graphics feature level required by the project.
+| Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution.
+| Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution.
+| Adapt back buffer to screen | Adapt the ratio of the back buffer to fit the screen ratio
+| Default graphics profile    | The graphics feature level required by the project
 | Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform. For more information, see [Change the graphics platform](../platforms/change-the-graphics-platform.md).
