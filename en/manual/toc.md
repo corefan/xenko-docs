@@ -7,6 +7,7 @@
 
 # [Get started](get-started/index.md)
 ## [Install Xenko](get-started/install-xenko.md)
+## [Visual Studio extension](get-started/visual-studio-extension.md)
 ## [Launch Xenko](get-started/launch-xenko.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Game Studio](game-studio/index.md)
