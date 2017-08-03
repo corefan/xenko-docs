@@ -7,17 +7,31 @@
 >[!Note]
 >Currently, only textures can be streamed.
 
-As games typically contain lots of textures, Xenko often can't load every texture simultaneously due to GPU and CPU memory limitations. For this reason, it's better to **stream** textures, so they load only when they're needed. This also means games load significantly faster.
+As games typically contain lots of textures, it's usually better to **stream** them, so they load only when they're needed. This: 
 
-As soon as the texture is needed at runtime, Xenko loads a low-quality version, then rapidly upscales its quality. The gif below shows this process happening in slow motion; in most situations on most hardware, streaming is much faster.
+* significantly decreases the time it takes to load a game or scene
+
+* uses less memory
+
+* makes your game easier to scale
+
+## How Xenko streams textures
+
+When streaming is enabled on a texture, Xenko only loads it when it's rendered in the scene.
+
+There's no loading priority for textures. For example, Xenko doesn't load textures based on distance. Instead, Xenko loads them all in sequence.
+
+If mipmaps are enabled in the [texture properties](index.md), when the texture is needed at runtime, Xenko loads the lowest-quality version of the texture, then upscales it based on the distance from the camera. The gif below shows this process happening in slow motion; in most situations on most hardware, streaming happens much more quickly.
 
 ![Texture loading](media/loading-texture.gif)
 
-When the texture is no longer needed, Xenko downscales the texture quality and then unloads it.
+When the texture is no longer needed, Xenko downscales it, then unloads it.
 
-## When to use streaming
+If mipmaps are disabled, Xenko only loads the texture at its original quality. This means the texture is invisible until it loads in full, which can cause noticeable pop-in effects.
 
-Streaming is enabled by default for all textures. You might want to disable streaming on important textures you always want to load in high quality, such as:
+## When not to use streaming
+
+Streaming is enabled by default for all textures. You might want to disable streaming on important textures you always want to display immediately and in high quality, such as:
 
 * [splash screens](../../game-studio/splash-screen.md)
 
@@ -25,19 +39,17 @@ Streaming is enabled by default for all textures. You might want to disable stre
 
 * textures used in [particles](../../particles/index.md) (particles often have a short lifespan, so might disappear before the texture fully loads)
 
-Currently, there's no way to stream resources differently based on distance from the camera. Xenko always streams them to the highest quality.
-
 ## Enable or disable streaming on a texture
 
- 1. In the **asset view**, select the texture.
+1. In the **asset view**, select the texture.
 
     ![Select normal map texture](media/select-texture.png)
 
-2. In the **property grid**, under **Format**, enable or disable the **Stream** checkbox.
+2. In the **property grid**, under **Format**, use the **Stream** check box.
 
     ![Enable streaming](media/enable-streaming.png)
 
-### Disable streaming for a single texture in code
+## Disable streaming for a single texture in code
 
 Use:
 
@@ -45,17 +57,11 @@ Use:
 ((Game)Game).Streaming.StreamResourcesFully(myTexture);
 ```
 
-## When Xenko streams textures
+To disable streaming on a texture and load it in code, use:
 
-When streaming is enabled, Xenko doesn't load textures until: 
-
-* they're rendered in the scene, or
-
-* you indicate an actual use in a script, eg:
-
-    ```cs
-    var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.StreamingDisabled);
-    ```
+```cs
+var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.StreamingDisabled);
+```
 
 ## Disable all texture streaming
 

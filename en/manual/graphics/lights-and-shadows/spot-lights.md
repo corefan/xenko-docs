@@ -23,7 +23,7 @@ Once selected, the gizmo of the spot light displays its main direction, range an
 | Property            | Description
 | ------------------- | -----------
 | Color               | The color of the light (RGB)  
-| Range               | The range in meters. Beyond the this range, the light doesn't affect models
+| Range               | The range in [world units](../../game-studio/world-units.md). Beyond the this range, the light doesn't affect models.
 | Angle Inner         | The inner angle of the spot cone where the light intensity influence is at one
 | Angle Outer         | The outer angle of the spot cone where the light intensity influence is zero
 | Shadows             | <br> Cast shadows</br><br>**Filter**: Produces soft shadows instead of hard shadows via PCF (Percentage Closer Filtering) </br> <br>**Size**: The size of texture to use for shadowing mapping. Larger textures produce better shadows edges, but are much more costly. For more information, see [Shadows](shadows.md)</br> <br>For spot lights, the default value is **medium**, as a spot light has usually a medium visual impact</br>  
