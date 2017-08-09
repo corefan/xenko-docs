@@ -12,11 +12,11 @@ If you don't have Xenko installed, the Xenko Launcher prompts you to install the
 
 ![No version installed](media/xenko-launcher-install-last-version.png)
 
-If you choose to install the latest version, the Xenko Launcher asks if you want to install the Visual Studio integration. 
+If you choose to install the latest version, the Xenko Launcher asks if you want to install the Xenko Visual Studio extension. 
 
 ![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
 
-The Visual Studio integration lets you edit shaders directly from Visual Studio and provides syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.
+The Xenko Visual Studio extension adds syntax highlighting, live code validation, error checking, and navigation. It also lets you you [edit shaders directly from Visual Studio](../graphics/effects-and-shaders/custom-shaders.md). You don't need to install the extension to use Xenko, but we recommend it, especially for programmers.
 
 ## Manage different versions of Xenko
 

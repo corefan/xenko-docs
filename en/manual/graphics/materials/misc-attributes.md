@@ -75,3 +75,4 @@ The following screenshots show the influence of the cutoff Alpha value.
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
+* [Custom shaders](../effects-and-shaders/custom-shaders.md)

@@ -434,7 +434,7 @@ To open a script in the Game Studio script editor, double-click it in the **asse
 
 You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Xenko reloads them automatically.
 
-If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, click **Open in IDE** in the Game Studio toolbar.
+If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, in the Game Studio toolbar, click **Open in IDE**.
 
 ![Open project in Visual Studio](media/xenko-vs-unity-open-project-in-visual-studio.png)
 

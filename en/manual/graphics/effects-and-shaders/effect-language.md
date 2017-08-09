@@ -14,13 +14,13 @@ This method produces shaders at runtime. However, many platforms don't support H
 
 Many shaders are variations or combinations of pre-existing shaders. For example, some meshes cast shadows, others receive them, and others need skinning. To reuse code, it's a good idea to select which parts to use through conditions (eg "Skinning required"). This is often solved by "uber shaders": monolithic shaders configured by a set of preprocessor parameters.
 
-Xenko offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by shader classes can be mixed together by a shader mixer. This process can use more complex logic, described in Xenko Effect (*.XKFX) files.
+Xenko offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by shader classes can be mixed together by a shader mixer. This process can use more complex logic, described in Xenko Effect (*.xkfx) files.
 
 ### General syntax
 
-A .XKFX file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produces a `ShaderMixinSource` ready to be compiled.
+An .xkfx file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produces a `ShaderMixinSource` ready to be compiled.
 
-An XKFX example file:
+An example .xkfx file:
 
 ```cs
 using SiliconStudio.Xenko.Effects.Data;
