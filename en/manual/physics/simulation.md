@@ -17,7 +17,7 @@ You can change how Xenko initializes the [simulation](xref:SiliconStudio.Xenko.P
 
 At runtime, you can change some [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) parameters:
 
-* `Gravity` — the global gravity, in meters per second squared
+* `Gravity` — the global gravity, in [world units](../game-studio/world-units.md) per second squared
 * `FixedTimeStep` — the length of a simulation timestep, in seconds
 * `MaxSubSteps` — the maximum number of fixed timesteps the engine takes per update
 
