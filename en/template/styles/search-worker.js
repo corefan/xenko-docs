@@ -42,10 +42,16 @@
     var chapter = oEvent.data.chapter;
     var hits = lunrIndex.search(q);
     var results = [];
+    var TRIMLIMIT = 200;
     hits.forEach(function(hit) {
       var item = searchData[hit.ref];
       if((item.href).toLowerCase().indexOf(chapter) >= 0){
-        var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+        var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
+        if(trimIndex < TRIMLIMIT || trimIndex == -1){
+          var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+        } else {
+          var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex, trimIndex+200).split(" ").slice(0, -1).join(" ");
+        }
         results.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
       };
     });
