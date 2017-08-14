@@ -128,3 +128,4 @@ With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can 
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
+* [Custom shaders](../effects-and-shaders/custom-shaders.md)
