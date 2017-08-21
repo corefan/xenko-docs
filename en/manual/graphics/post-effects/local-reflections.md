@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
->[!Note]
+>[!Warning]
 >Currently, local reflections aren't compatible with mobile platforms and cause crashes.
 
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
