@@ -12,7 +12,7 @@ Real vehicles typically have three layers of paint applied to the body, as in th
 
 ![Diagram](media/paint-layers.png)
 
-To keep the shading simple, Xenko only simulates the **base coat** (including optional metal flakes) and **clear coat** layers. Xenko blends the layers depending on how far the camera is from the material. This helps fight visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
+To keep the shading simple, Xenko only simulates the **base coat** (including optional metal flakes) and **clear coat** layers. Xenko blends the layers depending on how far the camera is from the material. This reduces visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
 
 Clear-coat shading has several advantages over creating the effect manually with [material layers](material-layers.md):
 
