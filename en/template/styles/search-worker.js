@@ -42,7 +42,7 @@
     var chapter = oEvent.data.chapter;
     var hits = lunrIndex.search(q);
     var results = [];
-    var TRIMLIMIT = 200;
+    var TRIMLIMIT = 400;
     hits.forEach(function(hit) {
       var item = searchData[hit.ref];
       if((item.href).toLowerCase().indexOf(chapter) >= 0){
@@ -50,7 +50,7 @@
         if(trimIndex < TRIMLIMIT || trimIndex == -1){
           var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
         } else {
-          var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex, trimIndex+200).split(" ").slice(0, -1).join(" ");
+          var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
         }
         results.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
       };
