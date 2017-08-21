@@ -4,15 +4,13 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Depth of field** effects simulate the behavior of a real camera lens focusing an object. 
-
-By default, rendering produces a very sharp image, which can look artificial. In movies it's common to have the camera focus a specific object of the scene, leaving the background and foreground objects blurred and out of focus.
+By default, rendering produces a very sharp image, which can look artificial. **Depth of field** effects simulate the behavior of a real camera lens focusing an object, leaving background and foreground objects out of focus.
 
 ![media/realworld_dof_agave_flowers.jpg](media/realworld_dof_agave_flowers.jpg) 
 
-Xenko achieves the effect by creating several versions of the original image, with different intensities of blur and interpolate between them. The more layers used, the better the quality, but at some performance cost. 
+To create the effect, Xenko creates several versions of the original image with different intensities of blur, and interpolates between them. The more layers used, the better the quality, but at performance cost.
 
-![media/depth-of-field-2.png](media/depth-of-field-2.png) 
+![media/depth-of-field-2.png](media/depth-of-field-2.png)
 
 ## Properties
 
