@@ -19,13 +19,11 @@ Currently, there's no loading priority for textures. For example, Xenko doesn't 
 
 ### Using streaming with mipmaps
 
-If mipmaps are enabled in the [texture properties](index.md), when Xenko streams the texture, Xenko loads a low-quality mipmap, then loads higher-quality mipmaps based on the distance from the camera.
-
-The gif below shows this process happening in slow motion. In most situations, streaming mipmaps happens much more quickly; however, the process can still be noticeable.
+If mipmaps (different-resolution versions of textures displayed at different distances) are enabled in the [texture properties](index.md), the lower-resolution mipmaps load first, as they're smaller in size. The gif below shows this process happening in slow motion.
 
 ![Texture loading](media/loading-texture.gif)
 
-If mipmaps are disabled, Xenko only loads the texture at its original quality. This means the texture is invisible until it loads, which can cause pop-in effects. For this reason, we recommend you enable mipmaps for textures when using streaming.
+In most situations, the process is very quick. We recommend you enable mipmaps for streaming as it means lower-resolution versions of textures act as placeholders until the higher-quality versions can load, reducing pop-in.
 
 ## When **not** to use streaming
 
@@ -61,13 +59,13 @@ For instructions about how to access the global streaming settings, see the [Gam
 |----------------------|------------
 | Streaming            | Enable streaming
 | Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
-| Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but slow the framerate.
+| Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but might slow down the framerate.
 | Resource timeout (millis)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
-| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko removes unused textures. You can use this to keep textures loaded when you have memory to spare.
+| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
 ## Control streaming in code
 
-### Disable streaming for a single texture:
+### Disable streaming at load time
 
 ```cs
 var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.StreamingDisabled);
@@ -76,7 +74,7 @@ var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.St
 ### Disable streaming globally
 
 ```cs
-((Game)Game).Streaming.DisableStreaming = true;
+Streaming.DisableStreaming = true;
 ```
 
 ### Access the streaming manager
