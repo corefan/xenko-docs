@@ -58,48 +58,42 @@ For instructions about how to access the global streaming settings, see the [Gam
 | Property             | Description
 |----------------------|------------
 | Streaming            | Enable streaming
-| Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
+| Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but uses more CPU and causes more memory fluctuations.
 | Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but might slow down the framerate.
 | Resource timeout (millis)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
 | Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
-## Control streaming in code
-
-### Disable streaming at load time
-
-```cs
-var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.StreamingDisabled);
-```
-
-### Disable streaming globally
-
-```cs
-Streaming.DisableStreaming = true;
-```
-
-### Access the streaming manager
+## Access the streaming manager in code
 
 Use [Streaming](xref:SiliconStudio.Xenko.Streaming).
 
-For example, to enable streaming globally, use:
+For example, to disable streaming globally, use:
 
 ```cs
-Streaming.EnableStreaming = true;
+Streaming.EnableStreaming = false;
 ```
 
-To start streaming a texture, use:
+To start streaming a texture:
 
 ```cs
 Streaming.StreamResources(myTexture);
 ```
 
-### `StreamingOptions`
+To disable streaming at load time:
+
+```cs
+var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.StreamingDisabled);
+```
+
+### Options
 
 There are three [StreamingOptions](xref:SiliconStudio.Xenko.Streaming.StreamingOptions):
 
-#### KeepLoaded
+* The `KeepLoaded` option keeps the texture in memory even when the memory budget is exceeded.
 
-The `KeepLoaded` option keeps the texture in memory even when the memory budget is exceeded.
+* If mipmaps are enabled, the `ForceHighestQuality` option loads only the highest-quality version of the texture.
+
+* The `KeepLoaded` option keeps the texture in memory even when it's not used.
 
 For example:
 
@@ -108,9 +102,7 @@ var myOptions = new StreamingOptions() { KeepLoaded = true };
 Streaming.StreamResources(myTexture, myOptions);
 ```
 
-#### Change the `StreamingOptions` at runtime
-
-Use `SetResourceStreamingOptions`. For example:
+To change the `StreamingOptions` at runtime, use `SetResourceStreamingOptions`. For example:
 
 ```cs
 var myNewOptions = new StreamingOptions() { KeepLoaded = false };
