@@ -6,9 +6,9 @@
 
 You can configure the global settings of your game in the **Game Settings** asset. By default, the Game Settings asset is stored in your project's **Assets** folder.
 
-## Edit Game Settings
+## Edit game settings
 
-1. In the **solution explorer** (the bottom-left pane by default), select the **Assets folder**.
+1. In the **solution explorer** (the bottom-left pane by default), select the **Assets** folder.
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
@@ -68,7 +68,7 @@ The **splash screen** is displayed when your game starts. The default is the Xen
 
 For more information, see [Splash screen](/splash-screen.md).
 
-## Rendering settings
+## Rendering
 
 ![Rendering settings](media/rendering-settings.png)
 
@@ -85,12 +85,12 @@ For more information, see [Splash screen](/splash-screen.md).
 > [!Tip]
 > To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
 
-## Editor settings
+## Editor
 
-The editor settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game at runtime.
+The **editor** settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game.
 
 >[!Note]
->How Game Studio displays entities is also affected by the **Color space** setting under **Rendering settings**.
+>How Game Studio displays entities is also affected by the **Color space** setting under **Rendering**.
 
 ![Editor settings](media/editor-settings.png)
 
@@ -99,7 +99,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 | Rendering mode      | How Game Studio renders thumbnails and asset previews. 
 | Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. 
 
-## Texture settings
+## Textures
 
 ![Texture settings](media/texture-settings.png)
 
@@ -107,7 +107,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 |-----------------|--------------
 | Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. 
 
-## Physics settings
+## Physics
 
 ![Physics settings](media/physics-settings.png)
 
@@ -117,7 +117,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 | Max sub steps   | The maximum number of simulations the physics engine can run in a frame to compensate for slowdown.
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
 
-## Audio settings
+## Audio
 
 ![Audio settings](media/audio-settings.png)
 
@@ -127,7 +127,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 
 For more details about audio, see [Audio](../audio/index.md).
 
-## Navigation settings
+## Navigation
 
 ![Navigation settings](media/navigation-settings.png)
 
@@ -153,6 +153,23 @@ For more details, see [Dynamic navigation](dynamic-navigation.md).
 
 For more details, see [Navigation](navigation.md).
 
+## Streaming
+
+![Streaming settings](media/streaming-settings.png)
+
+| Property             | Description
+|----------------------|------------
+| Streaming            | Enable streaming
+| Update interval | How frequently Xenko updates the streaming
+| Max resources per update | The maximum number of textures updated per update. Higher numbers reduce pop-in but slow the framerate.
+| Resource timeout (milliseconds)| How long resources stay loaded after they're no longer used (after the **memory budget** is exceeded)
+| Memory budget (in MB) | When the memory used by streaming exceeds this budget, unused resources are removed
+
+>[!Note]
+>Currently, only textures can be streamed.
+
+For more details, see [Streaming](../textures/streaming.md).
+
 ## Overrides
 
 You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
@@ -167,7 +184,7 @@ You can override settings for particular platforms, graphics APIs, and so on. Fo
 
     ![Select graphics platform override](../platforms/media/select-override-platform.png)
 
-3. **Optional**: If you want this override to apply only to a specific GPU platform, choose it from the **Specific Filter** drop-down list.
+3. **Optional**: If you want this override to apply only to a specific GPU platform, choose it from the **Specific filter** drop-down list.
 
     ![Specific filter](media/specific-filter.png)
 

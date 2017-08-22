@@ -108,6 +108,16 @@ Note how the blend map texture corresponds to the patterning on the result.
 
 For more information, see [Material maps](../materials/material-maps.md).
 
+### Global texture settings
+
+For instructions about how to access the global texture settings, see the [Game Settings](../../game-studio/game-settings.md) page.
+
+![Texture settings](../../game-studio/media/texture-settings.png)
+
+| Property        | Description  
+|-----------------|--------------
+| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform.
+
 ## See also
 
 * [Normal maps](normal-maps.md)
@@ -116,3 +126,4 @@ For more information, see [Material maps](../materials/material-maps.md).
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
 * [Render targets](../graphics-compositor/render-targets.md)
+* [Game Settings](../../game-studio/game-settings.md)
