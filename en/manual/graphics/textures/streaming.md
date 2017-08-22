@@ -11,9 +11,9 @@ As games typically contain lots of textures, it's usually better to **stream** t
 
 ## How Xenko streams textures
 
-When streaming is enabled on a texture, Xenko only loads it when it's rendered in the scene.
+Instead of loading a texture when Xenko loads the scene (with all its mipmaps), Xenko only loads it when it's used (eg a model using the texture is onscreen). 
 
-When the texture is no longer needed, Xenko unloads it after a time you specify in the global streaming settings.
+When the texture is no longer needed (ie no objects that use the texture are onscreen), Xenko unloads it.
 
 Currently, there's no loading priority for textures. For example, Xenko doesn't load textures based on distance; instead, Xenko loads them all in sequence.
 
@@ -60,17 +60,23 @@ For instructions about how to access the global streaming settings, see the [Gam
 | Property             | Description
 |----------------------|------------
 | Streaming            | Enable streaming
-| Update interval | How frequently Xenko updates the streaming
-| Max resources per update | The maximum number of textures updated per update. Higher numbers reduce pop-in but slow the framerate.
-| Resource timeout (milliseconds)| How long resources stay loaded after they're no longer used (after the **memory budget** is exceeded)
-| Memory budget (in MB) | When the memory used by streaming exceeds this budget, unused resources are removed
+| Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
+| Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but slow the framerate.
+| Resource timeout (millis)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
+| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko removes unused textures. You can use this to keep textures loaded when you have memory to spare.
 
 ## Control streaming in code
 
-To disable streaming for a single texture:
+### Disable streaming for a single texture:
 
 ```cs
 var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.StreamingDisabled);
+```
+
+### Disable streaming globally
+
+```cs
+((Game)Game).Streaming.DisableStreaming = true;
 ```
 
 ### Access the streaming manager
@@ -89,13 +95,13 @@ To start streaming a texture, use:
 Streaming.StreamResources(myTexture);
 ```
 
-### StreamingOptions
+### `StreamingOptions`
 
 There are three [StreamingOptions](xref:SiliconStudio.Xenko.Streaming.StreamingOptions):
 
 #### KeepLoaded
 
-The `KeepLoaded` option keeps the texture in memory even if the memory budget is exceeded.
+The `KeepLoaded` option keeps the texture in memory even when the memory budget is exceeded.
 
 For example:
 
@@ -104,21 +110,13 @@ var myOptions = new StreamingOptions() { KeepLoaded = true };
 Streaming.StreamResources(myTexture, myOptions);
 ```
 
-#### Change the StreamingOptions at runtime
+#### Change the `StreamingOptions` at runtime
 
 Use `SetResourceStreamingOptions`. For example:
 
 ```cs
 var myNewOptions = new StreamingOptions() { KeepLoaded = false };
 Streaming.SetResourceStreamingOptions(myTexture, myNewOptions);
-```
-
-#### Disable streaming globally
-
-Use:
-
-```cs
-((Game)Game).Streaming.DisableStreaming = true;
 ```
 
 ## See also

@@ -52,38 +52,15 @@ To set the graphics compositor:
 
 For more information, see [Graphics compositor](../graphics/graphics-compositor/index.md).
 
-## Splash screen
+## Audio
 
-The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.
+![Audio settings](media/audio-settings.png)
 
-> [!Note]
-> The splash screen is only displayed when the game is built in release mode.
+| Property     | Description  
+|--------------|--------------
+| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md).
 
-![Settings](media/splash-screen.png)
-
-| Property | Description
-|----------|------------
-| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *XenkoDefaultSplashScreen*. 
-| Color    | The color the splash screen fades in on top of. By default, this is black  (*#FF000000*).
-
-For more information, see [Splash screen](/splash-screen.md).
-
-## Rendering
-
-![Rendering settings](media/rendering-settings.png)
-
-| Property                    | Description  
-|-----------------------------|----------------
-| Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution.
-| Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution.
-| Adapt back buffer to screen | Adapt the ratio of the back buffer to fit the screen ratio
-| Default graphics profile    | The graphics feature level required by the project
-| Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
-| Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
-| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform. For more information, see [Change the graphics platform](../platforms/change-the-graphics-platform.md).
-
-> [!Tip]
-> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+For more details about audio, see [Audio](../audio/index.md).
 
 ## Editor
 
@@ -98,34 +75,6 @@ The **editor** settings control how Game Studio displays entities in the scene e
 |---------------------|--------------
 | Rendering mode      | How Game Studio renders thumbnails and asset previews. 
 | Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. 
-
-## Textures
-
-![Texture settings](media/texture-settings.png)
-
-| Property        | Description  
-|-----------------|--------------
-| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. 
-
-## Physics
-
-![Physics settings](media/physics-settings.png)
-
-| Property        | Description         
-|-----------------|----------------
-| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here currently aren't enabled in Xenko.
-| Max sub steps   | The maximum number of simulations the physics engine can run in a frame to compensate for slowdown.
-| Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
-
-## Audio
-
-![Audio settings](media/audio-settings.png)
-
-| Property     | Description  
-|--------------|--------------
-| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md).
-
-For more details about audio, see [Audio](../audio/index.md).
 
 ## Navigation
 
@@ -153,6 +102,33 @@ For more details, see [Dynamic navigation](dynamic-navigation.md).
 
 For more details, see [Navigation](navigation.md).
 
+## Physics
+
+![Physics settings](media/physics-settings.png)
+
+| Property        | Description         
+|-----------------|----------------
+| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here currently aren't enabled in Xenko.
+| Max sub steps   | The maximum number of simulations the physics engine can run in a frame to compensate for slowdown.
+| Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
+
+## Rendering
+
+![Rendering settings](media/rendering-settings.png)
+
+| Property                    | Description  
+|-----------------------------|----------------
+| Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution.
+| Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution.
+| Adapt back buffer to screen | Adapt the ratio of the back buffer to fit the screen ratio
+| Default graphics profile    | The graphics feature level required by the project
+| Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
+| Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
+| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform. For more information, see [Change the graphics platform](../platforms/change-the-graphics-platform.md).
+
+> [!Tip]
+> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+
 ## Streaming
 
 ![Streaming settings](media/streaming-settings.png)
@@ -160,15 +136,23 @@ For more details, see [Navigation](navigation.md).
 | Property             | Description
 |----------------------|------------
 | Streaming            | Enable streaming
-| Update interval | How frequently Xenko updates the streaming
-| Max resources per update | The maximum number of textures updated per update. Higher numbers reduce pop-in but slow the framerate.
-| Resource timeout (milliseconds)| How long resources stay loaded after they're no longer used (after the **memory budget** is exceeded)
-| Memory budget (in MB) | When the memory used by streaming exceeds this budget, unused resources are removed
+| Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
+| Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but slow the framerate.
+| Resource timeout (millis)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
+| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
 >[!Note]
 >Currently, only textures can be streamed.
 
 For more details, see [Streaming](../textures/streaming.md).
+
+## Textures
+
+![Texture settings](media/texture-settings.png)
+
+| Property        | Description  
+|-----------------|--------------
+| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. 
 
 ## Overrides
 
@@ -216,12 +200,28 @@ You can choose items in the **Platform Filters** list as a specific platform fil
 
     ![Type platform filter](media/add-platform-filter-name.png)
 
-After you add a platform filter, you can select it as a **specific filter** under **Overrides**.
+After you add a platform filter, you can select it under **Override > Specific filter**.
 
 ![Override](media/new-GPU-in-override-list.png)
 
 >[!Note]
 >If the new filter isn't listed, remove the override and re-add it.
+
+## Splash screen
+
+The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.
+
+> [!Note]
+> The splash screen is only displayed when the game is built in release mode.
+
+![Settings](media/splash-screen.png)
+
+| Property | Description
+|----------|------------
+| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *XenkoDefaultSplashScreen*. 
+| Color    | The color the splash screen fades in on top of. By default, this is black  (*#FF000000*).
+
+For more information, see [Splash screen](/splash-screen.md).
 
 ## See also
 
