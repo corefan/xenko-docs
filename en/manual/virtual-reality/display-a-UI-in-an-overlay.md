@@ -41,9 +41,9 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
     ![Add VR item](media/add-overlay.png)
 
-5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
-    The **Select an asset** window opens.
+    The **asset picker** opens.
 
     ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
 
@@ -81,11 +81,11 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Entry points node](../graphics/graphics-compositor/media/entry-points-node.png)
 
-2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **None** to delete your existing renderers.
+2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **None** to delete your existing renderers.
 
     ![Cleared game renderers](../graphics/graphics-compositor/media/game-renderers-cleared.png)
 
-3. Next to **Game rendererer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **Camera Renderer**.
+3. Next to **Game rendererer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **Camera Renderer**.
 
     ![Select camera renderer.png](media/select-camera-renderer.png)
 
@@ -93,11 +93,11 @@ This page describes the simplest way to do this from scratch, using two cameras 
     
     For this reason, in these instructions, we'll add a game renderer with a camera, then make the two renderers children of that renderer. This makes sure both renderers have a parent with a camera.
 
-4. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select your main game camera.
+4. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select your main game camera.
 
     ![Select main camera](media/select-main-camera.png)
 
-5. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **SceneRendererCollection**.
+5. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **SceneRendererCollection**.
 
     ![Select scene renderer collection](media/select-scene-renderer-collection.png)
 
@@ -105,17 +105,17 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select RenderTextureSceneRenderer](media/select-RenderTextureSceneRenderer.png)
 
-8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **SingleStageRenderer**. 
+8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **SingleStageRenderer**. 
 
     ![Select single stage renderer](media/select-single-stage-renderer.png)
 
-9. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **UIRenderStage**. This is the renderer that renders the UI.
+9. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **UIRenderStage**. This is the renderer that renders the UI.
 
     ![Select UI render stage](media/select-UI-render-stage.png)
 
-10. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+10. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
-    The **Select an asset** window opens.
+    The **asset picker** opens.
 
 11. Select the **render texture** and click **OK**.
 

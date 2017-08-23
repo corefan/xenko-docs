@@ -31,7 +31,7 @@ You need at least one [AudioListenerComponent](xref:SiliconStudio.Xenko.Audio.Au
 
     ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 

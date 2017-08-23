@@ -31,9 +31,9 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     ![Add VR item](media/add-overlay.png)
 
-5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
-    The **Select an asset** window opens.
+    The **asset picker** opens.
 
     ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
 
@@ -58,7 +58,7 @@ You can add as many overlays as you need. To add another overlay, click **Add to
 | Local position | The position of the overlay relative to the user                           
 | Local rotation | The rotation of the overlay relative to the user                           
 | Surface size   | The size of the overlay, in world units (meters)                           
-| Follows head   | Follow the user's head, so the overlay is always in their view 
+| Follows head   | If enabled, the overlay follows the user's head, so it's always in front of their view 
 
 ## VR template
 

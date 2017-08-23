@@ -47,6 +47,9 @@ public override void Update() {
 }
 ```
 
+> [!Note]
+> You can also bind keys and buttons not included in the Xenko API. For example, while the Xenko API supports two _Extended Mouse Buttons_, you can bind additional _Extended Buttons_ to virtual buttons and use them in your project.
+
 ## See also
 * [Gamepads](gamepads.md)
 * [Keyboard](keyboards.md)

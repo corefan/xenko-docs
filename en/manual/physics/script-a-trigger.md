@@ -88,7 +88,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     Game Studio adds a model component to the entity.
 
-5. Under **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+5. Under **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
@@ -96,13 +96,13 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7. In the **Property grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+7. In the **Property grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
 8. Select the **Transparent** material we created in step 2 and click **OK**.
 
-    ![Select material](media/physics-tutorials-select-transparent-material.png)
+    ![Select material in Asset Picker](media/physics-tutorials-select-transparent-material.png)
 
 9. In the **Asset view**, select the **Transparent** material asset.
 
@@ -147,11 +147,11 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
     ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
-2. In the **Create a script** dialog, name your script *Trigger* and click **Create script**.
+2. In the **Script wizard** dialog, name your script *Trigger* and click **OK**.
 
-    2a. If Game Studio asks if you want to save your script, click **Save**.
+    2a. If Game Studio asks if you want to save your script, click **Yes**.
     
-    2b. If Game Studio asks if you want to reload the assemblies, click **Reload**.
+    2b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
 
 3. Open the script, replace its content with the following code, and save the file:
 

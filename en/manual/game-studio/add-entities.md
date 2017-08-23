@@ -19,20 +19,13 @@ After you create a scene, you need to add entities to your scene to build your l
 
 2. Select **Empty entity**, or select an entity template.
 
-   Game Studio adds an entity to the active scene and displays it in the entity tree:
+   Game Studio adds an entity to the scene and displays it in the entity tree:
 
     ![New Entity in MainScen](media/add-entities-to-a-scene-empty-entity.png)
 
->[!Tip]
->The **active scene** is the scene entities are added to. To set the active scene, **entity tree** (left by default), right-click the scene and select **active scene**.
-
-> ![Set active scene](media/set-active-scene.png)
-
-> The active scene has no effect on runtime. 
-
 ## Create an entity from an asset
 
-You can add an entity by dragging and dropping an asset from the **asset view** to the scene.
+You can add an entity by dragging and dropping an asset from the **asset view** to the scene. 
 
 <video controls autoplay loop height="360" width="480">
    <source src="media/add-entities-to-scene-drag-and-place-entity.mp4" type="video/mp4">
@@ -84,7 +77,3 @@ Alternatively, right-click the entity and select **Duplicate selected entities**
 2.	Type a name for the entity, and then press **Enter**.
 
    ![Renamed entity in a scene](media/add-entities-to-a-scene-renamed-entity.png)
-
-## See also
-
-* [Manage scenes](manage-scenes.md)

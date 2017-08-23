@@ -36,7 +36,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Add a new item to the list](media/add-new-playing-animation.png)
 
-4. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+4. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select an animation asset](media/select-animation-asset.png)
 
@@ -181,7 +181,7 @@ To fix the color, we'll give the particles a "swoosh" texture:
 
     ![Add a texture](media/add-texture.png)
 
-3. In the **SwordModel** properties, expand **Emitters > Material**. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**). Browse to the **Textures** folder and select **swoosh.png**.
+3. In the **SwordModel** properties, expand **Emitters > Material**. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**). Browse to the **Textures** folder and select **swoosh.png**.
 
     ![Add material texture](media/add-material.png)
 
@@ -275,7 +275,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
     ![Add script component](media/add-script-component.png)
 
-9. Under the **SpawnTrail** component properties, next to **Source**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+9. Under the **SpawnTrail** component properties, next to **Source**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select a source](media/select-asset-for-script.png)
 
@@ -283,9 +283,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
     ![Select the swordtrail prefab](media/select-swordtrail-prefab-as-asset.png)
 
-11. In the SpawnTrail component, in the **Animation** field, click the hand icon (**Select an asset**).     The **Select an asset** window opens. 
-
-In the left pane, select the **mannequinModel** and click **OK**.
+11. In the SpawnTrail component, in the **Animation** field, click the hand icon (**Pick an asset up**) to open the **Entity Picker**. In the left pane, select the mannequinModel and click **OK**.
 
     ![Pick mannequin model in Entity Picker](media/pick-mannequin-model.png)
 

@@ -17,15 +17,15 @@ You can profile your project by adding a script to your scene.
 
  ![Add Game Profiler script](media/profiling-add-game-profiler-script.png)
 
-2. The **New script dialog** opens. Leave the default information.
+2. The **script wizard** opens. Leave the default information.
 
-    ![New script](media/game-profiler-script-wizard.png)
+    ![Script wizard](media/game-profiler-script-wizard.png)
 
     Game Studio adds the GameProfiler script to your project.
 
-3. If Game Studio asks you to save the script, click **Save**.
+3. If Game Studio asks you to save the script, click **Yes**.
 
-4. If Game Studio asks to reload the assemblies, click **Reload**.
+4. If Game Studio asks to reload the assemblies, click **Yes**.
 
 5. In the **scene view**, select an entity. It doesn't matter which entity you use.
 

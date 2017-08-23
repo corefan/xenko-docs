@@ -1,9 +1,5 @@
 # Light streaks
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
-
 Similar to the [bloom effect](bloom.md), the **light streak** effect uses the result of the [bright filter](bright-filter.md) to make the bright areas bleed along a direction.
 
 ![media/light-streaks-1.png](media/light-streaks-1.png) 
@@ -16,8 +12,8 @@ It creates star-pattern beams from the light point.
 
 | Property                  | Description   
 | ------------------------- | ---------------- 
-| Amount                    | Amount/Strength of the light streak      
-| Streak Count              | Number of beams emitted by a bright point. The more streaks, the higher the performance cost                                          
+| Amount                    | Amount/Strength of the light streak.       
+| Streak Count              | Number of beams emitted by a bright point. The more streaks, the higher the performance cost.                                                             
 | Attenuation               | How fast the light attenuates along a streak (0 for immediate attenuation, 1 for no attenuation)  
 | Phase                     | Phase (angle) of the star-like pattern
 | Color Aberration Strength | Strength of the color aberration along the streaks. <br>![media/light-streaks-3.png](media/light-streaks-3.png) <br>Notice the streaks involve multiple colours (yellow, purple, green, pink).                                        

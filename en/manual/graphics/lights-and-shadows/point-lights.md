@@ -36,6 +36,5 @@ Once selected, the point light gizmo displays the sphere in which it projects li
 * [Ambient lights](ambient-lights.md)
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
-* [Light shafts](light-shafts.md)
 * [Light probes](light-probes.md)
 * [Shadows](shadows.md)

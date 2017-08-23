@@ -5,40 +5,41 @@
 
 You can use various **sensors**, such as gyroscopes and accelerometers, as input devices in your project. Sensors are often used in mobile games.
 
-Use @'SiliconStudio.Xenko.Input.InputManager' to access sensors and:
+Use the [input manager](xref:SiliconStudio.Xenko.Input.InputManager) to access sensors and:
 
 * check if a sensor is supported by Xenko
 * disable a sensor
 * retrieve sensor data
 
-Xenko can receive data from six types of sensor: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_. They inherit from @'SiliconStudio.Xenko.Input.ISensorDevice'
+Xenko can receive data from six types of sensor: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_. They inherit from [SensorBase](xref:SiliconStudio.Xenko.Input.SensorBase), which provides base functionalities such as enabling or testing the availability of the sensor.
 
-Xenko creates a default instance for each sensor type. You can access each instance from the @'SiliconStudio.Xenko.Input.InputManager'.
+Xenko creates a default instance for each sensor type. You can access each instance from the [input manager](xref:SiliconStudio.Xenko.Input.InputManager).
 
 Sensors are state-based. Each sensor instance is automatically updated every frame, and contains the value of the sensor just before the update.
 
-For example, to access the accelerometer, use:
+To access a sensor, use (for example):
 
-```cs
+```
 var accelerometer = Input.Accelerometer;
 ```
 
 ## Check if a sensor is available
 
-Before you get the value of a sensor, check that the sensor is available in the device. To do this, check the sensor you want to use isn't null. For example, to check if the compass is available:
+Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported). For example:
 
 ```cs
-var hasCompass = Input.Compass != null;
+var hasCompass = Input.Compass.IsSupported;
 ```
 
 > [!Note]
-> If a sensor isn't natively supported by the device, Xenko tries to emulate it using the device's other sensors.
+> If a sensor isn't natively supported by the device, Xenko will try to emulate it using the device's other sensors.
 
 ## Enable a sensor
 
 By default, Xenko disables all available sensors, as retrieving and updating sensor data takes significant CPU time.
 
-To enable a sensor, set @'SiliconStudio.Xenko.Input.ISensorDevice.IsEnabled' to `true`. When you don't need the sensor, disable it by setting the property to `false`.
+To enable a sensor, set [SensorBase.IsEnabled](xref:SiliconStudio.Xenko.Input.SensorBase.IsEnabled)
+to ```True```. When you don't need the sensor, disable it by setting the property to ```False```.
 
 ## Use the orientation sensor
 
@@ -48,13 +49,13 @@ The **orientation sensor** indicates the **orientation of the device** with resp
 
 Use [Input.Orientation](xref:SiliconStudio.Xenko.Input.InputManager.Orientation) to get the current orientation of the device.
 
-| Property        | Description                                     | Declaration 
-|-----------------|-------------------------------------------------|---------------
-| [Roll](xref:SiliconStudio.Xenko.Input.OrientationSensor.Roll) | The rotation around the X-axis. | `public float Roll { get; }`
-| [Pitch](xref:SiliconStudio.Xenko.Input.OrientationSensor.Pitch)           | The rotation around the Y-axis.                    | `public float Pitch { get; }`
-| [Yaw](xref:SiliconStudio.Xenko.Input.OrientationSensor.Yaw)             | The rotation around the Z-axis.                    | `public float Yaw { get; }`
-| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix) | The device rotation.  | `public Matrix RotationMatrix { get; }`
-| [Quaternion](xref:SiliconStudio.Xenko.Input.OrientationSensor.Quaternion) | The device orientation and rotation. |  `public Quaternion Quaternion { get; }`
+| Property        | Description                                     | Declaration                                 |
+|-----------------|-------------------------------------------------|---------------------------------------------|
+| [Roll](xref:SiliconStudio.Xenko.Input.OrientationSensor.Roll) | The rotation around the X-axis. | ```public float Roll { get; }``` |
+| [Pitch](xref:SiliconStudio.Xenko.Input.OrientationSensor.Pitch)           | The rotation around the Y-axis.                    | ```public float Pitch { get; }```           |
+| [Yaw](xref:SiliconStudio.Xenko.Input.OrientationSensor.Yaw)             | The rotation around the Z-axis.                    | ```public float Yaw { get; }``` |
+| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix) | The device rotation.  | ```public Matrix RotationMatrix { get; }``` |
+| [Quaternion](xref:SiliconStudio.Xenko.Input.OrientationSensor.Quaternion) | The device orientation and rotation. |  ```public Quaternion Quaternion { get; }``` |
 
 For example:
 
@@ -147,7 +148,7 @@ public class SensorScript : AsyncScript
 	public override async Task Execute()
 	{
 		// Check availability of the sensor
-		if(Input.Accelerometer != null)
+		if(!Input.Accelerometer.IsSupported)
 			return;
 			
 		// Activate the sensor
@@ -159,7 +160,8 @@ public class SensorScript : AsyncScript
 			var accel = Input.Accelerometer.Acceleration;
 			
 			// perform require works...
-			await Script.NextFrame();
+			
+			away Script.NextFrame();
 		}		
 		// Disable the sensor after use
 		Input.Accelerometer.IsEnabled = false;

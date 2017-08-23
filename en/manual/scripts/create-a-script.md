@@ -14,11 +14,11 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 	>[!Note]
 	>For information about different types of script, see [Types of script](types-of-script.md).
 
-	The **New script** dialog opens.
+	The **Script wizard** dialog opens.
 
-	![New script](media/script-wizard.png)
+	![Script wizard](media/script-wizard.png)
 
-2. Specify a class and namespace for the script and click **Create script**.
+2. Specify a class name and namespace for the script and click **OK**.
 
 3. To use the script, you need to save it. By default, Game Studio prompts you to save the script now.
 

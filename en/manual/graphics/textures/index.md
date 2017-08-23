@@ -60,15 +60,14 @@ The following properties are common to all textures.
 
 | Property         | Description
 |------------------|---------
-| Width            | The width of the texture in-game
-| Height           | The height of the texture in-game
-| Use percentages    | Use percentages for width and height instead of actual pixel size
-| Width            | The width of the texture in-game
-| Height           | The height of the texture in-game
-| Type             | Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Grayscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and normal maps have additional properties (see below).
-| Generate mipmaps | Generate different versions of the texture at different resolutions to be displayed at different distances. Improves performance, removes visual artifacts, and reduces pop-in when using **streaming**, but uses more memory. Unnecessary for textures always at the same distance from the camera (such as UIs).
-| Compress         | Compress the final texture to a format based on the target platform and usage. The final texture is a multiple of 4. For more information, see [Texture compression](compression.md).
-| Stream         | Stream the texture dynamically at runtime. This improves performance and scene loading times. Not recommended for important textures you always want to be loaded, such as splash screens. For more information, see [Streaming](streaming.md).
+| Width            | The width of the texture as it's displayed in-game
+| Height           | The height of the texture as it's displayed in-game
+| Is size in percentage    | Use percentages for width and height instead of actual pixel size
+| Width            | The width of the texture as it's displayed in-game
+| Height           | The height of the texture as it's displayed in-game
+| Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and mormal maps have additional properties (see below)
+| Generate mipmaps | If selected, Xenko generates mipmaps for the texture
+| Compress         | If selected, Xenko compresses the final texture to a format based on the target platform and use. The final texture must be a multiple of 4. For more information, see [Texture compression](compression.md)
 
 ### Color texture properties
 
@@ -78,11 +77,11 @@ The following properties apply if you set the texture **type** to **color**.
 
 | Property | Description
 |----------|---------
-| sRGB sampling | Store the texture in sRGB format and convert to linear space when sampled. Recommended for all color textures, unless they're explicitly in linear space.
-| Color key enabled | Use the color set in the **Color key color** property for transparency at runtime. If disabled, the project uses transparent areas of the texture instead
-| Color key color | The color used for transparency at runtime. Only applied if **Color key enabled** is selected.
-| Alpha | The texture alpha format (**None**, **Mask**, **Explicit**, **Interpolated**, or **Auto**)
-| Premultiply alpha |  Premultiply all color components of the images by their alpha component
+| sRGB sampling | If selected, the texture is stored in sRGB format and converted to linear space when sampled. We recommend you select this for all color textures, unless they're explicitly in linear space 
+| Color key enabled | Use the color set in the **Color key color** property for transparency at runtime. If this isn't selected, the project uses transparent areas of the texture instead
+| Color key color | The color used for transparency at runtime. This is only applied if **Color key enabled** is selected above
+| Alpha | The texture alpha format (None, Mask, Explicit, Interpolated, or Auto)
+| Premultiply alpha |  Premultiplies all color components of the images by their alpha component
 
 ### Normal map properties
 
@@ -92,7 +91,7 @@ The following property applies if you set the texture **type** to **normal map**
 
 | Property | Description
 |----------|---------
-| Invert Y | Have positive Y-component (green) face up in tangent space. This depends on the tools you use to create normal maps.
+| Invert Y | If selected, positive Y-component (green) face up in tangent space. This option depends on the tools you use to create normal maps
 
 For more information about normal maps, see the [Normal maps](normal-maps.md) page.
 
@@ -108,22 +107,10 @@ Note how the blend map texture corresponds to the patterning on the result.
 
 For more information, see [Material maps](../materials/material-maps.md).
 
-### Global texture settings
-
-For instructions about how to access the global texture settings, see the [Game Settings](../../game-studio/game-settings.md) page.
-
-![Texture settings](../../game-studio/media/texture-settings.png)
-
-| Property        | Description  
-|-----------------|--------------
-| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform.
-
 ## See also
 
 * [Normal maps](normal-maps.md)
 * [Texture compression](compression.md)
-* [Texture streaming](streaming.md)
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
 * [Render targets](../graphics-compositor/render-targets.md)
-* [Game Settings](../../game-studio/game-settings.md)

@@ -42,7 +42,7 @@ The additive transparency takes into account the diffuse and diffuse/emissive al
   | Alpha = 0.25   | Alpha = 0.5  
   | -------------- | -----------
   | ![media/material-attributes-48.png](media/material-attributes-48.png)  | ![media/material-attributes-49.png](media/material-attributes-49.png)  |      
-  | We only see the specular highlight in additive mode  | Transparency is fully additive. Specular highlights at maximum
+  | We only see the specular highlight in additive mode  | Transparency is fully additive. Specular highlights at maximum 
 
 - If the **Alpha** <= 1.0, the material is semi-opaque with the diffuse/emissive component. If the diffuse component has an alpha, it's transparent.
   
@@ -54,7 +54,7 @@ The additive transparency takes into account the diffuse and diffuse/emissive al
 | Property | Description 
 | -------- | -----------
 | Alpha    | The alpha value is interpreted like this:<br> Alpha <= 0.5, the material is rendered in additive mode without the diffuse component (only specular highlights)</br> <br>Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it's displayed as transparent</br>|
-| Tint     | Apply a color tint to the transparency layer
+| Tint     | Apply a color tint to the transparency layer   
 
 ### Cuttoff
 
@@ -68,15 +68,10 @@ The following screenshots show the influence of the cutoff Alpha value.
 | -------------| --------------- | ------------ 
 | ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)
 
-### Clear coat
-
-The **clear coat** attributes simulate automative paint using physically-based rendering. For more information, see [clear-coat shading](clear-coat-shading.md).
-
 ## See also
 
 * [Geometry attributes](geometry-attributes.md)
 * [Shading attributes](shading-attributes.md)
-* [Clear-coat shading](clear-coat-shading.md)
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)

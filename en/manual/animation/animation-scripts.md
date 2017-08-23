@@ -34,9 +34,9 @@ To use the **AnimationStart** script:
 
     ![Add animation script](media/animations-additive-animations-animation-start.png)
 
-3. Specify a name for the script and click **Create script**.
+3. In the **Script wizard**, specify a name for the script, and click **OK**.
 
-    ![Create script](media/name-animation-script.png)
+    ![Script wizard](media/name-animation-script.png)
 
     3a. If Game Studio asks if you want to save your script, click **Yes**.
     

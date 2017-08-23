@@ -8,7 +8,7 @@ To create **ribbons** and **trails**, Xenko builds the mesh data as a strip conn
 
 ![media/particles-tutorials-ribbons-0.jpg](media/ribbons-and-trails.jpg)
 
-In the diagram below, several particles (represented as red dots) are rendered as individual quads (blue squares):
+In the diagram below, several particles (represented as red dots) are rendered as individual quads (blue rectangles):
 
 ![Diagram: individual quads](media/particles-diagram-quads.png)
 

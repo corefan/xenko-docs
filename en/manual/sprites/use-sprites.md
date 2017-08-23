@@ -26,13 +26,13 @@ To add a sprite to a scene, add a **sprite component** to an entity. Afterwards,
         </video>
     </p>
 
-    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
+    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
 
     ![Pick asset up](media/pick-asset-up.png)
 
     Then choose a sprite sheet:
 
-    ![Select an asset](media/asset-picker.png)
+    ![Asset picker](media/asset-picker.png)
 
 Game Studio adds the sprite to the entity.
 

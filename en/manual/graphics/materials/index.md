@@ -17,6 +17,5 @@ In practice, materials generate partial definitions of shaders integrated as par
     * [Geometry attributes](geometry-attributes.md)
     * [Shading attributes](shading-attributes.md)
     * [Misc attributes](misc-attributes.md)
-    * [Clear-coating shading](clear-coat-shading.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
