@@ -2,7 +2,6 @@
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
 
 By default, rendering produces a very sharp image, which can look artificial. **Depth of field** effects simulate the behavior of a real camera lens focusing an object, leaving background and foreground objects out of focus.
 
@@ -10,9 +9,9 @@ By default, rendering produces a very sharp image, which can look artificial. **
 
 To create the effect, Xenko creates several versions of the original image with different intensities of blur, and interpolates between them. The more layers used, the better the quality, but at performance cost.
 
-![media/depth-of-field-2.png](media/depth-of-field-2.png)
-
 ## Properties
+
+![media/depth-of-field-2.png](media/depth-of-field-2.png)
 
 | Property   | Description     
 | ---------- | -------- 
