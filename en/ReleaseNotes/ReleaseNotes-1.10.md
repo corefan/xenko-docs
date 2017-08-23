@@ -22,7 +22,7 @@ This constraint makes it easier to handle internal references inside an asset. S
 
 ## Version 1.10.0-beta
 
-Release date 2016/3/9
+Release date 2017/3/9
 
 ### Enhancements
 
@@ -111,7 +111,7 @@ Release date 2016/3/9
 
 ## Version 1.10.1-beta
 
-Release date 2016/3/13
+Release date 2017/3/13
 
 ### Bugs fixed
 
@@ -121,7 +121,7 @@ Release date 2016/3/13
 
 ## Version 1.10.2-beta
 
-Release date 2016/3/14
+Release date 2017/3/14
 
 ### Bugs fixed
 

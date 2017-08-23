@@ -198,7 +198,7 @@ For example, imagine you create a *Vehicle* prefab with acceleration, braking, s
 
 To do this in Unity®, you have to create separate prefabs for each vehicle type and modify their acceleration parameters one by one.
 
-For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs.md).
+For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs/index.md).
 
 ## Archetypes
 
@@ -434,7 +434,7 @@ To open a script in the Game Studio script editor, double-click it in the **asse
 
 You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Xenko reloads them automatically.
 
-If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, click **Open in IDE** in the Game Studio toolbar.
+If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, in the Game Studio toolbar, click **Open in IDE**.
 
 ![Open project in Visual Studio](media/xenko-vs-unity-open-project-in-visual-studio.png)
 
@@ -687,7 +687,19 @@ To see the output, in the Game Studio toolbar, under **View**, enable **Output**
 
 Game Studio displays in the **Output** tab (at the bottom of Game Studio by default).
 
-![Output tab](media/output-tab.png)
+![Output tab](media/output-tab.png) 
+
+
+### Print debug messages
+
+To print to the Visual Studio output, use:
+
+```cs
+System.Diagnostics.Debug.WriteLine("hello");
+```
+
+>[!Note]
+>To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
 
 ---
 

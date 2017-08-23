@@ -58,26 +58,26 @@ Light probes appear as spheres in the scene editor. Before you capture a light b
 
 ![Light](media/light-probes-black.jpg)
 
->[!Tip]
->You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold Ctrl, and move it with the mouse.
-
 ## 3. Place light probes
 
 Light probes must be placed in a way that creates a **3D volume**. This means:
 
-* you need at least four light probes in the scene - enough to create the four points of a tetrahedron, as below:
+* You need **at least four light probes** in the scene - enough to create the four points of a tetrahedron, as below:
 
     ![Tetrahedron](media/light-probes-tetrahedron.png)
 
-* you can't place light probes on a single (ie 2D) plane. For example, the probes in this screenshot won't work, as they are on a flat plane and create no volume:
+* At least one light probe must be on a different plane from the rest. For example, the probes in the screenshot below won't work, as they are on a flat plane and create no volume:
 
     ![Flat probes](media/bad-light-probe-arrangement.png)
 
-A typical strategy is to place light probes in a grid across your scene covering a general area, as in the screenshots below:
+A typical method is to place light probes in a grid across your scene covering a general area, as in the screenshots below:
 
 ![Grid layout](media/light-probes-grid-layout.jpg)
 
 ![Light probes in the editor](media/light-probes-in-editor.jpg)
+
+>[!Tip]
+>You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold **Ctrl**, and move it with the mouse.
 
 ## 4. Capture lighting
 
@@ -86,8 +86,8 @@ A typical strategy is to place light probes in a grid across your scene covering
     ![Lighting options](media/lighting-options-menu.png)
 
 2. Next to **Number of bounces**, set the number of light bounces you want to capture. 
-    
-    Multiple bounces simulate the effect of light bouncing between surfaces multiple times. This generally has the effect of brightening the lighting. Three or four bounces should be enough; beyond this, changes are almost unnoticeable. The number of bounces has no impact on runtime performance. 
+
+    Multiple bounces simulate the effect of light bouncing between surfaces multiple times. This generally has the effect of brightening the lighting. Three or four bounces should be enough; beyond this, changes are almost unnoticeable. The number of bounces has no impact on runtime performance.
 
 3. To capture the lighting, click **Compute**.
 
@@ -97,7 +97,7 @@ A typical strategy is to place light probes in a grid across your scene covering
 
 ## Reset light probes
 
-To reset the light probes, in the **lighting options** menu, click **Reset**. This is useful after you change the light sources in your scene.
+To reset the light probes, in the **lighting options** menu, click **Reset**. This is useful after you change the lights in your scene and need to capture the lighting from scratch.
 
 ![Reset light probes](media/reset-light-probes.png)
 

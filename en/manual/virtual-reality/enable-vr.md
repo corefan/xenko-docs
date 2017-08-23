@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This page explains how to add support for the Oculus Rift and Vive devices to your game. Future versions of Xenko will support other devices.
+This page explains how to add support for the Oculus Rift and Vive devices to your game. Xenko doesn't support other VR devices yet.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -19,7 +19,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
     ![VR settings](media/vr-settings.png)
 
-4. Next to **Required APIs**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) (**Add a new item to the list**).
+4. Next to **Required APIs**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
 
     Game Studio adds a new API to the list.
 
@@ -42,7 +42,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     To change the order, change the selected VR device in each item.
 
     >[!Tip]
-    >Although the OpenVR API supports both Vive and Oculus Rift devices, the Oculus API provides better support for Oculus Rift. For this reason, we recommend the following list order:
+    >Although the OpenVR API supports both Vive and Oculus Rift devices, the Oculus API provides better support for Oculus Rift. For this reason, we recommend the following list order for most situations:
     >
     >* Item 0: Oculus
     >
@@ -57,7 +57,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 Your game is now ready to use VR.
 
 >[!Note]
->After you change APIs, you need to reload the project (**File > Reload project**) for the change to take effect at runtime. This is a known issue and will be fixed in a future release.
+>After you change APIs, you need to reload the project (**File > Reload project**) for the change to take effect at runtime.
 
 ## VR properties
 

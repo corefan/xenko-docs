@@ -15,7 +15,7 @@ You can access both from the [input](xref:SiliconStudio.Xenko.Input.InputManager
 Before handling keyboard input, check whether a keyboard is connected using [Input.HasKeyboard](xref:SiliconStudio.Xenko.Input.InputManager.HasKeyboard).
 
 > [!Note]
-> Xenko doesn't support keyboards connected at runtime. This feature will be added in a future release.
+> Xenko doesn't support keyboards connected at runtime.
 
 ## Get key states
 

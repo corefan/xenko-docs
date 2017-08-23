@@ -56,12 +56,14 @@ var camera = new CameraComponent();
  camera.Slot = SceneSystem.GraphicsCompositor.Cameras[0].ToSlotId();
 ```
 
+To change the camera at runtime, toggle the ``Enabled`` property.
+
 > [!Note]
 > Make sure you:
 >
 > * always have at least one enabled camera
 >
-> * don't have two cameras enabled and assigned to the same slot at the same time
+> * don't have multiple cameras enabled and assigned to the same slot at the same time
 
 ## See also
 
