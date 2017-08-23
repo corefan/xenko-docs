@@ -21,7 +21,7 @@ Prefab models don't expose materials. This means you can't view or edit them in 
 
     ![Prefab properties](media/prefab-model-properties.png)
 
-    The **Asset picker** opens.
+    The **Select an asset** window opens.
 
     ![Select prefab for model](media/select-prefab-for-model.png)
 
