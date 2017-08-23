@@ -38,7 +38,7 @@ For more information, see [Camera slots](../camera-slots.md).
 
 2. Position the entity so the camera captures the area of the scene you want to render to a texture.
 
-3. In the enity **property grid**, enable the **Camera** component using the checkbox.
+3. In the entity **property grid**, enable the **Camera** component using the checkbox.
 
     ![Enable camera component](media/enable-camera-component.png)
 
