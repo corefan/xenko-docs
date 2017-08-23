@@ -28,16 +28,17 @@ For more information, see [Camera slots](../camera-slots.md).
 
     > [!Tip]
     > To name a camera slot, double-click it in the list and type a new name.
+    > ![Name a camera slot](media/name-camera-slot.png)
 
 ## 2. Create a camera and bind it to the slot
 
-1. In your scene, add a camera component to the entity you want to be your camera.
+1. In your scene, add a **camera component** to the entity you want to be your camera.
 
     ![Add camera component](media/add-camera-component.png)
 
 2. Position the entity so the camera captures the area of the scene you want to render to a texture.
 
-3. In the **property grid** (on the right by default), enable the **Camera** component using the checkbox.
+3. In the enity **property grid**, enable the **Camera** component using the checkbox.
 
     ![Enable camera component](media/enable-camera-component.png)
 
@@ -46,8 +47,6 @@ For more information, see [Camera slots](../camera-slots.md).
     ![Select camera slot](media/graphics-compositor-overview-2.png)
 
 ## 3. Create a render target texture
-
-The render target texture displays the camera output.
 
 In the **asset view**, click **Add asset** and select **Texture** > **Render target**.
 
@@ -168,10 +167,6 @@ This page describes the simplest way to do this from scratch, using two cameras 
 4. Next to **Child**, select the renderer for your main game camera (eg the **forward renderer**).
 
     ![Select forward render](media/select-main-camera-forward-renderer.png)
-
-    Your final game renderer properties should look like this:
-
-    ![Full list](media/fully-expanded-compositor-properties.png)
 
 Your game is now ready to render the camera to the texture in the scene.
 
