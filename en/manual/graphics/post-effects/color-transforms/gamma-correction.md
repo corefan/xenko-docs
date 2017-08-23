@@ -10,9 +10,9 @@ A buffer in the sRGB space displays correctly on a monitor or a TV screen.
 
 Non-gamma-corrected images have dark areas appear darker than they're supposed to.
 
-![media/gamma-correction-2.png](media/gamma-correction-2.png) 
-
 ## Properties
+
+![media/gamma-correction-2.png](media/gamma-correction-2.png) 
 
 | Property | Description                                     |
 | -------- | ----------------------------------------------- |

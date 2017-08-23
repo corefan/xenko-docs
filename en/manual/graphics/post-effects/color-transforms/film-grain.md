@@ -10,9 +10,9 @@ To simulate real film grain, the noise should be more visible in areas of medium
 
 The pattern locally modifies the luminance of the pixels affected.
 
-![media/film-grain-2.png](media/film-grain-2.png) 
-
 ## Properties
+
+![media/film-grain-2.png](media/film-grain-2.png) 
 
 | Property         | Description                                                      
 | ---------------- | -------------------

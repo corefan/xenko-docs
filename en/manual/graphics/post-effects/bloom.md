@@ -6,9 +6,9 @@ The **bloom** effect takes the brightest areas of an image, extends them, and bl
 
 It uses the result of the [bright filter](bright-filter.md) effect as input.
 
-![media/bloom-2.png](media/bloom-2.png) 
-
 ## Properties
+
+![media/bloom-2.png](media/bloom-2.png) 
 
 | Property       | Description 
 | -------------- | ---- 

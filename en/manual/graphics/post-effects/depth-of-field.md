@@ -10,9 +10,9 @@ By default, rendering produces a very sharp image, which can look artificial. **
 
 To create the effect, Xenko creates several versions of the original image with different intensities of blur, and interpolates between them. The more layers used, the better the quality, but at performance cost.
 
-![media/depth-of-field-2.png](media/depth-of-field-2.png)
-
 ## Properties
+
+![media/depth-of-field-2.png](media/depth-of-field-2.png)
 
 | Property   | Description     
 | ---------- | -------- 

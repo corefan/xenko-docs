@@ -6,9 +6,9 @@ The **lens flare** effect simulates the artifacts produced by the internal refle
 
 The artifacts are generally aligned along the line defined by the original bright spot and the center of the screen. The most noticeable artifact is often exactly symmetrical to the real spot light with respect to the center of the screen.
 
-![media/lens-flare-2.png](media/lens-flare-2.png) 
-
 ## Properties
+
+![media/lens-flare-2.png](media/lens-flare-2.png) 
 
 | Property                  | Description              
 | ------------------------- | ------ 
