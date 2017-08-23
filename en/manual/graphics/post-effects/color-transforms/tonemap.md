@@ -1,6 +1,10 @@
 # ToneMap
 
-Tone-mapping takes an HDR buffer as input, and remaps its color to a [0, 255] range so we can display it on a screen.
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
+Tone-mapping takes an HDR buffer as input, and remaps its color to a `[0, 255]` range so we can display it on a screen.
 
 There are many ways to remap colors from an HDR space to an LDR, depending on the formula you choose.
 

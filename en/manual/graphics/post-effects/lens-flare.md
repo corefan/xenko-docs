@@ -1,5 +1,8 @@
 # Lens flare
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+
 The **lens flare** effect simulates the artifacts produced by the internal reflection or scattering of the light within a real-world lens.
 
 ![media/lens-flare-1.png](media/lens-flare-1.png) 
@@ -12,9 +15,9 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 | Property                  | Description              
 | ------------------------- | ------ 
-| Amount                    | Amount/strength of the light streak.                           
-| Color Aberration Strength | Strength of the color aberration artifacts.  
-| Halo Factor               | Strength of the main artifact.                     
+| Amount                    | Strength of the light streak             
+| Color Aberration Strength | Strength of the color aberration artifacts
+| Halo Factor               | Strength of the main artifact            
 
 ## See also
 
