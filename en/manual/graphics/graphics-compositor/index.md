@@ -114,3 +114,4 @@ To create a node, right-click the graphics compositor editor and select the type
 ## See also
 
 * [Camera slots](../camera-slots.md)
+
