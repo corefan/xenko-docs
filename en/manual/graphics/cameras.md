@@ -107,7 +107,7 @@ For more information, see [Camera slots](camera-slots.md).
 
 ## Render a camera to a texture
 
-You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage. For more information, see [Render targets](graphics-compositor/render-targets.md).
+You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage. For more information, see [Render textures](graphics-compositor/render-textures.md).
 
 ## See also
 

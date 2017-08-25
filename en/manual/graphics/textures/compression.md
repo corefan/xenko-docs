@@ -24,4 +24,4 @@ Compression removes data from the image based on the texture type:
 * [Normal maps](normal-maps.md)
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
-* [Render targets](../graphics-compositor/render-targets.md)
+* [Render textures](../graphics-compositor/render-textures.md)

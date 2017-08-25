@@ -10,7 +10,7 @@ The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) 
 
 - use one or multiple cameras
 - filter entities in the scene
-- render to one or more render targets, with different viewports
+- render to one or more render textures, with different viewports
 - render to a texture used by a material (eg to create a rear-view mirror)
 - set HDR or LDR rendering
 - apply post effects to a render target, selected before or after rendering a camera

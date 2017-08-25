@@ -38,7 +38,7 @@ In the **asset view**, click **Add asset** > **Texture**, then select a template
 ![Add texture](media/add-texture.png)
 
 > [!Note]
-> Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render targets](../graphics-compositor/render-targets.md).
+> render textures are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render textures](../graphics-compositor/render-textures.md).
 
 Alternatively, drag the texture file from Explorer to the asset view:
 
@@ -113,4 +113,4 @@ For more information, see [Material maps](../materials/material-maps.md).
 * [Texture compression](compression.md)
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
-* [Render targets](../graphics-compositor/render-targets.md)
+* [Render textures](../graphics-compositor/render-textures.md)

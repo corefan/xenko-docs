@@ -186,9 +186,9 @@ pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 
 ## Output description
 
-Finally, the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.Output' property of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' defines the number and @'SiliconStudio.Xenko.Graphics.PixelFormat' of all bound render targets.
+Finally, the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.Output' property of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' defines the number and @'SiliconStudio.Xenko.Graphics.PixelFormat' of all bound render textures.
 
-Please refer to [Textures and render targets](textures-and-render-targets.md) for details on how to actually bind render targets to the pipeline.
+Please refer to [Textures and render textures](textures-and-render-textures.md) for details on how to actually bind render textures to the pipeline.
 
 **Code:** Creating an output description
 
