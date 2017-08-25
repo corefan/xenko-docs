@@ -22,7 +22,7 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 
 3. To use the script, you need to save it. By default, Game Studio prompts you to save the script now.
 
-Game Studio creates a script. You can see it in the **asset view**.
+After you save the script, you can see it in the **asset view**.
 
 >[!Note]
 > Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
