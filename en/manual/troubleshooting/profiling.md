@@ -23,7 +23,7 @@ To use the script:
 
     Game Studio adds the GameProfiler script to your project.
 
-3. Add the script to an entity. For instructions, see [Use scripts](../scripts/use-scripts.md).
+3. Add the script to an entity. For instructions, see [Use scripts](../scripts/use-a-script.md).
 
 4. Select the entity that contains the **GameProfiler**.
 
