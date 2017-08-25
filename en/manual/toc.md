@@ -131,7 +131,7 @@
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers.md)
 #### [Custom scene renderers](graphics/graphics-compositor/custom-scene-renderers.md)
 ### [Debug renderers](graphics/graphics-compositor/debug-renderers.md)
-### [Render targets](graphics/graphics-compositor/render-textures.md)
+### [Render textures](graphics/graphics-compositor/render-textures.md)
 ## [Effects and shaders](graphics/effects-and-shaders/index.md)
 ### [Effect language](graphics/effects-and-shaders/effect-language.md)
 ### [Shading language](graphics/effects-and-shaders/shading-language/index.md)
