@@ -17,6 +17,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Render textures](graphics/graphics-compositor/render-textures.md)
+
 * <span class="label label-doc-highlight">New</span> [Custom color transforms](graphics/post-effects/color-transforms/custom-color-transforms.md)
 
 * <span class="label label-doc-highlight">New</span> [Custom shaders](graphics/effects-and-shaders/custom-shaders.md)
@@ -32,8 +34,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">New</span> [Normal maps](graphics/textures/normal-maps.md)
 
 * <span class="label label-doc-highlight">New</span> [Full call stack not available](troubleshooting/full-call-stack-not-available.md)
-
-* <span class="label label-doc-highlight">New</span> [Troubleshooting - Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 
 ## Improve this documentation
 
