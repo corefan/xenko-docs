@@ -27,7 +27,7 @@ This method automatically creates a new entity that contains the script.
 
 Game Studio adds an entity to your scene, with the script as a component on the entity.
 
-![Entity tree](media/game-profiler-in-entity-tree.png)
+![Entity tree](../troubleshooting/media/game-profiler-in-entity-tree.png)
 
 ### Drag to the property grid
 
