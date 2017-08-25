@@ -176,10 +176,6 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 Your game is now ready to render the camera to the texture in the scene.
 
-## Render different objects to different cameras
-
-You can choose which objects in the scene your cameras render.
-
 ## Sample
 
 For an example of rendering to a texture in a project, see the **Animation** sample included with Xenko.
