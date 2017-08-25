@@ -23,28 +23,18 @@ To use the script:
 
     Game Studio adds the GameProfiler script to your project.
 
-3. If Game Studio asks you to save the script, click **Save**.
+3. Add the script to an entity. For instructions, see [Use scripts](../scripts/use-scripts.md).
 
-4. Save the project.
+4. Select the entity that contains the **GameProfiler**.
 
-5. Reload the assemblies.
-
-6. Drag the **GameProfiler** script from the Asset view to the **entity tree**. It doesn't matter where.
-
-    Game Studio adds a **GameProfiler** entity to your scene.
-
-    ![Entity tree](media/game-profiler-in-entity-tree.png)
-
-7. Select the **GameProfiler** entity.
-
-8. In the **property grid** (on the right by default), enable the **Game Profiler** component.
+5. In the **property grid** (on the right by default), enable the **Game Profiler** component.
 
     ![Enable component](media/enable-profiler-component.png)
 
     >[!Tip]
     >You can also enable and disable the profiler at runtime with **Left Ctrl + Left Shift + P**.
 
-9. Run the game.
+6. Run the game.
 
     The Game Profiler results profiling results as your game runs.
 
@@ -94,10 +84,10 @@ If you select **GPU** (**F3**) as the mode, the profiler displays:
 
 * `Device`: the graphics device (manufacturer's description)
 * `Platform`: the currently executed platform (eg DirectX, OpenGL, Vulkan, etc)
-* `Profile`: the feature level for your game, set in **Game Settings > Rendering**. For more information, see [Game settings](../game-studio/game-settings.md)
+* `Profile`: the feature level for your game, set in **Game Settings > Rendering** (see [Game settings](../game-studio/game-settings.md))
 * `Resolution`: the game resolution
 
-In the **GPU** and **CPU** modes, the profiler displays information about the parts of the code being profiled.
+In the **GPU** and **CPU** modes, the profiler displays information about the parts of the code being profiled, including active scripts.
 
 ![Profiler columns](media/profiler-columns.png)
 
