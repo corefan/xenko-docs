@@ -8,11 +8,9 @@ With **render textures**, you can send a camera's view to a texture and use the 
 
 For API details, see [Textures and render targets](../low-level-api/textures-and-render-textures.md).
 
-## 1. Create a camera slot
+## 1. Create an extra camera slot
 
-Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for your new camera to use.
-
-For more information, see [Camera slots](../camera-slots.md).
+Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for a new camera to use. For more information about camera slots, see [Camera slots](../camera-slots.md).
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -22,12 +20,14 @@ For more information, see [Camera slots](../camera-slots.md).
 
     ![Graphics Compositor editor](media/graphics-compositor-editor.png)
 
-2. On the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) to create a camera slot.
+2. On the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
 
     ![Camera slots](media/graphics-compositor-camera-slots.png)
 
+    Game Studio adds a new camera slot.
+
     > [!Tip]
-    > To name a camera slot, double-click it in the list and type a new name.
+    > To rename a camera slot, double-click it in the list and type a new name.
     > ![Name a camera slot](media/name-camera-slot.png)
 
 ## 2. Create a camera and bind it to the slot
@@ -122,47 +122,13 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     This lets you set multiple renderers for the game entry point.
 
-### 1. Render the texture
+### 1. Render the main camera
 
 1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Camera renderer**.
 
     ![Select camera renderer](media/select-render-camera.png)
 
-2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select the camera you want to render to a texture.
-
-    ![Select texture camera](media/select-texture-camera.png)
-
-3. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **RenderTextureSceneRenderer**.
-
-    ![Select render texture scene renderer](media/render-texture-scene-renderer.png)
-
-4. Under the **RenderTextureSceneRenderer**, next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select renderer for your main game camera (eg the **forward renderer**).
-
-    ![Select forward renderer](media/select-forward-renderer2.png)
-
-5. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
-
-    The **Select an asset** window opens.
-
-6. Select the **render texture** and click **OK**.
-
-    ![Select render texture](media/asset-picker-select-render-texture.png)
-
-    Game Studio adds the render texture to the renderer.
-
-    ![Render texture added](media/render-texture-added.png)
-
-### 2. Render the main camera
-
-1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Camera renderer**.
-
-    ![Select camera renderer](media/select-render-camera2.png)
-
-2. Under **Children**, expand the second **camera renderer** in the list.
-
-    ![Expand list](media/expand-list.png)
-
-2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select your main game camera (not the camera you want to render to a texture from).
+2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select your main game camera.
 
     ![Select main camera](media/select-main-camera.png)
 
@@ -170,7 +136,49 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select forward render](media/select-main-camera-forward-renderer.png)
 
+### 2. Render the texture
+
+1. Under **Game renderer**, next to **Add to Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Create an instance with the selected type**) and select **Camera renderer**.
+
+    ![Select camera renderer](media/select-render-camera2.png)
+
+    Game Studio adds a camera renderer to the list of children.
+
+    ![Second camera renderer](media/added-camera-renderer.png)
+
+2. Expand the second **camera renderer**.
+
+    ![Expand second renderer](media/expand-second-camera-renderer.png)
+
+3. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select the camera you want to render to a texture.
+
+    ![Select texture camera](media/select-texture-camera.png)
+
+4. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **RenderTextureSceneRenderer**.
+
+    ![Select render texture scene renderer](media/render-texture-scene-renderer.png)
+
+5. Under the **RenderTextureSceneRenderer**, next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select the renderer for your main game camera (eg the **forward renderer**).
+
+    ![Select forward renderer](media/select-forward-renderer2.png)
+
+6. Next to **Render texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+
+    The **Select an asset** window opens.
+
+7. Select the **render texture** and click **OK**.
+
+    ![Select render texture](media/asset-picker-select-render-texture.png)
+
+    Game Studio adds the render texture to the renderer.
+
+    ![Render texture added](media/render-texture-added.png)
+
 Your game is now ready to render the camera to the texture in the scene.
+
+## Render different objects to different cameras
+
+You can choose which objects in the scene your cameras render.
 
 ## Sample
 
