@@ -6,7 +6,7 @@
 
 With **render textures**, you can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 
-For API details, see [Textures and render targets](../low-level-api/textures-and-render-targets.md).
+For API details, see [Textures and render targets](../low-level-api/textures-and-render-textures.md).
 
 ## 1. Create a camera slot
 
@@ -180,6 +180,6 @@ For an example of rendering to a texture in a project, see the **Animation** sam
 
 * [Cameras](../cameras.md)
 * [Camera slots](../camera-slots.md)
-* [Low-level API – Textures and render targets](../low-level-api/textures-and-render-targets.md)
+* [Low-level API – Textures and render targets](../low-level-api/textures-and-render-textures.md)
 * [Graphics compositor](index.md)
 * [Scene renderers](scene-renderers.md)

@@ -2,7 +2,7 @@
 
 Xenko uses the @'SiliconStudio.Xenko.Graphics.Texture' class to interact with texture objects in code.
 
-For more information about rendering to a texture, see [Render targets](../graphics-compositor/render-targets.md).
+For more information about rendering to a texture, see [Render targets](../graphics-compositor/render-textures.md).
 
 ## Load a texture
 
@@ -120,4 +120,4 @@ CommandList.SetScissorRectangles(rectangles);
 
 ## See also
 
-* [Render targets](../graphics-compositor/render-targets.md)
+* [Render targets](../graphics-compositor/render-textures.md)

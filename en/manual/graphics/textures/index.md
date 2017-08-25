@@ -38,7 +38,7 @@ In the **asset view**, click **Add asset** > **Texture**, then select a template
 ![Add texture](media/add-texture.png)
 
 > [!Note]
-> Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render targets](../graphics-compositor/render-targets.md).
+> Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render targets](../graphics-compositor/render-textures.md).
 
 Alternatively, drag the texture file from Explorer to the asset view:
 
@@ -125,5 +125,5 @@ For instructions about how to access the global texture settings, see the [Game 
 * [Texture streaming](streaming.md)
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
-* [Render targets](../graphics-compositor/render-targets.md)
+* [Render targets](../graphics-compositor/render-textures.md)
 * [Game Settings](../../game-studio/game-settings.md)

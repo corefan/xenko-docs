@@ -1,6 +1,6 @@
 # Overlays
 
-In VR games, you can display [textures](../graphics/textures/index.md) (including [render textures](../graphics/graphics-compositor/render-targets.md)) as overlays that appear to float in front of the player. This is especially useful for UIs.
+In VR games, you can display [textures](../graphics/textures/index.md) (including [render textures](../graphics/graphics-compositor/render-textures.md)) as overlays that appear to float in front of the player. This is especially useful for UIs.
 
 > [!Note]
 > You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay.
@@ -69,5 +69,5 @@ For an example of a UI overlay implemented in a VR game, see the VR template inc
 ## See also
 
 * [Display a UI in an overlay](display-a-UI-in-an-overlay.md)
-* [Render targets](../graphics/graphics-compositor/render-targets.md)
+* [Render targets](../graphics/graphics-compositor/render-textures.md)
 * [Graphics compositor](../graphics/graphics-compositor/index.md)
