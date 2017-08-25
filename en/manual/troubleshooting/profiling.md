@@ -7,15 +7,15 @@ You can **profile** your project to check its runtime performance and find probl
 
 ![Profiling](media/profiling.png)
 
-## Profile with the Xenko **GameProfiler** script
+## Profile with the Xenko **Game Profiler** script
 
-The **GameProfiler** script shows how performance costs change at runtime. This helps isolate the bottlenecks and find their root cause.
+The **Game Profiler** script shows how performance costs change at runtime. This helps isolate bottlenecks and find their cause.
 
-You can profile your project by adding a script to your scene.
+To use the script:
 
 1. In the **asset view**, click ![Add new asset button](media/profiling-add-new-asset-button.png) and select **Scripts > Game Profiler**.
 
- ![Add Game Profiler script](media/profiling-add-game-profiler-script.png)
+    ![Add Game Profiler script](media/profiling-add-game-profiler-script.png)
 
 2. The **New script dialog** opens. Leave the default information and click **Create script**.
 
@@ -31,11 +31,11 @@ You can profile your project by adding a script to your scene.
 
 6. Drag the **GameProfiler** script from the Asset view to the **entity tree**. It doesn't matter where.
 
-    Game Studio adds the **GameProfiler** as an entity to your scene.
+    Game Studio adds a **GameProfiler** entity to your scene.
 
     ![Entity tree](media/game-profiler-in-entity-tree.png)
 
-7. Select the **GameProfiler** entity. 
+7. Select the **GameProfiler** entity.
 
 8. In the **property grid** (on the right by default), enable the **Game Profiler** component.
 
@@ -55,6 +55,8 @@ You can profile your project by adding a script to your scene.
 
 ### Game Profiler properties
 
+To change the Game Profiler properties, select the **GameProfiler** entity and use the **Property grid**. 
+
 ![Profiler properties](media/profiler-properties.png)
 
 | Property | Description
@@ -62,8 +64,8 @@ You can profile your project by adding a script to your scene.
 | Filter | The kind of information the profiler displays (FPS only, CPU, or GPU). At runtime, change with **F1 / F2 / F3**.
 | Refresh time (ms) | How frequently the profiler gets and displays new results. At runtime, control with **- / +**.
 | Display page | The results page displayed. At runtime, switch pages with the number keys.
-| Sort by | by time/ by name
-| Text color | The color of the text displayed in the profiler
+| Sort by | Sort the result pages by: <br>**Name**: the profile key (the thing being profiled) <br>**Time**: the most recent
+| Text color | The color of the profiler text
 | Priority | See [Scheduling and priorities](../scripts/scheduling-and-priorities.md)
 
 ### Understanding the Game Profiler results
@@ -78,22 +80,22 @@ The top row displays information about the current display mode and basic perfor
 * `Draw`: the average time (ms) taken to render the frame since the profiler last refreshed
 * `FPS`: the number of frames rendered per second since the profiler last refreshed
 
-If you select **GPU** (**F3**) as the mode, the profiler displays:
+If you select **CPU** as the mode (**F2**), the profiler displays:
 
-![CPU profiling](media/fps-gpu.png)
+![CPU profiling](media/fps-cpu.png)
 
 * `Total`: the amount of memory used since the profiler last refreshed
 * `Peak`: the peak memory use since the game started
 * `Last allocations`: the amount of memory used or freed since the profiler last refreshed
 
-If you select **CPU** as the mode (**F3**), the profiler displays:
+If you select **GPU** (**F3**) as the mode, the profiler displays:
 
-![CPU profiling](media/fps-cpu.png)
+![GPU profiling](media/fps-gpu.png)
 
 * `Device`: the graphics device (manufacturer's description)
 * `Platform`: the currently executed platform (eg DirectX, OpenGL, Vulkan, etc)
 * `Profile`: the feature level for your game, set in **Game Settings > Rendering**. For more information, see [Game settings](../game-studio/game-settings.md)
-* `Resolution`: the game resolution.
+* `Resolution`: the game resolution
 
 In the **GPU** and **CPU** modes, the profiler displays information about the parts of the code being profiled.
 
@@ -116,6 +118,9 @@ You can change the Game Profiler settings at runtime using keyboard shortcuts.
 Action  | Control
 --------|--------
 Left Ctrl + Left Shift + P  | Enable/disable the profiler
+F1 / | Show FPS results only
+F2 / | Show CPU results
+F3 / | Show GPU results
 - / +  | Slow down / speed up the refresh time
 F5 / F6 | Page back / page forward
 Number keys | Jump to a page
