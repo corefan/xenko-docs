@@ -62,7 +62,7 @@ There are various ways you can use the render target texture.
 
 ### Example 1: Use the render target texture in a material
 
-1. In the material properties, under **Shading**, next to **Diffuse map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **Texture**.
+1. In the material properties, under **Shading**, next to **Diffuse map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **Texture**.
 
     ![Select texture](media/select-texture.png)
 
@@ -80,7 +80,7 @@ There are various ways you can use the render target texture.
 
     ![Add sprite component](media/add-sprite-component.png)
 
-3. In the sprite component properties, next to **Source**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **Texture**.
+3. In the sprite component properties, next to **Source**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **Texture**.
 
     ![Select sprite source](media/sprite-source-texture.png)
 
@@ -112,11 +112,11 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Entry points node](media/entry-points-node.png)
 
-2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **None** to delete your existing renderers.
+2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **None** to delete your existing renderers.
 
     ![Cleared game renderers](media/game-renderers-cleared.png)
 
-3. Click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **Scene renderer collection**.
+3. Click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **Scene renderer collection**.
 
     ![Select scene renderer collection](media/select-scene-renderer-collection.png)
 
@@ -128,7 +128,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select camera renderer](media/select-render-camera.png)
 
-2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select your main game camera.
+2. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select your main game camera.
 
     ![Select main camera](media/select-main-camera.png)
 
@@ -150,15 +150,15 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Expand second renderer](media/expand-second-camera-renderer.png)
 
-3. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select the camera you want to render to a texture.
+3. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select the camera you want to render to a texture.
 
     ![Select texture camera](media/select-texture-camera.png)
 
-4. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select **RenderTextureSceneRenderer**.
+4. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **RenderTextureSceneRenderer**.
 
     ![Select render texture scene renderer](media/render-texture-scene-renderer.png)
 
-5. Under the **RenderTextureSceneRenderer**, next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and select the renderer for your main game camera (eg the **forward renderer**).
+5. Under the **RenderTextureSceneRenderer**, next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select the renderer for your main game camera (eg the **forward renderer**).
 
     ![Select forward renderer](media/select-forward-renderer2.png)
 

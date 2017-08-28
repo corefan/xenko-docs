@@ -66,8 +66,8 @@ The following properties are common to all textures.
 | Width            | The width of the texture as it's displayed in-game
 | Height           | The height of the texture as it's displayed in-game
 | Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and mormal maps have additional properties (see below)
-| Generate mipmaps | If selected, Xenko generates mipmaps for the texture
-| Compress         | If selected, Xenko compresses the final texture to a format based on the target platform and use. The final texture must be a multiple of 4. For more information, see [Texture compression](compression.md)
+| Generate mipmaps | Generate mipmaps for the texture
+| Compress         | Compresses the texture to a format based on the target platform and use. The final texture must be a multiple of 4. For more information, see [Texture compression](compression.md)
 
 ### Color texture properties
 
