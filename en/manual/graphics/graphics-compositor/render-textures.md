@@ -168,7 +168,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 7. Select the **render texture** and click **OK**.
 
-    ![Select render texture](media/asset-picker-select-render-texture.png)
+    ![Select render texture](media/select-render-frame.png)
 
     Game Studio adds the render texture to the renderer.
 

@@ -35,7 +35,7 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     The **asset picker** opens.
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
 6. Select the texture you want to display in the overlay and click **OK**.
 
