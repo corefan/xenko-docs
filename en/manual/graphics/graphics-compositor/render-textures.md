@@ -176,6 +176,16 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 Your game is now ready to render the camera to the texture in the scene.
 
+## Set a render mask
+
+You can use the **render mask** to filter which groups are rendered in the render texture.
+
+Next to **Render mask**, click **Change values** and select the render groups you want the camera to render.
+
+![Render mask](media/change-render-mask.png)
+
+ For more information, see [Render groups and masks](render-groups-and-masks.md).
+
 ## Sample
 
 For an example of rendering to a texture in a project, see the **Animation** sample included with Xenko.
@@ -185,5 +195,6 @@ For an example of rendering to a texture in a project, see the **Animation** sam
 * [Cameras](../cameras.md)
 * [Camera slots](../camera-slots.md)
 * [Low-level API – Textures and render textures](../low-level-api/textures-and-render-textures.md)
+* [Render groups and masks](render-groups-and-masks.md)
 * [Graphics compositor](index.md)
 * [Scene renderers](scene-renderers.md)
