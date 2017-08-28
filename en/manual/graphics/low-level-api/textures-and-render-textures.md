@@ -1,8 +1,8 @@
-# Textures and render targets
+# Textures and render textures
 
 Xenko uses the @'SiliconStudio.Xenko.Graphics.Texture' class to interact with texture objects in code.
 
-For more information about rendering to a texture, see [Render targets](../graphics-compositor/render-textures.md).
+For more information about rendering to a texture, see [Render textures](../graphics-compositor/render-textures.md).
 
 ## Load a texture
 
@@ -27,11 +27,11 @@ You can also create textures without any assets (eg to be used as render target)
 var myTexture = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource);
 ```
 
-## Render targets
+## Render textures
 
 ### Create a render target
 
-The @'SiliconStudio.Xenko.Graphics.GraphicsPresenter' class always provides a default render target and a depth buffer. They are accessible through the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' and @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' properties. The presenter is exposed by the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Presenter' property of the @'SiliconStudio.Xenko.Graphics.GraphicsDevice'. However, you might want to use your own buffer to perform off-screen rendering or post-processes. As a result, Xenko offers a simple way to create textures that can act as render targets and a depth buffers.
+The @'SiliconStudio.Xenko.Graphics.GraphicsPresenter' class always provides a default render target and a depth buffer. They are accessible through the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' and @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' properties. The presenter is exposed by the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Presenter' property of the @'SiliconStudio.Xenko.Graphics.GraphicsDevice'. However, you might want to use your own buffer to perform off-screen rendering or post-processes. As a result, Xenko offers a simple way to create textures that can act as render textures and a depth buffers.
 
 ### Code: Create a custom render target and depth buffer
 
@@ -50,12 +50,12 @@ var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D
 
 ### Use a render target
 
-Once these buffers are created, you can can easily set them as current render targets.
+Once these buffers are created, you can can easily set them as current render textures.
 
 ### Code: Use a render target
 
 ```cs
-// settings the render targets
+// settings the render textures
 CommandList.SetRenderTargetAndViewport(myDepthBuffer, myRenderTarget);
  
 // setting the default render target
@@ -65,14 +65,14 @@ CommandList.SetRenderTargetAndViewport(GraphicsDevice.Presenter.DepthStencilBuff
 >[!Note]
 >Make sure both the render target and the depth buffer have the same size. Otherwise, the depth buffer isn't used.
 
-You can set multiple render targets at the same time. See the overloads of @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargets(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture[])' and @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetsAndViewport(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture[])' method.
+You can set multiple render textures at the same time. See the overloads of @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargets(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture[])' and @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetsAndViewport(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture[])' method.
 
 >[!Note]
 >Only the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' is displayed on screen, so you need to render it to display something.
 
 ### Clear a render target
 
-To clear render targets, call the @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Core.Mathematics.Color4)' and @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
+To clear render textures, call the @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Core.Mathematics.Color4)' and @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
 
 ### Code: Clear the targets
 
@@ -120,4 +120,4 @@ CommandList.SetScissorRectangles(rectangles);
 
 ## See also
 
-* [Render targets](../graphics-compositor/render-textures.md)
+* [Render textures](../graphics-compositor/render-textures.md)

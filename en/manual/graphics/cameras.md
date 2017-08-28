@@ -30,7 +30,7 @@ Alternatively, select the entity you want to be a camera, and in the **property 
 | Orthographic size   | The height of the orthographic projection (the orthographic width is automatically calculated based on the target ratio). This has the effect of zooming in and out
 | Near clip plane     | The nearest point the camera can see
 | Far clip plane      | The furthest point the camera can see
-| Custom aspect ratio | Use a custom aspect ratio you specify; otherwise, automatically adjust the aspect ratio to the render target ratio
+| Custom aspect ratio | Use a custom aspect ratio you specify.  Otherwise, automatically adjust the aspect ratio to the render target ratio
 | Custom aspect ratio | The aspect ratio for the camera (when the **Custom aspect ratio** option is selected)
 | Slot                | The camera slot used in the graphics compositor. For more information, see [Camera slots](camera-slots.md)
 
@@ -107,7 +107,7 @@ For more information, see [Camera slots](camera-slots.md).
 
 ## Render a camera to a texture
 
-You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage. For more information, see [Render targets](graphics-compositor/render-textures.md).
+You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage. For more information, see [Render textures](graphics-compositor/render-textures.md).
 
 ## See also
 

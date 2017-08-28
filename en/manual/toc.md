@@ -142,7 +142,7 @@
 #### [Shader stages](graphics/effects-and-shaders/shading-language/shader-stages.md)
 ### [Custom shaders](graphics/effects-and-shaders/custom-shaders.md)
 ## [Low-level API](graphics/low-level-api/index.md)
-### [Textures and render targets](graphics/low-level-api/textures-and-render-textures.md)
+### [Textures and render textures](graphics/low-level-api/textures-and-render-textures.md)
 ### [Pipeline state](graphics/low-level-api/pipeline-state.md)
 ### [Resource binding](graphics/low-level-api/resources.md)
 ### [Draw vertices](graphics/low-level-api/draw-vertices.md)

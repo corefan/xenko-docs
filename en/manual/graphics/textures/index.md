@@ -125,5 +125,4 @@ For instructions about how to access the global texture settings, see the [Game 
 * [Texture streaming](streaming.md)
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
-* [Render targets](../graphics-compositor/render-textures.md)
-* [Game Settings](../../game-studio/game-settings.md)
+* [Render textures](../graphics-compositor/render-textures.md)

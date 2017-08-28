@@ -35,7 +35,7 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     The **Select an asset** window opens.
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
 6. Select the texture you want to display in the overlay and click **OK**.
 
@@ -57,8 +57,8 @@ You can add as many overlays as you need. To add another overlay, click **Add to
 | Texture        | The texture displayed in the overlay    
 | Local position | The position of the overlay relative to the user                           
 | Local rotation | The rotation of the overlay relative to the user                           
-| Surface size   | The size of the overlay, in world units (meters)                           
-| Follows head   | Follow the user's head, so the overlay is always in their view 
+| Surface size   | The size of the overlay in [world units](../game-studio/world-units.md)                        
+| Follows head   | Follow the user's head so the overlay is always in front of their view
 
 ## VR template
 
@@ -69,5 +69,5 @@ For an example of a UI overlay implemented in a VR game, see the VR template inc
 ## See also
 
 * [Display a UI in an overlay](display-a-UI-in-an-overlay.md)
-* [Render targets](../graphics/graphics-compositor/render-textures.md)
+* [Render textures](../graphics/graphics-compositor/render-textures.md)
 * [Graphics compositor](../graphics/graphics-compositor/index.md)

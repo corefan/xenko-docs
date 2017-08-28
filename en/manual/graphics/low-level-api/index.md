@@ -10,7 +10,7 @@ In methods, these objects are typically provided through contexts such as @'Sili
 
 To successfully perform any drawing, multiple steps are required. These include:
 
-- Setting textures as [render targets](textures-and-render-textures.md), clearing them, and setting viewports and scissors
+- Setting textures as [render textures](textures-and-render-textures.md), clearing them, and setting viewports and scissors
 - Setting up the graphics [pipeline state](pipeline-state.md), including input description, shaders, depth-stencil, blending, rasterizer, etc.
 - [Binding resources](resources.md), such as constant buffers and textures
 - [Drawing any sets of vertices](draw-vertices.md) using built-in primitives or custom vertex buffers
