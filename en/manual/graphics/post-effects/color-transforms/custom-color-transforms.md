@@ -34,7 +34,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![My post effect](media/my-post-effect.png)
 
-7. Open the `.xksl` file, remove the existing lines, and write your shader.
+6. Open the `.xksl` file, remove the existing lines, and write your shader.
 
     Shaders are written in Xenko Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
 
