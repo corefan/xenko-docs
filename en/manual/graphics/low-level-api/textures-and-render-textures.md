@@ -27,7 +27,7 @@ You can also create textures without any assets (eg to be used as render target)
 var myTexture = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource);
 ```
 
-## render textures
+## Render textures
 
 ### Create a render target
 
