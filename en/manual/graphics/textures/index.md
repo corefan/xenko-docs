@@ -77,11 +77,11 @@ The following properties apply if you set the texture **type** to **color**.
 
 | Property | Description
 |----------|---------
-| sRGB sampling | If selected, the texture is stored in sRGB format and converted to linear space when sampled. We recommend you select this for all color textures, unless they're explicitly in linear space 
-| Color key enabled | Use the color set in the **Color key color** property for transparency at runtime. If this isn't selected, the project uses transparent areas of the texture instead
-| Color key color | The color used for transparency at runtime. This is only applied if **Color key enabled** is selected above
-| Alpha | The texture alpha format (None, Mask, Explicit, Interpolated, or Auto)
-| Premultiply alpha |  Premultiplies all color components of the images by their alpha component
+| sRGB sampling | Store the texture in sRGB format and convert to linear space when sampled. Recommended for all color textures, unless they're explicitly in linear space.
+| Color key enabled | Use the color set in the **Color key color** property for transparency at runtime. If disabled, the project uses transparent areas of the texture instead
+| Color key color | The color used for transparency at runtime. Only applied if **Color key enabled** is selected.
+| Alpha | The texture alpha format (**None**, **Mask**, **Explicit**, **Interpolated**, or **Auto**)
+| Premultiply alpha |  Premultiply all color components of the images by their alpha component
 
 ### Normal map properties
 
@@ -91,7 +91,7 @@ The following property applies if you set the texture **type** to **normal map**
 
 | Property | Description
 |----------|---------
-| Invert Y | If selected, positive Y-component (green) face up in tangent space. This option depends on the tools you use to create normal maps
+| Invert Y | Have positive Y-component (green) face up in tangent space. This option depends on the tools you use to create normal maps.
 
 For more information about normal maps, see the [Normal maps](normal-maps.md) page.
 
@@ -106,6 +106,16 @@ You can use grayscale textures to provide values in [material maps](../materials
 Note how the blend map texture corresponds to the patterning on the result. 
 
 For more information, see [Material maps](../materials/material-maps.md).
+
+### Global texture settings
+
+For instructions about how to access the global texture settings, see the [Game Settings](../../game-studio/game-settings.md) page.
+
+![Texture settings](../../game-studio/media/texture-settings.png)
+
+| Property        | Description  
+|-----------------|--------------
+| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform.
 
 ## See also
 
