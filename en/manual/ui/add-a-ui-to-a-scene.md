@@ -87,12 +87,15 @@ public void InitializeUI()
 
 ## UI scripts
 
-To make UIs interactive, you need to add a script. Without scripts, UIs are simply non-interactive images. For more information, see [UI scripts](ui-scripts.md).
+To make UIs interactive, you need to add a script. Without scripts, UIs are simply non-interactive images. 
+
+For an example of a UI implemented in Xenko, see the **game menu UI** sample included with Xenko.
+
+![Sample UI project](media/ui-sample-project.png)
 
 ## See also 
 
 * [UI pages](ui-pages.md)
 * [UI libraries](ui-libraries.md)
 * [UI editor](ui-editor.md)
-* [UI scripts](ui-scripts.md)
 * [Layout system](layout-system.md)

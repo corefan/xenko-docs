@@ -39,4 +39,3 @@ The [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Ma
  * [UI libraries](ui-libraries.md)
  * [UI editor](ui-editor.md)
  * [Add a UI to a scene](add-a-ui-to-a-scene.md)
- * [UI scripts](ui-scripts.md)

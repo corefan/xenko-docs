@@ -6,6 +6,8 @@ Xenko features a UI editor and layout system you can use to build sophisticated 
 
 Xenko uses two types of UI asset: `UIPageAsset` and `UILibraryAsset`. Their runtime counterparts are `UIPage` and `UILibrary` respectively.
 
+To reduce the number of draw calls, Xenko draws multiple elements using a sprite batch renderer.
+
 ## Controls
 
 Xenko features many UI control components, including:
@@ -29,11 +31,9 @@ Xenko features many UI control components, including:
 
 You can also create your own.
 
-## Performance
-
-Drawing of multiple elements will be batched using a 3D Sprite batch renderer to reduce number of draw call. Objective is to keep CPU available for more important stuff.
-
 ## Sample project
+
+Without scripts, UIs are simply non-interactive images. To make them interactive, add a script.
 
 For an example of a UI implemented in Xenko, see the **game menu UI** sample included with Xenko.
 
@@ -45,5 +45,4 @@ For an example of a UI implemented in Xenko, see the **game menu UI** sample inc
 * [UI libraries](ui-libraries.md)
 * [UI editor](ui-editor.md)
 * [Add a UI to a scene](add-a-ui-to-a-scene.md)
-* [UI scripts](ui-scripts.md)
 * [Layout system](layout-system.md)
