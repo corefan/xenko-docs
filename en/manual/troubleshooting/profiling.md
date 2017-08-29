@@ -111,7 +111,7 @@ Left Ctrl + Left Shift + P  | Enable/disable the profiler
 F1 / | Show FPS results only
 F2 / | Show CPU results
 F3 / | Show GPU results
-- / +  | Slow down / speed up the refresh time
+    - / +  | Slow down / speed up the refresh time
 F5 / F6 | Page back / page forward
 Number keys | Jump to a page
 F4 | Toggle between sorting by profile key and time
