@@ -25,7 +25,7 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     ![VR settings](media/vr-settings.png)
 
-4. Next to **Overlays**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+4. Next to **Overlays**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
 
     Game Studio adds a new overlay to the list.
 

@@ -40,7 +40,7 @@ Normal maps usually represent small changes of the normal vector (the vector whi
 
     ![Use normal maps](media/use-normal-map.png)
 
-5. Next to **Normal map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change...**) and make sure **Texture** is selected.
+5. Next to **Normal map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and make sure **Texture** is selected.
 
 6. Next to **Normal map**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 

@@ -158,7 +158,7 @@ For more details, see [Streaming](../graphics/textures/streaming.md).
 
 You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
 
-1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
 
     ![Select graphics platform](../platforms/media/add-override.png)
 

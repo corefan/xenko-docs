@@ -52,7 +52,7 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
     This makes the collider a trigger. This means objects can pass through it, but are still detected in the code.
 
-6. We need to give the trigger a shape. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Box**.
+6. We need to give the trigger a shape. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select **Box**.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
