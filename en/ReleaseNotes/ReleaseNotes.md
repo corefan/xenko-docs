@@ -352,3 +352,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 ### Version 2.0.3.1 — 24 July 2017
 
 * Extend closure time of the promotion to 11:30am, January 1st, 2018 (UTC+09:00).
+
+### Version 2.0.4.1 — 23 August 2017
+
+* Fix an issue with latest Visual Studio and MSBuild (15.3) [#617](https://github.com/SiliconStudio/xenko/issues/617) related to [msbuild #2369](https://github.com/Microsoft/msbuild/issues/2369).

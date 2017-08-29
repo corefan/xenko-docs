@@ -38,7 +38,7 @@ In the **asset view**, click **Add asset** > **Texture**, then select a template
 ![Add texture](media/add-texture.png)
 
 > [!Note]
-> Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render targets](../graphics-compositor/render-targets.md).
+> render textures are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras.md). For more information, see [Render textures](../graphics-compositor/render-textures.md).
 
 Alternatively, drag the texture file from Explorer to the asset view:
 
@@ -66,8 +66,8 @@ The following properties are common to all textures.
 | Width            | The width of the texture as it's displayed in-game
 | Height           | The height of the texture as it's displayed in-game
 | Type             | The texture type. Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Greyscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and mormal maps have additional properties (see below)
-| Generate mipmaps | If selected, Xenko generates mipmaps for the texture
-| Compress         | If selected, Xenko compresses the final texture to a format based on the target platform and use. The final texture must be a multiple of 4. For more information, see [Texture compression](compression.md)
+| Generate mipmaps | Generate mipmaps for the texture
+| Compress         | Compresses the texture to a format based on the target platform and use. The final texture must be a multiple of 4. For more information, see [Texture compression](compression.md)
 
 ### Color texture properties
 
@@ -77,11 +77,11 @@ The following properties apply if you set the texture **type** to **color**.
 
 | Property | Description
 |----------|---------
-| sRGB sampling | If selected, the texture is stored in sRGB format and converted to linear space when sampled. We recommend you select this for all color textures, unless they're explicitly in linear space 
-| Color key enabled | Use the color set in the **Color key color** property for transparency at runtime. If this isn't selected, the project uses transparent areas of the texture instead
-| Color key color | The color used for transparency at runtime. This is only applied if **Color key enabled** is selected above
-| Alpha | The texture alpha format (None, Mask, Explicit, Interpolated, or Auto)
-| Premultiply alpha |  Premultiplies all color components of the images by their alpha component
+| sRGB sampling | Store the texture in sRGB format and convert to linear space when sampled. Recommended for all color textures, unless they're explicitly in linear space.
+| Color key enabled | Use the color set in the **Color key color** property for transparency at runtime. If disabled, the project uses transparent areas of the texture instead
+| Color key color | The color used for transparency at runtime. Only applied if **Color key enabled** is selected.
+| Alpha | The texture alpha format (**None**, **Mask**, **Explicit**, **Interpolated**, or **Auto**)
+| Premultiply alpha |  Premultiply all color components of the images by their alpha component
 
 ### Normal map properties
 
@@ -91,7 +91,7 @@ The following property applies if you set the texture **type** to **normal map**
 
 | Property | Description
 |----------|---------
-| Invert Y | If selected, positive Y-component (green) face up in tangent space. This option depends on the tools you use to create normal maps
+| Invert Y | Have positive Y-component (green) face up in tangent space. This option depends on the tools you use to create normal maps.
 
 For more information about normal maps, see the [Normal maps](normal-maps.md) page.
 
@@ -107,10 +107,20 @@ Note how the blend map texture corresponds to the patterning on the result.
 
 For more information, see [Material maps](../materials/material-maps.md).
 
+### Global texture settings
+
+For instructions about how to access the global texture settings, see the [Game Settings](../../game-studio/game-settings.md) page.
+
+![Texture settings](../../game-studio/media/texture-settings.png)
+
+| Property        | Description  
+|-----------------|--------------
+| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform.
+
 ## See also
 
 * [Normal maps](normal-maps.md)
 * [Texture compression](compression.md)
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
-* [Render targets](../graphics-compositor/render-targets.md)
+* [Render textures](../graphics-compositor/render-textures.md)

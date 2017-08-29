@@ -45,7 +45,7 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
     The **asset picker** opens.
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
 6. Select the **render texture** you created and click **OK**.
 
@@ -119,7 +119,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 11. Select the **render texture** and click **OK**.
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
     Game Studio adds the render texture to the renderer.
 
@@ -139,5 +139,5 @@ For an example of a UI overlay implemented in a VR game, see the VR template inc
 
 * [Overlays](overlays.md)
 * [UI](../ui/index.md)
-* [Render targets](../graphics/graphics-compositor/render-targets.md)
+* [Render textures](../graphics/graphics-compositor/render-textures.md)
 * [Graphics compositor](../graphics/graphics-compositor/index.md)

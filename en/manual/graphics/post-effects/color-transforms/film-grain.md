@@ -1,5 +1,8 @@
 # Film grain
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+
 The **film grain** adds noise at each frame to simulate the grain of films used in real cameras.
 
 ![media/film-grain-1.png](media/film-grain-1.png) 
@@ -10,9 +13,9 @@ To simulate real film grain, the noise should be more visible in areas of medium
 
 The pattern locally modifies the luminance of the pixels affected.
 
-![media/film-grain-2.png](media/film-grain-2.png) 
-
 ## Properties
+
+![media/film-grain-2.png](media/film-grain-2.png) 
 
 | Property         | Description                                                      
 | ---------------- | -------------------
