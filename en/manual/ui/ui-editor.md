@@ -26,7 +26,7 @@ The UI editor comprises:
 
 ## UI libraries
 
-A **UI library** contains **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your UI pages. They work similarly to [prefabs](../game-studio/prefabs.md) in the scene editor.
+A **UI library** contains **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your UI pages. They work similarly to [prefabs](../game-studio/prefabs/index.md) in the scene editor.
 
 ![UI library](media/UI-library.png)
 
