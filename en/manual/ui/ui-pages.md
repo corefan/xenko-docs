@@ -4,11 +4,11 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-A **UI page** is a collection of UI elements that form a piece of UI in your game, such as a menu or title screen.
+A **UI page** is a collection of UI elements, such as buttons and grids, that form a piece of UI in your game, such as a menu or title screen.
 
 ![UI page](media/ui-page.png)
 
-In terms of organization, a UI page is equivalent to a scene in the scene editor, and UI elements are equivalent to to entities in a scene. Just like entities, elements can have parents and children. 
+In terms of organization, a UI page is equivalent to a scene in the scene editor, and UI elements are equivalent to to entities in a scene. Just like entities, elements can have parents and children.
 
 Each UI scene opens in its own tab in the UI editor. For information about how to edit UI pages, see the [UI editor](ui-editor.md) page.
 
@@ -30,21 +30,21 @@ Game Studio adds the UI page to the asset view.
 
 ![Create page from selection](media/create-page-from-selection.png)
 
-Game Studio creates a page with a copy of the element(s) you selected.
+Game Studio creates a page with a copy of the elements you selected.
 
 ## Open a UI page
 
-In the **asset view**, double-click the UI page.
+In the **asset view**, double-click the **UI page**.
 
 ![Added UI page](media/added-ui-page.png)
 
-The asset opens in the [UI editor](ui-editor.md).
+The UI page opens in the [UI editor](ui-editor.md).
 
 ![UI editor overview](media/ui-editor.png)
 
 ## Add a UI element to a UI page
 
-To add an element (such as a grid or button), drag it from the **UI library** on the left to the UI page, or to the **visual tree** below.
+To add an element, such as a grid or button, drag it from the **UI library** to the UI page or the **visual tree**.
 
 ![Add UI element](media/add-ui-element.gif)
 

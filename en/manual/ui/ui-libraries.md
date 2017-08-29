@@ -4,7 +4,9 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Designer</span>
 
-**UI libraries** contain **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your [UI pages](UI-pages.md). All Xenko projects include the **standard library** of UI elements, but you can create your own libraries of custom elements too.
+**UI libraries** contain **UI elements** such as grids, buttons, sliders and so on that you can use and re-use in your [UI pages](UI-pages.md). 
+
+Xenko projects include a **standard library** of UI elements. You can create your own libraries of custom elements too.
 
 ![UI library](media/UI-library.png)
 
@@ -18,19 +20,19 @@ In the **asset view**, click **Add asset > UI > UI library**.
 
 ![Add UI library](media/add-ui-library.png)
 
-Game Studio adds the UI library to the asset view.
+Game Studio adds the UI library to the **asset view**.
 
 ![Added UI library](media/added-ui-library.png)
 
-### Create a UI library from a UI element
+Alternatively, to create a UI library from an existing UI element:
 
-1. Select the element or elements.
+1. Select the elements you want to create a UI library from.
 
 2. Right-click and select **Create library from selection**.
 
 ![Added UI library](media/create-library-from-selection.png)
 
-Game Studio creates a library with a copy of the element(s) you selected.
+Game Studio creates a library with a copy of the elements you selected.
 
 ## Assign a UI library in code
 

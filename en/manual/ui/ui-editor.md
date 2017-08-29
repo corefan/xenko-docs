@@ -6,6 +6,12 @@
 
 You can edit [UI pages](ui-pages.md) and [UI libraries](ui-libraries.md) with the **UI editor**.
 
+To open the editor, in the **asset view**, double-click a **UI page** or **[UI library](ui-libraries.md)**.
+
+![Open UI editor](media/open-UI-editor.png)
+
+The UI editor opens.
+
 ![UI editor overview](media/ui-editor-overview.png)
 
 The UI editor comprises:
@@ -17,14 +23,6 @@ The UI editor comprises:
 * a preview of the UI page as it appears in the game (**C**)
 
 * a property grid (**D**) to edit the properties of your UI elements
-
-## Open the UI editor
-
-In the **asset view**, double-click a **UI page** or **[UI library](ui-libraries.md)**.
-
-![Open UI editor](media/open-UI-editor.png)
-
-The asset opens in the UI editor.
 
 ## UI libraries
 
@@ -42,7 +40,7 @@ The **visual tree** shows the elements in the UI page and their hierarchy. This 
 
 The number in parentheses indicates the number of children an element has. Some elements, such as buttons, can only have one child.
 
-You can drag and drop elements inside the visual tree to re-order them.
+To re-order elements in the visual tree, drag and drop them.
 
 To move an element to a new group, right-click the element and select **Group into**. For example, to create a new grid and move an element into it, right-click the element and select **Group into > Grid**.
 
@@ -52,7 +50,7 @@ To move an element to a new group, right-click the element and select **Group in
 
 The **UI preview** displays a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see [UI Asset properties](#ui-asset-properties)).
 
-The UI view camera is orthographic (see [Cameras](../graphics/cameras.md). By default, the UI always faces the camera (ie the UI is a **billboard**).
+By default, the UI is a **billboard**, meaning it always faces the camera. The UI view camera is **orthographic** (see [Cameras](../graphics/cameras.md)). 
 
 You can select, move, and resize elements in the preview as you do in image editing applications.
 
@@ -79,13 +77,13 @@ To change the color and size of the selection tools, in the **UI editor toolbar*
 
 ![UI editor view options](media/ui-editor-view-options.png)
 
-* The **Guideline** value changes the width of the lines that indicate the distance to the margins (in pixels) 
+* **Guideline**: changes the width of the lines that indicate the distance to the margins (in pixels)
 
-* The **Highlight** value changes the width of the highlight that appears when you move your mouse over an element
+* **Highlight**: changes the width of the highlight that appears when you move your mouse over an element
 
-* The **Selection** value changes the width of the selection highlight
+* **Selection**: changes the width of the selection highlight
 
-* The **Sizing** value changes the size of the boxes at the edges of selections used to resize elements
+* **Sizing**: changes the size of the boxes at the edges of selections used to resize elements
 
 ## Add a UI element to a UI page
 
@@ -95,9 +93,11 @@ To add an element (such as a grid or button), drag it from the **UI library** to
 
 ## Properties
 
-You can view and edit element properties in the **property grid**. Properties are sorted by **Appearance**, **Behavior**, **Layout** and **Misc**.
+You can view and edit element properties in the **property grid**.
 
 ![Property grid!](media/element-property-grid.png)
+
+Properties are sorted by **Appearance**, **Behavior**, **Layout** and **Misc**.
 
 ### Appearance
 
@@ -119,7 +119,7 @@ Commonly used properties include the size of the element (`Height`, `Width` and 
 
 ### Misc
 
-This category contains only the `Name` property.
+This category contains only the `Name` of the element.
 
 ![Misc properties](media/misc-properties.png)
 
