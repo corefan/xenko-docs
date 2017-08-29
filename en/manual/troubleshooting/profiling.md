@@ -38,7 +38,7 @@ To use the script:
 
     The Game Profiler results profiling results as your game runs.
 
-    ![Profiler at runtime](media/profiling-profiler-at-runtime.png)
+    ![Profiler at runtime](media/profiling-profiler-at-runtime.jpg)
 
     >[!Note]
     >Game Profiler disables VSync. This gives you the true profiling values, ignoring sync time.
@@ -99,7 +99,7 @@ Column  | Description
 `MAX/CALL` | the longest amount of time taken to run the key (since... ?)
 `CALLS/FRAME` | the number of times the key was called per frame 
 `MARKS/FRAME` | ?
-`PROFILE KEY` | The part of the code (such as a function or script) being profiled. This column also displays additional information depending on the context, such as the number of entities affected.
+`PROFILE KEY` | The part of the code (such as a function or script) being profiled. This column also displays additional information, such as the number of entities affected.
 
 ### Game Profiler runtime controls
 
@@ -118,19 +118,19 @@ F4 | Toggle between sorting by profile key and time
 
 ### Use the Game Profiler in code
 
-Enable the Game Profiler:
+Enable profiling:
 
 ```cs
 Profiler.EnableProfiling();
 ```
 
-Enable the Game Profiler only for the profiler keys you specify:
+Enable profiling only for the profiler keys you specify:
 
 ```cs
 Profiler.EnableProfiling(true, {mykey1,mykey2});
 ```
 
-Enable profiling only for the profiler keys you specify:
+Enable the profiling except for the profiler keys you specify:
 
 ```cs
 Profiler.EnableProfiling(false, {mykey1,mykey2});
