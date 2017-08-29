@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **profile** your project to check its runtime performance and find problems. Use the Xenko **GameProfiler** script or an external profiling tool such as the Performance Profiler in Visual Studio.
+You can **profile** your project to check its runtime performance and find problems. Use the Xenko **Game Profiler** script or an external profiling tool such as the Performance Profiler in Visual Studio.
 
 ![Profiling](media/profiling.png)
 
@@ -19,7 +19,7 @@ To use the script:
 
 2. The **New script dialog** opens. Leave the default information and click **Create script**.
 
-    ![New script](media/game-profiler-script-wizard.png)
+    ![New script](media/create-profiler-script.png)
 
     Game Studio adds the GameProfiler script to your project.
 
