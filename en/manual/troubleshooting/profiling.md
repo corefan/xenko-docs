@@ -91,14 +91,17 @@ In the **GPU** and **CPU** modes, the profiler displays information about the pa
 
 ![Profiler columns](media/profiler-columns.png)
 
+>[!Note]
+>Each value describes the events per frame since the last profiler refresh.
+
 Column  | Description
 --------|--------
-`AVG/FRAME` | ?
-`AVG/CALL` | avg time taken to run the key
-`MIN/CALL` | the shortest amount of time taken to run the key (since...?) 
-`MAX/CALL` | the longest amount of time taken to run the key (since... ?)
-`CALLS/FRAME` | the number of times the key was called per frame 
-`MARKS/FRAME` | ?
+`TOTAL` | The total time taken to execute the code in one frame
+`AVG/CALL` | Average time taken to execute a single call of the code
+`MIN/CALL` | The shortest amount of time taken to execute the code
+`MAX/CALL` | The longest amount of time taken to execute the code
+`CALLS` | The number of times the code was executed in one frame
+`MARKS` | The number of times per frame marked code is executed. This column is only displayed if marked code is executed
 `PROFILE KEY` | The part of the code (such as a function or script) being profiled. This column also displays additional information, such as the number of entities affected.
 
 ### Game Profiler runtime controls
