@@ -12,29 +12,31 @@ Processing this data recursively, the layout system computes a position and size
 
 ## Measure and arrange
 
-Xenko performs the layout process recursively in two passes: [Measure](xrefSiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) and [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)).
+Xenko performs the layout process recursively in two passes: [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) and [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)).
 
 ### Measure
 
-In the [Measure](xrefSiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) pass, each element recursively computes its @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' according to the properties you set, such as @'SiliconStudio.Xenko.UI.UIElement.Width', @'SiliconStudio.Xenko.UI.UIElement.Height', and @'SiliconStudio.Xenko.UI.UIElement.Margin'.
+@'SiliconStudio.Xenko.UI.UIElement.Margin'.
 
-Some @'SiliconStudio.Xenko.UI.Panels.Panel' elements call [Measure](xrefSiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) recursively to determine the @'SiliconStudio.Xenko.UI.UIElement.DesiredSize' of their children, and act accordingly.
+In the [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:SiliconStudio.Xenko.UI.UIElement#SiliconStudio_Xenko_UI_UIElement_DesiredSize) according to the properties you set, such as @'SiliconStudio.Xenko.UI.UIElement.Width', @'SiliconStudio.Xenko.UI.UIElement.Height', and @'SiliconStudio.Xenko.UI.UIElement.Margin'.
+
+Some @'SiliconStudio.Xenko.UI.Panels.Panel' elements call [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:SiliconStudio.Xenko.UI.UIElement#SiliconStudio_Xenko_UI_UIElement_DesiredSize) of their children, and act accordingly.
 
 ### Arrange
 
-The [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
+The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
 
 * @'SiliconStudio.Xenko.UI.UIElement.Margin'
 * @'SiliconStudio.Xenko.UI.UIElement.Width'
 * @'SiliconStudio.Xenko.UI.UIElement.Height'
-* @'SiliconStudio.Xenko.UI.UIElement.HorizontalAlignment'
-* @'SiliconStudio.Xenko.UI.UIElement.VerticalAlignment' 
-* @'SiliconStudio.Xenko.UI.Panels.Panel' 
-* specific [Arrange](xrefSiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) rules
+* @'SiliconStudio.Xenko.UI.HorizontalAlignment'
+* @'SiliconStudio.Xenko.UI.VerticalAlignment' 
+* @'SiliconStudio.Xenko.UI.Panels.Panel'
+* specific [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) rules
 
 ## See also
 
- * [MSDN WPF layout documentation](httpsmsdn.microsoft.comen-uslibraryms745058(v=vs.110).aspx)
+ * [MSDN WPF layout documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout)
  * [UI pages](ui-pages.md)
  * [UI libraries](ui-libraries.md)
  * [UI editor](ui-editor.md)
