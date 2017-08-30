@@ -223,7 +223,6 @@
 ## [Libraries](ui/ui-libraries.md)
 ## [Editor](ui/ui-editor.md)
 ## [Add a UI to a scene](ui/add-a-ui-to-a-scene.md)
-## [Scripts](ui/ui-scripts.md)
 ## [Layout system](ui/layout-system.md)
 
 # [Virtual reality](virtual-reality/index.md)
