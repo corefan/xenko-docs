@@ -27,8 +27,8 @@ The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.M
 * @'SiliconStudio.Xenko.UI.UIElement.Margin'
 * @'SiliconStudio.Xenko.UI.UIElement.Width'
 * @'SiliconStudio.Xenko.UI.UIElement.Height'
-* @'SiliconStudio.Xenko.UI.HorizontalAlignment'
-* @'SiliconStudio.Xenko.UI.VerticalAlignment' 
+* @'SiliconStudio.Xenko.UI.UIElement.HorizontalAlignment'
+* @'SiliconStudio.Xenko.UI.UIElement.VerticalAlignment' 
 * @'SiliconStudio.Xenko.UI.Panels.Panel'
 * specific [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) rules
 
