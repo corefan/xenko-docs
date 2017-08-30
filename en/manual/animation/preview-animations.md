@@ -28,7 +28,7 @@ The animation preview uses the model selected in the **preview model** in the **
 
 2. In the **property grid** (on the right by default), under **Preview model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    ![Pick an asset up](media/pick-an-asset-up.png)
+    ![Select an asset](media/pick-an-asset-up.png)
 
     The **Select an asset** window opens.
 

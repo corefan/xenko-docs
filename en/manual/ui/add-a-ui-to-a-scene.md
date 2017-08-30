@@ -18,7 +18,7 @@ After you create a [UI page](ui-pages.md), add it to the scene as a component on
 
     ![UI component](media/UI-component.png)
 
-3. Next to **Page**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+3. Next to **Page**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     The **asset picker** opens.
 
