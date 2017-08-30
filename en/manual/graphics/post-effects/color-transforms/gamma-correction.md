@@ -11,15 +11,15 @@ A buffer in the sRGB space displays correctly on a monitor or a TV screen.
 
 ![media/gamma-correction-1.png](media/gamma-correction-1.png) 
 
-Non-gamma-corrected images have dark areas appear darker than they're supposed to.
+In non-gamma-corrected images, dark areas appear darker than intended.
 
 ## Properties
 
 ![media/gamma-correction-2.png](media/gamma-correction-2.png) 
 
-| Property | Description                                     |
-| -------- | ----------------------------------------------- |
-| Value    | Gamma value. A typical value is around 2.2. |
+| Property | Description  
+| -------- | -------------
+| Value    | The amount of gamma correction. A typical value is around 2.2.
 
 ## See also
 

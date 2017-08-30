@@ -14,9 +14,9 @@ The **vignetting** effect darkens the angles or the borders of an image, an arte
 
 | Property | Description                                                              
 | -------- | ------------
-| Amount   | Amount/strength of the effect                                  
-| Radius   | Radius of the vignette from the center of the screen. A low value thickens the makes border and narrows the central space.
-| Color    | The vignette color
+| Amount   | The rtrength of the effect                                 
+| Radius   | The radius of the vignette from the center of the screen. Low values thicken the border and narrow the central space.
+| Color    | The color of the effect
 
 ## See also
 
