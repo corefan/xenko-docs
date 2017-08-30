@@ -16,8 +16,6 @@ Xenko performs the layout process recursively in two passes: [Measure](xref:Sili
 
 ### Measure
 
-@'SiliconStudio.Xenko.UI.UIElement.Margin'.
-
 In the [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:SiliconStudio.Xenko.UI.UIElement#SiliconStudio_Xenko_UI_UIElement_DesiredSize) according to the properties you set, such as @'SiliconStudio.Xenko.UI.UIElement.Width', @'SiliconStudio.Xenko.UI.UIElement.Height', and @'SiliconStudio.Xenko.UI.UIElement.Margin'.
 
 Some @'SiliconStudio.Xenko.UI.Panels.Panel' elements call [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:SiliconStudio.Xenko.UI.UIElement#SiliconStudio_Xenko_UI_UIElement_DesiredSize) of their children, and act accordingly.
