@@ -46,3 +46,7 @@ For an example of a UI implemented in Xenko, see the **game menu UI** sample inc
 * [UI editor](ui-editor.md)
 * [Add a UI to a scene](add-a-ui-to-a-scene.md)
 * [Layout system](layout-system.md)
+
+## See also
+
+* [VR - Display a UI in an overlay](../virtual-reality/display-a-ui-in-an-overlay.md)
