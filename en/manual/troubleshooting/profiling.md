@@ -11,6 +11,8 @@ You can **profile** your project to check its runtime performance and find probl
 
 The **Game Profiler** script shows how performance costs change at runtime. This helps isolate bottlenecks and find their cause.
 
+![Profiler at runtime](media/profiling-profiler-at-runtime.jpg)
+
 To use the script:
 
 1. In the **asset view**, click ![Add new asset button](media/profiling-add-new-asset-button.png) and select **Scripts > Game Profiler**.
@@ -36,9 +38,7 @@ To use the script:
 
 6. Run the game.
 
-    The Game Profiler results profiling results as your game runs.
-
-    ![Profiler at runtime](media/profiling-profiler-at-runtime.jpg)
+    The Game Profiler shows profiling results as your game runs.
 
     >[!Note]
     >Game Profiler disables VSync. This gives you the true profiling values, ignoring sync time.
@@ -52,7 +52,7 @@ To change the Game Profiler properties, select the **GameProfiler** entity and u
 | Property | Description
 | -------- | --------
 | Filter | The kind of information the profiler displays (FPS only, CPU, or GPU). At runtime, change with **F1**.
-| Sort by | Sort the result pages by: <br>**Name**: the profile key (the thing being profiled) <br>**Time**: the most recent <br>At runtime, toggle with **F2**.
+| Sort by | Sort the result pages by: <br>**Name**: the profile key (the thing being profiled) <br>**Time**: the key that uses the most time <br>At runtime, toggle with **F2**.
 | Refresh interval (ms) | How frequently the profiler gets and displays new results. At runtime, control with **- / +**.
 | Display page | The results page displayed. At runtime, jump to a page with the **number keys**, or move forward and backwards with **F3** and **F4**.
 | Text color | The color of the profiler text
@@ -64,27 +64,27 @@ The top row displays information about basic performance.
 
 ![FPS profiling](media/fps-profiling.png)
 
-* `Displaying`: the kind of information the profiler displays(FPS only, CPU, or GPU)
+* `Displaying`: the kind of information the profiler displays (FPS only, CPU, or GPU)
 * `Frame`: the current frame
 * `Update`: the average time (ms) taken to update the game since the profiler last refreshed
 * `Draw`: the average time (ms) taken to render the frame since the profiler last refreshed
-* `FPS`: the number of frames rendered per second since the profiler last refreshed
+* `FPS`: the average number of frames rendered per second
 
 If you select **CPU** as the display mode, the profiler displays:
 
 ![CPU profiling](media/fps-cpu.png)
 
-* `Total`: the amount of memory used since the profiler last refreshed
+* `Total`: the amount of memory currently used
 * `Peak`: the peak memory use since the game started
-* `Allocations`: the amount of memory used or freed since the profiler last refreshed
-* `Gen0`, `Gen1`, `Gen1`: the number of times garbage collection has occurred per generation of objects (`Gen0` is the most recent generation)
+* `Allocations`: the amount of memory allocated or freed since the profiler last refreshed
+* `Gen0`, `Gen1`, `Gen1`: the number of garbage collections per each generation of object (`Gen0` is the most recent generation)
 
 If you select **GPU** as the display mode, the profiler displays:
 
 ![GPU profiling](media/fps-gpu.png)
 
 * `Device`: the graphics device (manufacturer's description)
-* `Platform`: the currently executed platform (eg DirectX, OpenGL, Vulkan, etc)
+* `Platform`: the currently used backend (eg DirectX, OpenGL, Vulkan, etc)
 * `Profile`: the feature level for your game, set in **Game Settings > Rendering** (see [Game settings](../game-studio/game-settings.md))
 * `Resolution`: the game resolution
 * `Drawn triangles`: the number of triangles drawn per frame
@@ -103,8 +103,8 @@ Column  | Description
 --------|--------
 `TOTAL` | The total time taken to execute the code in one frame
 `AVG/CALL` | Average time taken to execute a single call of the code
-`MIN/CALL` | The shortest amount of time taken to execute the code
-`MAX/CALL` | The longest amount of time taken to execute the code
+`MIN/CALL` | The shortest amount of time taken to execute a single call of the code
+`MAX/CALL` | The longest amount of time taken to execute a single call of the code
 `CALLS` | The number of times the code was executed in one frame
 `MARKS` | The number of times per frame marked code is executed. This column is only displayed if marked code is executed
 `PROFILE KEY / EXTRA INFO` | The part of the code (such as a function or script) being profiled. This column also displays additional information, such as the number of entities affected.
@@ -118,7 +118,7 @@ Action  | Control
 Left Ctrl + Left Shift + P  | Enable/disable the profiler
 F1 | Toggle between CPU, GPU, and FPS-only results
 F2 | Toggle between sorting by profile key and time
-    - / +  | Slow down / speed up the refresh time
+- / +  | Slow down / speed up the refresh time
 F3 / F4 | Page back / page forward
 Number keys | Jump to a page
 
@@ -142,11 +142,7 @@ Enable the profiling except for the profiler keys you specify:
 Profiler.EnableProfiling(false, {mykey1,mykey2});
 ```
 
-Profile a script (and nothing else):
-
-```cs
-MyScript.ProfilingKey
-```
+To access the prolifing key of a script, use [ProfilingKey](xref:SiliconStudio.Xenko.Engine.ScriptComponent.ProfilingKey).
 
 ## Use external profiling tools
 
