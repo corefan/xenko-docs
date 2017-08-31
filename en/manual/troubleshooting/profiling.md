@@ -51,34 +51,35 @@ To change the Game Profiler properties, select the **GameProfiler** entity and u
 
 | Property | Description
 | -------- | --------
-| Filter | The kind of information the profiler displays (FPS only, CPU, or GPU). At runtime, change with **F1 / F2 / F3**.
-| Refresh time (ms) | How frequently the profiler gets and displays new results. At runtime, control with **- / +**.
-| Display page | The results page displayed. At runtime, switch pages with the number keys.
-| Sort by | Sort the result pages by: <br>**Name**: the profile key (the thing being profiled) <br>**Time**: the most recent
+| Filter | The kind of information the profiler displays (FPS only, CPU, or GPU). At runtime, change with **F1**.
+| Sort by | Sort the result pages by: <br>**Name**: the profile key (the thing being profiled) <br>**Time**: the most recent <br>At runtime, toggle with **F2**.
+| Refresh interval (ms) | How frequently the profiler gets and displays new results. At runtime, control with **- / +**.
+| Display page | The results page displayed. At runtime, jump to a page with the **number keys**, or move forward and backwards with **F3** and **F4**.
 | Text color | The color of the profiler text
 | Priority | See [Scheduling and priorities](../scripts/scheduling-and-priorities.md)
 
 ### Understanding the Game Profiler results
 
-The top row displays information about the current display mode and basic performance.
+The top row displays information about basic performance.
 
 ![FPS profiling](media/fps-profiling.png)
 
-* `Display`: the current profiler mode (FPS only, CPU, or GPU)
+* `Displaying`: the kind of information the profiler displays(FPS only, CPU, or GPU)
 * `Frame`: the current frame
 * `Update`: the average time (ms) taken to update the game since the profiler last refreshed
 * `Draw`: the average time (ms) taken to render the frame since the profiler last refreshed
 * `FPS`: the number of frames rendered per second since the profiler last refreshed
 
-If you select **CPU** as the mode (**F2**), the profiler displays:
+If you select **CPU** as the display mode, the profiler displays:
 
 ![CPU profiling](media/fps-cpu.png)
 
 * `Total`: the amount of memory used since the profiler last refreshed
 * `Peak`: the peak memory use since the game started
-* `Last allocations`: the amount of memory used or freed since the profiler last refreshed
+* `Allocations`: the amount of memory used or freed since the profiler last refreshed
+* `Gen0`, `Gen1`, `Gen1`: the number of times garbage collection has occurred per generation of objects (`Gen0` is the most recent generation)
 
-If you select **GPU** (**F3**) as the mode, the profiler displays:
+If you select **GPU** as the display mode, the profiler displays:
 
 ![GPU profiling](media/fps-gpu.png)
 
@@ -86,6 +87,10 @@ If you select **GPU** (**F3**) as the mode, the profiler displays:
 * `Platform`: the currently executed platform (eg DirectX, OpenGL, Vulkan, etc)
 * `Profile`: the feature level for your game, set in **Game Settings > Rendering** (see [Game settings](../game-studio/game-settings.md))
 * `Resolution`: the game resolution
+* `Drawn triangles`: the number of triangles drawn per frame
+* `Draw calls`: the number of draw calls per frame
+* `Buffer memory`: the amount of memory allocated to buffers 
+* `Texture memory`: the amount of memory allocated to textures
 
 In the **GPU** and **CPU** modes, the profiler displays information about the parts of the code being profiled, including active scripts.
 
@@ -102,7 +107,7 @@ Column  | Description
 `MAX/CALL` | The longest amount of time taken to execute the code
 `CALLS` | The number of times the code was executed in one frame
 `MARKS` | The number of times per frame marked code is executed. This column is only displayed if marked code is executed
-`PROFILE KEY` | The part of the code (such as a function or script) being profiled. This column also displays additional information, such as the number of entities affected.
+`PROFILE KEY / EXTRA INFO` | The part of the code (such as a function or script) being profiled. This column also displays additional information, such as the number of entities affected.
 
 ### Game Profiler runtime controls
 
@@ -111,13 +116,11 @@ You can change the Game Profiler settings at runtime using keyboard shortcuts.
 Action  | Control
 --------|--------
 Left Ctrl + Left Shift + P  | Enable/disable the profiler
-F1 / | Show FPS results only
-F2 / | Show CPU results
-F3 / | Show GPU results
+F1 | Toggle between CPU, GPU, and FPS-only results
+F2 | Toggle between sorting by profile key and time
     - / +  | Slow down / speed up the refresh time
-F5 / F6 | Page back / page forward
+F3 / F4 | Page back / page forward
 Number keys | Jump to a page
-F4 | Toggle between sorting by profile key and time
 
 ### Use the Game Profiler in code
 
