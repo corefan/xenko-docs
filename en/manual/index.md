@@ -6,7 +6,7 @@ _navRel: ../toc.html
 _tocTitle: 'Manual'
 ---
 
-# Xenko 2.0 manual
+# Xenko 2.1 manual
 
 ![Manual](get-started/media/get-started.jpg)
 
