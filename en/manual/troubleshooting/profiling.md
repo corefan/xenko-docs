@@ -124,25 +124,25 @@ Number keys | Jump to a page
 
 ### Use the Game Profiler in code
 
-Enable profiling:
+* Enable profiling:
 
-```cs
-Profiler.EnableProfiling();
-```
+    ```cs
+    Profiler.EnableProfiling();
+    ```
 
-Enable profiling only for the profiler keys you specify:
+* Enable profiling only for the profiler keys you specify:
 
-```cs
-Profiler.EnableProfiling(true, {mykey1,mykey2});
-```
+    ```cs
+    Profiler.EnableProfiling(true, {mykey1,mykey2});
+    ```
 
-Enable the profiling except for the profiler keys you specify:
+* Enable the profiling except for the profiler keys you specify:
 
-```cs
-Profiler.EnableProfiling(false, {mykey1,mykey2});
-```
+    ```cs
+    Profiler.EnableProfiling(false, {mykey1,mykey2});
+    ```
 
-To access the prolifing key of a script, use [ProfilingKey](xref:SiliconStudio.Xenko.Engine.ScriptComponent.ProfilingKey).
+* To access the prolifing key of a script, use [ProfilingKey](xref:SiliconStudio.Xenko.Engine.ScriptComponent.ProfilingKey).
 
 ## Use external profiling tools
 
