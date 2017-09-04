@@ -14,7 +14,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## 1. Create a shader
 
-1. Make sure you have the [Xenko Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Xenko shading language](index.md)) to `.cs` files.
+1. Make sure you have the [Xenko Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Xenko shading language](../../effects-and-shaders/index.md)) to `.cs` files.
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-ide-icon.png) (**Open in IDE**) to open your project in Visual Studio.
 
