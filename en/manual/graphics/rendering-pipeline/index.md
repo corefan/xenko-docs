@@ -10,7 +10,7 @@ For more information, see [Render features](render-features.md).
 
 ## Render views
 
-You can render scenes from multiple points of view, represented as @'SiliconStudio.Xenko.Rendering.RenderView's – eg player views in a splitscreen game, or separate shadow views for cascades in a (shadow map cascade)(../lights-and-shadows/shadows.md).
+You can render scenes from multiple points of view, represented as @'SiliconStudio.Xenko.Rendering.RenderView's – eg player views in a splitscreen game, or separate shadow views for cascades in a [shadow map cascade](../lights-and-shadows/shadows.md).
 
 Views are a first-class concept available to all rendering phases, allowing batching across multiple views.
 
