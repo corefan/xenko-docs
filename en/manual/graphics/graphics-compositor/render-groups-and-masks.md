@@ -3,13 +3,13 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-With **render groups** and **render masks**, you can choose which models are rendered by different [cameras](../cameras.md). For example, you can have a model be visible to Camera A but invisible to Camera B.
+With **render groups** and **render masks**, you can choose which parts of your scene are rendered by different [cameras](../cameras.md). For example, you can have a model be visible to Camera A but invisible to Camera B.
 
 ## Set a render group
 
-1. In the scene, select the entity with the model component you want to add to a render group.
+1. In the scene, select the entity with the component (such as a model or [UI component](../../ui/add-a-ui-to-a-scene.md)) you want to add to a render group.
 
-2. In the **property grid**, next to **Render group**, select the group you want the model to belong to.
+2. In the **property grid**, next to **Render group**, select the group you want the entity to belong to.
 
     ![Select render group](media/select-render-group.png)
 
