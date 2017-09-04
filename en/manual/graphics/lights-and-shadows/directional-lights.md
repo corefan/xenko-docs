@@ -45,9 +45,9 @@ This an example of a shadow map generated from a directional light, using four c
 
 ![FPS scene shadow map](media/shadow-atlas-2x.png)
 
-#### See shadow cascades
+### See shadow cascades in the editor
 
-To see shadow cascades in the scene editor, in the property grid, under the **Shadow** properties, enable the **Debug** option.
+In the **property grid**, under the **Shadow** properties, enable the **Debug** option.
 
 | Cascades debug off    | Cascades debug on     
 | ---------------------- | ----------
