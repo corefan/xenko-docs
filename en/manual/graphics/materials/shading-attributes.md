@@ -99,7 +99,7 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 
 ![media/material-attributes-34.png](media/material-attributes-34.png) 
 
-| Property            | Description                                                       
+| Property            | Description                                                    
 | ------------------- | ------- 
 | Fresnel             | Defines the amount of light that is reflected and transmitted. The models supported are: <br>**Schlick**: An approximation of the Fresnel effect (default)</br> <br>**Thin glass**: A simulation of light passing through glass</br>  <br>**None**: The material as-is with no Fresnel effect</br> 
 | Visibility          | Defines the visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. Xenko simplifies the formula to use the visibility term instead: <br>![media/material-attributes-35.png](media/material-attributes-35.png)</br>      <br>and <br>![media/material-attributes-36.png](media/material-attributes-36.png)</br>        <br>**Schlick GGX** (default)</br> <br> **Implicit**: The microsurface is always visible and generates no shadowing or masking</br> <br>**Cook-Torrance**</br>  <br>**Kelemen**</br> <br>**Neumann**</br> <br>**Smith-Beckmann**</br> <br>**Smith-GGX correlated**</br>  <br>**Schlick-Beckmann**</br> 
@@ -120,6 +120,12 @@ With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can 
 | Emissive map | The emissive map color provider      
 | Intensity    | The factor to multiply by the color of the color provider   
 | Use alpha    | Use the alpha of the emissive map as the main alpha color of the material (instead of using the alpha of the diffuse map by default)
+
+## Subsurface scattering
+
+**Subsurface scattering** reflects light at irregular angles inside models. You can use it to realistically render translucent materials such as skin, wax, leaves, marble, and porcelain.
+
+For details, see [Subsurface scattering](subsurface-scattering.md).
 
 ## See also
 

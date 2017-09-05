@@ -98,6 +98,7 @@
 #### [Shading attributes](graphics/materials/shading-attributes.md)
 #### [Misc attributes](graphics/materials/misc-attributes.md)
 #### [Clear-coat shading](graphics/materials/clear-coat-shading.md)
+#### [Subsurface scattering](graphics/materials/subsurface-scattering.md)
 ### [Layers](graphics/materials/material-layers.md)
 ### [Materials for developers](graphics/materials/materials-for-developers.md)
 ## [Textures](graphics/textures/index.md)
