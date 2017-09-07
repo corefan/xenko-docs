@@ -28,7 +28,7 @@ public sealed class MyCustomRenderer : SceneRendererBase
 If you just want to develop a renderer and attach it to a method directly, use @'SiliconStudio.Xenko.Rendering.Compositing.DelegateSceneRenderer':
 
 ```cs
-var sceneDelegateRenderer = new SceneDelegateRenderer(
+var sceneRenderer = new DelegateSceneRenderer(
     (renderContext, frame) =>
     {
         // Access to the graphics device
