@@ -19,7 +19,7 @@ There are three ways to add scripts to entities in Game Studio:
 
 This method automatically creates a new entity that contains the script.
 
-1. In the **solution explorer** (in the bottom left by default), select the assembly which contains your script. Game Studio shows your script in the **asset view**.
+1. In the **solution explorer** (in the bottom left by default), select the assembly that contains your script. Game Studio shows your script in the **asset view**.
 
     ![Script in asset folder](../get-started/media/create-a-script-new-script-asset-view.png)
 
@@ -33,7 +33,7 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 
 1. In the **entity tree** (on the left by default), or in the scene, select the entity you want to add the script to.
 
-2. In the **solution explorer** (in the bottom left by default), select the assembly which contains your script. Game Studio shows your script in the **asset view**.
+2. In the **solution explorer** (in the bottom left by default), select the assembly that contains your script. Game Studio shows your script in the **asset view**.
 
     ![Script in asset folder](../get-started/media/create-a-script-new-script-asset-view.png)
 

@@ -237,6 +237,7 @@
 ## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Troubleshooting](troubleshooting/index.md)
+## [Logging](troubleshooting/logging.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)

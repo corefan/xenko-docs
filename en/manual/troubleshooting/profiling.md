@@ -199,3 +199,7 @@ For textures:
 * use [compressed textures](../graphics/textures/compression.md) on slower devices
 * use sprite sheets, not individual images
 * use texture atlases, not separate textures
+
+## See also
+
+* [Profiling](profiling.md)

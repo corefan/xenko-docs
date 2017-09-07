@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-As games typically contain lots of textures, it's usually better to **stream** them, so they load only when they're needed. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
+When you **stream** textures, Xenko only loads them when they're needed. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
 
 >[!Note]
 >Currently, only textures can be streamed.
