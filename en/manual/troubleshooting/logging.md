@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **log** information about your game while it runs. Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered in your code. 
+You can **log** information about your game while it runs. Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. 
 
 For example, you can create a message to be logged when a certain texture runs and another message to be logged when the texture doesn't run. This is useful for investigating how your game is performing.
 
