@@ -4,7 +4,7 @@
 
 ### Local reflections
 
-Xenko 2.1 introduces **local reflections**. When you enable this post effect, the scene is reflected in glossy [materials](../materials/index.md).
+Xenko 2.1 introduces **local reflections**. When you enable this post effect, the scene is reflected in glossy materials.
 
 ![Local reflections](media/ReleaseNotes-2.1/local-reflections.jpg)
 
@@ -12,7 +12,7 @@ You can enable and customize local reflections in the graphics compositor on the
 
 ![Enable local reflections](media/ReleaseNotes-2.1/enable-local-reflections.png)
 
-For details, see [Local reflections](.../manual/graphics/local-reflections.md).
+For details, see [Local reflections](../manual/graphics/post-effects/local-reflections.md).
 
 ### Clear coat shading
 
@@ -52,7 +52,7 @@ Additionally, Game Studio now displays light shaft bounding volumes in the scene
 
 The `LightShaftComponent` settings have been simplified and now have settings to control quality and performance.
 
-For details, see [Light shafts](.../manual/graphics/lights-and-shadows/light-shafts.md).
+For details, see [Light shafts](../manual/graphics/lights-and-shadows/light-shafts.md).
 
 ### Texture streaming
 
@@ -89,7 +89,7 @@ You can now:
     
     ![Profiler properties](media/ReleaseNotes-2.1/profiler-properties.png)
 
-For details, see [Profiling](.../manual/troubleshooting/profiling.md).
+For details, see [Profiling](../manual/troubleshooting/profiling.md).
 
 ### Rewritten input system
 
@@ -104,7 +104,7 @@ The input system has been rewritten to track different input devices and allow f
 * Access to resolution and absolute coordinates for mouse/pointer devices
 * `KeyEvent` now has a `RepeatCount` member, indicating how many times the key has been repeated while being held down
 
-For details, see [Input](.../manual/input/index.md).
+For details, see [Input](../manual/input/index.md).
 
 ### Logging
 

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **log** information about your game while it runs. Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. 
+You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log). Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. 
 
 For example, you can create a message to be logged when a certain texture runs and another message to be logged when the texture doesn't run. This is useful for investigating how your game is performing.
 
@@ -61,7 +61,7 @@ Log.ActivateLog(LogMessageType.Warning);
 
 ## Print debug text
 
-You can print debug text at runtime. You can use this, for example, to display a message when a problem occurs.
+You can print debug text at runtime with [DebugText](xref:SiliconStudio.Xenko.Engine.ScriptComponent.DebugText). You can use this, for example, to display a message when a problem occurs.
 
 >[!Note]
 >Debug text is automatically disabled when you build the game in release mode.

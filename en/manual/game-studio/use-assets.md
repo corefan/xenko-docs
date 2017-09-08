@@ -59,10 +59,7 @@ You can examine the references in a selected asset in the **References** in the 
 
 ## Load assets from code
 
-You can load assets at runtime and use them in your scripts. To do this, use [ContentManager](xref:SiliconStudio.Xenko.Engine.IScriptContext.Content).
-
-### Example code
-This script loads a model at runtime and adds it to the scene.
+You can load assets at runtime and use them in your scripts.
 
 ```cs
 // Load a model (replace URL with valid URL)
