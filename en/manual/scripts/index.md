@@ -23,7 +23,7 @@ Scripts have access to the main modules of the Xenko engine:
 * [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log): logs messages and errors from scripts
 * [SceneSystem](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SceneSystem): the currently displayed scene
 * [Script](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Script): accesses the script manager to schedule or wait for the termination of scripts
-* [Services](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Services): a registry of services that you can use to register your own services
+* [Services](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Services): a registry of services you can use to register your own services
 * [SpriteAnimation](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SpriteAnimation): animates sprites
 * [Streaming](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Streaming): streams content 
 
