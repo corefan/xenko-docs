@@ -132,9 +132,9 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 
 ### UWP with CoreWindow
 
-Xenko rendering with UWP was done with a Xaml `SwapChainPanel`.
+Previously, Xenko UWP was rendered with a XAML `SwapChainPanel`. Xenko now also supports the lower-level `CoreWindow` approach for apps that don't need to be part of a XAML UI. This provides better performance and greatly improved access to Xbox memory.
 
-We now also support the lower-level `CoreWindow` approach for apps that don't need to be part of a XAML UI. This should cover most needs and provide better performance. This is the default option when creating a game that supports UWP. You can also switch your existing projects to `CoreWindow` by removing the platform and re-adding it.
+`CoreWindow` is now the default option when you create a game that supports UWP. To switch your existing projects to `CoreWindow`, remove the platform and re-add it (see [Add or remove a platform](../manual/platforms/add-or-remove-a-platform.md) for instructions).
 
 ## Breaking changes
 
