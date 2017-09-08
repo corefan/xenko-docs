@@ -11,7 +11,7 @@ When **local reflections** are enabled, the scene is reflected in glossy [materi
 
 ![Local reflections](media/local-reflections.jpg)
 
-Local reflections dramatically increase the realism of scenes. They're most obvious when they project bright spots onto other surfaces. The effect is especially striking in dark scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
+Local reflections dramatically increase the realism of scenes. They're most obvious when they reflect bright spots onto other surfaces. The effect is especially striking in dark scenes, which have high contrast, and in conditions with lots of reflective surfaces and highlights.
 
 ![Night reflections](media/night-reflections.jpg)
 
