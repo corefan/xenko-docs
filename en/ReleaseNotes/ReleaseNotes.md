@@ -26,7 +26,7 @@ Clear-coat shading has several advantages over creating the effect manually with
 * increased performance
 * improved visualization
 
-You'll find a predefined **clear coat** material in the **Asset view** under **Add asset > Material**.
+You can add a predefined **clear coat** material from the **Asset view** under **Add asset > Material**.
 
 ![Add clear coat](media/ReleaseNotes-2.1/add-clear-coat.png)
 
@@ -36,11 +36,11 @@ For details, see [Clear coat shading](../manual/graphics/materials/clear-coat-sh
 
 You can now render thin glass materials such as windshields. The diffuse color controls the tint of the glass and how much light is blocked (darker colors block more light).
 
-TODO: Image (in PR #279)
+![Glass materials](media/ReleaseNotes-2.1/glass-materials.png)
 
-You'll find a a predefined **Glass** material in the **Asset view** under **Add asset > Material**.
+You can add a predefined **Glass** material from the **Asset view** under **Add asset > Material**.
 
-TODO: Image (in PR #279)
+![Select thin glass material](media/ReleaseNotes-2.1/select-thin-glass-material.png)
 
 ### Improved light shafts
 
@@ -78,12 +78,14 @@ The **Game Profiler** script now displays more information and is easier to use.
 
 ![Profiler at runtime](media/ReleaseNotes-2.1/profiling-profiler-at-runtime.jpg)
 
-* Profile GPU information
-* Switch between CPU, GPU, and FPS-only results with **F1**
-* Sort the result pages **Name** or **Time** with **F2**
-* Change how frequently the profiler gets and displays new results with **- / +**
-* Jump to a results page with the **number keys**, or move forward and backwards with **F3** and **F4**
-* Set parameters in Game Studio:
+You can now:
+
+* profile GPU information
+* switch between CPU, GPU, and FPS-only results with **F1**
+* sort the result pages by **Name** or **Time** with **F2**
+* change how frequently the profiler gets and displays new results with **- / +**
+* jump to a results page with the **number keys**, or move forward and backwards with **F3** and **F4**
+* set parameters in Game Studio:
     
     ![Profiler properties](media/ReleaseNotes-2.1/profiler-properties.png)
 
@@ -112,7 +114,7 @@ TODO
 
 To support graphics functionalities on every platform, we've implemented missing features for the DirectX 12 rendering backend:
 
-* compute and tessalation shaders
+* compute and tesselation shaders
 * unordered access views for textures and buffers
 * structured buffers
 
@@ -172,7 +174,6 @@ We now also support the lower-level `CoreWindow` approach for apps that don't ne
 * * On iOS, if `Enable device-specific builds` is on (set in the project properties), it's not possible to debug game code. To speed up development, manually select the architecture of your device from the Advanced tab
 * Performance issues on mobile (being worked on)
 * Live scripting has been temporarily disabled
-* No support for Dual Shock 4
 
 ## Changelog
 
