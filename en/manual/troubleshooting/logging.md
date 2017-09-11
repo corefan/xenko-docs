@@ -3,9 +3,38 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log). Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. 
+You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log). 
 
-For example, you can create a log message that triggers when a certain texture runs, and another log message that triggers when the texture doesn't run. This is useful to investigate how your game is performing.
+Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. For example, you can create a log message that triggers when a character performs a certain action. This is useful to investigate how your game is performing.
+
+>[!Note]
+>Logging is disabled when you build the game in release mode.
+
+When you use logging and run your game in debug mode, Xenko opens a console in a second window to display logging information. The messages are color-coded by level. 
+The name of the module (such as the script containing the log message) is displayed in brackets. This is followed by the log level (eg **Warning**, **Error**, etc), then the log message.
+
+![Logging in console](media/logging-in-console.png)
+
+The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'SiliconStudio.Core.Serialization.Contents.ContentManager'.
+
+If you run your game from Visual Studio, log messages are shown in the Visual Studio **Output** window instead.
+
+![Log output window](media/log-output-in-visual-studio.png)
+
+## Log levels
+
+There are six levels of log message, used for different levels of severity.
+
+| Log level | Color | Description
+|-----------|-------|-----
+| Debug | Gray | Step-by-step information for advanced debugging purposes
+| Verbose | White | Detailed information
+| Info | Green | General information
+| Warning | Yellow | Minor errors that might cause problems
+| Error | Red |Errors
+| Fatal | Red | Serious errors that crash the game
+
+By default, the log displays messages for the level **Info** and higher. This means it doesn't display **Debug** or **Verbose** messages. To change this, see **Set the minimum log level** below.
 
 ## Write a log message
 
@@ -15,37 +44,11 @@ In the script containing code you want to log, write:
 Log.MyLogLevel("My log message");
 ```
 
-Where `MyLogLevel` is the level you want to use for the log message (see below).
+Where `MyLogLevel` is the level you want to use for the log message (see **Log levels** below).
 
 You can combine this with `if` statements to log this message under certain conditions (see **Example script** below).
 
-## Log levels
-
-There are six levels of log message, used for different levels of severity.
-
-| Log level | Color | Description
-|-----------|-------|-----
-| <font color="#A9A9A9">Debug</font> | Gray | For...
-| Verbose | White | For...
-| <font color="#90EE90">Info</font> | Green | For...
-| <font color="#FFD700">Warning</font> | Yellow | For minor errors
-| <font color="#FF6347">Error</font> | Red |For more serious errors
-| <font color="#FF6347">Fatal</font> | Red | For serious errors that crash the game
-
-When you use logging and run your game in debug mode, Xenko opens a console in a second window to display logging information. The messages are color-coded by level.
-
-![Logging in console](media/logging-in-console.png)
-
-By default, the log displays log messages for the **Info** level and above. You won't see **Debug** or **Verbose** messages. To change this, see **Set the minimum log level** below.
-
-The name of the module (such as the script containing the log message) is given in brackets. This is followed by the log level (eg **Warning**, **Error**, etc), then the log message. 
-
->[!Note]
->The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'SiliconStudio.Core.Serialization.Contents.ContentManager'.
-
-If you run your game from Visual Studio, log messages are also shown in the Visual Studio **Output** window.
-
-### Set the minimum log level
+## Set the log level
 
 You can set a minimum log level to display. For example, if you only want to see messages as severe as **Warning** or higher, use:
 
@@ -56,12 +59,39 @@ Log.ActivateLog(LogMessageType.Warning);
 >[!Note]
 >This isn't a global setting. The log level you set only applies to the script you set it in.
 
->[!Note]
->If you don't specify a log level, the log displays log messages for the **Info** level and above. You won't see **Debug** or **Verbose** messages.
+### Change the log level at runtime
+
+```cs
+((Game)Game).ConsoleLogLevel = LogMessageType.myLogLevel;
+```
+
+### Disable a specific log
+
+```cs
+GlobalLogger.GetLogger("RouterClient").ActivateLog(LogMessageType.Debug, LogMessageType.Fatal, false); 
+// Disables logging of the RouterClient module
+```
+
+### Disable logging in the console
+
+```cs
+((Game)Game).ConsoleLogMode = ConsoleLogMode.None;
+```
+
+### Create a log file
+
+To save the log output to a text file, add this code to the `Start` method:
+
+```cs
+var fileWriter = new TextWriterLogListener(new FileStream("myLogFile.txt", FileMode.Create));
+GlobalLogger.GlobalMessageLogged += fileWriter;
+```
+
+This creates a file in the Debug folder of your project (eg *MyGame\MyGame\Bin\Windows\Debug\myLogFile.txt*).
 
 ## Print debug text
 
-You can print debug text at runtime with [DebugText](xref:SiliconStudio.Xenko.Engine.ScriptComponent.DebugText). You can use this, for example, to display a message when a problem occurs.
+You can print debug text at runtime with [DebugText](xref:SiliconStudio.Xenko.Engine.ScriptComponent.DebugText). For example, you can use this to display a message when a problem occurs.
 
 >[!Note]
 >Debug text is automatically disabled when you build the game in release mode.
@@ -81,16 +111,11 @@ The debug message is displayed when you run the game.
 >[!Note]
 >Currently, you can't change the font or color of the debug text.
 
-### Disable debug text
-
-In the script, add:
+### Hide debug text
 
 ```cs
-DebugText.Enabled = false;
+DebugText.Visible = false;
 ```
-
->[!Note]
->Debug text is automatically disabled when you build the game in release mode.
 
 ## Example script
 

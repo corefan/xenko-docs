@@ -8,9 +8,9 @@
 
 The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
-- use one or multiple cameras
+- use one or multiple [cameras](../cameras.md)
 - filter entities in the scene
-- render to one or more render textures, with different viewports
+- render to one or more [render textures](render-textures.md), with different viewports
 - render to a texture used by a material (eg to create a rear-view mirror)
 - set HDR or LDR rendering
 - apply post effects to a render target, selected before or after rendering a camera
@@ -67,7 +67,7 @@ There are three entry points:
 
 * **Game**, to render your game
 * **Editor**, to render the Game Studio editor
-* **Single view** (referred to as **Utility** in the property grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../skyboxes.md).
+* **Single view** (referred to as **Utility** in the property grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../skyboxes.md)
 
 Each entry point can use a separate rendering pipeline. For example, the game and editor might share the same forward renderer and [post-processing effects](../post-effects/index.md) while your single view uses a separate forward renderer.
 
@@ -105,13 +105,9 @@ To create a node, right-click the graphics compositor editor and select the type
 
 ![Create node](../../virtual-reality/media/create-node.png)
 
-## In this section
-
-* [Scene renderers](scene-renderers.md)
-    * [Custom scene renders](custom-scene-renderers.md)
-* [Debug renderers](debug-renderers.md)
-
 ## See also
 
 * [Camera slots](../camera-slots.md)
-
+* [Scene renderers](scene-renderers.md)
+    * [Custom scene renders](custom-scene-renderers.md)
+* [Debug renderers](debug-renderers.md)
