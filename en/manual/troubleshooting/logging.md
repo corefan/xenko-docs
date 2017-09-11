@@ -160,7 +160,7 @@ namespace MyGame
         public override void Update()
         {
 			if(myTexture == null)
-                DebugText.Print("MyTexture not loaded",new Int2(x: 50, y: 50));
+                DebugText.Print("MyTexture not loaded", new Int2(x: 50, y: 50));
         }
     }
 }
