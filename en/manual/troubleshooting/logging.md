@@ -108,9 +108,6 @@ The debug message is displayed when you run the game.
 
 ![Debug text](media/my-debug-text.jpg)
 
->[!Note]
->Currently, you can't change the font or color of the debug text.
-
 ### Hide debug text
 
 ```cs
