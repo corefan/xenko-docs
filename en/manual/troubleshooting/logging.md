@@ -41,10 +41,10 @@ By default, the log displays messages for the level **Info** and higher. This me
 In the script containing code you want to log, write:
 
 ```cs
-Log.MyLogLevel("My log message");
+Log.Debug("My log message");
 ```
 
-Where `MyLogLevel` is the level you want to use for the log message (see **Log levels** below).
+You can replace `Debug` with the level you want to use for the log message (see **Log levels** above).
 
 You can combine this with `if` statements to log this message under certain conditions (see **Example script** below).
 
