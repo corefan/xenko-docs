@@ -34,7 +34,7 @@ There are six levels of log message, used for different levels of severity.
 | Error | Red |Errors
 | Fatal | Red | Serious errors that crash the game
 
-By default, the log displays messages for the level **Info** and higher. This means it doesn't display **Debug** or **Verbose** messages. To change this, see **Set the minimum log level** above.
+By default, the log displays messages for the level **Info** and higher. This means it doesn't display **Debug** or **Verbose** messages. To change this, see **Set the minimum level** below.
 
 ## Write a log message
 
