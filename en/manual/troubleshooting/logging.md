@@ -5,17 +5,17 @@
 
 You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log). Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. 
 
-For example, you can create a message to be logged when a certain texture runs and another message to be logged when the texture doesn't run. This is useful for investigating how your game is performing.
+For example, you can create a log message that triggers when a certain texture runs, and another log message that triggers when the texture doesn't run. This is useful to investigate how your game is performing.
 
 ## Write a log message
 
-In the script you want to log, write:
+In the script containing code you want to log, write:
 
 ```cs
 Log.MyLogLevel("My log message");
 ```
 
-Where `MyLogLevel` is the severity level you want to use for the log message (see below).
+Where `MyLogLevel` is the level you want to use for the log message (see below).
 
 You can combine this with `if` statements to log this message under certain conditions (see **Example script** below).
 
@@ -94,7 +94,7 @@ DebugText.Enabled = false;
 
 ## Example script
 
-The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). When it doesn't load, the log records an error message (`Log.Debug`) and the game displays the debug text "MyTexture not loaded" (`DebugText`).
+The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). If it doesn't load, the log records an error message (`Log.Debug`) and the game displays the debug text "MyTexture not loaded" (`DebugText`).
 
 ```cs
 using System.Linq;
@@ -144,3 +144,4 @@ namespace MyGame
 ## See also
 
 * [Profiling](profiling.md)
+* [Scripts](../scripts/index.md)
