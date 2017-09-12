@@ -21,7 +21,7 @@
 
     アニメーション コンポーネントがエンティティに追加されます。
 
-3. アニメーション コンポーネントのプロパティで、［Animations］の隣にある緑色のプラス ボタンをクリックして、新しいアニメーションをライブラリに追加します。
+3. アニメーション コンポーネントのプロパティで、［Animations］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、新しいアニメーションをライブラリに追加します。
 
 4. アニメーションの名前を入力して、Enter キーを押します。
 
@@ -30,15 +30,15 @@
     >[!TIP]
     >後でスクリプトを使用してアニメーションを再生するときは、アニメーション アセットの名前では**なく**、この名前を使用します。識別しやすくするため、アニメーションにはアニメーション アセットと同じ名前を付けることをお勧めします。
 
-5. 手の形のアイコン (［Pick an asset up］) をクリックします。
+5. ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Pick asset up](media/pick-asset-up.png)
 
-    **アセット ピッカー**が開きます。
+   ［Select an asset］ウィンドウが開きます。
 
 6. 追加するアニメーション アセットを参照し、［Ok］をクリックします。
 
-    ![Asset picker](media/asset-picker.png)
+    ![Select an asset](media/asset-picker.png)
 
     アニメーション アセットがエンティティに追加されます。
 
@@ -54,7 +54,7 @@
 
 ### サンプル スクリプト
 
-```
+```cs
     public class SimpleAnimationScript : StartupScript
     {
         public override void Start()

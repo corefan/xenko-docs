@@ -1,4 +1,4 @@
-## プロファイリング
+# プロファイリング
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>
@@ -17,15 +17,15 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
 
  ![Add Game Profiler script](media/profiling-add-game-profiler-script.png)
 
-2.［Script wizard］が開きます。既定の情報のままにします。
+2.［New script］ダイアログが開きます。既定の情報のままにします。
 
-    ![Script wizard](media/game-profiler-script-wizard.png)
+    ![New script](media/game-profiler-script-wizard.png)
 
     GameProfiler スクリプトがプロジェクトに追加されます。
 
-3. スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
+3. スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Save］をクリックします。
 
-4. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
+4. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Reload］をクリックします。
 
 5.［Scene view］でエンティティを選択します。使用するエンティティはどれでもかまいません。
 
@@ -50,7 +50,7 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
 
 | プロファイラー | 種類 | プラットフォーム |
 | ---- | ---- | -----|
-| [Visual Studio プロファイラー](https://msdn.microsoft.com/en-us/library/mt210448.aspx) | Visual Studio の機能 | デスクトップとモバイル |
+| [Visual Studio プロファイラー](https://msdn.microsoft.com/ja-jp/library/mt210448.aspx) | Visual Studio の機能 | デスクトップとモバイル |
 | [Xamarin プロファイラー](https://www.xamarin.com/profiler) | Xamarin Studio で配布されるスタンドアロン ツール | モバイル |
 | [RenderDoc](https://renderdoc.org/builds) | スタンドアロン | デスクトップとモバイル |
 
@@ -75,7 +75,7 @@ Visual Studio には、一般的なパフォーマンスの問題を識別でき
 
     Visual Studio がアプリケーションを実行して、プロファイリングを開始します。
 
-Visual Studio プロファイラーの詳細については、[MSDN のドキュメント](https://msdn.microsoft.com/en-us/library/mt210448.aspx)を参照してください。
+Visual Studio プロファイラーの詳細については、[MSDN のドキュメント](https://msdn.microsoft.com/ja-jp/library/mt210448.aspx)を参照してください。
 
 ## よくあるボトルネック
 

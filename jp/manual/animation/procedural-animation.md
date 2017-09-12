@@ -28,7 +28,7 @@ public class AnimationScript : StartupScript
         // - プロパティは、括弧で囲んだ型名で修飾できる。
         // - 型がシリアル化可能ではない場合、完全修飾名を使用する必要がある。
 
-        animationClip.AddCurve("[TransformComponent.Key].Rotation", CreateRotationCurve());
+        animationClip.AddCurve("［TransformComponent.Key］.Rotation", CreateRotationCurve());
 
         // オプション: すべてのアニメーション チャネルを、最適化されてインターリーブされた形式にパックする。
         animationClip.Optimize();

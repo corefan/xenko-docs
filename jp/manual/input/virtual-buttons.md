@@ -28,7 +28,7 @@ public override void Start()
     // 存在しない場合は、新しい VirtualButtonConfigSet を作成する。
     Input.VirtualButtonConfigSet = Input.VirtualButtonConfigSet ?? new VirtualButtonConfigSet();
 
-    //「M」キー、ゲームパッドの「Start」ボタン、左マウス ボタンを、仮想ボタン「MyButton」にバインドする。
+    // 「M」キー、ゲームパッドの「Start」ボタン、左マウス ボタンを、仮想ボタン「MyButton」にバインドする。
     VirtualButtonBinding b1 = new VirtualButtonBinding("MyButton", VirtualButton.Keyboard.M);
     VirtualButtonBinding b2 = new VirtualButtonBinding("MyButton", VirtualButton.GamePad.Start);
     VirtualButtonBinding b3 = new VirtualButtonBinding("MyButton", VirtualButton.Mouse.Left);
@@ -46,9 +46,6 @@ public override void Update() {
     float button = Input.GetVirtualButton(0, "MyButton");
 }
 ```
-
-> [!NOTE]
-> Xenko API に含まれないキーやボタンをバインドすることもできます。たとえば、Xenko API は 2 つの「_拡張マウス ボタン_」をサポートしますが、追加の「_拡張ボタン_」を仮想ボタンにバインドして、プロジェクトで使用することができます。
 
 ## 関連項目
 * [ゲームパッド](gamepads.md)

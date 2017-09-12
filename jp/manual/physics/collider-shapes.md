@@ -39,6 +39,8 @@
 
 ### コーン
 
+![Cone](media/cone.png)
+
 | プロパティ       | 説明 |
 | -------------- |-------------|
 | Height | コーンの高さです。|
@@ -96,7 +98,7 @@
 
 ## コライダー形状アセットを作成する
 
-1.［Asset view］ (既定では下部) で、［Add asset］をクリックします。
+1.［Asset view］(既定では下部) で、［Add asset］をクリックします。
 
 2.［Physics］を選択し、作成する形状を選択します。
 
@@ -110,11 +112,11 @@
 
 これは、モデルと一致するコライダーの形状をすばやく作成するのに便利です。
 
-1.［Asset view］ (既定では下部) で、［Add asset］をクリックします。
+1.［Asset view］(既定では下部) で、［Add asset］をクリックします。
 
 2.［Physics］>［Convex hull］の順に選択します。
 
-    **アセット ピッカー**が開きます。
+   ［Asset picker］ウィンドウが開きます。
 
     ![Select model](media/select-model.png)
 
@@ -124,7 +126,7 @@
 
 ## コライダー形状アセットを使用する
 
-1.［Static Collider］または［Rigid Body］プロパティで、［Collider Shapes］の［Asset］を選択します。
+1. **静的コライダー**または**剛体**のプロパティで、［Collider Shapes］の［Asset］を選択します。
 
     ![Select collider shape asset](media/select-asset-collider-shape.png)
 
@@ -132,7 +134,7 @@
 
     ![Select collider shape asset](media/select-collider-shape-asset.png)
 
-    そのためには、［Asset view］から［Property grid］の［Shape］にアセットをドラッグします。または、手のアイコン (［Pick an asset up］) をクリックして**アセット ピッカー**を開き、アセットを参照します。
+    そのためには、［Asset view］から［Property grid］の［Shape］にアセットをドラッグします。または、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックしてアセットを選択します。
 
 ## 関連項目
 

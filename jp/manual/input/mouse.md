@@ -15,26 +15,35 @@ Xenko にはマウス入力を処理する 2 つの方法があります。
 
 | クラス | プロジェクトの種類 | 使用目的 |
 | --- | --- | --- |
-| [Input](xref:SiliconStudio.Xenko.Input.InputManager) | デスクトップのみ | デスクトップ ゲームの場合、通常、複数のマウス ボタンでの入力を処理します。つまり、**マウス ボタンの状態**を使用する必要があります。 |
+| [InputManager](xref:SiliconStudio.Xenko.Input.InputManager) | デスクトップのみ | デスクトップ ゲームの場合、通常、複数のマウス ボタンでの入力を処理します。つまり、**マウス ボタンの状態**を使用する必要があります。 |
 | [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) | クロスプラットフォーム | モバイル ゲームの場合、通常、左マウス ボタンだけでポインターをシミュレートします。つまり、マウス入力をポインターのように処理できます。マウス固有のコントロールを別に作成する必要はありません。詳細については、「[ポインター](pointers.md)」を参照してください。|
 
 これらのオプションの詳細については、「[入力](index.md)」を参照してください。
 
 ## マウスを使用できるかどうかを調べる
+
 マウスの入力を処理する前に、[Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse) を使用して、マウスが接続されているかどうかを確認します。
 
-> [!NOTE]
-> Xenko では、実行中に接続されたマウスはサポートされません。この機能は将来のリリースで追加されます。
+## マウスの位置を取得する
 
-## マウスの位置を問い合わせる
+正規化された座標または絶対座標でマウスの位置を取得できます。
 
-[MousePosition](xref:SiliconStudio.Xenko.Input.InputManager.MousePosition) は、マウス ポインターの位置を決定する X 座標と Y 座標を返します。値は 0 ～ 1 の範囲です (正規化された値)。
+### 正規化された座標
+
+@'SiliconStudio.Xenko.Input.InputManager.MousePosition' は、ピクセル単位の実際の画面サイズではなく、**正規化された** X、Y 座標でマウス ポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。
 
 * (0,0): ポインターは画面の左上隅にあります。
 * (1,1): ポインターは画面の右下隅にあります。
 
-> [!NOTE]
-> Xenko では、画面の実際のピクセル サイズではなく、正規化された座標が使用されます。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。
+### 絶対座標
+
+[InputManager.AbsoluteMousePosition](xref:SiliconStudio.Xenko.Input.InputManager.AbsoluteMousePosition) は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でマウス ポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。
+
+> [!TIP]
+> 画面の実際のサイズを取得するには、[IPointerDevice.SurfaceSize](xref:SiliconStudio.Xenko.Input.IPointerDevice.SurfaceSize) にアクセスします。次に例を示します。
+> ```cs
+> var surfaceSize = Input.Mouse.SurfaceSize;
+> ```
 
 ## マウス ボタンの状態変化を問い合わせる
 
@@ -42,27 +51,24 @@ Xenko にはマウス入力を処理する 2 つの方法があります。
 
 [入力マネージャー](xref:SiliconStudio.Xenko.Input.InputManager)には、マウス ボタンの状態 (_押された_、_押されている_、_放された_) を調べる複数のメソッドがあります。
 
-| メソッド | 説明 |
-| --- | --- |
-| [HasDownMouseButtons()](xref:SiliconStudio.Xenko.Input.InputManager.HasDownMouseButtons) | 1 つ以上のマウス ボタンが現在押されているかどうかを調べます。 |
-| [HasPressedMouseButtons()](xref:SiliconStudio.Xenko.Input.InputManager.HasPressedMouseButtons) | 1 つ以上のマウス ボタンが最後の更新で押されたかどうかを調べます。 |
-| [HasReleasedMouseButtons()](xref:SiliconStudio.Xenko.Input.InputManager.HasReleasedMouseButtons) | 1 つ以上のマウス ボタンが最後の更新で放されたかどうかを調べます。 |
-| [IsMouseButtonDown (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonDown\(SiliconStudio.Xenko.Input.MouseButton\)) | 指定されたマウス ボタンが現在押されているかどうかを調べます。 |
-| [IsMouseButtonPressed (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonPressed\(SiliconStudio.Xenko.Input.MouseButton\)) | 指定されたマウス ボタンが最後の更新で押されたかどうかを調べます。 |
-| [IsMouseButtonReleased (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonReleased\(SiliconStudio.Xenko.Input.MouseButton\)) | 指定されたマウス ボタンが最後の更新で放されたかどうかを調べます。 |
+| メソッド | 説明
+| ------ | ---
+| [HasDownMouseButtons](xref:SiliconStudio.Xenko.Input.InputManager.HasDownMouseButtons) | 1 つ以上のマウス ボタンが現在押されているかどうかを調べます。
+| [HasPressedMouseButtons](xref:SiliconStudio.Xenko.Input.InputManager.HasPressedMouseButtons) | 1 つ以上のマウス ボタンが最後の更新で押されたかどうかを調べます。
+| [HasReleasedMouseButtons](xref:SiliconStudio.Xenko.Input.InputManager.HasReleasedMouseButtons) | 1 つ以上のマウス ボタンが最後の更新で放されたかどうかを調べます。
+| [IsMouseButtonDown (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonDown\(SiliconStudio.Xenko.Input.MouseButton\)) | 指定されたマウス ボタンが現在押されているかどうかを調べます。
+| [IsMouseButtonPressed (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonPressed\(SiliconStudio.Xenko.Input.MouseButton\)) | 指定されたマウス ボタンが最後の更新で押されたかどうかを調べます。
+| [IsMouseButtonReleased (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonReleased\(SiliconStudio.Xenko.Input.MouseButton\)) | 指定されたマウス ボタンが最後の更新で放されたかどうかを調べます。
 
 ### マウスのデルタ
 
-最後の更新以降のマウス位置の変化を正規化された座標で取得するには、[MouseDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseDelta) を使用します。これを使用して、マウスの移動の速度と方向を分析できます。
+最後の更新以降のマウス位置の変化を正規化された座標で取得するには、[InputManager.MouseDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseDelta) を使用します。これを使用して、マウスの移動の速度と方向を分析できます。
 
 ### マウス ホイールのデルタ
 
 マウス ホイールを使用してプロジェクトのアクションをトリガーできます。たとえば、ファーストパーソン シューティング ゲームでは、マウス ホイールを動かすことで、武器を切り替えたり、カメラをズームしたりする場合があります。
 
-[MouseWheelDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta) は、マウス ホイールが前方に回されると正の値を、後方に回されると負の値を返します。値 `0` は、動きがないことを示します。
-
-> [!NOTE]
-> 既定では、[MouseWheelDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta) は 120*X を返します。X は、最後の更新の間に回されたホイール ステップの量です。
+[InputManager.MouseWheelDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta) は、マウス ホイールが前方に回されると正の値を、後方に回されると負の値を返します。値 `0` は、動きがないことを示します。
 
 ## マウスの位置をロックする
 
@@ -72,16 +78,16 @@ Xenko にはマウス入力を処理する 2 つの方法があります。
 
 | メソッド/プロパティ | 説明 |
 | --- | --- |
-| [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) | 次に [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) メソッドを呼び出すまで、マウスの位置をロックし、カーソルを非表示にします。 |
-| [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) | [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) メソッドによってロックされたマウス位置をロック解除し、カーソルの表示を元に戻します。 |
-| [IsMousePositionLocked](xref:SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked) | マウスの位置がロックされているかどうかを調べます。 |
+| [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) | 次に [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) メソッドを呼び出すまで、マウスの位置をロックします。
+| [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) | [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) イベントによってロックされたマウス位置をロック解除します。
+| [IsMousePositionLocked](xref:SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked) | マウスの位置がロックされているかどうかを調べます。
 
 > [!TIP]
 > マウスの表示は、[GameWindow.IsMouseVisible](xref:SiliconStudio.Xenko.Games.GameWindow.IsMouseVisible) で取得または設定できます。
 
 ## コード例
 
-```
+```cs
 public class MouseInputScript : SyncScript
 {
 	public override void Update()
@@ -103,7 +109,9 @@ public class MouseInputScript : SyncScript
 	}
 }
 ```
+
 ## 関連項目
+
 * [ポインター](pointers.md)
 * [仮想ボタン](virtual-buttons.md)
 * [キーボード](keyboards.md)

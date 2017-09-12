@@ -5,7 +5,7 @@
 
 **イベント**は、スクリプト間の通信を容易にします。**ブロードキャスター**から**レシーバー**への 1 方向のブロードキャストとして動作します。
 
-プレイヤーが死ぬと発生する「ゲーム オーバー」状態がゲームにあるものとします。これを処理するには、「ゲーム オーバー」イベントを作成し、イベントをリッスンしているレシーバーがあるすべてのスクリプトにブロードキャストできます。イベントがブロードキャストされると、レシーバーは適切なスクリプトを実行して、ゲーム オーバー イベントを処理します (敵のリセット、レベル オブジェクトの置換、新しいタイマーの開始、など)。
+たとえば、プレイヤーが死ぬと発生する「ゲーム オーバー」状態がゲームにあるものとします。これを処理するには、「ゲーム オーバー」イベントを作成し、イベントをリッスンしているレシーバーがあるすべてのスクリプトにブロードキャストできます。イベントがブロードキャストされると、レシーバーは適切なスクリプトを実行して、ゲーム オーバー イベントを処理します (敵のリセット、レベル オブジェクトの置換、新しいタイマーの開始、など)。
 
 >[!NOTE]
 >イベントの処理はすべてスクリプト内で行われます。Game Studio で構成することはできません。
@@ -16,7 +16,7 @@ Xenko API のブロードキャスターは [EventKey](xref:SiliconStudio.Xenko.
 
 たとえば、次のコードは「ゲーム オーバー」イベントを作成します。
 
-```
+```cs
 public static class GlobalEvents
 {
     public static EventKey GameOverEventKey = new EventKey("Global", "Game Over");
@@ -34,11 +34,11 @@ Xenko API のレシーバーは [EventReceiver](xref:SiliconStudio.Xenko.Engine.
 
 上で説明した「ゲーム オーバー」イベントを受け取るには、次のコードを使用します。
 
-```
+```cs
 var gameOverListener = new EventReceiver(GlobalEvents.GameOverEventKey);
 var gameIsOver = gameOverListener.TryReceive();
 
-//または Async で
+// または Async で
 await gameOverListener.ReceiveAsync();
 ```
 
@@ -46,7 +46,7 @@ await gameOverListener.ReceiveAsync();
 
 * [スクリプトの種類](types-of-script.md)
 * [スクリプトを作成する](create-a-script.md)
-* [スクリプトを追加する](add-a-script.md)
+* [スクリプトを使用する](use-a-script.md)
 * [パブリック プロパティとフィールド](public-properties-and-fields.md)
 * [スケジュール設定と優先順位](scheduling-and-priorities.md)
 * [デバッグ](debugging.md)

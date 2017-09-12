@@ -1,4 +1,4 @@
-﻿# ゲームパッド
+# ゲームパッド
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>
@@ -6,12 +6,12 @@
 **ゲームパッド** (Xbox Elite ワイヤレス コントローラー、PS4 DualShock など) は、コンソールおよびデスクトップ用の一般的な入力デバイスです。
 
 > [!NOTE]
-> 現在、Xenko は Xbox Elite ゲームパッド用に最適化されています。他のコントローラーも動作しますが、予期しないボタン マッピングになる場合があります。PS4 DualShock タッチパッドなどのゲームパッド固有の機能は、将来のリリースでサポートされる予定です。
+> 現在、Xenko は Xbox Elite ゲームパッド用に最適化されています。他のコントローラーも動作しますが、予期しないボタン マッピングになる場合があります。PS4 DualShock タッチパッドなどのゲームパッド固有の機能はサポートされません。
 
 ## デジタル ボタンとアナログ ボタン
 
-* **デジタル** ボタンには、「_押された (pressed)_」、「_押されている (down)_」、「_放された (released)_」の 3 つの状態があります。
-D パッド、スタート、バック、サムスティック (押す)、A、B、X、Y の各ボタンはデジタル ボタンです。
+* **デジタル** ボタンには、**アップ**と**ダウン**の 2 つの状態があります。D パッド、スタート、バック、サムスティック (押す)、A、B、X、Y の各ボタンはデジタル ボタンです。
+
 * **アナログ** ボタンは、ユーザーが押した強さに応じた値を返します。トリガーはアナログ ボタンであり、0 ～ 1 の範囲の値を返します。サムスティックはアナログ ボタンでもあり、X 軸および Y 軸の -1 ～ 1 の値を返します。
 
 Xbox Elite コントローラーのボタンは、Xenko では次のような名前になっています。
@@ -24,48 +24,50 @@ Xbox Elite コントローラーのボタンは、Xenko では次のような名
 
 ゲームパッドの入力を処理する前に:
 
-* ゲームパッドが接続されているかどうかを確認するには、[Input.HasGamePad](xref:SiliconStudio.Xenko.Input.InputManager.HasGamePad) を使用します。
-* 接続されているゲームパッドの数を確認するには、[Input.GamePadCount](xref:SiliconStudio.Xenko.Input.InputManager.GamePadCount) を使用します。
-* 現在のゲームパッドが切断されたかどうかを確認するには、[GamePadState.IsConnected](xref:SiliconStudio.Xenko.Input.GamePadState.IsConnected) を使用します。
+* いずれかのゲームパッドが接続されているかどうかを確認するには、[InputManager.HasGamePad](xref:SiliconStudio.Xenko.Input.InputManager.HasGamePad) を使用します。
 
-> [!NOTE]
-> Xenko では、実行中のゲームパッドの接続はサポートされません。この機能は将来のリリースで追加されます。
+* 接続されているゲームパッドの数を確認するには、[InputManager.GamePadCount](xref:SiliconStudio.Xenko.Input.InputManager.GamePadCount) を使用します。
+
+* 現在のデバイスが切断されたかどうかを確認するには、[InputManager.DeviceRemoved](xref:SiliconStudio.Xenko.Input.InputManager.DeviceRemoved) イベントを使用します。
+
+* デバイスが接続されたかどうかを確認するには、[InputManager.DeviceAdded](xref:SiliconStudio.Xenko.Input.InputManager.DeviceAdded) イベントを使用します。
 
 ### デジタル ボタン
 
-ゲームパッドのデジタル ボタンの状態および状態変化を問い合わせるには、以下のメソッドを使用します。
+ゲームパッドのデジタル ボタンの状態および状態変化を問い合わせるには、`GamePad` オブジェクトで以下のメソッドを使用します。
 
-| メソッド | 機能 |
-|----|----|
-| [IsPadButtonDown(index, button)](xref:SiliconStudio.Xenko.Input.InputManager.IsPadButtonDown\(System.Int32,SiliconStudio.Xenko.Input.GamePadButton\)) | ボタンが「_押されている_」状態かどうかを確認します。 |
-| [IsPadButtonPressed(index, button)](xref:SiliconStudio.Xenko.Input.InputManager.IsPadButtonPressed\(System.Int32,SiliconStudio.Xenko.Input.GamePadButton\)) | 前回の更新以降にユーザーがボタンを「_押した_」かどうかを確認します。 |
-| [IsPadButtonReleased(index, button)](xref:SiliconStudio.Xenko.Input.InputManager.IsPadButtonReleased\(System.Int32,SiliconStudio.Xenko.Input.GamePadButton\)) | 前回の更新以降にユーザーがボタンを「_放した_」かどうかを確認します。 |
+| メソッド | 機能
+|--------|--------------
+| [IsButtonDown(IGamePadDevice, GamePadButton)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonDown\(SiliconStudio.Xenko.Input.IGamePadDevice,SiliconStudio.Xenko.Input.GamePadButton\)) | ボタンが「_押されている_」状態かどうかを確認します。
+| [IsButtonPressed(IGamePadDevice, GamePadButton)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonPressed\(SiliconStudio.Xenko.Input.IGamePadDevice,SiliconStudio.Xenko.Input.GamePadButton\)) | 前回の更新以降にユーザーがボタンを「_押した_」かどうかを確認します。
+| [IsButtonReleased(IGamePadDevice, GamePadButton)](xref:SiliconStudio.Xenko.Input.GamePadDeviceExtensions.IsButtonReleased\(SiliconStudio.Xenko.Input.IGamePadDevice,SiliconStudio.Xenko.Input.GamePadButton\)) | 前回の更新以降にユーザーがボタンを「_放した_」かどうかを確認します。
 
-* _index (整数)_: 確認するゲームパッドのインデックスです。
-* _button (GamePadButton)_: 確認するゲームパッド ボタンです。
+**ボタン (GamePadButton)** は確認するゲームパッド ボタンです。
 
 デジタル ボタンの状態は、[GamePadState.Buttons](xref:SiliconStudio.Xenko.Input.GamePadState.Buttons) を使用して取得することもできます。
 
 > [!NOTE]
-> [GamePadState.Buttons](xref:SiliconStudio.Xenko.Input.GamePadState.Buttons) フィールドは、2 進法を使用するビットマスクです。ビットマスクの値に応じて、どのボタンが「_アップ_」か「_ダウン_」かを特定できます。
+> [GamePadState.Buttons](xref:SiliconStudio.Xenko.Input.GamePadState.Buttons) フィールドは、2 進法を使用するビットマスクです。ビットマスクの値に応じて、どのボタンが*アップ*か*ダウン*かを特定できます。
+
+ゲームパッドの状態を取得するには、[IGamePadDevice.State](xref:SiliconStudio.Xenko.Input.IGamePadDevice.State) を使用します。
 
 ### アナログ ボタン
 
 アナログ ボタンの値を問い合わせるには、最初に
-[GetGamePad(index)](xref:SiliconStudio.Xenko.Input.InputManager.GetGamePad\(System.Int32\)) を使用してゲームパッドの現在の状態を取得します。_index (Integer)_ は、確認するゲームパッドのインデックスです。
+[GetGamePadByIndex(index)](xref:SiliconStudio.Xenko.Input.InputManager.GetGamePadByIndex\(System.Int32\)) を使用してゲームパッドの現在の状態を取得します。_index (整数)_ は、確認するゲームパッドのインデックスです。
 
 > [!WARNING]
-> [GetGamePad(index)](xref:SiliconStudio.Xenko.Input.InputManager.GetGamePad\(System.Int32\)) によって返される値は、**現在の**更新でのゲームパッドの状態です。この値を次の更新に再使用することはできません。更新のたびに、再度問い合わせる必要があります。
+> [IGamePadDevice.State](xref:SiliconStudio.Xenko.Input.IGamePadDevice.State) によって返される値は、**現在の**更新でのゲームパッドの状態です。この値を次の更新に再使用することはできません。更新のたびに、再度問い合わせる必要があります。
 
 トリガーとサムスティックの位置を取得するには、
 [GamePadState](xref:SiliconStudio.Xenko.Input.GamePadState) のフィールドを使用します。
 
-| フィールド | 説明 |
-|----|----|
-| [LeftThumb](xref:SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | 左サムスティックの X 軸/Y 軸の値です。どちらの軸も範囲は [-1.0f, 1.0f] です。 |
-| [RightThumb](xref:SiliconStudio.Xenko.Input.GamePadState.RightThumb) | 右サムスティックの X 軸/Y 軸の値です。どちらの軸も範囲は [-1.0f, 1.0f] です。 |
-| [LeftTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | 左トリガー アナログ コントロールの値です。1 つの軸の範囲は [0, 1.0f] です。 |
-| [RightTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | 右トリガー アナログ コントロールの値です。1 つの軸の範囲は [0, 1.0f] です。 |
+| フィールド | 説明
+|-------|------------
+| [GamePadState.LeftThumb](xref:SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | 左サムスティックの X 軸/Y 軸の値です。どちらの軸も範囲は［-1.0f, 1.0f］です。 |
+| [GamePadState.RightThumb](xref:SiliconStudio.Xenko.Input.GamePadState.RightThumb) | 右サムスティックの X 軸/Y 軸の値です。どちらの軸も範囲は［-1.0f, 1.0f］です。 |
+| [GamePadState.LeftTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | 左トリガー アナログ コントロールの値です。1 つの軸の範囲は［0, 1.0f］です。 |
+| [GamePadState.RightTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | 右トリガー アナログ コントロールの値です。1 つの軸の範囲は［0, 1.0f］です。 |
 
 サムスティックは、X 軸および Y 軸の方向に動きます。その位置は次のように表されます。
 
@@ -78,48 +80,51 @@ Xbox Elite コントローラーのボタンは、Xenko では次のような名
 
 ### 振動
 
-ゲームパッドの振動レベルを設定するには、
-[SetGamePadVibration](xref:SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration\(System.Int32,System.Single,System.Single\)) を使用します。
+ゲームパッドの振動レベルを設定するには、[IGamePadDevice.SetVibration](xref:SiliconStudio.Xenko.Input.IGamePadDevice.SetVibration\(System.Single,System.Single,System.Single,System.Single\)) を使用します。
 
 > [!NOTE]
-> Xenko は、Xbox ゲームパッドの振動のみをサポートします。他のゲームパッドの振動のサポートは、将来のリリースで追加されます。
+> 現在、Xenko は Xbox ゲームパッドの振動のみをサポートします。
 
 ## コード例
 
-```
+```cs
+using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Engine;
+
 public class TestScript : SyncScript
 {
-	public override void Update()
-	{   
-		// ゲームパッドが接続されているかどうかを確認する
-		if (Input.HasGamePad)
-		{
-			// 接続されているゲームパッドの数を取得する
-			int gamepadCount = Input.GamePadCount;
+    public override void Update()
+    {
+        // ゲームパッドが接続されているかどうかを確認する
+        if (Input.HasGamePad)
+        {
+            // 接続されているゲームパッドの数を取得する
+            int gamepadCount = Input.GamePadCount;
 
-			// 各ゲームパッドのステータスを確認する
-			for (int i = 0; i < gamepadCount; i++)
-			{
-				// アナログ サムスティックの位置を取得する
-				Vector2 speed = Input.GetGamePad(i).LeftThumb;
-				Vector2 direction = Input.GetGamePad(i).RightThumb;
+            // ゲームパッドのステータスを確認する
+            foreach(var gamepad in Input.GamePads)
+            {
+                // アナログ サムスティックの位置を取得する
+                Vector2 speed = gamepad.State.LeftThumb;
+                Vector2 direction = gamepad.State.RightThumb;
 
-				// デジタル ボタンのステータスを取得する
-				if (Input.IsPadButtonDown(i, GamePadButton.X))
-				{
-					// ユーザーがボタンを押し続けている限り、アクションを繰り返す。
-					// これは、マシンガンの連射のような連続するアクションに利用できる。
-				}
-				if (Input.IsPadButtonPressed(i, GamePadButton.A))
-				{
-					// ユーザーがボタンを押し続けている場合であっても、アクションを 1 回だけトリガーする。
-					// これは、ジャンプのような 1 回限りのアクションに利用できる。
-				}
-			}
-		}
-	}
+                // デジタル ボタンのステータスを取得する
+                if (gamepad.IsButtonDown(GamePadButton.X))
+                {
+                    // ユーザーがボタンを押し続けている限り、アクションを繰り返す。
+                    // これは、マシンガンの連射のような連続するアクションに利用できる。
+                }
+                if (gamepad.IsButtonPressed(GamePadButton.A))
+                {
+                    // ユーザーがボタンを押し続けている場合であっても、アクションを 1 回だけトリガーする。
+                    // これは、ジャンプのような 1 回限りのアクションに利用できる。
+                }
+            }
+        }
+    }
 }
 ```
+
 ## 関連項目
 * [キーボード](keyboards.md)
 * [仮想ボタン](virtual-buttons.md)

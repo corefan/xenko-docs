@@ -37,7 +37,7 @@
    スタートアップ プロジェクトの構成が自動的に更新されます。
 
    > [!TIP]
-   > 右側の［ソリューション エクスプローラー］で、プロジェクトを確認できます。プロジェクトのファイル名の拡張子が、プラットフォームを示します (例：［.Android］、［.iOS］など)。
+   > 右側の［ソリューション エクスプローラー］で、プロジェクトを確認できます。プロジェクトのファイル名の拡張子が、プラットフォームを示します (例：*.Android*、*.iOS* など)。
 
 3. 構成とプラットフォームが適切に対応していることを確認します。
 
@@ -47,4 +47,34 @@
 
       ![Visual Studio Start button](media/visual-studio-start-button.png)
 
-     ![Game running](media/launch-your-game-mygame-running.png)
+## 境界を削除する
+
+既定では、ゲームを実行するとウィンドウの境界が表示されます。
+
+| 境界がある場合              | 境界がない場合
+|---------------------------|-----------------
+| ![With borders](media/with-borders.jpg)   | ![Without borders](media/without-borders.jpg)
+
+境界なしでゲームを実行するには、次のコマンドを使用します。
+
+```cs
+Game.Window.IsBorderLess = true;
+```
+
+次に例を示します。
+
+```cs
+using SiliconStudio.Xenko.Engine;
+
+namespace MyGame
+{
+    public class MyScript : StartupScript
+    {
+        public override void Start()
+        {
+            base.Start();
+            Game.Window.IsBorderLess = true;
+        }
+    }
+}
+```

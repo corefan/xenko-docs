@@ -3,19 +3,18 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-**キャラクター**はユーザーの[入力](../input/index.md)に反応します (プレイヤー キャラクターなど) が、他のコライダーと相互作用することもあります (何かに衝突する、など)。[CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) ではないプレイヤー キャラクターはオブジェクトを通り抜けます。
+**キャラクター** コライダーは、プレイヤーおよび NPC などのスクリプトで制御されたキャラクターに使用されます。[キャラクター コンポーネント](xref:SiliconStudio.Xenko.Physics.CharacterComponent)であるエンティティは、[SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(SiliconStudio.Core.Mathematics.Vector3\))、[Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump)、[Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(SiliconStudio.Core.Mathematics.Vector3\)) によってのみ移動できます。
 
-> [!NOTE]
-> [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) であるエンティティは、[SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(SiliconStudio.Core.Mathematics.Vector3\))、[Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump)、[Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(SiliconStudio.Core.Mathematics.Vector3\)) によってのみ移動できます。
-
-## コライダー コンポーネントをエンティティに追加する
+## キャラクター コンポーネントをエンティティに追加する
 
 1. **シーン エディター** で、コンポーネントを追加するエンティティを選択します。
 
 2.［Property grid］で［Add component］をクリックして、［Character］を選択します。
 
+    ![Add character component](media/add-character-component.png)
+
 >[!NOTE]
-> コライダーが他の物理オブジェクトと相互作用するには、［Property grid］で[コライダーの形状](collider-shapes.md)を設定する必要があります。ほとんどのキャラクター コライダーには、カプセル形状が適しています。
+> キャラクター コライダーが他の物理オブジェクトと相互作用するには、コライダー コンポーネントのプロパティでコライダーの形状を設定する必要もあります。ほとんどのキャラクター コライダーには、カプセル形状が適しています。詳細については、「[コライダーの形状](collider-shapes.md)」を参照してください。
 
 ## コンポーネントのプロパティ
 
@@ -31,7 +30,7 @@ Restitution           | 衝突の後で失う、または獲得する運動エ�
 Friction              | 表面の摩擦を設定します。
 Rolling Friction              | 転がり摩擦を設定します。
 Ccd Motion Threshold  | 連続衝突検出 (CCD) を引き継ぐ速度を設定します。CCD は、高速で移動するエンティティ (弾丸など) が誤って他のエンティティを通り抜けないようにします。
-Ccd Swept Sphere Radius | 連続衝突検出の間に 2 つの物理フレームの間の位置を含む境界球面の半径を設定します。              
+Ccd Swept Sphere Radius | 連続衝突検出の間に 2 つの物理フレームの間の位置を含む境界球面の半径を設定します。
 Gravity               | 剛体について、［Override Gravity］が選択されている場合に適用されるカスタム重力ベクトルを設定します。キャラクターの場合は、キャラクターに影響する重力の大きさを指定します。
 Step Height           | キャラクターが一歩で上がることのできる最大の高さです。
 Fall Speed            | 最大落下速度です。

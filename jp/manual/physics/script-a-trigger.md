@@ -5,6 +5,9 @@
 
 このチュートリアルでは、通過するボールのサイズを 2 倍にする[トリガー](../physics/triggers.md)を作成します。
 
+>[!NOTE]
+>このチュートリアルのスクリーンショットとビデオは、前のバージョンの Xenko を使用して作成されました。そのため、UI の一部および既定のスカイボックスと球体は、お使いのバージョンと異なる場合があります。
+
 ## 1. 跳ね返るボールを作成する
 
 「[跳ね返るボールを作成する](create-a-bouncing-ball.md)」チュートリアルの説明に従います。空中からボールが落下し、地面にぶつかって跳ね返る、簡単なシーンが作成されます。
@@ -29,13 +32,13 @@
 
 次に、ボールと地面の間にトリガーを追加し、ボールがそこを通過するようにします。
 
-1. **シーン エディター**で、白いプラス記号 (［Create new entity］) をクリックして、［Empty entity］を選択します。
+1. **シーン エディター**で、白いプラス ボタン (［Create new entity］) をクリックして、［Empty entity］を選択します。
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 
     既定の **Entity** という名前のエンティティがシーンに追加されます。
 
-2. このエンティティをトリガーにするので、わかりやすいように名前を *Trigger* に変更します。
+2. このエンティティをトリガーにするので、わかりやすいように名前を［Trigger］に変更します。
 
 3. このトリガーは動く必要がないので、静的コライダーにします。［Property grid］で［Add component］をクリックして、［Static Collider］を選択します。
 
@@ -49,7 +52,7 @@
 
     これにより、コライダーがトリガーになります。つまり、オブジェクトはそれを通り抜けることができますが、その場合でもコードはオブジェクトを検出します。
 
-6. トリガーに形状を与える必要があります。［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、［Box］を選択します。
+6. トリガーに形状を与える必要があります。［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Box］を選択します。
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
@@ -85,7 +88,7 @@
 
     モデル コンポーネントがエンティティに追加されます。
 
-5.［Model］で手のアイコン (［Pick an asset up］) をクリックし、**アセット ピッカー**を開きます。
+5.［Model］で ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
@@ -93,13 +96,13 @@
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7.［Property grid］の［Model］>［Materials］で、手のアイコン (［Pick an asset up］) をクリックして**アセット ピッカー**を開きます。
+7.［Property grid］の［Model］>［Materials］で、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
 8. ステップ 2 で作成した **Transparent** マテリアルを選択し、［OK］をクリックします。
 
-    ![Select material in Asset Picker](media/physics-tutorials-select-transparent-material.png)
+    ![Select material](media/physics-tutorials-select-transparent-material.png)
 
 9.［Asset view］で、**Transparent** マテリアル アセットを選択します。
 
@@ -142,17 +145,17 @@
 
 1.［Asset view］で［Add asset］をクリックし、［Scripts］ >［Async Script］の順に選択します。
 
-    ![Add a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
+    ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
-2.［Script wizard］ダイアログで、スクリプトの名前を「*Trigger*」に設定して、［OK］をクリックします。
+2.［Create a script］ダイアログで、スクリプトの名前を「*Trigger*」に設定して、［Create script］をクリックします。
 
-    2a. スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
+    2a.スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Save］をクリックします。
 
-    2b. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
+    2b.アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Reload］をクリックします。
 
 3. スクリプトを開き、内容を以下のコードに置き換えて、ファイルを保存します。
 
-    ```
+    ```cs
     using SiliconStudio.Xenko.Engine;
     using SiliconStudio.Xenko.Physics;
     using System.Threading.Tasks;
@@ -227,7 +230,7 @@
 
 たとえば、球体エンティティのマテリアルを切り替えることができます。次のスクリプトは、Sphere エンティティのマテリアルを **Sphere Material** から **Ground Material** に切り替えて、元に戻します。
 
-```
+```cs
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Physics;
 using System.Threading.Tasks;

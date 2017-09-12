@@ -1,29 +1,44 @@
 # 実行時にシーンをロードおよびアンロードする
 
-次のコードは、シーン `myChildScene` をロードし、それを子シーンとして `myParentScene` に追加します。
+次のコードでは、3 つのシーンがロードされ、子として追加されます。
 
+```cs
+var myChildScene0 = Content.Load<Scene>(url0);
+var myChildScene1 = Content.Load<Scene>(url1);
+var myChildScene2 = Content.Load<Scene>(url2);
+
+myParentScene.Children.Add(myChildScene0);
+myParentScene.Children.Add(myChildScene1);
+myChildScene1.Add(myChildScene2);
 ```
-var myChildScene = Content.Load<Scene>(url); (edited)
-
-myParentScene.Children.Add(myChildScene);
-```
-
-## シーン ストリーミング スクリプト
-
-Xenko には、[トリガー](../physics/triggers.md)を使用してシーンをロードするシーン ストリーミング スクリプトも含まれます。
 
 >[!NOTE]
->シーン ストリーミング スクリプトは例として含まれています。シーンをロードする方法として常に最適であるとは限りません。必要に応じて自由に変更してください。
+>ロードするすべてのシーンが**ルート アセット** (［Asset View］で青いアイコンで示されているもの) としてビルドに含まれることを確認してください。
 
-### シーン ストリーミング スクリプトを追加する
+>![Scenes included in root](media/scenes-included-in-root.png)
 
-シーン ストリーミング スクリプトを追加するには、［Asset view］ (既定では下部のペイン) で、［Add asset］をクリックし、［Scripts］>［Scene streaming］を選択します。
+>シーンをビルドに追加するには、［Asset view］で、シーン アセットを右クリックして［Include in build as root asset］を選択します。
 
-![Scene streaming script](media/scene-streaming-script.png)
+>ビルドへのアセットの追加の詳細については、「[アセットを管理する](manage-assets.md)」を参照してください。
 
-プロジェクトのアセットにシーン ストリーミング スクリプトが追加されます。
+シーンの階層の詳細については、「[シーンを管理する](manage-scenes.md)」を参照してください。
 
-### シーン ストリーミング スクリプトを使用する
+## シーンストリーマー スクリプト
+
+Xenko には、[トリガー](../physics/triggers.md)を使用してシーンをロードする Scene Streaming スクリプトも含まれます。
+
+>[!NOTE]
+>Scene Streaming スクリプトは例として含まれています。シーンをロードする方法として常に最適であるとは限りません。必要に応じて自由に変更してください。
+
+### シーンストリーマー スクリプトを追加する
+
+Scene Streaming スクリプトを追加するには、［Asset view］(既定では下部のペイン) で、［Add asset］をクリックし、［Scripts］>［Scene streamer］を選択します。
+
+![Scene streamer script](media/scene-streaming-script.png)
+
+プロジェクトのアセットに Scene Streaming スクリプトが追加されます。
+
+### シーンストリーマー スクリプトを使用する
 
 1. トリガー エンティティを作成します。これが実行時にトリガーされると、シーンがロードされます。トリガーの作成の詳細については、「[トリガー](../physics/triggers.md)」を参照してください。
 
@@ -31,16 +46,16 @@ Xenko には、[トリガー](../physics/triggers.md)を使用してシーンを
 
 2. エンティティを作成して、シーンをロードする場所に配置します。
 
-3. エンティティを選択し、［Property grid］ (既定では右側) で［Add component］をクリックして、**シーン ストリーミング スクリプト**を選択します。
+3. エンティティを選択し、［Property grid］(既定では右側) で［Add component］をクリックして、［SceneStreaming］スクリプトを選択します。
 
     ![Add script](media/add-scene-streaming-script.png)
 
     >[!NOTE]
-    >コンポーネントの一覧にシーン ストリーミング スクリプトが表示されない場合は、アセンブリを再ロードしてください。
+    >コンポーネントの一覧にシーン ストリーマー スクリプトが表示されない場合は、アセンブリを再ロードしてください。
 
     コンポーネントとしてエンティティにスクリプトが追加されます。
 
-    ![Scene streaming properties](media/scene-streaming-script-properties.png)
+    ![Scene streamer properties](media/scene-streaming-script-properties.png)
 
 4.［Url］で、ロードするシーンの URL を指定します。
 
@@ -48,14 +63,14 @@ Xenko には、[トリガー](../physics/triggers.md)を使用してシーンを
 
 実行時に、ステップ 1 で作成したトリガーがトリガーされると、ステップ 4 で指定したシーンがロードされます。
 
-### シーン ストリーミング スクリプトのプロパティ
+### シーンストリーマー スクリプトのプロパティ
 
-![Scene streaming properties](media/scene-streaming-script-properties.png)
+![Scene streamer properties](media/scene-streaming-script-properties.png)
 
 | プロパティ       | 説明                                                                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pre Load Depth | シーンのロードを開始するポイント (メートル単位)。たとえば、［2.5］と指定すると、プレイヤーがトリガー領域に 2.5 メートル入った時点で、シーンのロードが開始します。                                          |
-| Load Depth     | シーンがまだロードされていない場合、シーンのロードを終了するためにゲームがフリーズするポイント (メートル単位)。たとえば、［5］と指定すると、プレイヤーがトリガー領域に 5 メートル入った時点で、ゲームがフリーズします。 |
+| Pre Load Depth | シーンのロードを開始するポイント ([ワールド単位](world-units.md))。たとえば、*2.5* と指定すると、プレイヤーがトリガー領域に 2.5 単位入った時点で、シーンのロードが開始します。                                          |
+| Load Depth     | シーンがまだロードされていない場合、シーンのロードを終了するためにゲームがフリーズするポイント ([ワールド単位](world-units.md))。たとえば、*5* と指定すると、プレイヤーがトリガー領域に 5 単位入った時点で、ゲームがフリーズします。 |
 | Priority       | スクリプトの優先順位。詳細については、「[スケジュールと優先順位](../scripts/scheduling-and-priorities.md)」を参照してください。                                                                                                              |
 ## 関連項目
 

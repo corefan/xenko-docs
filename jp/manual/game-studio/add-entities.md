@@ -19,9 +19,16 @@
 
 2.［Empty entity］を選択するか、またはエンティティ テンプレートを選択します。
 
-   エンティティがシーンに追加されて、エンティティ ツリーに表示されます。
+   エンティティがアクティブなシーンに追加されて、エンティティ ツリーに表示されます。
 
     ![New Entity in MainScen](media/add-entities-to-a-scene-empty-entity.png)
+
+>[!TIP]
+>**アクティブなシーン**とは、エンティティが追加されるシーンです。アクティブなシーンを設定するには、**エンティティ ツリー** (既定では左側) でシーンを右クリックして［Set as active scene］を選択します。
+
+> ![Set active scene](media/set-active-scene.png)
+
+> アクティブなシーンは実行時にはどのような影響もありません。
 
 ## アセットからエンティティを作成する
 
@@ -77,3 +84,7 @@
 2.	エンティティの名前を入力して、**Enter** キーを押します。
 
    ![Renamed entity in a scene](media/add-entities-to-a-scene-renamed-entity.png)
+
+## 関連項目
+
+* [シーンを管理する](manage-scenes.md)

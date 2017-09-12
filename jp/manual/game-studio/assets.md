@@ -12,7 +12,7 @@ Xenko によって提供される特別なコンパイラを使用して、ア�
 
 次のことが可能です。
 
-*［Asset view］でアセットを作成および表示します
+*［Asset view］でアセットを作成および表示します**
 
     ![media/Editor2_assetview_thumb.jpg](media/Editor2_assetview_thumb.jpg)
 

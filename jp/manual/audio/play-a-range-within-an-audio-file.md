@@ -19,7 +19,7 @@
 次に例を示します。
 
 ```cs
-//サンプルの長さは 5 秒とする。
+// サンプルの長さは 5 秒とする。
 var length = mySound.TotalLength;
 var begin = TimeSpan.FromSeconds(2);
 var duration = TimeSpan.FromSeconds(2);

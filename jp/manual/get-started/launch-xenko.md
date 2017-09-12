@@ -12,11 +12,11 @@ Xenko がまだインストールされていない場合は、Xenko Launcher �
 
 ![No version installed](media/xenko-launcher-install-last-version.png)
 
-最新バージョンのインストールを選択すると、Visual Studio 統合機能をインストールするかどうかの確認を求められます。
+最新バージョンのインストールを選択すると、Xenko Visual Studio 拡張機能をインストールするかどうかの確認を求められます。
 
 ![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
 
-Visual Studio 統合機能を使用すると、Visual Studio から直接シェーダーを編集でき、構文の強調表示、検証でのライブ コード分析、エラー チェック、ナビゲーションなどが提供されます。統合機能のインストールは必須ではありませんが、インストールすることをお勧めします。
+Xenko Visual Studio 拡張機能では、構文の強調表示、ライブ コード検証、エラー チェック、およびナビゲーションが追加されます。また、[Visual Studio から直接シェーダーを編集する](../graphics/effects-and-shaders/custom-shaders.md)こともできます。拡張機能をインストールしなくても Xenko を使用できますが、プログラマーの場合は特に、インストールすることをお勧めします。
 
 ## さまざまなバージョンの Xenko を管理する
 
@@ -31,7 +31,7 @@ Visual Studio 統合機能を使用すると、Visual Studio から直接シェ�
 >[!NOTE]
 >前のマイナー バージョンに戻すことはできません。たとえば、Xenko 1.9 と 1.8 の両方を同じ環境にインストールすることはできますが、Xenko 1.9.2 を Xenko 1.9.1 に戻すことはできません。
 
-* 特定のバージョンのリリース ノートを見るには、バージョン名の隣にある**ノート アイコン**をクリックします。
+* 特定のバージョンのリリース ノートを見るには、バージョン名の隣にある［Note］アイコンをクリックします。
 
 * 特定のバージョンをインストールするには、バージョン名の隣の［Download and install］アイコンを
 クリックします。

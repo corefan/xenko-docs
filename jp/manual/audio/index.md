@@ -12,6 +12,7 @@
 * [空間オーディオ](spatialized-audio.md)
     * [オーディオ エミッター](audio-emitters.md)
     * [オーディオ リスナー](audio-listeners.md)
+    * [HRTF](hrtf.md)
 * [オーディオをストリーミングする](stream-audio.md)
 * [グローバル オーディオ設定](global-audio-settings.md)
 * [オーディオ ファイル内の範囲を再生する](play-a-range-within-an-audio-file.md)

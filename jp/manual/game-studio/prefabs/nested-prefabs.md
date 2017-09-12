@@ -1,5 +1,6 @@
-# 入れ子になったプレハブ  
-<span class="label label-doc-level">中級</span>
+# 入れ子になったプレハブ
+
+<span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
 プレハブを他のプレハブに追加できます。これは**入れ子になったプレハブ**と呼ばれます。
@@ -20,8 +21,9 @@
 
 ## 関連項目
 
-* [プレハブ](prefabs.md)
+* [プレハブの索引](index.md)
 * [プレハブを作成する](create-a-prefab.md)
-* [プレハブを使用する](use-prefabs.md)
+* [プレハブを使用する](index.md)
 * [プレハブを編集する](edit-prefabs.md)
 * [プレハブのプロパティをオーバーライドする](override-prefab-properties.md)
+* [プレハブ モデル](prefab-models.md)

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-[アニメーションをインポート](import-animations.md)した後は、［Asset view］ (既定では下部のペイン) でそのアニメーションを選択し、［Property grid］ (既定では右側) でそのプロパティを表示および編集できます。
+[アニメーションをインポート](import-animations.md)した後は、［Asset view］(既定では下部のペイン) でそのアニメーションを選択し、［Property grid］(既定では右側) でそのプロパティを表示および編集できます。
 
 ![Assets in asset view](media/assets-in-asset-view2.png)
 
@@ -33,7 +33,7 @@ Game Studio では、ピボットはアニメーションのローカル座標�
 
 ### Repeat Mode
 
-［PlayOnce］、［LoopInfinite］、［PlayOnce&Hold］を選択できます。これは、エンジンに対する単なる*ヒント*です。アニメーション アセットをモデルに割り当てるときに、異なる値を指定できます。後でモデルを指定しないと、Xenko はここで設定されている属性を既定で使用します。
+［PlayOnce］、［LoopInfinite］、[PlayOnce&Hold］を選択できます。これは、エンジンに対する単なる *ヒント* です。アニメーション アセットをモデルに割り当てるときに、異なる値を指定できます。後でモデルを指定しないと、Xenko はここで設定されている属性を既定で使用します。
 
 ### Type
 

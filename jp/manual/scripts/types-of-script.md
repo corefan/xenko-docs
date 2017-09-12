@@ -13,7 +13,7 @@ Xenko のスクリプトの主要な種類は、**スタートアップ スク�
 
 例:
 
-```
+```cs
 public class StartUpScriptExample : StartupScript
 {
 	public override void Start()
@@ -33,12 +33,12 @@ public class StartUpScriptExample : StartupScript
 
 次のスクリプトは、無条件に、すべてのフレームで更新を実行します。
 
-```
+```cs
 public class SampleSyncScript : SyncScript
 {        
 	public override void Update()
 	{
-		// エンティティに対する更新を実行する。このコードはすべてのフレームで実行される。
+		// エンティティに対する更新を実行する。このコードはすべてのフレームで実行される
 	}
 }
 ```
@@ -53,7 +53,7 @@ public class SampleSyncScript : SyncScript
 
 次のスクリプトは、イベントとトリガーに応じたアクションを実行します。
 
-```
+```cs
 public class SampleAsyncScript : AsyncScript
 {        
 	public override async Task Execute()
@@ -75,7 +75,7 @@ public class SampleAsyncScript : AsyncScript
 ## 関連項目
 
 * [スクリプトを作成する](create-a-script.md)
-* [スクリプトを追加する](add-a-script.md)
+* [スクリプトを使用する](use-a-script.md)
 * [パブリック プロパティとフィールド](public-properties-and-fields.md)
 * [スケジュール設定と優先順位](scheduling-and-priorities.md)
 * [イベント](events.md)

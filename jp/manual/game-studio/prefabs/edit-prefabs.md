@@ -1,8 +1,9 @@
 # プレハブを編集する
-<span class="label label-doc-level">中級</span>
+
+<span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-プレハブは**プレハブ エディター**で編集できます。
+プレハブは **プレハブ エディター**で編集できます。
 
 ## プレハブ エディターを開く ##
 
@@ -31,7 +32,7 @@
 * エンティティの間に親子関係を作成します
 * エンティティのコンポーネント (スクリプト、マテリアル、モデル、アニメーションなど) を追加および変更します
 
-エンティティの管理の詳細については、「[シーンを設定する](../game-studio/add-entities.md)」を参照してください。
+エンティティの管理の詳細については、「[シーンを設定する](../add-entities.md)」を参照してください。
 
 ![Prefab editor](media/prefab-editor.png)
 
@@ -47,8 +48,9 @@
 
 ## 関連項目
 
-* [プレハブ](prefabs.md)
+* [プレハブの索引](index.md)
 * [プレハブを作成する](create-a-prefab.md)
-* [プレハブを使用する](use-prefabs.md)
+* [プレハブを使用する](index.md)
 * [入れ子になったプレハブ](nested-prefabs.md)
 * [プレハブのプロパティをオーバーライドする](override-prefab-properties.md)
+* [プレハブ モデル](prefab-models.md)

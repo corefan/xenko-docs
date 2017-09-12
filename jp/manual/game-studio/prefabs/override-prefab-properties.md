@@ -1,4 +1,5 @@
 # プレハブのプロパティをオーバーライドする
+
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">プログラマー</span>
 <span class="label label-doc-audience">デザイナー</span>
@@ -9,7 +10,7 @@
 
 次のビデオで、**Lamp** プレハブには、**Boxes** の親に属する複数の箱エンティティが含まれます。インスタンスから箱を削除すると、そのインスタンスのみが影響を受けます。右側に表示されているプレハブは変更されません。
 
-プレハブで Boxes の親に別の箱を追加しても、オーバーライドされたインスタンスには表示されません。これは、Boxes の親をインスタンスから削除したためです。
+プレハブで **Boxes** の親に別の箱を追加しても、オーバーライドされたインスタンスには表示されません。これは、**Boxes** の親をインスタンスから削除したためです。
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/delete-boxes-from-prefab-instance.jpg">
@@ -21,9 +22,9 @@
 
 ［Property grid］では、プレハブのインスタンスのどのプロパティが、プレハブの元の値と異なるかを確認できます。
 
-* **オーバーライド**された**固有**のプロパティは**白**で表示されます。
+* **オーバーライド**された**固有**のプロパティは**白と太字**で表示されます。
 
-    ![Overriden properties are white](media/use-prefabs-overriden-properties-appear-white.png)
+    ![Overridden properties are white](media/use-prefabs-overriden-properties-appear-white.png)
 
 * **同じ**プロパティは**グレー**で表示されます。
 
@@ -39,7 +40,7 @@
 
 この例では、未来風の街灯柱のプレハブを使用します。
 
-![Lamppost](media/lamppost-prefab.png)
+![Lamppost](media/lamppost-prefab.jpg)
 
 この街灯柱プレハブは、主柱、支柱、スポット ライトの 3 つのエンティティで構成されます。これらは、プレハブ エディターのエンティティ ツリーに一覧表示されます。
 
@@ -47,28 +48,29 @@
 
 街灯柱プレハブの 5 つのインスタンスをシーンに追加してみましょう。
 
-![Five lampposts](media/lamppost-prefab-instances.png)
+![Five lampposts](media/lamppost-prefab-instances.jpg)
 
-そして、インスタンスの 1 つを変更します。シーン エディターで、1 つの**スポット ライト** エンティティを選択し、スポット ライト コンポーネントのプロパティで、色を赤に変更します。［Properties grid］に、変更された［Color］プロパティが**太字**で表示されます。これは、そのプロパティがプレハブのプロパティをオーバーライドしていることを意味します。
+そして、インスタンスの 1 つを変更します。シーン エディターで、1 つの**スポット ライト** エンティティを選択し、スポット ライト コンポーネントのプロパティで、色を赤に変更します。［Properties grid］に、変更された［Color］プロパティが**太字の白**で表示されます。これは、そのプロパティがプレハブのプロパティをオーバーライドしていることを意味します。
 
 ![Overridden property](media/override-prefab-property.png)
 
 これを［Scene view］で確認できます。
 
-![Pink spotlight](media/pink-lamppost-prefab.png)
+![Pink spotlight](media/pink-lamppost-prefab.jpg)
 
 次に、プレハブ エディターに戻ってプレハブのスポット ライトの色を緑に変更するとどうなるか見てみましょう。
 
-![Changed colors to green](media/change-prefab-color-to-green.png)
+![Change color to green](media/change-prefab-color-to-green.png)
 
 街灯柱のうち 4 つは緑のライトになります。オーバーライドされたプロパティはプレハブを変更しても変わらないので、5 番目は赤のままです。
- 
-![Changed colors](media/lamppost-prefab-instances-with-override.png)
+
+![Changed colors](media/lamppost-prefab-instances-with-override.jpg)
 
 ## 関連項目
 
-* [プレハブ](prefabs.md)
+* [プレハブの索引](index.md)
 * [プレハブを作成する](create-a-prefab.md)
-* [プレハブを使用する](use-prefabs.md)
+* [プレハブを使用する](index.md)
 * [プレハブを編集する](edit-prefabs.md)
 * [入れ子になったプレハブ](nested-prefabs.md)
+* [プレハブ モデル](prefab-models.md)

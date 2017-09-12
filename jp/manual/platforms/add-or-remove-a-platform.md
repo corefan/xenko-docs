@@ -4,17 +4,17 @@
 
 プロジェクトのプラットフォームを追加または削除することができます。
 
-1.［Solution explorer］ (既定では左下) で、プロジェクトを右クリックして［Update package］>［Update Platforms］を選択します。
+1.［Solution explorer］(既定では左下) で、プロジェクトを右クリックして［Update package］>［Update Platforms］を選択します。
 
     ![Update platforms](media/update-platforms.png)
-    
+
    ［Select Platforms］ダイアログが開きます。
 
     ![Select platforms](media/select-platforms.png)
 
 2. サポートするプラットフォームを選択し、［OK］をクリックします。
 
-3. ツールバーの［Reload game assemblies］ボタンをクリックして、アセンブリを再ロードします。
+3. ツールバーの［Reload game assemblies and update scripts］ボタンをクリックして、アセンブリを再ロードします。
 
     ![Reload assemblies](media/reload-assemblies.png)
 

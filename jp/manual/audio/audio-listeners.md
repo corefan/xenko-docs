@@ -24,7 +24,7 @@
     エンティティはオーディオ リスナーになりました。
 
 > [!WARNING]
-iOS では、シーン内の[オーディオ リスナー コンポーネント](xref:SiliconStudio.Xenko.Audio.AudioListener)に対して複数のオブジェクトを作成できますが、実行時に使用されるオブジェクトは 1 つだけです。この問題は将来のリリースで解決されます。
+iOS では、シーン内の[オーディオ リスナー コンポーネント](xref:SiliconStudio.Xenko.Audio.AudioListener)に対して複数のオブジェクトを作成できますが、実行時に使用されるオブジェクトは 1 つだけです。
 
 ## 関連項目
 * [空間オーディオ](spatialized-audio.md)

@@ -13,7 +13,7 @@
 
 ## 1. オーディオ エミッター アセットをセットアップする
 
-1. **シーン エディター**で、オーディオ エミッターにするエンティティを選択します。
+1.［Scene view］で、オーディオ エミッターにするエンティティを選択します。
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
@@ -23,7 +23,7 @@
 
     次に、サウンドをエミッターに追加する必要があります。
 
-3.［Audio Emitter］で、緑のプラス記号アイコンをクリックして、サウンドの名前を指定します。
+3. ［Audio Emitter］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、サウンドの名前を指定します。
 
     ![Add New Sound Entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
@@ -31,7 +31,7 @@
 
     ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    または、手のアイコンをクリックして、［Asset picker］を開きます。
+    または、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 
@@ -41,7 +41,18 @@
 
 5. ステップ 3 と 4 を繰り返して、必要なサウンド アセットをすべて追加します。
 
+6. このオーディオ エミッターのプロパティを構成します。
+
+    ![Audio emitter properties](media/audio-emitter-properties.png)
+
+| プロパティ           | 説明                                                                                                                                                                                       |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use HRTF           | 頭部伝達関数 (HRTF) を有効にします。これを有効にすると、サウンドは 3D 空間内の特定のポイントから発しているように聞こえ、バイノーラル オーディオが合成されます。詳細については、「[HRTF](hrtf.md)」を参照してください。 |
+| Directional factor | オーディオの指向性を示します。値は 0 (最小) ～ 1 (最大) です。0 に設定すると、オーディオはすべての方向から放射されます。この設定は、スライダーまたは数値で制御できます。                                 |
+| Environment        | オーディオの残響タイプです。実際の環境の残響をシミュレートします (小、中、大、アウトドア)。                                                                                 |
+
 ## 2. オーディオを再生するスクリプトを作成する
+
 次に、サウンド アセットの再生と構成を行うスクリプトを作成する必要があります。
 
 1. スクリプトでは、使用する各サウンドに対して [AudioEmitterSoundController](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController) をインスタンス化する必要があります。
@@ -50,8 +61,8 @@
 
 	```cs
 	AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
-	AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
-	AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
+	AudioEmitterSoundController mySound1Controller = audioEmitterComponent［"MySound1"］;
+	AudioEmitterSoundController mySound2Controller = audioEmitterComponent［"MySound2"］;
 	```
 
 2. [AudioEmitterSoundController](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController) の次のプロパティとメソッドを使用して、オーディオを再生および構成します。
@@ -69,11 +80,11 @@
 
 次に例を示します。
 
-```
-mySound2Controller.IsLooping = true;
-mySound2Controller.Pitch = 2.0f;
-mySound2Controller.Volume = 0.5f;
-mySound2Controller.Play();
+```cs
+mySound1Controller.IsLooping = true;
+mySound1Controller.Pitch = 2.0f;
+mySound1Controller.Volume = 0.5f;
+mySound1Controller.Play();
 ```
 
 このサウンドは、元のサウンドの 2 倍のピッチと半分のボリュームでループします。詳細については、[AudioEmitterSoundController Xenko API のドキュメント](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController)を参照してください。
@@ -81,6 +92,14 @@ mySound2Controller.Play();
 ## 3. オーディオ エミッター エンティティにスクリプトを追加する
 
 Game Studio では、スクリプトは［Add component］の下にコンポーネントとして一覧表示されます。オーディオ エミッター エンティティにスクリプトを追加します。
+
+1.［Scene view］で、オーディオ エミッターにするエンティティを選択します。
+
+    ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
+
+2.［Add component］をクリックしてスクリプトを選択します。
+
+    ![Add audio script](media/add-sound-script.png)
 
 ## 関連項目
 * [空間オーディオ](spatialized-audio.md)

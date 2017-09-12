@@ -7,11 +7,9 @@
 
 他のアセットと同じようにシーンを作成できます。シーンは複雑なアセットなので、専用のエディターである**シーン エディター**があります。
 
-![Initial scene in the scene editor](media/create-a-scene-default-scene.png)
-
 ## シーンを作成する
 
-1.［Asset view］ (既定では下部のペイン) で［Add asset］をクリックして、［Scenes］を選択します。
+1.［Asset view］(既定では下部のペイン) で［Add asset］をクリックして、［Scenes］を選択します。
 
     ![Add a scene](media/add-scene.png)
 

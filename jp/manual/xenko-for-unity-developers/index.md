@@ -35,7 +35,7 @@ Unity® と同様に、Xenko プロジェクトは以下を含むディレクト
 
 * プロジェクトの ``.sln`` ソリューション ファイル。Game Studio または Visual Studio などの任意の IDE で開くことができます。
 
-* プロジェクトのソース ファイル、依存関係、リソース、構成、バイナリを含む **MyGame.Game** フォルダー。
+* プロジェクトのソース ファイル、依存関係、リソース、構成、バイナリを含む［MyGame.Game］フォルダー。
 
     ![Package folder structure](../files-and-folders/media/folder-structure.png)
 
@@ -43,9 +43,9 @@ Unity® と同様に、Xenko プロジェクトは以下を含むディレクト
 
 *［Bin］には、コンパイル済みのバイナリとデータが含まれます。プロジェクトをビルドすると、プラットフォームごとのサブディレクトリ含むフォルダーが作成されます。
 
-*［MyPackage.Game］には、ソース コードが含まれます。
+*［MyGame.Game］には、ソース コードが含まれます。
 
-*	［MyPackage.Platform］には、プロジェクトがサポートするプラットフォーム用の追加コードが含まれます。プラットフォームごとにフォルダーが作成されます (*MyPackage.Windows*、*MyPackage.Linux* など)。通常、これらのフォルダーは小さく、プログラムのエントリ ポイントだけが含まれます。
+*	［MyGame.Platform］には、プロジェクトがサポートするプラットフォーム用の追加コードが含まれます。プラットフォームごとにフォルダーが作成されます (［MyGame.Windows］、［MyGame.Linux］など)。通常、これらのフォルダーは小さく、プログラムのエントリ ポイントだけが含まれます。
 
 *［obj］には、キャッシュされたファイルが含まれます。このフォルダーは、プロジェクトをビルドすると作成されます。アセットとコードの完全なリビルドを強制的に行うには、このフォルダーを削除して、プロジェクトを再度ビルドします。
 
@@ -69,7 +69,7 @@ Game Studio の［Project］>［Show in Explorer］からプロジェクト デ�
 
 Unity® では、グローバルな設定が個別のアセットに保存されます (グラフィックスの設定、品質の設定、オーディオ マネージャーなど)。
 
-Xenko では、グローバルな設定は 1 つのアセット (**Game Settings** アセット) に保存されます。以下の情報を構成できます。
+Xenko では、グローバルな設定は 1 つのアセット (［Game Settings］アセット) に保存されます。以下の情報を構成できます。
 
 * **既定のシーン**
 * **レンダリングの設定**
@@ -78,7 +78,7 @@ Xenko では、グローバルな設定は 1 つのアセット (**Game Settings
 * **物理特性の設定**
 * **オーバーライド**
 
-Game Settings アセットを使用するには、［Asset view］で **GameSettings** を選択し、［Property grid］でプロパティを表示します。
+Game Settings アセットを使用するには、［Asset view］で［Game Settings］を選択し、［Property grid］でプロパティを表示します。
 
 ![Game settings](media/game-settings.png)
 
@@ -92,15 +92,15 @@ Unity® と同様に、Xenko ではすべてのオブジェクトをシーンに
 
 既定のシーンを設定するには:
 
-1. **GameSettings** のプロパティで、［Default Scene］の隣の［Asset picker］ボタンをクリックします。
+1.［Game Settings］のプロパティで、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
 
-    **アセット ピッカー**が開きます。
+   ［Select an asset］ウィンドウが開きます。
 
-2. アセット ピッカーで既定のシーンを選択し、［OK］をクリックします。
+2. 既定のシーンを選択し、［OK］をクリックします。
 
-シーンの詳細については、「[シーンの概要](../game-studio/scenes.md)」を参照してください。
+シーンの詳細については、「[シーン](../game-studio/scenes.md)」を参照してください。
 
 ## エンティティと GameObject
 
@@ -117,7 +117,7 @@ Unity® で GameObject にコンポーネントを追加するのと同じよう
 Game Studio でコンポーネントをエンティティに追加するには:
 
 1. コンポーネントを追加するエンティティを選択します。
-2.［Property grid］ (既定では右側) で［Add component］をクリックし、ドロップダウン リストからコンポーネントを選択します。
+2.［Property grid］(既定では右側) で［Add component］をクリックし、ドロップダウン リストからコンポーネントを選択します。
 
     ![Add component](media/xenko-vs-unity-add-component-to-entity.png)
 
@@ -131,9 +131,9 @@ Unity® の GameObject と同じように、Xenko の各エンティティには
 
 ## アセット
 
-Unity® では、**project browser** でアセットを選択し、［Inspector］タブでプロパティを編集します。
+Unity® では、［Project browser］でアセットを選択し、［Inspector］タブでプロパティを編集します。
 
-Xenko もよく似ています。［Asset view］でアセットを選択し、［Property grid］でプロパティを編集します。
+Xenko も同様です。［Asset view］でアセットを選択し、［Property grid］でプロパティを編集します。
 
 ![Asset and properties](media/asset-and-properties.png)
 
@@ -176,13 +176,15 @@ Unity® と同様に、Xenko では次のファイル形式がサポートされ
 
 | アセットの種類  | サポートされる形式                                           
 |------|---|
-| モデル、アニメーション、スケルトン | .dae、.3ds、.obj、.blend、.x、.md2、.md3、.dxf、.fbx          |
-| スプライト、テクスチャ、スカイボックス   | .dds、.jpg、.jpeg、.png、.gif、.bmp、.tga、.psd、.tif、.tiff |
-| オーディオ  	                 | .wav、.mp3、.ogg、.aac、.aiff、.flac、.m4a、.wma、.mpc     |
-| ビデオ | .mov、.mp4、.wmv |
+| モデル、アニメーション、スケルトン | .dae、.3ds、.obj、.blend、.x、.md2、.md3、.dxf、.fbx
+| スプライト、テクスチャ、スカイボックス   | .dds、.jpg、.jpeg、.png、.gif、.bmp、.tga、.psd、.tif、.tiff
+| オーディオ  	                 | .wav、.mp3、.ogg、.aac、.aiff、.flac、.m4a、.wma、.mpc
 | フォント | .ttf、.otf |
 
-アセットの詳細については、「[アセットの概要](../game-studio/assets.md)」を参照してください。
+アセットの詳細については、「[アセット](../game-studio/assets.md)」を参照してください。
+
+> [!NOTE]
+> * 現在、Xenko は動画ファイルをサポートしていません。
 
 ## プレハブ
 
@@ -196,7 +198,7 @@ Unity® とは異なり、Xenko ではプレハブを他のプレハブに追加
 
 Unity® でこれを行うには、自動車の種類ごとに異なるプレハブを作成し、加速パラメーターを 1 つずつ変更する必要があります。
 
-Xenko でのプレハブの使用の詳細については、「[プレハブ](../game-studio/prefabs.md)」を参照してください。
+Xenko でのプレハブの使用の詳細については、「[プレハブ](../game-studio/prefabs/index.md)」を参照してください。
 
 ## アーキタイプ
 
@@ -224,34 +226,24 @@ Xenko はさまざまな入力をサポートします。以下のコード サ�
 
 Xenko での入力の詳細については、「[入力](../input/index.md)」を参照してください。
 
-### Unity®
-
+#### Unity®
 ```cs
 void Update()
 {
-    if (Input.GetButtonDown("Crouch"))
+    // Space バーが押された 1 フレームについて true
+    if(Input.GetKeyDown(KeyCode.Space))
     {
-        // 処理を実行する。
+        // 処理を行う。
     }
+
+    // このジョイスティック ボタンがダウン状態の間 true
+    if (Input.GetButton("joystick button 0"))
+    {
+        // 処理を行う。
+    }
+
     float Horiz = Input.GetAxis("Horizontal");
     float Vert = Input.GetAxis("Vertical");
-    // 別の処理を実行する。
-}
-```
-
-### Xenko
-
-```cs
-public override void Update()
-{
-    //入力イベント。
-
-    if (Input.IsPadButtonDown(0, GamePadButton.B)
-    {
-        // 処理を実行する。
-    }
-    float Horiz = Input.GetGamePad(0).RightThumb.X;
-    float Vert = Input.GetGamePad(0).RightThumb.Y;
     // 別の処理を実行する。
 }
 ```
@@ -432,7 +424,7 @@ Game Studio のスクリプト エディターでスクリプトを開くには�
 
 Visual Studio などの他の IDE でスクリプトを編集することもできます。外部 IDE でスクリプトを編集すると、自動的に再ロードされます。
 
-Xenko をインストールするときに Visual Studio プラグインをインストールすると、Game Studio からプロジェクトを Visual Studio で開くことができます。そのためには、Game Studio のツールバーで［Open in IDE］をクリックします。
+Xenko をインストールするときに Visual Studio プラグインをインストールすると、Game Studio からプロジェクトを Visual Studio で開くことができます。そのためには、Game Studio ツールバーで［Open in IDE］をクリックします。
 
 ![Open project in Visual Studio](media/xenko-vs-unity-open-project-in-visual-studio.png)
 
@@ -544,13 +536,13 @@ Unity® とは異なり、スクリプトを作成した後は、アセンブリ
 
     ![Select an entity](../scripts/media/select-entity.png)
 
-2.［Property grid］ (既定では右側) で、［Add component］をクリックし、追加するスクリプトを選択します。
+2.［Property grid］(既定では右側) で、［Add component］をクリックし、追加するスクリプトを選択します。
 
 ![Add script component](../scripts/media/add-script-component.png)
 
 Unity® では、スクリプト コンポーネントは［Components］>［Scripts］の下にグループ化されています。Xenko では、スクリプトはグループ化されません。Game Studio では、他のコンポーネントと一緒にアルファベット順に一覧表示されます。
 
-Xenko でのスクリプトの追加の詳細については、「[スクリプトを追加する](../scripts/add-a-script.md)」を参照してください。
+Xenko でのスクリプトの追加の詳細については、「[スクリプトを使用する](../scripts/use-a-script.md)」を参照してください。
 
 ## ゲームプレイのスクリプト化
 
@@ -588,7 +580,7 @@ public override void Start()
 {
     // スクリプトの初期化。
     var car = CarPrefab.Instantiate();
-    SceneSystem.SceneInstance.Scene.Entities.AddRange(car);
+    SceneSystem.SceneInstance.RootScene.Entities.AddRange(car);
     car.First().Transform.Position = SpawnPosition;
     car.First().Transform.Rotation = SpawnRotation;
     car.First().Name = "MyNewEntity";
@@ -686,6 +678,18 @@ Entity ParentEntity = lightComponent.Entity;
 Game Studio は、［Output］タブ (既定では Game Studio の下部) に表示します。
 
 ![Output tab](media/output-tab.png)
+
+
+### デバッグ メッセージを表示する
+
+Visual Studio の出力を表示するには、次のようにします。
+
+```cs
+System.Diagnostics.Debug.WriteLine("hello");
+```
+
+>[!NOTE]
+>デバッグ メッセージを表示するには、Game Studio ではなく Visual Studio からゲームを実行する必要があります。Game Studio の出力ウィンドウに表示する方法はありません。
 
 ---
 

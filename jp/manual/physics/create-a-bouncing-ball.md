@@ -5,6 +5,9 @@
 
 このチュートリアルでは、[静的コライダーと剛体コンポーネント](colliders.md)を使用して、床で跳ね返るボールを作成します。
 
+>[!NOTE]
+>このチュートリアルのスクリーンショットとビデオは、前のバージョンの Xenko を使用して作成されました。そのため、UI の一部および既定のスカイボックスと球体は、お使いのバージョンと異なる場合があります。
+
 ## 1. 新しいプロジェクトを作成する
 
 **新しいゲーム** プロジェクトを開始します。
@@ -23,7 +26,7 @@
 
 3. エンティティの形状と一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
 
-4.［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、［Infinite Plane］を選択します。
+4.［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Infinite Plane］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
@@ -41,7 +44,7 @@
 
 3. 地面エンティティの場合と同じように、エンティティと一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Rigidbody］コンポーネントを展開してプロパティを表示します。
 
-4.［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、［Sphere］を選択します。
+4.［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Sphere］を選択します。
 
      ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 

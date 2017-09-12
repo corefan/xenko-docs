@@ -26,13 +26,13 @@
         </video>
     </p>
 
-    または、手のアイコンをクリックして、アセット ピッカーを開きます。
+    または、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
 
     ![Pick asset up](media/pick-asset-up.png)
 
     そこで、スプライト シートを選択します。
 
-    ![Asset picker](media/asset-picker.png)
+    ![Select an asset](media/asset-picker.png)
 
 スプライトがエンティティに追加されます。
 
@@ -40,7 +40,7 @@
 
 実行時にスクリプトを使用してスプライトをレンダリングできます。そのためには、スプライト コンポーネントを含むエンティティにスクリプトをアタッチします。
 
-スクリプトをエンティティに追加する方法については、「[スクリプトを追加する](../scripts/add-a-script.md)」を参照してください。
+スクリプトをエンティティに追加する方法については、「[スクリプトを使用する](../scripts/use-a-script.md)」を参照してください。
 
 ### コード サンプル
 

@@ -18,6 +18,8 @@
 
 ![Select 'Is trigger'](media/triggers-select-is-trigger-checkbox.png)
 
+## トリガーの衝突を検出する
+
 トリガーに何かが入ったことは、次のコードを使用して認識できます。
 
 ```cs
@@ -25,6 +27,37 @@
                 var firstCollision = await trigger.NewCollision();
 
                 var otherCollider = trigger == firstCollision.ColliderA ? firstCollision.ColliderB : firstCollision.ColliderA;
+```
+
+または、`TrackingHashSet` に直接アクセスします。
+
+```cs
+var trigger = Entity.Get<PhysicsComponent>();
+foreach (var collision in trigger.Collisions)
+{
+    // 衝突したときの処理を行う
+}
+```
+
+または、`TrackingHashSet` イベントを使用します。
+
+```cs
+var trigger = Entity.Get<PhysicsComponent>();
+trigger.Collisions.CollectionChanged += (sender, args) =>
+{
+    if (args.Action == NotifyCollectionChangedAction.Add)
+    {
+        // 新しい衝突
+        var collision = (Collision) args.Item;
+        // 処理を行う
+    }
+    else if (args.Action == NotifyCollectionChangedAction.Remove)
+    {
+        // 古い衝突
+        var collision = (Collision)args.Item;
+        // 処理を行う
+    }
+};
 ```
 
 トリガーの使用方法の例については、「[トリガーをスクリプトにする](script-a-trigger.md)」チュートリアルを参照してください。

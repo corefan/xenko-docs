@@ -13,11 +13,11 @@ Xenko による [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) の初
 * `ContinuousCollisionDetection` は、連続衝突検出 (CCD) を有効にして [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) を初期化します。CCD は、高速で移動するエンティティ (弾丸など) が誤って他のエンティティを通り抜けないようにします。
 
 > [!NOTE]
-> ``SoftBodySupport``、``MultiThreaded``、``UseHardwareWhenPossible`` の各フラグは、現在は無効になっています。将来のリリースで追加される予定です。
+> ``SoftBodySupport``、``MultiThreaded``、``UseHardwareWhenPossible`` の各フラグは、現在は無効になっています。
 
 実行時に、[Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) の一部のパラメーターを変更できます。
 
-* `Gravity` — グローバル重力 (メートル毎秒毎秒単位)
+* `Gravity` — グローバル重力 ([ワールド単位](../game-studio/world-units.md)毎秒毎秒単位)
 * `FixedTimeStep` — シミュレーションの時間ステップの長さ (秒単位)
 * `MaxSubSteps` — エンジンが更新ごとに取得する固定時間ステップの最大数
 

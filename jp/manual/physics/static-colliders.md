@@ -5,7 +5,7 @@
 
 **静的コライダー**は、重力や衝突などの力では動きませんが、他の物理オブジェクトがそれに対して衝突することができます。一般的な静的コライダーは、壁、床、大きな岩などの強力な不動オブジェクトです。
 
-![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
+![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
 ## 静的コライダーを追加する
 
@@ -17,7 +17,7 @@
 
 3. エンティティの形状と一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
 
-4.［Collider Shapes］の隣にある**緑色のプラス アイコン**をクリックして、適当な形状を選択します。
+4.［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、目的の形状を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
@@ -44,7 +44,7 @@ Is Trigger            | 静的コライダーが[トリガー](triggers.md)か�
 
 実行時に静的コライダーを動かす必要がある場合は、スクリプトで実現できます。
 
-```
+```cs
 PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;
 PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
 PhysicsComponent.UpdatePhysicsTransformation();

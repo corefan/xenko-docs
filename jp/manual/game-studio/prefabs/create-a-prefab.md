@@ -1,4 +1,5 @@
 # プレハブを作成する
+
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
@@ -6,13 +7,13 @@
 
 ![Create a prefab from the Asset View](media/create-prefab-from-asset-view.png)
 
-既定の名前［Prefab］で、空のプレハブ アセットが作成されます。アセットをダブルクリックして［Prefab Editor］を開き、エンティティを追加します。
+既定の名前 *Prefab* で、空のプレハブ アセットが作成されます。アセットをダブルクリックして［Prefab Editor］を開き、エンティティを追加します。
 
 ## エンティティからプレハブを作成する
 
 既存の 1 つまたは複数のエンティティからプレハブを作成することもできます。
 
-1. **シーン エディター**で、プレハブ作成の基にするエンティティ (1 つまたは複数) を選択します。
+1. **シーンエディター**で、プレハブ作成の基にするエンティティ (1 つまたは複数) を選択します。
 >[!TIP]
 > 複数の項目を選択するには、Ctrl キーを押しながらクリックします。
 
@@ -21,6 +22,8 @@
 ![Create a prefab from selection](media/create-prefab-from-selection.gif)
 
 選択したエンティティからプレハブ アセットが作成されます。［Asset view］から新しいプレハブにアクセスできます。
+
+![Prefab in asset view](media/prefab-asset.png)
 
 >[!NOTE]
 >選択したエンティティからプレハブを作成すると、最初に選択したエンティティ自体が**プレハブになります**。
@@ -31,8 +34,9 @@
 
 ## 関連項目
 
-* [プレハブ](prefabs.md)
-* [プレハブを使用する](use-prefabs.md)
+* [プレハブの索引](index.md)
+* [プレハブを使用する](index.md)
 * [プレハブを編集する](edit-prefabs.md)
 * [入れ子になったプレハブ](nested-prefabs.md)
 * [プレハブのプロパティをオーバーライドする](override-prefab-properties.md)
+* [プレハブ モデル](prefab-models.md)

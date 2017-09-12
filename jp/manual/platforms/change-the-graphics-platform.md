@@ -4,14 +4,16 @@
 
 **グラフィックス プラットフォーム**は、プロジェクトを実行するデバイスのグラフィックス ハードウェアを制御します。デバイスが異なると、サポートされるグラフィックス プラットフォームも異なります。たとえば、iOS は OpenGL ES グラフィックス プラットフォームをサポートします。ゲームで使用するグラフィックス プラットフォームを選択し、異なるプラットフォーム (Windows、Android など) に対するオーバーライドを追加できます。
 
+グラフィックス プラットフォームは [Game Settings](../game-studio/game-settings.md) アセットで設定します。
+
 > [!NOTE]
 > 使用するグラフィックス プラットフォーム用の最新のドライバーがあることを確認してください。
 
-1.［Asset view］で［GameSettings］アセットを選択します。
+1.［Asset view］で **Game Settings** アセットを選択します。
 
     ![Game settings asset](media/games-settings-asset.png)
 
-2.［Property grid］の［Rendering Settings］>［Preferred Graphics Platform］で、使用するグラフィックス プラットフォームを選択します。
+2.［Property grid］の［Rendering Settings］>［Target graphics platform］で、使用するグラフィックス プラットフォームを選択します。
 
     ![Select graphics platform](media/change-graphics-platform.png)
 
@@ -27,7 +29,7 @@
 
 特定のプラットフォームに対して使用されるグラフィックス プラットフォームをオーバーライドできます。たとえば、Linux では Vulkan を使用し、他のプラットフォームでは既定のグラフィックス プラットフォームを使用するといったことができます。
 
-1. **GameSettings** アセットを選択し、［Property grid］の［Overrides］で**緑色のプラス アイコン**をクリックします。
+1. **GameSettings** アセットを選択し、［Property grid］の［Overrides］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     ![Select graphics platform](media/add-override.png)
 
@@ -56,3 +58,8 @@
     たとえば、このプロジェクトは Vulkan を使用しています。
 
     ![Select graphics platform](media/check-platform-at-runtime.png)
+
+## 関連項目
+
+* [プラットフォームの索引](index.md)
+* [ゲームの設定](../game-studio/game-settings.md)

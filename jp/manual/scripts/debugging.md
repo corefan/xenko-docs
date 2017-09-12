@@ -28,14 +28,14 @@
 > [!NOTE]
 > ブレーク ポイントで止まらない場合は、アクティブなシーンのエンティティにスクリプトをアタッチしてあることを確認してください。
 
-Visual Studio でのデバッグの詳細については、[MSDN のドキュメント](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx)を参照してください。
+Visual Studio でのデバッグの詳細については、[MSDN のドキュメント](https://msdn.microsoft.com/ja-jp/library/sc65sadd.aspx)を参照してください。
 
 ## 関連項目
 
-* [Visual Studio でのデバッグ (MSDN ドキュメント)](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx)
+* [Visual Studio でのデバッグ (MSDN ドキュメント)](https://msdn.microsoft.com/ja-jp/library/sc65sadd.aspx)
 * [スクリプトの種類](types-of-script.md)
 * [スクリプトを作成する](create-a-script.md)
-* [スクリプトを追加する](add-a-script.md)
+* [スクリプトを使用する](use-a-script.md)
 * [パブリック プロパティとフィールド](public-properties-and-fields.md)
 * [スケジュール設定と優先順位](scheduling-and-priorities.md)
 * [イベント](events.md)

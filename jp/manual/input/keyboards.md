@@ -5,7 +5,7 @@
 
 **キーボード**は、デスクトップ ゲームで最も一般的な入力デバイスです。Xenko にはキーボード入力を処理する 2 つの方法があります。
 
-* **キーの状態**を問い合わせる
+* **キーの状態**を問い合わせる**
 * [KeyEvent](xref:SiliconStudio.Xenko.Input.KeyEvent) リストを使用する
 
 どちらにも、[input](xref:SiliconStudio.Xenko.Input.InputManager) 基底クラスからアクセスできます。これらのオプションの詳細については、「[入力](index.md)」を参照してください。
@@ -14,18 +14,15 @@
 
 キーボード入力を処理する前に、[Input.HasKeyboard](xref:SiliconStudio.Xenko.Input.InputManager.HasKeyboard) を使用してキーボードが接続されているかどうかを調べます。
 
-> [!NOTE]
-> Xenko では、実行中に接続されたキーボードはサポートされません。この機能は将来のリリースで追加されます。
-
 ## キーの状態を取得する
 
 **キーの状態**と**状態の変化**を、以下のメソッドで問い合わせることができます。
 
 | メソッド | 説明 |
 | --- | --- |
-| [IsKeyDown(Keys)](xref:SiliconStudio.Xenko.Input.InputManager.IsKeyDown\(SiliconStudio.Xenko.Input.Keys\)) | 指定したキーが_ダウン_状態かどうかを調べます。 |
-| [IsKeyPressed(Keys)](xref:SiliconStudio.Xenko.Input.InputManager.IsKeyPressed\(SiliconStudio.Xenko.Input.Keys\)) | 指定したキーが最後の更新以降に_押された_かどうかを調べます。 |
-| [IsKeyReleased(Keys)](xref:SiliconStudio.Xenko.Input.InputManager.IsKeyReleased\(SiliconStudio.Xenko.Input.Keys\)) | 指定したキーが最後の更新以降に_放された_かどうかを調べます。 |
+| [IsKeyDown(Keys)](xref:SiliconStudio.Xenko.Input.InputManager.IsKeyDown\(SiliconStudio.Xenko.Input.Keys\)) | 指定したキーが**ダウン**状態かどうかを調べます。
+| [IsKeyPressed(Keys)](xref:SiliconStudio.Xenko.Input.InputManager.IsKeyPressed\(SiliconStudio.Xenko.Input.Keys\)) | 指定したキーが最後の更新以降に**押された**かどうかを調べます。
+| [IsKeyReleased(Keys)](xref:SiliconStudio.Xenko.Input.InputManager.IsKeyReleased\(SiliconStudio.Xenko.Input.Keys\)) | 指定したキーが最後の更新以降に**放された**かどうかを調べます。
 
 > [!NOTE]
 > Xenko では、解釈済みのキーの取得はサポートされません (特殊な文字や大文字など)。
@@ -36,16 +33,18 @@
 
 代わりに、[Input](xref:SiliconStudio.Xenko.Input.InputManager) 基底クラスで使用できる**キー イベント** コレクションを使用します。
 
-| パブリック リスト | 説明 |
-| --- | --- |
-| [KeyDown](xref:SiliconStudio.Xenko.Input.InputManager.KeyDown) | 最後の更新でダウン状態であったキーのリストを取得します。 |
-| [KeyEvents](xref:SiliconStudio.Xenko.Input.InputManager.KeyEvents) | 最後の更新でのキー イベントのリストを取得します (押されたキーまたは放されたキー)。 |
+| パブリック リスト | 説明 l
+| ----------- | ---
+| [InputManager.DownKeys](xref:SiliconStudio.Xenko.Input.InputManager.DownKeys) | 最後の更新でダウン状態であったキーのリストを取得します。
+| [InputManager.PressedKeys](xref:SiliconStudio.Xenko.Input.InputManager.PressedKeys) | 最後の更新で押されたキーのリストを取得します。
+| [InputManager.ReleasedKeys](xref:SiliconStudio.Xenko.Input.InputManager.ReleasedKeys) | 最後の更新で放されたキーのリストを取得します。
+| [InputManager.KeyEvents](xref:SiliconStudio.Xenko.Input.InputManager.KeyEvents) | 最後の更新でのキー イベントのリストを取得します (押されたキーまたは放されたキー)。
 
-すべての [KeyEvent](xref:SiliconStudio.Xenko.Input.KeyEvent) に、2 つのプロパティ [Key](xref:SiliconStudio.Xenko.Input.KeyEvent.Key) (影響を受けたキー) と [KeyEventType](xref:SiliconStudio.Xenko.Input.KeyEvent.Type) (キーが_押された_か、_放された_か) があります。
+すべての @'SiliconStudio.Xenko.Input.KeyEvent' に、2 つのプロパティ @'SiliconStudio.Xenko.Input.KeyEvent.Key' (影響を受けたキー) と @'SiliconStudio.Xenko.Input.ButtonEvent.IsDown' (キーの新しい状態) があります。
 
 ## コード例
 
-```
+```cs
 public class KeyboardEventsScript : SyncScript
 {
 	// Game Studio に表示された、パブリック メンバー変数とプロパティの宣言。

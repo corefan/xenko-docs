@@ -7,7 +7,7 @@
 
 アニメーション コンポーネントは、更新されるときに、アニメーション自体を更新するのではなく、スクリプトで `void BuildBlendTree(FastList<AnimationOperation> animationList)` を呼び出します。これにより、アニメーション クリップ、速度、ブレンドの任意の組み合わせを選択できますが、重労働をすべてスクリプト側で行う必要があるため、困難さも増します。
 
-Xenko に含まれるテンプレート［First-person shooter］、［Third-person platformer］、［Top-down RPG］は、カスタム ブレンド ツリーを使用する方法の例です。
+Xenko に含まれるテンプレート ［First-person shooter］、［Third-person platformer］、[Top-down RPG］は、カスタム ブレンド ツリーを使用する方法の例です。
 
 ## コード サンプル
 
@@ -40,7 +40,7 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
         // 重要なステップ
         // カスタム ブレンド ツリー ビルダーを設定することにより、アニメーション システムの既定の動作を上書きできる。
         // 代わりに、BuildBlendTree(FastList<AnimationOperation> blendStack) がフレームごとに呼び出される。
-        // Update() でアニメーションの状態を交信した後、
+        // Update() でアニメーションの状態を更新した後、
         // 新しいアニメーションの状態 (スタック = ブレンド ツリー) をアニメーション システムに渡す必要がある。
         AnimationComponent.BlendTreeBuilder = this;
 
@@ -62,7 +62,7 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
         var time = Game.DrawTime;
 
         // この更新関数は、異なる期間のアニメーションを考慮し、
-        //ブレンドされた最大期間を基準にして現在時間を維持する。
+        // ブレンドされた最大期間を基準にして現在時間を維持する。
         long blendedMaxDuration = (long)MathUtil.Lerp(AnimationWalk.Duration.Ticks, AnimationRun.Duration.Ticks, LerpFactor);
 
         var currentTicks = TimeSpan.FromTicks((long)(currentTime * blendedMaxDuration));

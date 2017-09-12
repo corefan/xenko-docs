@@ -1,6 +1,6 @@
 # プロジェクトの構造
 
-Xenko では、プロジェクトは [Visual Studio ソリューション ファイル](https://msdn.microsoft.com/en-us/library/bb165951.aspx?f=255&MSPPError=-2147217396)として保存されます。Xenko Game Studio や、Visual Studio などの任意の IDE で、プロジェクトを開くことができます。
+Xenko では、プロジェクトは [Visual Studio ソリューション ファイル](https://msdn.microsoft.com/ja-jp/library/bb165951.aspx?f=255&MSPPError=-2147217396)として保存されます。Xenko Game Studio や、Visual Studio などの任意の IDE で、プロジェクトを開くことができます。
 
 Xenko では、プロジェクト ファイルは**パッケージ**にまとめられます。各パッケージは、複数のフォルダーと、パッケージについて記述されている *.xkpkg ファイルで構成されます。
 
@@ -10,13 +10,13 @@ Xenko では、プロジェクト ファイルは**パッケージ**にまとめ
 
 ![Folder structure](media/folder-structure.png)
 
-*［Assets］には、ゲーム内の要素を表す[アセット](../game-studio/assets.md) ファイルが含まれます。
+*［Assets］には、ゲーム内の要素を表す[アセット](../game-studio/assets.md)ファイルが含まれます。
 
 *［Bin］には、コンパイル済みのバイナリとデータが含まれます。プロジェクトをビルドすると、プラットフォームごとのサブディレクトリ含むフォルダーが作成されます。
 
 *［MyGame.Game］には、クロスプラットフォームの Visual Studio プロジェクト (.csproj) として、ゲームのソース コードが含まれます。同じゲームに複数のプロジェクトを追加できます。
 
-*	［MyGame.Platform］には、プロジェクトがサポートするプラットフォーム用の追加コードが含まれます。プラットフォームごとにフォルダーが作成されます (［MyPackage.Windows］、［MyPackage.Linux］など)。通常、これらのフォルダーは小さく、プログラムのエントリ ポイントだけが含まれます。
+*	［MyGame.Platform］には、プロジェクトがサポートするプラットフォーム用の追加コードが含まれます。プラットフォームごとにフォルダーが作成されます (*MyPackage.Windows*、*MyPackage.Linux* など)。通常、これらのフォルダーは小さく、プログラムのエントリ ポイントだけが含まれます。
 
 *［obj］には、キャッシュされたファイルが含まれます。このフォルダーは、プロジェクトをビルドすると作成されます。
 

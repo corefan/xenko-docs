@@ -10,22 +10,28 @@
 
 ## コンポーネントでアセットを参照する
 
-多くの種類のコンポーネントはアセットを参照します。たとえば、モデル コンポーネントはモデル アセットを参照します。アセットを必要とするコンポーネントは、**アセット ピッカー**ドックを備えています。
+多くの種類のコンポーネントはアセットを使用します。たとえば、モデル コンポーネントはモデル アセットを参照します。
 
-![Asset Picker](media/use-assets-asset-picker-dock.png)
+アセットを使用するコンポーネントの［Property grid］には**アセット ドック**があります。
 
-アセットをエンティティ コンポーネントに追加するには、［Property grid］のコンポーネント プロパティの**アセット ピッカー**にアセットをドラッグします。テキスト フィールドまたは空のサムネイルにアセットをドロップできます。
+![Select an asset](media/use-assets-asset-picker-dock.png)
+
+アセットをエンティティ コンポーネントに追加するには、［Property grid］のコンポーネント プロパティのアセット ドックにアセットをドラッグします。テキスト フィールドまたは空のサムネイルにアセットをドロップできます。
 
 ![Drag and drop an asset](media/use-assets-drag-and-drop.png)
 
-または、**手のアイコン** ![](media/use-assets-hand-icon.png) をクリックして［Asset picker］を開き、一覧からアセットを選択します。
+または、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
-![Asset picker](media/use-assets-asset-picker.png)
+![Select an asset](media/use-assets-asset-picker.png)
+
+［Select an asset］ウィンドウが開きます。
 
 > [!NOTE]
-> アセット ピッカーには、プロパティから予想される種類のアセットだけが表示されます。たとえば、プロパティがオーディオ リスナーの場合、アセット ピッカーにはオーディオ アセットだけが表示されます。
+>［Select an asset］ウィンドウには、コンポーネントから予想される種類のアセットだけが表示されます。たとえば、コンポーネントがオーディオ リスナーの場合、ウィンドウにはオーディオ アセットだけが表示されます。
 
-アセットを追加すると、アセット ピッカー ドックにアセットの名前とサムネイル画像が表示されます。
+コンポーネントにアセットを追加すると、アセット ドックにアセットの名前とサムネイル画像が表示されます。
+
+![Asset displayed](media/asset-displayed.png)
 
 ## 他のアセットでアセットを参照する
 
@@ -35,7 +41,9 @@
 
 ## 参照をクリアする
 
-アセットへの参照をクリアするには、アセット ピッカー ドックの ![eraser](media/use-assets-eraser.png) アイコンを使用します。
+アセットの参照をクリアするには、**アセット ドック**で ![eraser](media/use-assets-eraser.png) (［Clear reference］) をクリックします。
+
+![Use eraser](media/use-eraser.png)
 
 ## 参照を調べる
 
@@ -64,7 +72,7 @@ var model = Content.Load<Model>("AssetFolder/MyModel");
 Entity entity = new Entity(position, "Entity Added by Script") { new ModelComponent { Model = model } };
 
 // 新しいエンティティをシーンに追加する
-SceneSystem.SceneInstance.Scene.Entities.Add(entity);
+SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
 ```
 
 > [!TIP]

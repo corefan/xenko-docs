@@ -19,7 +19,7 @@ Xenko のスクリプトは **C#** で記述します。Game Studio または別
 * [Game](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Game): ゲームに関するすべての情報にアクセスします
 * [GraphicsDevice](xref:SiliconStudio.Xenko.Engine.ScriptComponent.GraphicsDevice): GPU リソースを作成するための低レベルのグラフィックス デバイスです
 * [Input](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Input): キーボード、マウス、ゲームパッドの状態とイベントです
-* [Services](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Services): Services：独自のサービスの登録に使用できるサービスのレジストリです
+* [Services](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Services): 独自のサービスの登録に使用できるサービスのレジストリです
 * [SceneSystem](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SceneSystem): 現在表示されているシーンです
 * [Script](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Script): スクリプト マネージャーにアクセスして、スクリプトの終了をスケジュールまたは待機します
 * [SpriteAnimation](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SpriteAnimation): スプライトをアニメーション化します
@@ -31,9 +31,10 @@ Xenko で C# の標準クラスを使用することもできますが、これ�
 
 * [スクリプトの種類](types-of-script.md)
 * [スクリプトを作成する](create-a-script.md)
-* [スクリプトを追加する](add-a-script.md)
+* [スクリプトを使用する](use-a-script.md)
 * [パブリック プロパティとフィールド](public-properties-and-fields.md)
 * [スケジュール設定と優先順位](scheduling-and-priorities.md)
 * [イベント](events.md)
 * [デバッグ](debugging.md)
 * [プリプロセッサ変数](preprocessor-variables.md)
+* [コードからモデルを作成する](create-a-model-from-code.md)

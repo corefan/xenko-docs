@@ -51,7 +51,7 @@
 * [プラットフォーム](../platforms/index.md)
 * [スクリプトの種類](types-of-script.md)
 * [スクリプトを作成する](create-a-script.md)
-* [スクリプトを追加する](add-a-script.md)
+* [スクリプトを使用する](use-a-script.md)
 * [パブリック プロパティとフィールド](public-properties-and-fields.md)
 * [スケジュール設定と優先順位](scheduling-and-priorities.md)
 * [イベント](events.md)

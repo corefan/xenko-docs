@@ -1,5 +1,4 @@
 # サウンド アセットのプロパティ
-
 ［Asset view］でサウンド アセットを選択した後は、［Property grid］でそのプロパティを構成できます。
 
 ![Sound asset properties](media/audio-asset-properties.png)

@@ -9,11 +9,18 @@
 
 他にも次のような便利なプロパティがあります。
 
-| プロパティ | 説明|
-| ----- | ---- |
-| [Animations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_Animations) | この [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) に関連付けられているアニメーション クリップを取得します。 |
-| [BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder) | アニメーション ブレンド ツリー ビルダーを取得または設定します。カスタム ブレンド ツリーを作成できることに注意してください。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください。 |
-| [PlayingAnimations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_PlayingAnimations) | アクティブなアニメーションのリストを取得します。それを使用して、スタートアップ アニメーションをカスタマイズします。再生中のアニメーションはアニメーション プロセッサによって自動的に更新されるので、リストを変更するとき、または再生中のアニメーションに対する参照を保持するときは、注意してください。 |
+| プロパティ | 説明
+| -------- | -----------
+| [Animations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_Animations) | この [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) に関連付けられているアニメーション クリップを取得します
+| [BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder) | アニメーション ブレンド ツリー ビルダーを取得または設定します。カスタム ブレンド ツリーを作成できることに注意してください。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください
+| [PlayingAnimations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_PlayingAnimations) | アクティブなアニメーションのリストを取得します。それを使用して、スタートアップ アニメーションをカスタマイズします。再生中のアニメーションはアニメーション プロセッサによって自動的に更新されるので、リストを変更するとき、または再生中のアニメーションに対する参照を保持するときは、注意してください
+
+>[!NOTE]
+>スクリプトで参照しているアニメーション クリップは、[AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) の下の同じエンティティに追加する必要があります。
+
+>![Animations added to component](media/animations-added-to-component.png)
+
+>詳細については、「[アニメーションのセットアップ](set-up-animations.md)」を参照してください。
 
 ## 作成済みの **AnimationStart** スクリプトを使用する
 
@@ -21,15 +28,15 @@ Xenko にはあらかじめ作成されている **AnimationStart** スクリプ
 
 **AnimationStart** スクリプトを使用するには:
 
-1.［Asset view］ (既定では下部のペイン) で、［Add asset］をクリックします。
+1.［Asset view］(既定では下部のペイン) で、［Add asset］をクリックします。
 
-2.［Add asset］>［Scripts］>［Animation Start］を選択します。
+2.［Add asset］>［Scripts］>［Animation start］を選択します。
 
-    ![Add animation script](media/add-animation-script.png)
+    ![Add animation script](media/animations-additive-animations-animation-start.png)
 
-3.［Script wizard］で、スクリプトの名前を指定して、［OK］をクリックします。
+3. スクリプトの名前を指定して、［Create script］をクリックします。
 
-    ![Script wizard](media/name-animation-script.png)
+    ![Create script](media/name-animation-script.png)
 
     3a. スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Yes］をクリックします。
 
@@ -37,20 +44,11 @@ Xenko にはあらかじめ作成されている **AnimationStart** スクリプ
 
 4. 必要に応じてスクリプトを編集し、保存します。
 
-## 独自のスクリプトを作成する、または既存のスクリプトを変更する
+## アニメーション スクリプトの例
 
-次のサンプル コードは、キャラクターが歩く速さに合わせて簡単なアニメーションを割り当てます。
+次のサンプル スクリプトは、キャラクターが歩く速さに合わせて簡単なアニメーションを割り当てます。
 
-```
-cs
-public class AnimationClipExample : SyncScript
-{
-    // パブリック アニメーション クリップ
-    public AnimationClip idleClip;
-    public AnimationClip walkClip;
-    public AnimationClip runClip;
-
-    //モデルが走っているか歩いているかを決定するためのパブリック変数
+```cs
 using SiliconStudio.Xenko.Engine;
 
 namespace AdditiveAnimation
@@ -66,7 +64,7 @@ namespace AdditiveAnimation
 
         public override void Start()
         {
-            //後で必要になるいくつかの変数をキャッシュする
+            // 後で必要になる変数をキャッシュする
             animationComponent = Entity.Get<AnimationComponent>();
             animationComponent.Play("Idle");
         }
@@ -98,7 +96,7 @@ namespace AdditiveAnimation
 
 ## アニメーション ブレンド ツリーをオーバーライドする
 
-アニメーション ブレンド ツリーをオーバーライドして、すべてのアニメーション ブレンディングをスクリプトで行うこともできます。テンプレート［First-person shooter］、［Third-person platformer］、［Top-down RPG］は、これを行う方法の例であり、いくつかの高度な技法を使用しています。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください。
+アニメーション ブレンド ツリーをオーバーライドして、すべてのアニメーション ブレンディングをスクリプトで行うこともできます。テンプレート ［First-person shooter］、［Third-person platformer］、[Top-down RPG］は、これを行う方法の例であり、いくつかの高度な技法を使用しています。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください。
 
 ## 関連項目
 

@@ -5,29 +5,30 @@
 
 プロジェクトの入力デバイスとして、ジャイロスコープや加速度計などのさまざまな**センサー**を使用できます。センサーはモバイル ゲームでよく使用されます。
 
-センサーにアクセスして以下のことを行うには、[入力マネージャー](xref:SiliconStudio.Xenko.Input.InputManager)を使用します。
+センサーにアクセスして以下のことを行うには、@'SiliconStudio.Xenko.Input.InputManager' を使用します。
 
 * センサーが Xenko でサポートされているかどうかを調べる
 * センサーを無効にする
 * センサーのデータを取得する
 
-Xenko は、_Orientation_、_Accelerometer_、_UserAcceleration_、_Gravity_、_Compass_、_Gyroscope_ の 6 種類のセンサーからデータを取得できます。これらのセンサーは [SensorBase](xref:SiliconStudio.Xenko.Input.SensorBase) を継承します。SensorBase は、センサーの機能の有効化やテストなど、基本的な機能を提供します。
+Xenko は、_Orientation_、_Accelerometer_、_UserAcceleration_、_Gravity_、_Compass_、_Gyroscope_ の 6 種類のセンサーからデータを取得できます。これらのセンサーは @'SiliconStudio.Xenko.Input.ISensorDevice' を継承します。
 
-センサーの種類ごとに、既定のインスタンスが作成されます。各インスタンスには、[入力マネージャー](xref:SiliconStudio.Xenko.Input.InputManager)からアクセスできます。
+センサーの種類ごとに、既定のインスタンスが作成されます。各インスタンスには、@'SiliconStudio.Xenko.Input.InputManager' からアクセスできます。
 
 センサーは状態に基づきます。各センサー インスタンスは、フレームごとに自動的に更新され、直前の更新でのセンサーの値を格納しています。
 
-センサーにアクセスするには、たとえば、次のコードを使用します。
+たとえば、加速度計にアクセスするには、以下を使用します。
 
-```
+```cs
 var accelerometer = Input.Accelerometer;
 ```
 
 ## センサーが使用できるかどうかを調べる
 
-センサーの値を取得する前にまず、デバイスでセンサーを使用できるかどうかを確認します。そのためには、[SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported) を使用します。次に例を示します。
-```
-var hasCompass = Input.Compass.IsSupported;
+センサーの値を取得する前に、デバイスでセンサーを使用できるかどうかを確認します。そのためには、使用するセンサーが null ではないことを調べます。たとえば、コンパスが使用できるかどうかを調べるには、次のようにします。
+
+```cs
+var hasCompass = Input.Compass != null;
 ```
 
 > [!NOTE]
@@ -37,8 +38,7 @@ var hasCompass = Input.Compass.IsSupported;
 
 センサー データの取得と更新には多大な CPU 時間を要するので、既定では、使用可能なすべてのセンサーが無効になっています。
 
-センサーを有効にするには、[SensorBase.IsEnabled](xref:SiliconStudio.Xenko.Input.SensorBase.IsEnabled) を
-```True``` に設定します。センサーが必要ない場合は、このプロパティを ```False``` に設定して無効にします。
+センサーを有効にするには、@'SiliconStudio.Xenko.Input.ISensorDevice.IsEnabled' を `true` に設定します。センサーが必要ない場合は、このプロパティを `false` に設定して無効にします。
 
 ## 方向センサーを使用する
 
@@ -48,17 +48,17 @@ var hasCompass = Input.Compass.IsSupported;
 
 デバイスの現在の方向を取得するには、[Input.Orientation](xref:SiliconStudio.Xenko.Input.InputManager.Orientation) を使用します。
 
-| プロパティ        | 説明                                     | 宣言                                 |
-|-----------------|-------------------------------------------------|---------------------------------------------|
-| [Roll](xref:SiliconStudio.Xenko.Input.OrientationSensor.Roll) | X 軸を中心とする回転です。 | ```public float Roll { get; }``` |
-| [Pitch](xref:SiliconStudio.Xenko.Input.OrientationSensor.Pitch)           | Y 軸を中心とする回転です。                    | ```public float Pitch { get; }```           |
-| [Yaw](xref:SiliconStudio.Xenko.Input.OrientationSensor.Yaw)             | Z 軸を中心とする回転です。                    | ```public float Yaw { get; }``` |
-| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix) | デバイスの回転です。  | ```public Matrix RotationMatrix { get; }``` |
-| [Quaternion](xref:SiliconStudio.Xenko.Input.OrientationSensor.Quaternion) | デバイスの方位と回転です。 |  ```public Quaternion Quaternion { get; }``` |
+| プロパティ        | 説明                                     | 宣言
+|-----------------|-------------------------------------------------|---------------
+| [Roll](xref:SiliconStudio.Xenko.Input.OrientationSensor.Roll) | X 軸を中心とする回転です。| `public float Roll { get; }`
+| [Pitch](xref:SiliconStudio.Xenko.Input.OrientationSensor.Pitch)           | Y 軸を中心とする回転です。                    | `public float Pitch { get; }`
+| [Yaw](xref:SiliconStudio.Xenko.Input.OrientationSensor.Yaw)             | Z 軸を中心とする回転です。                    | `public float Yaw { get; }`
+| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix) | デバイスの回転です。  | `public Matrix RotationMatrix { get; }`
+| [Quaternion](xref:SiliconStudio.Xenko.Input.OrientationSensor.Quaternion) | デバイスの方位と回転です。|  `public Quaternion Quaternion { get; }`
 
 次に例を示します。
 
-```
+```cs
   var orientation = Input.Orientation.Quaternion;
 ```
 
@@ -68,7 +68,7 @@ var hasCompass = Input.Compass.IsSupported;
 ## 運動センサー
 **運動センサー**は、傾斜、振動、揺動などの**加速力**を測定します。Xenko では 3 種類の運動センサーがサポートされています。
 
-* **Accelerometer**: **未加工の加速度を測定します**
+* **Accelerometer**: **未加工の加速度**を測定します
 * **Gravity**: 重力のみを測定します
 * **UserAcceleration**: ユーザーによって適用された加速度のみを測定します
 
@@ -98,7 +98,8 @@ var acceleration = Input.Accelerometer.Acceleration;
 **ユーザー加速度センサー**は加速度計と似ていますが、ユーザーによって加えられた加速度**だけ** (重力加速度を除いたもの) を測定します。
 
 ユーザー加速度を取得するには、[UserAcceleration.Acceleration](xref:SiliconStudio.Xenko.Input.UserAccelerationSensor.Acceleration) を使用します。次に例を示します。
-```                       
+
+```cs                       
 var userAcceleration = Input.UserAcceleration.Acceleration;
 ```
 
@@ -107,7 +108,7 @@ var userAcceleration = Input.UserAcceleration.Acceleration;
 
 重力ベクトルを取得するには、[GravitySensor](xref:SiliconStudio.Xenko.Input.GravitySensor) を使用します。次に例を示します。
 
-```
+```cs
  var gravityVector = Input.Gravity.Vector;
 ```
 
@@ -119,7 +120,7 @@ var userAcceleration = Input.UserAcceleration.Acceleration;
 
 この角度を取得するには、[CompassSensor.Heading](xref:SiliconStudio.Xenko.Input.CompassSensor.Heading) を使用します。次に例を示します。
 
-```
+```cs
 var heading = Input.Compass.Heading;
 ```
 
@@ -131,7 +132,7 @@ var heading = Input.Compass.Heading;
 
 回転速度を取得するには、[GyroscopeSensor.RotationRate](xref:SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate) を使用します。次に例を示します。
 
-```
+```cs
   var rotationRate = Input.Gyroscope.RotationRate;
   var rotationSpeedX =  rotationRate.X;
   var rotationSpeedY =  rotationRate.Y;
@@ -140,13 +141,13 @@ var heading = Input.Compass.Heading;
 
 ## コード例
 
-```
+```cs
 public class SensorScript : AsyncScript
 {
 	public override async Task Execute()
 	{
 		// センサーを使用できるかどうかを調べる
-		if(!Input.Accelerometer.IsSupported)
+		if(Input.Accelerometer != null)
 			return;
 
 		// センサーをアクティブにする
@@ -158,8 +159,7 @@ public class SensorScript : AsyncScript
 			var accel = Input.Accelerometer.Acceleration;
 
 			// 必要な処理を実行する...
-
-			away Script.NextFrame();
+			await Script.NextFrame();
 		}		
 		// 使用した後でセンサーを無効にする
 		Input.Accelerometer.IsEnabled = false;

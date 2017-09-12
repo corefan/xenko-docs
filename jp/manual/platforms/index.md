@@ -1,7 +1,5 @@
 # プラットフォーム
 
-<div class="doc-incomplete"/>
-
 ![Platforms](media/game-engine-system-requirements-intro-pic.png)
 
 Xenko はクロスプラットフォームのゲーム エンジンです。つまり、ゲームをいったん作成すると、Xenko がサポートするすべてのプラットフォームでそれをコンパイルして展開できます。エンジンは、C# とシェーダーを異なるネイティブ言語に変換し、プラットフォームによって異なる概念を抽象化するので、プラットフォームごとにコードを変更する必要はありません。
@@ -25,7 +23,7 @@ Xenko はクロスプラットフォームのゲーム エンジンです。つ�
 * Vulkan
 
 > [!TIP]
-> プロジェクトが使用しているグラフィックス プラットフォームを確認するには、コード (スクリプト内など) にブレーク ポイントを追加し、プロジェクトを実行して、[GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) 変数の値を調べます。
+> **Game settings** アセットの［Rendering settings］>［Target graphics platform］でグラフィックス プラットフォームを設定します。詳細については、「[ゲームの設定](../game-studio/game-settings.md)」を参照してください。
 
 ## プリプロセッサ変数
 
