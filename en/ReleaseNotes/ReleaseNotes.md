@@ -60,9 +60,11 @@ For details, see [Light shafts](../manual/graphics/lights-and-shadows/light-shaf
 
 Xenko now supports streaming for textures. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
 
+Streaming is enabled for textures by default. You can find the option in the texture properties under **Format**.
+
 ![Enable streaming](media/ReleaseNotes-2.1/enable-streaming.png)
 
-You can also set the global **Streaming** settings in the game settings.
+You can also set the global **Streaming** settings in **Game settings**.
 
 ![Streaming settings](media/ReleaseNotes-2.1/streaming-settings.png)
 
