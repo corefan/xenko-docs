@@ -61,7 +61,7 @@ You can also focus by clicking the **magnifying glass icon** next to the entity 
 > [!TIP] 
 > Focusing and then orbiting with **Alt + left mouse button** is useful for inspecting entities.
 
-### Table of controls
+### Controls
 
 Action                 | Control
 -----------------------|--------------
@@ -72,6 +72,10 @@ Orbit                   | Alt key + left mouse button
 Zoom                    | Mouse wheel <br>Alt + Right mouse button + move mouse</br>
 Pan                    | Middle mouse button + move mouse
 Focus                  | F (with entity selected)
+
+> [!TIP] 
+> You can change the scene navigator controls in **Edit > Settings** under **Scene Editor > Key bindings**.
+> ![Key bindings](media/settings-key-bindings.png)
 
 ## Change camera editor perspective
 

@@ -12,22 +12,24 @@ There are three ways to use assets:
 
 Many kinds of component use assets. For example, model components use model assets. 
 
-Components that use assets have **asset picker** docks in the **property grid**.
+Components that use assets have **asset docks** in the **property grid**.
 
-![Asset Picker](media/use-assets-asset-picker-dock.png)
+![Select an asset](media/use-assets-asset-picker-dock.png)
 
-To add an asset to an entity component, drag the asset to the **asset picker** in the component properties (in the **property grid**). You can drop assets in the text field or the empty thumbnail.
+To add an asset to an entity component, drag the asset to the asset dock in the component properties (in the **property grid**). You can drop assets in the text field or the empty thumbnail.
 
 ![Drag and drop an asset](media/use-assets-drag-and-drop.png)
 
-Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) to open the **asset picker** and select the asset.
+Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-![Asset picker](media/use-assets-asset-picker.png)
+![Select an asset](media/use-assets-asset-picker.png)
+
+The **Select an asset** window opens.
 
 > [!NOTE]
-> The asset picker only displays assets of types expected by the component. For example, if the component is an audio listener, the asset picker only displays audio assets.
+> The **Select an asset** window only displays assets of types expected by the component. For example, if the component is an audio listener, the window only displays audio assets.
 
-After you add an asset to a component, the asset picker dock displays its name and a thumbnail image.
+After you add an asset to a component, the asset dock displays its name and a thumbnail image.
 
 ![Asset displayed](media/asset-displayed.png)
 
@@ -39,7 +41,9 @@ You can add asset references to assets the same way you add them to entity compo
 
 ## Clear a reference
 
-To clear a reference to an asset, in the asset picker dock, click ![eraser](media/use-assets-eraser.png) (**Clear reference**).
+To clear a reference to an asset, in the **asset dock**, click ![eraser](media/use-assets-eraser.png) (**Clear reference**).
+
+![Use eraser](media/use-eraser.png)
 
 ## Examine references
 
@@ -55,10 +59,7 @@ You can examine the references in a selected asset in the **References** in the 
 
 ## Load assets from code
 
-You can load assets at runtime and use them in your scripts. To do this, use [ContentManager](xref:SiliconStudio.Xenko.Engine.IScriptContext.Content).
-
-### Example code
-This script loads a model at runtime and adds it to the scene.
+You can load assets at runtime and use them in your scripts.
 
 ```cs
 // Load a model (replace URL with valid URL)

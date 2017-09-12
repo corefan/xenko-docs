@@ -26,11 +26,11 @@ Alternatively, select the entity you want to be a camera, and in the **property 
 | Property            | Description                                       
 |---------------------|--------------------------------------------------
 | Projection          | The type of projection used by the camera (perspective or orthographic)
-| Field of view       | The vertical field of view used for perspective projection (in degrees)
+| Field of view (degrees)      | The vertical field of view used for perspective projection
 | Orthographic size   | The height of the orthographic projection (the orthographic width is automatically calculated based on the target ratio). This has the effect of zooming in and out
 | Near clip plane     | The nearest point the camera can see
 | Far clip plane      | The furthest point the camera can see
-| Custom aspect ratio | If selected, use a custom aspect ratio you specify.  Otherwise, automatically adjust the aspect ratio to the render target ratio
+| Custom aspect ratio | Use a custom aspect ratio you specify.  Otherwise, automatically adjust the aspect ratio to the render target ratio
 | Custom aspect ratio | The aspect ratio for the camera (when the **Custom aspect ratio** option is selected)
 | Slot                | The camera slot used in the graphics compositor. For more information, see [Camera slots](camera-slots.md)
 
@@ -38,7 +38,7 @@ Alternatively, select the entity you want to be a camera, and in the **property 
 
 **Perspective cameras** provide a "real-world" perspective of the objects in your scene. In this view, objects close to the camera appear larger, and lines of identical lengths appear different due to foreshortening, as in reality. Perspective cameras are most used for games that require a realistic perspective, such as third-person and first-person games.
 
-With **orthographic cameras**, objects are always the same size, no matter how far their distance from the camera. Parallel lines never touch, and there's no vanishing point. Orthographic cameras are most used for games with isometric perspectives, such as some strategy, 4X, or role-playing games.
+With **orthographic cameras**, objects are always the same size, no matter their distance from the camera. Parallel lines never touch, and there's no vanishing point. Orthographic cameras are most used for games with isometric perspectives, such as some strategy, 4X, or role-playing games.
 
 ![Perspective and orthographic diagram](../game-studio/media/perspective-orthographic-diagram.png)
 
@@ -107,7 +107,7 @@ For more information, see [Camera slots](camera-slots.md).
 
 ## Render a camera to a texture
 
-You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage. For more information, see [Render to a texture](graphics-compositor/render-to-a-texture.md).
+You can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage. For more information, see [Render textures](graphics-compositor/render-textures.md).
 
 ## See also
 

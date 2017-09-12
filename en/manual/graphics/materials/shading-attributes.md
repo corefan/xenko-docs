@@ -29,9 +29,11 @@ Currently, the diffuse attribute supports only a **diffuse map**.
 
 ### Diffuse model
 
-The **diffuse model** determines how the diffuse material reacts to light. 
+The **diffuse model** determines how the diffuse material reacts to light. You can use the **Lambert** or **cel-shading**.
 
-Currently, the only supported diffuse model is the **Lambert** model. Under this model, light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
+#### Lambert model
+
+Under the Lambert model, light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
 
 ![media/material-attributes-24.png](media/material-attributes-24.png)
 
@@ -40,40 +42,42 @@ Currently, the only supported diffuse model is the **Lambert** model. Under this
 
 | Property      | Description  
 | ------------- | ----------- 
-| Diffuse Map   | The diffuse map color provider                                          
-| Diffuse Model | The shading model for diffuse lighting
+| Diffuse map   | The diffuse map color provider                                          
+| Diffuse model | The shading model for diffuse lighting
 
 ## Specular
 
 A **specular** is a point of light reflected in a material.
 
+![Specular highlight](media/specular-highlight.png)
+
 The specular color can be defined using a metalness map (which uses the diffuse color as a base color), or a specular map (the specular color is defined separately from the diffuse color).
 
 ### Metalness map
 
-The metalness map is easy to use as it simplifies parametrization between the diffuse and specular color.
+The **metalness map** simplifies parametrization between the diffuse and specular color.
 
 By taking into into account the fact that almost all materials always have some "metalness"/reflectance in them, using the metalness map provides realistic materials with minimal parametrization.
 
 The final specular color is calculated by mixing a fixed low-reflection color and the diffuse color.
 
-- With the metalness color at `0.0`, the effective specular color is equal to 0.02, while the diffuse color is unchanged. This means that the material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
+- With the metalness color at `0.0`, the effective specular color is equal to `0.02`, while the diffuse color is unchanged. The material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
 
-- With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to 0. The material is then considered a pure metal.
+- With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to `0`. The material is considered a pure metal.
 
     ![media/material-attributes-26.png](media/material-attributes-26.png) 
 
  The screenshots below show the result of the metalness factor on a material with the following attributes:
 
-- Glossiness = 0.8
-- Diffuse = #848484, Lambert
+- Glossiness = `0.8`
+- Diffuse = `#848484`, Lambert
 - Specular GGX
 
-| Pure diffuse (no metalness)  | Metalness = 0.0    | Metalness = 1.0 
+| Pure diffuse (no metalness)  | Metalness = `0.0`    | Metalness = `1.0` 
 | ---------------------------- | ------------------ | ---------------
 |  ![media/material-attributes-27.png](media/material-attributes-27.png)  | ![media/material-attributes-28.png](media/material-attributes-28.png)  | ![media/material-attributes-29.png](media/material-attributes-29.png)  |
 | - The diffuse color is dominant | - The diffuse color is dominant   | - The diffuse color isn't visible
-| - The specular color isn't visible   | - The specular color is visible (0.02) | - The specular color is visible 
+| - The specular color isn't visible   | - The specular color is visible (`0.02`) | - The specular color is visible 
 | - No Fresnel:<br>![media/material-attributes-30.png](media/material-attributes-30.png) </br>  | - Fresnel effect is slightly visible: <br>![media/material-attributes-31.png](media/material-attributes-31.png) </br> | - Fresnel effect is visible: <br>![media/material-attributes-32.png](media/material-attributes-32.png) </br>
 
 ### Specular map
@@ -114,7 +118,7 @@ With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can 
 | Property     | Description                                                               
 | ------------ | -------------- 
 | Emissive map | The emissive map color provider      
-| Intensity    | A factor to multiply by the color of the color provider   
+| Intensity    | The factor to multiply by the color of the color provider   
 | Use alpha    | Use the alpha of the emissive map as the main alpha color of the material (instead of using the alpha of the diffuse map by default)
 
 ## See also
@@ -124,3 +128,4 @@ With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can 
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
+* [Custom shaders](../effects-and-shaders/custom-shaders.md)

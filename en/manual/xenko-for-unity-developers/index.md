@@ -92,13 +92,13 @@ You can have multiple scenes in your project. Xenko loads the default scene at r
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
     
     ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-2. Select the default scene in the asset picker and click **OK**.
+2. Select the default scene and click **OK**.
 
 For more information about scenes, see [Scenes](../game-studio/scenes.md).
 
@@ -133,7 +133,7 @@ Even empty entities have a Transform component, because every entity in the scen
 
 In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab. 
 
-Xenko is very similar. You select an asset in the **asset view** and edit its properties in the **property grid**.
+Xenko is similar. You select an asset in the **asset view** and edit its properties in the **property grid**.
 
 ![Asset and properties](media/asset-and-properties.png)
 
@@ -176,12 +176,15 @@ Like Unity®, Xenko supports file formats including:
 
 | Asset type  | Supported formats                                           
 |------|---|
-| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
-| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
-| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc     |
+| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx
+| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
+| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
 | Fonts | .ttf, .otf |
 
 For more information about assets, see [Assets](../game-studio/assets.md).
+
+> [!Note]
+> * Xenko currently doesn't support movie files.
 
 ## Prefabs
 
@@ -195,7 +198,7 @@ For example, imagine you create a *Vehicle* prefab with acceleration, braking, s
 
 To do this in Unity®, you have to create separate prefabs for each vehicle type and modify their acceleration parameters one by one.
 
-For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs.md).
+For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs/index.md).
 
 ## Archetypes
 
@@ -223,34 +226,24 @@ Xenko supports a variety of inputs. The code samples below demonstrate the diffe
 
 For more information about Input in Xenko, see [Input](../input/index.md).
 
-### Unity®
-
+## Unity
 ```cs
 void Update()
 {
-    if (Input.GetButtonDown("Crouch"))
+    // true for one frame in which the space bar was pressed
+    if(Input.GetKeyDown(KeyCode.Space))
     {
-        //Do something.
+        // Do something.
     }
+
+    // true while this joystick button is down
+    if (Input.GetButton("joystick button 0"))
+    {
+        // Do something.
+    }
+
     float Horiz = Input.GetAxis("Horizontal");
     float Vert = Input.GetAxis("Vertical");
-    //Do something else.
-}
-```
-
-### Xenko
-
-```cs
-public override void Update()
-{
-    //Input events.
-
-    if (Input.IsPadButtonDown(0, GamePadButton.B)
-    {
-        //Do something.
-    }
-    float Horiz = Input.GetGamePad(0).RightThumb.X;
-    float Vert = Input.GetGamePad(0).RightThumb.Y;
     //Do something else.
 }
 ```
@@ -259,13 +252,13 @@ public override void Update()
 
 Just like Unity®, Xenko has three types of collider:
 
-* Static colliders
-* Rigid bodies
-* Characters
+* static colliders
+* rigidbodies
+* characters
 
 They're controlled from scripts in slightly different ways.
 
-### Kinematic rigid bodies
+### Kinematic rigidbodies
 
 #### Unity®
 
@@ -320,7 +313,7 @@ public class KinematicX : SyncScript
 }
 ```
 
-For more information about rigid bodies in Xenko, see [Rigid bodies](../physics/rigid-bodies.md).
+For more information about rigidbodies in Xenko, see [Rigidbodies](../physics/rigid-bodies.md).
 
 ### Triggers
 
@@ -431,7 +424,7 @@ To open a script in the Game Studio script editor, double-click it in the **asse
 
 You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Xenko reloads them automatically.
 
-If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, click **Open in IDE** in the Game Studio toolbar.
+If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, in the Game Studio toolbar, click **Open in IDE**.
 
 ![Open project in Visual Studio](media/xenko-vs-unity-open-project-in-visual-studio.png)
 
@@ -684,7 +677,19 @@ To see the output, in the Game Studio toolbar, under **View**, enable **Output**
 
 Game Studio displays in the **Output** tab (at the bottom of Game Studio by default).
 
-![Output tab](media/output-tab.png)
+![Output tab](media/output-tab.png) 
+
+
+### Print debug messages
+
+To print to the Visual Studio output, use:
+
+```cs
+System.Diagnostics.Debug.WriteLine("hello");
+```
+
+>[!Note]
+>To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
 
 ---
 

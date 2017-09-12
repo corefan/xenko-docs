@@ -23,7 +23,7 @@ You need at least one [AudioListenerComponent](xref:SiliconStudio.Xenko.Audio.Au
 
     Now we need to add a sound to the emitter.
 
-3.  Under **Audio Emitter**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and specify a name for the sound.
+3.  Under **Audio Emitter**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and specify a name for the sound.
 
     ![Add New Sound Entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
@@ -31,7 +31,7 @@ You need at least one [AudioListenerComponent](xref:SiliconStudio.Xenko.Audio.Au
 
     ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 

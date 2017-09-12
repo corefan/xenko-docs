@@ -23,7 +23,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
     For more information about the graphics compositor, see the [Graphics compositor](graphics-compositor/index.md) page.
 
-2. In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+2. In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
 
     ![Camera slots](graphics-compositor/media/graphics-compositor-camera-slots.png)
 
@@ -56,12 +56,14 @@ var camera = new CameraComponent();
  camera.Slot = SceneSystem.GraphicsCompositor.Cameras[0].ToSlotId();
 ```
 
+To change the camera at runtime, toggle the ``Enabled`` property.
+
 > [!Note]
 > Make sure you:
 >
 > * always have at least one enabled camera
 >
-> * don't have two cameras enabled and assigned to the same slot at the same time
+> * don't have multiple cameras enabled and assigned to the same slot at the same time
 
 ## See also
 

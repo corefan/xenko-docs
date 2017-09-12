@@ -19,7 +19,7 @@ Basic rules:
 # Create a bundle
 
 > [!Note]
-> Creating currently requires some manual steps (i.e. editing `xkpkg` by hand). In the future, we intend to move this feature in GameStudio.    
+> Creating currently requires some manual steps (i.e. editing `xkpkg` by hand).
 
 Open the `xkprj` file of the game executable and add the following configuration:
 

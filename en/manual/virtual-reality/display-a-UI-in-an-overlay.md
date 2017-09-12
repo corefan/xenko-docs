@@ -35,17 +35,17 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
     ![VR settings](media/vr-settings.png)
 
-4. Next to **Overlays**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+4. Next to **Overlays**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
 
     Game Studio adds a new overlay to the list.
 
     ![Add VR item](media/add-overlay.png)
 
-5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+5. Next to **Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
 6. Select the **render texture** you created and click **OK**.
 
@@ -81,49 +81,49 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Entry points node](../graphics/graphics-compositor/media/entry-points-node.png)
 
-2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **None** to delete your existing renderers.
+2. In the **property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **None** to delete your existing renderers.
 
     ![Cleared game renderers](../graphics/graphics-compositor/media/game-renderers-cleared.png)
 
-3. Next to **Game rendererer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **Camera Renderer**.
+3. Next to **Game rendererer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **Camera Renderer**.
 
     ![Select camera renderer.png](media/select-camera-renderer.png)
 
-    Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. This will change in a future version. 
+    Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer, which renders the UI. 
     
     For this reason, in these instructions, we'll add a game renderer with a camera, then make the two renderers children of that renderer. This makes sure both renderers have a parent with a camera.
 
-4. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select your main game camera.
+4. Next to **Camera**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select your main game camera.
 
     ![Select main camera](media/select-main-camera.png)
 
-5. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **SceneRendererCollection**.
+5. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **SceneRendererCollection**.
 
     ![Select scene renderer collection](media/select-scene-renderer-collection.png)
 
-6. Next to **Children**, Click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **RenderTextureSceneRenderer**.
+6. Next to **Children**, Click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select **RenderTextureSceneRenderer**.
 
     ![Select RenderTextureSceneRenderer](media/select-RenderTextureSceneRenderer.png)
 
-8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **SingleStageRenderer**. 
+8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **SingleStageRenderer**. 
 
     ![Select single stage renderer](media/select-single-stage-renderer.png)
 
-9. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **UIRenderStage**. This is the renderer that renders the UI.
+9. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **UIRenderStage**. This is the renderer that renders the UI.
 
     ![Select UI render stage](media/select-UI-render-stage.png)
 
-10. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+10. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
 11. Select the **render texture** and click **OK**.
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
     Game Studio adds the render texture to the renderer.
 
-12. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Forward renderer**.
+12. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select **Forward renderer**.
 
     ![Select forward renderer](media/overlay-select-forward-renderer.png)
 
@@ -139,5 +139,5 @@ For an example of a UI overlay implemented in a VR game, see the VR template inc
 
 * [Overlays](overlays.md)
 * [UI](../ui/index.md)
-* [Render to a texture](../graphics/graphics-compositor/render-to-a-texture.md)
+* [Render textures](../graphics/graphics-compositor/render-textures.md)
 * [Graphics compositor](../graphics/graphics-compositor/index.md)

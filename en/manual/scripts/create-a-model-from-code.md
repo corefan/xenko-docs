@@ -9,7 +9,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
 * creating a procedural model
 
-* instantiating a prefab that contains a model (see [Use prefabs](../game-studio/use-prefabs.md))
+* instantiating a prefab that contains a model (see [Use prefabs](../game-studio/prefabs/use-prefabs.md))
 
 ## Create a model from an asset
 
@@ -129,4 +129,4 @@ For example:
 
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)
-* [Use prefabs](../game-studio/use-prefabs.md)
+* [Use prefabs](../game-studio/prefabs/use-prefabs.md)
