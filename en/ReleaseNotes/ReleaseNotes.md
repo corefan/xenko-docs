@@ -1,6 +1,6 @@
 # Xenko 2.1 release notes
 
-Released 
+12 September 2017
 
 ## Highlights
 
@@ -206,7 +206,7 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 
 * Updated to latest version of DirectXTex
 * Improved the computation of dependencies between assets leading to faster build and thumbnails generation
-* Changed how root parts of hierarchical assets (prefab, scene, UI) are referenced and serialized
+* Changed how root parts of hierarchical assets (prefab, scene, UI) are referenced and serialized (direct references instead of Guids)
 
 ##### Engine
 
@@ -234,7 +234,6 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 * Added proper ClearValue setup for render targets and depth stencil buffers
 * Added DX12 Debug Layer filter for irrelevant warnings
 * Added support for:
-* 
   * compute pipeline support
   * tessellation
   * compute, hull, domain and geometry shaders
@@ -304,5 +303,4 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 
 ##### Physics
 
-
-TODO - is there anything?
+* Fixed capsule shape orientation
