@@ -120,7 +120,7 @@ To support graphics functionalities on every platform, we've implemented missing
 
 For more details, see the **Changelog** below.
 
-#### Improved environment fresnel
+### Improved environment fresnel
 
 Fresnel describes how light is reflected depending on the angle the material is viewed from. Typically, high angles are more reflective.
 
@@ -130,43 +130,42 @@ Xenko now defaults to a precomputed BRDF environment lookup texture that matches
 
 TODO: Image (before/after? -- need to switch Specular Model => Environment between LUT and Polynomial)
 
-### UWP with CoreWindow
-
-Previously, Xenko UWP was rendered with a XAML `SwapChainPanel`. Xenko now also supports the lower-level `CoreWindow` approach for apps that don't need to be part of a XAML UI. This provides better performance and greatly improved access to Xbox memory.
-
-`CoreWindow` is now the default option when you create a game that supports UWP. To switch your existing projects to `CoreWindow`, remove the platform and re-add it (see [Add or remove a platform](../manual/platforms/add-or-remove-a-platform.md) for instructions).
-
 ## Breaking changes
 
 ### Input system
 
-* `PointerState` has been renamed to `PointerEventType`
-* The members of `PointerEventType` have changed:
+* Renamed `PointerState` to `PointerEventType`
+* Changed the members of `PointerEventType`:
     * `Down` has been renamed to `Pressed`
     * `Move` has been renamed to `Moved`
     * `Up` has been renamed to `Released`
     * `Cancel` has been renamed to `Canceled`
     * `Out` has been removed; use `Canceled` instead 
-* `InputManager.ActivatedGestures` has been renamed to `InputManager.Gestures`
-* Checking support for sensors using `Sensor.IsSupported` has been changed to `InputManager.Sensor != null` (where `Sensor` is the name of the sensor you're checking)
+* Renamed `InputManager.ActivatedGestures` to `InputManager.Gestures`
+* Changed checking support for sensors using `Sensor.IsSupported` to `InputManager.Sensor != null` (where `Sensor` is the name of the sensor you're checking)
 * The `HasDown/Pressed/ReleasedMouseButtons()` functions on the `InputManager` are now properties
-* `GetGamePad()` has been removed; use `IGamePadDevice.State` to acquire a gamepad state
+* Removed `GetGamePad()`; use `IGamePadDevice.State` to acquire a gamepad state
     > To obtain a gamepad, use `InputManager.GamePads`, `InputManager.GetGamePadByIndex(index)` or use the `InputManager.DeviceAdded/Removed` events
-* `GamePadState.IsConnected` has been removed; use the `InputManager.DeviceAdded/Removed` events or check the value returned by `InputManager.GetGamePadByIndex(index) != null`
-* The `IsPadButtonDown/Pressed/Released()` functions have been moved to the `IGamePadDevice` as `IGamePadDevice.IsButtonDown/Pressed/Released()`
-* The `SetGamePadVibration()` function has been moved to the `IGamePadDevice`
+* Removed `GamePadState.IsConnected`; use the `InputManager.DeviceAdded/Removed` events or check the value returned by `InputManager.GetGamePadByIndex(index) != null`
+* Moved `IsPadButtonDown/Pressed/Released()` to the `IGamePadDevice` as `IGamePadDevice.IsButtonDown/Pressed/Released()`
+* Moved the `SetGamePadVibration()` function to the `IGamePadDevice`
 * Locking the mouse with `InputManager.LockMousePosition()` no longer automatically hides the cursor; use `IGame.IsMouseVisible` for this
-* `PointerEvent.PointerType` has been removed; use `PointerEvent.Device is IMouseDevice` to check if the event came from a mouse
-* `PointerEvent.IsPrimary` has been removed
-* `PointerId` on `PointerEvent` has been renamed to `Id`
-* `State` on `PointerEvent` has been renamed to `EventType` and its type to `PointerEventType`
-* `KeyEvent.Type` has been removed; to check if this was a pressed or released event, use the boolean `KeyEvent.IsDown` 
+* Removed `PointerEvent.PointerType`; use `PointerEvent.Device is IMouseDevice` to check if the event came from a mouse
+* Removed `PointerEvent.IsPrimary`
+* Renamed `PointerId` on `PointerEvent` to `Id`
+* Renamed `State` on `PointerEvent` to `EventType` and its type to `PointerEventType`
+* Removed `KeyEvent.Type`; to check if this was a pressed or released event, use the boolean `KeyEvent.IsDown` 
 * `MouseWheelDelta` is now `-1` or `1` per scroll unit instead of `-120` or `120`
-* `MultiTouchEnabled` on the `InputManager` has been removed; multi-touch is always enabled
+* Removed `MultiTouchEnabled` on the `InputManager`; multi-touch is always enabled
 
 ### Light shafts
 
-* `ExtinctionFactor` and `ExtinctionRatio` have been removed to simplify the light shaft component
+* Removed `ExtinctionFactor` and `ExtinctionRatio` to simplify the light shaft component
+
+### Engine
+
+* Renamed `DebugConsoleSystem` to `DebugTextSystem`
+* Now default `RenderStageSelector` select all entity groups
 
 ## Known issues
 
@@ -177,46 +176,73 @@ Previously, Xenko UWP was rendered with a XAML `SwapChainPanel`. Xenko now also 
 
 ## Changelog
 
-### Version 2.1.0.1 - 21 June 2017
-
-Release date 2017/06/XX
+### Version 2.1.0.3 - 12 September 2017
 
 #### Enhancements
 
 ##### General
 
+* Updated the `Third Party.md` file and split editor and runtime dependencies
+
 ##### Game Studio
 
-* Improve visuals of the directional light gizmo
-* Improve the design of the translation gizmo. Translation planes are now always facing the camera.
-* Reduce graphical glitches and optimize navigation mesh overlay rendering
-* The special character restriction on string keys for dictionaries has been removed.
+* Reviewed and rewritten editor text (menus, button labels, tooltips and so on)
+* Removed redundant dialog boxes
+* Improved directional light gizmo visuals
+* Improved translation gizmo design. Translation planes now always face the camera
+* Reduced graphical glitches and optimized navigation mesh overlay rendering
+* Removed special character restriction on string keys for dictionaries
+* Changed the default color of the clear frame for better prefab editing
+* Added a mark for the origin in the scene and prefab editor
+* Add wireframe bounding volume for light shafts
 
 ##### Assets
 
 * Updated to latest version of DirectXTex
+* Improved the computation of dependencies between assets leading to faster build and thumbnails generation
+* Changed how root parts of hierarchical assets (prefab, scene, UI) are referenced and serialized
 
 ##### Engine
 
+* Added render group mask on the `SceneCameraRenderer` to cull entities per camera
+* Improved the game profiler (reduced performance impact, improved UX & visual, etc)
+* Add a profiling key to the script component for user script profiling
+* Add streaming support for textures.
+* Add support for GPU queries.
+
 ##### Graphics
 
-* FXAA Quality was crashing in many cases, because the value doesn't work with all numbers between 10 and 39. It is now exposed as two controls: a `Dithering` combobox and a `Quality` slider
-* Improved MSAA Depth buffer resolving
+* FXAA Quality was crashing in many cases, because the value doesn't work with all numbers between 10 and 39. It's now exposed as two controls: a `Dithering` combobox and a `Quality` slider
+* Improved MSAA depth buffer resolving
 * Minor shader fixes
+* Added option for random texture sampling to texture maps
+* Enabled shadow casting for transparent materials
+* Added `IsAlphaCutoff` option in sprite component
+* Added swap function to `Texture` to swap the content of two textures
 
 ##### Direct3D 12
 
-* Added Compute pipeline support
-* Support tessalation
-* Support Compute, Hull, Domain and Geometry shaders
-* Support Unordered Access Views for Textures and Buffers
-* Support Structured Buffers
-* Support staging Textures and Buffers
 * Command List implementations for Dispatch, ClearReadWrite, Copy, CopyMultisample, CopyCount
 * Resource state transitions fixes
 * Resource barriers batching
 * Added proper ClearValue setup for render targets and depth stencil buffers
 * Added DX12 Debug Layer filter for irrelevant warnings
+
+Added support for:
+
+* compute pipeline support
+* tessalation
+* Compute, Hull, Domain and Geometry shaders
+* Unordered Access Views for Textures and Buffers
+* Structured Buffers
+* staging Textures and Buffers
+
+##### Input
+
+* Added `AbsoluteMousePosition` information to the `InputManger`.
+* Improved gamepad support (new devices supported, improved API, runtime detection, etc.)
+* Add interpreted key and IME input support
+
 
 ##### Navigation
 
@@ -224,33 +250,55 @@ Release date 2017/06/XX
 
 ##### VR
 
-#### Fixed issues
+TODO - is there anything?
+
+##### Android
+
+* Modify application context creation to allow use of external display
+
+##### UWP
+
+* Implemented support for CoreWindow. Disabled for the moment
+
+#### Bugs fixed
 
 ##### Game Studio
 
 * Live update of the directional, point and spot light gizmo color wasn't working
 * Enabling/disabling light shaft bounding volume components now works as intended
-* Added 'Fix References' dialog when removing directories with assets
+* Added "Fix references" dialog when removing directories with assets
+* Corrected lots of English mistakes
+* Fixed lots of issues with copy and paste (and replace). Notably it is now possible to copy entities from a scene and child scene at the same time.
+* Fixed issues with "Create library from selection" in the UI editor
+* Made the GameStudio crash in some rare cases where exceptions could leave a project in a corrupted state
+* Fixed some issues with thumbnails generation
 
 ##### Assets
 
 * Asset compilation of huge FBX was sometimes ending in timeout
+* Fixed normals, tangents and bitangents NaN values happening during model import
 
 ##### Engine
 
 * Fixed various memory leaks, especially when destroying a game
-* Clustered Lighting code was buggy when rendering to multiple views
+* Clustered lighting code was buggy when rendering to multiple views
+* Fixed sprite bounding box and frustum culling calculation
+* Fixed texture and buffer memory calculations accessible from `GraphicsDevice`
 
 ##### Graphics
 
 * Fixed bug with grid ignoring depth with MSAA enabled
 * Added support for nointerpolation/noperspective in Xenko shaders
-* Fix various problems with black artifacts in the shaders (NaNs and invalid normals)
+* Fixed various problems with black artifacts in the shaders (NaNs and invalid normals)
 * Light shafts now work as expected when using self-overlapping bounding volumes
 * Fixed light probes applying previous environment light twice when there are no light probes
-* Material Specular Map `IsEnergyConservative` was not properly taken into account
-* Fix transparent materials shadows
-* Fix transparent and alpha cut off materials shadows
-* Fix two sided materials shading
+* Material specular map `IsEnergyConservative` now properly taken into account
+* Fixed transparent materials shadows
+* Fixed transparent and alpha cut off materials shadows
+* Fixed two-sided and flipped material shading
+* Fixed mipmap counting
 
 ##### Physics
+
+
+TODO - is there anything?
