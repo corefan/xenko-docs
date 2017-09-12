@@ -68,7 +68,7 @@ public class SampleSyncScript : StartupScript
 
 プロパティが表示されなくなります。
 
-!［パブリック プロパティは ```[DataMemberIgnore］``` で非表示になっている](media/scripts-in-xenko-public-property-with-datamemberignore.png)
+![パブリック プロパティは ```［DataMemberIgnore］``` で非表示になっている](media/scripts-in-xenko-public-property-with-datamemberignore.png)
 
 ## 関連項目
 

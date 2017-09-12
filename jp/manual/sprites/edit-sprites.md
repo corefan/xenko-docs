@@ -42,7 +42,7 @@
 
 ![Sprite list](media/sprite-list.png)
 
-スプライトの順序 (したがってインデックス番号) を変更するには、!［Move selected sprite up/down](media/move-sprite-up-and-down.png) (［Move selected sprite up/down］) ボタンを使用します。たとえば、*[1］ Sprite* を下に移動すると、*［2］ Sprite* になります。
+スプライトの順序 (したがってインデックス番号) を変更するには、![Move selected sprite up/down](media/move-sprite-up-and-down.png) (［Move selected sprite up/down］) ボタンを使用します。たとえば、*［1］ Sprite* を下に移動すると、*［2］ Sprite* になります。
 
 リストに表示されるスプライトの名前を変更するには、スプライトをダブルクリックして新しい名前を入力します。
 
