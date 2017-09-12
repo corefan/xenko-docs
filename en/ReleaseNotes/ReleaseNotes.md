@@ -66,7 +66,7 @@ You can also set the global **Streaming** settings in the game settings.
 
 ![Streaming settings](media/ReleaseNotes-2.1/streaming-settings.png)
 
-Future versions will let you stream other types of content.
+For details, see [Streaming](../manual/graphics/textures/streaming.md)
 
 ### Render masks
 
