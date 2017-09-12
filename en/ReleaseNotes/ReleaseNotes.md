@@ -1,5 +1,7 @@
 # Xenko 2.1 release notes
 
+Released 
+
 ## Highlights
 
 ### Local reflections
@@ -106,9 +108,11 @@ The input system has been rewritten to track different input devices and allow f
 
 For details, see [Input](../manual/input/index.md).
 
-### Logging
+### Debug text
 
-TODO
+You can now display debug text at runtime. For more information, see [Logging](../manual/troubleshooting/logging.md).
+
+![Debug text](media/ReleaseNotes-2.1/my-debug-text.jpg)
 
 ### Improved Direct3D 12 support
 
@@ -194,7 +198,9 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 * Removed special character restriction on string keys for dictionaries
 * Changed the default color of the clear frame for better prefab editing
 * Added a mark for the origin in the scene and prefab editor
-* Add wireframe bounding volume for light shafts
+* Added wireframe bounding volume for light shafts
+* Added a context menu entry in the asset view to copy an asset's URL
+* Allowed *mixed* document orientation in the dock panel
 
 ##### Assets
 
@@ -206,9 +212,9 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 
 * Added render group mask on the `SceneCameraRenderer` to cull entities per camera
 * Improved the game profiler (reduced performance impact, improved UX & visual, etc)
-* Add a profiling key to the script component for user script profiling
-* Add streaming support for textures.
-* Add support for GPU queries.
+* Added a profiling key to the script component for user script profiling
+* Added streaming support for textures.
+* Added support for GPU queries.
 
 ##### Graphics
 
@@ -227,15 +233,14 @@ TODO: Image (before/after? -- need to switch Specular Model => Environment betwe
 * Resource barriers batching
 * Added proper ClearValue setup for render targets and depth stencil buffers
 * Added DX12 Debug Layer filter for irrelevant warnings
-
-Added support for:
-
-* compute pipeline support
-* tessalation
-* Compute, Hull, Domain and Geometry shaders
-* Unordered Access Views for Textures and Buffers
-* Structured Buffers
-* staging Textures and Buffers
+* Added support for:
+* 
+  * compute pipeline support
+  * tessellation
+  * compute, hull, domain and geometry shaders
+  * unordered access views for textures and buffers
+  * structured buffers
+  * staging textures and buffers
 
 ##### Input
 
@@ -247,10 +252,6 @@ Added support for:
 ##### Navigation
 
 * Changed the default size of new navigation mesh bounding volumes to `(1,1,1)`
-
-##### VR
-
-TODO - is there anything?
 
 ##### Android
 
@@ -271,7 +272,9 @@ TODO - is there anything?
 * Fixed lots of issues with copy and paste (and replace). Notably it is now possible to copy entities from a scene and child scene at the same time.
 * Fixed issues with "Create library from selection" in the UI editor
 * Made the GameStudio crash in some rare cases where exceptions could leave a project in a corrupted state
-* Fixed some issues with thumbnails generation
+* Fixed various isues in the UI editor when moving elements in the hierarchy
+* Fixed issues with thumbnails generation
+* Fixed issues with the anchor of a child scene
 
 ##### Assets
 
@@ -284,6 +287,7 @@ TODO - is there anything?
 * Clustered lighting code was buggy when rendering to multiple views
 * Fixed sprite bounding box and frustum culling calculation
 * Fixed texture and buffer memory calculations accessible from `GraphicsDevice`
+* Removed obsolete `ChildSceneComponent` class
 
 ##### Graphics
 
