@@ -182,7 +182,7 @@ Previously, Xenko used an imprecise polynomial approximation to compute the fres
 
 ##### General
 
-* Updated the `Third Party.md` file and split editor and runtime dependencies
+* Updated the [list of third-party libraries](https://git.xenko.com/xenko/Xenko-Runtime/blob/master/THIRD%20PARTY.md) and sorted by editor and runtime dependencies
 
 ##### Game Studio
 
