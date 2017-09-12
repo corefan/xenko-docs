@@ -1,3 +1,6 @@
+Start-Transcript -Path build.log
+Write-Host "Start building Japanese documentation."
+
 If(Test-Path jp_tmp){
     Remove-Item jp_tmp/* -recurse
 }
@@ -9,7 +12,10 @@ $posts = Get-ChildItem jp_tmp/manual/*.md -Recurse -Force
 Write-Host "Start write files:"
 Foreach ($post in $posts)
 {    
-    
+    if($post.ToString().Contains("toc.md")) {
+		continue; 
+	}
+		
     $data = Get-Content $post
     $i = 0;
     Foreach ($line in $data)
@@ -29,5 +35,8 @@ Write-Host "End write files"
 Copy-Item jp/manual -Recurse jp_tmp -Force
 Copy-Item en/docfx.json jp_tmp -Force
 (Get-Content jp_tmp/docfx.json) -replace "_site/en","_site/jp" | Set-Content jp_tmp/docfx.json
-deps\docfx\docfx.exe build jp_tmp\docfx.json | Tee-Object -FilePath build.log -Append
+deps\docfx\docfx.exe build jp_tmp\docfx.json
 Remove-Item jp_tmp -recurse 
+
+Write-Host "Japanese documentation built."
+Stop-Transcript
