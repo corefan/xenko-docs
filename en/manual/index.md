@@ -19,21 +19,19 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 * <span class="label label-doc-highlight">New</span> [Local reflections](graphics/post-effects/local-reflections.md)
 
-* <span class="label label-doc-highlight">New</span> [Textures](graphics/textures/index.md)
+* <span class="label label-doc-highlight">New</span> [Streaming](graphics/textures/streaming.md)
 
-* <span class="label label-doc-highlight">New</span> [Normal maps](graphics/textures/normal-maps.md)
+* <span class="label label-doc-highlight">New</span> [Clear coat shading](graphics/materials/clear-coat-shading.md)
+
+* <span class="label label-doc-highlight">New</span> [Render groups and masks](graphics/graphics-compositor/render-groups-and-masks.md)
+
+* <span class="label label-doc-highlight">New</span> [Logging](troubleshooting/logging.md)
+
+* <span class="label label-doc-highlight">Updated</span> [Profiling](troubleshooting/profiling.md)
 
 * <span class="label label-doc-highlight">Updated</span> [Light shafts](graphics/lights-and-shadows/light-shafts.md)
 
-* <span class="label label-doc-highlight">Updated</span> [Override prefab properties](game-studio/prefabs/override-prefab-properties.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Material attributes](graphics/materials/material-attributes.md)
-
-* <span class="label label-doc-highlight">New</span> [Troubleshooting - Full call stack not available](troubleshooting/full-call-stack-not-available.md)
-
-* <span class="label label-doc-highlight">New</span> [Troubleshooting - Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Install Xenko](get-started/install-xenko.md)
+* <span class="label label-doc-highlight">Updated</span> [Input](input/index.md)
 
 ## Improve this documentation
 

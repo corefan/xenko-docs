@@ -31,7 +31,7 @@ The **render mask** filters which groups are rendered.
 
 3. In the **property grid** on the right, expand the renderer you want to render the model.
 
-3. Next to **Render mask**, click **Change values** and select the render groups you want the camera to render.
+4. Next to **Render mask**, click **Change values** and select the render groups you want the camera to render.
 
     ![Render mask](media/change-render-mask.png)
 
