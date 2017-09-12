@@ -66,7 +66,7 @@ You can also set the global **Streaming** settings in the game settings.
 
 ![Streaming settings](media/ReleaseNotes-2.1/streaming-settings.png)
 
-For details, see [Streaming](../manual/graphics/textures/streaming.md)
+For details, see [Streaming](../manual/graphics/textures/streaming.md).
 
 ### Render masks
 
@@ -128,11 +128,7 @@ For more details, see the **Changelog** below.
 
 Fresnel describes how light is reflected depending on the angle the material is viewed from. Typically, high angles are more reflective.
 
-Previously, Xenko used an imprecise polynomial approximation to compute the fresnel for environment lighting (such as cubemaps), resulting in a bigger-than-expected white outline.
-
-Xenko now defaults to a precomputed BRDF environment lookup texture that matches our default lighting equations (GGX Schlick). This produces much more accurate rendering.
-
-TODO: Image (before/after? -- need to switch Specular Model => Environment between LUT and Polynomial)
+Previously, Xenko used an imprecise polynomial approximation to compute the fresnel for environment lighting (such as cubemaps), resulting in a bigger-than-expected white outline. Xenko now defaults to a precomputed BRDF environment lookup texture that matches our default lighting equations (GGX Schlick). This produces much more accurate rendering.
 
 ## Breaking changes
 
