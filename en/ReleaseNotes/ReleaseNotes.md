@@ -72,9 +72,11 @@ For details, see [Streaming](../manual/graphics/textures/streaming.md).
 
 ### Render masks
 
-You can now set which render groups a camera renders under **Graphics Compositor > Entry points > Render masks**.
+You can now set which render groups a camera renders under **Graphics Compositor > Entry points > Render masks**. For example, you can have a model be visible to Camera A but invisible to Camera B.
 
 ![Render mask](media/ReleaseNotes-2.1/change-render-mask.png)
+
+For details, see [Render groups and masks](../manual/graphics/graphics-compositor/render-groups-and-masks.md).
 
 ### Improved profiler
 
