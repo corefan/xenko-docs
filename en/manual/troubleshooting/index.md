@@ -5,6 +5,7 @@ These pages describe how to fix problems with Xenko.
 ![Troubleshooting](media/troubleshooting.png)
 
 * [Logging](logging.md)
+* [Debug text](debug-text.md)
 * [Profiling](profiling.md)
 * [Xenko doesn't run](xenko-doesnt-run.md)
 * [Default value changes ignored at runtime](default-value-changes-ignored-at-runtime.md)

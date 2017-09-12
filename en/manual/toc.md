@@ -238,6 +238,7 @@
 
 # [Troubleshooting](troubleshooting/index.md)
 ## [Logging](troubleshooting/logging.md)
+## [Debug text](troubleshooting/debug-text.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log). 
+You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log).
 
 Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. For example, you can create a log message that triggers when a character performs a certain action. This is useful to investigate how your game is performing.
 
@@ -89,24 +89,6 @@ GlobalLogger.GlobalMessageLogged += fileWriter;
 
 This creates a file in the Debug folder of your project (eg *MyGame\MyGame\Bin\Windows\Debug\myLogFile.txt*).
 
-## Print debug text
-
-You can print debug text at runtime with [DebugText](xref:SiliconStudio.Xenko.Engine.ScriptComponent.DebugText). For example, you can use this to display a message when a problem occurs.
-
->[!Note]
->Debug text is automatically disabled when you build the game in release mode.
-
-In the `Update` method of your script, add:
-
-```cs
-DebugText.Print("My debug text",new Int2(x: 50, y: 50));
-```
-
-Where `x` and `y` are the pixel coordinates to display the text at.
-
-The debug message is displayed when you run the game.
-
-![Debug text](media/my-debug-text.jpg)
 
 ### Hide debug text
 
@@ -116,7 +98,7 @@ DebugText.Visible = false;
 
 ## Example script
 
-The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). If it doesn't load, the log records an error message (`Log.Debug`) and the game displays the debug text "MyTexture not loaded" (`DebugText`).
+The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). If it doesn't load, the log records an error message (`Log.Debug`) and the game displays the [debug text](debug-text.md) "MyTexture not loaded" (`DebugText`).
 
 ```cs
 using System.Linq;
@@ -165,5 +147,6 @@ namespace MyGame
 
 ## See also
 
+* [Debug text](debug-text.md)
 * [Profiling](profiling.md)
 * [Scripts](../scripts/index.md)
