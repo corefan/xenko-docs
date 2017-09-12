@@ -93,6 +93,12 @@ You can now:
 
 For details, see [Profiling](../manual/troubleshooting/profiling.md).
 
+### Debug text
+
+You can now display debug text at runtime. For more information, see [Logging](../manual/troubleshooting/logging.md).
+
+![Debug text](media/ReleaseNotes-2.1/my-debug-text.jpg)
+
 ### Rewritten input system
 
 The input system has been rewritten to track different input devices and allow for better extensibility.
@@ -107,12 +113,6 @@ The input system has been rewritten to track different input devices and allow f
 * `KeyEvent` now has a `RepeatCount` member, indicating how many times the key has been repeated while being held down
 
 For details, see [Input](../manual/input/index.md).
-
-### Debug text
-
-You can now display debug text at runtime. For more information, see [Logging](../manual/troubleshooting/logging.md).
-
-![Debug text](media/ReleaseNotes-2.1/my-debug-text.jpg)
 
 ### Improved Direct3D 12 support
 
