@@ -134,6 +134,12 @@ Fresnel describes how light is reflected depending on the angle the material is 
 
 Previously, Xenko used an imprecise polynomial approximation to compute the fresnel for environment lighting (such as cubemaps), resulting in a bigger-than-expected white outline. Xenko now defaults to a precomputed BRDF environment lookup texture that matches our default lighting equations (GGX Schlick). This produces much more accurate rendering.
 
+### Japanese documentation
+
+The documentation is now available in Japanese. To switch languages, use the **Language** button in the top-right of the documentation site.
+
+![Switch language](media/ReleaseNotes-2.1/switch-language.png)
+
 ## Breaking changes
 
 ### Input system
@@ -246,7 +252,6 @@ Previously, Xenko used an imprecise polynomial approximation to compute the fres
 * Added `AbsoluteMousePosition` information to the `InputManger`.
 * Improved gamepad support (new devices supported, improved API, runtime detection, etc.)
 * Add interpreted key and IME input support
-
 
 ##### Navigation
 
