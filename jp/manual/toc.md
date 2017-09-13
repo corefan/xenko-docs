@@ -18,7 +18,7 @@
 ### [シーンを作成する](game-studio/create-a-scene.md)
 ### [エンティティを追加する](game-studio/add-entities.md)
 ### [エンティティを管理する](game-studio/manage-entities.md)
-### [シーン エディター内を移動する](game-studio/avigate-in-the-scene-editor.md)
+### [シーン エディター内を移動する](game-studio/navigate-in-the-scene-editor.md)
 ## [ゲームを起動する](get-started/launch-a-game.md)
 
 # [アニメーション](animation/index.md)
@@ -61,7 +61,7 @@
 # [Game Studio](game-studio/index.md)
 ## [シーン](game-studio/scenes.md)
 ### [シーンを作成して開く](game-studio/create-a-scene.md)
-### [シーン エディター内を移動する](game-studio/avigate-in-the-scene-editor.md)
+### [シーン エディター内を移動する](game-studio/navigate-in-the-scene-editor.md)
 ### [シーンを管理する](game-studio/manage-scenes.md)
 ### [シーンをロードする](game-studio/load-scenes.md)
 ### [エンティティを追加する](game-studio/add-entities.md)

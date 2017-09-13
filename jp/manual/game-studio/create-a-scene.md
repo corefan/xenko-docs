@@ -48,7 +48,7 @@
 
 ## 関連項目
 
-* [シーン エディター内を移動する](avigate-in-the-scene-editor.md)
+* [シーン エディター内を移動する](navigate-in-the-scene-editor.md)
 * [シーンを管理する](manage-scenes.md)
 * [シーンをロードする](load-scenes.md)
 * [エンティティを追加する](add-entities.md)

@@ -77,7 +77,7 @@ Scene Streaming スクリプトを追加するには、［Asset view］(既定�
 * [コライダー](../physics/colliders.md)
 * [トリガー](../physics/triggers.md)
 * [シーンを作成して開く](create-a-scene.md)
-* [シーン エディター内を移動する](avigate-in-the-scene-editor.md)
+* [シーン エディター内を移動する](navigate-in-the-scene-editor.md)
 * [シーンを管理する](manage-scenes.md)
 * [エンティティを追加する](add-entities.md)
 * [エンティティを管理する](manage-entities.md)
