@@ -9,11 +9,11 @@
 > [!NOTE]
 > 使用するグラフィックス プラットフォーム用の最新のドライバーがあることを確認してください。
 
-1.［Asset view］で **Game Settings** アセットを選択します。
+1. ［Asset view］で **Game Settings** アセットを選択します。
 
     ![Game settings asset](media/games-settings-asset.png)
 
-2.［Property grid］の［Rendering Settings］>［Target graphics platform］で、使用するグラフィックス プラットフォームを選択します。
+2. ［Property grid］の［Rendering Settings］>［Target graphics platform］で、使用するグラフィックス プラットフォームを選択します。
 
     ![Select graphics platform](media/change-graphics-platform.png)
 
@@ -39,11 +39,11 @@
 
     ![Select graphics platform override](media/select-override-platform.png)
 
-3.［Configuration］ドロップダウン メニューで、［Rendering Settings］を選択します。
+3. ［Configuration］ドロップダウン メニューで、［Rendering Settings］を選択します。
 
     ![Select graphics platform override](media/select-override-configuration.png)
 
-4.［Rendering Settings］の［Preferred Graphics Platform］ドロップダウン メニューで、使用するグラフィックス プラットフォームを選択します。
+4. ［Rendering Settings］の［Preferred Graphics Platform］ドロップダウン メニューで、使用するグラフィックス プラットフォームを選択します。
 
     ![Select graphics platform override](media/select-override-graphics-platform.png)
 

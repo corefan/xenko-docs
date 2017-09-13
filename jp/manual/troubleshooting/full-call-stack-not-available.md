@@ -8,7 +8,7 @@ Visual Studio の設定によっては、Xenko で例外がスローされたと
 
     ![Exception settings](media/exception-settings.png)
 
-2.［共通言語ランタイム例外］を展開し、［この一覧にないすべての共通言語ランタイム例外］を選択します。他の条件も選択することが必要な場合があります。
+2. ［共通言語ランタイム例外］を展開し、［この一覧にないすべての共通言語ランタイム例外］を選択します。他の条件も選択することが必要な場合があります。
 
     ![All common language runtime exceptions not in this list](media/all-common-language-runtime-exceptions.png)
 

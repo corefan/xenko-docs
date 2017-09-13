@@ -10,7 +10,7 @@ VR デバイスでシーンをプレビューするには、エディターを [
 
 そのためには次のようにします。
 
-1.［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
+1. ［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -35,7 +35,7 @@ VR デバイスにシーンのプレビューが表示されます。代わり�
 >[!NOTE]
 >エディターとゲーム ノードが既に異なるレンダラーを使用している場合は (VR サンプル プロジェクトのように)、以下の説明に従う必要はありません。
 
-1.［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
+1. ［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -47,11 +47,11 @@ VR デバイスにシーンのプレビューが表示されます。代わり�
 
     ![Create forward renderer](media/create-forward-renderer.png)
 
-3.［Entry points］ノードを選択します。
+3. ［Entry points］ノードを選択します。
 
     ![Entry points node](media/entry-points-node.png)
 
-4.［Property grid］の［Editor renderer］の隣で、作成したフォワード レンダラーを選択します。
+4. ［Property grid］の［Editor renderer］の隣で、作成したフォワード レンダラーを選択します。
 
     ![Select forward renderer](media/select-editor-forward-renderer.png)
 

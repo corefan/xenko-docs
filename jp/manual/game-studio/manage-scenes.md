@@ -35,15 +35,15 @@
 
 **既定のシーン**は、Xenko が実行時にロードするシーンです。既定のシーンは、[ゲーム設定](game-settings.md)アセットで設定できます。
 
-1.［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
+1. ［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2.［Asset view］(既定では下部のペイン) で、［GameSettings］アセットを選択します。
+2. ［Asset view］(既定では下部のペイン) で、［GameSettings］アセットを選択します。
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3.［Property grid］(既定では右側のペイン) で、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+3. ［Property grid］(既定では右側のペイン) で、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Set default scene](media/game-settings-default-scene.png)
 

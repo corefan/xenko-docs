@@ -10,19 +10,19 @@
 
 ## ナビゲーション グループを作成する
 
-1.［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
+1. ［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2.［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
+2. ［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3.［Property grid］(既定では右側のペイン) で、［Navigation Settings］を展開します。
+3. ［Property grid］(既定では右側のペイン) で、［Navigation Settings］を展開します。
 
    ![Game settings](media/navigation-settings.png)
 
-4.［Groups］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+4. ［Groups］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     新しい項目がナビゲーション グループのリストに追加されます。
 

@@ -10,7 +10,7 @@
 
 1. 運動学的剛体にするエンティティを選択します。
 
-2.［Property grid］で、［Rigidbody］コンポーネントのプロパティの［Is Kinematic］を選択します。
+2. ［Property grid］で、［Rigidbody］コンポーネントのプロパティの［Is Kinematic］を選択します。
 
     ![Check 'Is kinematic'](media/rigid-bodies-is-kinematic-checkbox.png)
 

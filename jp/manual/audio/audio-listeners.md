@@ -13,11 +13,11 @@
 
 オーディオ リスナーを作成するには、**オーディオ リスナー コンポーネント**をエンティティにアタッチします。このコンポーネントは任意のエンティティにアタッチできます。
 
-1.［Scene view］で、オーディオ リスナーにするエンティティを選択します。
+1. ［Scene view］で、オーディオ リスナーにするエンティティを選択します。
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2.［Property grid］で、［Add component］をクリックし、[オーディオ リスナー コンポーネント](xref:SiliconStudio.Xenko.Audio.AudioListener)を選択します。
+2. ［Property grid］で、［Add component］をクリックし、[オーディオ リスナー コンポーネント](xref:SiliconStudio.Xenko.Audio.AudioListener)を選択します。
 
     ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 

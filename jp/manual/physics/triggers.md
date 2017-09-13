@@ -14,7 +14,7 @@
 
 1. [コライダー](colliders.md)を作成します。
 
-2.［Property grid］で、コライダー コンポーネントのプロパティの［Is Trigger］を選択します。
+2. ［Property grid］で、コライダー コンポーネントのプロパティの［Is Trigger］を選択します。
 
 ![Select 'Is trigger'](media/triggers-select-is-trigger-checkbox.png)
 

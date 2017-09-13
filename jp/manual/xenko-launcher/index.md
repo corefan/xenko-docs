@@ -52,13 +52,13 @@ Visual Studio 拡張機能を使用すると、Visual Studio から直接シェ�
 
 ## Game Studio を開始する
 
-1.［Switch/update version］で、使用する Xenko のバージョンを選択します。
+1. ［Switch/update version］で、使用する Xenko のバージョンを選択します。
 
   ［Start］ボタンでバージョン番号が更新されます。
 
    ![Start button](media/xenko-launcher-start-button.png)
 
-2.［Start］をクリックして Game Studio を起動します。
+2. ［Start］をクリックして Game Studio を起動します。
 
 ## 最近使用したプロジェクト
 

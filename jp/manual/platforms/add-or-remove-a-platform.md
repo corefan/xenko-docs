@@ -4,7 +4,7 @@
 
 プロジェクトのプラットフォームを追加または削除することができます。
 
-1.［Solution explorer］(既定では左下) で、プロジェクトを右クリックして［Update package］>［Update Platforms］を選択します。
+1. ［Solution explorer］(既定では左下) で、プロジェクトを右クリックして［Update package］>［Update Platforms］を選択します。
 
     ![Update platforms](media/update-platforms.png)
 

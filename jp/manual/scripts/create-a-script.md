@@ -7,7 +7,7 @@ Game Studio または Visual Studio などの IDE を使用して、スクリプ
 
 ## Game Studio でスクリプトを作成する
 
-1.［Asset view］で、［Add asset］>［Scripts］の順にクリックし、スクリプトの種類を選択します。
+1. ［Asset view］で、［Add asset］>［Scripts］の順にクリックし、スクリプトの種類を選択します。
 
 	![Select script type window](media/create-a-script-script-asset-selection.png)
 
@@ -77,7 +77,7 @@ namespace MyGame
 
 	［新しい項目の追加］ダイアログが開きます。
 
-3.［クラス］を選択し、スクリプトの名前を入力して、［追加］をクリックします。
+3. ［クラス］を選択し、スクリプトの名前を入力して、［追加］をクリックします。
 
    新しいクラスがプロジェクトに追加されます。
 

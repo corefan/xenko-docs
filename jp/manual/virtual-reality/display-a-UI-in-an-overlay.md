@@ -21,7 +21,7 @@
 
 ## 2. VR オーバーレイを追加する
 
-1.［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
+1. ［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -31,17 +31,17 @@
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3.［Property grid］(既定では右側) で、［VR Settings］を展開します。
+3. ［Property grid］(既定では右側) で、［VR Settings］を展開します。
 
     ![VR settings](media/vr-settings.png)
 
-4.［Overlays］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+4. ［Overlays］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     新しいオーバーレイがリストに追加されます。
 
     ![Add VR item](media/add-overlay.png)
 
-5.［Texture］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+5. ［Texture］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
    ［Select an asset］ウィンドウが開きます。
 
@@ -55,11 +55,11 @@
 
     ![Select UI render feature](media/select-UI-render-feature.png)
 
-2.［Property grid］で、［SimpleGroupToRenderStageSelector］が選択されていることを確認します。
+2. ［Property grid］で、［SimpleGroupToRenderStageSelector］が選択されていることを確認します。
 
     ![Select SimpleGroupToRenderStageSelector.png](media/select-SimpleGroupToRenderStageSelector.png)
 
-3.［Render Stage］で、［UIRenderStage］が選択されていることを確認します。
+3. ［Render Stage］で、［UIRenderStage］が選択されていることを確認します。
 
     ![Select UIRenderStage.png](media/select-UIRenderStage.png)
 
@@ -85,7 +85,7 @@
 
     ![Cleared game renderers](../graphics/graphics-compositor/media/game-renderers-cleared.png)
 
-3.［Game rendererer］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［Camera Renderer］を選択します。
+3. ［Game rendererer］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［Camera Renderer］を選択します。
 
     ![Select camera renderer.png](media/select-camera-renderer.png)
 
@@ -93,27 +93,27 @@
 
     そのため、以下の説明では、カメラを持つゲーム レンダラーを追加した後、2 つのレンダラーをそのレンダラーの子にします。これにより、両方のレンダラーにカメラを持つ親ができます。
 
-4.［Camera］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、メイン ゲーム カメラを選択します。
+4. ［Camera］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、メイン ゲーム カメラを選択します。
 
     ![Select main camera](media/select-main-camera.png)
 
-5.［Child］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［SceneRendererCollection］を選択します。
+5. ［Child］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［SceneRendererCollection］を選択します。
 
     ![Select scene renderer collection](media/select-scene-renderer-collection.png)
 
-6.［Children］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［RenderTextureSceneRenderer］を選択します。
+6. ［Children］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［RenderTextureSceneRenderer］を選択します。
 
     ![Select RenderTextureSceneRenderer](media/select-RenderTextureSceneRenderer.png)
 
-7.［Child］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［SingleStageRenderer］を選択します。
+7. ［Child］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［SingleStageRenderer］を選択します。
 
     ![Select single stage renderer](media/select-single-stage-renderer.png)
 
-8.［Render Stage］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［UIRenderStage］を選択します。これは UI をレンダリングするレンダラーです。
+8. ［Render Stage］の隣の ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (［Change...］) をクリックし、［UIRenderStage］を選択します。これは UI をレンダリングするレンダラーです。
 
     ![Select UI render stage](media/select-UI-render-stage.png)
 
-9.［Render Texture］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+9. ［Render Texture］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
    ［Select an asset］ウィンドウが開きます。
 
@@ -123,7 +123,7 @@
 
     レンダー テクスチャがレンダラーに追加されます。
 
-11.［Game renderer］で、［Children］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックし、［Forward Renderer］を選択します。
+11. ［Game renderer］で、［Children］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックし、［Forward Renderer］を選択します。
 
     ![Select forward renderer](media/overlay-select-forward-renderer.png)
 

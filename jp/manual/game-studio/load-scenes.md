@@ -57,9 +57,9 @@ Scene Streaming スクリプトを追加するには、［Asset view］(既定�
 
     ![Scene streamer properties](media/scene-streaming-script-properties.png)
 
-4.［Url］で、ロードするシーンの URL を指定します。
+4. ［Url］で、ロードするシーンの URL を指定します。
 
-5.［Trigger］で、ステップ 1 で作成したエンティティを指定します。
+5. ［Trigger］で、ステップ 1 で作成したエンティティを指定します。
 
 実行時に、ステップ 1 で作成したトリガーがトリガーされると、ステップ 4 で指定したシーンがロードされます。
 

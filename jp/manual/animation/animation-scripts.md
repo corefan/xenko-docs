@@ -28,9 +28,9 @@ Xenko にはあらかじめ作成されている **AnimationStart** スクリプ
 
 **AnimationStart** スクリプトを使用するには:
 
-1.［Asset view］(既定では下部のペイン) で、［Add asset］をクリックします。
+1. ［Asset view］(既定では下部のペイン) で、［Add asset］をクリックします。
 
-2.［Add asset］>［Scripts］>［Animation start］を選択します。
+2. ［Add asset］>［Scripts］>［Animation start］を選択します。
 
     ![Add animation script](media/animations-additive-animations-animation-start.png)
 

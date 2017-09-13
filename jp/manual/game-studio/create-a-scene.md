@@ -9,7 +9,7 @@
 
 ## シーンを作成する
 
-1.［Asset view］(既定では下部のペイン) で［Add asset］をクリックして、［Scenes］を選択します。
+1. ［Asset view］(既定では下部のペイン) で［Add asset］をクリックして、［Scenes］を選択します。
 
     ![Add a scene](media/add-scene.png)
 

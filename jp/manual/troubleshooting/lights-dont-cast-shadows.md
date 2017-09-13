@@ -15,7 +15,7 @@
 
 1. シーン エディターで、シャドウをキャストするライトのエンティティを選択します。
 
-2.［Light］コンポーネントのプロパティの［Shadow］>［Size］で、ドロップダウン メニューを使用してシャドウのサイズを小さくします。
+2. ［Light］コンポーネントのプロパティの［Shadow］>［Size］で、ドロップダウン メニューを使用してシャドウのサイズを小さくします。
 
     ![media/DirectionalLightProperties.png](../graphics/lights-and-shadows/media/DirectionalLightProperties-size.png)
 

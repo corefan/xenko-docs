@@ -8,15 +8,15 @@
 
 ## ゲームの設定を編集する
 
-1.［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
+1. ［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2.［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
+2. ［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3.［Property grid］(既定では右側のペイン) で、［Game Settings］のプロパティを編集します。
+3. ［Property grid］(既定では右側のペイン) で、［Game Settings］のプロパティを編集します。
 
    ![Game settings](media/game-settings.png)
 
@@ -26,7 +26,7 @@
 
 既定のシーンを設定するには:
 
-1.［Game Settings］のプロパティで、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+1. ［Game Settings］のプロパティで、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Set default scene](media/game-settings-default-scene.png)
 
@@ -42,13 +42,13 @@
 
 Graphics Compositor を設定するには:
 
-1.［Game Settings］のプロパティで、［Graphics Compositor］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+1. ［Game Settings］のプロパティで、［Graphics Compositor］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Set default scene](media/game-settings-graphics-compositor.png)
 
    ［Select an asset］ウィンドウが開きます。
 
-2.［Graphics Compositor］を選択して、［OK］をクリックします。
+2. ［Graphics Compositor］を選択して、［OK］をクリックします。
 
 詳細については、「[Graphics Compositor](../graphics/graphics-compositor/index.md)」を参照してください。
 
@@ -157,7 +157,7 @@ Graphics Compositor を設定するには:
 
 特定のプラットフォーム、グラフィックス、API などについて、設定をオーバーライドできます。たとえば、プラットフォームごとにテクスチャの品質を変えることができます。
 
-1.［GameSettings］アセットを選択し、［Property grid］の［Overrides］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+1. ［GameSettings］アセットを選択し、［Property grid］の［Overrides］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     ![Select graphics platform](../platforms/media/add-override.png)
 
@@ -173,7 +173,7 @@ Graphics Compositor を設定するには:
 
    ［Platform Filters］(後の「**プラットフォーム フィルターを追加する**」を参照) で、このリストに GPU プラットフォームを追加できます。
 
-4.［Configuration］ドロップダウン メニューで、オーバーライドする設定の種類を選択します (［Editor Settings］、［Texture Settings］、［Rendering Settings］、[Physics Settings］)。
+4. ［Configuration］ドロップダウン メニューで、オーバーライドする設定の種類を選択します (［Editor Settings］、［Texture Settings］、［Rendering Settings］、[Physics Settings］)。
 
     ![Select graphics platform override](../platforms/media/select-override-configuration.png)
 
@@ -185,7 +185,7 @@ Graphics Compositor を設定するには:
 
 ![Specific filter](media/specific-filter.png)
 
-1.［Game Settings］アセットを選択し、［Property grid］で［Platform Filters］を展開します。
+1. ［Game Settings］アセットを選択し、［Property grid］で［Platform Filters］を展開します。
 
     使用できるプラットフォーム フィルターのリストが表示されます。
 

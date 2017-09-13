@@ -18,13 +18,13 @@
 
 1. **球体**エンティティを選択します。
 
-2.［Property grid］の［Rigidbody］で、［Restitution］を *0.9* に設定します。
+2. ［Property grid］の［Rigidbody］で、［Restitution］を *0.9* に設定します。
 
     ![Set restitution for a sphere](media/physics-tutorials-rigidbody-restitution.png)
 
 3. **地面**エンティティを選択します。
 
-4.［Property grid］の［Static Collider］で、［Restitution］を *0.9* に設定します。
+4. ［Property grid］の［Static Collider］で、［Restitution］を *0.9* に設定します。
 
     ![Set restitution for the ground](media/physics-tutorials-static-collider-restitution.png)
 
@@ -44,9 +44,9 @@
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
-4.［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
+4. ［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
 
-5.［Is Trigger］チェックボックスをオンにします。
+5. ［Is Trigger］チェックボックスをオンにします。
 
     ![Check 'Is trigger'](media/physics-tutorials-create-a-trigger-is-trigger-checkbox.png)
 
@@ -88,7 +88,7 @@
 
     モデル コンポーネントがエンティティに追加されます。
 
-5.［Model］で ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
+5. ［Model］で ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
@@ -96,7 +96,7 @@
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7.［Property grid］の［Model］>［Materials］で、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
+7. ［Property grid］の［Model］>［Materials］で、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
@@ -104,11 +104,11 @@
 
     ![Select material](media/physics-tutorials-select-transparent-material.png)
 
-9.［Asset view］で、**Transparent** マテリアル アセットを選択します。
+9. ［Asset view］で、**Transparent** マテリアル アセットを選択します。
 
     ![Select material in Asset View](media/physics-tutorials-select-material-asset.png)
 
-10.［Property grid］の［Misc］>［Transparency］で、［Blend］を選択します。
+10. ［Property grid］の［Misc］>［Transparency］で、［Blend］を選択します。
 
     ![Select Blend](media/physics-tutorials-set-blend.png)
 
@@ -143,11 +143,11 @@
 >[!NOTE]
 >スクリプトの詳細については、「[スクリプト](../scripts/index.md)」を参照してください。
 
-1.［Asset view］で［Add asset］をクリックし、［Scripts］ >［Async Script］の順に選択します。
+1. ［Asset view］で［Add asset］をクリックし、［Scripts］ >［Async Script］の順に選択します。
 
     ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
-2.［Create a script］ダイアログで、スクリプトの名前を「*Trigger*」に設定して、［Create script］をクリックします。
+2. ［Create a script］ダイアログで、スクリプトの名前を「*Trigger*」に設定して、［Create script］をクリックします。
 
     2a.スクリプトを保存するかどうかを確認するメッセージが表示されたら、［Save］をクリックします。
 
@@ -208,7 +208,7 @@
 
 1. **Game Studio** で **Trigger** エンティティを選択します。
 
-2.［Property grid］で［Add component］をクリックして、**Trigger** スクリプトを選択します。
+2. ［Property grid］で［Add component］をクリックして、**Trigger** スクリプトを選択します。
 
     ![Add script component to entity](media/physics-tutorials-create-a-trigger-add-script-component-to-entity.png)
 

@@ -19,19 +19,19 @@
 
     ナビゲーション コンポーネントの詳細については、「[ナビゲーション コンポーネント](navigation-components.md)」を参照してください。
 
-2.［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
+2. ［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-3.［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
+3. ［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-4.［Property grid］(既定では右側のペイン) で、［Navigation Settings］の［Dynamic navigation mesh］を展開します。
+4. ［Property grid］(既定では右側のペイン) で、［Navigation Settings］の［Dynamic navigation mesh］を展開します。
 
    ![Game settings](media/expand-dynamic-navigation-mesh.png)
 
-5.［Enabled］チェックボックスをオンにします。
+5. ［Enabled］チェックボックスをオンにします。
 
     ![Enable dynamic navigation checkbox](media/enable-dynamic-navigation.png)
 

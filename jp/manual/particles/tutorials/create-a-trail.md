@@ -16,7 +16,7 @@
 
 1. Xenko Launcher で、［Start］をクリックして、［New Game］を選択します。
 
-2.［Create a new game］ダイアログの［Asset Packs］で、［Animated Models］を選択します。Animated Models パックには、この例で使用するアセットが含まれます(ここではパーティクル効果を最初から作成することに注意してください)。
+2. ［Create a new game］ダイアログの［Asset Packs］で、［Animated Models］を選択します。Animated Models パックには、この例で使用するアセットが含まれます(ここではパーティクル効果を最初から作成することに注意してください)。
 
     ![Create a new game](media/create-a-new-game.png)
 
@@ -26,21 +26,21 @@
 
 ## 2. モデルとアニメーションをセットアップする
 
-1.［Asset view］で［Models］フォルダーを開き、**mannequinModel** をシーンにドラッグ アンド ドロップします。mannequinModel には、この剣撃アニメーションに使用するスケルトン アセットが含まれます。
+1. ［Asset view］で［Models］フォルダーを開き、**mannequinModel** をシーンにドラッグ アンド ドロップします。mannequinModel には、この剣撃アニメーションに使用するスケルトン アセットが含まれます。
 
-2.［mannequinModel］を選択し、［Property grid］で［Add component］>［Animations］の順に選択します。アニメーション コンポーネントがモデルに追加されます。
+2. ［mannequinModel］を選択し、［Property grid］で［Add component］>［Animations］の順に選択します。アニメーション コンポーネントがモデルに追加されます。
 
     ![Add Animations](media/add-animation.png)
 
-3.［Animations］コンポーネントで、![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+3. ［Animations］コンポーネントで、![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     ![Add a new item to the list](media/add-new-playing-animation.png)
 
-4.［Clip］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
+4. ［Clip］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。
 
     ![Select an animation asset](media/select-animation-asset.png)
 
-5.［Animations］フォルダーを参照し、［Sword_R animation］を選択します。これは、右から左への剣撃のアニメーションです。
+5. ［Animations］フォルダーを参照し、［Sword_R animation］を選択します。これは、右から左への剣撃のアニメーションです。
 
     ![Select an animation asset in the Asset Picker](media/select-animation-asset-in-asset-picker.png)
 
@@ -56,7 +56,7 @@
 
     このコマンドを使用すると、SwordModel を mannequinModel スケルトンのポイントにリンクできます。ターゲットを指定する必要はありません。エンティティは既定で親エンティティ (mannequinModel) を使用します。
 
-9.［Model Node Link］の［Node Name］フィールドで、［weapon_bone_R］を選択します。これにより、右手で武器を使用するスケルトンのポイントにモデルがアタッチされます。
+9. ［Model Node Link］の［Node Name］フィールドで、［weapon_bone_R］を選択します。これにより、右手で武器を使用するスケルトンのポイントにモデルがアタッチされます。
 
 10. ここまでの結果を見てみます。［Play］をクリックしてゲームを実行し、結果を確認します。マウスと WASD キーを使用してカメラを移動し、異なる視点からアニメーションを見ることができることを思い出してください。
 
@@ -78,11 +78,11 @@
 
     パーティクル システム コンポーネントがモデルに追加されます。これを使用して残影効果を作成します。
 
-2.［Source］をクリックしてプロパティを展開します。
+2. ［Source］をクリックしてプロパティを展開します。
 
     ![Expand Source properties](media/expand-source-properties.png)
 
-3.［Emitters］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。これにより、新しいパーティクル エミッターが追加されます。
+3. ［Emitters］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。これにより、新しいパーティクル エミッターが追加されます。
 
 4. エミッターのプロパティで、［Shape］を［Trail］に設定します。
 
@@ -92,13 +92,13 @@
 
     ![Set Axis to Center](media/set-axis-to-center.png)
 
-6.［Spawners］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Per frame］を選択します。
+6. ［Spawners］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Per frame］を選択します。
 
     ![Add per-frame spawner](media/add-per-frame-spawner.png)
 
     これによりフレーム単位のスポーナーがエミッターに追加され、(たとえば 1 秒ごとではなく) フレームごとに X 個のパーティクルが生成されます。
 
-7.［Initializers］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Velocity］を選択します。
+7. ［Initializers］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Velocity］を選択します。
 
     ![Add velocity initializer](media/add-velocity-initializer.png)
 
@@ -112,7 +112,7 @@
 
     これにより、パーティクルは Y 軸に制限されて、1 枚の非常に薄い紙のようになります。
 
-9.［Initializers］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Direction］を選択します。
+9. ［Initializers］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Direction］を選択します。
 
     ![Add direction initializer](media/add-direction-initializer.png)
 
@@ -143,11 +143,11 @@
 
     これにより、生成順序イニシャライザーがエミッターに追加されます。プロパティはありませんが、パーティクルに SpawnID が設定されるので、それを使用して並べ替えることができます。
 
-2.［Emitters］の［Sorting］で、［ByOrder］を選択します。
+2. ［Emitters］の［Sorting］で、［ByOrder］を選択します。
 
     ![Sort by order](media/sort-by-order.png)
 
-3.［Initalizers］の［Velocity］イニシャライザーで、［Velocity min］と［Velocity max］の値をどちらも **0,0.5,0** に変更します。
+3. ［Initalizers］の［Velocity］イニシャライザーで、［Velocity min］と［Velocity max］の値をどちらも **0,0.5,0** に変更します。
 
     ![Change velocity](media/change-velocity.png)
 
@@ -181,19 +181,19 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
     ![Add a texture](media/add-texture.png)
 
-3.［SwordModel］のプロパティで、［Emitters］>［Material］の順に展開します。![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。［Textures］フォルダーを参照して、**swoosh.png** を選択します。
+3. ［SwordModel］のプロパティで、［Emitters］>［Material］の順に展開します。![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Pick an asset up］) をクリックします。［Textures］フォルダーを参照して、**swoosh.png** を選択します。
 
     ![Add material texture](media/add-material.png)
 
-4.［Alpha-Add］バーを **1** に設定して、100% 放射性にします。
+4. ［Alpha-Add］バーを **1** に設定して、100% 放射性にします。
 
     ![Alpha add bar](media/alpha-add.png)
 
-5.［Particle emitter］のプロパティで、［Shape］を展開し、［UV Coords］を［Stretched］に、［UV Factor］を **1** に設定します。
+5. ［Particle emitter］のプロパティで、［Shape］を展開し、［UV Coords］を［Stretched］に、［UV Factor］を **1** に設定します。
 
     ![Set UV](media/UV-coords-and-factor.png)
 
-6.［UV Rotate］を展開します。［Clockwise］で、90 度を選択します。これによりテクスチャが時計方向に 90 度回転し、「衝撃波」の線が右を向くようになります。
+6. ［UV Rotate］を展開します。［Clockwise］で、90 度を選択します。これによりテクスチャが時計方向に 90 度回転し、「衝撃波」の線が右を向くようになります。
 
     ![Rotate material](media/rotate-material.png)
 
@@ -211,13 +211,13 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 これまでは、パーティクル効果を剣にコンポーネントとしてアタッチすることで作成してきました。今度は、効果を剣から切り離し、自由に有効および無効にできる独立したエンティティにします。そのためには、プレハブを作成します。プレハブの詳細については、[プレハブのドキュメント](../../game-studio/prefabs/index.md)を参照してください。
 
-1.［SwordModel］を右クリックして、［Create prefab from selection］を選択します。
+1. ［SwordModel］を右クリックして、［Create prefab from selection］を選択します。
 
     ![Create prefab from selection](media/create-prefab-from-selection.png)
 
    ［SwordModel］からプレハブが作成されて、［Asset view］に追加されます。選択したものからプレハブを作成すると、これまでに設定したオプションを簡単にコピーできます。
 
-2.［SwordModel］自体はプレハブにしません。それを単にテンプレートとして使用し、それからプレハブを作成します。新しいパーティクル効果プレハブとは切り離す必要があるので、右クリックして［Break link to prefab］を選択します。
+2. ［SwordModel］自体はプレハブにしません。それを単にテンプレートとして使用し、それからプレハブを作成します。新しいパーティクル効果プレハブとは切り離す必要があるので、右クリックして［Break link to prefab］を選択します。
 
     ![Break link to prefab](media/break-link-to-prefab.png)
 
@@ -267,7 +267,7 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
     ![Reload assemblies](media/reload-assemblies.png)
 
-7.［MainScene］で［SwordModel］を選択します。
+7. ［MainScene］で［SwordModel］を選択します。
 
     ![Select SwordModel](media/select-swordmodel.png)
 
@@ -305,7 +305,7 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
    ［Asset preview］にアニメーションの秒数が表示されます。よく見ると、アニメーションが開始してから約 0.1 秒経つまで、マネキンは剣を振り下ろし始めていないことがわかります。そこで、マネキンが剣を振るのと同時に残影効果が生成されるように設定します。
 
-2.［SwordModel］を選択します。
+2. ［SwordModel］を選択します。
 
 3. **SpawnTrail** のプロパティで、［Start time］を 0.06 に設定します。つまり、剣撃アニメーションが開始してから 0.06 秒経つまで残影効果は生成されず、わずかですがより自然に見えます。好みに合わせて自由に試してみてください。
 
@@ -357,7 +357,7 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 新しい問題が発生しています。パーティクル効果を剣の先端に移動したため、パーティクルが先端から飛び散っています。パーティクルの向きを逆にして、剣の刃に沿って柄の方に動くようにする必要があります。
 
-6.［Particle System］>［Source］>［Emitters］>［Initializers］の［Direction］イニシャライザーで、［Direction min］と［Direction max］をどちらも **0, 0, 1** に変更します。これで残影の方向が逆になります。
+6. ［Particle System］>［Source］>［Emitters］>［Initializers］の［Direction］イニシャライザーで、［Direction min］と［Direction max］をどちらも **0, 0, 1** に変更します。これで残影の方向が逆になります。
 
     ![Initializer direction](media/initializer-direction.png)
 

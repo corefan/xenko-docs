@@ -12,13 +12,13 @@
 
 1. 剛体コライダーにするエンティティを選択します。
 
-2.［Property grid］で［Add component］をクリックして、［Rigidbody］を選択します。
+2. ［Property grid］で［Add component］をクリックして、［Rigidbody］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
 3. エンティティと一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Rigidbody］コンポーネントを展開してプロパティを表示します。
 
-4.［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、目的の形状を選択します。
+4. ［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、目的の形状を選択します。
 
      ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 

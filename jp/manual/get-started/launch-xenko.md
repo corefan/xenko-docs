@@ -40,13 +40,13 @@ Xenko Visual Studio 拡張機能では、構文の強調表示、ライブ コ�
 
 Xenko のインストールが済んだら、Game Studio を開始してプロジェクトをビルドします。
 
-1.［Switch/update version］で、使用する Xenko のバージョンを選択します。
+1. ［Switch/update version］で、使用する Xenko のバージョンを選択します。
 
   ［Start］ボタンでバージョン番号が更新されます。
 
    ![Start button](media/xenko-launcher-start-button.png)
 
-2.［Start］をクリックして Game Studio を起動します。
+2. ［Start］をクリックして Game Studio を起動します。
 
 ## 次に学習すること
 

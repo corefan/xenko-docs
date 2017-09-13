@@ -9,7 +9,7 @@ VR ゲームでは、[テクスチャ](../graphics/textures/index.md) ([レン�
 
 ## オーバーレイを追加する
 
-1.［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
+1. ［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -21,17 +21,17 @@ VR ゲームでは、[テクスチャ](../graphics/textures/index.md) ([レン�
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3.［Property grid］(既定では右側) で、［VR Settings］を展開します。
+3. ［Property grid］(既定では右側) で、［VR Settings］を展開します。
 
     ![VR settings](media/vr-settings.png)
 
-4.［Overlays］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+4. ［Overlays］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     新しいオーバーレイがリストに追加されます。
 
     ![Add VR item](media/add-overlay.png)
 
-5.［Texture］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+5. ［Texture］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
    ［Select an asset］ウィンドウが開きます。
 

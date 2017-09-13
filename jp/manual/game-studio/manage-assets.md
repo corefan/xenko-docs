@@ -10,7 +10,7 @@
 
 たとえば、マテリアル アセットの色を変更するには次のようにします。
 
- 1.［Asset view］(既定では下部) で、マテリアルを選択します。
+ 1. ［Asset view］(既定では下部) で、マテリアルを選択します。
 
 	![Select material in the asset view](../get-started/media/edit-asset-sphere-material-asset-view-tab.png)
 
@@ -116,7 +116,7 @@ Game Studio では、アセットが含まれるかどうかが、アセット�
 
 ### フィルターを追加する
 
-1.［Asset view］で、フィルター バーに入力します。
+1. ［Asset view］で、フィルター バーに入力します。
 
     一致するフィルター (名前、種類、タグ) のリストが表示されます。
 

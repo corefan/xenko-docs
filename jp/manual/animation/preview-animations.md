@@ -22,11 +22,11 @@
 
 ## プレビュー モデルを設定する
 
-1.［Asset view］(既定では下部) で、アニメーション アセットを選択します。
+1. ［Asset view］(既定では下部) で、アニメーション アセットを選択します。
 
     ![Select asset](media/select-asset.png)
 
-2.［Property grid］(既定では右側) の［Preview Model］で、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+2. ［Property grid］(既定では右側) の［Preview Model］で、![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Pick an asset up](media/pick-an-asset-up.png)
 

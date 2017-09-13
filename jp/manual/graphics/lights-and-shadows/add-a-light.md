@@ -4,7 +4,7 @@
 
 1. ライトにするエンティティを選択します。
 
-2.［Property grid］ (既定では右側) で、［Add component］をクリックし、［Light］を選択します。
+2. ［Property grid］ (既定では右側) で、［Add component］をクリックし、［Light］を選択します。
 
     ![Add light component](media/add-light-component.png)
 
@@ -12,7 +12,7 @@
 
     ![Light component added](media/light-component-added.png)
 
-3.［Light］コンポーネント プロパティで、［Light］のドロップダウン メニューから、このエンティティで使用するライトの種類を選択します。
+3. ［Light］コンポーネント プロパティで、［Light］のドロップダウン メニューから、このエンティティで使用するライトの種類を選択します。
 
     ![Light type](media/light-type.png)
 

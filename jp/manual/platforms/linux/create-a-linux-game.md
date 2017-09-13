@@ -21,7 +21,7 @@
 
     ![Filled Credential Dialog](media/filled_credential_dialog.png)
 
-5.［Test settings］をクリックして資格情報をテストします。
+5. ［Test settings］をクリックして資格情報をテストします。
 
     エラーが発生した場合は、次のように表示されます。
 

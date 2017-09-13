@@ -20,13 +20,13 @@
 
 1. **地面**エンティティを選択します。
 
-2.［Property grid］で［Add component］をクリックして、［Static Collider］を選択します。
+2. ［Property grid］で［Add component］をクリックして、［Static Collider］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
 3. エンティティの形状と一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Static Collider］コンポーネントを展開してプロパティを表示します。
 
-4.［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Infinite Plane］を選択します。
+4. ［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Infinite Plane］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
@@ -38,13 +38,13 @@
 
 1. **シーン エディター**で**球体**エンティティを選択します。
 
-2.［Property grid］で［Add component］をクリックして、［Rigidbody］を選択します。
+2. ［Property grid］で［Add component］をクリックして、［Rigidbody］を選択します。
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
 3. 地面エンティティの場合と同じように、エンティティと一致するように[コライダーの形状](collider-shapes.md)を設定します。そのためには、［Property grid］で［Rigidbody］コンポーネントを展開してプロパティを表示します。
 
-4.［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Sphere］を選択します。
+4. ［Collider Shapes］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックして、［Sphere］を選択します。
 
      ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 
@@ -54,7 +54,7 @@
 
 1. **球体**エンティティを選択します。
 
-2.［Property grid］の［Transform］で、［Position］を _X: 0, Y: 6, Z: 0_ に設定します。
+2. ［Property grid］の［Transform］で、［Position］を _X: 0, Y: 6, Z: 0_ に設定します。
 
     ![Change Sphere position](media/physics-tutorials-create-a-bouncing-ball-change-sphere-position.png)
 
@@ -66,9 +66,9 @@
 
 1. **カメラ** エンティティを選択します。
 
-2.［Property grid］の［Transform］で、［Position］を _X: -12, Y: 7, Z: 9_ に設定します。
+2. ［Property grid］の［Transform］で、［Position］を _X: -12, Y: 7, Z: 9_ に設定します。
 
-3.［Rotation］を _X: -20, Y: -50, Z: 0_ に設定します。
+3. ［Rotation］を _X: -20, Y: -50, Z: 0_ に設定します。
 
     ![Change camera position](media/physics-tutorials-create-a-bouncing-ball-change-camera-position.png)
 
@@ -96,13 +96,13 @@
 
 1. **球体**エンティティを選択します。
 
-2.［Property grid］の［Rigidbody］で、［Restitution］を 0.8 に設定します。
+2. ［Property grid］の［Rigidbody］で、［Restitution］を 0.8 に設定します。
 
     ![Set restitution for a sphere](media/physics-tutorials-create-a-bouncing-ball-restitution-of-a-sphere.png)
 
 3. **地面**エンティティを選択します。
 
-4.［Property grid］の［Static Collider］で、［Restitution］を 0.5 に設定します。
+4. ［Property grid］の［Static Collider］で、［Restitution］を 0.5 に設定します。
 
     ![Set restitution for the ground](media/physics-tutorials-create-a-bouncing-ball-restitution-of-the-ground.png)
 

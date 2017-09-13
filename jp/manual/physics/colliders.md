@@ -44,7 +44,7 @@
 
    ![Display gizmo options](media/display-gizmo-options.png)
 
-2.［Physics］を選択します。
+2. ［Physics］を選択します。
 
     ![Display physics option](media/display-physics-option.png)
 
@@ -67,9 +67,9 @@ this.GetSimulation().ColliderShapesRendering = true;
 
 キーボード ショートカットで実行時にコライダーの形状の表示/非表示を切り替えるには、**Debug physics shapes** スクリプトを使用します。
 
-1.［Asset view］で［Add asset］をクリックします。
+1. ［Asset view］で［Add asset］をクリックします。
 
-2.［Scripts］>［Debug physics shapes］の順に選択します。
+2. ［Scripts］>［Debug physics shapes］の順に選択します。
 
     ![Add debug physics shape script](media/add-debug-physics-shapes-script.png)
 

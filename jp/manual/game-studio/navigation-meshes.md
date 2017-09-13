@@ -16,7 +16,7 @@ Game Studio では、ナビゲーション メッシュはシーン内の色付�
 
 ## ナビゲーション メッシュを作成する
 
-1.［Asset view］(既定では下部) で、［Add asset］>［Scenes］>［Navigation mesh］の順にクリックします。
+1. ［Asset view］(既定では下部) で、［Add asset］>［Scenes］>［Navigation mesh］の順にクリックします。
 
     ![Select Game Settings asset](media/add-navigation-mesh.png)
 
@@ -24,13 +24,13 @@ Game Studio では、ナビゲーション メッシュはシーン内の色付�
 
     ![Navigation mesh asset](media/navigation-mesh-in-asset-view.png)
 
-2.［Asset view］で［Navigation Mesh］を選択し、［Property grid］でこのアセットの［Navigation Mesh］を適用する**シーン**を選択します。
+2. ［Asset view］で［Navigation Mesh］を選択し、［Property grid］でこのアセットの［Navigation Mesh］を適用する**シーン**を選択します。
 
     ![Set navigation mesh properties](media/navigation-mesh-properties.png)
 
     シーンの詳細については、「[シーン](scenes.md)」を参照してください。
 
-3.［Selected groups］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+3. ［Selected groups］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     新しい項目がグループのリストに追加されます。
 

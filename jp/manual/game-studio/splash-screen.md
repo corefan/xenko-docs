@@ -20,15 +20,15 @@ Game Settings で指定できるスプラッシュ画面は 1 つだけです。
 
 スプラッシュ画面の設定は、［Game Settings］アセットの一部です。
 
-1.［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
+1. ［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2.［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
+2. ［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3.［Property grid］(既定では右側のペイン) で、［Splash Screen］を展開します。
+3. ［Property grid］(既定では右側のペイン) で、［Splash Screen］を展開します。
 
     ![Settings](media/splash-screen.png)
 

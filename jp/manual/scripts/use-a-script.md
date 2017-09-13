@@ -18,12 +18,12 @@ Game Studio でエンティティにスクリプトを追加するには 2 つ�
 
 1. **エンティティ ツリー** (既定では左側) またはシーンで、スクリプトを追加するエンティティを選択します。
 
-2.［Solution explorer］(既定では左下) で、スクリプトが含まれるアセンブリを選択します。［Asset view］にスクリプトが表示されます。
+2. ［Solution explorer］(既定では左下) で、スクリプトが含まれるアセンブリを選択します。［Asset view］にスクリプトが表示されます。
 
     >[!NOTE]
     >スクリプトはアセットの一種ですが、［Assets］フォルダーには保存されません。代わりに、［.Game］フォルダーに保存されます。詳細については、「[プロジェクトの構造](../files-and-folders/project-structure.md)」を参照してください。
 
-3.［Asset view］から［Property grid］にスクリプトをドラッグします。
+3. ［Asset view］から［Property grid］にスクリプトをドラッグします。
 
    スクリプトがエンティティに追加されます。
 
@@ -33,7 +33,7 @@ Game Studio でエンティティにスクリプトを追加するには 2 つ�
 
     ![Select an entity](media/select-entity.png)
 
-2.［Property grid］(既定では右側) で、［Add component］をクリックし、追加するスクリプトを選択します。
+2. ［Property grid］(既定では右側) で、［Add component］をクリックし、追加するスクリプトを選択します。
 
     ![Add script component](media/add-script-component.png)
 

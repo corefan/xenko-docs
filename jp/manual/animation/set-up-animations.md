@@ -15,7 +15,7 @@
     >[!NOTE]
     >エンティティをアニメーション化するには、エンティティにモデル コンポーネントが含まれる必要があります。
 
-2.［Property grid］で、［Add component］をクリックし、［Animations］を選択します。
+2. ［Property grid］で、［Add component］をクリックし、［Animations］を選択します。
 
     ![Select an entity](media/select-animation-component.png)
 
@@ -74,7 +74,7 @@
 
     ![Select an entity](media/select-entity.png)
 
-2.［Property grid］で［Add component］をクリックして、追加するアニメーション スクリプトを選択します。
+2. ［Property grid］で［Add component］をクリックして、追加するアニメーション スクリプトを選択します。
 
     ![Select an entity](media/add-animation-script-component.png)
 

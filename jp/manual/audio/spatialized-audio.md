@@ -33,9 +33,9 @@
 
 アセットの［Property grid］で空間オーディオに設定することもできます。
 
-1.［Asset View］で［Audio Asset］を選択します。
+1. ［Asset View］で［Audio Asset］を選択します。
 
-2.［Property grid］で、［Spatialized］チェック ボックスをオンにします。
+2. ［Property grid］で、［Spatialized］チェック ボックスをオンにします。
 
     ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
 

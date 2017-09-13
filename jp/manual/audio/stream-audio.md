@@ -17,9 +17,9 @@ ReadyToPlay タスク (後述) でオーディオを事前に読み込んでお�
 
 サウンド アセットをストリーミングするには:
 
-1.［Asset view］で、サウンド アセットを選択します。
+1. ［Asset view］で、サウンド アセットを選択します。
 
-2.［Property grid］で、［Stream From Disk］を選択します。
+2. ［Property grid］で、［Stream From Disk］を選択します。
 
     ![Sound asset properties](media/audio-asset-properties-property-grid.png)
 

@@ -105,11 +105,11 @@ public class MySoundScript : SyncScript
 ```
 ## スクリプトをエンティティに追加する
 
-1.［Scene view］で、スクリプトを追加するエンティティを選択します。
+1. ［Scene view］で、スクリプトを追加するエンティティを選択します。
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2.［Property grid］で、［Add component］をクリックして、スクリプトを選択します。
+2. ［Property grid］で、［Add component］をクリックして、スクリプトを選択します。
 
     ![Click Add component](media/audio-emitters-add-script-component.png)
 

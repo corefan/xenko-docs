@@ -5,7 +5,7 @@
 
 ここでは、Oculus Rift および Vive デバイスのサポートをゲームに追加する方法を説明します。Xenko は他の VR デバイスをまだサポートしていません。
 
-1.［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
+1. ［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -15,17 +15,17 @@
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3.［Property grid］(既定では右側) で、［VR Settings］を展開します。
+3. ［Property grid］(既定では右側) で、［VR Settings］を展開します。
 
     ![VR settings](media/vr-settings.png)
 
-4.［Required APIs］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
+4. ［Required APIs］の隣の ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
     新しい API がリストに追加されます。
 
     ![Add VR item](media/add-vr-api.png)
 
-5.［Item］ドロップダウン メニューで、ゲームでサポートする VR API を選択します。
+5. ［Item］ドロップダウン メニューで、ゲームでサポートする VR API を選択します。
 
     ![Add API](media/select-vr-api.png)
 
@@ -50,7 +50,7 @@
     >
     >このようにすると、ゲームは、Oculus Rift デバイスが接続されている場合は Oculus API を使用し、別のデバイス (Vive など) が接続されている場合は OpenVR API を使用します。
 
-8.［VRRendererSettings］を有効にします。
+8. ［VRRendererSettings］を有効にします。
 
     ![VR renderer settings](media/vr-renderer-settings.png)
 

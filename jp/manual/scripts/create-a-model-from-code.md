@@ -37,7 +37,7 @@
 
     ![Add script component to entity](media/create-model-from-code-add-script-component.png)
 
-4.［Asset view］で、実行時に作成するモデルを右クリックして、［Include in build as root asset］を選択します。
+4. ［Asset view］で、実行時に作成するモデルを右クリックして、［Include in build as root asset］を選択します。
 
     ![Include in build as root asset](media/create-model-from-code-include-in-build-as-root-asset.png)
 
@@ -100,7 +100,7 @@
     model.Materials.Add(material);
     ```
 
-2.［Asset view］で、スクリプトで使用するすべてのマテリアル アセットを右クリックし、［`Include in build as root asset`］を選択する。
+2. ［Asset view］で、スクリプトで使用するすべてのマテリアル アセットを右クリックし、［`Include in build as root asset`］を選択する。
 
     ![Include in build as root asset](media/create-model-from-code-include-material-in-build-as-root-asset.png)
 

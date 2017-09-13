@@ -17,7 +17,7 @@
 
     ![Right-click entity tree or scene](media/create-entity-in-scene.png)
 
-2.［Empty entity］を選択するか、またはエンティティ テンプレートを選択します。
+2. ［Empty entity］を選択するか、またはエンティティ テンプレートを選択します。
 
    エンティティがアクティブなシーンに追加されて、エンティティ ツリーに表示されます。
 
@@ -51,7 +51,7 @@
 
 1. エンティティを選択します。
 
-2.［Property grid］で、［Add component］をクリックして、必要なコンポーネントを追加します。
+2. ［Property grid］で、［Add component］をクリックして、必要なコンポーネントを追加します。
 
    ![Add a component in the property grid](media/add-entities-to-a-scene-add-model-component.png)
 

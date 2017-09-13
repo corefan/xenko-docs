@@ -19,7 +19,7 @@
 
 4. **Xenko セットアップ ウィザード**が開きます。
 
-     ![Xenko Setup Wizard](media/install-xenko-setup-wizard.png)
+    ![Xenko Setup Wizard](media/install-xenko-setup-wizard.png)
 
     ［Next］をクリックします。
 
@@ -29,25 +29,25 @@
 
    ［Accept］をクリックします。
 
-5.［Xenko installation type］ウィンドウが開きます。
+5. ［Xenko installation type］ウィンドウが開きます。
 
     ![Xenko installation type window](media/install-xenko-installation-type.png)
 
     インストールの種類を選択し、［Next］をクリックします。
 
-6.［Select installation folder］ウィンドウが開きます。
+6. ［Select installation folder］ウィンドウが開きます。
 
     ![Select installation folder window](media/install-xenko-select-installation-folder.png)
 
     Xenko をインストールするフォルダーを選択し、［Next］をクリックします。
 
-7.［Create application shortcuts］ウィンドウが開きます。
+7. ［Create application shortcuts］ウィンドウが開きます。
 
     ![Create application shortcuts window](media/install-xenko-create-application-shortcuts.png)
 
     作成するショートカットを選択し、［Next］をクリックします。
 
-8.［Ready to Install］ウィンドウが開きます。
+8. ［Ready to Install］ウィンドウが開きます。
 
     ![Ready to install window](media/install-xenko-ready-to-install.png)
 

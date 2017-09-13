@@ -13,11 +13,11 @@
 
 ## プレハブ モデルを作成する
 
-1.［Asset view］で［Add asset］>［Model］>［Prefab model］の順に選択します。
+1. ［Asset view］で［Add asset］>［Model］>［Prefab model］の順に選択します。
 
     ![Add prefab model](media/add-prefab-model.png)
 
-2.［Property grid］(既定では右側) で、［Prefab］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select asset］) をクリックします。
+2. ［Property grid］(既定では右側) で、［Prefab］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select asset］) をクリックします。
 
     ![Prefab properties](media/prefab-model-properties.png)
 

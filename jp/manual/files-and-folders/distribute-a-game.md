@@ -18,7 +18,7 @@
 
     ![Select release](media/select-release.png)
 
-5.［ソリューション プラットフォーム］ドロップダウン メニューから、ビルドを作成する対象のプラットフォームを選択します。
+5. ［ソリューション プラットフォーム］ドロップダウン メニューから、ビルドを作成する対象のプラットフォームを選択します。
 
     ![Select platform](media/select-platform.png)
 
@@ -28,7 +28,7 @@
     >
     >Android または iOS 用にビルドするには、Xamarin が必要です。Xamarin は Visual Studio のライセンスに含まれます。Visual Studio 2017 で Xamarin をインストールする方法については、[この MSDN ページ](https://docs.microsoft.com/ja-jp/visualstudio/cross-platform/setup-and-install)を参照してください。
 
-6.［ビルド］で［ソリューションのビルド］を選択します。
+6. ［ビルド］で［ソリューションのビルド］を選択します。
 
     ![Build solution](media/build-solution.png)
 

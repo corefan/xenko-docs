@@ -13,11 +13,11 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
 
 スクリプトをシーンに追加することによって、プロジェクトをプロファイリングできます。
 
-1.［Asset view］で、![Add new asset button](media/profiling-add-new-asset-button.png) をクリックして［Scripts］>［Game Profiler］を選択します。
+1. ［Asset view］で、![Add new asset button](media/profiling-add-new-asset-button.png) をクリックして［Scripts］>［Game Profiler］を選択します。
 
  ![Add Game Profiler script](media/profiling-add-game-profiler-script.png)
 
-2.［New script］ダイアログが開きます。既定の情報のままにします。
+2. ［New script］ダイアログが開きます。既定の情報のままにします。
 
     ![New script](media/game-profiler-script-wizard.png)
 
@@ -27,9 +27,9 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
 
 4. アセンブリを再ロードするかどうかを確認するメッセージが表示されたら、［Reload］をクリックします。
 
-5.［Scene view］でエンティティを選択します。使用するエンティティはどれでもかまいません。
+5. ［Scene view］でエンティティを選択します。使用するエンティティはどれでもかまいません。
 
-6.［Property grid］で、［Add component］をクリックし、**GameProfiler** を選択します(これは、ステップ 1 と 2 で追加したスクリプトです)。
+6. ［Property grid］で、［Add component］をクリックし、**GameProfiler** を選択します(これは、ステップ 1 と 2 で追加したスクリプトです)。
 
     ![Add script component to entity](media/profiling-add-game-profiler-script-component.png)
 
@@ -63,7 +63,7 @@ Visual Studio には、一般的なパフォーマンスの問題を識別でき
 
     ![Launch Visual Studio profiler](media/profiling-profiling-in-visual-studio-start-profiler.png)
 
-3.［プロファイラー］ウィンドウで、実行するプロファイリング ツールを選択します。
+3. ［プロファイラー］ウィンドウで、実行するプロファイリング ツールを選択します。
 
     ![Launch Visual Studio profiler](media/profiling-profiling-in-visual-studio-gpu-cpu-profiling-launch.png)
 

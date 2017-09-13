@@ -10,13 +10,13 @@
 
 1. ナビゲーションを使用するエンティティを選択します。
 
-2.［Property grid］で［Add component］をクリックして、［Navigation］を選択します。
+2. ［Property grid］で［Add component］をクリックして、［Navigation］を選択します。
 
     ![Add navigation component](media/add-navigation-component.png)
 
     ナビゲーション コンポーネントがエンティティに追加されます。
 
-3.［Navigation］コンポーネントのプロパティで、［Navigation Mesh］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+3. ［Navigation］コンポーネントのプロパティで、［Navigation Mesh］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Select an asset](media/open-asset-picker.png)
 
@@ -28,7 +28,7 @@
 
     または、このエンティティで独自のナビゲーション メッシュを生成して動的にナビゲートする場合は、［Navigation mesh］フィールドを空のままにします。詳細については、「[動的ナビゲーション](dynamic-navigation.md)」を参照してください。
 
-5.［Group］で、エンティティが属するナビゲーション グループを選択します。エンティティは、このグループで設定されているナビゲーションのプロパティを使用します。
+5. ［Group］で、エンティティが属するナビゲーション グループを選択します。エンティティは、このグループで設定されているナビゲーションのプロパティを使用します。
 
     ![Choose navigation group](media/choose-navigation-group.png)
 

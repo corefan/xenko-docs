@@ -92,7 +92,7 @@ Unity® と同様に、Xenko ではすべてのオブジェクトをシーンに
 
 既定のシーンを設定するには:
 
-1.［Game Settings］のプロパティで、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
+1. ［Game Settings］のプロパティで、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
     ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
 
@@ -117,7 +117,7 @@ Unity® で GameObject にコンポーネントを追加するのと同じよう
 Game Studio でコンポーネントをエンティティに追加するには:
 
 1. コンポーネントを追加するエンティティを選択します。
-2.［Property grid］(既定では右側) で［Add component］をクリックし、ドロップダウン リストからコンポーネントを選択します。
+2. ［Property grid］(既定では右側) で［Add component］をクリックし、ドロップダウン リストからコンポーネントを選択します。
 
     ![Add component](media/xenko-vs-unity-add-component-to-entity.png)
 
@@ -536,7 +536,7 @@ Unity® とは異なり、スクリプトを作成した後は、アセンブリ
 
     ![Select an entity](../scripts/media/select-entity.png)
 
-2.［Property grid］(既定では右側) で、［Add component］をクリックし、追加するスクリプトを選択します。
+2. ［Property grid］(既定では右側) で、［Add component］をクリックし、追加するスクリプトを選択します。
 
 ![Add script component](../scripts/media/add-script-component.png)
 

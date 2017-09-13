@@ -98,9 +98,9 @@
 
 ## コライダー形状アセットを作成する
 
-1.［Asset view］(既定では下部) で、［Add asset］をクリックします。
+1. ［Asset view］(既定では下部) で、［Add asset］をクリックします。
 
-2.［Physics］を選択し、作成する形状を選択します。
+2. ［Physics］を選択し、作成する形状を選択します。
 
     ![Create collider shape asset](media/create-collider-shape-asset.png)
 
@@ -112,9 +112,9 @@
 
 これは、モデルと一致するコライダーの形状をすばやく作成するのに便利です。
 
-1.［Asset view］(既定では下部) で、［Add asset］をクリックします。
+1. ［Asset view］(既定では下部) で、［Add asset］をクリックします。
 
-2.［Physics］>［Convex hull］の順に選択します。
+2. ［Physics］>［Convex hull］の順に選択します。
 
    ［Asset picker］ウィンドウが開きます。
 
@@ -130,7 +130,7 @@
 
     ![Select collider shape asset](media/select-asset-collider-shape.png)
 
-2.［Shape］で、使用するコライダー形状アセットを指定します。
+2. ［Shape］で、使用するコライダー形状アセットを指定します。
 
     ![Select collider shape asset](media/select-collider-shape-asset.png)
 

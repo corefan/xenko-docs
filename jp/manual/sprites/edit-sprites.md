@@ -23,7 +23,7 @@
 
 ### スプライトを追加する
 
-1.［Add empty sprite］ボタンをクリックします。
+1. ［Add empty sprite］ボタンをクリックします。
 
     ![Add sprite](media/add-sprite-button.png)
 

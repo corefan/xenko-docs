@@ -22,7 +22,7 @@
 
     ナビゲーション境界ボックスがエンティティに追加されます。
 
-3.［Navigation bounding box］コンポーネントのプロパティで、**XYZ** の値を使用して境界ボックスのサイズを設定します。
+3. ［Navigation bounding box］コンポーネントのプロパティで、**XYZ** の値を使用して境界ボックスのサイズを設定します。
 
     ![Navigation bounding box properties](media/navigation-bounding-box-properties.png)
 

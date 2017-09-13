@@ -9,7 +9,7 @@
 
 1. **シーン エディター** で、コンポーネントを追加するエンティティを選択します。
 
-2.［Property grid］で［Add component］をクリックして、［Character］を選択します。
+2. ［Property grid］で［Add component］をクリックして、［Character］を選択します。
 
     ![Add character component](media/add-character-component.png)
 

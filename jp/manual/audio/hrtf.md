@@ -21,15 +21,15 @@ HRTF を使用するには、最初に［Game Settings］アセットでグロ�
 
 ### 1. HRTF をグローバルに有効にする
 
-1.［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
+1. ［Solution explorer］(既定では左下のペイン) で、［Assets］フォルダーを選択します。
 
     ![Select Assets folder asset](../game-studio/media/select-asset-folder.png)
 
-2.［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
+2. ［Asset view］(既定では下部のペイン) で、［Game Settings］アセットを選択します。
 
     ![Select Game Settings asset](../game-studio/media/select-game-settings-asset.png)
 
-3.［Property grid］(既定では右側のペイン) で、［Audio Settings］の［HRTF support］を選択します。
+3. ［Property grid］(既定では右側のペイン) で、［Audio Settings］の［HRTF support］を選択します。
 
     ![Audio settings](../game-studio/media/audio-settings.png)
 
@@ -39,7 +39,7 @@ HRTF を使用するには、最初に［Game Settings］アセットでグロ�
 
 1. HRTF を有効にするサウンドを含むエンティティを[オーディオ エミッター](audio-emitters.md)で選択します。
 
-2.［Property grid］(既定では右側) の［Audio Emitter］で、［Use HRTF］を選択します。
+2. ［Property grid］(既定では右側) の［Audio Emitter］で、［Use HRTF］を選択します。
 
     ![Audio emitter properties](media/audio-emitter-properties.png)
 

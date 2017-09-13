@@ -13,11 +13,11 @@
 
 ## 1. オーディオ エミッター アセットをセットアップする
 
-1.［Scene view］で、オーディオ エミッターにするエンティティを選択します。
+1. ［Scene view］で、オーディオ エミッターにするエンティティを選択します。
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2.［Property grid］で［Add component］をクリックして、［Audio Emitter］を選択します。
+2. ［Property grid］で［Add component］をクリックして、［Audio Emitter］を選択します。
 
     ![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
 
@@ -27,7 +27,7 @@
 
     ![Add New Sound Entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
-4.［Asset view］から、前のステップで追加したサウンドに、サウンド アセットをドラッグ アンド ドロップします。
+4. ［Asset view］から、前のステップで追加したサウンドに、サウンド アセットをドラッグ アンド ドロップします。
 
     ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
@@ -93,11 +93,11 @@ mySound1Controller.Play();
 
 Game Studio では、スクリプトは［Add component］の下にコンポーネントとして一覧表示されます。オーディオ エミッター エンティティにスクリプトを追加します。
 
-1.［Scene view］で、オーディオ エミッターにするエンティティを選択します。
+1. ［Scene view］で、オーディオ エミッターにするエンティティを選択します。
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2.［Add component］をクリックしてスクリプトを選択します。
+2. ［Add component］をクリックしてスクリプトを選択します。
 
     ![Add audio script](media/add-sound-script.png)
 

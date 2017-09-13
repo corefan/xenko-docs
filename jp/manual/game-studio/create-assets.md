@@ -9,7 +9,7 @@
 
 ##［Add Asset］ボタンを使用する
 
- 1.［Asset view］で ![](media/create-and-add-assets-add-new-asset-button.png) をクリックします。
+ 1. ［Asset view］で ![](media/create-and-add-assets-add-new-asset-button.png) をクリックします。
 
  2. 作成するアセットの種類を選択します。
 

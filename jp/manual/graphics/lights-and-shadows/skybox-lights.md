@@ -29,9 +29,9 @@
 
 スカイボックスをライトとして使用するには、スカイボックス アセットを追加した後、[ライト コンポーネント](xref:SiliconStudio.Xenko.Engine.LightComponent)でそれを選択する必要があります。
 
-1.［Asset view］で ![Add asset](media/engine-skybox-add-new-asset-button.png) をクリックします。
+1. ［Asset view］で ![Add asset](media/engine-skybox-add-new-asset-button.png) をクリックします。
 
-2.［Miscellaneous］ >［Skybox］の順に選択します。
+2. ［Miscellaneous］ >［Skybox］の順に選択します。
 
     ![Choose asset type](media/engine-skybox-choose-asset-type.png)
 
@@ -45,11 +45,11 @@
 
 4. スカイボックス ライトにするエンティティを選択します。
 
-5.［Properties grid］ (既定では右側) で、［Add component］をクリックし、[[Light](xref:SiliconStudio.Xenko.Engine.LightComponent)] を選択します。
+5. ［Properties grid］ (既定では右側) で、［Add component］をクリックし、[[Light](xref:SiliconStudio.Xenko.Engine.LightComponent)] を選択します。
 
     ![Background component properties](media/skybox-add-light-component.png)
 
-6.［Light］コンポーネントのプロパティで、［Light］の［Skybox］を選択します。
+6. ［Light］コンポーネントのプロパティで、［Light］の［Skybox］を選択します。
 
     ![Light component property](media/light-component-property.png)
 
