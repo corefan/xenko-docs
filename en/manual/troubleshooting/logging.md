@@ -89,16 +89,9 @@ GlobalLogger.GlobalMessageLogged += fileWriter;
 
 This creates a file in the Debug folder of your project (eg *MyGame\MyGame\Bin\Windows\Debug\myLogFile.txt*).
 
-
-### Hide debug text
-
-```cs
-DebugText.Visible = false;
-```
-
 ## Example script
 
-The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). If it doesn't load, the log records an error message (`Log.Debug`) and the game displays the [debug text](debug-text.md) "MyTexture not loaded" (`DebugText`).
+The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). If it doesn't load, the log records an error message (`Log.Debug`).
 
 ```cs
 using System.Linq;
@@ -119,27 +112,18 @@ namespace MyGame
         public override void Start()
         {
             // Initialization of the script.
-
             Log.ActivateLog(LogMessageType.Debug);
             Log.Debug("Start loading MyTexture");
 
             myTexture = Content.Load<Texture>("MyTexture");
             if (myTexture == null)
             {
-
                 Log.Error("MyTexture not loaded");
             }
             else
             {
-
                 Log.Debug("MyTexture loaded successfully");
             }
-        }
-
-        public override void Update()
-        {
-			if(myTexture == null)
-                DebugText.Print("MyTexture not loaded", new Int2(x: 50, y: 50));
         }
     }
 }

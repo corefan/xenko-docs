@@ -28,15 +28,10 @@ DebugText.Visible = false;
 
 ## Example script
 
-The following script uses [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log) to check that the texture `MyTexture` is loaded. If it doesn't load, the game displays the debug text "MyTexture not loaded".
+The following script checks that the texture `MyTexture` is loaded. If it isn't loaded, the game displays the debug text "MyTexture not loaded".
 
 ```cs
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SiliconStudio.Core.Diagnostics;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Graphics;
 
@@ -49,26 +44,12 @@ namespace MyGame
         public override void Start()
         {
             // Initialization of the script.
-
-            Log.ActivateLog(LogMessageType.Debug);
-            Log.Debug("Start loading MyTexture");
-
             myTexture = Content.Load<Texture>("MyTexture");
-            if (myTexture == null)
-            {
-
-                Log.Error("MyTexture not loaded");
-            }
-            else
-            {
-
-                Log.Debug("MyTexture loaded successfully");
-            }
         }
 
         public override void Update()
         {
-			if(myTexture == null)
+			if (myTexture == null)
                 DebugText.Print("MyTexture not loaded", new Int2(x: 50, y: 50));
         }
     }
