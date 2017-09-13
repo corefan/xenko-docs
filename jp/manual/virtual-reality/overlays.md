@@ -1,6 +1,6 @@
 # オーバーレイ
 
-VR ゲームでは、[テクスチャ](../graphics/textures/index.md) ([レンダー テクスチャ](../graphics/graphics-compositor/render-targets.md)を含む) をプレイヤーの正面に浮動表示されるオーバーレイとして表示できます。これは、UI に特に有効です。
+VR ゲームでは、[テクスチャ](../graphics/textures/index.md) ([レンダー テクスチャ](../graphics/graphics-compositor/render-textures.md)を含む) をプレイヤーの正面に浮動表示されるオーバーレイとして表示できます。これは、UI に特に有効です。
 
 > [!NOTE]
 > ゲームを VR デバイスで実行していない場合は、オーバーレイを表示できません。これは、VR デバイス自体がオーバーレイを作成するためです。
@@ -35,7 +35,7 @@ VR ゲームでは、[テクスチャ](../graphics/textures/index.md) ([レン�
 
    ［Select an asset］ウィンドウが開きます。
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
 6. オーバーレイに表示するテクスチャを選択し、［OK］をクリックします。
 
@@ -69,5 +69,5 @@ VR ゲームに実装された UI オーバーレイの例については、Xenk
 ## 関連項目
 
 * [UI をオーバーレイに表示する](display-a-UI-in-an-overlay.md)
-* [レンダー ターゲット](../graphics/graphics-compositor/render-targets.md)
+* [レンダー ターゲット](../graphics/graphics-compositor/render-textures.md)
 * [Graphics Compositor](../graphics/graphics-compositor/index.md)

@@ -45,7 +45,7 @@
 
    ［Select an asset］ウィンドウが開きます。
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
 6. 作成した**レンダー テクスチャ**を選択し、［OK］をクリックします。
 
@@ -119,7 +119,7 @@
 
 10. **レンダー テクスチャ**を選択し、［OK］をクリックします。
 
-    ![Select render texture](../graphics/graphics-compositor/media/asset-picker-select-render-texture.png)
+    ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
     レンダー テクスチャがレンダラーに追加されます。
 
@@ -139,5 +139,5 @@ VR ゲームに実装された UI オーバーレイの例については、Xenk
 
 * [オーバーレイ](overlays.md)
 * [UI](../ui/index.md)
-* [レンダー ターゲット](../graphics/graphics-compositor/render-targets.md)
+* [レンダー ターゲット](../graphics/graphics-compositor/render-textures.md)
 * [Graphics Compositor](../graphics/graphics-compositor/index.md)

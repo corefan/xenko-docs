@@ -2,7 +2,7 @@
 
 **ライト プローブ**は、表面でのライトの反射およびシーン内の他の表面の照射の効果をシミュレートします。
 
-![Light probes on and off](media/light-probes-on-and-off.png)
+![Light probes on and off](media/light-probes-on-and-off.jpg)
 
 ライト プローブは、ライトが表面の間で反射される領域を作成します。次のスクリーンショットは、ライト プローブによって囲まれた[ポイント ライト](point-lights.md)を示します。
 
@@ -28,7 +28,7 @@
 
 ライト プローブはシーン エディターに球体として表示されます。ライトの反射が初めてキャプチャされるまで、ライト プローブの表面は完全な黒になっています。
 
-![Light](media/light-probes-black.png)
+![Light](media/light-probes-black.jpg)
 
 >[!TIP]
 >他のエンティティと同じように、ライト プローブも簡単に複製できます。そのためには、ライト プローブを選択し、Ctrl キーを押しながらマウスで移動します。
@@ -47,9 +47,9 @@
 
 標準的な戦略は、次のスクリーンショットのように、シーン全体にライト プローブをグリッド状に配置し、一般的な領域をカバーすることです。
 
-![Grid layout](media/light-probes-grid-layout.png)
+![Grid layout](media/light-probes-grid-layout.jpg)
 
-![Light probes in the editor](media/light-probes-in-editor.png)
+![Light probes in the editor](media/light-probes-in-editor.jpg)
 
 ## 3. ライトの反射をキャプチャする
 
@@ -75,4 +75,4 @@
 
 シーン エディターでライト プローブ グリッドの表示を変更するには、シーン エディター ツールバーのギズモのオプションの［Light probe grid］チェックボックスを使用します。
 
-![Light probe grid on](media/light-probe-grid-on.png)
+![Light probe grid on](media/light-probe-wireframe-on.jpg)

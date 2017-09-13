@@ -39,7 +39,7 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
 
 8. 実行時に**左 Ctrl + 左 Shift + P** キーを押してプロファイラーを起動します。
 
-    ![Profiler at runtime](media/profiling-profiler-at-runtime.png)
+    ![Profiler at runtime](media/profiling-profiler-at-runtime.jpg)
 
     >[!NOTE]
     >プロファイラーが表示するデータの種類を変更できます。詳細については、[Xenko プロファイラー API のドキュメント](xref:SiliconStudio.Core.Diagnostics.Profiler)を参照してください。
