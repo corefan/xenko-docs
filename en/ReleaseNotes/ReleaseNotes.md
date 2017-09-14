@@ -99,7 +99,7 @@ For details, see [Profiling](../manual/troubleshooting/profiling.md).
 
 ### Debug text
 
-You can now display debug text at runtime. For more information, see [Logging](../manual/troubleshooting/debug-text.md).
+You can now display debug text at runtime. For more information, see [Debug text](../manual/troubleshooting/debug-text.md).
 
 ![Debug text](media/ReleaseNotes-2.1/my-debug-text.jpg)
 
