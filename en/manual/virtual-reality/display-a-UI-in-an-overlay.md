@@ -105,25 +105,25 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Select RenderTextureSceneRenderer](media/select-RenderTextureSceneRenderer.png)
 
-8. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **SingleStageRenderer**. 
+7. Next to **Child**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **SingleStageRenderer**. 
 
     ![Select single stage renderer](media/select-single-stage-renderer.png)
 
-9. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **UIRenderStage**. This is the renderer that renders the UI.
+8. Next to **Render Stage**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **UIRenderStage**. This is the renderer that renders the UI.
 
     ![Select UI render stage](media/select-UI-render-stage.png)
 
-10. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+9. Next to **Render Texture**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     The **Select an asset** window opens.
 
-11. Select the **render texture** and click **OK**.
+10. Select the **render texture** and click **OK**.
 
     ![Select render texture](../graphics/graphics-compositor/media/select-render-frame.png)
 
     Game Studio adds the render texture to the renderer.
 
-12. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select **Forward renderer**.
+11. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select **Forward renderer**.
 
     ![Select forward renderer](media/overlay-select-forward-renderer.png)
 
