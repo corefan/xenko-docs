@@ -59,7 +59,7 @@ Game Studio の右下隅にある［References］で、選択されているア�
 
 ## コードからアセットをロードする
 
-実行時にアセットをロードしてスクリプトで使用することができます。そのためには、[ContentManager](xref:SiliconStudio.Xenko.Engine.IScriptContext.Content) を使用します。
+実行時にアセットをロードしてスクリプトで使用することができます。
 
 ### コード例
 このスクリプトは、実行時にモデルをロードして、それをシーンに追加します。
