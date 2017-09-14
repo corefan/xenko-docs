@@ -99,7 +99,7 @@ For details, see [Profiling](../manual/troubleshooting/profiling.md).
 
 ### Debug text
 
-You can now display debug text at runtime. For more information, see [Logging](../manual/troubleshooting/logging.md).
+You can now display debug text at runtime. For more information, see [Logging](../manual/troubleshooting/debug-text.md).
 
 ![Debug text](media/ReleaseNotes-2.1/my-debug-text.jpg)
 
@@ -122,7 +122,7 @@ For details, see [Input](../manual/input/index.md).
 
 To support graphics functionalities on every platform, we've implemented missing features for the DirectX 12 rendering backend:
 
-* compute and tesselation shaders
+* compute and tessellation shaders
 * unordered access views for textures and buffers
 * structured buffers
 
