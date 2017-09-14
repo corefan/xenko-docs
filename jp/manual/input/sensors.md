@@ -50,11 +50,11 @@ var hasCompass = Input.Compass != null;
 
 | プロパティ        | 説明                                     | 宣言
 |-----------------|-------------------------------------------------|---------------
-| [Roll](xref:SiliconStudio.Xenko.Input.OrientationSensor.Roll) | X 軸を中心とする回転です。| `public float Roll { get; }`
-| [Pitch](xref:SiliconStudio.Xenko.Input.OrientationSensor.Pitch)           | Y 軸を中心とする回転です。                    | `public float Pitch { get; }`
-| [Yaw](xref:SiliconStudio.Xenko.Input.OrientationSensor.Yaw)             | Z 軸を中心とする回転です。                    | `public float Yaw { get; }`
-| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix) | デバイスの回転です。  | `public Matrix RotationMatrix { get; }`
-| [Quaternion](xref:SiliconStudio.Xenko.Input.OrientationSensor.Quaternion) | デバイスの方位と回転です。|  `public Quaternion Quaternion { get; }`
+| [Roll](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Roll) | X 軸を中心とする回転です。| `public float Roll { get; }`
+| [Pitch](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Pitch)           | Y 軸を中心とする回転です。                    | `public float Pitch { get; }`
+| [Yaw](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Yaw)             | Z 軸を中心とする回転です。                    | `public float Yaw { get; }`
+| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.IOrientationSensor.RotationMatrix) | デバイスの回転です。  | `public Matrix RotationMatrix { get; }`
+| [Quaternion](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Quaternion) | デバイスの方位と回転です。|  `public Quaternion Quaternion { get; }`
 
 次に例を示します。
 
