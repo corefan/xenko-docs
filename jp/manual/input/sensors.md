@@ -89,7 +89,7 @@ var hasCompass = Input.Compass != null;
 > [!NOTE]
 > ユーザーが力を加えていない場合、**デバイスの加速度**は**重力**と等しくなります。
 
-未加工の加速度を取得するには、[Accelerometer.Acceleration](xref:SiliconStudio.Xenko.Input.AccelerometerSensor.Acceleration) を使用します。次に例を示します。
+未加工の加速度を取得するには、[Accelerometer.Acceleration](xref:SiliconStudio.Xenko.Input.IAccelerometerSensor.Acceleration) を使用します。次に例を示します。
 ```
 var acceleration = Input.Accelerometer.Acceleration;
 ```
@@ -97,7 +97,7 @@ var acceleration = Input.Accelerometer.Acceleration;
 ### ユーザー加速度センサーを使用する
 **ユーザー加速度センサー**は加速度計と似ていますが、ユーザーによって加えられた加速度**だけ** (重力加速度を除いたもの) を測定します。
 
-ユーザー加速度を取得するには、[UserAcceleration.Acceleration](xref:SiliconStudio.Xenko.Input.UserAccelerationSensor.Acceleration) を使用します。次に例を示します。
+ユーザー加速度を取得するには、[UserAcceleration.Acceleration](xref:SiliconStudio.Xenko.Input.IUserAccelerationSensor.Acceleration) を使用します。次に例を示します。
 
 ```cs                       
 var userAcceleration = Input.UserAcceleration.Acceleration;
@@ -106,7 +106,7 @@ var userAcceleration = Input.UserAcceleration.Acceleration;
 ### 重力センサーを使用する
 重力センサーは、デバイスに加えられている重力 (メートル毎秒毎秒) の向きと大きさを示す 3D ベクトルを提供します。
 
-重力ベクトルを取得するには、[GravitySensor](xref:SiliconStudio.Xenko.Input.GravitySensor) を使用します。次に例を示します。
+重力ベクトルを取得するには、[GravitySensor](xref:SiliconStudio.Xenko.Input.IGravitySensor) を使用します。次に例を示します。
 
 ```cs
  var gravityVector = Input.Gravity.Vector;
@@ -118,7 +118,7 @@ var userAcceleration = Input.UserAcceleration.Acceleration;
 
 ![Compass](media/sensor-overview-compasss.png)
 
-この角度を取得するには、[CompassSensor.Heading](xref:SiliconStudio.Xenko.Input.CompassSensor.Heading) を使用します。次に例を示します。
+この角度を取得するには、[CompassSensor.Heading](xref:SiliconStudio.Xenko.Input.ICompassSensor.Heading) を使用します。次に例を示します。
 
 ```cs
 var heading = Input.Compass.Heading;
@@ -130,7 +130,7 @@ var heading = Input.Compass.Heading;
 
 ![Gyroscope](media/sensor-overview-gyroscope-sensor.png)
 
-回転速度を取得するには、[GyroscopeSensor.RotationRate](xref:SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate) を使用します。次に例を示します。
+回転速度を取得するには、[GyroscopeSensor.RotationRate](xref:SiliconStudio.Xenko.Input.IGyroscopeSensor.RotationRate) を使用します。次に例を示します。
 
 ```cs
   var rotationRate = Input.Gyroscope.RotationRate;
