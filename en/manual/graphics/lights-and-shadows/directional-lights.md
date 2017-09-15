@@ -45,42 +45,30 @@ This an example of a shadow map generated from a directional light, using four c
 
 ![FPS scene shadow map](media/shadow-atlas-2x.png)
 
-#### See shadow cascades
+### See shadow cascades in the editor
 
-To see shadow cascades in the scene editor, in the property grid, under the **Shadow** properties, enable the **Debug** option.
+In the **property grid**, under the **Shadow** properties, enable the **Debug** option.
 
-| Cascades debug off                                                   | Cascades debug on                                                    |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)  |
+| Cascades debug off    | Cascades debug on     
+| ---------------------- | ----------
+| ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)
 
 The different colors indicate the cascade for each distance range (Green: 0, Blue: 1, Purple: 2, Red: 3).
 
 ### Directional light shadow properties
 
-| Property            | Description                                                        
+| Property            | Description             
 | ------------------- | ------------
 | Filter              | Filtering produces **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering)
 | Size                | The size of the shadow map texture. For the directional light, this value is **x1** by default, as a directional light has more visual impact than lights with shorter ranges
 | Cascade Count       | The number of cascades used for slicing the range of depth covered by the light. Values are 1, 2 or 4 cascades; a typical scene uses 4 cascades
 | Stabilization mode  | <br>The technique used to reduce shadow map flickering. Flickering is a result of the potential aliasing introduced by the shadow map when a texel from the perspective of the light covers more space than a texel from the camera's perspective.</br> <br> **Projection snapping** tries to snap the projection matrix of the light to a texel dependent on the resolution of the shadow map texture</br> <br>**View snapping** tries to snap the target of the view matrix of the light (center of the camera view cascade frustum)</br> <br>Both projection and view snapping force the shadow matrix to cover a larger region, increasing the aliasing of the shadow map texture. Note that when using depth range camera is set to automatic, the stabilization mode is ignored</br>
 | Depth Range         | How the visible depth range from the camera's perspective is calculated. This directly affects how near and how far cascades splits occur
-| Automatic           | If enabled, the visible depth range is read back from the actual depth buffer and the min and max view distance is calculated automatically
-| Manual Min Distance | The minimum depth in [world units](../../game-studio/world-units.md), valid when the automatic mode is disabled
-| Manual Max Distance | The maximum depth in [world units](../../game-studio/world-units.md), valid when the automatic mode is disabled
 | Blend Cascades      | Smooths the transition between cascades  
 | Partition mode      | <br>How the cascade split distance is determined.</br> <br> **Manual**: the split is defined manually for each cascade, in percentage of the visible depth range. A value of 0.1 for a cascade means that the cascade is rendered on the distance 0.1 * (VisibleDepthMax - VisibleDepthMin)<br> <br> **Logarithmic**: the split is automatically calculated using a logarithmic scale <br> The PSSM factor lets you blend from a pure logarithmic scale (0.0f) to a pure uniform scale (1.0f)<br>
-| Bias Parameters     | Used to avoid some artifacts of the shadow map technique
 | Depth Bias          | The amount of depth to add to the sampling depth to avoid the phenomenon of shadow acne
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal
 | Debug               | Displays the shadow map cascades in the scene editor
-
-## Light shafts
-
-Used with a **light shaft component** and a **light shaft bounding volume**, directional lights create light shafts. 
-
-![Light shafts](media/lightshaft_640.jpg)
-
-For more information, see [Light shafts](light-shafts.md).
 
 ## See also
 

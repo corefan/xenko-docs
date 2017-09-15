@@ -4,23 +4,19 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-**Light shafts**, also called **god rays**, are visible rays originating from a [directional light](directional-lights.md). 
+**Light shafts**, also called **god rays**, are visible rays of light. 
 
 <video autoplay loop class="responsive-video" poster="media/lightshaft_CoS_640.jpg">
    <source src="media/lightshaft_CoS_640.mp4" type="video/mp4">
 </video>
 
-Xenko light shafts are based on [shadow maps](shadows.md) and use raymarching rather than post effects, so they're visible even when the light source isn't.
-
-<video autoplay loop class="responsive-video" poster="media/lightshaft_640.jpg">
-   <source src="media/lightshaft_640.mp4" type="video/mp4">
-</video>
+Xenko light shafts are based on [shadow maps](shadows.md) and use raymarching rather than post effects, so they're visible even when the light source isn't. Any light source that casts shadows (ie [point lights](point-lights.md), [directional lights](directional-lights.md) and [spot lights](spot-lights.md)) can cast light shafts.
 
 To create light shafts, use three components together: **lights**, **light shafts**, and **light shaft bounding volumes**.
 
 ## 1. Enable light shafts in the graphics compositor
 
-Xenko disables light shafts by default in new projects. To enable them:
+By default, Xenko disables light shafts in new projects. To enable them:
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -32,30 +28,25 @@ Xenko disables light shafts by default in new projects. To enable them:
 
     ![Select forward renderer](../../virtual-reality/media/select-forward-renderer.png)
 
-3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **LightShafts**.
+3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select **LightShafts**.
 
     ![Select light shafts](media/select-light-shafts.png)
 
-For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
+4. Make sure the **light shafts** checkbox is selected.
+
+    ![Enable light shafts](media/enable-light-shafts.png)
+
+    For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
 
 ## 2. Add a light shaft component
 
-1. In your scene, select the entity with the **directional light** you want to create light shafts.
-
-    For more information about how to use directional lights, including how to add them, see [directional lights](directional-lights.md).
+1. In your scene, select the entity with the **light** you want to create light shafts. This must be a light that casts shadows (ie a [point light](point-lights.md), [directional light](directional-lights.md), or [spot light](spot-lights.md)).
 
 2. In the **property grid**, in the **Light** component properties, make sure the **Shadow** checkbox is selected.
 
     ![Enable light shafts](media/light-shafts-enable-shadows.png)
 
-3. Expand **Shadow** and set the **cascade count** to **one cascade**.
-
-    ![One cascade](media/light-shafts-one-cascade.png)
-
-    > [!Note]
-    > Currently, light shafts are only implemented for directional lights with one cascade. You'll be able to use multiple cascades in future versions. For more information about cascades, see the [Directional lights](directional-lights.md) page.
-
-4. Click **Add component** and select **Light shaft**.
+3. Click **Add component** and select **Light shaft**.
 
     ![Add light shaft component](media/add-light-shaft-component.png)
 
@@ -71,9 +62,9 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
     ![Cube model](media/add-cube-model.png)
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-    ![Asset picker](media/asset-picker.png)
+    ![Select an asset](media/asset-picker.png)
 
 3. You don't need a material for the model, so click **Cancel** to create a model without a material.
 
@@ -83,13 +74,13 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
     ![Add light shaft bounding volume component](media/add-light-shaft-bounding-volume.png)
 
-6. In the **light shaft bounding volume** component properties, next to **light shaft**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+6. In the **light shaft bounding volume** component properties, next to **light shaft**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
 7. In the **entity picker**, select the entity with the directional light you want to create light shafts and click **OK**.
 
-8. In the **light shaft bounding volume** component properties, next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+8. In the **light shaft bounding volume** component properties, next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-9. In the **asset picker**, select the model you created and click **OK**.
+9. In the **Select an asset** window, select the model you created and click **OK**.
 
     ![Select model](media/select-procedural-model.png)
 
@@ -97,52 +88,56 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 10. Using the **transform** component, position and scale the entity to cover the area where you want to create light shafts.
 
-### 4. Optional: Use a model as a bounding volume guide
+    >[!Tip]
+    >To show or hide navigation light shaft bounding volumes in the scene editor, in the **scene editor toolbar**, open the **gizmo options** menu and use the **Light shaft bounding volumes** checkbox.
+    
+    ![Show light shaft bounding volumes](media/show-or-hide-light-shaft-bounding-volume.png)
 
-Currently, Game Studio doesn't display the bounding volume in the scene editor.
+## Light shaft properties
 
-As a workaround, you can add a model component to use as a guide.
+![Light shaft properties](media/light-shaft-properties.png)
 
-1. On the entity with the light shaft bounding volume component, click **Add component** and select **Model**.
+| Property                  | Description                                               
+|---------------------------|----------
+| Density                   | Higher values produce brighter light shafts
+| Sample count              | Higher values produce better light shafts but use more GPU 
+| Process bounding volumes separately  | Preserves light shaft quality when seen through separate bounding boxes, but uses more GPU
 
-    ![Add model to bounding volume](media/add-model-component-to-bounding-volume-entity.png)
+### Light shaft graphics compositor properties
 
-2. Under the **Model** component properties, next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+To access these properties, in the **graphics compositor editor**, select the **forward renderer** node and expand **Light Shafts**.
 
-3. In the **asset picker**, select the model you created earlier and click **OK**.
+These properties apply globally to all the light shafts in the scene.
 
-    ![Select model](media/select-procedural-model.png)
+![Light shaft graphics compositor properties](media/light-shaft-graphics-compositor-properties.png)
 
-4. Under **Materials**, clear the **Cast shadows** checkbox. This stops your model blocking light shafts.
-
-    ![Clear model shadows](media/clear-model-shadows.png)
-
-5. After you place the bounding volume, disable or remove the model component to hide it at runtime.
+| Property                                | Description                                                    
+|-----------------------------------------|--------------
+| Bounding volume buffer downsample level | Lower values produce more precise volume buffer areas, but use more GPU
+| Light buffer downsample level           | Lower values produce sharper light shafts, but use more GPU
 
 ## Optimize light shafts
 
-Light shafts work best in dark environments. You can adjust the directional light and light shaft component properties to achieve different results - for example, by changing the directional light color (in the **light component properties**) or the light shaft density (in the **light shaft component properties**).
+Light shafts work best in dark environments. You can adjust the light and light shaft component properties to achieve different results - for example, by changing the light color (in the **light component properties**) or the light shaft density (in the **light shaft component properties**).
 
-Multiple light shafts viewed through one another can become visually noisy, as in the image below:
+Multiple light shafts viewed through one another can become visually noisy, as in the screenshot below:
 
 ![Noisy light shafts](media/noisy-light-shafts.jpg)
 
-To reduce this effect, in the **light shaft component properties**, reduce the **density factor**.
+To reduce this effect, in the **light shaft component properties**, reduce the **density** and increase the **sample count**.
 
 ![Density factor](media/density-factor.png)
 
-Alternatively, use multiple bounding volumes. To do this:
+Alternatively, add additional bounding volumes and process them separately. To do this:
 
-1. Create additional bounding volumes and position them to cover the area where you want to create light shafts. Make sure the bounding volumes don't overlap (light shafts in overlapping areas are extra-bright).
+1. Create additional bounding volumes and position them to cover the areas where you want to create light shafts. Make sure the bounding volumes don't overlap, as this makes light shafts extra-bright.
 
-2. In the **light shaft component properties**, make sure **separate bounding volumes** is enabled.
+2. In the **light shaft component properties**, make sure **Process bounding volumes separately** is selected.
 
 ![Separate bounding volume](media/separate-bounding-volumes.png)
 
-This calculates the light shafts in each bounding volume separately, lessening visual noise.
-
->[!Note]
->Using multiple bounding volumes uses more processing power.
+> [!Note]
+> Processing bounding volumes separately uses more GPU.
 
 ## See also
 

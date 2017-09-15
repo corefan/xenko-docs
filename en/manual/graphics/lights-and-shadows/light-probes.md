@@ -85,7 +85,7 @@ A typical method is to place light probes in a grid across your scene covering a
 
     ![Lighting options](media/lighting-options-menu.png)
 
-2. Next to **Number of bounces**, set the number of light bounces you want to capture. 
+2. Next to **Bounces**, set the number of light bounces you want to capture. 
 
     Multiple bounces simulate the effect of light bouncing between surfaces multiple times. This generally has the effect of brightening the lighting. Three or four bounces should be enough; beyond this, changes are almost unnoticeable. The number of bounces has no impact on runtime performance.
 

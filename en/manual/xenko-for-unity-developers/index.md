@@ -92,13 +92,13 @@ You can have multiple scenes in your project. Xenko loads the default scene at r
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
     
     ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-2. Select the default scene in the asset picker and click **OK**.
+2. Select the default scene and click **OK**.
 
 For more information about scenes, see [Scenes](../game-studio/scenes.md).
 
@@ -226,34 +226,24 @@ Xenko supports a variety of inputs. The code samples below demonstrate the diffe
 
 For more information about Input in Xenko, see [Input](../input/index.md).
 
-### Unity®
-
+## Unity
 ```cs
 void Update()
 {
-    if (Input.GetButtonDown("Crouch"))
+    // true for one frame in which the space bar was pressed
+    if(Input.GetKeyDown(KeyCode.Space))
     {
-        //Do something.
+        // Do something.
     }
+
+    // true while this joystick button is down
+    if (Input.GetButton("joystick button 0"))
+    {
+        // Do something.
+    }
+
     float Horiz = Input.GetAxis("Horizontal");
     float Vert = Input.GetAxis("Vertical");
-    //Do something else.
-}
-```
-
-### Xenko
-
-```cs
-public override void Update()
-{
-    //Input events.
-
-    if (Input.IsPadButtonDown(0, GamePadButton.B)
-    {
-        //Do something.
-    }
-    float Horiz = Input.GetGamePad(0).RightThumb.X;
-    float Vert = Input.GetGamePad(0).RightThumb.Y;
     //Do something else.
 }
 ```

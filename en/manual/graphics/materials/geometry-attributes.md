@@ -68,7 +68,7 @@ Depending on the stage at which the displacement is applied, the results can be 
 | ---------------- | ------------ 
 | Displacement Map | The displacement texture as a [material color provider](material-maps.md) 
 | Intensity        | The amount of displacement                                         
-| Scale & Bias     | When enabled, the value coming from the texture is considered a positive value ranging from 0.0 to 1.0 and the shader applies a scale to get the range -1.0 to 1.0
+| Scale & Bias     | When enabled, the value coming from the texture is considered a positive value ranging from `0.0` to `1.0` and the shader applies a scale to get the range -1.0 to `1.0`
 | Shader Stage     | Specify which shader stage the displacement map should be applied to: vertex shader or domain shader (used with tessellation)
 
 ## Surface
@@ -84,8 +84,8 @@ Under the **Surface** properties, you can define a [Normal maps](../textures/nor
 | Property     | Description 
 | ------------ | ---------------
 | Normal Map   | The normal map color provider
-| Scale and offset | If enabled, values from the texture are considered positive values ranging from 0.0 to 1.0. The shader applies a scale to get the range -1.0 to 1.0 
-| Reconstruct Z    | If enabled, this reconstructs the Z component from the X and Y components, assuming that X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 and that Z is always positive, so no normal vector can point to the back side of the surface. This is necessary when storing normals in a 2-channel texture, throwing away the Z component. Xenko might select such a format when you choose to Compress a normal map, so this option needs to be enabled.
+| Scale and offset | Interpret values from the texture as positive values ranging from `0.0` to `1.0`. The shader applies a scale to get the range `-1.0` to `1.0`.
+| Reconstruct Z    | If there's no Z component in the texture, reconstruct it from the X and Y components. This assumes that X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 and that Z is always positive, so no normal vector can point to the back side of the surface. We recommend you enable this option, as Xenko might remove the Z component when you compress normal maps.
 
 For more information about normal maps, see the [normal maps](../textures/normal-maps.md) page.
 
@@ -97,8 +97,8 @@ Under the **Micro surface** setting, you can provide a **glossiness map** to pro
 
 If you select **Float**:
 
-- a value of 1.0 means the surface is highly glossy (the coarse normal isn't perturbed)
-- a value of 0.0 means the surface is very rough (the coarse normal is highly perturbed in several directions)
+- a value of `1.0` means the surface is highly glossy (the coarse normal isn't perturbed)
+- a value of `0.0` means the surface is very rough (the coarse normal is highly perturbed in several directions)
 
 The screenshots below show different levels of glossiness on a material:
 
@@ -112,13 +112,18 @@ The screenshots below show different levels of glossiness on a material:
 | Property       | Description
 | -------------- | -- |
 | Glossiness map | The glossiness map color provider
-| Invert         | Inverts the glossiness value (eg a value of 1.0 produces zero glossiness instead of maximum). This effectively turns the glossiness attribute into a **roughness** attribute found in other game engines
+| Invert         | Inverts the glossiness value (eg a value of `1.0` produces zero glossiness instead of maximum). This effectively turns the glossiness value into a **roughness** value, as used in other game engines
+
+If you have local reflections enabled, the scene is reflected in materials with a glossiness map value higher than the threshold you specify in the local reflections properties. For more information, see [Local reflections](../post-effects/local-reflections.md).
 
 ## See also
 
-* [Shading attributes](shading-attributes.md)
-* [Misc attributes](misc-attributes.md)
 * [Material maps](material-maps.md)
+* [Material attributes](material-attributes.md)
+    * [Shading attributes](shading-attributes.md)
+    * [Misc attributes](misc-attributes.md)
+    * [Clear-coat shading](clear-coat-shading.md)
+* [Clear-coating shading](clear-coat-shading.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
 * [Custom shaders](../effects-and-shaders/custom-shaders.md)

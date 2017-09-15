@@ -31,7 +31,7 @@ There are several ways to make a scene a child of another scene:
 
     ![Properties parent scene](media/properties-parent-scene.png)
 
-## Specify a default scene
+## Set the default scene
 
 The **default scene** is the scene Xenko loads at runtime. You can set this in the [Game Settings](game-settings.md) asset.
 
@@ -43,17 +43,27 @@ The **default scene** is the scene Xenko loads at runtime. You can set this in t
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3. In the **property grid** (the right-hand pane by default), next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+3. In the **property grid** (the right-hand pane by default), next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
     
     ![Set default scene](media/game-settings-default-scene.png)
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-2. Select the default scene in the asset picker and click **OK**.
+2. Select the default scene and click **OK**.
 
 Xenko loads this scene at runtime.
 
 For more information about the Game Settings asset, see [Game Settings](game-settings.md).
+
+## Set the active scene
+
+The **active scene** is the scene entities are added to when you drop them in the scene editor. Game Studio adds the entities as children to the active scene.
+
+To set the active scene, **entity tree** (left by default), right-click the scene and select **active scene**.
+
+![Set active scene](media/set-active-scene.png)
+
+The active scene has no effect on runtime. 
 
 ## Lock scenes and entities
 

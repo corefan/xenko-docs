@@ -121,7 +121,7 @@ public class MySoundScript : SyncScript
 
     ![Drag and drop a sound asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 
-    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
+    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
 
     ![Pick up an asset](media/audio-play-script-component-pick-an-asset.png)
 
