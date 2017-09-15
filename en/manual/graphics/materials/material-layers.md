@@ -36,7 +36,7 @@ If the materials have **different** shading models, Xenko applies each material'
 
 1. Select the material you want to add a layer to.
 
-2. In the **property grid** (on the right by default), next to **Layers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**).
+2. In the **property grid** (on the right by default), next to **Layers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
 
     ![Add a layer](media/add-a-layer.png)
 
@@ -44,11 +44,11 @@ If the materials have **different** shading models, Xenko applies each material'
 
     ![Empty layer](media/empty-layer.png)
 
-3. Next to the layer, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+3. Next to the layer, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    The **asset picker** opens.
+    The **Select an asset** window opens.
 
-    ![Asset picker](media/material-asset-picker.png)
+    ![Select an asset](media/material-asset-picker.png)
 
 4. Specify a material you want to add as a layer and click **OK**.
 
@@ -56,7 +56,7 @@ If the materials have **different** shading models, Xenko applies each material'
     
     ![Added layer](media/added-layer.png)
 
-5. Next to **Blend Map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
+5. Next to **Blend Map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
 
     ![Select blend map](media/select-blend-map.png)
 

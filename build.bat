@@ -1,2 +1,2 @@
-./en-build.bat
-::./jp-build.bat
+Call en-build.bat
+Call ./jp-build.bat

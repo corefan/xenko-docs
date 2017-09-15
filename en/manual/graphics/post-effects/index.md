@@ -32,9 +32,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
     > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
-
-4. In the **property grid** (on the right by default), enable the post effects you want to use and set their properties. For details about each post effect and its properties, see the pages below.
+3. In the **property grid** (on the right by default), enable the post effects you want to use and set their properties. For details about each post effect and its properties, see the pages below.
 
 ## In this section
 

@@ -36,7 +36,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
     ![Choose asset type](media/engine-skybox-choose-asset-type.png)
 
-    The **Asset picker** opens.
+    The **Select an asset** window opens.
 
 3. Choose a skybox texture (`.dds` file) from the project assets and click **OK**.
     
@@ -54,13 +54,13 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
     ![Light component property](media/light-component-property.png)
 
-7. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**):
+7. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
 
 	![No skybox asset selected](media/no-skybox-asset-selected.png)
 
 8. Select the skybox asset you want to use as a light source and click **OK**.
 
-	![Asset picker](media/select-skybox-asset.png)
+	![Select an asset](media/select-skybox-asset.png)
 
 The [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the skybox asset to light the scene.
 
@@ -70,7 +70,7 @@ When you use a skybox as a light, Xenko uses it both in compressed form ([spheri
 
 ![Skybox lighting properties](media/skybox-asset-properties.png)
 
-| Property     | Description                                                                                                                                                                     
+| Property     | Description                  
 | ------------ | ---------- 
 | Cube Map |  The cubemap asset used for the skybox
 | Specular Only      |  Use the skybox only for specular lighting

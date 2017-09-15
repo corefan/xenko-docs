@@ -5,41 +5,40 @@
 
 You can use various **sensors**, such as gyroscopes and accelerometers, as input devices in your project. Sensors are often used in mobile games.
 
-Use the [input manager](xref:SiliconStudio.Xenko.Input.InputManager) to access sensors and:
+Use @'SiliconStudio.Xenko.Input.InputManager' to access sensors and:
 
 * check if a sensor is supported by Xenko
 * disable a sensor
 * retrieve sensor data
 
-Xenko can receive data from six types of sensor: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_. They inherit from [SensorBase](xref:SiliconStudio.Xenko.Input.SensorBase), which provides base functionalities such as enabling or testing the availability of the sensor.
+Xenko can receive data from six types of sensor: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_. They inherit from @'SiliconStudio.Xenko.Input.ISensorDevice'
 
-Xenko creates a default instance for each sensor type. You can access each instance from the [input manager](xref:SiliconStudio.Xenko.Input.InputManager).
+Xenko creates a default instance for each sensor type. You can access each instance from the @'SiliconStudio.Xenko.Input.InputManager'.
 
 Sensors are state-based. Each sensor instance is automatically updated every frame, and contains the value of the sensor just before the update.
 
-To access a sensor, use (for example):
+For example, to access the accelerometer, use:
 
-```
+```cs
 var accelerometer = Input.Accelerometer;
 ```
 
 ## Check if a sensor is available
 
-Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported). For example:
+Before you get the value of a sensor, check that the sensor is available in the device. To do this, check the sensor you want to use isn't null. For example, to check if the compass is available:
 
 ```cs
-var hasCompass = Input.Compass.IsSupported;
+var hasCompass = Input.Compass != null;
 ```
 
 > [!Note]
-> If a sensor isn't natively supported by the device, Xenko will try to emulate it using the device's other sensors.
+> If a sensor isn't natively supported by the device, Xenko tries to emulate it using the device's other sensors.
 
 ## Enable a sensor
 
 By default, Xenko disables all available sensors, as retrieving and updating sensor data takes significant CPU time.
 
-To enable a sensor, set [SensorBase.IsEnabled](xref:SiliconStudio.Xenko.Input.SensorBase.IsEnabled)
-to ```True```. When you don't need the sensor, disable it by setting the property to ```False```.
+To enable a sensor, set @'SiliconStudio.Xenko.Input.ISensorDevice.IsEnabled' to `true`. When you don't need the sensor, disable it by setting the property to `false`.
 
 ## Use the orientation sensor
 
@@ -49,13 +48,13 @@ The **orientation sensor** indicates the **orientation of the device** with resp
 
 Use [Input.Orientation](xref:SiliconStudio.Xenko.Input.InputManager.Orientation) to get the current orientation of the device.
 
-| Property        | Description                                     | Declaration                                 |
-|-----------------|-------------------------------------------------|---------------------------------------------|
-| [Roll](xref:SiliconStudio.Xenko.Input.OrientationSensor.Roll) | The rotation around the X-axis. | ```public float Roll { get; }``` |
-| [Pitch](xref:SiliconStudio.Xenko.Input.OrientationSensor.Pitch)           | The rotation around the Y-axis.                    | ```public float Pitch { get; }```           |
-| [Yaw](xref:SiliconStudio.Xenko.Input.OrientationSensor.Yaw)             | The rotation around the Z-axis.                    | ```public float Yaw { get; }``` |
-| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix) | The device rotation.  | ```public Matrix RotationMatrix { get; }``` |
-| [Quaternion](xref:SiliconStudio.Xenko.Input.OrientationSensor.Quaternion) | The device orientation and rotation. |  ```public Quaternion Quaternion { get; }``` |
+| Property        | Description                                     | Declaration 
+|-----------------|-------------------------------------------------|---------------
+| [Roll](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Roll) | The rotation around the X-axis. | `public float Roll { get; }`
+| [Pitch](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Pitch)           | The rotation around the Y-axis.                    | `public float Pitch { get; }`
+| [Yaw](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Yaw)             | The rotation around the Z-axis.                    | `public float Yaw { get; }`
+| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.IOrientationSensor.RotationMatrix) | The device rotation.  | `public Matrix RotationMatrix { get; }`
+| [Quaternion](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Quaternion) | The device orientation and rotation. |  `public Quaternion Quaternion { get; }`
 
 For example:
 
@@ -90,7 +89,7 @@ The **accelerometer** measures the raw acceleration applied to the device. This 
 > [!NOTE]
 > When the user isn't applying force, the **device acceleration** is equal to its **gravity**.
 
-To get the raw acceleration, use [Accelerometer.Acceleration](xref:SiliconStudio.Xenko.Input.AccelerometerSensor.Acceleration). For example:
+To get the raw acceleration, use [Accelerometer.Acceleration](xref:SiliconStudio.Xenko.Input.IAccelerometerSensor.Acceleration). For example:
 ```
 var acceleration = Input.Accelerometer.Acceleration;
 ```
@@ -98,7 +97,7 @@ var acceleration = Input.Accelerometer.Acceleration;
 ### Use the user acceleration sensor
 The **user acceleration sensor** is similar to the accelerometer, but measures the acceleration applied **only** by a user (without gravitational acceleration). 
 
-To get the user acceleration, use [UserAcceleration.Acceleration](xref:SiliconStudio.Xenko.Input.UserAccelerationSensor.Acceleration). For example:
+To get the user acceleration, use [UserAcceleration.Acceleration](xref:SiliconStudio.Xenko.Input.IUserAccelerationSensor.Acceleration). For example:
 
 ```cs                       
 var userAcceleration = Input.UserAcceleration.Acceleration;
@@ -107,7 +106,7 @@ var userAcceleration = Input.UserAcceleration.Acceleration;
 ### Use the gravity sensor
 The gravity sensor gives a 3D vector indicating the direction and magnitude of gravity (meters per second squared) acting on the device.
 
-To get the gravity vector, use [GravitySensor](xref:SiliconStudio.Xenko.Input.GravitySensor). For example:
+To get the gravity vector, use [GravitySensor](xref:SiliconStudio.Xenko.Input.IGravitySensor). For example:
 
 ```cs
  var gravityVector = Input.Gravity.Vector;
@@ -119,7 +118,7 @@ The **compass** indicates measures the angle between the top of the device and t
 
 ![Compass](media/sensor-overview-compasss.png)
 
-To get this angle, use [CompassSensor.Heading](xref:SiliconStudio.Xenko.Input.CompassSensor.Heading). For example:
+To get this angle, use [CompassSensor.Heading](xref:SiliconStudio.Xenko.Input.ICompassSensor.Heading). For example:
 
 ```cs
 var heading = Input.Compass.Heading;
@@ -131,7 +130,7 @@ The gyroscope measures the **rotation speed** of the device (**radians per secon
 
 ![Gyroscope](media/sensor-overview-gyroscope-sensor.png)
 
-To get the rotation speed, use [GyroscopeSensor.RotationRate](xref:SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate). For example:
+To get the rotation speed, use [GyroscopeSensor.RotationRate](xref:SiliconStudio.Xenko.Input.IGyroscopeSensor.RotationRate). For example:
 
 ```cs
   var rotationRate = Input.Gyroscope.RotationRate; 
@@ -148,7 +147,7 @@ public class SensorScript : AsyncScript
 	public override async Task Execute()
 	{
 		// Check availability of the sensor
-		if(!Input.Accelerometer.IsSupported)
+		if(Input.Accelerometer != null)
 			return;
 			
 		// Activate the sensor
@@ -160,8 +159,7 @@ public class SensorScript : AsyncScript
 			var accel = Input.Accelerometer.Acceleration;
 			
 			// perform require works...
-			
-			away Script.NextFrame();
+			await Script.NextFrame();
 		}		
 		// Disable the sensor after use
 		Input.Accelerometer.IsEnabled = false;
