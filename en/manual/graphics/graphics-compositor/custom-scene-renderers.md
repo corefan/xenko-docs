@@ -4,7 +4,7 @@ To create a custom renderer, directly implement the @'SiliconStudio.Xenko.Render
 
 ## Implement an ISceneRenderer
 
-The @'SiliconStudio.Xenko.Rendering.Compositing.SceneRendererBase' provides a default implementation of @'SiliconStudio.Xenko.Rendering.Compositing.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
+The @'SiliconStudio.Xenko.Rendering.Compositing.SceneRendererBase' provides a default implementation of @'SiliconStudio.Xenko.Rendering.Compositing.ISceneRenderer'. It automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
 
 ```cs
 [DataContract("MyCustomRenderer")]
@@ -25,10 +25,10 @@ public sealed class MyCustomRenderer : SceneRendererBase
 
 ## Use a delegate
 
-If you just want to develop a renderer and attach it to a method directly, use @'SiliconStudio.Xenko.Rendering.Compositing.DelegateSceneRenderer':
+To develop a renderer and attach it to a method directly, use @'SiliconStudio.Xenko.Rendering.Compositing.DelegateSceneRenderer':
 
 ```cs
-var sceneDelegateRenderer = new SceneDelegateRenderer(
+var sceneRenderer = new DelegateSceneRenderer(
     (renderContext, frame) =>
     {
         // Access to the graphics device
