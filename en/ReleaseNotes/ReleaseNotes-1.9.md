@@ -1,12 +1,14 @@
-# Highlights
+# Xenko 1.9 beta release notes
 
-Xenko release 1.9β introduces several major new features along with several relevant enhancements to existing features.
+## Highlights
+
+Xenko 1.9 Beta introduces several major new features along with several relevant enhancements to existing features.
 
 We are excited to offer three new game templates to speed up your game design time, a brand new script editor as well as expanded copy-paste functionality.
 
 The last major new feature is our new Navigation Mesh system.
 
-## Game Templates
+### Game Templates
 
 We have added several templates packed with a lot of functionality to help you kickstart your games. Choose from:
 
@@ -22,7 +24,7 @@ All of them come with basic camera and player functionality found in most games 
 
 In addition to the game templates, the **New Game** project now includes optional packages with all the assets we used to build the samples. Unlike the game templates which are trimmed down, the optional packages include ALL assets, including some which are not used by any Xenko sample.
 
-## Script Editor
+### Script Editor
 
 To ease friction from switching back and forth between the Game Studio and your IDE, we’ve built a new Script Editor.  Relying fully on Visual Studio is no longer necessary because you can now edit your code directly within the Game Studio itself. You’ll get full syntax highlighting, auto-completion, live diagnostics and even the ability to auto-reload C# files and projects that changed on your hard drive due to changes in your external editor (e.g., Visual Studio).
 
@@ -55,7 +57,7 @@ C# scripts saved on Visual Studio side (or any text editor, for that matter) wil
 
 Under the hood, [Rosyln](https://github.com/dotnet/roslyn) is the underlying technology that can process your Xenko source code. But we didn’t stop there! We were fortunate to find [AvalonEdit](http://avalonedit.net/), which provided us what we wanted for the visual appearance of the UI aspect of the Xenko script editor. We also integrated [RoslynPad](https://roslynpad.net/), which connects Roslyn and AvalonEdit together.
 
-## Navigation Meshes
+### Navigation Meshes
 
 In Xenko 1.9β, you can create a **navigation mesh** powered by [Recast and Detour](https://github.com/recastnavigation/recastnavigation) with **real-time feedback** directly in the **Xenko GameStudio!** The navigation mesh is especially useful for RPGs or top-down strategy games, as you can use it to **guide characters through complex scenes**. The real-time feedback makes it easy to adjust and conveniently customize AI movement and the dimensions of the navigation mesh itself. The green outline of Xenko’s Navigation Mesh shows where the AI comes into play and where the colliders are set.
 
@@ -71,7 +73,7 @@ In the videos, you can see how the AI navigates the level using the logic within
    <source src="media/ReleaseNotes-1.9/navmeshes/NoOutlineAE.mp4" type="video/mp4">
 </video>
 
-## Copy & Paste Functionality Expanded
+### Copy & Paste Functionality Expanded
 
 In the past we only supported copy and pasting of assets, but now you can **copy-paste pretty much anything** in the Game Studio.
 
@@ -129,7 +131,7 @@ Here’s an example of copying between scripts and transform entities in the Gam
    <source src="media/ReleaseNotes-1.9/copy_paste/CopyPaste_PropertyGrid.mp4" type="video/mp4">
 </video>
 
-## .NET Standard
+### .NET Standard
 
 Starting with Xenko 1.9, shared Game assemblies will be created using [.NET Standard](https://docs.microsoft.com/en-us/dotnet/articles/standard/library) rather than PCL.
 
@@ -137,7 +139,7 @@ It offers [many advantages](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/i
 
 Newly created applications will target .NET Standard 1.4, but users are of course free to target a different version. Also, your existing PCL projects will still work as is, but we recommend you to update your projects to .NET Standard!
 
-## Assembly Reloading
+### Assembly Reloading
 
 Iterating on code is very important. So far, Xenko was supporting changes in scripts: as soon as you saved any C# file, Game Studio was offering to recompile and reload the assembly with the updated scripts. If there is an error loading the type, you can still edit other part of the asset, save it back while preserving the parts that could not be loaded.
 
@@ -145,9 +147,9 @@ In this version, we generalized the approach so that any type embedded in your a
 
 This includes renderers, material features, and will soon be extensively used in new assets.
 
-# Breaking changes
+## Breaking changes
 
-## Windows Phone and Windows Store Removed
+### Windows Phone and Windows Store Removed
 
 Windows Phone and Windows Store platforms are both removed.
 Please use the newer `Universal Windows Apps (UWP)` instead. This platform was previously known as `Windows 10`.
@@ -155,7 +157,7 @@ Projects will be automatically upgraded to reflect this change.
 
 Also, we renamed preprocessor definition `SILICONSTUDIO_PLATFORM_WINDOWS_RUNTIME` into `SILICONSTUDIO_PLATFORM_UWP`.
 
-## .NET Standard
+### .NET Standard
 
 The switch to .NET Standard for newly created projects implies that:
 
@@ -165,7 +167,7 @@ The switch to .NET Standard for newly created projects implies that:
 * From version 1.9, we don't install prerequisites to compile PCL projects anymore. If you have somebody in your team still working on a project created with a previous version of Xenko on a fresh PC, please make them install Xenko 1.8 so that it installs the proper prerequisites (even if the project has been updated to a newer version of Xenko).
 
 
-## Asset Serialization
+### Asset Serialization
 
 We changed how we serialize asset in YAML. We introduced new concepts that improve how we can track overrides between an archetype or a prefab and assets/entities inheriting from it. Although everything happens "under the hood", this is a actually a heavy change that might impact the upgrading of your project.
 
@@ -173,7 +175,7 @@ We removed asset upgrading for projects made with version 1.3 and below (release
 * Dependency Properties of UI elements that are overridden from an UI library will be reset during upgrade. Therefore, properties such as Grid Column and Row will have to be manually restored.
 * Some case of overriden materials in the material list of ModelComponent might be improperly upgraded.
 
-## Dropping Support for Windows Store 8.1 and Windows Phone 8.1 
+### Dropping Support for Windows Store 8.1 and Windows Phone 8.1 
 
 To properly support the .NET Standard 1.4 and offer our developers a more up-to-date and robust API, we decided to drop support for Windows Store 8.1 and Windows Phone 8.1 platforms.
 
@@ -183,15 +185,15 @@ Of course, you are free to stick with Xenko 1.8 in case you have a project targe
 
 Just as a reminder, we already support Universal Windows Platform (UWP) on x86, x64 and ARM as of Xenko 1.8, which means games and apps developed with Xenko can be deployed on a whole range of Microsoft devices, including [Xbox One](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index). Until 1.9, this platform was named Windows10 in Xenko, but we took the liberty to rename it UWP to better match the official naming.
 
-# Changelog
+## Changelog
 
-## Version 1.9.0-beta
+### Version 1.9.0-beta
 
 Release date 2016/11/24
 
-### Enhancements
+#### Enhancements
 
-#### General
+##### General
 
 * From now on, new projects are created as .NET Standard projects rather than PCL projects.
 * `NuGet restore` is automatically run on projects having a `project.json` file
@@ -199,7 +201,7 @@ Release date 2016/11/24
 * Mesh importing now supports *ByEdge* smoothing which was previously ignored. If you notice any difference with vertex normals for your models please check your FBX export settings.
 * Prerequisites installer will ask for UAC once instead of many times, and perform a silent installation for all of the prerequisites.
 
-#### Game Studio
+##### Game Studio
 
 * Previously, when an `EntityComponent` (i.e. script) couldn't be loaded because game or plugin assembly didn't compile properly, we kept a Yaml representation of it so that it could be saved or reloaded after a code fix. Now we allow it to happen anywhere, so that you can use and/or implement custom classes for any type of the engine in your game/plugin.
 * Improve asset logs and errors to properly display failure/warning icon on all assets, including the one with icon-style thumbnails.
@@ -212,7 +214,7 @@ Release date 2016/11/24
 * The Game Studio now uses _AvalonDock_ as docking system
 * Improve DPI support ([#454](https://github.com/SiliconStudio/xenko/issues/454) and [#470](https://github.com/SiliconStudio/xenko/issues/470))
 
-#### Assets
+##### Assets
 
 * Asset YAML serialization has been changed to handle overrides in collection in a better way. More scenario of overrides are now supported.
 * `SharpYaml` has been integrated into our codebase as `SiliconStudio.Core.Yaml`. Most of the duplicated types have been merged back in the `SiliconStudio.Core.Reflection`.
@@ -223,38 +225,38 @@ Release date 2016/11/24
 * Overrides of properties is now handled using _Quantum_ instead of `ShadowObject`.
 * Remove the asset diff/merge classes.
 
-#### Engine
+##### Engine
 
 * DataSerializers are now generated in a file with .pdb information, so that the user can debug them.
 * Add Local offsets to procedural models.
 * `EntityComponent` now implements `IIdentifiable` and has an `Id` property.
 
-#### Audio
+##### Audio
 
 * Add `SetRange` support to `AudioEmitterSoundController`
 * Improve compilation speed of audio files
 
-#### Materials
+##### Materials
 
 * Normal maps now have the option to `Invert Y`, supporting both textures where the green component is facing up or down
 
-#### Particles
+##### Particles
 
 * Minor optimizations around vertex buffer building
 * Add StopEmitters() method to the particle system, which prevents new particles from spawning without pausing the entire system
 
-#### Physics
+##### Physics
 
 * Add Cone collider shape.
 * Replace float with `AngleSingle` for `MaxSlope` of character controllers.
 
-### Issues Fixed
+#### Issues Fixed
 
-#### General
+##### General
 
 * UWP platform now uses UniversalWindowsPlatform 5.2.2 (was previously 5.0.0).
 
-#### Game Studio
+##### Game Studio
 
 * Fix many issues with property overrides.
 * Fix many issues when setting/overriding materials in ModelComponent.
@@ -266,55 +268,55 @@ Release date 2016/11/24
 * Fix crashes in sprite sheet editor that could occur when deleting, duplicating or moving sprites.
 * Fix sort order of assets in the asset view.
 
-#### Assets
+##### Assets
 
 * Fix tangents of imported meshes, when transforms are negative along some axes
 
-#### Engine
+##### Engine
 
 * Several issues with spot lights were fixed, including shadow maps
 * Fix flickering of some materials when no ambient light is present
 * Fix an issue on OpenGL that caused low frame rates when using post effects, due to blocking GPU-readback
 
-#### Animation
+##### Animation
 
 * Fix a bug where an empty animation clip caused a crash
 
 
-## Version 1.9.1-beta
+### Version 1.9.1-beta
 
 Release date 2016/11/29
 
-### Issues fixed
+#### Issues fixed
 
 #### Game Studio
 
 * Moving or renaming an asset that has overridden properties (eg. a scene using prefabs) was loosing override information once saved.
 
-#### Engine
+##### Engine
 
 * Normal maps issue fixed where z-component was wrongly assumed to be 1 (it's now equal to sqrt(1 - x^2 - y^2))
 * Depth of Field halo around foreground objects issue resolved
 
-#### Samples
+##### Samples
 
 * Missing normal maps on some samples have been restored
 
 
-## Version 1.9.2-beta
+### Version 1.9.2-beta
 
 Release date 2016/12/13
 
-### Enhancements
+#### Enhancements
 
-#### Game Studio
+##### Game Studio
 
 * Maintaining ALT key down when dropping a prefab into a scene won't create a container entity for the prefab instance.
 * Creation of prefabs from entities that are already instances of other prefabs and contains overridden properties will maintain prefab links and overrides in the newly created prefab.
 
-### Issues fixed
+#### Issues fixed
 
-#### Game Studio
+##### Game Studio
 
 * Duplicating an entity that was linked to a prefab was not maintaining the prefab link to the copy in some scenarios.
 * Adding a new or existing package to a solution was causing a crash.
@@ -328,7 +330,7 @@ Release date 2016/12/13
 * Fix an issue when copy/pasting a component that requires unicity to an entity that already has one. Now the user will be correctly prompted whether this component should be replaced by the copy.
 * Fix incorrect filter list of asset types in the asset view.
 
-#### Engine
+##### Engine
 
 * Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
 * Spotlights with shadows bug fix where multiple spotlights would reference the wrong shadowmap.
@@ -341,11 +343,11 @@ Release date 2016/12/13
 * Fix invalid IL that prevented building UWP apps in release mode
 
 
-## Version 1.9.3-beta
+### Version 1.9.3-beta
 
 Release date 2017/1/11
 
-### Enhancement
+#### Enhancement
 
 #### Game Studio
 
@@ -354,13 +356,13 @@ Release date 2017/1/11
 * Add more logging messages when creating a new project
 * Improve tab header presentation, allow to see all open editors at once
 
-#### Engine
+##### Engine
 
 * Animation: UpdateEngine (used by animation system to update values) will skip updating values if target is an array or list (i.e. list of bones) whose size is not big enough. This was previously leading to memory corruption.
 
-### Issues fixed
+#### Issues fixed
 
-#### Game Studio
+##### Game Studio
 
 * Fix issues with collection properties in the property grid.
 * Fix an issue where thumbnail backgrounds get dark when in Gamma rendering pipeline.
@@ -373,34 +375,34 @@ Release date 2017/1/11
 * Fix properties that were all grayed when selecting multiple objects.
 * Fix a case where Script assets would not open in the external text editor.
 
-#### Particles
+##### Particles
 
 * Fix a bug where Edge and Center definitions for trail shape renderer were swapped
 * Fix a bug where None for particle material still displays color
 
-#### Physics
+##### Physics
 
 * Fix 2D boxes shapes collisions.
 * Fix drawing of Characters debug shapes at run-time.
 * Throwing if mass is negative.
 * Fixed an issue with scaling and single collider shapes
 
-#### Audio
+##### Audio
 
 * Fix XAudio audio clipping when sounds were not looped.
 * Fix OpenSLES multiple play of non looped sound.
 
-### Improvements
+#### Improvements
 
-#### Game Studio
+##### Game Studio
 
 * Normal maps and Grayscale textures will now appear as 3-channel textures in the thumbnails and the preview.
 
-#### Connection Router
+##### Connection Router
 
 * Due to the way adb was spawning a daemon process, connection router port was locked due to socket handle inheritability. This is now properly disabled.
 
-# Known Issues
+## Known Issues
 
 * On Linux, when switching the underlying Graphics Platform, rendering will not occur or fail. Delete the cache, local and roaming folder on the Linux host and restarting the game should fix the issue.
 * Performance issues on mobile (being worked on)

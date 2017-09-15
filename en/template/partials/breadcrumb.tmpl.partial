@@ -3,7 +3,8 @@
 <div class="subnav navbar navbar-default">
 	<div class="container xk-flex">
 	<select id="xk-current-version" class="form-control col-lg-1 col-md-2 col-sm-3 col-xs-6">
-		<option value="latest">Latest version (2.0)</option>
+		<option value="latest">Latest version (2.1)</option>
+		<option value="2.0">Version 2.0</option>
 		<option value="1.10">Beta version 1.10</option>
 		<option value="1.9">Beta version 1.9</option>
 		<option value="1.8">Beta version 1.8</option>

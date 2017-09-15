@@ -45,7 +45,7 @@ The **draw** phase fills the GPU command list.
 
 Example tasks:
 
-* setting up render targets
+* setting up render textures
 * drawing combinations of render stage with render view.
 
 ### Example

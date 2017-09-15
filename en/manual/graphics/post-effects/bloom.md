@@ -1,14 +1,17 @@
 # Bloom
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+
 The **bloom** effect takes the brightest areas of an image, extends them, and bleeds them into the surrounding areas to simulate bright light overwhelming the camera.
 
 ![media/bloom-1.png](media/bloom-1.png) 
 
 It uses the result of the [bright filter](bright-filter.md) effect as input.
 
-![media/bloom-2.png](media/bloom-2.png) 
-
 ## Properties
+
+![media/bloom-2.png](media/bloom-2.png) 
 
 | Property       | Description 
 | -------------- | ---- 

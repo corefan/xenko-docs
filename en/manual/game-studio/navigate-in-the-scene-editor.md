@@ -61,7 +61,7 @@ You can also focus by clicking the **magnifying glass icon** next to the entity 
 > [!TIP] 
 > Focusing and then orbiting with **Alt + left mouse button** is useful for inspecting entities.
 
-### Table of controls
+### Controls
 
 Action                 | Control
 -----------------------|--------------
