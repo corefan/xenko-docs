@@ -31,7 +31,7 @@ You can also use custom shaders to create custom post effects. For more informat
 
     ![My shader](media/my-shader.png)
 
-6. Open the the `.xksl` file, remove the existing lines, and write your shader.
+6. Open the `.xksl` file, remove the existing lines, and write your shader.
 
     Shaders are written in Xenko Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
 
@@ -80,7 +80,7 @@ You can use custom shaders in any [material attribute](../materials/material-att
 
 1. In the **asset view**, select the material you want to use the shader in.
 
-2. In the **property grid**, next to the property you want to control with the shader, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and select **Shader**.
+2. In the **property grid**, next to the property you want to control with the shader, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change**) and select **Shader**.
 
     ![Select Shader](media/select-shader.png)
 

@@ -1,5 +1,8 @@
 # Scene renderers
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Designer</span>
+
 **Scene renderers** let you customize the **collect** and **draw** phases of the rendering. For more information about these stages, see [Render features](../rendering-pipeline/render-features.md). 
 
 You select scene renderers in the **entry points** node properties.
@@ -28,7 +31,7 @@ Clears a frame, with a solid color.
 
 ## Camera renderer
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras.md) in the scene so it can be displayed somewhere.
 
 ![Camera renderer properties](media/render-camera-1.png)
 
@@ -41,12 +44,12 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to r
 
 ## Scene renderer collection
 
-The **scene renderer collection** executes multiple renderers (eg camera renderer, render texture, etc) in sequence. In simple terms, this lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
+The **scene renderer collection** executes multiple renderers (eg camera renderer, render texture, etc) in sequence. This lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
 
 >[!Note]
 >Xenko executes the renderers in list order.
 
-To add a renderer to the collection, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select the renderer you want to add.
+To add a renderer to the collection, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select the renderer you want to add.
 
 ![Add to scene collection](media/add-renderer-to-scene-renderer-collection.png)
 
@@ -80,7 +83,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' 
 
 ## Render texture
 
-Renders to a render texture, which you can display in your scene (eg to display security camera footage on a screen). For more information, see [Render targets](render-targets.md).
+Renders to a render texture, which you can display in your scene (eg to display security camera footage on a screen). For more information, see [Render textures](render-textures.md).
 
 ![Render texture properties](media/render-texture-scene-renderer-properties.png)
 
@@ -89,9 +92,16 @@ Renders to a render texture, which you can display in your scene (eg to display 
 | Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
 | Render texture| Specify a texture to render to
 
+## Render mask
+
+![Render mask](media/change-render-mask.png)
+
+The **render mask** filters which groups are rendered. You can use it to only render particular models. For more information, see [Render groups and render masks](render-groups-and-masks.md)
+
 ## See also
 
 * [Graphics compositor](index.md)
 * [Camera slots](../camera-slots.md)
 * [Custom scene renders](custom-scene-renderers.md)
 * [Debug renderers](debug-renderers.md)
+* [Render groups and render masks](render-groups-and-masks.md)
