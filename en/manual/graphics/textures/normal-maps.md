@@ -40,9 +40,9 @@ Normal maps usually represent small changes of the normal vector (the vector whi
 
     ![Use normal maps](media/use-normal-map.png)
 
-5. Next to **Normal map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create an instance with the selected type**) and make sure **Texture** is selected.
+5. Next to **Normal map**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace...**) and make sure **Texture** is selected.
 
-6. Next to **Normal map**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
+6. Next to **Normal map**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     ![Select asset](media/select-asset-texture.png)
 
@@ -58,7 +58,7 @@ Normal map textures have two properties in addition to the [common texture prope
 
 | Property | Description
 |----------|---------
-| Invert Y | If selected, positive Y components (green pixels) face up in tangent space. This option depends on the tools you use to create normal maps
+| Invert Y | Have positive Y components (green pixels) face up in tangent space. This option depends on the tools you use to create normal maps.
 
 For information about normal map properties in materials, see [Materials - Geometry attributes](../materials/geometry-attributes.md).
 

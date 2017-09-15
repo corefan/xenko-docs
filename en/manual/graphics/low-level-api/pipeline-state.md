@@ -84,7 +84,7 @@ pipelineStateDescription.DepthStencilState = DepthStencilStates.None;
 ```
 
 
-If required, the user can set custom depth and stencil states. Please refer to @'SiliconStudio.Xenko.Graphics.DepthStencilStateDescription' for the complete list of available options and default values.
+If required, the user can set custom depth and stencil states. See @'SiliconStudio.Xenko.Graphics.DepthStencilStateDescription' for the complete list of available options and default values.
 
 **Code:** Custom depth and stencil state
 
@@ -126,7 +126,7 @@ pipelineStateDescription.BlendState = BlendStates.Opaque;
 pipelineStateDescription.SampleMask = 0xFFFFFFFF;
 ```
 
-If required, the user can set custom depth and blend states. Please refer to @'SiliconStudio.Xenko.Graphics.BlendStateDescription' for the complete list of available options and default values.
+If required, the user can set custom depth and blend states. See @'SiliconStudio.Xenko.Graphics.BlendStateDescription' for the complete list of available options and default values.
 
 **Code:** Custom blend state
 
@@ -186,9 +186,9 @@ pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 
 ## Output description
 
-Finally, the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.Output' property of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' defines the number and @'SiliconStudio.Xenko.Graphics.PixelFormat' of all bound render targets.
+Finally, the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.Output' property of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' defines the number and @'SiliconStudio.Xenko.Graphics.PixelFormat' of all bound render textures.
 
-Please refer to [Textures and render targets](textures-and-render-targets.md) for details on how to actually bind render targets to the pipeline.
+See [Textures and render textures](textures-and-render-textures.md) for details on how to bind render textures to the pipeline.
 
 **Code:** Creating an output description
 

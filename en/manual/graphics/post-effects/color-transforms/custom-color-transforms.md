@@ -14,7 +14,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## 1. Create a shader
 
-1. Make sure you have the [Xenko Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Xenko shading language](index.md)) to `.cs` files.
+1. Make sure you have the [Xenko Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Xenko shading language](../../effects-and-shaders/index.md)) to `.cs` files.
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-ide-icon.png) (**Open in IDE**) to open your project in Visual Studio.
 
@@ -34,7 +34,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![My post effect](media/my-post-effect.png)
 
-7. Open the the `.xksl` file, remove the existing lines, and write your shader.
+6. Open the `.xksl` file, remove the existing lines, and write your shader.
 
     Shaders are written in Xenko Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
 
@@ -65,7 +65,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![Add script](media/add-script.png)
 
-    Open the the file and write the class.
+    Open the file and write the class.
 
     For example, the code below creates the class `MyColorTransform`, which uses the shader and supplies a value for the color `MyColor` (defined in the shader).
 
@@ -130,7 +130,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 2. Select the **Post-processing effects** node.
 
-3. In the **property grid**, under **Color transforms**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Create an instance with the selected type**) and select your color transform (eg **MyColorTransform**).
+3. In the **property grid**, under **Color transforms**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Change**) and select your color transform (eg **MyColorTransform**).
 
     ![Add script](media/add-script-in-properties.png)
 

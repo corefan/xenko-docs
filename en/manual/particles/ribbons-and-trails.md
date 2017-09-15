@@ -8,7 +8,7 @@ To create **ribbons** and **trails**, Xenko builds the mesh data as a strip conn
 
 ![media/particles-tutorials-ribbons-0.jpg](media/ribbons-and-trails.jpg)
 
-In the diagram below, several particles (represented as red dots) are rendered as individual quads (blue rectangles):
+In the diagram below, several particles (represented as red dots) are rendered as individual quads (blue squares):
 
 ![Diagram: individual quads](media/particles-diagram-quads.png)
 
@@ -46,7 +46,7 @@ To sort the particles, under **Particle System > Source > Emitters**, change the
 
 If your particles have the same **lifespan** property, and are emitted no more than once per frame (usually the case at 30 particles per second or fewer), you can sort them by age. 
 
-However, if you spawn several particles per second or your particles vary in lifespan, sorting by age doesn't provide a consistent order, as the sorting parameter changes between frames. In this case, you should sort the particles by order. To do this, you need to add a **spawn order initializer**. To do this, in the entity properties, under **Particle System > Source > Emitters**, next to **Initializers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select **Spawn Order**.
+However, if you spawn several particles per second or your particles vary in lifespan, sorting by age doesn't provide a consistent order, as the sorting parameter changes between frames. In this case, you should sort the particles by order. To do this, you need to add a **spawn order initializer**. To do this, in the entity properties, under **Particle System > Source > Emitters**, next to **Initializers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and select **Spawn Order**.
 
 ![Add spawn-order initializer](tutorials/media/add-spawn-order-initializer.png)
 
