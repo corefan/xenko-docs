@@ -13,6 +13,16 @@
     <div class="blockG" id="rotateG_07"></div>
     <div class="blockG" id="rotateG_08"></div>
   </div>
+  <div id="xk-search-summary">
+    Showing 
+    <span id="xk-current"></span> 
+    results 
+    <span id="xk-current-chapter"></span> 
+    <span class="xk-visibility"> ・<span><span id="xk-manual"></span> results</span> in manual </span>
+    <span class="xk-visibility"> ・<span><span id="xk-api"></span> results</span> in API </span>
+    <span class="xk-visibility"> ・ <span><span id="xk-releasenotes"></span> results</span> in release notes </span>
+    <span class="xk-visibility hidden"> ・ <span class="xk-searching-link"> All <span id="xk-all"></span> results </span></span>
+  </div>
   <div class="sr-items"></div>
   <ul id="pagination"></ul>
 </div>

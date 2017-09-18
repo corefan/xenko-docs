@@ -1236,3 +1236,17 @@ h4.returns {
     background-color: #eeeeee !important;
     border-color: #ddd;
 }
+.xk-searching-link{
+    text-decoration: underline;
+    color: #3b73af;
+}
+.xk-searching-link:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+#xk-search-summary{
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
+    display: none;
+}
