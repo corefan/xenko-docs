@@ -12,7 +12,7 @@
 >[!Note]
 >For information about 2D animation, see [Sprites](../sprites/index.md).
 
-### Skeletons
+## Skeletons
 
 **Skeletons** are digital structures which describe deformation patterns of 3D models. Skeletons are made of bones that form a hierarchy. When parent bones change their position, they also affect the positions of child bones. For example, a hand bone might have five child bones (the fingers and thumb); when the hand moves up and down, the fingers and thumb move with it.
 
@@ -21,7 +21,7 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 >[!NOTE]
 >There's currently no way to visualize skeletons in Game Studio.
 
-### Skinned models
+## Skinned models
 
 **Skinning** is the process of assigning weights to vertices and bones they depend on. Each vertex usually depends on one to four bones.
 
@@ -30,7 +30,7 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 >[!NOTE]
 >In Game Studio, you can only create simple 3D models such as spheres and cubes. For information about how to do this, see [Create assets](../game-studio/create-assets.md). To create more complex models, use dedicated software like 3DS Max, Maya, or Blender, then [import the model into Game Studio](import-animations.md).
 
-### Animation clips
+## Animation clips
 
 **Animation clips** describe the pose of a **skeleton** at a particular moment. The skeleton moves according to the animation. The mesh vertices transform (skin) to match the current pose.
 
@@ -40,7 +40,7 @@ For an example of how animations work in Xenko, load the **Sample: animation** s
 
 ![Animations](media/animations-index1.png)
 
-The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG* also include some advanced animation techniques.
+The templates **First-person shooter**, **Third-person platformer** and **Top-down RPG** also include some advanced animation techniques.
 
 ## In this section
 
