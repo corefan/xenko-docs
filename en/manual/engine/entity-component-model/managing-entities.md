@@ -1,4 +1,4 @@
-# Managing Entities
+# Manage entities
 
 <div class="doc-incomplete"/>
 

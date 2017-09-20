@@ -41,20 +41,49 @@
     var q = oEvent.data.q;
     var chapter = oEvent.data.chapter;
     var hits = lunrIndex.search(q);
-    var results = [];
+    var results = {};
     var TRIMLIMIT = 400;
+    var resultsAll = [];
+    var resultsManual = [];
+    var resultsApi = [];
+    var resultsReleasenotes = [];
     hits.forEach(function(hit) {
       var item = searchData[hit.ref];
-      if((item.href).toLowerCase().indexOf(chapter) >= 0){
+      if((item.href).toLowerCase().indexOf('manual') >= 0){
         var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
         if(trimIndex < TRIMLIMIT || trimIndex == -1){
           var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
         } else {
           var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
         }
-        results.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
+        resultsManual.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
       };
+      if((item.href).toLowerCase().indexOf('api') >= 0){
+        var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
+        if(trimIndex < TRIMLIMIT || trimIndex == -1){
+          var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+        } else {
+          var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
+        }
+        resultsApi.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
+      };
+      if((item.href).toLowerCase().indexOf('releasenotes') >= 0){
+        var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
+        if(trimIndex < TRIMLIMIT || trimIndex == -1){
+          var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+        } else {
+          var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
+        }
+        resultsReleasenotes.push({'href': item.href, 'title': item.title, 'keywords': trimedKeyWords});
+      };
+      resultsAll = resultsManual.concat(resultsApi, resultsReleasenotes)
     });
+    results = {
+      'all'          : resultsAll,
+      'manual'       : resultsManual,
+      'api'          : resultsApi,
+      'releasenotes' : resultsReleasenotes
+    }
     postMessage({e: 'query-ready', q: q, d: results});
   }
 })();

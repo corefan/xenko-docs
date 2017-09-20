@@ -38,7 +38,7 @@ In general, the higher the framerate, the less likely players are to become sick
 
 ## Vection
 
-Vection is the sensation of movement caused by the environment changing. You might have experienced this in the real world, for example, if you've been on a stationary train and a nearby train moves, creating the sensation that your own train is moving in the opposite direction. This can cause sickness in VR.
+Vection is the sensation of movement caused by the environment changing. You might have experienced this in the real world; for example, if you've been on a stationary train and a nearby train moves, creating the sensation that your own train is moving in the opposite direction. This can cause sickness in VR.
 
 To reduce vection in your game, use simple textures and reduce the player movement speed. 
 
