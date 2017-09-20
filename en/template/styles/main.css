@@ -351,7 +351,7 @@ article table {
     content: "This documentation is under construction";
 }
 .doc-no-translated::after {
-    content: "申し訳ありません。このページの翻訳はございません。英語で表示いたします。";
+    content: "申し訳ありません。このページの日本語訳はございません。英語で表示いたします。";
 }
 .label-doc-highlight {
     background-color: #5cb85c;
