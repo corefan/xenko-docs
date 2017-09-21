@@ -23,22 +23,22 @@ myChildScene1.Add(myChildScene2);
 
 For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
 
-## Scene streamer script
+## Scene streaming script
 
 Xenko also includes a scene streaming script that uses a [trigger](../physics/triggers.md) to load scenes. 
 
 >[!Note]
 >The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
 
-### Add a scene streamer script
+### Add a scene streaming script
 
-To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streamer**.
+To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streaming**.
 
-![Scene streamer script](media/scene-streaming-script.png)
+![Scene streaming script](media/scene-streaming-script.png)
 
 Game Studio adds a scene streaming script to your project assets.
 
-### Use the scene streamer script
+### Use the scene streaming script
 
 1. Create a trigger entity. When this is triggered at runtime, Xenko loads the scene. For more information about creating triggers, see [Triggers](../physics/triggers.md).
 
@@ -46,16 +46,16 @@ Game Studio adds a scene streaming script to your project assets.
 
 2. Create an entity and position it where you want the scene to load.
 
-3. With the entity selected, in the **property grid** (on the righy by default), click **Add component** and select the **scene streamer** script.
+3. With the entity selected, in the **property grid** (on the righy by default), click **Add component** and select the **scene streaming** script.
 
     ![Add script](media/add-scene-streaming-script.png)
 
     >[!Note]
-    >If the scene streamer script doesn't appear in the list of components, reload the assemblies.
+    >If the scene streaming script doesn't appear in the list of components, reload the assemblies.
 
     Game Studio adds the script to the entity as a component.
 
-    ![Scene streamer properties](media/scene-streaming-script-properties.png)
+    ![Scene streaming properties](media/scene-streaming-script-properties.png)
 
 4. Under **Url**, specify the URL of the scene you want to load.
 
@@ -63,9 +63,9 @@ Game Studio adds a scene streaming script to your project assets.
 
 At runtime, when the trigger you created in step 1 is triggered, Xenko loads the scene you specified in step 4.
 
-### Scene streamer script properties
+### Scene streaming script properties
 
-![Scene streamer properties](media/scene-streaming-script-properties.png)
+![Scene streaming properties](media/scene-streaming-script-properties.png)
 
 | Property       | Description                                                                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
