@@ -71,10 +71,10 @@ You can lock scenes and entities so they can't be selected in the main window. T
 
 To lock or unlock a scene or entity, in the entity tree, click the **padlock** icon.
 
-![Padlock item](media/lock-scene-or-entity.png)
+![Padlock icon](media/lock-scene-or-entity.png)
 
 >[!Tip]
->When you lock a scene, all its child scenes and entities are locked too. To lock an entity along with its child entities, hold **Ctrl** and click the padlock item.
+>When you lock a scene, all its child scenes and entities are locked too. To lock an entity along with its child entities, hold **Ctrl** and click the padlock icon.
 
 Locked items have a **gold locked padlock** icon in the entity tree.
 
