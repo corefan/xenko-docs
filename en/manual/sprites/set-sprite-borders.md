@@ -3,13 +3,13 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Sprite borders** are areas that don't deform when you scale the sprite. These are often useful for sprites used for UI elements such as menu buttons. You can only set sprite borders for sprites set to the **UI** sheet type.
+**Sprite borders** are areas that don't deform when you scale the sprite. These are often useful for sprites used for [UI elements](../ui/ui-libaries.md) such as menu buttons. You can only set sprite borders for sprites set to the **UI** sheet type.
 
 | Original sprite | Scaled without borders  | Scaled with borders  |
 |----------|---|---|
 |   ![Original sprite](media/original-sprite.png)       |![With border](media/sprite-stretched-no-border.png)   | ![With border](media/sprite-stretched-with-border.png)  |
+||Edges are deformed|Edges not deformed|
 
-Notice how in the final image the sprite borders stop the edges of the sprite deforming. The interior of the sprite still stretches.
 
 ### Set sprite borders
 
@@ -58,3 +58,4 @@ By default, sprite borders move as you resize the texture region. To stop this h
 * [Import sprite sheets](import-sprite-sheets.md)
 * [Edit sprites](edit-sprites.md)
 * [Use sprites](use-sprites.md)
+* [UI](../ui/index.md)
