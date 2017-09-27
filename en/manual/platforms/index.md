@@ -17,17 +17,17 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 
 ## Supported graphics platforms
 
-* DirectX 9 (limited support), 10, 11, 12
+* Direct3D 9 (limited support), 10, 11, 12
 * OpenGL 3, 4
-* OpenGL ES 2, 3
+* OpenGL ES 2 (limited support), 3
 * Vulkan
 
 >[!Note]
->Xenko only supports MSAA (multisample anti-aliasing) for DirectX 11 and later.
->Xenko's performance with OpenGL ES 2 depends on your device's OpenGL driver (specifically its shader compiler).
+>Xenko only supports MSAA (multisample anti-aliasing) for Direct3D 11 and later.
+>Depending on your device's OpenGL shader compiler, Xenko might not run with OpenGL ES2.
 
 >[!Warning]
->DirectX 9 doesn't support HDR textures. Using HDR textures with DirextX 9 will crash your game.
+>Direct3D 9 doesn't support HDR textures. Using HDR textures with DirextX 9 will crash your game.
 
 ## Set the graphics platform
 

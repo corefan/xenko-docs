@@ -1,11 +1,11 @@
-# Change the graphics platform
+# Set the graphics platform
 
 <span class="label label-doc-level">Beginner</span>
 
 The **graphics platform** controls the graphics hardware in the device you run your project on. Different devices support different graphics platforms; for example, iOS supports the OpenGL ES graphics platform. You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
 
 >[!Warning]
->Moving from DirectX to an earlier DirectX version can create problems. For example, if your game contains HDR textures, it will crash, as DirextX 9 doesn't support them.
+>Moving from Direct3D to an earlier Direct3D version can create problems. For example, if your game contains HDR textures, it will crash, as Direct3D 9 doesn't support them.
 
 You set the graphics platform in the [game settings](../game-studio/game-settings.md) asset.
 

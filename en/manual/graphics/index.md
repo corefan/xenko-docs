@@ -16,7 +16,7 @@ Xenko shaders are converted automatically to the target graphics platform, eithe
 
 ## Advanced graphics
 
-The graphics module provides a set of methods to display the game. Although Xenko is available on multiple platforms, the whole system behaves like DirectX 11 from the user perspective. You need a basic knowledge of the rendering pipeline to use it.
+The graphics module provides a set of methods to display the game. Although Xenko is available on multiple platforms, the whole system behaves like Direct3D 11 from the user perspective. You need a basic knowledge of the rendering pipeline to use it.
 
 ## In this section
 
