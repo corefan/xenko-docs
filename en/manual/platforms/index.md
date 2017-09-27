@@ -48,4 +48,4 @@ Xenko defines preprocessor variables if you want to write code that compiles onl
     * [Xbox Live](uwp/xbox-live.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
 * [Set the graphics platform](set-the-graphics-platform.md)
-* [Game settings](../game-studio/game-settings.md).
+* [Game settings](../game-studio/game-settings.md)
