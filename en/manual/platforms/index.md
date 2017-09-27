@@ -17,13 +17,25 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 
 ## Supported graphics platforms
 
-* DirectX 9, 10, 11, 12
+* DirectX 9 (limited support), 10, 11, 12
 * OpenGL 3, 4
 * OpenGL ES 2, 3
 * Vulkan
 
-> [!TIP]
-> You set the graphics platform in the **Game settings** asset under **Rendering settings > Target graphics platform**. For more information, see [Game settings](../game-studio/game-settings.md).
+>[!Note]
+>Xenko only supports MSAA (multisample anti-aliasing) for DirectX 11 and later.
+>Xenko's performance with OpenGL ES 2 depends on your device's OpenGL driver (specifically its shader compiler).
+
+>[!Warning]
+>DirectX 9 doesn't support HDR textures. Using HDR textures with DirextX 9 will crash your game.
+
+## Set the graphics platform
+
+You set the graphics platform in the **Game settings** asset under **Rendering settings > Target graphics platform**.
+
+![Select graphics platform](media/change-graphics-platform.png)
+
+For more information, see [Set the graphics platform](set-the-graphics-platform.md).
 
 ## Preprocessor variables
 
@@ -35,4 +47,5 @@ Xenko defines preprocessor variables if you want to write code that compiles onl
 * [UWP](uwp/index.md)
     * [Xbox Live](uwp/xbox-live.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
-* [Change the graphics platform](change-the-graphics-platform.md)
+* [Set the graphics platform](set-the-graphics-platform.md)
+* [Game settings](../game-studio/game-settings.md).

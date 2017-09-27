@@ -63,14 +63,17 @@ Your game is now ready to use VR.
 
 | Property                | Description      
 |-------------------------|--------
-| Ignore camera rotation  | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)   
-| Resolution scale        | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU
+| Ignore camera rotation  | Disable camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)
+| Resolution scale        | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU.
 
 ## Multisample anti-aliasing 
 
 As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (multisample anti-aliasing) in the forward renderer properties (above the VR settings).
 
 ![MSAA](media/MSAA.png)
+
+>[!Note]
+>MSAA isn't supported for DirectX 11 or lower.
 
 ## Disable screen synchronization
 
