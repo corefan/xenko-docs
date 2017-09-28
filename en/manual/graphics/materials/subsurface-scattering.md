@@ -49,7 +49,9 @@ There are additional subsurface scattering options in the **[graphics compositor
 
     The graphics compositor editor opens.
 
-2. In the graphics compositor editor, select the **Subsurface scattering blur** node.
+2. In the graphics compositor editor, select the **Subsurface scattering** node.
+
+    ![Select node](media/select-subsurface-scattering-node.png)
 
 3. In the **property grid** (on the right by default), edit the properties.
 
