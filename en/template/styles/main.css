@@ -351,7 +351,7 @@ article table {
     content: "This documentation is under construction";
 }
 .doc-no-translated::after {
-    content: "Sorry, there's no translation for this page yet. The page is displayed in English instead.";
+    content: "申し訳ありません。このページの日本語訳はございません。英語で表示いたします。";
 }
 .label-doc-highlight {
     background-color: #5cb85c;
@@ -1235,4 +1235,18 @@ h4.returns {
     color: #f19118;
     background-color: #eeeeee !important;
     border-color: #ddd;
+}
+.xk-searching-link{
+    text-decoration: underline;
+    color: #3b73af;
+}
+.xk-searching-link:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+#xk-search-summary{
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
+    display: none;
 }

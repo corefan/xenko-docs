@@ -204,7 +204,7 @@
 ## [UWP](platforms/uwp/index.md)
 ### [Xbox Live](platforms/uwp/xbox-live.md)
 ## [Add or remove a platform](platforms/add-or-remove-a-platform.md)
-## [Change the graphics platform](platforms/change-the-graphics-platform.md)
+## [Set the graphics platform](platforms/set-the-graphics-platform.md)
 
 # [Scripts](scripts/index.md)
 ## [Types of script](scripts/types-of-script.md)
@@ -238,6 +238,8 @@
 ## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Troubleshooting](troubleshooting/index.md)
+## [Logging](troubleshooting/logging.md)
+## [Debug text](troubleshooting/debug-text.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)

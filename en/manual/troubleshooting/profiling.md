@@ -1,4 +1,4 @@
-## Profiling
+# Profiling
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
@@ -199,3 +199,7 @@ For textures:
 * use [compressed textures](../graphics/textures/compression.md) on slower devices
 * use sprite sheets, not individual images
 * use texture atlases, not separate textures
+
+## See also
+
+* [Profiling](profiling.md)

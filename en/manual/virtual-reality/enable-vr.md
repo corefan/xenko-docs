@@ -33,7 +33,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     |--------| --------
     | Oculus | Supports Oculus Rift devices (best support for Oculus Rift) 
     | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
-    | Dummy  | Displays the game on the screen with two cameras (one per eye), instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
+    | Dummy  | Displays the game on the screen with two cameras (one per eye), instead of in the VR device. This is mainly useful for development. To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
 
 6. Repeat steps 4 and 5 to add as many APIs as you need.
 
@@ -63,14 +63,17 @@ Your game is now ready to use VR.
 
 | Property                | Description      
 |-------------------------|--------
-| Ignore camera rotation  | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)   
-| Resolution scale        | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU
+| Ignore camera rotation  | Disable camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)
+| Resolution scale        | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more GPU.
 
 ## Multisample anti-aliasing 
 
 As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (multisample anti-aliasing) in the forward renderer properties (above the VR settings).
 
 ![MSAA](media/MSAA.png)
+
+>[!Note]
+>MSAA isn't supported for Direct3D 11 or lower.
 
 ## Disable screen synchronization
 

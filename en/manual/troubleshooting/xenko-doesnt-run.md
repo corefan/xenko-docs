@@ -17,7 +17,7 @@ To check if this is installed, see **Control Panel > Programs > Programs and Fea
 If it's not installed, you can download it from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53345).
 
 > [!Note]
-> If you install Visual Studio, make sure you also install the .Net Framework support. Just the Visual Studio base installation isn't enough.]
+> If you install Visual Studio, make sure you also install the .Net Framework support. Just the Visual Studio base installation isn't enough.
 
 ## Visual C++ Redistributable 2015 or 2017
 

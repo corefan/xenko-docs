@@ -6,6 +6,7 @@ $(function () {
   var filtered = 'filtered';
   var show = 'show';
   var hide = 'hide';
+  var searchResultsObj = {};
 
   // Styling for tables in conceptual documents using Bootstrap.
   // See http://getbootstrap.com/css/#tables
@@ -126,7 +127,7 @@ $(function () {
           }
       }, 100);
     } else {
-      searchChapter = '';
+      searchChapter = 'all';
       var tocInterval = setInterval(function(){
           if(chapterNameElem.length > 0){
             clearInterval(tocInterval);
@@ -189,8 +190,9 @@ $(function () {
         worker.onmessage = function (oEvent) {
           switch (oEvent.data.e) {
             case 'query-ready':
-              var hits = oEvent.data.d;
-              handleSearchResults(hits);
+              var hits = oEvent.data.d[searchChapter];
+              handleSearchResults(hits, searchChapter, oEvent.data.d);
+              searchResultsObj = oEvent.data.d
               break;
             case 'index-ready':
               indexReady.resolve();
@@ -208,6 +210,85 @@ $(function () {
         });
       }
     };
+
+    function setSearchResult(chapter, result){
+      switch(chapter){
+        case 'all':
+          $('#xk-current').text(result.all.length);
+          $('#xk-current-chapter').text('from all pages')
+          $('#xk-manual').text(result.manual.length)
+          if(result.manual.length > 0){
+            $('#xk-manual').parent().addClass('xk-searching-link')
+          }
+          $('#xk-api').text(result.api.length)
+          if(result.api.length > 0){
+            $('#xk-api').parent().addClass('xk-searching-link')
+          }
+          $('#xk-releasenotes').text(result.releasenotes.length)
+          if(result.releasenotes.length > 0){
+            $('#xk-releasenotes').parent().addClass('xk-searching-link')
+          }
+          $('#xk-all').closest('.xk-visibility').addClass('hidden');
+          $('#xk-manual').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-api').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-releasenotes').closest('.xk-visibility').removeClass('hidden');
+          break;
+        case 'manual':
+          $('#xk-current').text(result.manual.length);
+          $('#xk-current-chapter').text('in manual');
+          $('#xk-manual').closest('.xk-visibility').addClass('hidden');
+          $('#xk-api').text(result.api.length)
+          if(result.api.length > 0){
+            $('#xk-api').parent().addClass('xk-searching-link')
+          }
+          $('#xk-releasenotes').text(result.releasenotes.length)
+          if(result.releasenotes.length > 0){
+            $('#xk-releasenotes').parent().addClass('xk-searching-link')
+          }
+          $('#xk-all').text(result.all.length);
+          $('#xk-all').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-api').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-releasenotes').closest('.xk-visibility').removeClass('hidden');
+          break;
+        case 'api':
+          $('#xk-current').text(result.api.length);
+          $('#xk-current-chapter').text('in API');
+          $('#xk-api').closest('.xk-visibility').addClass('hidden');
+          $('#xk-manual').text(result.manual.length)
+          if(result.manual.length > 0){
+            $('#xk-manual').parent().addClass('xk-searching-link')
+          }
+          $('#xk-releasenotes').text(result.releasenotes.length)
+          if(result.releasenotes.length > 0){
+            $('#xk-releasenotes').parent().addClass('xk-searching-link')
+          }
+          $('#xk-all').text(result.all.length);
+          $('#xk-all').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-manual').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-releasenotes').closest('.xk-visibility').removeClass('hidden');
+          break;
+        case 'releasenotes':
+          $('#xk-current').text(result.releasenotes.length);
+          $('#xk-current-chapter').text('in release notes');
+          $('#xk-releasenotes').closest('.xk-visibility').addClass('hidden');
+          $('#xk-manual').text(result.manual.length)
+          if(result.manual.length > 0){
+            $('#xk-manual').parent().addClass('xk-searching-link')
+          }
+          $('#xk-api').text(result.api.length)
+          if(result.api.length > 0){
+            $('#xk-api').parent().addClass('xk-searching-link')
+          }
+          $('#xk-all').text(result.all.length);
+          $('#xk-all').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-manual').closest('.xk-visibility').removeClass('hidden');
+          $('#xk-api').closest('.xk-visibility').removeClass('hidden');
+          break;
+        default: 
+          console.error('Wrong conditions');
+          break;
+      }
+    }
 
     // Highlight the searching keywords
     function highlightKeywords() {
@@ -284,12 +365,15 @@ $(function () {
       }
     }
 
-    function handleSearchResults(hits) {
+    function handleSearchResults(hits, chapter, result) {
+      setSearchResult(chapter, result);
       $('#floatingBarsG').hide();
+      $('#xk-search-summary').show();
       var numPerPage = 10;
       $('#pagination').empty();
       $('#pagination').removeData("twbs-pagination");
       if (hits.length === 0) {
+        $('#xk-search-summary').hide();
         $('#search-results>.sr-items').html('<p>No results found</p>');
       } else {
         $('#pagination').twbsPagination({
@@ -323,6 +407,11 @@ $(function () {
         });
       }
     }
+    $(document).on('click', '.xk-searching-link', function(){
+      var newChapter = $(this).find('span').attr('id').replace('xk-', '')
+      var newHits = searchResultsObj[newChapter]
+      handleSearchResults(newHits, newChapter, searchResultsObj);
+    })
   })();
 
   // Update href in navbar
