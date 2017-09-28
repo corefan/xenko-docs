@@ -11,11 +11,13 @@ The photo below demonstrates a real-life example of the effect:
 
 *(Image courtesy of Davepoo2014, shared under [Creative Commons Attribution-Share Alike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/deed.en))*
 
-The images below demonstrate the effect to render wax:
+The images below demonstrate the use of subsurface scattering in Xenko to render wax:
 
 | Subsurface scattering off           | Subsurface scattering on
 |--------------------|--------------------
 | ![On](media/candles-ss-off.jpg)   | ![Off](media/candles-ss-on.jpg)
+
+Note how the shadows are much softer in the second image, as more light is passing through the candles.
 
 ## Translucency
 
@@ -35,9 +37,7 @@ The images below demonstrate the effect to render wax:
 
 ## Global subsurface scattering options
 
-These options apply globally to all materials that use subsurface scattering.
-
-There are additional controls in the **[graphics compositor](../graphics/graphics-compositor/index.md)**.
+These options apply globally to all materials that use subsurface scattering. There are additional controls related to the effect in the **[graphics compositor](../graphics/graphics-compositor/index.md)**.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
