@@ -45,7 +45,6 @@ You can access the sprite component properties in the **property grid**.
 | Property   | Function    
 |------------|-----------
 | Source | The source image file for the sprite
-| Default frame | 
 | Type | **Sprites** have 3D space in the scene. <br>**Billboards** always face the camera and appear fixed in 3D space.
 | Color | Applies a color to the sprite
 | Intensity | The intensity by which the color is scaled (mainly used for rendering LDR sprites in HDR scenes)
