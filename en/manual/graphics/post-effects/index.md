@@ -1,6 +1,6 @@
 # Post effects
 
-**Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image; for example, by giving it a more natural, realistic look, or to create stylized cinematic effects.
+**Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image; for example, by giving it a more natural, realistic look, or creating stylized cinematic effects.
 
 ![media/post-effects-reference-1.png](media/post-effects-reference-1.png) 
 
@@ -13,6 +13,9 @@ Typically, you set up a post effect by specifying:
 - parameters to customize the behavior of the post effect during its rendering pass
 
 Xenko provides several predefined post effects. You can also [extend the system to create your own color transform effects](color-transforms/custom-color-transforms.md).
+
+>[!Note]
+>Depth-aware post effects - [depth of field](depth-of-field.md), SSAO, and [local reflections](local-reflections.md) - disable MSAA (multisample anti-aliasing).
 
 ## Add or edit a post effect
 
@@ -32,7 +35,11 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
     > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **property grid** (on the right by default), enable the post effects you want to use and set their properties. For details about each post effect and its properties, see the pages below.
+3. In the **property grid** (on the right by default), enable the post effects you want to use and configure their properties.
+
+    ![Post effect properties](media/post-effect-properties.png)
+
+    For details about each post effect and its properties, see the pages below.
 
 ## In this section
 
@@ -47,6 +54,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
+* [Local reflections](local-reflections.md)
 
 ## See also
 

@@ -7,6 +7,9 @@
 >[!Warning]
 >Currently, local reflections aren't compatible with mobile platforms and cause crashes.
 
+>[!Note]
+>As with other depth-aware post effects, enabling local reflections disables MSAA (multisample anti-aliasing).
+
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
 ![Local reflections](media/local-reflections.jpg)

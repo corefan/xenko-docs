@@ -36,6 +36,25 @@ To add a sprite to a scene, add a **sprite component** to an entity. Afterwards,
 
 Game Studio adds the sprite to the entity.
 
+### Sprite component properties
+
+You can access the sprite component properties in the **property grid**.
+
+![Sprite component properties](media/sprite-component-properties.png)
+
+| Property   | Function    
+|------------|-----------
+| Source | The source image file for the sprite
+| Type | **Sprites** have 3D space in the scene. <br>**Billboards** always face the camera and appear fixed in 3D space.
+| Color | Applies a color to the sprite
+| Intensity | The intensity by which the color is scaled (mainly used for rendering LDR sprites in HDR scenes)
+| Premultiply alpha | Premultiply color components by their alpha component
+| Ignore depth | Ignore the depth of other elements in the scene when rendering the sprite. This always places the sprite on top of previous elements. 
+| Alpha cutoff | Ignore pixels with low alpha values when rendering the sprite
+| Sampler | The texture sampling method used for the sprite: Point (nearest), Linear, or Anisotropic
+| Swizzle | How the color channels are accessed. <br>**Default** leaves the image unchanged (finalRGB = originalRGB) <br>**Normal map** uses the color channels as a [normal map](../graphics/textures/normal-maps.md) <br>**Grayscale (alpha)** uses only the R channel (finalRGBA = originalRRRR), so the sprite is red <br>**Grayscale (opaque)** is the same as **Grayscale (alpha)**, but uses a value of `1` for the alpha channel, so the sprite is opaque
+| Render group | Which render group the sprite belongs to. Cameras can render different groups. For more information, see [Render groups and render masks](render-groups-and-masks.md).
+
 ## Use sprites in a script
 
 You can use scripts to render sprites at runtime. To do this, attach the script to an entity with a sprite component.

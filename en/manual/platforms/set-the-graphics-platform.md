@@ -1,8 +1,11 @@
-# Change the graphics platform
+# Set the graphics platform
 
 <span class="label label-doc-level">Beginner</span>
 
 The **graphics platform** controls the graphics hardware in the device you run your project on. Different devices support different graphics platforms; for example, iOS supports the OpenGL ES graphics platform. You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
+
+>[!Warning]
+>Moving from Direct3D to an earlier Direct3D version can create problems. For example, if your game contains HDR textures, it will crash, as Direct3D 9 doesn't support them.
 
 You set the graphics platform in the [game settings](../game-studio/game-settings.md) asset.
 
@@ -19,11 +22,11 @@ You set the graphics platform in the [game settings](../game-studio/game-setting
 
     If you select **Default**, Xenko uses the graphics platform appropriate for your platform (eg Windows, Android) when you build.
 
-| Platform      | Default graphics platform |
-|---------------|---------------------------|
-| Windows, UWP  | Direct3D11                |
-| Linux, Mac OS | OpenGL                    |
-| Other         | OpenGL ES                 |
+| Platform      | Default graphics platform 
+|---------------|-------------
+| Windows, UWP  | Direct3D11  
+| Linux, Mac OS | OpenGL    
+| Other         | OpenGL ES  
 
 ## Override the graphics platform
 
@@ -52,7 +55,9 @@ Xenko overrides the graphics platform for the platforms you selected.
 ## Check which graphics platform your project uses
 
 1. Add a break point to your game code (eg in a script).
+
 2. Run the project. 
+
 3. Check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
 
     For example, this project is using Vulkan:

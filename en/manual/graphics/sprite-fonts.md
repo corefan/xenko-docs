@@ -2,15 +2,15 @@
 
 <span class="label label-doc-level">Intermediate</span>
 
-It's often inefficient to render fonts directly. We usually want to create (rasterize) them just once, then only render the image of a letter character (eg A, a, B, C etc) every time we need it. This involves creating a sprite (billboarded rectangular image) of the character, which is displayed on the screen as a regular image. A text block would be a collection of sprites rendered as quads so all the characters are aligned and spaced properly.
+**Sprite fonts** take a TrueType font as an input (either a system font or a file you assign) and then create all the images (sprites) of characters (glyphs) for your game.
 
-A **sprite font** is an asset which takes a TrueType font as an input (either a system font or a file you assign) and then creates all the images (sprites) of characters (glyphs) for your game.
+It's often inefficient to render fonts directly. We usually want to create (rasterize) them just once, then only render the image of a letter character (eg A, a, B, C etc) every time we need it. This involves creating a sprite (billboarded rectangular image) of the character, which is displayed on the screen as a regular image. A text block would be a collection of sprites rendered as quads so all the characters are aligned and spaced properly.
 
 ## Offline-rasterized sprite fonts
 
-Offline-rasterized sprite fonts create (rasterize) a fixed number of characters (glyphs) of a certain size, and bake them into an atlas texture when building the assets for your game.
+**Offline-rasterized** sprite fonts create (rasterize) a fixed number of characters (glyphs) of a certain size, and bake them into an atlas texture when building the assets for your game.
 
-In the game, they can only be drawn with this size. Only the characters you specified can be displayed.
+In the game, they can only be drawn with this size. Only the characters you specify can be displayed.
 
 ### When to use offline-rasterized fonts
 
@@ -45,7 +45,7 @@ Do **not** use offline-rasterized fonts when:
 
 ## Runtime-rasterized sprite fonts
 
-Runtime-rasterized sprite fonts create (rasterize) a varied number of characters (glyphs) of any size and bake them into an atlas texture *on demand*.
+**Runtime-rasterized** sprite fonts create (rasterize) a varied number of characters (glyphs) of any size and bake them into an atlas texture **on demand**.
 
 This function is invoked at runtime when you change the font size or request characters that haven't been drawn before.
 
@@ -85,9 +85,11 @@ Do **not** use runtime-rasterized fonts when:
 
 ## Signed distance field sprite fonts
 
-The signed distance field (SDF) fonts use an entirely different technique to render the fonts. Rather than rasterizing the color of the character on the sprite, they output the distance of the current pixel to the closest edge of the glyph.
+**Signed distance field** (SDF) fonts use an entirely different technique to render fonts. Rather than rasterize the color of the character on the sprite, they output the distance of the current pixel to the closest edge of the glyph.
 
-The distance is positive if the pixel is *inside* the glyph boundaries, and negative if the pixel is *outside* the glyph (hence the name signed). When rendering, you should just check the distance and output a white pixel if it's positive or 0, and a black pixel if it's negative. This allows very sharp and clean edges to be rendered even under magnification, which otherwise makes traditional sprites look pixelated.
+The distance is positive if the pixel is **inside** the glyph boundaries, and negative if the pixel is **outside** the glyph (hence the name signed). 
+
+When rendering, check the distance and output a white pixel if it's positive or `0`, and a black pixel if it's negative. This allows very sharp and clean edges to be rendered even under magnification (which otherwise makes traditional sprites look pixelated).
 
 The image below compares SDF fonts and the offline-rasterized fonts under magnification:
 
@@ -111,7 +113,7 @@ Do **not** use SDF fonts when:
 
 - you only require one or two known sizes for a small character set (better use offline-rasterized font)
 
-- the number of possible characters in the font greatly outnumbers the number of characters you need to display at runtime (eg Japanese or Chinese, which use thousands of characters). If a runtime-rasterized font is not an option (eg because of scaling), make sure you bake every character you might need, or they won't be displayed
+- the number of possible characters in the font greatly outnumbers the number of characters you need to display at runtime (eg Japanese or Chinese, which use thousands of characters). If a runtime-rasterized font is not an option (eg because of scaling), make sure you bake every character you might need, or they won't be displayed.
 
 ### SDF properties
 
@@ -126,9 +128,7 @@ Do **not** use SDF fonts when:
 | Character regions           | Code for regions of characters which need to be baked. For example (32 - 127) is a region sufficient for ASCII character sets. 
 | Default character           | Missing characters will default to this one when rendered. The default code is 32 which is space.
 
-## Under the hood
-
-Let's take a look at the texture atlases for the different sprite fonts.
+## Texture atlases for different sprite fonts
 
 ### Offline rasterized
 
@@ -140,13 +140,13 @@ The offline-rasterized sprite font bakes all requested characters once in a gray
 
 ![media/fonts-8.png](media/fonts-8.png) 
 
-The runtime-rasterized sprite font only bakes (rasterizes) the characters which are drawn in the game. The initial atlas texture is intentionally bigger so that it can hold more characters of possibly different sizes before it needs to be resized.
+The runtime-rasterized sprite font only bakes (rasterizes) the characters that are drawn in the game. The initial atlas texture is intentionally bigger so it can hold more characters of potentially different sizes before it needs resizing.
 
 ### Signed distance field
 
 ![media/fonts-7.png](media/fonts-7.png) 
 
-Like the offline-rasterized sprite font, the signed distance field sprite font bakes all requested characters once. The major difference is that it encodes distances from the character lines rather than actual color and it uses all three channels' RGB. You can still recognize each character, but we need a special shader to render them properly. The upside is that the edges remain sharp, even under magnification.
+Like the offline-rasterized sprite font, the signed distance field sprite font bakes all requested characters once. The major difference is that it encodes distances from the character lines rather than actual color, and it uses all three channels' RGB. You can still recognize each character, but a special shader is needed to render them properly. The upside is that the edges remain sharp, even under magnification.
 
 ## Further reading
 

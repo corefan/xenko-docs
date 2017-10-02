@@ -10,7 +10,7 @@ To develop projects with Xenko, you need:
 | Operating system | Windows 7, 8.1, 10 
 | IDE for writing code | Visual Studio 2015 or 2017
 | CPU | x64
-| GPU | DirectX 10+ compatible GPU
+| GPU | Direct3D 10+ compatible GPU
 | RAM | 4GB (minimum), 8GB (recommended) 
 
 RAM requirements vary depending on your project:

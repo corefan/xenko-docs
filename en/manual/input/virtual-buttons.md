@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Rather than bind controls to physical keys and buttons, you can bind them to **virtual buttons**. Users can then assign physical buttons to the virtual buttons, allowing them to create their own control schemes.
+Rather than bind controls to physical keys and buttons, you can bind them to **virtual buttons**. Players can then assign physical buttons to the virtual buttons, allowing them to create their own control schemes.
 
 For example, imagine you develop a first-person shooter game and need to assign a key for the _UseMedkit_ function. Rather than bind the function to a particular key, you can create a **virtual button** called _UseMedkit_, then bind the virtual button to, say, the **F** key. If they want to, the player can then bind the virtual key to a different key at runtime.
 
