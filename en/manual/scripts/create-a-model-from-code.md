@@ -7,7 +7,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
 * creating a model from an asset
 
-* creating a procedural model
+* creating a procedural model using built-in geometric primitives (eg a sphere or cube)
 
 * instantiating a prefab that contains a model (see [Use prefabs](../game-studio/prefabs/use-prefabs.md))
 
@@ -68,6 +68,8 @@ You can create models in scripts at runtime. You can do this in several differen
 4. In your script, create a procedural model using built-in geometric primitives (eg a sphere or cube). For example:
 
     ```cs
+    using SiliconStudio.Xenko.Extensions
+
     // Add one or more meshes using geometric primitives (eg spheres or cubes).
     var meshDraw = GeometricPrimitive.Sphere.New(GraphicsDevice).ToMeshDraw();
 
@@ -78,7 +80,8 @@ You can create models in scripts at runtime. You can do this in several differen
     Alternatively, create a mesh using your own vertex and index buffers. For example:
 
     ```cs
-    // Alternatively, create a mesh using your own vertex and index buffers.
+    // Create a mesh using your own vertex and index buffers.
+    
     mesh = new Mesh { Draw = new MeshDraw { /* Vertex buffer and index buffer setup */ } };
     model.Meshes.Add(mesh);
     ```
@@ -96,6 +99,7 @@ Finally, you need to give the model one or more materials. There are two ways to
 
     ```cs
     // Add one or more materials. Because models might expect multiple materials (one per mesh), Mesh.MaterialIndex specifies which material in the list is used for which mesh.
+
     Material material = Content.Load<Material>("MyFolder/MyMaterial");
     model.Materials.Add(material);
     ```
