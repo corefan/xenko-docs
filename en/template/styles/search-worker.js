@@ -52,7 +52,7 @@
       if((item.href).toLowerCase().indexOf('manual') >= 0){
         var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
         if(trimIndex < TRIMLIMIT || trimIndex == -1){
-          var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+          var trimedKeyWords = item.keywords.trim().substring(0, TRIMLIMIT).split(" ").slice(0, -1).join(" ");
         } else {
           var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
         }
@@ -61,7 +61,7 @@
       if((item.href).toLowerCase().indexOf('api') >= 0){
         var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
         if(trimIndex < TRIMLIMIT || trimIndex == -1){
-          var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+          var trimedKeyWords = item.keywords.trim().substring(0, TRIMLIMIT).split(" ").slice(0, -1).join(" ");
         } else {
           var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
         }
@@ -70,7 +70,7 @@
       if((item.href).toLowerCase().indexOf('releasenotes') >= 0){
         var trimIndex = item.keywords.toLowerCase().indexOf(q.toLowerCase());
         if(trimIndex < TRIMLIMIT || trimIndex == -1){
-          var trimedKeyWords = item.keywords.trim().substring(0, 200).split(" ").slice(0, -1).join(" ");
+          var trimedKeyWords = item.keywords.trim().substring(0, TRIMLIMIT).split(" ").slice(0, -1).join(" ");
         } else {
           var trimedKeyWords = '...' + item.keywords.trim().substring(trimIndex - TRIMLIMIT/2, trimIndex+TRIMLIMIT/2).split(" ").slice(0, -1).join(" ");
         }
