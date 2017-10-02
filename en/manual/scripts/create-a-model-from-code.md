@@ -65,11 +65,9 @@ You can create models in scripts at runtime. You can do this in several differen
     entity.GetOrCreate<ModelComponent>().Model = model;  
     ```
 
-4. In your script, create a procedural model using built-in geometric primitives (eg a sphere or cube). For example:
+4. In your script, using `SiliconStudio.Xenko.Extensions`, create a procedural model using built-in geometric primitives (eg a sphere or cube). For example:
 
     ```cs
-    using SiliconStudio.Xenko.Extensions
-
     // Add one or more meshes using geometric primitives (eg spheres or cubes).
     var meshDraw = GeometricPrimitive.Sphere.New(GraphicsDevice).ToMeshDraw();
 
@@ -77,11 +75,14 @@ You can create models in scripts at runtime. You can do this in several differen
     model.Meshes.Add(mesh);
     ```
 
+    >[!Note]
+    >To use this, make sure you add `Using SiliconStudio.Xenko.Extensions` to the top of your script.
+
     Alternatively, create a mesh using your own vertex and index buffers. For example:
 
     ```cs
     // Create a mesh using your own vertex and index buffers.
-    
+
     mesh = new Mesh { Draw = new MeshDraw { /* Vertex buffer and index buffer setup */ } };
     model.Meshes.Add(mesh);
     ```
