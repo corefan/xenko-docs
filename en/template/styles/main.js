@@ -236,4 +236,14 @@ $(function() {
         $('html, body').scrollTop(0)
       }
     });
+
+    lowercaseBreadcrumbs();
+
+    function lowercaseBreadcrumbs(){
+      $('#breadcrumb .breadcrumb li a').each(function(){
+        if($(this).attr('href').toLowerCase() != 'releasenotes'){
+          $(this).attr('href', $(this).attr('href').toLowerCase())
+        }
+      })
+    }
 });
