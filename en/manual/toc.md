@@ -115,6 +115,7 @@
 ### [Light shafts](graphics/lights-and-shadows/light-shafts.md)
 ### [Shadows](graphics/lights-and-shadows/shadows.md)
 ## [Post effects](graphics/post-effects/index.md)
+### [Ambient occlusion](graphics/post-effects/ambient-occlusion.md)
 ### [Bloom](graphics/post-effects/bloom.md)
 ### [Bright filter](graphics/post-effects/bright-filter.md)
 ### [Color transforms](graphics/post-effects/color-transforms/index.md)

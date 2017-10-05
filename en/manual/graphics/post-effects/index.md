@@ -15,7 +15,7 @@ Typically, you set up a post effect by specifying:
 Xenko provides several predefined post effects. You can also [extend the system to create your own color transform effects](color-transforms/custom-color-transforms.md).
 
 >[!Note]
->Depth-aware post effects - [depth of field](depth-of-field.md), SSAO, and [local reflections](local-reflections.md) - disable MSAA (multisample anti-aliasing).
+>Depth-aware post effects ̶  ie [depth of field](depth-of-field.md), ambient occlusion, and [local reflections](local-reflections.md) ̶  nullify MSAA (multisample anti-aliasing).
 
 ## Add or edit a post effect
 
@@ -43,6 +43,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
 ## In this section
 
+* [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

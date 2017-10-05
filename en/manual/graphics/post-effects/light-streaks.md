@@ -22,6 +22,7 @@ Similar to the [bloom effect](bloom.md), the **light streak** effect uses the re
 
 ## See also
 
+* [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

@@ -17,6 +17,7 @@ The **bright filter** extracts the brightest areas of an image. The bright filte
 
 ## In this section
 
+* [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Color transforms](color-transforms/index.md)
 * [Depth of field](depth-of-field.md)

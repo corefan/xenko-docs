@@ -22,6 +22,7 @@ To create the effect, Xenko creates several versions of the original image with 
 
 ## See also
 
+* [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

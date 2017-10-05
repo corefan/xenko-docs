@@ -8,7 +8,7 @@
 >Currently, local reflections aren't compatible with mobile platforms and cause crashes.
 
 >[!Note]
->As with other depth-aware post effects, enabling local reflections disables MSAA (multisample anti-aliasing).
+>As with other depth-aware post effects, enabling local reflections nullifies MSAA (multisample anti-aliasing).
 
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
@@ -104,7 +104,7 @@ The raycast resolution. There are two options: **full** and **half**. Full gives
 
 #### Ray start bias
 
-The offset of the raycast origin. Lower values produce more correct reflection placement, but produce more artefacts. We recommend values of `0.03` or lower. The default value is `0.01`.
+The offset of the raycast origin. Lower values produce more correct reflection placement, but produce more artifacts. We recommend values of `0.03` or lower. The default value is `0.01`.
 
 | Start bias: `0.01` | Start bias: `0.1`
 |---------------------|---------
