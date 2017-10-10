@@ -8,7 +8,7 @@
 
 The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
-- use one or multiple [cameras](../cameras.md)
+- use one or multiple [cameras](../cameras/index.md)
 - filter entities in the scene
 - render to one or more [render textures](render-textures.md), with different viewports
 - render to a texture used by a material (eg to create a rear-view mirror)
@@ -107,7 +107,7 @@ To create a node, right-click the graphics compositor editor and select the type
 
 ## See also
 
-* [Camera slots](../camera-slots.md)
+* [Camera slots](../cameras/camera-slots.md)
 * [Scene renderers](scene-renderers.md)
     * [Custom scene renders](custom-scene-renderers.md)
 * [Debug renderers](debug-renderers.md)

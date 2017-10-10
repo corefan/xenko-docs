@@ -38,9 +38,9 @@ To use the **AnimationStart** script:
 
     ![Create script](media/name-animation-script.png)
 
-    3a. If Game Studio asks if you want to save your script, click **Yes**.
+    3a. If Game Studio asks if you want to save your script, click **Save script**.
     
-    3b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
+    3b. If Game Studio asks if you want to reload the assemblies, click **Reload assemblies**.
 
 4. Edit the script as necessary and save it.
 

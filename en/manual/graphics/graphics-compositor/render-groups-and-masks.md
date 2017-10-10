@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-With **render groups** and **render masks**, you can choose which parts of your scene are rendered by different [cameras](../cameras.md). For example, you can have a model be visible to Camera A but invisible to Camera B.
+With **render groups** and **render masks**, you can choose which parts of your scene are rendered by different [cameras](../cameras/index.md). For example, you can have a model be visible to Camera A but invisible to Camera B.
 
 ## Set a render group
 
@@ -37,8 +37,8 @@ The **render mask** filters which groups are rendered.
 
 ## See also
 
-* [Cameras](../cameras.md)
-* [Camera slots](../camera-slots.md)
+* [Cameras](../cameras/index.md)
+* [Camera slots](../cameras/camera-slots.md)
 * [Graphics compositor](index.md)
 * [Scene renderers](scene-renderers.md)
 * [Render textures](render-textures.md)

@@ -32,7 +32,7 @@ Alternatively, select the entity you want to be a camera, and in the **property 
 | Far clip plane      | The furthest point the camera can see
 | Custom aspect ratio | Use a custom aspect ratio you specify.  Otherwise, automatically adjust the aspect ratio to the render target ratio
 | Custom aspect ratio | The aspect ratio for the camera (when the **Custom aspect ratio** option is selected)
-| Slot                | The camera slot used in the graphics compositor. For more information, see [Camera slots](camera-slots.md)
+| Slot                | The camera slot used in the graphics compositor. For more information, see [Camera slots](cameras/camera-slots.md)
 
 ## Perspective and orthographic cameras
 
@@ -103,7 +103,7 @@ For more information about how to create and use scripts, see [Scripts](../scrip
 
 **Camera slots** link the [graphics compositor](index.md) to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../game-studio/manage-scenes.md) or graphics compositor without having to assign new cameras each time.
 
-For more information, see [Camera slots](camera-slots.md).
+For more information, see [Camera slots](cameras/camera-slots.md).
 
 ## Render a camera to a texture
 
@@ -112,4 +112,5 @@ You can send a camera's view to a texture and use the texture on objects in your
 ## See also
 
 * [Camera slots](camera-slots.md)
+* [Animate a camera](animate-a-camera.md)
 * [Graphics compositor](graphics-compositor/index.md)

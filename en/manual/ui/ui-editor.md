@@ -50,7 +50,7 @@ To move an element to a new group, right-click the element and select **Group in
 
 The **UI preview** displays a preview of the UI as it appears at runtime. The rendering is equivalent to the rendering in the game, assuming the design resolution is the same as the UI component that uses the edited asset (see [UI Asset properties](#ui-asset-properties)).
 
-By default, the UI is a **billboard**, meaning it always faces the camera. The UI view camera is **orthographic** (see [Cameras](../graphics/cameras.md)). 
+By default, the UI is a **billboard**, meaning it always faces the camera. The UI view camera is **orthographic** (see [Cameras](../graphics/cameras/index.md)). 
 
 You can select, move, and resize elements in the preview as you do in image editing applications.
 

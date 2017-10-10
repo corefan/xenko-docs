@@ -89,8 +89,8 @@
 ## [World units](game-studio/world-units.md)
 
 # [Graphics](graphics/index.md)
-## [Cameras](graphics/cameras.md)
-### [Camera slots](graphics/camera-slots.md)
+## [Cameras](graphics/cameras/index.md)
+### [Camera slots](graphics/cameras/camera-slots.md)
 ## [Materials](graphics/materials/index.md)
 ### [Material maps](graphics/materials/material-maps.md)
 ### [Attributes](graphics/materials/material-attributes.md)

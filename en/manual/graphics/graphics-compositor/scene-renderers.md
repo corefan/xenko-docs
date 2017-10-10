@@ -31,7 +31,7 @@ Clears a frame, with a solid color.
 
 ## Camera renderer
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras.md) in the scene so it can be displayed somewhere.
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../cameras/cameras/camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras/index.md) in the scene so it can be displayed somewhere.
 
 ![Camera renderer properties](media/render-camera-1.png)
 
@@ -39,7 +39,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to r
 
 | Property      | Description                                                             
 | ------------- | ----------
-| Camera        | Specify a [camera slot](../camera-slots.md) to render from
+| Camera        | Specify a [camera slot](../cameras/cameras/camera-slots.md) to render from
 | Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
 
 ## Scene renderer collection
@@ -101,7 +101,7 @@ The **render mask** filters which groups are rendered. You can use it to only re
 ## See also
 
 * [Graphics compositor](index.md)
-* [Camera slots](../camera-slots.md)
+* [Camera slots](../cameras/cameras/camera-slots.md)
 * [Custom scene renders](custom-scene-renderers.md)
 * [Debug renderers](debug-renderers.md)
 * [Render groups and render masks](render-groups-and-masks.md)
