@@ -47,12 +47,12 @@ To clear a reference to an asset, in the **asset dock**, click ![eraser](media/u
 
 ## Examine references
 
-You can examine the references in a selected asset in the **References** in the bottom-right corner of Game Studio.
-
-* The **Referencees** tab displays the assets referenced by the selected asset. 
-* The **Referencers** tab displays the assets that reference the selected asset.
+You can see the references in a selected asset in the **References** tab. By default, this is in the bottom right of Game Studio.
 
 ![References tab](media/use-assets-references-tab.png)
+
+* The **References** tab displays the assets referenced by the selected asset. 
+* The **Referenced by** tab displays the assets that reference the selected asset.
 
 > [!Tip]
 > If you can't see the References tab, make sure it's displayed under **View > References**.
