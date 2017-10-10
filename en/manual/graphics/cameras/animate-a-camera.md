@@ -89,7 +89,7 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
 11. Reload the assemblies.
 
-    ![Reload assemblies](../../../particles/tutorials/media/reload-assemblies.png)
+    ![Reload assemblies](../../platforms/media/reload-assemblies.png)
 
 12. Select the entity you created in step 4. In the **property grid**, click **Add component** and select the animation script.
 
@@ -102,8 +102,6 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
     ![Add animation to the list](../../animation/media/add-animation-to-list.png)
 
 14. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
-
-    ![Select an asset](media/pick-an-asset-up.png)
 
     The **Select an asset** window opens. 
 

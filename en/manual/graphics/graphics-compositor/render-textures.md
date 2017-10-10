@@ -10,7 +10,7 @@ For API details, see [Textures and render textures](../low-level-api/textures-an
 
 ## 1. Create an extra camera slot
 
-Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for a new camera to use. For more information about camera slots, see [Camera slots](../cameras/cameras/camera-slots.md).
+Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for a new camera to use. For more information about camera slots, see [Camera slots](../cameras/camera-slots.md).
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -193,7 +193,7 @@ For an example of rendering to a texture in a project, see the **Animation** sam
 ## See also
 
 * [Cameras](../cameras/index.md)
-* [Camera slots](../cameras/cameras/camera-slots.md)
+* [Camera slots](../cameras/camera-slots.md)
 * [Low-level API – Textures and render textures](../low-level-api/textures-and-render-textures.md)
 * [Render groups and masks](render-groups-and-masks.md)
 * [Graphics compositor](index.md)
