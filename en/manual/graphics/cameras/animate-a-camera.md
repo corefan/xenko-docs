@@ -10,6 +10,10 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
 >[TODO] Xenko doesn't support cameras animated using a target cameras.
 
+## 1. Import the model file
+
+Import the model, animation and skeleton from the model file. To do this: 
+
 1. Drag the model file from Explorer to the **asset view** (in the bottom pane by default).
 
     * Alternatively, in the **asset view**: 
@@ -42,13 +46,15 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
     ![Camera animation](media/camera-animation-asset.png)
 
+## 2. Set up the entities
+
 4. In the **scene editor**, create an entity to hold the camera you want to animate. To do this, right-click the scene, select **Empty entity**, and type a name.
 
     ![Create empty entity](../../ui/media/create-empty-entity.png)
 
     ![Camera holder name](media/add-camera-holder.png)
 
-5. Select the entity you created in step 4. In the **property grid** on the right, click **Add component** and select **Animations**.
+5. Select the entity you created in the previous step. In the **property grid** on the right, click **Add component** and select **Animations**.
 
     ![Select an entity](media/select-animation-component.png)
 
@@ -72,6 +78,8 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
 8. Select the camera animation asset and click **OK**.
 
+## 3. Set up the animation
+
 9. Create a script to control the animation. To do this, in the **asset view**, click **Add asset** and select **Script > Animation start**.
 
     ![Add animation script](media/select-animation-script.png)
@@ -91,7 +99,7 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
     ![Reload assemblies](../../platforms/media/reload-assemblies.png)
 
-12. Select the entity you created in step 4. In the **property grid**, click **Add component** and select the animation script.
+12. Select the entity you created earlier. In the **property grid**, click **Add component** and select the animation script.
 
     ![Add animation script](media/add-animation-script.png)
 
@@ -103,7 +111,7 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
 14. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    The **Select an asset** window opens. 
+    The **Select an asset** window opens.
 
     ![Select camera animation asset](media/select-camera-animation-asset.png)
 
@@ -125,7 +133,7 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
 18. Select the camera model and click **OK**.
 
-19. In the **entity tree**, drag the **camera entity** you want to animate the entity you created in step 4. This makes the camera a child of the entity.
+19. In the **entity tree**, drag the **camera entity** you want to animate to the entity you created. This makes the camera a child of the entity.
 
     ![Parent and child](media/parent-and-child.png)
 
@@ -141,6 +149,8 @@ You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
 
     >[!Tip]
     >In **Target**, you can specify the entity to attach this entity to. If you leave this blank, the entity attaches itself to the parent entity.
+
+At runtime, the camera animates according to the model file.
 
 ## See also
 
