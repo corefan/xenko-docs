@@ -70,7 +70,11 @@ The following screenshots show the influence of the cutoff Alpha value.
 
 ### Clear coat
 
-The **clear coat** attributes simulate automative paint using physically-based rendering. For more information, see [clear-coat shading](clear-coat-shading.md).
+**Clear-coat shading** uses physically-based rendering to simulate vehicle paint.
+
+![Clear coat](media/clear-coat-2.jpg)
+
+For details, see [clear-coat shading](clear-coat-shading.md).
 
 ## See also
 
