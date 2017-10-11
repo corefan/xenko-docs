@@ -112,5 +112,5 @@ You can send a camera's view to a texture and use the texture on objects in your
 ## See also
 
 * [Camera slots](camera-slots.md)
-* [Animate a camera](animate-a-camera.md)
+* [Animate a camera](animate-a-camera-with-a-model.md)
 * [Graphics compositor](../graphics-compositor/index.md)
