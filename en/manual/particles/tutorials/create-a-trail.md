@@ -42,7 +42,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
 5. Browse to the **Animations** folder and select the **Sword_R animation**. This is our right-to-left slash animation.
 
-    ![Select an animation asset in the Asset Picker](media/select-animation-asset-in-asset-picker.png)
+    ![Select an animation asset](media/select-animation-asset-in-asset-picker.png)
 
 6. Let's give the mannequin a weapon. In the **Asset view**, browse to the **Models** folder and drag the **SwordModel** to the mannequinModel in the entity tree. This makes the SwordModel a child entity of the **mannequinModel**.
 
