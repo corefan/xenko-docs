@@ -9,7 +9,7 @@ For example, imagine you have two models: a character, and a sword. The characte
 
 <p>
 <video autoplay loop class="responsive-video" poster="../particles/tutorials/media/sword-slash-1.jpg">
-   <source src="../particles/tutorials/sword-slash-1.mp4" type="video/mp4">
+   <source src="../particles/tutorials/media/sword-slash-1.mp4" type="video/mp4">
 </video>
 </p>
 
