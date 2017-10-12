@@ -79,3 +79,4 @@ public class AnimationScript : StartupScript
 * [Animation scripts](animation-scripts.md)
 * [Additive animation](additive-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
+* [Model node links](model-node-links.md)

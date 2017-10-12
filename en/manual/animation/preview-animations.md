@@ -47,3 +47,4 @@ The animation preview uses the model selected in the **preview model** in the **
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
+* [Model node links](model-node-links.md)

@@ -17,6 +17,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Model node links](animation/model-node-links.md)
+
 * <span class="label label-doc-highlight">New</span> [Ambient occlusion](graphics/post-effects/ambient-occlusion.md)
 
 * <span class="label label-doc-highlight">New</span> [Local reflections](graphics/post-effects/local-reflections.md)
@@ -32,8 +34,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">New</span> [Debug text](troubleshooting/debug-text.md)
 
 * <span class="label label-doc-highlight">Updated</span> [Profiling](troubleshooting/profiling.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Light shafts](graphics/lights-and-shadows/light-shafts.md)
 
 ## Improve this documentation
 

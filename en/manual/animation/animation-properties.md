@@ -60,3 +60,4 @@ When root motion is enabled, main motion is applied to [TransformComponent](xref
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
+* [Model node links](model-node-links.md)

@@ -82,6 +82,8 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     We can use this to link the SwordModel to a point in the mannequinModel skeleton. There's no need to specify a target, as the entity uses its parent entity (mannequinModel) by default.
 
+    For more information, see the [Model node links](../../animation/model-node-links.md) page.
+
 9. Under **Model Node Link**, in the **Node Name** field, select **weapon_bone_R**. This attaches the model to the point in the skeleton that uses a weapon in the right hand.
 
 10. Let's see how everything looks so far. Click **Play** to run the game and check it out. Remember you can use the mouse and WASD keys to move the camera and see the animation from different perspectives.
@@ -416,3 +418,4 @@ If you'd like to see how it works, [download the project file](media/MyTrailEffe
 * [Tutorial: Lasers and lightning](lasers-and-lightning.md)
 * [Particles](../index.md)
 * [Create particles](../create-particles.md)
+* [Model node links](model-node-links.md)
