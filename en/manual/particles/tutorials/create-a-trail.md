@@ -36,15 +36,41 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Add animation](media/add-new-playing-animation.png)
 
-4. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+4. Type a name for the animation.
+
+5. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     ![Select an animation asset](media/select-animation-asset.png)
 
-5. Browse to the **Animations** folder and select the **Sword_R animation**. This is our right-to-left slash animation.
+6. Browse to the **Animations** folder and select the **Sword_R animation**. This is our right-to-left slash animation.
 
     ![Select an animation asset](media/select-animation-asset-in-asset-picker.png)
 
-6. Let's give the mannequin a weapon. In the **Asset view**, browse to the **Models** folder and drag the **SwordModel** to the mannequinModel in the entity tree. This makes the SwordModel a child entity of the **mannequinModel**.
+7. To play the animation at runtime, we need to add an [animation script](animation-scripts.md). We can use the pre-built **AnimationStart** script. In the **asset view** (bottom pane by default), click **Add asset** and choose **Script > Animation start**.
+
+    ![Add animation script](../../animation/media/animations-additive-animations-animation-start.png)
+
+9. Specify a name for the script and click **Create script**.
+
+    ![Create script](../../animation/media/name-animation-script.png)
+    
+    9a. If Game Studio asks if you want to save your script, click **Save script**.
+    
+    9b. If Game Studio asks if you want to reload the assemblies, click **Reload assemblies**.
+
+10. On the right, in the **Property grid**, click **Add component** and select the **AnimationStart** script.
+
+    ![Add AnimationStart script](../../animation/media/select-animation-start.png)
+
+11. Under the **Animation Start** component, under **Item 0**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+
+    ![Select an animation asset](media/select-animation-asset.png)
+
+12. Browse to the **Animations** folder and select the **Sword_R animation** again.
+
+    ![Select an animation asset](media/select-animation-asset-in-asset-picker.png)
+
+13. Now let's give the mannequin a weapon. In the **Asset view**, browse to the **Models** folder and drag the **SwordModel** to the mannequinModel in the entity tree. This makes the SwordModel a child entity of the **mannequinModel**.
 
 7. In the entity tree, expand **mannequinModel** to see its child entities, and select **SwordModel**.
 
