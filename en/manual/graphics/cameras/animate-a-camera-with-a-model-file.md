@@ -1,4 +1,4 @@
-# Animate a camera
+# Animate a camera with a model file
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Artist</span>
