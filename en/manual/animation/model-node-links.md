@@ -63,4 +63,4 @@ For example, imagine you have two models: a character, and a sword. The characte
 For examples of how model node links are used, see:
 
 * [Particles — Create a trail](../particles/tutorials/create-a-trail.md)
-* [Cameras — Animate a camera with a model file](../cameras/animate-a-camera-with-a-model-file.md)
+* [Cameras — Animate a camera with a model file](../graphics/cameras/animate-a-camera-with-a-model-file.md)
