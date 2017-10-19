@@ -21,7 +21,6 @@ You can also write [custom shaders](../effects-and-shaders/custom-shaders.md) to
 
 * [Geometry attributes](geometry-attributes.md)
 * [Shading attributes](shading-attributes.md)
-    * [Subsurface scattering](clear-coat-shading.md)
 * [Misc attributes](misc-attributes.md)
     * [Clear coat shading](clear-coat-shading.md)
 

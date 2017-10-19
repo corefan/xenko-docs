@@ -121,12 +121,6 @@ With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can 
 | Intensity    | The factor to multiply by the color of the color provider   
 | Use alpha    | Use the alpha of the emissive map as the main alpha color of the material (instead of using the alpha of the diffuse map by default)
 
-## Subsurface scattering
-
-**Subsurface scattering** reflects light at irregular angles inside models. You can use it to realistically render translucent materials such as skin, wax, leaves, marble, and porcelain.
-
-For details, see [Subsurface scattering](subsurface-scattering.md).
-
 ## See also
 
 * [Geometry attributes](geometry-attributes.md)
