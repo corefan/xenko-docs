@@ -27,14 +27,27 @@ For example, imagine you have two models: a character, and a sword. The characte
 
     The component only has two properties: **Node name** and **Target**.
 
-3. In the **Target** field, specify the model you want to link the entity to.
+3. Next to **Target**, click click ![Hand icon](~/manual/game-studio/media/hand-icon.png).
+
+    The **Select an entity** window opens.
+
+    ![Select an entity](media/select-an-entity-window.png)
+
+4. Select the model you want to link the entity to and click **OK**.
+
+    >[!Note]
+    >The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
     >[!Tip]
-    >If you don't specify a model, Xenko links the entity to the parent entity.
+    >If you don't specify a model, Xenko links the entity to the model on the parent entity.
 
-4. In the **Node name** field, select the node in the model you want to attach this entity to.
+5. In **Node name**, select the node in the model you want to attach this entity to.
 
     ![Select node](media/select-node.png)
+
+    After you link the node, the entity tree shows the link in blue next to the entity name.
+    
+    ![Model node link](media/model-node-linked.png)
 
 ## See also
 
@@ -46,3 +59,8 @@ For example, imagine you have two models: a character, and a sword. The characte
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
+
+For examples of how model node links are used, see:
+
+* [Particles — Create a trail](../particles/tutorials/create-a-trail.md)
+* [Cameras — Animate a camera with a model file](../cameras/animate-a-camera-with-a-model-file.md)

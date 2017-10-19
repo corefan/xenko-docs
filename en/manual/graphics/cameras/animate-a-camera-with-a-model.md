@@ -1,70 +1,58 @@
-# Animate a camera with a model
+# Animate a camera
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Artist</span>
 
-You can use model files such as `.fbx` or `.obj` to animate cameras at runtime.
+Like other entities, you can [animate](../../animation/index.md) cameras using animations imported from 3D model files such as `.3ds`, `.fbx`, and `.obj`.
 
 >[!Note]
 >To animate a camera using a model file, you first need to bake the animation using your modeling tool (eg Maya, 3ds Max or Blender).
 
->[TODO] Xenko doesn't support cameras animated using target cameras.
+If the camera moves independently of other animations, the simplest method is to enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. With this method, you don't need a model or a skeleton.
 
-## 1. Import the model file
+If you want the camera to move in tandem with another animation — for example, if the camera is held by a cameraman character with its own model, skeleton and animation — use a [model node link](../../animation/model-node-links.md) component to link the camera entity to the cameraman's movements.
 
-Import the model, animation and skeleton from the model file. To do this:
+>[!Note]
+>Xenko doesn't support cameras animated using target cameras.
 
-1. Drag the model file from Explorer to the **asset view** (in the bottom pane by default).
+## Animate a camera independently of other animations
 
-    * Alternatively, in the **asset view**:
+To do this, you need the following assets in your project:
 
-        1a. Click ![Add asset](../../animation/media/create-and-add-assets-add-new-asset-button.png) and select **Import directly from files**.
-    
-        ![Choose asset type](../../animation/media/create-and-add-assets-add-new1.png)
+* a [camera entity](../index.md), the camera to be animated
+* an [animation](../../animation/import-animations.md), to animate the camera
+* an [animation script](../../animation/animation-scripts.md), to play the animation
 
-        2b. Browse to the model file and click **Open**.
+1. In the **asset view**, select the animation asset you want to use to animate the camera.
 
-2. Select **3D model**.
+    ![Select animation asset](media/select-animation1.png)
 
-    ![Select 3D model](media/select-3d-model.png)
+    >[!Note]
+    >For instructions about how import animations, see [Import animations](../../animation/import-animations.md).
 
-    The **Import from model** dialog opens.
+2. In the **property grid**, enable **Root motion**.
 
-    ![Import from model](media/import-model-dialog.png)
+    ![Enable root motion](media/enable-root-motion.png)
 
-2. Make sure **Import skeleton** is selected and click **OK**.
+    When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
 
-    Game Studio imports the **model** and **skeleton** from the model file and adds them to the asset view.
+    >[!Note]
+    >If there is no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent), even if **root motion** is disabled.
 
-    ![Camera assets](media/camera-assets.png)
+3. In the **scene editor**, select the entity that contains the camera you want to animate.
 
-3. Repeat step 1 to import the model file again. This time, select **Animation**.
+    >[!Note]
+    >For instructions about how add cameras, see [Cameras](index.md).
 
-    ![Select animation](media/select-animation.png)
+4. In the **property grid**, click **Add component** and select **Animations**.
 
-    Game Studio imports the **animation clip** from the model file and adds it to the asset view.
-
-    ![Camera animation](media/camera-animation-asset.png)
-
-## 2. Set up the entities
-
-In the **scene editor**, create an entity to hold the camera you want to animate.
-
-1. Right-click the scene, select **Empty entity**, and type a name.
-
-    ![Create empty entity](../../ui/media/create-empty-entity.png)
-
-    ![Camera holder name](media/add-camera-holder.png)
-
-2. Select the entity you created in the previous step. In the **property grid** on the right, click **Add component** and select **Animations**.
-
-    ![Select an entity](media/select-animation-component.png)
+    ![Select an entity](media/add-animations-component-to-camera.png)
 
     Game Studio adds an animation component to the entity.
 
-    ![Animation component](media/animation-component-added.png)
+    ![Animation component](media/animation-component-added-to-camera.png)
 
-3. Next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and type a name.
+5. Next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and type a name.
 
     ![Add animation](media/animation-name.png)
 
@@ -72,94 +60,87 @@ In the **scene editor**, create an entity to hold the camera you want to animate
 
     ![Animation added](media/animation-added.png)
 
-4. Next to the animation you added, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+6. Next to the animation you added, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     The **Select an asset** window opens.
 
-    ![Select an asset](media/select-an-asset.png)
+    ![Select an asset](media/select-mycamera-animation.png)
 
-5. Select the camera animation asset and click **OK**.
+7. Select the animation you want to use to animate the camera and click **OK**.
 
-## 3. Set up the animation
-
-Create a script to control the animation. To do this:
-
-1. To do this, in the **asset view**, click **Add asset** and select **Script > Animation start**.
-
-    ![Add animation script](media/select-animation-script.png)
-
-    The **New script** window opens.
-
-    ![Create script](../../animation/media/name-animation-script.png)
-
-2. Type a name for the script and click **Create script**.
-
-    If Game Studio asks if you want to save your script, click **Save script**.
-
-    >[!Note]
-    >For more information about animation scripts, see [Animation scripts](../../animation/animation-scripts.md).
-
-3. Reload the assemblies.
-
-    ![Reload assemblies](../../platforms/media/reload-assemblies.png)
-
-4. Select the entity you created earlier. In the **property grid**, click **Add component** and select the animation script.
+8. Click **Add component** and select the animation script you want to use to animate the camera.
 
     ![Add animation script](media/add-animation-script.png)
 
     Game Studio adds the script to the entity as a component.
 
-5. Under the script component, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
+    >[!Note]
+    >For instructions about how to add animation scripts, see [Animation scripts](../../animation/animation-scripts.md).
+
+9. Under the script component, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
 
     ![Add animation to the list](../../animation/media/add-animation-to-list.png)
 
-6. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+10. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     The **Select an asset** window opens.
 
-    ![Select camera animation asset](media/select-camera-animation-asset.png)
+    ![Select an asset](media/select-mycamera-animation.png)
 
-7. Select the camera animation and click **OK**.
+11. Select the animation asset you want to use to animate the camera and click **OK**.
 
-8. Click **Add component** and select **Model**.
+At runtime, the camera uses the animation.
 
-    ![Add model component](media/add-model-component.png)
+## Attach the camera to a node on another model
 
-    Game Studio adds a model component to the entity.
+If you want the camera to move in tandem with another model, you need to create a separate entity for the camera, then use a **model node link** component to link the entity to the correct node.
 
-    ![Model component added](media/model-component-added.png)
+To do this, you need the following assets in your project:
 
-9. Next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**)
-    
-    The **Select an asset** window opens.
+* a [camera entity](../index.md), the camera you want to animate
+* a [model](../../animation/index.md), to attach the camera to
+* a [skeleton](../../animation/index.md) that matches the model
+* an [animation](../../animation/index.md), to animate the model
+* an [animation script](../../animation/animation-scripts.md), to play the animation
 
-    ![Select camera animation asset](media/select-model-asset.png)
+1. In the **asset view**, select the model you want to link the camera to. Next to **Skeleton**, make sure a skeleton is specified that matches the model.
 
-10. Select the camera model and click **OK**.
+2. Make sure the entity you want to attach the camera to has the model, animation clip, and animation script components necessary to animate it.
 
-## 4. Set up the model node link
+    >[!Note]
+    >For instructions about how to do these, see [Animation](../../animation/index.md).
 
-The node model link component connects an entity to a node in a model contained in another entity. You can use it to connect the camera to the camera holder, which contains the model and animation.
+3. With the camera entity selected, in the **property grid**, click **Add component** and select **Model node link**.
 
-1. In the **entity tree**, drag the **camera entity** you want to animate to the entity you created. This makes the camera a child of the entity.
+    ![Add component](../../particles/tutorials/media/add-model-node-link.png)
 
-    ![Parent and child](media/parent-and-child.png)
-
-2. Select the camera entity.
-
-3. In the **property grid**, click **Add component** and select **Model node link**.
+    >[!Note]
+    >The [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) is set to `0,0,0`.
 
     Game Studio adds a model link component to the entity.
 
-4. In **Node name**, select the node you want to link to from the file.
+    ![Model node link component](media/model-node-component.png)
+
+4. Next to **Target**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) and select the entity that has the model you want to link the camera to.
+
+    ![Select an entity](../../animation/media/select-an-entity-window.png)
+
+    Alternatively, leave the **Target** field blank. In the **entity tree**, drag the **camera entity** you want to animate to the entity that contains the model. Xenko links the entity to the model on the parent entity.
+
+    ![Parent and child](media/parent-and-child.png)
+
+5. In **Node name**, select the node you want to link the camera to.
 
     ![Node link](media/select-node.png)
 
-5. Leave **Target** blank. This means the entity attaches itself to the parent entity.
+    >[!Note]
+    >The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
-At runtime, the camera animates according to the model file.
+At runtime, the camera uses the animation.
 
 ## See also
 
 * [Animation](../../animation/index.md)
 * [Animation scripts](../../animation/animation-scripts.md)
+* [Model node links](../../animation/model-node-links.md)
+* [Cameras](index.md)

@@ -11,7 +11,7 @@ After you [import an animation](import-animations.md), you can select it in the 
 
 ### Source
 
-This is the source file used by the animation asset. If you change this, Game Studio re-imports the animation.
+The source file used by the animation asset. If you change this, Game Studio re-imports the animation.
 
 ### Clip duration
 
@@ -25,11 +25,11 @@ By default, Game Studio assumes the frame rate is 30. You can change this in the
  
 ### Pivot position
 
-Game Studio assumes the pivot is the origin of the coordinate system local to the animation. It should be set to **(0, 0, 0)**. If your animation was shifted from the origin when exported, you can use this property to re-adjust it.
+Game Studio assumes the pivot is the origin of the coordinate system local to the animation. It should be set to `(0, 0, 0)`. If your animation was shifted from the origin when exported, you can use this property to re-adjust it.
 
 ### Scale import
 
-The scale import should be set to 1. Xenko detects the units in which your data was exported and adjusts it automatically. If there are no export settings in your animation file and the scale appears incorrect, you can use the scale import property to re-adjust it.
+The scale import should be set to `1`. Xenko detects the units in which your data was exported and adjusts it automatically. If there are no export settings in your animation file and the scale appears incorrect, you can use the scale import property to re-adjust it.
 
 ### Repeat mode
 
@@ -41,14 +41,26 @@ Xenko supports two types of animation clip. Regular animations default to **Anim
 
 ### Skeleton
 
-If you want to use your animation with a skinned mesh, it needs a skeleton. Make sure you reference the same skeleton used by the model you want to animate. If there are missing bones or other differences between the node hierarchy of the skeleton in your animation file and the target skeleton, Xenko retargets the animation as closely as possible.
+If you want to animate bones/joints, the animation needs a skeleton.
+
+Skeletons are made of bones that form a hierarchy. When parent bones change their position, they also affect the positions of child bones. For example, a hand bone might have five child bones (the fingers and thumb); when the hand moves up and down, the fingers and thumb move with it.
+
+Make sure you reference the same skeleton used by the model you want to animate. If there are missing bones or other differences between the bone/joint hierarchy of the skeleton in your animation file and the target skeleton, Xenko retargets the animation as closely as possible.
+
+>[!NOTE]
+>There's currently no way to visualize skeletons in Game Studio.
 
 ### Root motion
 
-When root motion is enabled, main motion is applied to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent). If disabled, it's applied inside the skeleton nodes.
-    
+When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
+
+This is useful, for example, to animate entities that don't require skeletons, such as a [spot light](..graphics/lights-and-shadows/spot-lights.md) moving back and forth.
+
 >[!Note]
->If there's no skeleton, the motion is always applied to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
+>If the animation has no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent), even if **root motion** is disabled.
+
+>[!Note]
+>The [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) is set to `0,0,0`.
 
 ## See also
 
