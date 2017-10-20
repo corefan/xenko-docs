@@ -119,7 +119,7 @@ To do this, you need the following assets in your project:
 
     Game Studio adds a model link component to the entity.
 
-    ![Model node link component](media/model-node-component.png)
+    ![Model node link component](../../animation/media/model-node-component.png)
 
 4. Next to **Target**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) and select the entity that has the model you want to link the camera to.
 
