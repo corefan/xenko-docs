@@ -47,7 +47,16 @@ For example, imagine you have two models: a character, and a sword. The characte
 
     After you link the node, the entity tree shows the link in blue next to the entity name.
     
-    ![Model node link](media/model-node-linked.png)
+    ![Model node link](media/model-node-link-sword-added.png)
+
+## Offset
+
+To add an offset to the linked entity, use the entity's [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
+
+![Transform](media/transform-component.png)
+
+>[!Note]
+>If you don't want to add an offset, make sure the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) is set to `0,0,0` for all the values.
 
 ## See also
 
