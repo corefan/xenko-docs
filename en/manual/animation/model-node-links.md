@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Artist</span>
 
-The **model node link** component lets you attach an entity to a node in a skeleton on another entity.
+The **model node link** component attaches an entity to a node of a skeleton on another entity.
 
-For example, imagine you have two models: a character, and a sword. The character has a sword swinging animation. You can use a model link node to place the sword in the model's hand and attach it to the correct node in the character skeleton, so the sword swings with the animation.
+For example, imagine you have two models: a knight, and a sword. The character has a sword swinging animation. You can use a model link node to place the sword in the knight's hand and attach it to the correct node in the knight skeleton, so the sword swings with the knight animation.
 
 <p>
 <video autoplay loop class="responsive-video" poster="../particles/tutorials/media/sword-slash-1.jpg">
@@ -56,7 +56,7 @@ To add an offset to the linked entity, use the entity's [TransformComponent](xre
 ![Transform](media/transform-component.png)
 
 >[!Note]
->If you don't want to add an offset, make sure the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) is set to `0,0,0` for all the values.
+>If you don't want to add an offset, make sure the values are all set to `0,0,0`.
 
 ## See also
 
