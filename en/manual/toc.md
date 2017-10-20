@@ -92,7 +92,7 @@
 # [Graphics](graphics/index.md)
 ## [Cameras](graphics/cameras/index.md)
 ### [Camera slots](graphics/cameras/camera-slots.md)
-### [Animate a camera with a model file](animate-a-camera-with-a-model-file.md)
+### [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
 ## [Materials](graphics/materials/index.md)
 ### [Material maps](graphics/materials/material-maps.md)
 ### [Attributes](graphics/materials/material-attributes.md)
