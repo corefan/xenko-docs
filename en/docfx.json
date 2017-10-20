@@ -48,13 +48,13 @@
       {
         "files": [
           "web.config", "download/**", "studio_getting_started_links.txt",
-		  "**/media/*.png", 
-		  "**/media/*.jpg", 
-		  "**/media/*.gif", 
-		  "**/media/*.mp4", 
-		  "**/media/*.zip", 
-		  "**/media/*.svg",
-		  "**/media/*.cs"
+		  "**/media/**/*.png", 
+		  "**/media/**/*.jpg", 
+		  "**/media/**/*.gif", 
+		  "**/media/**/*.mp4", 
+		  "**/media/**/*.zip", 
+		  "**/media/**/*.svg",
+		  "**/media/**/*.cs"
         ],
         "case": false,
         "noNegate": false,
