@@ -7,20 +7,18 @@ Like other entities, you can [animate](../../animation/index.md) cameras using a
 
 >[!Note]
 >To animate a camera using a model file, you first need to bake the animation using your modeling tool (eg Maya, 3ds Max or Blender).
+>Xenko doesn't support cameras animated using target cameras.
 
-If the camera moves independently of other animations, the simplest method is to enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. With this method, you don't need a model or a skeleton.
+If the camera moves independently of other animations, the simplest method is to export the camera animation as a separate file, enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. With this method, you don't need a model or a skeleton.
 
 If you want the camera to move in tandem with another animation — for example, if the camera is held by a cameraman character with its own model, skeleton and animation — use a [model node link](../../animation/model-node-links.md) component to link the camera entity to the cameraman's movements.
-
->[!Note]
->Xenko doesn't support cameras animated using target cameras.
 
 ## Animate a camera independently of other animations
 
 To do this, you need the following assets in your project:
 
 * a [camera entity](../index.md), the camera to be animated
-* an [animation](../../animation/import-animations.md), to animate the camera
+* an [animation](../../animation/import-animations.md), to animate the camera (exported separately in your modeling tool)
 * an [animation script](../../animation/animation-scripts.md), to play the animation
 
 1. In the **asset view**, select the animation asset you want to use to animate the camera.
