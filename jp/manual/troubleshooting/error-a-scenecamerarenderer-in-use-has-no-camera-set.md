@@ -5,15 +5,15 @@
 
 このエラーは、シーン レンダラーで使用できるカメラがないことを意味します。これには複数の原因が考えられます。
 
-* 有効な[カメラ](../graphics/cameras.md)がありません
-* カメラが正しくない[カメラ スロット](../graphics/camera-slots.md)に設定されています
+* 有効な[カメラ](../graphics/cameras/index.md)がありません
+* カメラが正しくない[カメラ スロット](../graphics/cameras/camera-slots.md)に設定されています
 * 同じカメラ スロットに複数の有効なカメラが割り当てられています
 
 ## 修正方法
 
 Game Studio でカメラ コンポーネントを作成している場合、次のことを確認します。
 
-* カメラ スロットが**メイン** スロットに設定されている (「[グラフィックス - カメラ スロット](../graphics/camera-slots.md)」を参照)
+* カメラ スロットが**メイン** スロットに設定されている (「[グラフィックス - カメラ スロット](../graphics/cameras/camera-slots.md)」を参照)
 * 初期カメラだけが有効になっている
 
 コードでカメラ コンポーネントを作成している場合は、Graphics Compositor から正しいスロットを取得していることを確認します。次のようにします。
@@ -34,5 +34,5 @@ camera.Slot = SceneSystem.GraphicsCompositor.Cameras[0].ToSlotId();
 
 ## 関連項目
 
-* [グラフィックス - カメラ スロット](../graphics/camera-slots.md)
-* [グラフィックス - カメラ](../graphics/cameras.md)
+* [グラフィックス - カメラ スロット](../graphics/cameras/camera-slots.md)
+* [グラフィックス - カメラ](../graphics/cameras/index.md)

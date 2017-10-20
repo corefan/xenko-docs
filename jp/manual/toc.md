@@ -89,8 +89,9 @@
 ## [ワールド単位](game-studio/world-units.md)
 
 # [グラフィックス](graphics/index.md)
-## [カメラ](graphics/cameras.md)
-### [カメラ スロット](graphics/camera-slots.md)
+## [カメラ](graphics/cameras/index.md)
+### [カメラ スロット](graphics/cameras/camera-slots.md)
+### [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
 ## [マテリアル](graphics/materials/index.md)
 ### [マテリアル マップ](graphics/materials/material-maps.md)
 ### [属性](graphics/materials/material-attributes.md)
