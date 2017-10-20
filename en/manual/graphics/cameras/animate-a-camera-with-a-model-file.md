@@ -93,7 +93,7 @@ At runtime, the camera uses the animation.
 
 ## Attach the camera to a node on another model
 
-If you want the camera to move in tandem with another model, you need to create a separate entity for the camera, then use a **model node link** component to link the entity to the correct node.
+If you want the camera to move in tandem with another model, create a separate entity for the camera, then use a **model node link** component to link the entity to the correct node.
 
 To do this, you need the following assets in your project:
 
@@ -105,10 +105,10 @@ To do this, you need the following assets in your project:
 
 1. In the **asset view**, select the model you want to link the camera to. Next to **Skeleton**, make sure a skeleton is specified that matches the model.
 
-2. Make sure the entity you want to attach the camera to has the model, animation clip, and animation script components necessary to animate it.
+2. Make sure the entity you want to attach the camera to has the model, animation clip, and animation script components needed to animate it.
 
     >[!Note]
-    >For instructions about how to do these, see [Animation](../../animation/index.md).
+    >For instructions about how to add these, see [Animation](../../animation/index.md).
 
 3. With the camera entity selected, in the **property grid**, click **Add component** and select **Model node link**.
 
