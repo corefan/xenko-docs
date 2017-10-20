@@ -11,11 +11,11 @@ This chapter explains everything you need to start using Xenko from scratch.
 
 ## In this section
 
-* [Install Xenko](install-xenko.md) - how to install Xenko
-* [Launch Xenko](launch-Xenko.md) - how to launch Xenko for the first time
-* [Visual Studio extension](visual-studio-extension.md) - how to install or reinstall the Xenko Visual Studio extension
-* [Create a project](create-a-project.md) - create your first project in Game Studio
-* [Game Studio](../game-studio/index.md) - how to use Game Studio
-* [Assets](../game-studio/assets.md) - getting started with assets
-* [Introduction to scenes](../game-studio/scenes.md) - getting started with scenes
-* [Launch your game](launch-a-game.md) - how to launch your game on different platforms
+* [Install Xenko](install-xenko.md)
+* [Launch Xenko](launch-Xenko.md)
+* [Visual Studio extension](visual-studio-extension.md)
+* [Create a project](create-a-project.md)
+* [Game Studio](../game-studio/index.md)
+* [Assets](../game-studio/assets.md)
+* [Introduction to scenes](../game-studio/scenes.md)
+* [Launch your game](launch-a-game.md)

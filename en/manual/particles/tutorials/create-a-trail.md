@@ -257,7 +257,7 @@ So far, we've created a particle effect by attaching it as a component to the sw
 
     ![Prefab editor](media/prefab-editor.png)
 
-5. The prefab contains just one entity - SwordModel. It's not going to be a model for much longer, so let's rename this entity *SwordTrail* (the same as the prefab it belongs to).
+5. The prefab contains just one entity, SwordModel. It's not going to be a model for much longer, so let's rename this entity *SwordTrail* (the same as the prefab it belongs to).
 
 6. Remove the **Model** and the **Model Node Link** components from the **SwordTrail** entity. We don't need them any more — this prefab will just be a particle effect.
 
@@ -283,7 +283,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
 3. Replace the script content with the code in this script: [SpawnTrail.cs](https://github.com/SiliconStudio/xenko-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs)
 
-    This is a modified version of the Prefab Instance script included in Xenko. Instead of listening to events or key presses, it listens to animation changes - such as our sword swing animation.
+    This is a modified version of the Prefab Instance script included in Xenko. Instead of listening to events or key presses, it listens to animation changes — such as our sword swing animation.
 
 4. In the script, make sure the ``namespace`` is correct. This usually matches your Xenko project name (eg *MyTrailEffect*).
 

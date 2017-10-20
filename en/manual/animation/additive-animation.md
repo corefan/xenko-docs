@@ -15,7 +15,7 @@ This means we only had to create three animations: *Walk*, *Idle*, and *Reload*.
 
 A **difference clip** describes the difference between two animation clips: a **source** and a **reference**.
 
-Take the *Reload* animation above, which we want to add to other animation clips. This is our **source** clip (S). Because the *Reload* animation mainly involves the arms, it will blend well with animations that don't involve the arms (such as idling and crouching). We can use one of these animations - let's say the *Idle* animation - as our **reference** clip (R).
+Take the *Reload* animation above, which we want to add to other animation clips. This is our **source** clip (S). Because the *Reload* animation mainly involves the arms, it will blend well with animations that don't involve the arms (such as idling and crouching). We can use one of these animations — let's say the *Idle* animation — as our **reference** clip (R).
 
 Xenko calculates the difference between the source and reference clips to create the **difference clip** (D). The difference clip encodes the difference between the source and reference clips. We can express it as D = S - R.
 

@@ -118,7 +118,7 @@ These properties apply globally to all the light shafts in the scene.
 
 ## Optimize light shafts
 
-Light shafts work best in dark environments. You can adjust the light and light shaft component properties to achieve different results - for example, by changing the light color (in the **light component properties**) or the light shaft density (in the **light shaft component properties**).
+Light shafts work best in dark environments. You can adjust the light and light shaft component properties to achieve different results — for example, by changing the light color (in the **light component properties**) or the light shaft density (in the **light shaft component properties**).
 
 Multiple light shafts viewed through one another can become visually noisy, as in the screenshot below:
 

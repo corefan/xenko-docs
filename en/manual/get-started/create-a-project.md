@@ -73,7 +73,7 @@ To create a project from a sample or template:
  
  2. **Select the sample** you want to create a project from. 
     
-   ![New Project window - samples](media/create-project-new-open-project-samples.png)
+   ![New Project window — samples](media/create-project-new-open-project-samples.png)
 
  3. Click **Select**.
 

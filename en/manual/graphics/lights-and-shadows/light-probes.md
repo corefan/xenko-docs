@@ -20,7 +20,7 @@ Xenko colors pixels within a light probe area to simulate the effect of light bo
 
 For example, in the screenshot below, notice how the red of the wall is reflected on the other objects. In the scene editor, this is also visible on the surface of the light probes themselves.
 
-![Light probes - more reflection](media/light-probes-illumination.png)
+![Light probes — more reflection](media/light-probes-illumination.png)
 
 Light probes affect all objects in the area they cover, including static and dynamic objects. You don't need to enable any extra options on the entities that light probes affect.
 
@@ -62,7 +62,7 @@ Light probes appear as spheres in the scene editor. Before you capture a light b
 
 Light probes must be placed in a way that creates a **3D volume**. This means:
 
-* You need **at least four light probes** in the scene - enough to create the four points of a tetrahedron, as below:
+* You need **at least four light probes** in the scene — enough to create the four points of a tetrahedron, as below:
 
     ![Tetrahedron](media/light-probes-tetrahedron.png)
 

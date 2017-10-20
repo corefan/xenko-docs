@@ -99,4 +99,4 @@ For an example of a UI implemented in Xenko, see the **game menu UI** sample inc
 * [UI libraries](ui-libraries.md)
 * [UI editor](ui-editor.md)
 * [Layout system](layout-system.md)
-* [VR - Display a UI in an overlay](../virtual-reality/display-a-ui-in-an-overlay.md)
+* [VR — Display a UI in an overlay](../virtual-reality/display-a-ui-in-an-overlay.md)

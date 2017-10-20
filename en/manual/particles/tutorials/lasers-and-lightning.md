@@ -13,13 +13,17 @@ Imagine we want to create a lightning arc like this one:
 This effect is a strip which:
 
 * connects two fixed points
+
 * changes positions very quickly
+
 * can be rendered as a single strip
  
 Because the lightning is a single-line strip, we can render it using the ribbon shape builder, but with a few major differences. The particles:
 
 * spawn at the same time, rather than in sequence
+
 * appear on a single line or arc, but with semi-randomized positions to give the illusion of lightning
+
 * should reappear very quickly
 
 ## Simultaneous spawning
@@ -56,10 +60,13 @@ There is a way to make the lightning arc move from point A to point B instead of
 
 ![media/particles-tutorials-lasers-3.gif](media/particles-tutorials-lasers-3.gif)
 
-There are a couple of adjustments we need to do:
- - Change the spawn rate to a lower one. The example above uses 600/second and is played at 0.1 time scale, which means around 1 particle per frame.
- - Set a fixed count on the arc positioner (50). Because it interpolates the distances based on the number of particles spawned *each* frame, if we spawn them sequentially they'll all stay in the beginning of the arc. By setting the count to 50 we tell the arc positioner to expect 50 particles in total.
- - Set a delay to the spawner to allow the old arc to completely disappear before starting again. Otherwise the Ribbon will wrongly connect the old and the new particles, as it can't know how to split them.
+There are a few adjustments we need to make:
+
+* Change the spawn rate to a lower one. The example above uses 600/second and is played at 0.1 time scale, which means around 1 particle per frame.
+
+* Set a fixed count on the arc positioner (50). Because it interpolates the distances based on the number of particles spawned *each* frame, if we spawn them sequentially they'll all stay in the beginning of the arc. By setting the count to 50 we tell the arc positioner to expect 50 particles in total.
+
+* Set a delay to the spawner to allow the old arc to completely disappear before starting again. Otherwise the Ribbon will wrongly connect the old and the new particles, as it can't know how to split them.
 
 ## Lasers using particles
 
@@ -68,9 +75,11 @@ By setting the arc positioner's arc height to 0 and random offset to (0, 0, 0) w
 
 One thing to be mindful about lasers is that usually when the target moves you want the laser to move with it. Because the arc positioner is an initializer and not an updater, it has no effect on particles already spawned, which and stay behind. There are three ways to counter this.
 
-- Spawn the particles very fast. If they only live for 1-2 frames the laser will be recreated too fast for the user to notice any visual differences.
-- Spawn particles in Local space. This means they will move together with the emitter, but then you will have to rotate and scale the emitter to always point to the target Entity.
-- Create a custom Updater. If you create a custom post-updater similar (or simpler) to the arc positioner you can force it to update the particle positions every frame, correctly placing them between the two points even if they move.
+* Spawn the particles very fast. If they only live for 1-2 frames the laser will be recreated too fast for the user to notice any visual differences.
+
+* Spawn particles in Local space. This means they will move together with the emitter, but then you will have to rotate and scale the emitter to always point to the target Entity.
+
+* Create a custom Updater. If you create a custom post-updater similar (or simpler) to the arc positioner you can force it to update the particle positions every frame, correctly placing them between the two points even if they move.
 
 Depending on the type of game you want to make each of these options can have benefits or drawbacks. Spawning the particles every frame is the easiest and simplest way to do it and will be sufficient for most needs.
 

@@ -13,7 +13,7 @@ This error means there's no camera available for the scene renderer to use. This
 
 If you create your camera components in Game Studio, make sure:
 
-* the camera slots are set to the **Main** slot (see [Graphics - Camera slots](../graphics/cameras/camera-slots.md))
+* the camera slots are set to the **Main** slot (see [Graphics — Camera slots](../graphics/cameras/camera-slots.md))
 * only the initial camera is enabled
 
 If you create your camera components in code, make sure you retrieve the correct slot from the graphics compositor. Use:
@@ -34,5 +34,5 @@ To change the camera at runtime, toggle the ``Enabled`` property.
 
 ## See also
 
-* [Graphics - Camera slots](../graphics/cameras/camera-slots.md)
-* [Graphics - Cameras](../graphics/cameras/index.md)
+* [Graphics — Camera slots](../graphics/cameras/camera-slots.md)
+* [Graphics — Cameras](../graphics/cameras/index.md)

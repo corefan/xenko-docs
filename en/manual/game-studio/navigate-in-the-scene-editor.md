@@ -100,7 +100,7 @@ Corner   | Faces the three adjacent faces at a 45° angle
 ## Camera options
 
 > [!Note]
-> This page explains how to use the scene editor camera. For information about how to use cameras in your game, see [Graphics - Cameras](../graphics/cameras/index.md).
+> This page explains how to use the scene editor camera. For information about how to use cameras in your game, see [Graphics — Cameras](../graphics/cameras/index.md).
 
 To display the scene editor camera options, click the **camera icon** in the top-right of the scene editor.
 

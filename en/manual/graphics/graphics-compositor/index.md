@@ -26,7 +26,7 @@ If you need to create a graphics compositor, in the **asset view**, click **Add 
 
 You can choose:
 
-* Level 10 (HDR with post effects)
+* Level 10 (HDR with [post effects](../post-effects/index.md))
 * Level 9 (LDR with no post effects)
 
 These aren't different kinds of graphics compositor, but rather presets you can customize as you need.
@@ -88,7 +88,7 @@ In a typical setup, the **forward renderer** renders almost everything in your s
 2. transparent objects
 3. [post effects](../post-effects/index.md)
 
-The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality/index.md). You configure the forward renderer properties in the **forward entry node**. 
+The forward renderer is also where you set [virtual reality](../../virtual-reality/index.md) options. You configure the forward renderer properties in the **forward entry node**. 
 
 ### Debug renderer
 

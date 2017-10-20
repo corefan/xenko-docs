@@ -48,4 +48,4 @@ In most cases, the navigation group properties should approximately match the pr
 * [Navigation bounding boxes](navigation-bounding-boxes.md)
 * [Navigation components](navigation-components.md)
 * [Dynamic navigation](dynamic-navigation.md)
-* [Physics - Characters](../physics/characters.md)
+* [Physics — Characters](../physics/characters.md)

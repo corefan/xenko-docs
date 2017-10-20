@@ -61,15 +61,15 @@ Unlike billboards, which are individual quads, ribbons and trails have a single 
 
 ![UV coords property](media/uv-coords.png)
 
- - **AsIs**: The texture is mapped per segment, copying the same quad stretched between every two particles. This is sometimes useful with flipbook animations (in the [Material](materials.md) settings).
+ * **AsIs**: The texture is mapped per segment, copying the same quad stretched between every two particles. This is sometimes useful with flipbook animations (in the [Material](materials.md) settings).
 
     ![As-is texture mapping](media/particles-diagram-asis.png)
  
- - **Stretched**: The texture is stretched between the first and last particle of the trail or ribbon. The **UV Factor** defines how many times the texture appears across the entire trail or ribbon (1 = once).
+ * **Stretched**: The texture is stretched between the first and last particle of the trail or ribbon. The **UV Factor** defines how many times the texture appears across the entire trail or ribbon (1 = once).
 
      ![Stretched texture mapping](media/particles-diagram-stretched.png)
 
- - **DistanceBased**: The texture is repeated based on the actual world length of the ribbon or trail rather than the number of particles. The **UV Factor** defines the distance in [world units](../game-studio/world-units.md) after which the texture repeats
+ * **DistanceBased**: The texture is repeated based on the actual world length of the ribbon or trail rather than the number of particles. The **UV Factor** defines the distance in [world units](../game-studio/world-units.md) after which the texture repeats
 
      ![Distance-based texture mapping](media/particles-diagram-distancebased.png)
 
@@ -77,15 +77,15 @@ Unlike billboards, which are individual quads, ribbons and trails have a single 
 
 You can add extra segments between adjacent particles to smooth the lines between particles. To do this, under **Particle System > Source > Emitters > Shape**, change the **Smoothing** property.
 
- * **None** - No smoothing creates only one segment joining two particles. This creates trails and ribbons with sharp angles.
+ * **None** — No smoothing creates only one segment joining two particles. This creates trails and ribbons with sharp angles.
 
     ![Diagram: particle smoothing](media/diagram-smoothing-none.png)
  
- * **Fast** - This uses [Catmull-Rom interpolation (Wikipedia)](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline) to add extra segments between particles, creating a smoother effect. You can set the number of segments with the **Segments** property.
+ * **Fast** — This uses [Catmull-Rom interpolation (Wikipedia)](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline) to add extra segments between particles, creating a smoother effect. You can set the number of segments with the **Segments** property.
 
      ![Diagram: particle smoothing](media/diagram-smoothing-fast.png)
  
- * **Best** - This generally creates the smoothest effect, but requires more CPU. It calculates a circumcircle around every three sequential particles along the control axis, then adds extra control points on the circle, keeping the segments in an arc. For the first and the last segment, there is only one arc to be followed, but for mid-sections, two different arcs from two different circles overlap; Xenko interpolates the control points from the first arc and the second as the point approaches the second particle. You can set the number of segments between every two particles with the **Segments** property.
+ * **Best** — This generally creates the smoothest effect, but requires more CPU. It calculates a circumcircle around every three sequential particles along the control axis, then adds extra control points on the circle, keeping the segments in an arc. For the first and the last segment, there is only one arc to be followed, but for mid-sections, two different arcs from two different circles overlap; Xenko interpolates the control points from the first arc and the second as the point approaches the second particle. You can set the number of segments between every two particles with the **Segments** property.
 
     ![Diagram: particle smoothing](media/diagram-smoothing-best.png)
 

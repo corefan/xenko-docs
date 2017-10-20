@@ -69,5 +69,5 @@ To change the camera at runtime, toggle the ``Enabled`` property.
 
 * [Cameras](index.md)
 * [Graphics compositor](../graphics-compositor/index.md)
-* [Game Studio - Game settings](../../game-studio/game-settings.md)
-* [Game Studio - Manage scenes](../../game-studio/manage-scenes.md)
+* [Game Studio — Game settings](../../game-studio/game-settings.md)
+* [Game Studio — Manage scenes](../../game-studio/manage-scenes.md)

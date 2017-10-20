@@ -90,4 +90,4 @@ Where **CONFIG** is a valid Linux configuration.
 
 ## See also
 
-* [Linux - Setup and requirements](setup-and-requirements.md)
+* [Linux — Setup and requirements](setup-and-requirements.md)

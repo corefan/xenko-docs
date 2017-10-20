@@ -60,7 +60,7 @@ Normal map textures have two properties in addition to the [common texture prope
 |----------|---------
 | Invert Y | Have positive Y components (green pixels) face up in tangent space. This option depends on the tools you use to create normal maps.
 
-For information about normal map properties in materials, see [Materials - Geometry attributes](../materials/geometry-attributes.md).
+For information about normal map properties in materials, see [Materials — Geometry attributes](../materials/geometry-attributes.md).
 
 ## See also
 

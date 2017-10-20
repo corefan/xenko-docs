@@ -61,11 +61,11 @@ var shadowMapSize = NextPowerOfTwo(lightSize * shadowSizeFinalFactor);
 shadowMapSize = min(shadowMapSize, ShadowMapBaseSize  * shadowSizeFinalFactor);
 ```
 
-If you've enabled shadows on a light in your scene, but it isn't casting shadows, make sure there's enough space in the shadow atlas to create a shadow map for the light. For more information, see [Troubleshooting - Lights don't cast shadows](../../troubleshooting/lights-dont-cast-shadows.md).
+If you've enabled shadows on a light in your scene, but it isn't casting shadows, make sure there's enough space in the shadow atlas to create a shadow map for the light. For more information, see [Troubleshooting — Lights don't cast shadows](../../troubleshooting/lights-dont-cast-shadows.md).
 
 ## See also
 
 * [Point lights](point-lights.md)
 * [Directional lights](directional-lights.md)
 * [Spot lights](spot-lights.md)
-* [Troubleshooting - Lights don't cast shadows](../../troubleshooting/lights-dont-cast-shadows.md)
+* [Troubleshooting — Lights don't cast shadows](../../troubleshooting/lights-dont-cast-shadows.md)

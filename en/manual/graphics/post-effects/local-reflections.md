@@ -89,7 +89,7 @@ The amount of glossiness a material must have to reflect the scene. For example,
 >[!Note]
 >If the **Invert** check box is selected in the material **micro surface** properties, the opposite is true. For example, if the reflections glossiness value is set to `0.4`, only materials with a **glossiness map** value of less than `0.4` reflect the scene.
 
-For more information about glossiness, see [Materials - geometry attributes](../materials/geometry-attributes.md).
+For more information about glossiness, see [Materials — geometry attributes](../materials/geometry-attributes.md).
 
 #### Max steps 
 
@@ -173,6 +173,6 @@ The intensity of the temporal effect. Lower values produce reflections faster, b
 ## See also
 
 * [Materials](../materials/index.md)
-* [Materials - geometry attributes](../materials/geometry-attributes.md)
+* [Materials — geometry attributes](../materials/geometry-attributes.md)
 * [Post effects](index.md)
 * [Graphics compositor](../graphics-compositor/index.md)

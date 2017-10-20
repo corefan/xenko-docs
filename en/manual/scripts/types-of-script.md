@@ -38,7 +38,7 @@ public class SampleSyncScript : SyncScript
 {        
 	public override void Update()
 	{
-		// Performs the update on the entity - this code is executed every frame
+		// Performs the update on the entity — this code is executed every frame
 	}
 }
 ```

@@ -19,7 +19,7 @@ It uses the result of the [bright filter](bright-filter.md) effect as input.
 | Amount         | Amount/strength of bloom. 
 | Sigma Ratio    | This affects the fall-off of the bloom. It's the [standard deviation](http://en.wikipedia.org/wiki/Standard_deviation) (sigma) used in the [Gaussian blur](http://en.wikipedia.org/wiki/Gaussian_blur) formula when calculating the kernel of the bloom. 
 | Distortion     | Stretches the image horizontally or vertically.
-| Afterimage     | Simulates [afterimage (Wikipedia)](http://en.wikipedia.org/wiki/Afterimage) - the effect of bright spots "burning" into the  retina the longer you look at them, before fading away.  <br>![media/bloom-3.png](media/bloom-3.png)                                                                        
+| Afterimage     | Simulates [afterimage (Wikipedia)](http://en.wikipedia.org/wiki/Afterimage) — the effect of bright spots "burning" into the  retina the longer you look at them, before fading away.  <br>![media/bloom-3.png](media/bloom-3.png)                                                                        
 | Fade Out Speed | The factor by which the afterimage (if enabled) decreases at each frame (1 means infinite persistence, while 0 means no persistence at all)
 | Sensitivity    | How sensitive the afterimage (if enabled) is to light. The higher this value is, the faster the effect is created when the camera focuses on a light.
 | Expanded filtering | Reverses FXAA and bloom, and uses a richer convolution kernel during blurring. This helps reduce temporal shimmering.

@@ -25,5 +25,5 @@ Repeat these steps for as many light entities as you need to create space in the
 
 ## See also
 
-* [Graphics - Shadows](../graphics/lights-and-shadows/shadows.md)
-* [Graphics - Directional lights](../graphics/lights-and-shadows/directional-lights.md)
+* [Graphics — Shadows](../graphics/lights-and-shadows/shadows.md)
+* [Graphics — Directional lights](../graphics/lights-and-shadows/directional-lights.md)

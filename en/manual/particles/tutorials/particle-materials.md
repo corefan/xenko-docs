@@ -176,7 +176,7 @@ class ParticleCustomShader : ParticleBase
     // This shader can be set by the user, and it's a binary tree made up from smaller shaders
     compose ComputeColor  baseIntensity;
 
-    // Shading of the sprite - we override the base class's Shading(), which only returns ColorScale
+    // Shading of the sprite — we override the base class's Shading(), which only returns ColorScale
     stage override float4 Shading()
     {
         // -----------------------------------------------
@@ -279,7 +279,7 @@ In addition to the already existing @'SiliconStudio.Xenko.Rendering.Materials.IC
     shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
 ```
 
-We load the two shaders - one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the `ComputeColor` and `ComputeScalar` properties, which you can edit in the property grid. The generated code is similar to the shader code we wrote in the way that it calls `Compute()` and it returns the final result of our color or scalar compute tree.
+We load the two shaders: one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the `ComputeColor` and `ComputeScalar` properties, which you can edit in the property grid. The generated code is similar to the shader code we wrote in the way that it calls `Compute()` and it returns the final result of our color or scalar compute tree.
 
 After we generate the shader code, we set it to the respective key we need. Check how `ParticleCustomShaderKeys.BaseColor` is defined in `ParticleCustomShaderKeys.cs`. In the effect file we check if this key is set, and if yes, we pass it to the stream defined in our shader code.
 
