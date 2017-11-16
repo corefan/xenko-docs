@@ -21,6 +21,7 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 ## See also
 
+* [Anti-aliasing](anti-aliasing.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)

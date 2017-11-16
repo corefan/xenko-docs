@@ -32,6 +32,7 @@
 
 ## See also
 
+* [Anti-aliasing](anti-aliasing.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)
