@@ -2,9 +2,7 @@
 
 **Anti-aliasing** smooths jagged edges. For post-processing, Xenko uses fast-approximate anti-aliasing (FXAA), a single-pass screen-space technique with low performance impact.
 
-| Anti-aliasing off          | Anti-aliasing on 
-| --------------    | ---- 
-| ![Off](media/anti-aliasing-off-closeup.png)|![On](media/anti-aliasing-on-closeup.png)
+![Properties](media/anti-aliasing-closeup-comparison.png)
 
 >[!Note]
 >Currently, the anti-aliasing post-effect doesn't work correctly on Android devices.
