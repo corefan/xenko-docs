@@ -245,5 +245,13 @@ $(function() {
           $(this).attr('href', $(this).attr('href').toLowerCase())
         }
       })
-    }
+    };
+
+    $('img').each(function(){
+      $(this).wrap('<a class="maximaze_image" href=' + $(this).attr('src') + '></a>').parent().html()
+    });
+
+    $('.maximaze_image').magnificPopup({
+        type:'image'
+    });
 });
