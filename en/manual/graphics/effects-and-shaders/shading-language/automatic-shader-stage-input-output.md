@@ -1,5 +1,8 @@
 # Automatic shader stage input/output
 
+<span class="label label-doc-level">Advanced</span>
+<span class="label label-doc-audience">Programmer</span>
+
 ## Current state of shaders
 
 When you write a HLSL shader, you have to precisely define your vertex attributes and carefully pass them across the stage of your final shader.
