@@ -39,7 +39,7 @@ Xenko can't know which shaders will be used at runtime. This is because users mi
 
     ![Effect log](media/effect-log.png)
 
-## Settings
+## Change the shader compilation settings
 
 1. In Game Studio, in the **Solution explorer**, select the package and click **Package properties**.
 
