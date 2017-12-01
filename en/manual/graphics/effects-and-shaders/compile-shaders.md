@@ -70,8 +70,8 @@ As iOS devices can't connect directly to PC, to convert Xenko shaders remotely w
 
 4. Open **Terminal**, navigate to the folder where you unzipped the file, and execute **xenko-ios-relay.py MyPcName**, where **MyPcName** is the name of your developer PC.
 
-    [!Tip]
-    [To find the name of your developer PC, on the PC, press the Windows key, type **About**, and press **Enter**. The PC name is listed under **PC name**.]
+    >[!Tip]
+    >To find the name of your developer PC, on the PC, press the Windows key, type **About**, and press **Enter**. The PC name is listed under **PC name**.
 
 The iOS device should now be able to communicate with the PC via your Mac to build shaders remotely.
 
