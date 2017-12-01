@@ -36,6 +36,7 @@ For mobile platforms, shaders are optimized by a GLSL optimizer to improve perfo
 * [Shading language](shading-language/index.md)
     - [Shader classes, mixins and inheritance](shading-language/shader-classes-mixins-and-inheritance.md)
     - [Composition](shading-language/composition.md)
+    - [Compile shaders](compile-shaders.md)
     - [Templates](shading-language/templates.md)
     - [Shader stage input/output automatic management](shading-language/automatic-shader-stage-input-output.md)
 * [Custom shaders](custom-shaders.md)

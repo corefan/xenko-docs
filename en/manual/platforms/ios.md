@@ -59,18 +59,18 @@ To deploy your game on iOS devices, you need to connect the device to a Mac with
 
 It takes a long time to build on iOS devices. This is because:
 
-* the Mac needs to build code ahead of time for the different devices
+* the Mac needs to build code ahead of time (AOT) for the different devices
 
 * the Apple sandbox system doesn't let you update packages incrementally, so the Mac needs to completely redeploy the application on the device for every change
 
-To help build code ahead of time more quickly, in the Solution Explorer, right-click the iOS project and select **Properties**.
+To compile code more quickly, in the Solution Explorer, right-click the iOS project and select **Properties**.
 
 ![Project properties](media/ios-project-properties.png)
 
 * Under **Linker Behavior**, select **Don't link**.
 * Under **Supported Architectures**, select only the architecture of the debug device.
 * Disable **Strip native debugging symbols**.
-* Enable **incremental builds** (only code that changes from one execution to another is built ahead of time)
+* Enable **incremental builds** (only code that changes from one execution to another is AOT)
 
 For more information, see [iOS Build Mechanics](https://developer.xamarin.com/guides/ios/advanced_topics/ios-build-mechanics/) in the Xamarin documentation. For information about profiling, see [Using instruments to detect native leaks using markheap]( 
 https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/using_instruments_to_detect_native_leaks_using_markheap).
@@ -101,9 +101,9 @@ Our recommended workflow is:
 
 3. Save and run the game on iOS.
 
-Ideally, this creates all the shader permutations remotely, so you don't need to convert them on the device. However, new permutations might still occur due to differences such as supported screen resolutions. For more information, including information about how to compile shaders remotely on iOS, see [Compile shaders](../graphics/effects-and-shaders/shading-language/compile-shaders.md).
+Ideally, this creates all the shader permutations remotely, so you don't need to convert them on the device. However, new permutations might still occur due to differences such as supported screen resolutions. For more information, including information about how to compile shaders remotely on iOS, see [Compile shaders](../graphics/effects-and-shaders/compile-shaders.md).
 
 ## See also
 
 * [iOs in the Xamarin documentation](https://developer.xamarin.com/guides/ios/)
-* [Compile shaders](../graphics/effects-and-shaders/shading-language/compile-shaders.md)
+* [Compile shaders](../graphics/effects-and-shaders/compile-shaders.md)

@@ -146,6 +146,7 @@
 #### [Automatic shader stage input/output](graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)
 #### [Shader stages](graphics/effects-and-shaders/shading-language/shader-stages.md)
 ### [Custom shaders](graphics/effects-and-shaders/custom-shaders.md)
+### [Compile shaders](graphics/effects-and-shaders/compile-shaders.md)
 ## [Low-level API](graphics/low-level-api/index.md)
 ### [Textures and render textures](graphics/low-level-api/textures-and-render-textures.md)
 ### [Pipeline state](graphics/low-level-api/pipeline-state.md)
@@ -206,6 +207,7 @@
 ### [Create a Linux game](platforms/linux/create-a-linux-game.md)
 ## [UWP](platforms/uwp/index.md)
 ### [Xbox Live](platforms/uwp/xbox-live.md)
+## [iOS](platforms/ios.md)
 ## [Add or remove a platform](platforms/add-or-remove-a-platform.md)
 ## [Set the graphics platform](platforms/set-the-graphics-platform.md)
 

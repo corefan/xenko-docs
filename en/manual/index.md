@@ -17,7 +17,9 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
-* <span class="label label-doc-highlight">New</span> [Anti-aliasing](graphics/post-effects/anti-aliasing.md)
+* <span class="label label-doc-highlight">New</span> [iOS](platforms/ios.md)
+
+* <span class="label label-doc-highlight">New</span> [Compile shaders](graphics/effects-and-shaders/compile-shaders.md)
 
 * <span class="label label-doc-highlight">New</span> [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
 
@@ -30,10 +32,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">New</span> [Streaming](graphics/textures/streaming.md)
 
 * <span class="label label-doc-highlight">New</span> [Clear coat shading](graphics/materials/clear-coat-shading.md)
-
-* <span class="label label-doc-highlight">New</span> [Render groups and masks](graphics/graphics-compositor/render-groups-and-masks.md)
-
-* <span class="label label-doc-highlight">New</span> [Logging](troubleshooting/logging.md)
 
 ## Improve this documentation
 

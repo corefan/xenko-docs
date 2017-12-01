@@ -10,7 +10,7 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 * Windows Universal (UWP)
 * [Linux (Ubuntu)](linux/index.md)
 * Android 2.3 and later
-* iOS 8.0 and later
+* [iOS 8.0 and later](ios.md)
 
 > [!TIP]
 > To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:SiliconStudio.Core.Platform.Type) variable.
@@ -46,6 +46,7 @@ Xenko defines preprocessor variables if you want to write code that compiles onl
 * [Linux](linux/index.md)
 * [UWP](uwp/index.md)
     * [Xbox Live](uwp/xbox-live.md)
+* [iOS](ios.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
 * [Set the graphics platform](set-the-graphics-platform.md)
 * [Game settings](../game-studio/game-settings.md)

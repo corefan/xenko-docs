@@ -1,10 +1,9 @@
-
 # Compile shaders
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Xenko converts Xenko shaders (`xlsl` and `.xlfx` files) into the shader language used by the [graphics platform](../platforms/set-the-graphics-platform.md).
+Xenko converts Xenko shaders (`xlsl` and `.xlfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
 
 | Platform       | Shader language 
 | -------------- | ---- 
@@ -27,25 +26,25 @@ Xenko can't know in advance which shaders will be used at runtime. This is becau
 
 4. Game Studio notifies you that there are new shaders to import.
 
-    ![New effects](../media/new-effects-to-import.png)
+    ![New effects](media/new-effects-to-import.png)
 
     In the **Asset view**, the **Import effects** button becomes available.
 
-    ![Import effects](../media/import-effects-button.png)
+    ![Import effects](media/import-effects-button.png)
 
 5. If you click **Import effects**, Game Studio updates the **Effect Log** (or creates it if it doesn't exist) and adds them to the game database to be used the next time you build (see step 1).
 
-    ![Effect log](../media/effect-log.png)
+    ![Effect log](media/effect-log.png)
 
 ## Change how Xenko compiles shaders
 
 1. In Game Studio, in the **Solution explorer**, select the package and click **Package properties**.
 
-    ![Package properties](../media/package-properties-button.png)
+    ![Package properties](media/package-properties-button.png)
 
 2. In the **Property grid**, set the properties.
 
-    ![Package properties](../media/package-properties.png)
+    ![Package properties](media/package-properties.png)
 
 The **Effect compiler** property specifies how to compile the shader.
 
@@ -67,7 +66,7 @@ As iOS devices can't connect directly to PC, to convert Xenko shaders remotely w
 
 2. On your Mac, install Python. You can download Python from the [Python site](https://www.python.org/downloads/).
 
-3. Download and unzip [ios-tcreplay.zip](ios-tcreplay.zip).
+3. Download and unzip [ios-tcreplay.zip](media/ios-tcprelay.zip).
 
 4. Open **Terminal**, navigate to the folder where you unzipped the file, and execute **xenko-ios-relay.py MyPcName**, where **MyPcName** is the name of your developer PC.
 
