@@ -18,7 +18,7 @@ You might want to clean the cache if:
 
     ![Clean solution](media/clean-assets.png)
 
-3. Rebuild the project.
+3. Rebuild the project to rebuild the cache from scratch.
 
 ## Clean the cache manually
 
@@ -38,7 +38,7 @@ If cleaning the cache from Visual Studio doesn't work, try deleting the files ma
 
 ## Clear the Game Studio caches
 
-In addition to the caches Xenko creates for your project, Game Studio keeps three more caches for the editor.
+In addition to the caches Xenko creates for your project, Game Studio keeps two caches for the editor.
 
 ### Asset cache
 
@@ -50,11 +50,13 @@ By default, the folder is in: *%temp%/Silicon Studio/Xenko*
 >To check or change where Game Studio saves the cache, see **Edit > Settings > Environment > Build cache directory.**
 >![Settings](media/settings-window.png)
 
+To clean the cache, delete the folder and run Game Studio again.
+
 ### Settings cache
 
 Game Studio saves your editor preferences (such as window positions and so on) in: *%AppData%/Silicon Studio*
 
-You might want to delete this cache if you get Game Studio into a bad state. Deleting the cache doesn't affect anything in your project. When you start Game Studio, it builds a new cache using the default settings.
+These files are small, but you might want to delete them if you get Game Studio into a bad state. Deleting the cache doesn't affect anything in your project. When you start Game Studio, it builds a new cache using the default settings.
 
 >[!Tip]
 >You can also reset the Game Studio layout without clearing the cache in **Edit > Settings > Interface > Reset Game Studio layout**.
