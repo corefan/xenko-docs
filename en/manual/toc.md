@@ -56,6 +56,7 @@
 
 # [Files and folders](files-and-folders/index.md)
 ## [Project structure](files-and-folders/project-structure.md)
+## [Cached files](files-and-folders/cached-files.md)
 ## [Version control](files-and-folders/version-control.md)
 ## [Distribute a game](files-and-folders/distribute-a-game.md)
 
