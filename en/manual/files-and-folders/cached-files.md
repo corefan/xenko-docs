@@ -38,7 +38,7 @@ If cleaning the cache from Visual Studio doesn't work, try deleting the files ma
 
 ## Clear the Game Studio caches
 
-In addition to the caches Xenko creates for your project, Game Studio keeps two caches for the editor.
+In addition to the caches Xenko creates for your project, Game Studio keeps caches for the editor.
 
 ### Asset cache
 
@@ -54,9 +54,13 @@ To clean the cache, delete the folder and run Game Studio again.
 
 ### Settings cache
 
-Game Studio saves your editor preferences (such as window positions and so on) in: *%AppData%/Silicon Studio*
+Game Studio saves editor information (such as window positions and recently-opened projects) in: *%AppData%/Silicon Studio*
 
-These files are small, but you might want to delete them if you get Game Studio into a bad state. Deleting the cache doesn't affect anything in your project. When you start Game Studio, it builds a new cache using the default settings.
+Game Studio also saves information about open tabs and the editor camera position in the `.xkpkg.user` file in the project folder (eg *~/MyGame/MyGame/MyGame.xkpkg.user*).
+
+These files are small, but you might want to delete them if you get Game Studio into a bad state. Deleting them doesn't affect anything in your project.
+
+After you delete cache files, when you start Game Studio, it builds a new cache using the default settings.
 
 >[!Tip]
 >You can also reset the Game Studio layout without clearing the cache in **Edit > Settings > Interface > Reset Game Studio layout**.
