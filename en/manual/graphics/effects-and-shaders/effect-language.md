@@ -72,7 +72,7 @@ The syntax is similar to C#. The following rules are added:
 
 - When you use parameter keys, add them using `params <shader_name>`. If you don't, keys are treated as variables.
 
-- You don't need to to tell the program where to check the values behind the keys. Just use the key.
+- You don't need to tell the program where to check the values behind the keys. Just use the key.
 
 ```cs
 using params MaterialParameters;
