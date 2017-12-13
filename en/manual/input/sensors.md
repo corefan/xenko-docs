@@ -11,7 +11,16 @@ Use @'SiliconStudio.Xenko.Input.InputManager' to access sensors and:
 * disable a sensor
 * retrieve sensor data
 
-Xenko can receive data from six types of sensor: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_. They inherit from @'SiliconStudio.Xenko.Input.ISensorDevice'
+Xenko can receive data from six types of sensor: 
+
+* Orientation
+* Accelerometer
+* UserAcceleration
+* Gravity
+* Compass
+* Gyroscope 
+
+They inherit from @'SiliconStudio.Xenko.Input.ISensorDevice'.
 
 Xenko creates a default instance for each sensor type. You can access each instance from the @'SiliconStudio.Xenko.Input.InputManager'.
 
@@ -25,7 +34,7 @@ var accelerometer = Input.Accelerometer;
 
 ## Check if a sensor is available
 
-Before you get the value of a sensor, check that the sensor is available in the device. To do this, check the sensor you want to use isn't null. For example, to check if the compass is available:
+Before you get the value of a sensor, check that the sensor is available in the device (ie not null). For example, to check if the compass is available:
 
 ```cs
 var hasCompass = Input.Compass != null;
@@ -48,13 +57,13 @@ The **orientation sensor** indicates the **orientation of the device** with resp
 
 Use [Input.Orientation](xref:SiliconStudio.Xenko.Input.InputManager.Orientation) to get the current orientation of the device.
 
-| Property        | Description                                     | Declaration 
-|-----------------|-------------------------------------------------|---------------
-| [Roll](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Roll) | The rotation around the X-axis. | `public float Roll { get; }`
-| [Pitch](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Pitch)           | The rotation around the Y-axis.                    | `public float Pitch { get; }`
-| [Yaw](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Yaw)             | The rotation around the Z-axis.                    | `public float Yaw { get; }`
-| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.IOrientationSensor.RotationMatrix) | The device rotation.  | `public Matrix RotationMatrix { get; }`
-| [Quaternion](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Quaternion) | The device orientation and rotation. |  `public Quaternion Quaternion { get; }`
+| Property        | Description     | Declaration 
+|-----------------|----------------|---------------
+| [Roll](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Roll) | The rotation around the X-axis | `public float Roll { get; }`
+| [Pitch](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Pitch) | The rotation around the Y-axis| `public float Pitch { get; }`
+| [Yaw](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Yaw)  | The rotation around the Z-axis | `public float Yaw { get; }`
+| [Rotation Matrix](xref:SiliconStudio.Xenko.Input.IOrientationSensor.RotationMatrix) | The device rotation | `public Matrix RotationMatrix { get; }`
+| [Quaternion](xref:SiliconStudio.Xenko.Input.IOrientationSensor.Quaternion) | The device orientation and rotation |  `public Quaternion Quaternion { get; }`
 
 For example:
 

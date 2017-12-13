@@ -51,22 +51,6 @@ In the @'SiliconStudio.Xenko.Input.GestureConfig' classes, you can configure par
 > [!Note] 
 > Each gesture has its own configuration class with specific configuration parameters (see below).
 
-## Gesture states
-
-A gesture always has one of four states:
-
-* Began
-
-* Changed
-
-* Ended
-
-* Occurred
-
-**Discrete** gestures (tap, flick, long press) always have the state _occurred_. **Continuous** gestures (drag and composite) always begin with the state _began_, followed by any  _changed_ states, and end with the _ended_ state.
-
-To query the current state of a gesture, use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) field of the triggered gesture event.
-
 ## Types of gesture
 
 Xenko supports two main types of gesture:
@@ -165,6 +149,22 @@ The composite gesture requires exactly two fingers on the screen. It's triggered
 * _Translation_: the user translates two fingers together in the same direction.
 * _Scale_: the user moves two fingers closer together or further apart.
 * _Rotation_: the user rotates two fingers around a center point.
+
+## Gesture states
+
+A gesture always has one of four states:
+
+* Began
+
+* Changed
+
+* Ended
+
+* Occurred
+
+**Discrete** gestures (tap, flick, long press) always have the state _occurred_. **Continuous** gestures (drag and composite) always begin with the state _began_, followed by any  _changed_ states, and end with the _ended_ state.
+
+To query the current state of a gesture, use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) field of the triggered gesture event.
 
 ## Example code
 
