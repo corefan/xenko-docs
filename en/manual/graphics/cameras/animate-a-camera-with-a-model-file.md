@@ -9,11 +9,11 @@ Like other entities, you can [animate](../../animation/index.md) cameras using a
 >To animate a camera using a model file, you first need to bake the animation using your modeling tool (eg Maya, 3ds Max or Blender).
 >Xenko doesn't support cameras animated using target cameras.
 
-If the camera moves independently of other animations, the simplest method is to export the camera animation as a separate file, enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. With this method, you don't need a model or a skeleton.
+If the camera moves independently, the simplest method is to export the camera animation as a separate file, enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. If the animations include FOV or near or far plane animations, the Xenko camera updates accordingly. With this method, you don't need a model or a skeleton.
 
 If you want the camera to move in tandem with another animation — for example, if the camera is held by a cameraman character with its own model, skeleton and animation — use a [model node link](../../animation/model-node-links.md) component to link the camera entity to the cameraman's movements.
 
-## Animate a camera independently of other animations
+## Animate a camera independently
 
 To do this, you need the following assets in your project:
 
@@ -87,11 +87,11 @@ To do this, you need the following assets in your project:
 
 11. Select the animation asset you want to use to animate the camera and click **OK**.
 
-At runtime, the camera uses the animation.
+At runtime, the camera uses the animation. If the animation includes FOV or near or far plane animations, the Xenko camera updates accordingly.
 
 ## Attach the camera to a node on another model
 
-If you want the camera to move in tandem with another model, create a separate entity for the camera, then use a **model node link** component to link the entity to the correct node.
+To move a camera in tandem with another model, create a separate entity for the camera, then use a **model node link** component to link the entity to the correct node.
 
 To do this, you need the following assets in your project:
 
@@ -100,6 +100,9 @@ To do this, you need the following assets in your project:
 * a [skeleton](../../animation/index.md) that matches the model
 * an [animation](../../animation/index.md), to animate the model
 * an [animation script](../../animation/animation-scripts.md), to play the animation
+
+>[!Note]
+>FOV and near or far plane animations are ignored if you use this method.
 
 1. In the **asset view**, select the model you want to link the camera to. Next to **Skeleton**, make sure a skeleton is specified that matches the model.
 
@@ -138,7 +141,7 @@ At runtime, the camera uses the animation.
 
 ## See also
 
+* [Cameras](index.md)
+* [Model node links](../../animation/model-node-links.md)
 * [Animation](../../animation/index.md)
 * [Animation scripts](../../animation/animation-scripts.md)
-* [Model node links](../../animation/model-node-links.md)
-* [Cameras](index.md)
