@@ -24,7 +24,7 @@ We can use use the difference clip to blend the source and reference animations.
 >[!Note]
 >Additive animations should use the same skinned mesh and skeleton. 
 
-## Create a difference clip
+### Create a difference clip
 
 1. In the **asset view** (at the bottom by default), click **Add asset** and select **Animations > Animation**. A browser dialog opens.
 
