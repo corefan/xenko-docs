@@ -8,7 +8,7 @@ A **UI page** is a collection of UI elements, such as buttons and grids, that fo
 
 ![UI page](media/ui-page.png)
 
-In terms of organization, a UI page is equivalent to a scene in the scene editor, and UI elements are equivalent to to entities in a scene. Just like entities, elements can have parents and children.
+In terms of organization, a UI page is equivalent to a scene in the scene editor, and UI elements are equivalent to entities in a scene. Just like entities, elements can have parents and children.
 
 Each UI scene opens in its own tab in the UI editor. For information about how to edit UI pages, see the [UI editor](ui-editor.md) page.
 
