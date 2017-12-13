@@ -1,7 +1,7 @@
 # Asset control
 
 >[!Warning]
->This section is out of date and will be updated soon. For now, it should only be used for for reference.
+>This section is out of date. For now, you should only use it for reference.
 
 Until now, all assets of a game package, and its dependencies, were compiled as part of your game.
 

@@ -1,7 +1,7 @@
 # Asset manager
 
 >[!Warning]
->This section is out of date and will be updated soon. For now, it should only be used for for reference.
+>This section is out of date. For now, you should only use it for reference.
 
 # Assets
 

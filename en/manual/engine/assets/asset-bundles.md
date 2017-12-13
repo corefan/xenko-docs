@@ -1,7 +1,7 @@
 # Asset bundles
 
 >[!Warning]
->This section is out of date and will be updated soon. For now, it should only be used for for reference.
+>This section is out of date. For now, you should only use it for reference.
 
 A bundle of assets allows to package assets into a single archive that can be downloaded into the game at a specific time.
 
