@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes.md). Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes-and-backgrounds.md). Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
@@ -110,4 +110,4 @@ public void ChangeSkyboxParameters()
 
 ## See also
 
-* [Skyboxes](../skyboxes.md)
+* [skyboxes and backgrounds](../skyboxes-and-backgrounds.md)
