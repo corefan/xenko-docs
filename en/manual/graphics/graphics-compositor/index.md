@@ -66,7 +66,7 @@ There are three entry points:
 
 * **Game**, to render your game
 * **Editor**, to render the Game Studio editor
-* **Single view** (referred to as **Utility** in the property grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../skyboxes.md)
+* **Single view** (referred to as **Utility** in the property grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../skyboxes-and-backgrounds.md)
 
 Each entry point can use a separate rendering pipeline. For example, the game and editor might share the same forward renderer and [post-processing effects](../post-effects/index.md) while your single view uses a separate forward renderer.
 

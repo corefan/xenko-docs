@@ -84,7 +84,7 @@ Locked items have a **gold locked padlock** icon in the entity tree.
 
 You can load and unload scenes (with all their child scenes and entities) in the scene editor. Unloading scenes in the editor is useful if, for example, you want to remove clutter from your editing view, or improve editor performance.
 
-The screenshots below show a root scene with child scenes loaded and unloaded. The root scene contains entities that all the scenes use, including the [skybox](../graphics/skyboxes.md), [scripts](../scripts/index.md), asteroids, and player character. The child scenes are sections of level.
+The screenshots below show a root scene with child scenes loaded and unloaded. The root scene contains entities that all the scenes use, including the [skybox](../graphics/skyboxes-and-backgrounds.md), [scripts](../scripts/index.md), asteroids, and player character. The child scenes are sections of level.
 
 ![Unloaded and loaded scenes](media/scenes-unloaded.jpg)
 

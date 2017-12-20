@@ -21,7 +21,7 @@ The graphics module provides a set of methods to display the game. Although Xenk
 ## In this section
 
 * [Cameras](cameras/index.md)
-* [Skyboxes](skyboxes.md)
+* [skyboxes and backgrounds](skyboxes-and-backgrounds.md)
 * [Sprite fonts](sprite-fonts.md)
 * [Lighting and shadows](lights-and-shadows/index.md)
 * [Graphics compositor](graphics-compositor/index.md)
