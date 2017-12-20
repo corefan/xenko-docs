@@ -155,6 +155,7 @@
 ### [Draw vertices](graphics/low-level-api/draw-vertices.md)
 ### [SpriteBatch](graphics/low-level-api/spritebatch.md)
 ### [SpriteFont](graphics/low-level-api/spritefont.md)
+### [Skyboxes](graphics/skyboxes.md)
 
 ## [Rendering pipeline](graphics/rendering-pipeline/index.md)
 ### [Render features](graphics/rendering-pipeline/render-features.md)
