@@ -155,11 +155,10 @@
 ### [Draw vertices](graphics/low-level-api/draw-vertices.md)
 ### [SpriteBatch](graphics/low-level-api/spritebatch.md)
 ### [SpriteFont](graphics/low-level-api/spritefont.md)
-
 ## [Rendering pipeline](graphics/rendering-pipeline/index.md)
 ### [Render features](graphics/rendering-pipeline/render-features.md)
 ### [Render stages](graphics/rendering-pipeline/render-stages.md)
-
+## [Skyboxes](graphics/skyboxes.md)
 ## [Sprite fonts](graphics/sprite-fonts.md)
 
 # [Input](input/index.md)
