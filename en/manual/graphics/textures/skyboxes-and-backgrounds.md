@@ -17,7 +17,7 @@ Alternatively, you can display a **2D background**, which is often useful for 2D
 
 A **cubemap** is a six-sided texture. When these textures are assembled in a cube around the scene, the cubemap simulates spacious 3D surroundings.
 
-![Distant planet skybox](media/skybox-disassembled.png)
+![Distant planet skybox](media/cubemap-cross.jpg)
 
 ![Merged skybox](media/skybox-assembled.png)
 
@@ -55,6 +55,9 @@ Instead of using a cubemap, you can use a **360° panoramic texture** as a 3D ba
 |----------------|-------------
 | ![Panorama texture](media/MyPanorama.jpg)  | ![Panorama in game](media/panorama-in-game.jpg)
 *Image courtesy of [Texturify](http://texturify.com)*
+
+>[!Note]
+>Remember that [post effects](../post-effects/index.md) affect the appearance of your skybox. If it doesn't look how you expect, try changing your post effect settings.
 
 ## Add a cubemap or 360° panoramic texture to the project
 
