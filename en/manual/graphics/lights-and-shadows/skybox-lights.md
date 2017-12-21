@@ -8,7 +8,7 @@ A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](..
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
-You don't need to actually display the skybox in the scene to use it as a light source. For example, you might not want to use the skybox to light the scene if the sky is only partly visible from an interior location (eg through windows of a room). As ambient lights aren't affected by shadows, they light every part of the scene, including interior spaces.
+Skybox lights are good for exterior scenes, where the skybox is visible. They're less useful for interior scenes, such as in rooms where the skybox is only visible through windows; as the skybox light nonetheless lights the entire room, this creates an unnatural effect.
 
 ## How skyboxes light the scene
 
