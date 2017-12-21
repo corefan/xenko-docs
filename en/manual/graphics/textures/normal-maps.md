@@ -10,9 +10,12 @@
 | --------------| ----------- 
 | ![media/material-attributes-15.png](../materials/media/material-attributes-15.png)  | ![media/material-attributes-16.png](../materials/media/material-attributes-16.png)  
 
-![Normal map example](media/normal_map_example.png)
+| Original mesh | Simplified mesh | Simplified mesh and normal map 
+|---------------|-----------------|---------
+| ![Example 1](media/normal_map_example1.jpg) | ![Example 2](media/normal_map_example2.jpg) | ![Example 3](media/normal_map_example3.jpg)
+| 4m triangles | 500 triangles | 500 triangles
 
-*(Image courtesy of Paolo Cignoni, shared under [Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)](https://creativecommons.org/licenses/by-sa/1.0/)*
+*(Images courtesy of Paolo Cignoni, shared under [Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)](https://creativecommons.org/licenses/by-sa/1.0/)*
 
 The left image shows a complex mesh of several million polygons. The right image shows a drastically simplified version of the same mesh, but with a normal map applied. The normal map contains information about how the mesh should reflect light, creating the illusion of much more complex geometry.
 
