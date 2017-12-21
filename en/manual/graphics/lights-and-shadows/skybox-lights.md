@@ -72,9 +72,9 @@ When you use a skybox as a light, Xenko uses it both in compressed form ([spheri
 
 | Property     | Description                  
 | ------------ | ---------- 
-| Cube Map |  The cubemap asset used for the skybox
+| Texture |  The texture to use as skybox (eg a cubemap or panoramic texture)
 | Specular Only      |  Use the skybox only for specular lighting
-| Diffuse SH Order  | The level of detail of the compressed skybox, used for diffuse lighting (dull materials). `Order5` is more detailed than `Order3`
+| Diffuse SH order  | The level of detail of the compressed skybox, used for diffuse lighting (dull materials). `Order5` is more detailed than `Order3`.
 | Specular Cubemap Size | The texture size used for specular lighting. Larger textures have more detail.
 
 ## Skybox light properties
