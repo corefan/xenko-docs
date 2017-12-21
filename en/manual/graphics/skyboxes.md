@@ -1,21 +1,17 @@
-# Skyboxes and backgrounds
+# Skyboxes
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. As skyboxes are prerendered, they require little GPU and CPU. 
-
-You can use **cubemaps** or **360° panoramic textures** as skyboxes. You can also [use them to light the scene](lights-and-shadows/skybox-lights.md).
+**Skyboxes** are backgrounds that create the illusion of space and distance. They're also reflected in reflective surfaces in your scene. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
 
 > [!Note]
 > Currently, Xenko doesn't support skydomes or local skyboxes.
 
-Alternatively, you can display a **2D background**, which is often useful for 2D games.
-
 ## Cubemaps
 
-A **cubemap** is a six-sided texture. When these textures are assembled in a cube around the scene, the cubemap simulates spacious 3D surroundings.
+To create a skybox, Xenko encloses the scene in a cube and maps a **cubemap** (a six-sided texture) on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious.
 
 ![Distant planet skybox](media/skybox-disassembled.png)
 
@@ -36,7 +32,7 @@ You can capture a cubemap from a position in your scene.
 
 2. In the scene editor toolbar, open the **Lighting options** menu.
 
-    ![Lighting options](../lights-and-shadows/media/lighting-options-menu.png)
+    ![Lighting options](../graphics/lights-and-shadows/media/lighting-options-menu.png)
 
 3. Under **Cubemap**, click **Generate**.
 
@@ -47,36 +43,27 @@ You can capture a cubemap from a position in your scene.
 
 Game Studio creates a cubemap `.dds` file in the location you specified.
 
-## 360° panoramic textures
+### Add a cubemap to a project
 
-Instead of using a cubemap, you can use a **360° panoramic texture** as a 3D background.
-
-| 360° panorama  | Appearance in game
-|----------------|-------------
-| ![Panorama texture](media/MyPanorama.jpg)  | ![Panorama in game](media/panorama-in-game.jpg)
-*Image courtesy of [Texturify](http://texturify.com)*
-
-## Add a cubemap or 360° panoramic texture to the project
-
-You add these like other color textures.
-
-* In the **Asset view**, click ![Add asset](../lights-and-shadows/media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the file.
+* In the **Asset view**, click ![Add asset](lights-and-shadows/media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the `.dds` file.
 
     ![Select texture as asset type](media/engine-skybox-select-asset-type.png)
 
-* Alternatively, drag and drop the file from **Windows Explorer** to the **Asset view**, then select **Color texture**.
+* Alternatively, drag and drop a `.dds` file from **Windows Explorer** to the **Asset view**, then select **Color texture**.
 
     ![Drag and drop background texture](media/drag-texture.gif)
 
-### Create a skybox
+The cubemap is now available as an asset in your project.
 
-To create a skybox, add a cubemap or 360° panoramic texture to a **background component**.
+### Use a cubemap as a skybox
+
+To use a cubemap as a skybox, add it to a **background component**.
 
 Xenko includes an entity with a background component in the project by default. Only one background can be active in a scene at a time. If there are multiple backgrounds, Xenko only loads the first.
 
 You can add background components to as many entities as you need. You might want to include more than one background, for example, if you want to switch skyboxes at runtime.
 
-To add a background entity:
+To add a cubemap to an entity:
 
 1. In the **Scene view**, select the entity you want to add the component to.
 
@@ -86,15 +73,13 @@ To add a background entity:
 
     ![Add background component](media/engine-skybox-add-background-component.png)
 
-3. Under **Texture**, select the cubemap or 360° panoramic texture you want to use in the skybox.
+3. Under **texture**, specify the cubemap you want to use to create the skybox.
 
     ![Background component properties](media/engine-skybox-background-component-properties.png)
 
-## Use a skybox as a light source
+Xenko displays the skybox in the scene.
 
-You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
-
-## Change the skybox at runtime
+#### Change a the skybox at runtime
 
 The following code changes the cubemap in a background:
 
@@ -113,23 +98,9 @@ public void ChangeBackgroundParameters()
 }
 ```
 
-### Convert cubemaps to panoramas and vice versa
+## Use a skybox as a light source
 
-Various tools exist to convert a panoramas to cubemaps and vice versa, including: 
-
-- [Panorama Converter](http://gonchar.me/blog/goncharposts/2150)  
-- [Panorama to Cubemap](https://jaxry.github.io/panorama-to-cubemap/)
-- [Convert Cubemap to Equirectangular](https://www.360toolkit.co/convert-cubemap-to-spherical-equirectangular.html)
-
-## Set a 2D background
-
-Instead of using a 3D skybox, you can display the texture as a static background. This displays the texture as a flat image that stays static no matter how you move the camera. This is often useful for 2D games.
-
-To do this, in the **Background** component properties, select **Is 2D**.
-
-![Background component properties](media/is-2d.png)
-
-If you enable this with a cubemap, Xenko uses the first face of the cubemap as the background.
+You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
 ## See also
 

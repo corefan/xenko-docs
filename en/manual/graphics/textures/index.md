@@ -133,4 +133,3 @@ For instructions about how to access the global texture settings, see the [Game 
 * [Materials](../materials/index.md)
 * [Sprites](../../sprites/index.md)
 * [Render textures](../graphics-compositor/render-textures.md)
-* [Skyboxes and backgrounds](skyboxes-and-backgrounds.md)

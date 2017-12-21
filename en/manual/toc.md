@@ -107,7 +107,6 @@
 ### [Normal maps](graphics/textures/normal-maps.md)
 ### [Compression](graphics/textures/compression.md)
 ### [Streaming](graphics/textures/streaming.md)
-### [Skyboxes and backgrounds](graphics/textures/skyboxes-and-backgrounds.md)
 ## [Lights and shadows](graphics/lights-and-shadows/index.md)
 ### [Add a light](graphics/lights-and-shadows/add-a-light.md)
 ### [Point lights](graphics/lights-and-shadows/point-lights.md)
@@ -159,6 +158,7 @@
 ## [Rendering pipeline](graphics/rendering-pipeline/index.md)
 ### [Render features](graphics/rendering-pipeline/render-features.md)
 ### [Render stages](graphics/rendering-pipeline/render-stages.md)
+## [Skyboxes](graphics/skyboxes.md)
 ## [Sprite fonts](graphics/sprite-fonts.md)
 
 # [Input](input/index.md)
