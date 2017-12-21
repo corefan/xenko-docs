@@ -4,11 +4,11 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes-and-backgrounds.md). Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+A **skybox light** is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes.md). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
-You don't need to actually display the skybox in the scene to use it as a light source. For example, you might not want to use the skybox to light the scene if the sky is only partly visible from an interior location (eg through windows of a room). As ambient lights aren't affected by shadows, they light every part of the scene, including interior spaces.
+Skybox lights are good for exterior scenes, where the skybox is visible. They're less useful for interior scenes, such as in rooms where the skybox is only visible through windows; as the skybox light nonetheless lights the entire room, this creates an unnatural effect.
 
 ## How skyboxes light the scene
 
@@ -38,7 +38,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
     The **Select an asset** window opens.
 
-3. Choose a skybox texture (`.dds` file) from the project assets and click **OK**.
+3. Choose a skybox texture from the project assets and click **OK**.
     
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
 
@@ -110,4 +110,4 @@ public void ChangeSkyboxParameters()
 
 ## See also
 
-* [skyboxes and backgrounds](../skyboxes-and-backgrounds.md)
+* [Skyboxes and backgrounds](../textures/skyboxes-and-backgrounds.md)
