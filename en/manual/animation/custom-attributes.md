@@ -1,8 +1,10 @@
-# Custom animation properties
+# Custom attributes
 
 <span class="label label-doc-level">Intermediate</span>
 
-You can import custom attributes created modeling tools such as Maya into Xenko.
+You can import custom attributes created in modeling tools such as Maya. 
+
+Currently, you can only import custom **animated** attributes. Attributes that aren't animated can't be imported.
 
 ![Maya properties](media/custom-attributes-in-maya.png)
 
@@ -22,9 +24,9 @@ You can import custom attributes created modeling tools such as Maya into Xenko.
 
 ## 2. Control custom attributes with a script
 
-Add a script to read the custom attributes and bind them to a property. This can be a separate script, or part of another [animation script](animation-scripts.md).
+Add a script to read the custom attributes and copy them to a property. This can be a separate script, or part of another [animation script](animation-scripts.md).
 
-The name of the property on the Xenko side is `NodeName_PropertyName`. For example, if you have the node `myNode` with the custom attribute `myProperty`, use `myNode_myProperty`.
+To look up an attribute, use `NodeName_AttributeName`. For example, if you have the node `myNode` with the custom attribute `myAttribute`, use `myNode_myAttribute`.
 
 ### Example script
 

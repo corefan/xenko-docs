@@ -93,4 +93,4 @@ Game Studio adds the script as a component. You can adjust [public variables you
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
-* [Custom animation attributes](custom-animation-attributes.md)
+* [custom attributes](custom-attributes.md)

@@ -63,4 +63,4 @@ To use an animation asset, add an [AnimationComponent](xref:SiliconStudio.Xenko.
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
-* [Custom animation attributes](custom-animation-attributes.md)
+* [custom attributes](custom-attributes.md)
