@@ -110,3 +110,4 @@ You an also override the animation blend tree and do all animation blending in t
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
+* [Custom animation attributes](custom-animation-attributes.md)

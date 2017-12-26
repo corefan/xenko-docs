@@ -53,3 +53,4 @@ The templates **First-person shooter**, **Third-person platformer** and **Top-do
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
+* [Custom animation attributes](custom-animation-attributes.md)

@@ -68,6 +68,7 @@ To add an offset to the linked entity, use the entity's [TransformComponent](xre
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
+* [Custom animation attributes](custom-animation-attributes.md)
 
 For examples of how model node links are used, see:
 

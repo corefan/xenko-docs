@@ -17,13 +17,13 @@ You can import these assets from 3D model files. Xenko supports the following mo
 
     ![Choose asset type](media/create-and-add-assets-drag-and-drop-model.png)
 
-    * Alternatively, in the **asset view**: 
+    Alternatively, in the **asset view**: 
 
-        1a. Click ![Add asset](media/create-and-add-assets-add-new-asset-button.png) and select **Import directly from files**.
+    1a. Click ![Add asset](media/create-and-add-assets-add-new-asset-button.png) and select **Import directly from files**.
     
-        ![Choose asset type](media/create-and-add-assets-add-new1.png)
+    ![Choose asset type](media/create-and-add-assets-add-new1.png)
 
-        2b. Browse to the file and click **Open**.
+    2b. Browse to the file and click **Open**.
 
 2. Specify whether you want to import the **3D model**, **animation**, or **skeleton** from the model file.
 
@@ -37,11 +37,9 @@ You can import these assets from 3D model files. Xenko supports the following mo
 
     * If you choose **Animation**, Xenko imports only the animation from the model file. This is sufficient for regular animations; for additive information, there are some extra steps. For details, see [Additive animation](additive-animation.md).
 
-After you import the model, animation, and/or skeleton assets, Game Studio adds them to the **asset view**.
+After you import the assets, Game Studio adds them to the **asset view**.
 
 ![Assets in asset view](media/assets-in-asset-view1.png)
-
-![Assets in asset view](media/assets-in-asset-view2.png)
 
 You can view and edit their properties in the **property grid** (on the right by default). For more information, see [Animation properties](animation-properties.md).
 
@@ -65,3 +63,4 @@ To use an animation asset, add an [AnimationComponent](xref:SiliconStudio.Xenko.
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
+* [Custom animation attributes](custom-animation-attributes.md)

@@ -31,6 +31,7 @@
 ## [Procedural animation](animation/procedural-animation.md)
 ## [Custom blend trees](animation/custom-blend-trees.md)
 ## [Model node links](animation/model-node-links.md)
+## [Custom animation attributes](animation/custom-animation-attributes.md)
 
 # [Audio](audio/index.md)
 ## [Import audio](audio/import-audio.md)
