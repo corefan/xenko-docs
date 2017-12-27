@@ -24,7 +24,7 @@ Currently, you can only import custom **animated** attributes. Attributes that a
 
 ## 2. Control custom attributes with a script
 
-Add a script to read the custom attributes and copy them to a property. This can be a separate script, or part of another [animation script](animation-scripts.md).
+Add a script to read the custom attributes and copy their value to another property. This can be a separate script, or part of another [animation script](animation-scripts.md).
 
 To look up an attribute, use `NodeName_AttributeName`. For example, if you have the node `myNode` with the custom attribute `myAttribute`, use `myNode_myAttribute`.
 
