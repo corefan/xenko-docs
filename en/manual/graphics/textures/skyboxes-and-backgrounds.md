@@ -128,7 +128,7 @@ Various tools exist to convert a panoramas to cubemaps and vice versa, including
 
 Instead of using a 3D skybox, you can display the texture as a static background. This displays the texture as a flat image that stays static no matter how you move the camera. This is often useful for 2D games.
 
-To do this, in the **Background** component properties, select **Is 2D**.
+To do this, in the **Background** component properties, select **2D background**.
 
 ![Background component properties](media/is-2d.png)
 
