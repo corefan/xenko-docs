@@ -1,6 +1,6 @@
 # Post effects
 
-**Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image; for example, by giving it a more natural, realistic look, or creating stylized cinematic effects.
+**Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image — for example, by producing a more natural, realistic look, or creating stylized cinematic effects.
 
 ![media/post-effects-reference-1.png](media/post-effects-reference-1.png) 
 
