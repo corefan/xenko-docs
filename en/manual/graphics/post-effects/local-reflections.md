@@ -60,7 +60,7 @@ To use local reflections, enable the effect in the **graphics compositor**.
     ![Enable local reflections](media/enable-local-reflections.png)
 
 After you enable local reflections, the scene is reflected in glossy materials. 
-You can use the **glossiness threshold** (see below) to set how glossy materials should be to reflect the scene. 
+You can use the **gloss threshold** (see below) to set how glossy materials should be to reflect the scene. 
 
 ## Properties
 
@@ -82,14 +82,14 @@ The reflection spread. Higher values provide finer, more mirror-like reflections
 
 Downscales the depth buffer to optimize raycast performance. Full gives better quality, but half improves performance. The default is half.
 
-#### Glossiness threshold
+#### Gloss threshold
 
-The amount of glossiness a material must have to reflect the scene. For example, if this value is set to `0.4`, only materials with a **glossiness map** value of `0.4` or above reflect the scene. The default value is `0.55`.
+The amount of gloss a material must have to reflect the scene. For example, if this value is set to `0.4`, only materials with a **gloss map** value of `0.4` or above reflect the scene. The default value is `0.55`.
 
 >[!Note]
->If the **Invert** check box is selected in the material **micro surface** properties, the opposite is true. For example, if the reflections glossiness value is set to `0.4`, only materials with a **glossiness map** value of less than `0.4` reflect the scene.
+>If the **Invert** check box is selected in the material **micro surface** properties, the opposite is true. For example, if the reflections gloss value is set to `0.4`, only materials with a **gloss map** value of less than `0.4` reflect the scene.
 
-For more information about glossiness, see [Materials — geometry attributes](../materials/geometry-attributes.md).
+For more information about gloss, see [Materials — geometry attributes](../materials/geometry-attributes.md).
 
 #### Max steps 
 

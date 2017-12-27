@@ -69,7 +69,7 @@ The final specular color is calculated by mixing a fixed low-reflection color an
 
  The screenshots below show the result of the metalness factor on a material with the following attributes:
 
-- Glossiness = `0.8`
+- Gloss = `0.8`
 - Diffuse = `#848484`, Lambert
 - Specular GGX
 
@@ -103,7 +103,7 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 | ------------------- | ------- 
 | Fresnel             | Defines the amount of light that is reflected and transmitted. The models supported are: <br>**Schlick**: An approximation of the Fresnel effect (default)</br> <br>**Thin glass**: A simulation of light passing through glass</br>  <br>**None**: The material as-is with no Fresnel effect</br> 
 | Visibility          | Defines the visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. Xenko simplifies the formula to use the visibility term instead: <br>![media/material-attributes-35.png](media/material-attributes-35.png)</br>      <br>and <br>![media/material-attributes-36.png](media/material-attributes-36.png)</br>        <br>**Schlick GGX** (default)</br> <br> **Implicit**: The microsurface is always visible and generates no shadowing or masking</br> <br>**Cook-Torrance**</br>  <br>**Kelemen**</br> <br>**Neumann**</br> <br>**Smith-Beckmann**</br> <br>**Smith-GGX correlated**</br>  <br>**Schlick-Beckmann**</br> 
-| Normal Distribution | <br>Defines how the normal is distributed. The glossiness attribute is used by this part of the function to modify the distribution of the normal.</br> <br>**GGX** (default) </br> <br>**Beckmann**</br>  <br>**Blinn-Phong**</br> 
+| Normal Distribution | <br>Defines how the normal is distributed. The gloss attribute is used by this part of the function to modify the distribution of the normal.</br> <br>**GGX** (default) </br> <br>**Beckmann**</br>  <br>**Blinn-Phong**</br> 
 
 ## Emissive
 

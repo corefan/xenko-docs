@@ -5,7 +5,7 @@
 
 An **archetype** is a master asset that controls the properties of assets you **derive** from it. Derived assets are useful when you want to create a "remixed" version of an asset.
 
-For example, imagine we have three sphere entities that share a material asset named *Metal*. The Metal asset has properties including color, glossiness, and so on.
+For example, imagine we have three sphere entities that share a material asset named *Metal*. The Metal asset has properties including color, gloss, and so on.
 
 ![Three metal spheres](media/archetypes-three-spheres-metal.png)
 
@@ -15,7 +15,7 @@ If we change a property in the **Metal** asset, it applies to all three spheres.
 
 Now imagine we want to change the color of only *one* sphere, but keep its other properties the same. We could duplicate the material asset, change its color, and then apply the new asset to only one sphere. But if we later want to change a different property across *all* the spheres, we have to modify both assets. This is time-consuming and leaves room for mistakes.
 
-The better approach is to derive a new asset from the archetype. The derived asset inherits properties from the archetype and lets you override individual properties where you need them. For example, we can derive the sphere's material asset and override its color. Then, if we change the glossiness of the archetype, the glossiness of all three spheres changes.
+The better approach is to derive a new asset from the archetype. The derived asset inherits properties from the archetype and lets you override individual properties where you need them. For example, we can derive the sphere's material asset and override its color. Then, if we change the gloss of the archetype, the gloss of all three spheres changes.
 
 ![Create derived asset](media/archetypes-three-spheres.png)
 

@@ -50,12 +50,12 @@ The metal flake properties simulate a metallic paint effect. To disable the effe
 | Property | Description 
 |------------------------------|----------
 | Base paint diffuse map  |  The [diffuse map](shading-attributes.md) used by the base paint layer (the lowest  layer). This determines the color of the layer.
-| Base paint glossiness map |  The [glossiness map](geometry-attributes.md) used by the base paint layer. For a coherent result, use the **metal flake normal map** as a mask.         
+| Base paint gloss map |  The [gloss map](geometry-attributes.md) used by the base paint layer. For a coherent result, use the **metal flake normal map** as a mask.         
 | Metal flakes diffuse map  |  The [diffuse map](shading-attributes.md) used by the metal flake layer (the layer above the base paint). For a coherent result, use a value close to the base paint value.
-| Metal flakes glossiness map | The [glossiness map](geometry-attributes.md) used by the metal flake layer. For a coherent result, use the **metal flake normal map** as a mask. 
+| Metal flakes gloss map | The [gloss map](geometry-attributes.md) used by the metal flake layer. For a coherent result, use the **metal flake normal map** as a mask. 
 | Metal flakes metalness map | The [metalness map](shading-attributes.md) used by the metal flake layer. For best results, use high values.
 | Metal flake normal map  | The [normal map](../textures/normal-maps.md) used by the metal flake layer. This shapes the flake geometry. A metal flake normal map  (**XenkoClearCoatMetalFlakesNM**) is included in the Xenko assets package. If the texture has a high UV scale, enable **Use random texture coordinates** below to reduce tiling effects. To disable the metal flakes effect, remove the normal map.
-| Coat glossiness map  | The [glossiness map](geometry-attributes.md) used by the clear coat layer. Change this value to simulate different kinds of paint (eg matte).
+| Coat gloss map  | The [gloss map](geometry-attributes.md) used by the clear coat layer. Change this value to simulate different kinds of paint (eg matte).
 | Clear coat metalness map  | The [metalness map](shading-attributes.md) used by the clear coat layer
 | Orange peel normal map  | The [normal map](../textures/normal-maps.md) used by the clear coat layer to create an "orange peel" effect. This reflects light in different angles, simulating paint imperfections whereby the texture appears bumpy, like the skin of an orange. An orange peel normal map (**XenkoClearCoatOrangePeelNM**) is included in the Xenko assets package.
 | Layer transition distance  | The distance (in meters) at which the base paint layer transitions to the metal flake layer. This helps fight visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).

@@ -91,7 +91,7 @@ For more information about normal maps, see the [normal maps](../textures/normal
 
 ## Micro surface
 
-Under the **Micro surface** setting, you can provide a **glossiness map** to provide per-pixel information for glossiness.
+Under the **Micro surface** setting, you can provide a **gloss map** to provide per-pixel information for gloss.
 
 ![media/material-attributes-17.png](media/material-attributes-17.png)
 
@@ -100,21 +100,21 @@ If you select **Float**:
 - a value of `1.0` means the surface is highly glossy (the coarse normal isn't perturbed)
 - a value of `0.0` means the surface is very rough (the coarse normal is highly perturbed in several directions)
 
-The screenshots below show different levels of glossiness on a material:
+The screenshots below show different levels of gloss on a material:
 
 - Diffuse = #848484, Lambert
 - Specular Metalness = 1.0, GGX
 
-| Glossiness = 0.0 | 0.25 | 0.5  | 0.8  | 1.0 
+| Gloss = 0.0 | 0.25 | 0.5  | 0.8  | 1.0 
 | ---------------- | ---- | ---- |----- | ---
 | ![media/material-attributes-18.png](media/material-attributes-18.png)  | ![media/material-attributes-19.png](media/material-attributes-19.png)  | ![media/material-attributes-20.png](media/material-attributes-20.png)  | ![media/material-attributes-21.png](media/material-attributes-21.png)  | ![media/material-attributes-22.png](media/material-attributes-22.png)  
 
 | Property       | Description
 | -------------- | -- |
-| Glossiness map | The glossiness map color provider
-| Invert         | Inverts the glossiness value (eg a value of `1.0` produces zero glossiness instead of maximum). This effectively turns the glossiness value into a **roughness** value, as used in other game engines
+| Gloss map | The gloss map color provider
+| Invert         | Inverts the gloss value (eg a value of `1.0` produces zero gloss instead of maximum). This effectively turns the gloss value into a **roughness** value, as used in other game engines
 
-If you have local reflections enabled, the scene is reflected in materials with a glossiness map value higher than the threshold you specify in the local reflections properties. For more information, see [Local reflections](../post-effects/local-reflections.md).
+If you have local reflections enabled, the scene is reflected in materials with a gloss map value higher than the threshold you specify in the local reflections properties. For more information, see [Local reflections](../post-effects/local-reflections.md).
 
 ## See also
 
