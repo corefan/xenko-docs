@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Normal maps** are textures that add the appearance of surface detail, such as cracks and bumps, without changing the actual geometry of a model. This saves lots of processing power.
+**Normal maps** are textures that add the appearance of surface detail, such as cracks and bumps, without changing the actual geometry of a model. They contain information about how meshes should reflect light, creating the illusion of much more complex geometry. This saves lots of processing power.
 
 | No normal map | With a normal map
 | --------------| ----------- 
@@ -17,13 +17,11 @@
 
 *(Images courtesy of Paolo Cignoni, shared under [Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)](https://creativecommons.org/licenses/by-sa/1.0/)*
 
-The left image shows a complex mesh of several million polygons. The right image shows a drastically simplified version of the same mesh, but with a normal map applied. The normal map contains information about how the mesh should reflect light, creating the illusion of much more complex geometry.
+Normal maps usually represent small changes of the normal vector (the vector which points away from the surface). Xenko uses the most common convention: the X and Y components follow the tangent and the bitangent of the surface, and the Z component follows the normal vector of the surface. This means that a value of `(0, 0, 1)` coincides with the normal vector and represents no change, while a value of `(-1, 0, 0)` tilts to the "left" (ie negative X value in the tangent (local) space).
 
 ![media/material-attributes-13.png](../materials/media/material-attributes-13.png) 
 
-Normal maps usually represent small changes of the normal vector (the vector which points away from the surface). Xenko uses the most common convention: the X and Y components follow the tangent and the bitangent of the surface, and the Z component follows the normal vector of the surface. This means that a value of `(0, 0, 1)` coincides with the normal vector and represents no change, while a value of `(-1, 0, 0)` tilts to the "left" (ie negative X value in the tangent (local) space).
-
-## Use a normal map texture
+## Use a normal map
 
 1. In the **asset view**, select the texture you want to use as a normal map.
 
@@ -53,7 +51,7 @@ Normal maps usually represent small changes of the normal vector (the vector whi
 
 For more information about materials, see [Materials](../materials/index.md).
 
-## Texture properties
+## Normal map properties
 
 Normal map textures have two properties in addition to the [common texture properties](index.md).
 
