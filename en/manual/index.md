@@ -8,7 +8,7 @@ _tocTitle: 'Manual'
 
 # Xenko 2.1 manual
 
-![Manual](get-started/media/get-started.jpg)
+![Manual](get-started/media/game-editor-scene.jpg)
 
 These pages contain information about how to use Xenko, an open-source C# game engine.
 
