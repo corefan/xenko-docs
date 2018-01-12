@@ -106,7 +106,7 @@ For more information about scenes, see [Scenes](../game-studio/scenes.md).
 
 In Unity®, objects in the scene are called **GameObjects**. In Xenko, they're called **entities**.
 
-![Entities in Xenko](media/xenko-vs-unity-entities.png)
+![Entities in Xenko](media/xenko-vs-unity-entities.jpg)
 
 Like GameObjects, entities are carriers for components such as transform components, model components, audio components, and so on. If you're used to working with GameObjects in Unity®, you should have no problem using entities in Game Studio.
 
