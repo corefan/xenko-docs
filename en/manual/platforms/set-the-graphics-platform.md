@@ -32,7 +32,7 @@ You set the graphics platform in the [game settings](../game-studio/game-setting
 
 You can override the graphics platform Xenko uses for specific platforms. For example, you can have Linux use Vulkan while other platforms use the default.
 
-1. With the **GameSettings** asset selected, in the property grid, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
+1. With the **GameSettings** asset selected, in the property grid, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
     ![Select graphics platform](media/add-override.png)
 
