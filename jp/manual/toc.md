@@ -159,12 +159,12 @@
 ## [センサー](input/sensors.md)
 ## [仮想ボタン](input/virtual-buttons.md)
 
-## [ナビゲーション](navigation/index.md)
-### [ナビゲーション グループ](navigation/navigation-groups.md)
-### [ナビゲーション メッシュ](navigation/navigation-meshes.md)
-### [ナビゲーション境界ボックス](navigation/navigation-bounding-boxes.md)
-### [ナビゲーション コンポーネント](navigation/navigation-components.md)
-### [動的ナビゲーション](navigation/dynamic-navigation.md)
+# [ナビゲーション](navigation/index.md)
+## [ナビゲーション グループ](navigation/navigation-groups.md)
+## [ナビゲーション メッシュ](navigation/navigation-meshes.md)
+## [ナビゲーション境界ボックス](navigation/navigation-bounding-boxes.md)
+## [ナビゲーション コンポーネント](navigation/navigation-components.md)
+## [動的ナビゲーション](navigation/dynamic-navigation.md)
 
 # [パーティクル](particles/index.md)
 ## [パーティクルを作成する](particles/create-particles.md)
