@@ -28,7 +28,7 @@ Game Studio では、ナビゲーション メッシュはシーン内の色付�
 
     ![Set navigation mesh properties](media/navigation-mesh-properties.png)
 
-    シーンの詳細については、「[シーン](scenes.md)」を参照してください。
+    シーンの詳細については、「[シーン](../game-studio/scenes.md)」を参照してください。
 
 3. ［Selected groups］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
@@ -76,4 +76,4 @@ Game Studio では、ナビゲーション メッシュはシーン内の色付�
 * [ナビゲーション境界ボックス](navigation-bounding-boxes.md)
 * [ナビゲーション コンポーネント](navigation-components.md)
 * [動的ナビゲーション](dynamic-navigation.md)
-* [シーン](scenes.md)
+* [シーン](../game-studio/scenes.md)

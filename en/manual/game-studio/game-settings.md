@@ -78,7 +78,7 @@ The **editor** settings control how Game Studio displays entities in the scene e
 
 ## Navigation
 
-![Navigation settings](media/navigation-settings.png)
+![Navigation settings](../navigation/media/navigation-settings.png)
 
 ### Dynamic navigation mesh properties
 

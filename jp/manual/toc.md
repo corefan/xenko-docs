@@ -80,12 +80,6 @@
 ### [プレハブ モデル](game-studio/prefabs/prefab-models.md)
 ## [ゲームの設定](game-studio/game-settings.md)
 ### [スプラッシュ画面](game-studio/splash-screen.md)
-## [ナビゲーション](game-studio/navigation.md)
-### [ナビゲーション グループ](game-studio/navigation-groups.md)
-### [ナビゲーション メッシュ](game-studio/navigation-meshes.md)
-### [ナビゲーション境界ボックス](game-studio/navigation-bounding-boxes.md)
-### [ナビゲーション コンポーネント](game-studio/navigation-components.md)
-### [動的ナビゲーション](game-studio/dynamic-navigation.md)
 ## [ワールド単位](game-studio/world-units.md)
 
 # [グラフィックス](graphics/index.md)
@@ -164,6 +158,13 @@
 ## [ポインター](input/pointers.md)
 ## [センサー](input/sensors.md)
 ## [仮想ボタン](input/virtual-buttons.md)
+
+## [ナビゲーション](navigation/index.md)
+### [ナビゲーション グループ](navigation/navigation-groups.md)
+### [ナビゲーション メッシュ](navigation/navigation-meshes.md)
+### [ナビゲーション境界ボックス](navigation/navigation-bounding-boxes.md)
+### [ナビゲーション コンポーネント](navigation/navigation-components.md)
+### [動的ナビゲーション](navigation/dynamic-navigation.md)
 
 # [パーティクル](particles/index.md)
 ## [パーティクルを作成する](particles/create-particles.md)
