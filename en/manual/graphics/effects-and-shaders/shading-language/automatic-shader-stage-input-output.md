@@ -3,13 +3,9 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-## Current state of shaders
-
 When you write a HLSL shader, you have to precisely define your vertex attributes and carefully pass them across the stage of your final shader.
 
-Here's an example of a shader that simply uses the color from the vertex.
-
-**Code:** Simple HLSL shader
+Here's an example of a simple HLSL shader that uses the color from the vertex.
 
 ```cs
 struct VS_IN
@@ -50,7 +46,7 @@ technique10 Render
 }
 ```
 
-Imagine you want to add a normal to you model and modify the resulting color according to it. You have to modify the code that computes the color and adjust the intermediate structures to pass the attribute from the vertex to the pixel shader. You also have to be careful of the semantics you use.
+Imagine you want to add a normal to your model and modify the resulting color accordingly. You have to modify the code that computes the color and adjust the intermediate structures to pass the attribute from the vertex to the pixel shader. You also have to be careful of the semantics you use.
 
 **Code:** Modified HLSL shader
 
@@ -96,31 +92,32 @@ technique10 Render
 }
 ```
 
-This example is simple, but in a real project, the number of shaders is much higher and a single change might mean rewriting lots of shaders, structures, and so on.
+This example is simple. Real projects have many more shaders, so a single change might mean rewriting lots of shaders, structures, and so on.
 
-Schematically, adding a new attribute requires you to update all the stages and intermediate structures from the vertex input to the last stage you want to use the attribute.
+Schematically, adding a new attribute requires you to update all the stages and intermediate structures from the vertex input to the last stage you want to use the attribute in.
 
 ![media/hlsl_add_normal.png](media/hlsl_add_normal.png) 
 
-# XKSL
+## XKSL
 
-XKSL is convenient way to pass parameters across the different stages of your shader. The stream variables are:
+XKSL has a convenient way to pass parameters across the different stages of your shader. The stream variables are:
 
 - variables
 - defined like any shader member, with the stream keyword
-- invoked with the streams prefix. Forgetting it results in a compilation error. When the stream is ambiguous (same name), you should provide the shader name in front of the variable. streams.<my_shader>.<my_variable>
+- used with the stream prefix (omitting it results in a compilation error). When the stream is ambiguous (same name), you should provide the shader name in front of the variable (ie `streams.<my_shader>.<my_variable>`)
 
-Streams regroup the concept of attribute, varying and output in a single concept.
+Streams regroup the concepts of attributes, varyings and outputs in a single concept.
 
-- an attribute is a stream that's read in a vertex shader before being written
-- an output is a stream that's assigned before being read
-- a varying is a stream that's present across the stage of your shader
+- An attribute is a stream read in a vertex shader before being written to.
+- A varying is a stream present across shader stages.
+- An output is a stream assigned before being read.
 
-Think of streams as a global object that you can access everywhere without having to put it as a parameter of your functions.
+Think of streams as global objects that you can access everywhere without specifying as a parameter of your functions.
 
-You don't have to create a semantic for these variables. The compiler creates them automatically. However, keep in mind that **the variables sharing the same semantic will be merged in the final shader**. So be careful when using a semantic. This behavior can be useful when you want to use a stream variable locally without inheriting from the shader where it was declared.
+>[!Note]
+>You don't have to create a semantic for these variables; the compiler creates them automatically. However, keep in mind that **the variables sharing the same semantic will be merged in the final shader**. This behavior can be useful when you want to use a stream variable locally without inheriting from the shader where it was declared.
 
-Once you've declared a stream, you can access it at any stage of your shader. The shader compiler takes care of everything. The variables just have to be visible from the calling code (ies in the inheritance hierarchy) like any other variable.
+After you declare a stream, you can access it at any stage of your shader. The shader compiler takes care of everything. The variables just have to be visible from the calling code (ie in the inheritance hierarchy) like any other variable.
 
 **Code:** Stream definition and use:
 
@@ -153,7 +150,7 @@ shader ShaderA : BaseShader, StreamShader
 }
 ```
 
-## Example of XKSL shader
+### Example of XKSL shader
 
 Let's look at the same HLSL shader as the first example but in XKSL.
 
@@ -200,7 +197,7 @@ shader MyShader : ShaderBase
 };
 ```
 
-In XKSL, adding a new attribute is as simple as adding it to the pool of streams and use it where you want!
+In XKSL, adding a new attribute is as simple as adding it to the pool of streams and using it where you want.
 
 ![media/xksl_add_normal.png](media/xksl_add_normal.png)
 
