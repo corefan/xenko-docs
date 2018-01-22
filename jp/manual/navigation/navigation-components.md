@@ -18,7 +18,7 @@
 
 3. ［Navigation］コンポーネントのプロパティで、［Navigation Mesh］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
-    ![Select an asset](media/open-asset-picker.png)
+    ![Select an asset](../game-studio/media/open-asset-picker.png)
 
 	［Select an asset］ウィンドウが開きます。
 

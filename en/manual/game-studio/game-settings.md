@@ -78,7 +78,7 @@ The **editor** settings control how Game Studio displays entities in the scene e
 
 ## Navigation
 
-![Navigation settings](media/navigation-settings.png)
+![Navigation settings](../navigation/media/navigation-settings.png)
 
 ### Dynamic navigation mesh properties
 
@@ -88,7 +88,7 @@ The **editor** settings control how Game Studio displays entities in the scene e
 | Included collision groups | Set which collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
 | Build settings            | Advanced settings for dynamically-generated navigation meshes
 
-For more details, see [Dynamic navigation](dynamic-navigation.md).
+For more details, see [Dynamic navigation](../navigation/dynamic-navigation.md).
 
 ### Navigation group properties
 
@@ -100,7 +100,7 @@ For more details, see [Dynamic navigation](dynamic-navigation.md).
 | Maximum slope        | The maximum incline (in degrees) that entities in this group can climb. Entities can't go up or down slopes higher than this value.
 | Radius               | The larger this value, the larger the area of the navigation mesh entities use. Entities can't pass through gaps of less than twice the radius.
 
-For more details, see [Navigation](navigation.md).
+For more details, see [Navigation](../navigation/index.md).
 
 ## Physics
 
@@ -158,7 +158,7 @@ For more details, see [Streaming](../graphics/textures/streaming.md).
 
 You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
 
-1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
+1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
     ![Select graphics platform](../platforms/media/add-override.png)
 

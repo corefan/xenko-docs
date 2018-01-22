@@ -106,7 +106,7 @@ Unity® と同様に、Xenko ではすべてのオブジェクトをシーンに
 
 Unity® では、シーン内のオブジェクトは **GameObject** と呼ばれます。Xenko では**エンティティ**と呼びます。
 
-![Entities in Xenko](media/xenko-vs-unity-entities.png)
+![Entities in Xenko](media/xenko-vs-unity-entities.jpg)
 
 GameObject と同様に、エンティティには変換コンポーネント、モデル コンポーネント、オーディオ コンポーネントなどのコンポーネントが格納されます。Unity® の GameObject を使い慣れている場合、Game Studio のエンティティも問題なく使用できるはずです。
 

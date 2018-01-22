@@ -83,12 +83,6 @@
 ### [Prefab models](game-studio/prefabs/prefab-models.md)
 ## [Game settings](game-studio/game-settings.md)
 ### [Splash screen](game-studio/splash-screen.md)
-## [Navigation](game-studio/navigation.md)
-### [Navigation groups](game-studio/navigation-groups.md)
-### [Navigation meshes](game-studio/navigation-meshes.md)
-### [Navigation bounding boxes](game-studio/navigation-bounding-boxes.md)
-### [Navigation components](game-studio/navigation-components.md)
-### [Dynamic navigation](game-studio/dynamic-navigation.md)
 ## [World units](game-studio/world-units.md)
 
 # [Graphics](graphics/index.md)
@@ -170,6 +164,13 @@
 ## [Pointers](input/pointers.md)
 ## [Sensors](input/sensors.md)
 ## [Virtual buttons](input/virtual-buttons.md)
+
+# [Navigation](navigation/index.md)
+## [Navigation groups](navigation/navigation-groups.md)
+## [Navigation meshes](navigation/navigation-meshes.md)
+## [Navigation bounding boxes](navigation/navigation-bounding-boxes.md)
+## [Navigation components](navigation/navigation-components.md)
+## [Dynamic navigation](navigation/dynamic-navigation.md)
 
 # [Particles](particles/index.md)
 ## [Create particles](particles/create-particles.md)

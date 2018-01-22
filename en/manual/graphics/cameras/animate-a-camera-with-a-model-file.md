@@ -50,7 +50,7 @@ To do this, you need the following assets in your project:
 
     ![Animation component](media/animation-component-added-to-camera.png)
 
-5. Next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**) and type a name.
+5. Next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and type a name.
 
     ![Add animation](media/animation-name.png)
 
@@ -75,7 +75,7 @@ To do this, you need the following assets in your project:
     >[!Note]
     >For instructions about how to add animation scripts, see [Animation scripts](../../animation/animation-scripts.md).
 
-9. Under the script component, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add...**).
+9. Under the script component, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
     ![Add animation to the list](../../animation/media/add-animation-to-list.png)
 
