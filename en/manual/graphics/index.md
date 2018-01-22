@@ -21,12 +21,12 @@ The graphics module provides a set of methods to display the game. Although Xenk
 ## In this section
 
 * [Cameras](cameras/index.md)
-* [skyboxes and backgrounds](skyboxes-and-backgrounds.md)
-* [Sprite fonts](sprite-fonts.md)
-* [Lighting and shadows](lights-and-shadows/index.md)
-* [Graphics compositor](graphics-compositor/index.md)
 * [Materials](materials/index.md)
+* [Textures](textures/index.md)
+* [Lights and shadows](lights-and-shadows/index.md)
 * [Post effects](post-effects/index.md)
-* [Rendering pipeline](rendering-pipeline/index.md)
-* [Low-level API](low-level-api/index.md)
+* [Graphics compositor](graphics-compositor/index.md)
 * [Effects and shaders](effects-and-shaders/index.md)
+* [Low-level API](low-level-api/index.md)
+* [Rendering pipeline](rendering-pipeline/index.md)
+* [Sprite fonts](sprite-fonts.md)

@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">デザイナー</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-スカイボックス ライトは、[スカイボックス](../skyboxes.md)によって放射される[アンビエント ライト](ambient-lights.md)です。Xenko は、スカイボックスのキューブマップを分析し、[イメージベースのライティング (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting) を使用してライティングを生成します。
+スカイボックス ライトは、[スカイボックス](../textures/skyboxes-and-backgrounds.md)によって放射される[アンビエント ライト](ambient-lights.md)です。Xenko は、スカイボックスのキューブマップを分析し、[イメージベースのライティング (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting) を使用してライティングを生成します。
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
@@ -109,4 +109,4 @@ public void ChangeSkyboxParameters()
 
 ## 関連項目
 
-* [スカイボックス](../skyboxes.md)
+* [スカイボックス](../textures/skyboxes-and-backgrounds.md)

@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A **skybox light** is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes.md). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+A **skybox light** is an [ambient light](ambient-lights.md) emitted by a [skybox](../textures/skyboxes-and-backgrounds.md). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
@@ -14,13 +14,13 @@ Skybox lights are good for exterior scenes, where the skybox is visible. They're
 
 These images show the difference between ambient and skybox lighting on two pure diffuse [materials](../materials/index.md):
 
-| Ambient lighting                                     | Skybox lighting     
-| ---------------------------------------------------- | -------------------------------
+| Ambient lighting  | Skybox lighting     
+| ----------------- | ----
 | ![Ambient lighting](media/AmbientLight.png)  | ![Skybox lighting.png](media/SkyboxLight-MaterialPureDiffuse.png) 
                     
 These images show the effect of skybox lighting on a material with different metal and gloss properties:
 
-| Material Plastic    | Metal 100% Gloss 50%     | Metal 100% Gloss 100%   
+| Material Plastic    | Metal 100% Gloss 50%     | Metal 100% Gloss 100% 
 --------- | -------- | --- | -------- |
  ![Material plastic](media/SkyboxLight-MaterialPlastic.png)  | ![Material 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss50.png)  | ![Metal 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss100.png)  
 

@@ -6,7 +6,7 @@
 
 **Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. As skyboxes are prerendered, they require little GPU and CPU. 
 
-You can use **cubemaps** or **360° panoramic textures** as skyboxes. You can also [use them to light the scene](lights-and-shadows/skybox-lights.md).
+You can use **cubemaps** or **360° panoramic textures** as skyboxes. You can also [use them to light the scene](../lights-and-shadows/skybox-lights.md).
 
 > [!Note]
 > Currently, Xenko doesn't support skydomes or local skyboxes.
@@ -43,7 +43,7 @@ You can capture a cubemap from a position in your scene.
 4. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
 
 >[!Tip]
->We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../files-and-folders/version-control.md).
+>We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../../files-and-folders/version-control.md).
 
 Game Studio creates a cubemap `.dds` file in the location you specified.
 
@@ -95,7 +95,7 @@ To add a background entity:
 
 ## Use a skybox as a light source
 
-You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
+You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](../lights-and-shadows/skybox-lights.md).
 
 ## Change the skybox at runtime
 
@@ -136,5 +136,5 @@ If you enable this with a cubemap, Xenko uses the first face of the cubemap as t
 
 ## See also
 
-* [Skybox lights](lights-and-shadows/skybox-lights.md)
-* [Lighting and shadows](lights-and-shadows/index.md)
+* [Skybox lights](../lights-and-shadows/skybox-lights.md)
+* [Lights and shadows](../lights-and-shadows/index.md)
