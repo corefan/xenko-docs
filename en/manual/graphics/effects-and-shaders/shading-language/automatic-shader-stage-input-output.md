@@ -3,6 +3,10 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
+In DirectX, if you have different pixel shaders, each with different inputs, you have to write a vertex shader per signature. Using Xenko Shading Language (XKSL), you only have to write one vertex shader. XKSL deduces the inputs and outputs automatically.
+
+## Pass attributes in DirectX
+
 When you write a HLSL shader, you have to precisely define your vertex attributes and carefully pass them across the stage of your final shader.
 
 Here's an example of a simple HLSL shader that uses the color from the vertex.
@@ -98,9 +102,9 @@ Schematically, adding a new attribute requires you to update all the stages and 
 
 ![media/hlsl_add_normal.png](media/hlsl_add_normal.png) 
 
-## XKSL
+## Xenko Shading Language (XKSL)
 
-XKSL has a convenient way to pass parameters across the different stages of your shader. The stream variables are:
+XKSL has a convenient way to pass attributes across the different stages of your shader. The stream variables are:
 
 - variables
 - defined like any shader member, with the stream keyword
