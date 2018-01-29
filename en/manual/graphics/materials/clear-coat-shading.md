@@ -93,4 +93,5 @@ Alternatively, use a normal map with a higher density of smaller metal flakes.
     * [Shading attributes](shading-attributes.md)
     * [Misc attributes](misc-attributes.md)
 * [Material layers](material-layers.md)
+* [Material slots](material-slots.md)
 * [Materials for developers](materials-for-developers.md)

@@ -97,6 +97,7 @@
 #### [Misc attributes](graphics/materials/misc-attributes.md)
 #### [Clear-coat shading](graphics/materials/clear-coat-shading.md)
 ### [Layers](graphics/materials/material-layers.md)
+### [Slots](graphics/materials/material-slots.md)
 ### [Materials for developers](graphics/materials/materials-for-developers.md)
 ## [Textures](graphics/textures/index.md)
 ### [Normal maps](graphics/textures/normal-maps.md)

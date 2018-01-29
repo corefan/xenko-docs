@@ -17,6 +17,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Material slots](graphics/materials/material-slots.md)
+
 * <span class="label label-doc-highlight">Updated</span> [Skyboxes and backgrounds](graphics/textures/skyboxes-and-backgrounds.md)
 
 * <span class="label label-doc-highlight">Updated</span> [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
@@ -30,8 +32,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">New</span> [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
 
 * <span class="label label-doc-highlight">New</span> [Model node links](animation/model-node-links.md)
-
-* <span class="label label-doc-highlight">New</span> [Ambient occlusion](graphics/post-effects/ambient-occlusion.md)
 
 ## Improve this documentation
 

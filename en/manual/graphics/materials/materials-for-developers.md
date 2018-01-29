@@ -18,3 +18,4 @@ This diagram shows the Material interfaces and implementation classes:
 - [Material maps](material-maps.md)
 - [Material attributes](material-attributes.md)
 - [Material layers](material-layers.md)
+* [Material slots](material-slots.md)
