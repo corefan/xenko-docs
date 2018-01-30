@@ -53,15 +53,7 @@ When Xenko draws a model with submeshes, it performs one GPU draw call for each 
 
 ![Mesh](media/material-slot-diagram-2.png)
  
-In the example above, there are five submeshes and five draw calls. 
-
-![Mesh](media/material-slot-diagram-3.png)
-
-After merging, there are three submeshes and three draw calls.
-
-* **Submesh 1** and **3** share **material 2**, so become **Submesh 1 (merged)**.
-* **Submesh 2** and **4** share **material 3**, so become **Submesh 2 (merged)**.
-* Only **Submesh 4** uses **material 1**, so it isn't merged, and becomes **Submesh 3**.
+In the example above, there are five submeshes and five draw calls. After merging, there are three submeshes and three draw calls.
 
 >[!Note]
 >When Xenko merges submeshes, it merges the vertex and index buffers. This means you can't draw the submeshes separately at runtime, and you can't change the original submesh position (transformation matrix). The submeshes become a single mesh with a single material and a single transformation matrix (relative to the model).
