@@ -31,7 +31,7 @@ You can change the materials a model uses in two places:
 
 Models imported from modeling software can contain smaller meshes (**submeshes**). Submeshes can share material slots.
 
-![Mesh](media/submesh-diagram.png)
+![Mesh](media/material-slot-diagram-1.png)
 
 The association between a submesh and a material slot is defined in the model source file. You can't change these associations in Game Studio, but you can change them in code at runtime.
 
@@ -51,9 +51,13 @@ ModelComponent.Materials[ExistingOrNewMaterialIndex] = myMaterial;
 
 When Xenko draws a model with submeshes, it performs one GPU draw call for each mesh. By default, to improve performance, at build time, Xenko merges submeshes that share materials.
 
-![Mesh](media/submesh-diagram2.png)
+![Mesh](media/material-slot-diagram-2.png)
  
-In the example above, there are five submeshes and five draw calls. After merging, there are three submeshes and three draw calls.
+In the example above, there are five submeshes and five draw calls. 
+
+![Mesh](media/material-slot-diagram-3.png)
+
+After merging, there are three submeshes and three draw calls.
 
 * **Submesh 1** and **3** share **material 2**, so become **Submesh 1 (merged)**.
 * **Submesh 2** and **4** share **material 3**, so become **Submesh 2 (merged)**.
