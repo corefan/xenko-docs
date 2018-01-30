@@ -1,5 +1,9 @@
 # Material slots
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 Models can use multiple materials. These are defined in the model's **material slots**.
 
 ![Material slots](media/material-slots.png)
@@ -25,7 +29,7 @@ You can change the materials a model uses in two places:
 
     ![Model materials on entity](media/model-materials-in-entity.png)
 
-     This only affects this instance or prefab.
+     This only affects **this** instance or prefab.
 
 ## Submeshes and material slots
 
@@ -90,6 +94,8 @@ If you want to disable merging only for specific submeshes, enable their corresp
 
     ![Model skeleton](media/model-skeleton.png)
 
+    For more information about skeletons, see [Animation](../../animation/index.md).
+
 3. In the **Asset view**, select the skeleton associated with the model.
 
     ![Select model skeleton](media/select-model-skeleton.png)
@@ -103,3 +109,9 @@ If you want to disable merging only for specific submeshes, enable their corresp
 
     >[!Note]
     >Make sure you don't disable nodes that are animated at runtime.
+
+## See also
+
+* [Material maps](material-maps.md)
+* [Material attributes](material-attributes.md)
+* [Material slots](material-slots.md)
