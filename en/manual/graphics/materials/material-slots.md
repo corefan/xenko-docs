@@ -89,7 +89,7 @@ To disable merging for specific submeshes, enable their corresponding **nodes**.
     ![Nodes](media/select-model-skeleton-nodes.png)
 
     >[!Tip]
-    >To see which nodes correspond to which submesh, open the model source file in a modelling application such as Maya.
+    >To see which nodes correspond to which submesh, open the model source file in a modeling application such as Maya.
 
     >[!Note]
     >Make sure you don't disable nodes that are animated at runtime.
