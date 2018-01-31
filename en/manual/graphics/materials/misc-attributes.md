@@ -83,5 +83,6 @@ For details, see [clear-coat shading](clear-coat-shading.md).
 * [Clear-coat shading](clear-coat-shading.md)
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
+* [Material slots](material-slots.md)
 * [Materials for developers](materials-for-developers.md)
 * [Custom shaders](../effects-and-shaders/custom-shaders.md)

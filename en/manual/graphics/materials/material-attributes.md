@@ -29,4 +29,5 @@ You can also write [custom shaders](../effects-and-shaders/custom-shaders.md) to
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
+* [Material slots](material-slots.md)
 * [Custom shaders](../effects-and-shaders/custom-shaders.md)

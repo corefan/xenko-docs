@@ -115,4 +115,5 @@ For example, the images below demonstrate how the texture changes the way Xenko 
 
 - [Material attributes](material-attributes.md)
 - [Material layers](material-layers.md)
+* [Material slots](material-slots.md)
 - [Materials for developers](materials-for-developers.md)
