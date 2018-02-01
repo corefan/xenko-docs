@@ -42,7 +42,7 @@ The association between a mesh and a material slot is defined in the model sourc
 To change the association between a mesh and a material, use:
 
 ```cs
-MyModelComponent.Model.Meshes[submeshIndex].MaterialIndex = materialIndex;
+MyModelComponent.Model.Meshes[meshIndex].MaterialIndex = materialIndex;
 ```
 
 To change or add a material to the list of materials:
