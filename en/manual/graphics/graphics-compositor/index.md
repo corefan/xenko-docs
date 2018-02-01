@@ -9,10 +9,10 @@
 The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
 - use one or multiple [cameras](../cameras/index.md)
-- filter entities in the scene
+- filter entities
 - render to one or more [render textures](render-textures.md), with different viewports
 - set HDR or LDR rendering
-- apply post effects to a render target, selected before or after rendering a camera
+- apply [post effects](../post-effects/index.md) to a render target, selected before or after rendering a camera
 - clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
 - modify the compositor from scripts (or any animation system), for example to modify post effects
 
@@ -20,16 +20,14 @@ The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) 
 
 Xenko includes a graphics compositor when you create a project.
 
-If you need to create a graphics compositor, in the **asset view**, click **Add asset** and select **Misc > Graphics compositor**.
+If you need to create another graphics compositor, in the **asset view**, click **Add asset** and select **Misc > Graphics compositor**.
 
 ![Add graphics compositor](media/add-graphics-compositor.png)
 
-You can choose:
+You can choose one of two presets:
 
 * Level 10 (HDR with [post effects](../post-effects/index.md))
 * Level 9 (LDR with no post effects)
-
-These aren't different kinds of graphics compositor, but rather presets you can customize as you need.
 
 ## Set the graphics compositor
 
@@ -37,9 +35,11 @@ You can have multiple graphics compositors in your project, but you can only use
 
 ![Set default scene](../../game-studio/media/game-settings-graphics-compositor.png)
 
-You can change which graphics compositor your game uses at runtime in a script. 
+You can also change the graphics compositor at runtime in a script. 
 
 ## Open the graphics compositor editor
+
+You customize the graphics compositor in the **graphics compositor editor**.
 
 >[!Note]
 >The graphics compositor editor is an experimental feature.
@@ -54,7 +54,7 @@ The **graphics compositor editor** opens.
 
 ## Nodes
 
-The graphics compositor is divided into **nodes**. You can set the properties of each node in the **property grid** on the right.
+The graphics compositor editor is divided into **nodes**. You can set the properties of each node in the **property grid** on the right.
 
 ### Entry points
 
@@ -92,7 +92,7 @@ The forward renderer is also where you set [virtual reality](../../virtual-reali
 
 ### Debug renderer
 
-The debug renderer is used by scripts to print debug information. For more information, see [Debug renderers](debug-renderers.md).
+The **debug renderer** is used by scripts to print debug information. For more information, see [Debug renderers](debug-renderers.md).
 
 ### Post-processing effects
 
